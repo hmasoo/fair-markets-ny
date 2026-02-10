@@ -158,6 +158,41 @@ NY has lost dozens of local papers. Alden Capital owns many remaining ones.
 - [Cleared for take-off (Competition Bureau Canada)](https://competition-bureau.canada.ca/en/how-we-foster-competition/education-and-outreach/publications/cleared-take-elevating-airline-competition) — model for sector-specific market study data presentation
 - [BroadbandNow](https://broadbandnow.com/) — ISP competition maps by address, shows how to present FCC data accessibly
 
+## Legal Framework for Government Data
+
+This project aggregates, structures, and republishes data from government sources. The legal basis is strong across all three tiers of government we draw from.
+
+### Federal government data (public domain)
+
+**17 USC § 105** places all works of the United States Government in the public domain: "Copyright protection under this title is not available for any work of the United States Government." This covers every federal data source we use: FCC Broadband Data Collection, FDIC Summary of Deposits, CMS hospital pricing and provider enrollment, SEC EDGAR filings, BLS price indices, and USDA food access data. No license, attribution, or permission is required. These are public domain works that belong to the American people.
+
+### New York State government data (permissive license)
+
+Unlike federal works, state government works are not automatically public domain under 17 USC § 105 — that statute only covers "works of the United States Government." However, New York State has adopted a permissive open data license for data published through its Open NY portal: so long as you are not doing anything malicious with NYS data, you may use it as you wish. No attribution or share-alike requirements, no prohibition on commercial use. This covers NYS DOH facility data, DFS market share reports, PSC rate case filings, and AG press releases published through state channels.
+
+For state government records not on the open data portal, NY's Freedom of Information Law (FOIL, Article 6 of the Public Officers Law) requires agencies to make records available for public inspection and copying. New York courts have held that "routine administrative collection and compilation of government records does not create a copyright interest in the resulting data set."
+
+### New York City government data (unrestricted)
+
+NYC Open Data is governed by Local Law 11 of 2012, which requires all public datasets to be published on the Open Data portal. The city's FAQ states explicitly: **"There are no restrictions on the use of open data"** published through the portal. This covers ACRIS property records, PLUTO land use data, HPD violations, TLC trip data, DCA business licenses, and DHCR rent stabilization data. The Socrata API provides programmatic access with application tokens for higher rate limits (1,000 requests/hour).
+
+### Practical lessons from NLRB Research (Bruenig model)
+
+Matt Bruenig's NLRB Research database (115,000+ documents) includes no legal disclaimers, terms of use, or fair use framing. He treats government documents as inherently public and builds automated scrapers to ingest them. His practical experience offers two lessons:
+
+1. **Government agency websites are fair game; private aggregators are not.** When Justia (a private legal research site) blocked Bruenig's scraping, he couldn't fight it — Justia owns its presentation layer even if the underlying government documents are public domain. He switched to the Court Listener API (run by the Free Law Project, a 501(c)(3) nonprofit that provides open access to legal data). Lesson: always scrape the government source directly, or use an open API. Never depend on a private intermediary's goodwill.
+
+2. **Just do it.** Bruenig doesn't ask permission, doesn't include legal disclaimers, doesn't retain counsel for the database. Federal government documents are public domain. State/local open data portals have permissive licenses. The legal risk of aggregating and republishing government data is effectively zero if you're not misrepresenting the data or violating a specific API's terms of service.
+
+### Our approach
+
+- Prefer official government APIs and open data portals (NYC Open Data Socrata API, FCC BDC API, FDIC API, CMS downloads) over scraping.
+- For data not available via API (NYS DOH CON filings, AG press releases, PSC rate cases), scrape the government agency website directly.
+- Never scrape private aggregators (Westlaw, Lexis, Justia, Statista) — they have copyright over their presentation even if the underlying data is public.
+- Store raw source documents alongside structured data so provenance is always traceable.
+- Cite the original government source for every data point.
+- No legal disclaimers needed for republishing government data, but include a methodology page (following CAMP's model) explaining data sources, collection methods, and limitations.
+
 ## Suggested Starting Scope
 
 Start with modules 1 and 3 (housing + broadband) because:
