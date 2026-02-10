@@ -14,6 +14,8 @@ Both are responding to the same underlying problem — concentrated corporate po
 
 Intellectually, the project draws from the "New Brandeis" school of antitrust thinking: Lina Khan (Amazon's Antitrust Paradox, FTC chair 2021-2025, Mamdani transition co-chair), Matt Stoller (Goliath, BIG newsletter), and Alvaro Bedoya (FTC commissioner, surveillance pricing). It also draws from the institutional work of the Open Markets Institute and the American Economic Liberties Project.
 
+The project model combines two approaches: **CAMP** (Canadian Anti-Monopoly Project) for structured concentration data, sector-by-sector HHI/CR4 tracking, and methodology-transparent market share analysis; and **NLRB Edge / NLRB Research** (Matt Bruenig) for the automated government data scraping + searchable database + analysis pattern. Bruenig built a free, public database of 90,000+ NLRB legal documents that auto-updates by scraping government sources, paired with a newsletter providing context and commentary. That model — automated ingestion of public government data into a structured, searchable tool, paired with editorial analysis — is exactly what NY's fragmented public data landscape needs. CON filings, DFS market share reports, AG enforcement actions, PSC rate cases, and FCC broadband data all exist but are scattered, poorly indexed, and not queryable in useful ways.
+
 ## Thematic Research Areas
 
 ### Tier 1 — Active policy fights where data changes outcomes
@@ -138,13 +140,23 @@ NY has lost dozens of local papers. Alden Capital owns many remaining ones.
 
 ## Prior Art & Inspiration
 
-- [CAMP (Canadian Anti-Monopoly Project)](https://github.com/hmasoo/camp) — the direct predecessor; same tech stack, concentration tracking methodology
+**Direct models:**
+- [CAMP (Canadian Anti-Monopoly Project)](https://github.com/hmasoo/camp) — the direct predecessor; same tech stack, concentration tracking methodology, sector-by-sector HHI/CR4 with sourced JSON data files and a methodology page
+- [NLRB Edge](https://www.nlrbedge.com/) + [NLRB Research](https://nlrbresearch.com/) (Matt Bruenig) — the model for automated government data scraping + searchable database + analysis. 90,000+ NLRB documents, auto-updated, free, more comprehensive than Westlaw/Lexis. Demonstrates that one person with scraping infrastructure can build a more useful research tool than the government itself provides. The newsletter layer (commentary, analysis, context) drives the audience; the database is the durable public good.
+
+**Intellectual foundations:**
 - [Open Markets Institute](https://www.openmarketsinstitute.org/) — research and policy advocacy on monopoly power
 - [American Economic Liberties Project](https://www.economicliberties.us/) — corporate power and its impact on everyday life
 - [Matt Stoller's BIG newsletter](https://www.thebignewsletter.com/) — monopoly analysis, PE tracking, political economy
 - [Anti-Monopoly Fund](https://www.antimonopolyfund.org/) — funding ecosystem for anti-monopoly work
-- [WHO OWNS WHAT in NYC](https://whoownswhat.justfix.org/) — JustFix's landlord lookup tool (LLC entity resolution model)
+
+**NYC-specific tools:**
+- [WHO OWNS WHAT in NYC](https://whoownswhat.justfix.org/) — JustFix's landlord lookup tool (LLC entity resolution model for housing data)
+- [NYC Planning ZoLa](https://zola.planning.nyc.gov/) — zoning and land use map, demonstrates what good NYC spatial data presentation looks like
+
+**Sector-specific precedents:**
 - [Cleared for take-off (Competition Bureau Canada)](https://competition-bureau.canada.ca/en/how-we-foster-competition/education-and-outreach/publications/cleared-take-elevating-airline-competition) — model for sector-specific market study data presentation
+- [BroadbandNow](https://broadbandnow.com/) — ISP competition maps by address, shows how to present FCC data accessibly
 
 ## Suggested Starting Scope
 
