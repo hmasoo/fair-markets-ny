@@ -39,6 +39,44 @@ export default function AboutPage() {
         </section>
 
         <section className="card">
+          <h2 className="text-xl font-bold text-fm-patina mb-4">
+            NYS Policy Context
+          </h2>
+          <div className="text-sm text-gray-700 space-y-3">
+            <p>
+              New York has two converging political agendas that both need data
+              infrastructure — and both respond to the same underlying problem:
+              concentrated corporate power driving up the cost of living.
+            </p>
+            <p>
+              <strong className="text-fm-patina">
+                Mayor Zohran Mamdani
+              </strong>{" "}
+              is leading an anti-monopoly administration in New York City, with
+              Lina Khan co-chairing his transition team. His agenda targets
+              corporate landlords, platform monopolies, and concentrated market
+              power across the sectors that shape everyday life for New Yorkers.
+            </p>
+            <p>
+              <strong className="text-fm-patina">
+                Governor Kathy Hochul
+              </strong>{" "}
+              is pursuing a targeted affordability agenda at the state level,
+              including the nation{"'"}s first algorithmic rent-setting ban and
+              a $1B public broadband commitment. These policies address
+              specific symptoms of market concentration — from housing costs
+              driven by corporate landlords to broadband deserts maintained by
+              monopoly ISPs.
+            </p>
+            <p>
+              Fair Markets NY provides the shared evidence base for both
+              agendas: structured, public data on who controls the markets that
+              matter most to New Yorkers.
+            </p>
+          </div>
+        </section>
+
+        <section className="card">
           <h2 className="text-xl font-bold text-fm-patina mb-4">Methodology</h2>
           <div className="space-y-4 text-sm text-gray-700">
             <div>
@@ -127,6 +165,18 @@ export default function AboutPage() {
                 description:
                   "Bank branch deposits by county for market share calculation.",
                 legal: "Federal public domain",
+              },
+              {
+                name: "CMS Hospital Price Transparency",
+                description:
+                  "Machine-readable hospital pricing data required by federal regulation, enabling cost comparisons across health systems.",
+                legal: "Federal public domain (17 USC § 105)",
+              },
+              {
+                name: "NYS DFS Market Share Reports",
+                description:
+                  "Insurance market share data published by the NY Department of Financial Services, covering property, casualty, and health insurance markets.",
+                legal: "NYS government publications",
               },
             ].map((source) => (
               <div
