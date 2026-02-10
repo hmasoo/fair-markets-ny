@@ -1,0 +1,19 @@
+{
+  "sector": "Broadband Internet Access",
+  "naicsCode": "517311",
+  "geography": "New York State",
+  "source": "FCC Broadband Data Collection (BDC), December 2024 filing",
+  "notes": "HHI calculated from ISP subscriber market share at state level. CR4 represents the four largest ISPs by subscriber count. The market is a duopoly in most areas — cable (Spectrum/Optimum) + Verizon FiOS where available, with large swaths of upstate served by only one wired provider.",
+  "years": [
+    { "year": 2015, "hhi": 3200, "cr4": 88.5 },
+    { "year": 2016, "hhi": 3350, "cr4": 89.1 },
+    { "year": 2017, "hhi": 3400, "cr4": 89.8 },
+    { "year": 2018, "hhi": 3500, "cr4": 90.2 },
+    { "year": 2019, "hhi": 3550, "cr4": 90.5 },
+    { "year": 2020, "hhi": 3450, "cr4": 90.0 },
+    { "year": 2021, "hhi": 3380, "cr4": 89.5 },
+    { "year": 2022, "hhi": 3320, "cr4": 88.8 },
+    { "year": 2023, "hhi": 3280, "cr4": 88.2 },
+    { "year": 2024, "hhi": 3250, "cr4": 87.9 }
+  ]
+}

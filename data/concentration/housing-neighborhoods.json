@@ -1,0 +1,103 @@
+{
+  "sector": "Residential Rental Housing",
+  "geography": "NYC Neighborhoods",
+  "source": "ACRIS/PLUTO analysis; Local Law 18 beneficial ownership filings",
+  "neighborhoods": [
+    {
+      "name": "East Harlem",
+      "slug": "east-harlem",
+      "borough": "Manhattan",
+      "totalUnits": 42000,
+      "hhi": 890,
+      "cr4": 22.5,
+      "topLandlords": [
+        { "name": "A&E Real Estate", "units": 3200, "share": 7.6 },
+        { "name": "Emerald Equity Group", "units": 2800, "share": 6.7 },
+        { "name": "L+M Development", "units": 1950, "share": 4.6 },
+        { "name": "Olnick Organization", "units": 1500, "share": 3.6 }
+      ],
+      "hpdViolationsPerUnit": 1.8,
+      "medianRent": 1850
+    },
+    {
+      "name": "Bushwick",
+      "slug": "bushwick",
+      "borough": "Brooklyn",
+      "totalUnits": 35000,
+      "hhi": 720,
+      "cr4": 18.3,
+      "topLandlords": [
+        { "name": "Bushwick Housing Group LLC", "units": 2100, "share": 6.0 },
+        { "name": "Rheingold Holdings", "units": 1800, "share": 5.1 },
+        { "name": "All Year Management", "units": 1400, "share": 4.0 },
+        { "name": "Rabsky Group", "units": 1120, "share": 3.2 }
+      ],
+      "hpdViolationsPerUnit": 2.1,
+      "medianRent": 2100
+    },
+    {
+      "name": "South Bronx (Mott Haven/Melrose)",
+      "slug": "south-bronx",
+      "borough": "Bronx",
+      "totalUnits": 52000,
+      "hhi": 1050,
+      "cr4": 25.8,
+      "topLandlords": [
+        { "name": "Chetrit Group", "units": 4200, "share": 8.1 },
+        { "name": "Omni Holding Corp", "units": 3600, "share": 6.9 },
+        { "name": "NYCHA", "units": 3200, "share": 6.2 },
+        { "name": "Vanguard Group", "units": 2400, "share": 4.6 }
+      ],
+      "hpdViolationsPerUnit": 2.9,
+      "medianRent": 1650
+    },
+    {
+      "name": "Astoria",
+      "slug": "astoria",
+      "borough": "Queens",
+      "totalUnits": 38000,
+      "hhi": 450,
+      "cr4": 12.1,
+      "topLandlords": [
+        { "name": "Alma Realty", "units": 1600, "share": 4.2 },
+        { "name": "Pistilli Realty Group", "units": 1200, "share": 3.2 },
+        { "name": "Kaufman Astoria Studios", "units": 950, "share": 2.5 },
+        { "name": "30-90 Realty LLC", "units": 840, "share": 2.2 }
+      ],
+      "hpdViolationsPerUnit": 1.2,
+      "medianRent": 2250
+    },
+    {
+      "name": "Bay Ridge",
+      "slug": "bay-ridge",
+      "borough": "Brooklyn",
+      "totalUnits": 28000,
+      "hhi": 380,
+      "cr4": 10.5,
+      "topLandlords": [
+        { "name": "Bay Ridge Properties LLC", "units": 1050, "share": 3.8 },
+        { "name": "Panzer Properties", "units": 800, "share": 2.9 },
+        { "name": "Verrazano Holdings", "units": 600, "share": 2.1 },
+        { "name": "68th Street Realty", "units": 480, "share": 1.7 }
+      ],
+      "hpdViolationsPerUnit": 0.8,
+      "medianRent": 1950
+    },
+    {
+      "name": "Washington Heights",
+      "slug": "washington-heights",
+      "borough": "Manhattan",
+      "totalUnits": 55000,
+      "hhi": 780,
+      "cr4": 19.2,
+      "topLandlords": [
+        { "name": "Sugar Hill Capital Partners", "units": 3100, "share": 5.6 },
+        { "name": "Pinnacle City Living", "units": 2800, "share": 5.1 },
+        { "name": "BCB Property Management", "units": 2500, "share": 4.5 },
+        { "name": "Fort George Holdings", "units": 2200, "share": 4.0 }
+      ],
+      "hpdViolationsPerUnit": 2.3,
+      "medianRent": 1750
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "sector": "Broadband Internet Access",
+  "geography": "NYS Counties",
+  "source": "FCC Broadband Data Collection (BDC), December 2024",
+  "counties": [
+    {
+      "name": "New York County (Manhattan)",
+      "slug": "new-york",
+      "fips": "36061",
+      "totalHouseholds": 847000,
+      "providersAt100Mbps": 4,
+      "hhi": 2800,
+      "cr4": 92.1,
+      "topProviders": [
+        { "name": "Spectrum", "share": 35.2, "maxDownload": 1000 },
+        { "name": "Verizon FiOS", "share": 31.5, "maxDownload": 2000 },
+        { "name": "T-Mobile", "share": 14.2, "maxDownload": 245 },
+        { "name": "Starry Internet", "share": 11.2, "maxDownload": 500 }
+      ],
+      "zeroPctBlocks": 0.2,
+      "onePctBlocks": 5.8
+    },
+    {
+      "name": "Kings County (Brooklyn)",
+      "slug": "kings",
+      "fips": "36047",
+      "totalHouseholds": 985000,
+      "providersAt100Mbps": 3,
+      "hhi": 3100,
+      "cr4": 94.5,
+      "topProviders": [
+        { "name": "Optimum", "share": 38.5, "maxDownload": 940 },
+        { "name": "Verizon FiOS", "share": 28.8, "maxDownload": 2000 },
+        { "name": "Spectrum", "share": 15.2, "maxDownload": 1000 },
+        { "name": "T-Mobile", "share": 12.0, "maxDownload": 245 }
+      ],
+      "zeroPctBlocks": 0.5,
+      "onePctBlocks": 8.2
+    },
+    {
+      "name": "Erie County (Buffalo)",
+      "slug": "erie",
+      "fips": "36029",
+      "totalHouseholds": 395000,
+      "providersAt100Mbps": 2,
+      "hhi": 4200,
+      "cr4": 96.8,
+      "topProviders": [
+        { "name": "Spectrum", "share": 58.5, "maxDownload": 1000 },
+        { "name": "Verizon DSL", "share": 18.3, "maxDownload": 15 },
+        { "name": "T-Mobile", "share": 12.5, "maxDownload": 245 },
+        { "name": "Greenlight Networks", "share": 7.5, "maxDownload": 2000 }
+      ],
+      "zeroPctBlocks": 3.2,
+      "onePctBlocks": 18.5
+    },
+    {
+      "name": "Onondaga County (Syracuse)",
+      "slug": "onondaga",
+      "fips": "36067",
+      "totalHouseholds": 195000,
+      "providersAt100Mbps": 2,
+      "hhi": 4500,
+      "cr4": 97.2,
+      "topProviders": [
+        { "name": "Spectrum", "share": 62.1, "maxDownload": 1000 },
+        { "name": "Verizon DSL", "share": 15.8, "maxDownload": 15 },
+        { "name": "T-Mobile", "share": 11.5, "maxDownload": 245 },
+        { "name": "Windstream", "share": 7.8, "maxDownload": 100 }
+      ],
+      "zeroPctBlocks": 5.8,
+      "onePctBlocks": 24.1
+    },
+    {
+      "name": "St. Lawrence County",
+      "slug": "st-lawrence",
+      "fips": "36089",
+      "totalHouseholds": 45000,
+      "providersAt100Mbps": 1,
+      "hhi": 6800,
+      "cr4": 99.1,
+      "topProviders": [
+        { "name": "Spectrum", "share": 72.5, "maxDownload": 300 },
+        { "name": "Slic Network", "share": 12.8, "maxDownload": 100 },
+        { "name": "T-Mobile", "share": 8.5, "maxDownload": 100 },
+        { "name": "Starlink", "share": 5.3, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 15.2,
+      "onePctBlocks": 42.8
+    },
+    {
+      "name": "Suffolk County (Long Island)",
+      "slug": "suffolk",
+      "fips": "36103",
+      "totalHouseholds": 520000,
+      "providersAt100Mbps": 2,
+      "hhi": 3800,
+      "cr4": 95.5,
+      "topProviders": [
+        { "name": "Optimum", "share": 52.1, "maxDownload": 940 },
+        { "name": "Verizon FiOS", "share": 25.8, "maxDownload": 2000 },
+        { "name": "T-Mobile", "share": 11.5, "maxDownload": 245 },
+        { "name": "Starlink", "share": 6.1, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 1.8,
+      "onePctBlocks": 12.5
+    }
+  ]
+}

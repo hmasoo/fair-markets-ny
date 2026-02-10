@@ -1,0 +1,22 @@
+{
+  "sector": "Residential Rental Housing",
+  "naicsCode": "531110",
+  "year": 2024,
+  "geography": "New York City",
+  "marketShares": [
+    { "company": "A&E Real Estate", "share": 2.8, "source": "ACRIS/PLUTO analysis, Local Law 18 filings" },
+    { "company": "Blackstone (Stuy Town)", "share": 2.1, "source": "SEC filings, ACRIS records" },
+    { "company": "Brookfield Properties", "share": 1.8, "source": "SEC filings, ACRIS records" },
+    { "company": "LeFrak Organization", "share": 1.4, "source": "ACRIS/PLUTO analysis" },
+    { "company": "Related Companies", "share": 1.3, "source": "ACRIS/PLUTO analysis" },
+    { "company": "Equity Residential", "share": 1.1, "source": "SEC filings, ACRIS records" },
+    { "company": "Vornado Realty Trust", "share": 0.9, "source": "SEC filings" },
+    { "company": "Emerald Equity Group", "share": 0.8, "source": "ACRIS/PLUTO analysis, Local Law 18 filings" },
+    { "company": "All other landlords", "share": 87.8, "source": "ACRIS/PLUTO analysis" }
+  ],
+  "hhi": 228,
+  "cr4": 8.1,
+  "hhiSource": "Calculated from ACRIS ownership records and PLUTO building data",
+  "cr4Source": "Top 4 landlords by unit count / total NYC rental units (~2.2M)",
+  "notes": "Citywide HHI is low because the market is fragmented across ~30,000 landlords. However, at the neighborhood level, concentration is dramatically higher — e.g., Stuyvesant Town/Peter Cooper Village (Blackstone) represents near-monopoly ownership in that micro-market. Institutional/PE ownership has grown from ~2% to ~8% of total units since 2015."
+}

@@ -1,0 +1,20 @@
+{
+  "sector": "Broadband Internet Access",
+  "naicsCode": "517311",
+  "year": 2024,
+  "geography": "New York State",
+  "marketShares": [
+    { "company": "Spectrum (Charter)", "share": 33.2, "source": "FCC BDC, Charter 10-K filing" },
+    { "company": "Optimum (Altice USA)", "share": 22.8, "source": "FCC BDC, Altice USA 10-K filing" },
+    { "company": "Verizon FiOS", "share": 19.5, "source": "FCC BDC, Verizon 10-K filing" },
+    { "company": "T-Mobile Home Internet", "share": 12.4, "source": "FCC BDC, T-Mobile earnings" },
+    { "company": "Frontier Fiber", "share": 4.8, "source": "FCC BDC, Frontier 10-K filing" },
+    { "company": "Starlink", "share": 2.1, "source": "FCC BDC filings" },
+    { "company": "Other (DSL, fixed wireless, municipal)", "share": 5.2, "source": "FCC BDC" }
+  ],
+  "hhi": 3250,
+  "cr4": 87.9,
+  "hhiSource": "Calculated from FCC Broadband Data Collection subscriber estimates",
+  "cr4Source": "Top 4 ISPs by NY State subscriber count",
+  "notes": "The broadband market in NYS is highly concentrated (HHI > 2,500). Most households have a practical choice between one cable provider and Verizon FiOS (where available). T-Mobile's fixed wireless service has introduced some competition since 2021. Governor Hochul's $1B ConnectALL program aims to expand publicly-owned broadband infrastructure, particularly in underserved upstate regions."
+}

@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F6F9F8;
+  --foreground: #1B3B36;
+  --fm-patina: #1B3B36;
+  --fm-copper: #B07834;
+  --fm-teal: #2B7A65;
+  --fm-sage: #6A8C7E;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-fm-patina: var(--fm-patina);
+  --color-fm-copper: var(--fm-copper);
+  --color-fm-teal: var(--fm-teal);
+  --color-fm-sage: var(--fm-sage);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Component styles */
+@layer components {
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-200 p-4 sm:p-6;
+  }
+}

@@ -1,0 +1,192 @@
+generator client {
+  provider        = "prisma-client"
+  output          = "../src/generated/prisma"
+  binaryTargets   = ["native", "rhel-openssl-3.0.x"]
+  previewFeatures = ["postgresqlExtensions"]
+}
+
+datasource db {
+  provider   = "postgresql"
+  url        = env("DATABASE_URL")
+  directUrl  = env("DIRECT_URL")
+  extensions = [postgis]
+}
+
+// -- Reference Tables --
+
+model Sector {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  slug      String   @unique
+  naicsCode String?
+  description String?
+  createdAt DateTime @default(now())
+
+  concentrationData ConcentrationData[]
+}
+
+model Entity {
+  id        String   @id @default(cuid())
+  name      String
+  slug      String   @unique
+  type      EntityType
+  aliases   String[]
+  parentId  String?
+  parent    Entity?  @relation("EntityParent", fields: [parentId], references: [id])
+  children  Entity[] @relation("EntityParent")
+  createdAt DateTime @default(now())
+
+  propertyOwnerships PropertyOwnership[]
+  broadbandCoverages BroadbandCoverage[]
+  healthFacilities   HealthFacility[]
+  concentrationData  ConcentrationData[]
+  enforcementActions EnforcementAction[] @relation("EnforcementParties")
+}
+
+enum EntityType {
+  COMPANY
+  LANDLORD
+  HEALTH_SYSTEM
+  ISP
+  PE_FIRM
+  INSURER
+  LLC
+  OTHER
+}
+
+model Geography {
+  id        String        @id @default(cuid())
+  name      String
+  slug      String        @unique
+  type      GeographyType
+  parentId  String?
+  parent    Geography?    @relation("GeoParent", fields: [parentId], references: [id])
+  children  Geography[]   @relation("GeoParent")
+  fipsCode  String?
+  // PostGIS geometry stored via raw SQL; Prisma can't model it directly
+  // Use: SELECT ST_AsGeoJSON(geom) FROM "Geography" WHERE id = ?
+  createdAt DateTime      @default(now())
+
+  concentrationData  ConcentrationData[]
+  propertyOwnerships PropertyOwnership[]
+  broadbandCoverages BroadbandCoverage[]
+  healthFacilities   HealthFacility[]
+  enforcementActions EnforcementAction[]
+}
+
+enum GeographyType {
+  STATE
+  COUNTY
+  BOROUGH
+  NEIGHBORHOOD
+  CENSUS_TRACT
+  CENSUS_BLOCK
+  CITY
+}
+
+// -- Data Tables --
+
+model ConcentrationData {
+  id          String   @id @default(cuid())
+  sectorId    String
+  sector      Sector   @relation(fields: [sectorId], references: [id])
+  geographyId String
+  geography   Geography @relation(fields: [geographyId], references: [id])
+  entityId    String?
+  entity      Entity?  @relation(fields: [entityId], references: [id])
+  year        Int
+  hhi         Float?
+  cr4         Float?
+  marketShare Float?
+  source      String
+  sourceUrl   String?
+  notes       String?
+  createdAt   DateTime @default(now())
+
+  @@unique([sectorId, geographyId, year, entityId])
+}
+
+model PropertyOwnership {
+  id          String    @id @default(cuid())
+  borough     String
+  block       String
+  lot         String
+  bbl         String    @unique
+  address     String?
+  entityId    String
+  entity      Entity    @relation(fields: [entityId], references: [id])
+  geographyId String
+  geography   Geography @relation(fields: [geographyId], references: [id])
+  units       Int?
+  buildingClass String?
+  landUse     String?
+  yearBuilt   Int?
+  assessedValue Float?
+  source      String    @default("PLUTO/ACRIS")
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model BroadbandCoverage {
+  id            String    @id @default(cuid())
+  censusBlockId String
+  geographyId   String
+  geography     Geography @relation(fields: [geographyId], references: [id])
+  entityId      String
+  entity        Entity    @relation(fields: [entityId], references: [id])
+  maxDownload   Float
+  maxUpload     Float
+  technology    String
+  technologyCode String?
+  lowLatency    Boolean   @default(false)
+  source        String    @default("FCC BDC")
+  reportDate    DateTime?
+  createdAt     DateTime  @default(now())
+
+  @@unique([censusBlockId, entityId, technology])
+}
+
+model HealthFacility {
+  id              String    @id @default(cuid())
+  name            String
+  facilityType    String
+  entityId        String?
+  entity          Entity?   @relation(fields: [entityId], references: [id])
+  parentSystem    String?
+  address         String?
+  geographyId     String?
+  geography       Geography? @relation(fields: [geographyId], references: [id])
+  latitude        Float?
+  longitude       Float?
+  beds            Int?
+  source          String    @default("NYS DOH")
+  createdAt       DateTime  @default(now())
+}
+
+model EnforcementAction {
+  id          String    @id @default(cuid())
+  title       String
+  date        DateTime
+  type        String
+  agency      String
+  parties     Entity[]  @relation("EnforcementParties")
+  geographyId String?
+  geography   Geography? @relation(fields: [geographyId], references: [id])
+  outcome     String?
+  summary     String?
+  sourceUrl   String
+  source      String
+  createdAt   DateTime  @default(now())
+}
+
+model DataSource {
+  id          String    @id @default(cuid())
+  name        String    @unique
+  url         String
+  type        String
+  description String?
+  lastScraped DateTime?
+  frequency   String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}

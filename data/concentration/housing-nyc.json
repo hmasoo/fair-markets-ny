@@ -1,0 +1,19 @@
+{
+  "sector": "Residential Rental Housing",
+  "naicsCode": "531110",
+  "geography": "New York City",
+  "source": "NYC Rent Guidelines Board Annual Reports; ACRIS/PLUTO analysis",
+  "notes": "HHI calculated from top landlord unit counts vs total rental units. NYC rental market is fragmented at citywide level but concentrated at neighborhood level. Institutional/PE ownership share has grown steadily since 2015.",
+  "years": [
+    { "year": 2015, "hhi": 85, "cr4": 3.2 },
+    { "year": 2016, "hhi": 92, "cr4": 3.5 },
+    { "year": 2017, "hhi": 105, "cr4": 4.0 },
+    { "year": 2018, "hhi": 118, "cr4": 4.4 },
+    { "year": 2019, "hhi": 130, "cr4": 4.9 },
+    { "year": 2020, "hhi": 142, "cr4": 5.3 },
+    { "year": 2021, "hhi": 165, "cr4": 6.1 },
+    { "year": 2022, "hhi": 185, "cr4": 6.8 },
+    { "year": 2023, "hhi": 210, "cr4": 7.5 },
+    { "year": 2024, "hhi": 228, "cr4": 8.1 }
+  ]
+}
