@@ -1,0 +1,156 @@
+# Fair Markets NY
+
+A public-interest data site tracking market concentration, corporate consolidation, and their impact on affordability across New York State, with a deep NYC layer.
+
+## Why This Project
+
+New York has two converging political agendas that both need data infrastructure:
+
+**Mayor Zohran Mamdani** (NYC) — an explicitly anti-monopoly administration. Lina Khan co-chaired his transition team. He's proposed public grocery stores, a city-owned broadband network, an algorithmic pricing watchdog, and a crackdown on PE landlords. His framing: "for the people, not for Wall Street."
+
+**Governor Kathy Hochul** (NYS) — a targeted affordability agenda. She signed the nation's first algorithmic rent-setting ban (targeting RealPage), created the first PBM watchdog bureau, expanded hospital merger oversight, committed $1B to public broadband (ConnectALL), and proposed auto insurance reform. Her framing: "Money in Your Pockets."
+
+Both are responding to the same underlying problem — concentrated corporate power driving up the cost of living — but from different ideological positions. Fair Markets NY provides the shared evidence base.
+
+Intellectually, the project draws from the "New Brandeis" school of antitrust thinking: Lina Khan (Amazon's Antitrust Paradox, FTC chair 2021-2025, Mamdani transition co-chair), Matt Stoller (Goliath, BIG newsletter), and Alvaro Bedoya (FTC commissioner, surveillance pricing). It also draws from the institutional work of the Open Markets Institute and the American Economic Liberties Project.
+
+## Thematic Research Areas
+
+### Tier 1 — Active policy fights where data changes outcomes
+
+#### 1. "The New Landlords" — Housing & Landlord Concentration
+Both leaders' top priority. Mamdani: rent freeze, PE landlord crackdown, Cea Weaver running tenant protection. Hochul: algorithmic rent-setting ban, 75-day institutional investor waiting period.
+
+**Data work:**
+- ACRIS + HPD: Map residential landlord concentration by neighborhood. Entity-resolve LLCs using Local Law 18 beneficial ownership filings. Rank landlords by total units controlled.
+- Correlate ownership concentration with HPD violation rates, eviction filings, and rent increases in stabilized units (DHCR data).
+- Track institutional/PE acquisitions of NY residential property over time.
+- Upstate: Mobile home park ownership concentration. Map against lot rent increases.
+- Algorithmic rent-setting: Identify properties using RealPage/Yardi revenue management (DOJ lawsuit filings as starting point).
+
+#### 2. "Your Doctor's Boss" — Healthcare Consolidation
+Hochul expanding hospital merger oversight (60-day CON review, ongoing impact reporting), created nation's first PBM watchdog at DFS. NY AG has blocked multiple hospital mergers. Mamdani supports single-payer and public hospital investment.
+
+**Data work:**
+- Map every hospital, urgent care, and physician practice in NY by parent health system (NYS DOH + CMS provider enrollment).
+- CON filing tracker: Scrape NYS DOH Certificate of Need applications. Track proposed mergers, approvals, conditions, post-merger outcomes.
+- Hospital pricing: CMS price transparency data for NY hospitals. Compare consolidated systems vs. independents.
+- PBM concentration: NYS DFS complaints + vertical integration mapping (CVS Caremark/Aetna, Express Scripts/Cigna, OptumRx/UnitedHealth).
+- PE in healthcare: Track acquisitions of physician practices by PE-backed platforms using NYS licensing data.
+- Upstate hospital monopolies: Map single-system counties against access metrics (ER wait times, OB/GYN closures).
+
+#### 3. "One Wire" — Broadband & Utility Monopolies
+Hochul: $1B ConnectALL with public-ownership model. Mamdani: city-owned broadband. Both frame broadband as a utility.
+
+**Data work:**
+- FCC Broadband Data Collection: ISP competition at census block level across NY State. Real choices at 100+ Mbps per household.
+- NYC borough-by-borough breakdown: Spectrum vs. Optimum vs. Verizon FiOS. The "FiOS line."
+- Upstate: Zero/one provider areas. Overlay with ConnectALL investment map.
+- Price per Mbps comparison: NY vs. cities with municipal broadband.
+- NYS PSC rate case data: Utility rate increases, executive compensation audits.
+
+#### 4. "Platform Tax" — Delivery Apps, Rideshare & Algorithmic Pricing
+Mamdani: algorithmic pricing watchdog (DCWP pilot), Digital Fairness Act, delivery app licensure. Hochul: signed consumer protection reforms, vetoed grocery delivery price transparency.
+
+**Data work:**
+- NYC TLC trip data: Uber/Lyft market share vs. yellow/green taxis, 2013-present.
+- Delivery app market share: DoorDash, Uber Eats, Grubhub in NYC.
+- Surge/dynamic pricing analysis using TLC data.
+- Cumulative "platform toll" on small restaurants (delivery + booking + review + payment processing fees as % of revenue).
+
+### Tier 2 — Important, less politically urgent
+
+#### 5. "Aisle by Aisle" — Grocery Access & Concentration
+Mamdani's public grocery store proposal (one per borough). Hochul's $10M Food Access Expansion Grants.
+
+**Data work:**
+- Grocery store ownership by parent company across NYC (DCA licensing + USDA food desert overlay).
+- Upstate: Tops Markets closures after C&S Wholesale/PE acquisition.
+- Bodega ecosystem mapping.
+
+#### 6. "After the Merger" — AG & State Enforcement Tracker
+NY AG Letitia James among the most active antitrust enforcers nationally. Donnelly Act strengthened 2021. 21st Century Antitrust Act introduced four times, unsigned.
+
+**Data work:**
+- AG antitrust case database from press releases and court filings.
+- Post-merger outcome tracking (hospital, bank, pharmacy mergers).
+- 21st Century Antitrust Act status.
+
+#### 7. "Who Insures You" — Insurance Market Concentration
+Hochul's 2026 auto insurance reform priority ($4,030/year vs. $2,680 national average). PBM bureau. Home insurance profit caps.
+
+**Data work:**
+- NYS DFS market share by line and county.
+- ACA exchange competition by county.
+- Insurer-PBM-provider vertical integration visualization.
+
+#### 8. "Who Owns Your Block" — Commercial Real Estate & Small Business
+Mamdani's "Mom-and-Pop Czar", halving fines, 500% increase in 1:1 support.
+
+**Data work:**
+- PLUTO + ACRIS: Commercial ownership concentration by corridor.
+- Vacant storefront tracking vs. ownership concentration.
+
+### Tier 3 — Background structural research
+
+#### 9. "Follow the Money" — Corporate Ownership & PE Tracker
+NYC is the global capital of PE. Blackstone, KKR, Apollo, Carlyle, Ares all headquartered here.
+
+**Data work:**
+- PE portfolio tracker (NY focus): firms to portfolio companies in healthcare, housing, retail.
+- Common ownership visualizer: BlackRock/Vanguard/State Street overlapping stakes.
+- LLC beneficial ownership chains.
+
+#### 10. "News Desert" — Local Media Concentration
+NY has lost dozens of local papers. Alden Capital owns many remaining ones.
+
+**Data work:**
+- Map remaining outlets against population.
+- Track hedge fund/PE ownership of NY local media.
+
+## Data Sources
+
+| Source | Provides |
+|---|---|
+| NYC Open Data (ACRIS, PLUTO, HPD, TLC, DCA) | Property ownership, violations, taxi trips, business licenses |
+| NYC Local Law 18 filings | LLC beneficial ownership for residential buildings |
+| NYC DHCR | Rent stabilization rolls, rent increase history |
+| NYS DOH (SPARCS, CON, facility data) | Hospital pricing, utilization, merger approvals |
+| NYS DFS | Insurance/banking market share, PBM complaints, rate filings |
+| NYS PSC | Utility rate cases, broadband, service territories |
+| NY AG press releases / court filings | Antitrust enforcement actions |
+| FCC Broadband Data Collection | ISP availability by census block |
+| FDIC Summary of Deposits | Bank market share by county |
+| CMS Hospital Price Transparency | Hospital procedure pricing |
+| CMS Provider Enrollment | Practice ownership, health system affiliations |
+| BLS CPI (NY metro) | Local price indices |
+| USDA Food Access Research Atlas | Food desert designations |
+| SEC EDGAR | Public company filings |
+| NYS Open Data | State contracts, broadband maps |
+
+## Tech Stack
+
+- **Next.js + Prisma + PostgreSQL + PostGIS** — proven foundation from CAMP, spatial extensions for property/broadband/health facility maps
+- **MapLibre GL** — open-source map rendering for NYC/NYS geographic layers
+- **Recharts** — reuse HHI/CR4 timeseries components from CAMP
+- **D3 force graphs** — corporate ownership/PE portfolio visualizations
+- **API integrations** — NYC Open Data (Socrata API), FCC BDC, FDIC, CMS
+
+## Prior Art & Inspiration
+
+- [CAMP (Canadian Anti-Monopoly Project)](https://github.com/hmasoo/camp) — the direct predecessor; same tech stack, concentration tracking methodology
+- [Open Markets Institute](https://www.openmarketsinstitute.org/) — research and policy advocacy on monopoly power
+- [American Economic Liberties Project](https://www.economicliberties.us/) — corporate power and its impact on everyday life
+- [Matt Stoller's BIG newsletter](https://www.thebignewsletter.com/) — monopoly analysis, PE tracking, political economy
+- [Anti-Monopoly Fund](https://www.antimonopolyfund.org/) — funding ecosystem for anti-monopoly work
+- [WHO OWNS WHAT in NYC](https://whoownswhat.justfix.org/) — JustFix's landlord lookup tool (LLC entity resolution model)
+- [Cleared for take-off (Competition Bureau Canada)](https://competition-bureau.canada.ca/en/how-we-foster-competition/education-and-outreach/publications/cleared-take-elevating-airline-competition) — model for sector-specific market study data presentation
+
+## Suggested Starting Scope
+
+Start with modules 1 and 3 (housing + broadband) because:
+- Both have excellent public data (ACRIS/HPD/DHCR for housing, FCC BDC for broadband)
+- Both are active policy priorities for both Mamdani and Hochul
+- Housing landlord concentration is a uniquely NYC story with national relevance
+- Broadband maps are visually compelling and immediately understandable
+- Both can reuse CAMP's concentration chart components
