@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+/* Restrict Tailwind v4 auto-content-detection to src/ only.
+   Without this, it scans data/geography/ (25 MB GeoJSON) and
+   src/generated/prisma/ (37 MB), causing turbopack to hang. */
+@source "../../src";
+@source not "../../src/generated";
+@source not "../../data";
+@source not "../../scripts";
+@source not "../../public/geo";
+
 :root {
   --background: #F6F9F8;
   --foreground: #1B3B36;
