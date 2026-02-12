@@ -11,19 +11,19 @@ async function login(formData: FormData) {
   const password = formData.get("password") as string;
   const next = (formData.get("next") as string) || "/";
 
-  if (password === (process.env.SITE_PASSWORD || "paradox")) {
-    const cookieStore = await cookies();
-    cookieStore.set("fm-auth", "authenticated", {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      sameSite: "lax",
-      maxAge: 60 * 60 * 24 * 30, // 30 days
-      path: "/",
-    });
-    redirect(next);
+  if (password !== (process.env.SITE_PASSWORD || "paradox")) {
+    redirect(`/login?error=1&next=${encodeURIComponent(next)}`);
   }
 
-  redirect(`/login?error=1&next=${encodeURIComponent(next)}`);
+  const cookieStore = await cookies();
+  cookieStore.set("fm-auth", "authenticated", {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "lax",
+    maxAge: 60 * 60 * 24 * 30, // 30 days
+    path: "/",
+  });
+  redirect(next);
 }
 
 interface Props {
