@@ -38,6 +38,9 @@ yarn-error.log*
 # raw data (may be large)
 data/raw/
 
+# Downloaded GeoJSON (re-downloadable; only TopoJSON ships)
+data/geography/*.geojson
+
 # vercel
 .vercel
 

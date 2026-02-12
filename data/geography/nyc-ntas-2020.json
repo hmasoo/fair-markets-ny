@@ -1,0 +1,1775 @@
+[
+  {
+    "ntaCode": "BK0101",
+    "ntaName": "Greenpoint",
+    "ntaAbbrev": "Grnpt",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK01"
+  },
+  {
+    "ntaCode": "BK0102",
+    "ntaName": "Williamsburg",
+    "ntaAbbrev": "Wllmsbrg",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK01"
+  },
+  {
+    "ntaCode": "BK0103",
+    "ntaName": "South Williamsburg",
+    "ntaAbbrev": "SWllmsbrg",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK01"
+  },
+  {
+    "ntaCode": "BK0104",
+    "ntaName": "East Williamsburg",
+    "ntaAbbrev": "EWllmsbrg",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK01"
+  },
+  {
+    "ntaCode": "BK0201",
+    "ntaName": "Brooklyn Heights",
+    "ntaAbbrev": "BkHts",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK02"
+  },
+  {
+    "ntaCode": "BK0202",
+    "ntaName": "Downtown Brooklyn-DUMBO-Boerum Hill",
+    "ntaAbbrev": "DwntwnBk",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK02"
+  },
+  {
+    "ntaCode": "BK0203",
+    "ntaName": "Fort Greene",
+    "ntaAbbrev": "FtGrn",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK02"
+  },
+  {
+    "ntaCode": "BK0204",
+    "ntaName": "Clinton Hill",
+    "ntaAbbrev": "ClntnHl",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK02"
+  },
+  {
+    "ntaCode": "BK0301",
+    "ntaName": "Bedford-Stuyvesant (West)",
+    "ntaAbbrev": "BdSty_W",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK03"
+  },
+  {
+    "ntaCode": "BK0302",
+    "ntaName": "Bedford-Stuyvesant (East)",
+    "ntaAbbrev": "BdSty_E",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK03"
+  },
+  {
+    "ntaCode": "BK0401",
+    "ntaName": "Bushwick (West)",
+    "ntaAbbrev": "Bshwck_W",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK04"
+  },
+  {
+    "ntaCode": "BK0402",
+    "ntaName": "Bushwick (East)",
+    "ntaAbbrev": "Bshwck_E",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK04"
+  },
+  {
+    "ntaCode": "BK0501",
+    "ntaName": "Cypress Hills",
+    "ntaAbbrev": "CyprssHls",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK05"
+  },
+  {
+    "ntaCode": "BK0502",
+    "ntaName": "East New York (North)",
+    "ntaAbbrev": "ENY_N",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK05"
+  },
+  {
+    "ntaCode": "BK0503",
+    "ntaName": "East New York-New Lots",
+    "ntaAbbrev": "ENY_NwLts",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK05"
+  },
+  {
+    "ntaCode": "BK0504",
+    "ntaName": "Spring Creek-Starrett City",
+    "ntaAbbrev": "SpCrk_StrC",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK05"
+  },
+  {
+    "ntaCode": "BK0505",
+    "ntaName": "East New York-City Line",
+    "ntaAbbrev": "ENY_CtyLn",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK05"
+  },
+  {
+    "ntaCode": "BK0601",
+    "ntaName": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+    "ntaAbbrev": "CrrllGrdns",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK06"
+  },
+  {
+    "ntaCode": "BK0602",
+    "ntaName": "Park Slope",
+    "ntaAbbrev": "PkSlp",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK06"
+  },
+  {
+    "ntaCode": "BK0701",
+    "ntaName": "Windsor Terrace-South Slope",
+    "ntaAbbrev": "WndsrTr",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK07"
+  },
+  {
+    "ntaCode": "BK0702",
+    "ntaName": "Sunset Park (West)",
+    "ntaAbbrev": "SnstPk_W",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK07"
+  },
+  {
+    "ntaCode": "BK0703",
+    "ntaName": "Sunset Park (Central)",
+    "ntaAbbrev": "SnstPk_C",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK07"
+  },
+  {
+    "ntaCode": "BK0801",
+    "ntaName": "Prospect Heights",
+    "ntaAbbrev": "PrspctHts",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK08"
+  },
+  {
+    "ntaCode": "BK0802",
+    "ntaName": "Crown Heights (North)",
+    "ntaAbbrev": "CrwnHts_N",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK08"
+  },
+  {
+    "ntaCode": "BK0901",
+    "ntaName": "Crown Heights (South)",
+    "ntaAbbrev": "CrwnHts_S",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK09"
+  },
+  {
+    "ntaCode": "BK0902",
+    "ntaName": "Prospect Lefferts Gardens-Wingate",
+    "ntaAbbrev": "PLG_Wngt",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK09"
+  },
+  {
+    "ntaCode": "BK1001",
+    "ntaName": "Bay Ridge",
+    "ntaAbbrev": "ByRdg",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK10"
+  },
+  {
+    "ntaCode": "BK1002",
+    "ntaName": "Dyker Heights",
+    "ntaAbbrev": "DykrHts",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK10"
+  },
+  {
+    "ntaCode": "BK1101",
+    "ntaName": "Bensonhurst",
+    "ntaAbbrev": "Bnsnhrst",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK11"
+  },
+  {
+    "ntaCode": "BK1102",
+    "ntaName": "Bath Beach",
+    "ntaAbbrev": "BthBch",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK11"
+  },
+  {
+    "ntaCode": "BK1103",
+    "ntaName": "Gravesend (West)",
+    "ntaAbbrev": "Grvsnd_W",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK11"
+  },
+  {
+    "ntaCode": "BK1201",
+    "ntaName": "Sunset Park (East)-Borough Park (West)",
+    "ntaAbbrev": "SnstPk_E",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK12"
+  },
+  {
+    "ntaCode": "BK1202",
+    "ntaName": "Borough Park",
+    "ntaAbbrev": "BoroPk",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK12"
+  },
+  {
+    "ntaCode": "BK1203",
+    "ntaName": "Kensington",
+    "ntaAbbrev": "Knsngtn",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK12"
+  },
+  {
+    "ntaCode": "BK1204",
+    "ntaName": "Mapleton-Midwood (West)",
+    "ntaAbbrev": "Mpltn",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK12"
+  },
+  {
+    "ntaCode": "BK1301",
+    "ntaName": "Gravesend (South)",
+    "ntaAbbrev": "Grvsnd_S",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK13"
+  },
+  {
+    "ntaCode": "BK1302",
+    "ntaName": "Coney Island-Sea Gate",
+    "ntaAbbrev": "CnyIsl",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK13"
+  },
+  {
+    "ntaCode": "BK1303",
+    "ntaName": "Brighton Beach",
+    "ntaAbbrev": "BrghtnBch",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK13"
+  },
+  {
+    "ntaCode": "BK1401",
+    "ntaName": "Flatbush",
+    "ntaAbbrev": "Fltbsh",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK14"
+  },
+  {
+    "ntaCode": "BK1402",
+    "ntaName": "Flatbush (West)-Ditmas Park-Parkville",
+    "ntaAbbrev": "Fltbsh_W",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK14"
+  },
+  {
+    "ntaCode": "BK1403",
+    "ntaName": "Midwood",
+    "ntaAbbrev": "Mdwd",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK14"
+  },
+  {
+    "ntaCode": "BK1501",
+    "ntaName": "Gravesend (East)-Homecrest",
+    "ntaAbbrev": "Grvsnd_E",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK15"
+  },
+  {
+    "ntaCode": "BK1502",
+    "ntaName": "Madison",
+    "ntaAbbrev": "Mdsn",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK15"
+  },
+  {
+    "ntaCode": "BK1503",
+    "ntaName": "Sheepshead Bay-Manhattan Beach-Gerritsen Beach",
+    "ntaAbbrev": "ShpshdBy",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK15"
+  },
+  {
+    "ntaCode": "BK1601",
+    "ntaName": "Ocean Hill",
+    "ntaAbbrev": "OcnHl",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK16"
+  },
+  {
+    "ntaCode": "BK1602",
+    "ntaName": "Brownsville",
+    "ntaAbbrev": "Brwnsvl",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK16"
+  },
+  {
+    "ntaCode": "BK1701",
+    "ntaName": "East Flatbush-Erasmus",
+    "ntaAbbrev": "EFb_Ersms",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK17"
+  },
+  {
+    "ntaCode": "BK1702",
+    "ntaName": "East Flatbush-Farragut",
+    "ntaAbbrev": "EFb_Frrgt",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK17"
+  },
+  {
+    "ntaCode": "BK1703",
+    "ntaName": "East Flatbush-Rugby",
+    "ntaAbbrev": "EFb_Rgby",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK17"
+  },
+  {
+    "ntaCode": "BK1704",
+    "ntaName": "East Flatbush-Remsen Village",
+    "ntaAbbrev": "EFb_RmsnVl",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK17"
+  },
+  {
+    "ntaCode": "BK1801",
+    "ntaName": "Flatlands",
+    "ntaAbbrev": "Fltlnds",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK18"
+  },
+  {
+    "ntaCode": "BK1802",
+    "ntaName": "Marine Park-Mill Basin-Bergen Beach",
+    "ntaAbbrev": "MrnPk_MBsn",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK18"
+  },
+  {
+    "ntaCode": "BK1803",
+    "ntaName": "Canarsie",
+    "ntaAbbrev": "Cnrsie",
+    "boroCode": "3",
+    "boroName": "Brooklyn",
+    "countyFips": "36047",
+    "cdta": "BK18"
+  },
+  {
+    "ntaCode": "BX0101",
+    "ntaName": "Mott Haven-Port Morris",
+    "ntaAbbrev": "MttHvn",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX01"
+  },
+  {
+    "ntaCode": "BX0102",
+    "ntaName": "Melrose",
+    "ntaAbbrev": "Mlrs",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX01"
+  },
+  {
+    "ntaCode": "BX0201",
+    "ntaName": "Hunts Point",
+    "ntaAbbrev": "HntsPt",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX02"
+  },
+  {
+    "ntaCode": "BX0202",
+    "ntaName": "Longwood",
+    "ntaAbbrev": "Lngwd",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX02"
+  },
+  {
+    "ntaCode": "BX0301",
+    "ntaName": "Morrisania",
+    "ntaAbbrev": "Mrrsnia",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX03"
+  },
+  {
+    "ntaCode": "BX0302",
+    "ntaName": "Claremont Village-Claremont (East)",
+    "ntaAbbrev": "ClrmntVlg",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX03"
+  },
+  {
+    "ntaCode": "BX0303",
+    "ntaName": "Crotona Park East",
+    "ntaAbbrev": "CrtnaPkEst",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX03"
+  },
+  {
+    "ntaCode": "BX0401",
+    "ntaName": "Concourse-Concourse Village",
+    "ntaAbbrev": "Cncrs",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX04"
+  },
+  {
+    "ntaCode": "BX0402",
+    "ntaName": "Highbridge",
+    "ntaAbbrev": "Hghbrdg",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX04"
+  },
+  {
+    "ntaCode": "BX0403",
+    "ntaName": "Mount Eden-Claremont (West)",
+    "ntaAbbrev": "MtEdn",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX04"
+  },
+  {
+    "ntaCode": "BX0501",
+    "ntaName": "University Heights (South)-Morris Heights",
+    "ntaAbbrev": "UnvrsHts_S",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX05"
+  },
+  {
+    "ntaCode": "BX0502",
+    "ntaName": "Mount Hope",
+    "ntaAbbrev": "MtHp",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX05"
+  },
+  {
+    "ntaCode": "BX0503",
+    "ntaName": "Fordham Heights",
+    "ntaAbbrev": "FrdhmHts",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX05"
+  },
+  {
+    "ntaCode": "BX0601",
+    "ntaName": "West Farms",
+    "ntaAbbrev": "WstFrms",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX06"
+  },
+  {
+    "ntaCode": "BX0602",
+    "ntaName": "Tremont",
+    "ntaAbbrev": "Trmnt",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX06"
+  },
+  {
+    "ntaCode": "BX0603",
+    "ntaName": "Belmont",
+    "ntaAbbrev": "Blmnt",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX06"
+  },
+  {
+    "ntaCode": "BX0701",
+    "ntaName": "University Heights (North)-Fordham",
+    "ntaAbbrev": "UnvrsHts_N",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX07"
+  },
+  {
+    "ntaCode": "BX0702",
+    "ntaName": "Bedford Park",
+    "ntaAbbrev": "BdfrdPk",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX07"
+  },
+  {
+    "ntaCode": "BX0703",
+    "ntaName": "Norwood",
+    "ntaAbbrev": "Nrwd",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX07"
+  },
+  {
+    "ntaCode": "BX0801",
+    "ntaName": "Kingsbridge Heights-Van Cortlandt Village",
+    "ntaAbbrev": "KngbrdgHts",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX08"
+  },
+  {
+    "ntaCode": "BX0802",
+    "ntaName": "Kingsbridge-Marble Hill",
+    "ntaAbbrev": "Kngbrdg",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX08"
+  },
+  {
+    "ntaCode": "BX0803",
+    "ntaName": "Riverdale-Spuyten Duyvil",
+    "ntaAbbrev": "Rvrdl",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX08"
+  },
+  {
+    "ntaCode": "BX0901",
+    "ntaName": "Soundview-Bruckner-Bronx River",
+    "ntaAbbrev": "Sdvw_BxRvr",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX09"
+  },
+  {
+    "ntaCode": "BX0902",
+    "ntaName": "Soundview-Clason Point",
+    "ntaAbbrev": "Sdvw_ClsPt",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX09"
+  },
+  {
+    "ntaCode": "BX0903",
+    "ntaName": "Castle Hill-Unionport",
+    "ntaAbbrev": "CstlHl",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX09"
+  },
+  {
+    "ntaCode": "BX0904",
+    "ntaName": "Parkchester",
+    "ntaAbbrev": "Pkchstr",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX09"
+  },
+  {
+    "ntaCode": "BX1001",
+    "ntaName": "Westchester Square",
+    "ntaAbbrev": "WstchstrSq",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX10"
+  },
+  {
+    "ntaCode": "BX1002",
+    "ntaName": "Throgs Neck-Schuylerville",
+    "ntaAbbrev": "ThrgsNck",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX10"
+  },
+  {
+    "ntaCode": "BX1003",
+    "ntaName": "Pelham Bay-Country Club-City Island",
+    "ntaAbbrev": "PlhmBy",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX10"
+  },
+  {
+    "ntaCode": "BX1004",
+    "ntaName": "Co-op City",
+    "ntaAbbrev": "CoopCty",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX10"
+  },
+  {
+    "ntaCode": "BX1101",
+    "ntaName": "Pelham Parkway-Van Nest",
+    "ntaAbbrev": "PlhmPkwy",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX11"
+  },
+  {
+    "ntaCode": "BX1102",
+    "ntaName": "Morris Park",
+    "ntaAbbrev": "MrrsPk",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX11"
+  },
+  {
+    "ntaCode": "BX1103",
+    "ntaName": "Pelham Gardens",
+    "ntaAbbrev": "PlhmGrdns",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX11"
+  },
+  {
+    "ntaCode": "BX1104",
+    "ntaName": "Allerton",
+    "ntaAbbrev": "Allrtn",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX11"
+  },
+  {
+    "ntaCode": "BX1201",
+    "ntaName": "Williamsbridge-Olinville",
+    "ntaAbbrev": "Wllmsbrdg",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX12"
+  },
+  {
+    "ntaCode": "BX1202",
+    "ntaName": "Eastchester-Edenwald-Baychester",
+    "ntaAbbrev": "Estchstr",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX12"
+  },
+  {
+    "ntaCode": "BX1203",
+    "ntaName": "Wakefield-Woodlawn",
+    "ntaAbbrev": "Wkfld_Wdln",
+    "boroCode": "2",
+    "boroName": "Bronx",
+    "countyFips": "36005",
+    "cdta": "BX12"
+  },
+  {
+    "ntaCode": "MN0101",
+    "ntaName": "Financial District-Battery Park City",
+    "ntaAbbrev": "FiDi",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN01"
+  },
+  {
+    "ntaCode": "MN0102",
+    "ntaName": "Tribeca-Civic Center",
+    "ntaAbbrev": "TriBeCa",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN01"
+  },
+  {
+    "ntaCode": "MN0201",
+    "ntaName": "SoHo-Little Italy-Hudson Square",
+    "ntaAbbrev": "SoHo",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN02"
+  },
+  {
+    "ntaCode": "MN0202",
+    "ntaName": "Greenwich Village",
+    "ntaAbbrev": "GrnwchVlg",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN02"
+  },
+  {
+    "ntaCode": "MN0203",
+    "ntaName": "West Village",
+    "ntaAbbrev": "WstVlg",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN02"
+  },
+  {
+    "ntaCode": "MN0301",
+    "ntaName": "Chinatown-Two Bridges",
+    "ntaAbbrev": "Chntwn",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN03"
+  },
+  {
+    "ntaCode": "MN0302",
+    "ntaName": "Lower East Side",
+    "ntaAbbrev": "LES",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN03"
+  },
+  {
+    "ntaCode": "MN0303",
+    "ntaName": "East Village",
+    "ntaAbbrev": "EstVlg",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN03"
+  },
+  {
+    "ntaCode": "MN0401",
+    "ntaName": "Chelsea-Hudson Yards",
+    "ntaAbbrev": "Chls_HdsYd",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN04"
+  },
+  {
+    "ntaCode": "MN0402",
+    "ntaName": "Hell's Kitchen",
+    "ntaAbbrev": "HllsKtchn",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN04"
+  },
+  {
+    "ntaCode": "MN0501",
+    "ntaName": "Midtown South-Flatiron-Union Square",
+    "ntaAbbrev": "MdtwnSth",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN05"
+  },
+  {
+    "ntaCode": "MN0502",
+    "ntaName": "Midtown-Times Square",
+    "ntaAbbrev": "Mdtwn_TmSq",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN05"
+  },
+  {
+    "ntaCode": "MN0601",
+    "ntaName": "Stuyvesant Town-Peter Cooper Village",
+    "ntaAbbrev": "StyTwn",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN06"
+  },
+  {
+    "ntaCode": "MN0602",
+    "ntaName": "Gramercy",
+    "ntaAbbrev": "Grmrcy",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN06"
+  },
+  {
+    "ntaCode": "MN0603",
+    "ntaName": "Murray Hill-Kips Bay",
+    "ntaAbbrev": "MryHl_KpBy",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN06"
+  },
+  {
+    "ntaCode": "MN0604",
+    "ntaName": "East Midtown-Turtle Bay",
+    "ntaAbbrev": "EstMdtwn",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN06"
+  },
+  {
+    "ntaCode": "MN0701",
+    "ntaName": "Upper West Side-Lincoln Square",
+    "ntaAbbrev": "UWS_LclnSq",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN07"
+  },
+  {
+    "ntaCode": "MN0702",
+    "ntaName": "Upper West Side (Central)",
+    "ntaAbbrev": "UWS_C",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN07"
+  },
+  {
+    "ntaCode": "MN0703",
+    "ntaName": "Upper West Side-Manhattan Valley",
+    "ntaAbbrev": "UWS_MnVly",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN07"
+  },
+  {
+    "ntaCode": "MN0801",
+    "ntaName": "Upper East Side-Lenox Hill-Roosevelt Island",
+    "ntaAbbrev": "UES_LnxHl",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN08"
+  },
+  {
+    "ntaCode": "MN0802",
+    "ntaName": "Upper East Side-Carnegie Hill",
+    "ntaAbbrev": "UES_CrngHl",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN08"
+  },
+  {
+    "ntaCode": "MN0803",
+    "ntaName": "Upper East Side-Yorkville",
+    "ntaAbbrev": "UES_Yrkvl",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN08"
+  },
+  {
+    "ntaCode": "MN0901",
+    "ntaName": "Morningside Heights",
+    "ntaAbbrev": "MrngsdHts",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN09"
+  },
+  {
+    "ntaCode": "MN0902",
+    "ntaName": "Manhattanville-West Harlem",
+    "ntaAbbrev": "Mnhttnvl",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN09"
+  },
+  {
+    "ntaCode": "MN0903",
+    "ntaName": "Hamilton Heights-Sugar Hill",
+    "ntaAbbrev": "HmltnHts",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN09"
+  },
+  {
+    "ntaCode": "MN1001",
+    "ntaName": "Harlem (South)",
+    "ntaAbbrev": "Hrlm_S",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN10"
+  },
+  {
+    "ntaCode": "MN1002",
+    "ntaName": "Harlem (North)",
+    "ntaAbbrev": "Hrlm_N",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN10"
+  },
+  {
+    "ntaCode": "MN1101",
+    "ntaName": "East Harlem (South)",
+    "ntaAbbrev": "EstHrlm_S",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN11"
+  },
+  {
+    "ntaCode": "MN1102",
+    "ntaName": "East Harlem (North)",
+    "ntaAbbrev": "EstHrlm_N",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN11"
+  },
+  {
+    "ntaCode": "MN1201",
+    "ntaName": "Washington Heights (South)",
+    "ntaAbbrev": "WshHts_S",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN12"
+  },
+  {
+    "ntaCode": "MN1202",
+    "ntaName": "Washington Heights (North)",
+    "ntaAbbrev": "WshHts_N",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN12"
+  },
+  {
+    "ntaCode": "MN1203",
+    "ntaName": "Inwood",
+    "ntaAbbrev": "Inwd",
+    "boroCode": "1",
+    "boroName": "Manhattan",
+    "countyFips": "36061",
+    "cdta": "MN12"
+  },
+  {
+    "ntaCode": "QN0101",
+    "ntaName": "Astoria (North)-Ditmars-Steinway",
+    "ntaAbbrev": "Astr_N",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN01"
+  },
+  {
+    "ntaCode": "QN0102",
+    "ntaName": "Old Astoria-Hallets Point",
+    "ntaAbbrev": "OldAstr",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN01"
+  },
+  {
+    "ntaCode": "QN0103",
+    "ntaName": "Astoria (Central)",
+    "ntaAbbrev": "Astr_C",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN01"
+  },
+  {
+    "ntaCode": "QN0104",
+    "ntaName": "Astoria (East)-Woodside (North)",
+    "ntaAbbrev": "Astr_E",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN01"
+  },
+  {
+    "ntaCode": "QN0105",
+    "ntaName": "Queensbridge-Ravenswood-Dutch Kills",
+    "ntaAbbrev": "Qnsbrdg",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN01"
+  },
+  {
+    "ntaCode": "QN0201",
+    "ntaName": "Long Island City-Hunters Point",
+    "ntaAbbrev": "LIC",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN02"
+  },
+  {
+    "ntaCode": "QN0202",
+    "ntaName": "Sunnyside",
+    "ntaAbbrev": "Snnysd",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN02"
+  },
+  {
+    "ntaCode": "QN0203",
+    "ntaName": "Woodside",
+    "ntaAbbrev": "Wdsd",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN02"
+  },
+  {
+    "ntaCode": "QN0301",
+    "ntaName": "Jackson Heights",
+    "ntaAbbrev": "JcksnHts",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN03"
+  },
+  {
+    "ntaCode": "QN0302",
+    "ntaName": "East Elmhurst",
+    "ntaAbbrev": "EstElmhrst",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN03"
+  },
+  {
+    "ntaCode": "QN0303",
+    "ntaName": "North Corona",
+    "ntaAbbrev": "NrthCrna",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN03"
+  },
+  {
+    "ntaCode": "QN0401",
+    "ntaName": "Elmhurst",
+    "ntaAbbrev": "Elmhrst",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN04"
+  },
+  {
+    "ntaCode": "QN0402",
+    "ntaName": "Corona",
+    "ntaAbbrev": "Crna",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN04"
+  },
+  {
+    "ntaCode": "QN0501",
+    "ntaName": "Maspeth",
+    "ntaAbbrev": "Mspth",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN05"
+  },
+  {
+    "ntaCode": "QN0502",
+    "ntaName": "Ridgewood",
+    "ntaAbbrev": "Rdgwd",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN05"
+  },
+  {
+    "ntaCode": "QN0503",
+    "ntaName": "Glendale",
+    "ntaAbbrev": "Glndl",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN05"
+  },
+  {
+    "ntaCode": "QN0504",
+    "ntaName": "Middle Village",
+    "ntaAbbrev": "MddlVlg",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN05"
+  },
+  {
+    "ntaCode": "QN0601",
+    "ntaName": "Rego Park",
+    "ntaAbbrev": "RegoPk",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN06"
+  },
+  {
+    "ntaCode": "QN0602",
+    "ntaName": "Forest Hills",
+    "ntaAbbrev": "FrstHls",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN06"
+  },
+  {
+    "ntaCode": "QN0701",
+    "ntaName": "College Point",
+    "ntaAbbrev": "CllgPt",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN07"
+  },
+  {
+    "ntaCode": "QN0702",
+    "ntaName": "Whitestone-Beechhurst",
+    "ntaAbbrev": "Whtstn",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN07"
+  },
+  {
+    "ntaCode": "QN0703",
+    "ntaName": "Bay Terrace-Clearview",
+    "ntaAbbrev": "ByTr_Clrvw",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN07"
+  },
+  {
+    "ntaCode": "QN0704",
+    "ntaName": "Murray Hill-Broadway Flushing",
+    "ntaAbbrev": "MryHl_BwyF",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN07"
+  },
+  {
+    "ntaCode": "QN0705",
+    "ntaName": "East Flushing",
+    "ntaAbbrev": "EstFlshng",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN07"
+  },
+  {
+    "ntaCode": "QN0706",
+    "ntaName": "Queensboro Hill",
+    "ntaAbbrev": "QnsboroHl",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN07"
+  },
+  {
+    "ntaCode": "QN0707",
+    "ntaName": "Flushing-Willets Point",
+    "ntaAbbrev": "Flshng",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN07"
+  },
+  {
+    "ntaCode": "QN0801",
+    "ntaName": "Kew Gardens Hills",
+    "ntaAbbrev": "KwGrdnsHls",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN08"
+  },
+  {
+    "ntaCode": "QN0802",
+    "ntaName": "Pomonok-Electchester-Hillcrest",
+    "ntaAbbrev": "Pmnk_Hlcst",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN08"
+  },
+  {
+    "ntaCode": "QN0803",
+    "ntaName": "Fresh Meadows-Utopia",
+    "ntaAbbrev": "FrshMdws",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN08"
+  },
+  {
+    "ntaCode": "QN0804",
+    "ntaName": "Jamaica Estates-Holliswood",
+    "ntaAbbrev": "JmcaEstts",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN08"
+  },
+  {
+    "ntaCode": "QN0805",
+    "ntaName": "Jamaica Hills-Briarwood",
+    "ntaAbbrev": "JmcaHls",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN08"
+  },
+  {
+    "ntaCode": "QN0901",
+    "ntaName": "Kew Gardens",
+    "ntaAbbrev": "KwGrdns",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN09"
+  },
+  {
+    "ntaCode": "QN0902",
+    "ntaName": "Richmond Hill",
+    "ntaAbbrev": "RchmdHl",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN09"
+  },
+  {
+    "ntaCode": "QN0903",
+    "ntaName": "South Richmond Hill",
+    "ntaAbbrev": "SthRchmdHl",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN09"
+  },
+  {
+    "ntaCode": "QN0904",
+    "ntaName": "Ozone Park (North)",
+    "ntaAbbrev": "OznPk_N",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN09"
+  },
+  {
+    "ntaCode": "QN0905",
+    "ntaName": "Woodhaven",
+    "ntaAbbrev": "Wdhvn",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN09"
+  },
+  {
+    "ntaCode": "QN1001",
+    "ntaName": "South Ozone Park",
+    "ntaAbbrev": "SthOznPk",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN10"
+  },
+  {
+    "ntaCode": "QN1002",
+    "ntaName": "Ozone Park",
+    "ntaAbbrev": "OznPk",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN10"
+  },
+  {
+    "ntaCode": "QN1003",
+    "ntaName": "Howard Beach-Lindenwood",
+    "ntaAbbrev": "HwrdBch",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN10"
+  },
+  {
+    "ntaCode": "QN1101",
+    "ntaName": "Auburndale",
+    "ntaAbbrev": "Abrndl",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN11"
+  },
+  {
+    "ntaCode": "QN1102",
+    "ntaName": "Bayside",
+    "ntaAbbrev": "Bysd",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN11"
+  },
+  {
+    "ntaCode": "QN1103",
+    "ntaName": "Douglaston-Little Neck",
+    "ntaAbbrev": "Dglstn",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN11"
+  },
+  {
+    "ntaCode": "QN1104",
+    "ntaName": "Oakland Gardens-Hollis Hills",
+    "ntaAbbrev": "OklndGrdns",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN11"
+  },
+  {
+    "ntaCode": "QN1201",
+    "ntaName": "Jamaica",
+    "ntaAbbrev": "Jmca",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN12"
+  },
+  {
+    "ntaCode": "QN1202",
+    "ntaName": "South Jamaica",
+    "ntaAbbrev": "SthJmca",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN12"
+  },
+  {
+    "ntaCode": "QN1203",
+    "ntaName": "Baisley Park",
+    "ntaAbbrev": "BslyPk",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN12"
+  },
+  {
+    "ntaCode": "QN1204",
+    "ntaName": "Springfield Gardens (North)-Rochdale Village",
+    "ntaAbbrev": "SpfGrdns_N",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN12"
+  },
+  {
+    "ntaCode": "QN1205",
+    "ntaName": "St. Albans",
+    "ntaAbbrev": "StAlbns",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN12"
+  },
+  {
+    "ntaCode": "QN1206",
+    "ntaName": "Hollis",
+    "ntaAbbrev": "Hlls",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN12"
+  },
+  {
+    "ntaCode": "QN1301",
+    "ntaName": "Glen Oaks-Floral Park-New Hyde Park",
+    "ntaAbbrev": "GlnOks",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN13"
+  },
+  {
+    "ntaCode": "QN1302",
+    "ntaName": "Bellerose",
+    "ntaAbbrev": "Bllrs",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN13"
+  },
+  {
+    "ntaCode": "QN1303",
+    "ntaName": "Queens Village",
+    "ntaAbbrev": "QnsVlg",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN13"
+  },
+  {
+    "ntaCode": "QN1304",
+    "ntaName": "Cambria Heights",
+    "ntaAbbrev": "CmbriaHts",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN13"
+  },
+  {
+    "ntaCode": "QN1305",
+    "ntaName": "Laurelton",
+    "ntaAbbrev": "Lrltn",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN13"
+  },
+  {
+    "ntaCode": "QN1306",
+    "ntaName": "Springfield Gardens (South)-Brookville",
+    "ntaAbbrev": "SpfGrdns_S",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN13"
+  },
+  {
+    "ntaCode": "QN1307",
+    "ntaName": "Rosedale",
+    "ntaAbbrev": "Rsdl",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN13"
+  },
+  {
+    "ntaCode": "QN1401",
+    "ntaName": "Far Rockaway-Bayswater",
+    "ntaAbbrev": "FrRckwy",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN14"
+  },
+  {
+    "ntaCode": "QN1402",
+    "ntaName": "Rockaway Beach-Arverne-Edgemere",
+    "ntaAbbrev": "RckwyBch",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN14"
+  },
+  {
+    "ntaCode": "QN1403",
+    "ntaName": "Breezy Point-Belle Harbor-Rockaway Park-Broad Channel",
+    "ntaAbbrev": "BrzyPt",
+    "boroCode": "4",
+    "boroName": "Queens",
+    "countyFips": "36081",
+    "cdta": "QN14"
+  },
+  {
+    "ntaCode": "SI0101",
+    "ntaName": "St. George-New Brighton",
+    "ntaAbbrev": "StGrg",
+    "boroCode": "5",
+    "boroName": "Staten Island",
+    "countyFips": "36085",
+    "cdta": "SI01"
+  },
+  {
+    "ntaCode": "SI0102",
+    "ntaName": "Tompkinsville-Stapleton-Clifton-Fox Hills",
+    "ntaAbbrev": "Tkvl_Stptn",
+    "boroCode": "5",
+    "boroName": "Staten Island",
+    "countyFips": "36085",
+    "cdta": "SI01"
+  },
+  {
+    "ntaCode": "SI0103",
+    "ntaName": "Rosebank-Shore Acres-Park Hill",
+    "ntaAbbrev": "Rsbnk_PkHl",
+    "boroCode": "5",
+    "boroName": "Staten Island",
+    "countyFips": "36085",
+    "cdta": "SI01"
+  },
+  {
+    "ntaCode": "SI0104",
+    "ntaName": "West New Brighton-Silver Lake-Grymes Hill",
+    "ntaAbbrev": "WstNwBrgtn",
+    "boroCode": "5",
+    "boroName": "Staten Island",
+    "countyFips": "36085",
+    "cdta": "SI01"
+  },
+  {
+    "ntaCode": "SI0105",
+    "ntaName": "Westerleigh-Castleton Corners",
+    "ntaAbbrev": "Wstrlgh",
+    "boroCode": "5",
+    "boroName": "Staten Island",
+    "countyFips": "36085",
+    "cdta": "SI01"
+  },
+  {
+    "ntaCode": "SI0106",
+    "ntaName": "Port Richmond",
+    "ntaAbbrev": "PrtRchmnd",
+    "boroCode": "5",
+    "boroName": "Staten Island",
+    "countyFips": "36085",
+    "cdta": "SI01"
+  },
+  {
+    "ntaCode": "SI0107",
+    "ntaName": "Mariner's Harbor-Arlington-Graniteville",
+    "ntaAbbrev": "MrnrsHrbr",
+    "boroCode": "5",
+    "boroName": "Staten Island",
+    "countyFips": "36085",
+    "cdta": "SI01"
+  },
+  {
+    "ntaCode": "SI0201",
+    "ntaName": "Grasmere-Arrochar-South Beach-Dongan Hills",
+    "ntaAbbrev": "Grsmr_SBch",
+    "boroCode": "5",
+    "boroName": "Staten Island",
+    "countyFips": "36085",
+    "cdta": "SI02"
+  },
+  {
+    "ntaCode": "SI0202",
+    "ntaName": "New Dorp-Midland Beach",
+    "ntaAbbrev": "NwDrp_MBch",
+    "boroCode": "5",
+    "boroName": "Staten Island",
+    "countyFips": "36085",
+    "cdta": "SI02"
+  },
+  {
+    "ntaCode": "SI0203",
+    "ntaName": "Todt Hill-Emerson Hill-Lighthouse Hill-Manor Heights",
+    "ntaAbbrev": "TdtHl",
+    "boroCode": "5",
+    "boroName": "Staten Island",
+    "countyFips": "36085",
+    "cdta": "SI02"
+  },
+  {
+    "ntaCode": "SI0204",
+    "ntaName": "New Springville-Willowbrook-Bulls Head-Travis",
+    "ntaAbbrev": "NwSprngvl",
+    "boroCode": "5",
+    "boroName": "Staten Island",
+    "countyFips": "36085",
+    "cdta": "SI02"
+  },
+  {
+    "ntaCode": "SI0301",
+    "ntaName": "Oakwood-Richmondtown",
+    "ntaAbbrev": "Okwd_Rmtwn",
+    "boroCode": "5",
+    "boroName": "Staten Island",
+    "countyFips": "36085",
+    "cdta": "SI03"
+  },
+  {
+    "ntaCode": "SI0302",
+    "ntaName": "Great Kills-Eltingville",
+    "ntaAbbrev": "GrtKls_Evl",
+    "boroCode": "5",
+    "boroName": "Staten Island",
+    "countyFips": "36085",
+    "cdta": "SI03"
+  },
+  {
+    "ntaCode": "SI0303",
+    "ntaName": "Arden Heights-Rossville",
+    "ntaAbbrev": "ArdnHts",
+    "boroCode": "5",
+    "boroName": "Staten Island",
+    "countyFips": "36085",
+    "cdta": "SI03"
+  },
+  {
+    "ntaCode": "SI0304",
+    "ntaName": "Annadale-Huguenot-Prince's Bay-Woodrow",
+    "ntaAbbrev": "Anndl_Wdrw",
+    "boroCode": "5",
+    "boroName": "Staten Island",
+    "countyFips": "36085",
+    "cdta": "SI03"
+  },
+  {
+    "ntaCode": "SI0305",
+    "ntaName": "Tottenville-Charleston",
+    "ntaAbbrev": "Tttnvl",
+    "boroCode": "5",
+    "boroName": "Staten Island",
+    "countyFips": "36085",
+    "cdta": "SI03"
+  }
+]

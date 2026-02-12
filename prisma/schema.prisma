@@ -62,7 +62,7 @@ model Geography {
   parentId  String?
   parent    Geography?    @relation("GeoParent", fields: [parentId], references: [id])
   children  Geography[]   @relation("GeoParent")
-  fipsCode  String?
+  fipsCode  String?       @unique // FIPS for counties/states, NTA code for NTAs, GEOID for tracts
   // PostGIS geometry stored via raw SQL; Prisma can't model it directly
   // Use: SELECT ST_AsGeoJSON(geom) FROM "Geography" WHERE id = ?
   createdAt DateTime      @default(now())
@@ -81,7 +81,11 @@ enum GeographyType {
   NEIGHBORHOOD
   CENSUS_TRACT
   CENSUS_BLOCK
+  CENSUS_BLOCK_GROUP
   CITY
+  NTA
+  COMMUNITY_DISTRICT
+  ZCTA
 }
 
 // -- Data Tables --

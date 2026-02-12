@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "east-harlem",
+    "name": "East Harlem",
+    "borough": "Manhattan",
+    "fips": "36061",
+    "ntaVersion": "2020",
+    "ntaCodes": ["MN1101", "MN1102"],
+    "ntaNames": ["East Harlem (South)", "East Harlem (North)"]
+  },
+  {
+    "slug": "bushwick",
+    "name": "Bushwick",
+    "borough": "Brooklyn",
+    "fips": "36047",
+    "ntaVersion": "2020",
+    "ntaCodes": ["BK0401", "BK0402"],
+    "ntaNames": ["Bushwick (West)", "Bushwick (East)"]
+  },
+  {
+    "slug": "south-bronx",
+    "name": "South Bronx (Mott Haven/Melrose)",
+    "borough": "Bronx",
+    "fips": "36005",
+    "ntaVersion": "2020",
+    "ntaCodes": ["BX0101", "BX0102"],
+    "ntaNames": ["Mott Haven-Port Morris", "Melrose"]
+  },
+  {
+    "slug": "astoria",
+    "name": "Astoria",
+    "borough": "Queens",
+    "fips": "36081",
+    "ntaVersion": "2020",
+    "ntaCodes": ["QN0101", "QN0102", "QN0103", "QN0104", "QN0105"],
+    "ntaNames": ["Astoria (North)-Ditmars-Steinway", "Old Astoria-Hallets Point", "Astoria (Central)", "Astoria (East)-Woodside (North)", "Queensbridge-Ravenswood-Dutch Kills"]
+  },
+  {
+    "slug": "bay-ridge",
+    "name": "Bay Ridge",
+    "borough": "Brooklyn",
+    "fips": "36047",
+    "ntaVersion": "2020",
+    "ntaCodes": ["BK1001"],
+    "ntaNames": ["Bay Ridge"]
+  },
+  {
+    "slug": "washington-heights",
+    "name": "Washington Heights",
+    "borough": "Manhattan",
+    "fips": "36061",
+    "ntaVersion": "2020",
+    "ntaCodes": ["MN1201", "MN1202"],
+    "ntaNames": ["Washington Heights (South)", "Washington Heights (North)"]
+  }
+]

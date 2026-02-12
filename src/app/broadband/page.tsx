@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Badge } from "@/components/ui/Badge";
 import { BroadbandCharts } from "./broadband-charts";
-import { NYSCountyMap } from "@/components/maps/NYSCountyMap";
+import { BroadbandCountyMap } from "./BroadbandCountyMap";
 
 import timeSeriesData from "../../../data/concentration/broadband-nys.json";
 import marketShareData from "../../../data/concentration/broadband-nys-market-shares.json";
@@ -57,7 +57,16 @@ export default function BroadbandPage() {
       </div>
 
       {/* State map */}
-      <NYSCountyMap countyData={counties} />
+      <div className="card">
+        <h2 className="text-xl font-bold text-fm-patina mb-2">
+          Broadband Concentration Across NYS
+        </h2>
+        <p className="text-sm text-fm-sage mb-4">
+          Counties with data are colored by HHI. Higher concentration means fewer
+          ISP choices for residents.
+        </p>
+        <BroadbandCountyMap counties={counties} />
+      </div>
 
       {/* Charts */}
       <div className="mt-8">

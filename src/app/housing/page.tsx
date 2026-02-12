@@ -7,7 +7,7 @@ import {
   ViolationsVsConcentrationChart,
   CitywideCharts,
 } from "./housing-charts";
-import { NYCBoroughMap } from "@/components/maps/NYCBoroughMap";
+import { HousingNTAMap } from "./HousingNTAMap";
 
 import timeSeriesData from "../../../data/concentration/housing-nyc.json";
 import marketShareData from "../../../data/concentration/housing-nyc-market-shares.json";
@@ -28,30 +28,22 @@ export default function HousingPage() {
     (a, b) => b.hpdViolationsPerUnit - a.hpdViolationsPerUnit
   )[0];
 
-  // Aggregate neighborhood data by borough for the map
-  const boroughMap = new Map<
-    string,
-    { totalUnits: number; weightedHHI: number; count: number }
-  >();
+  // Build NTA-keyed data for the choropleth map
+  // Each NTA code in a neighborhood gets that neighborhood's HHI
+  const ntaHHI: Record<string, number> = {};
+  const ntaDetails: Record<string, { name: string; slug: string; hhi: number; cr4: number; totalUnits: number }> = {};
   for (const n of neighborhoods) {
-    const existing = boroughMap.get(n.borough) ?? {
-      totalUnits: 0,
-      weightedHHI: 0,
-      count: 0,
-    };
-    existing.totalUnits += n.totalUnits;
-    existing.weightedHHI += n.hhi * n.totalUnits;
-    existing.count += 1;
-    boroughMap.set(n.borough, existing);
+    for (const ntaCode of n.ntaCodes) {
+      ntaHHI[ntaCode] = n.hhi;
+      ntaDetails[ntaCode] = {
+        name: n.name,
+        slug: n.slug,
+        hhi: n.hhi,
+        cr4: n.cr4,
+        totalUnits: n.totalUnits,
+      };
+    }
   }
-  const boroughData = Array.from(boroughMap.entries()).map(
-    ([borough, data]) => ({
-      borough,
-      hhi: Math.round(data.weightedHHI / data.totalUnits),
-      totalUnits: data.totalUnits,
-      neighborhoodCount: data.count,
-    })
-  );
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -97,8 +89,17 @@ export default function HousingPage() {
         </div>
       </div>
 
-      {/* Borough-level concentration map */}
-      <NYCBoroughMap boroughData={boroughData} />
+      {/* NTA-level concentration map */}
+      <div className="card">
+        <h2 className="text-xl font-bold text-fm-patina mb-2">
+          Housing Concentration by Neighborhood
+        </h2>
+        <p className="text-sm text-fm-sage mb-4">
+          Ownership concentration (HHI) across NYC{"'"}s 2020 Neighborhood
+          Tabulation Areas. Colored NTAs have data; click to explore.
+        </p>
+        <HousingNTAMap data={ntaHHI} details={ntaDetails} />
+      </div>
 
       {/* Primary chart: neighborhood HHI comparison */}
       <div className="mt-8">
