@@ -83,6 +83,9 @@ export default function HousingPage() {
             Highest CR4 (Top 4 Landlords)
           </div>
           <div className="text-xs text-fm-sage">{highestCR4.name}</div>
+          <div className="text-xs text-fm-copper mt-1 font-medium">
+            ~1 in every {Math.round(100 / highestCR4.cr4)} units
+          </div>
         </div>
         <div className="card text-center">
           <div className="text-3xl font-bold text-fm-copper">
@@ -158,7 +161,7 @@ export default function HousingPage() {
                   <HHITooltip>HHI</HHITooltip>
                 </th>
                 <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                  CR4
+                  CR4 (Top 4)
                 </th>
                 <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
                   MHI
@@ -209,6 +212,9 @@ export default function HousingPage() {
                   </td>
                   <td className="px-4 py-3 text-sm text-right font-medium">
                     {n.cr4}%
+                    <div className="text-xs font-normal text-fm-sage">
+                      ~1 in {Math.round(100 / n.cr4)} units
+                    </div>
                   </td>
                   <td className="px-4 py-3 text-sm text-right">
                     {n.medianIncome

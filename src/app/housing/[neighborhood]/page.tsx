@@ -82,6 +82,9 @@ export default async function NeighborhoodPage({ params }: Props) {
             {neighborhood.cr4}%
           </div>
           <div className="text-xs text-fm-sage mt-1">CR4 (Top 4 Landlords)</div>
+          <div className="text-xs text-fm-copper mt-1 font-medium">
+            ~1 in every {Math.round(100 / neighborhood.cr4)} units
+          </div>
         </div>
         <div className="card text-center">
           <div className="text-2xl font-bold text-fm-patina">
@@ -142,6 +145,9 @@ export default async function NeighborhoodPage({ params }: Props) {
                 <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
                   Market Share
                 </th>
+                <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
+                  Concentration
+                </th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
@@ -158,6 +164,9 @@ export default async function NeighborhoodPage({ params }: Props) {
                   </td>
                   <td className="px-4 py-3 text-sm text-right font-medium">
                     {landlord.share}%
+                  </td>
+                  <td className="px-4 py-3 text-sm text-right text-fm-sage">
+                    ~1 in {Math.round(100 / landlord.share)} units
                   </td>
                 </tr>
               ))}
