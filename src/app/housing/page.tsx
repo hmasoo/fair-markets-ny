@@ -2,12 +2,20 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Badge } from "@/components/ui/Badge";
-import {
-  NeighborhoodConcentrationChart,
-  ViolationsVsConcentrationChart,
-  ConcentrationVsIncomeChart,
-  CitywideCharts,
-} from "./housing-charts";
+import dynamic from "next/dynamic";
+
+const NeighborhoodConcentrationChart = dynamic(
+  () => import("./housing-charts").then((m) => m.NeighborhoodConcentrationChart),
+);
+const ViolationsVsConcentrationChart = dynamic(
+  () => import("./housing-charts").then((m) => m.ViolationsVsConcentrationChart),
+);
+const ConcentrationVsIncomeChart = dynamic(
+  () => import("./housing-charts").then((m) => m.ConcentrationVsIncomeChart),
+);
+const CitywideCharts = dynamic(
+  () => import("./housing-charts").then((m) => m.CitywideCharts),
+);
 import { HousingNTAMap } from "./HousingNTAMap";
 import { HHITooltip } from "@/components/ui/HHITooltip";
 import { getHHITextClass } from "@/lib/colorScales";

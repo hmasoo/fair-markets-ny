@@ -3,7 +3,11 @@ import { notFound } from "next/navigation";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Badge } from "@/components/ui/Badge";
 import { getHHITextClass } from "@/lib/colorScales";
-import { NeighborhoodCharts } from "./neighborhood-charts";
+import dynamic from "next/dynamic";
+
+const NeighborhoodCharts = dynamic(
+  () => import("./neighborhood-charts").then((m) => m.NeighborhoodCharts),
+);
 
 import neighborhoodData from "../../../../data/concentration/housing-neighborhoods.json";
 

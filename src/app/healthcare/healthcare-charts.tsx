@@ -1,20 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-  Cell,
-  ReferenceLine,
-} from "recharts";
 import { ConcentrationTimeSeries } from "@/components/charts/ConcentrationTimeSeries";
 import { MarketShareChart } from "@/components/charts/MarketShareChart";
+import { ChartContainer } from "@/components/charts/ChartContainer";
+import { ChartTooltip } from "@/components/charts/ChartTooltip";
 import { getHHIColor } from "@/lib/colorScales";
+import {
+  linearScale,
+  bandScale,
+  niceLinearTicks,
+  roundedRightRect,
+} from "@/lib/chart-utils";
 
 interface Region {
   name: string;
@@ -43,7 +40,15 @@ export function RegionalConcentrationChart({
 }: {
   regions: Region[];
 }) {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const sorted = [...regions].sort((a, b) => b.hhi - a.hhi);
+  const chartHeight = sorted.length * 56 + 40;
+  const margin = { top: 10, right: 30, bottom: 30, left: 160 };
+
+  // X domain from data
+  const maxHHI = Math.max(...sorted.map((r) => r.hhi));
+  const xTicks = niceLinearTicks(0, maxHHI * 1.1, 6);
+  const xDomain: [number, number] = [0, xTicks[xTicks.length - 1]];
 
   return (
     <div className="card">
@@ -54,72 +59,161 @@ export function RegionalConcentrationChart({
         HHI measures how concentrated hospital beds are among health systems.
         Higher values mean fewer systems control more beds.
       </p>
-      <ResponsiveContainer width="100%" height={sorted.length * 56 + 40}>
-        <BarChart
-          data={sorted}
-          layout="vertical"
-          margin={{ top: 5, right: 30, bottom: 5, left: 10 }}
-        >
-          <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" horizontal={false} />
-          <XAxis
-            type="number"
-            tick={{ fontSize: 12 }}
-            label={{
-              value: "HHI",
-              position: "insideBottomRight",
-              offset: -5,
-              style: { fontSize: 12, fill: "#6A8C7E" },
-            }}
-          />
-          <YAxis
-            type="category"
-            dataKey="name"
-            tick={{ fontSize: 13 }}
-            width={160}
-          />
-          <Tooltip
-            content={({ active, payload }) => {
-              if (!active || !payload?.length) return null;
-              const d = payload[0].payload as Region;
-              return (
-                <div className="bg-white border border-gray-200 rounded-lg shadow-md p-3 text-sm">
-                  <div className="font-bold text-fm-patina">{d.name}</div>
-                  <div className="space-y-1 mt-1">
-                    <div>HHI: <strong>{d.hhi.toLocaleString()}</strong></div>
-                    <div>CR4: <strong>{d.cr4}%</strong></div>
-                    <div>Beds: <strong>{d.totalBeds.toLocaleString()}</strong></div>
-                    <div>Facilities: <strong>{d.totalFacilities}</strong></div>
-                    <div className="text-xs text-fm-sage mt-1">
-                      Top system: {d.topSystems[0]?.name} ({d.topSystems[0]?.share}%)
+      <ChartContainer height={chartHeight} margin={margin}>
+        {({ svgWidth, svgHeight, width, height, margin: m }) => {
+          const xScale = linearScale(xDomain, [0, width]);
+          const { scale: yScale, bandwidth } = bandScale(
+            sorted.map((r) => r.name),
+            [0, height],
+            0.3,
+          );
+
+          return (
+            <>
+              <svg width={svgWidth} height={svgHeight}>
+                <g transform={`translate(${m.left},${m.top})`}>
+                  {/* Vertical grid lines */}
+                  {xTicks.map((tick) => (
+                    <line
+                      key={tick}
+                      x1={xScale(tick)}
+                      y1={0}
+                      x2={xScale(tick)}
+                      y2={height}
+                      stroke="#e2e8f0"
+                      strokeDasharray="3 3"
+                    />
+                  ))}
+
+                  {/* Reference lines */}
+                  {xDomain[1] >= 1500 && (
+                    <>
+                      <line
+                        x1={xScale(1500)}
+                        y1={0}
+                        x2={xScale(1500)}
+                        y2={height}
+                        stroke="#E69F00"
+                        strokeDasharray="5 5"
+                      />
+                      <text
+                        x={xScale(1500)}
+                        y={-4}
+                        textAnchor="middle"
+                        fontSize={10}
+                        fill="#E69F00"
+                      >
+                        Moderate
+                      </text>
+                    </>
+                  )}
+                  {xDomain[1] >= 2500 && (
+                    <>
+                      <line
+                        x1={xScale(2500)}
+                        y1={0}
+                        x2={xScale(2500)}
+                        y2={height}
+                        stroke="#D55E00"
+                        strokeDasharray="5 5"
+                      />
+                      <text
+                        x={xScale(2500)}
+                        y={-4}
+                        textAnchor="middle"
+                        fontSize={10}
+                        fill="#D55E00"
+                      >
+                        Highly Concentrated
+                      </text>
+                    </>
+                  )}
+
+                  {/* Bars */}
+                  {sorted.map((r, i) => (
+                    <path
+                      key={i}
+                      d={roundedRightRect(
+                        0,
+                        yScale(i),
+                        xScale(r.hhi),
+                        bandwidth,
+                        4,
+                      )}
+                      fill={getHHIColor(r.hhi)}
+                      onMouseEnter={() => setHoveredIndex(i)}
+                      onMouseLeave={() => setHoveredIndex(null)}
+                      style={{ cursor: "pointer" }}
+                    />
+                  ))}
+
+                  {/* X-axis */}
+                  <line
+                    x1={0}
+                    y1={height}
+                    x2={width}
+                    y2={height}
+                    stroke="#cbd5e1"
+                  />
+                  {xTicks.map((tick) => (
+                    <text
+                      key={tick}
+                      x={xScale(tick)}
+                      y={height + 18}
+                      textAnchor="middle"
+                      fontSize={12}
+                      fill="#64748b"
+                    >
+                      {tick.toLocaleString()}
+                    </text>
+                  ))}
+
+                  {/* Y-axis labels */}
+                  {sorted.map((r, i) => (
+                    <text
+                      key={i}
+                      x={-8}
+                      y={yScale(i) + bandwidth / 2}
+                      textAnchor="end"
+                      dominantBaseline="middle"
+                      fontSize={13}
+                      fill="#64748b"
+                    >
+                      {r.name}
+                    </text>
+                  ))}
+                </g>
+              </svg>
+
+              {/* Tooltip */}
+              {hoveredIndex !== null && sorted[hoveredIndex] && (() => {
+                const d = sorted[hoveredIndex];
+                return (
+                  <ChartTooltip
+                    x={m.left + xScale(d.hhi)}
+                    y={m.top + yScale(hoveredIndex) + bandwidth / 2}
+                  >
+                    <div className="font-bold text-fm-patina">{d.name}</div>
+                    <div className="space-y-1 mt-1">
+                      <div>HHI: <strong>{d.hhi.toLocaleString()}</strong></div>
+                      <div>CR4: <strong>{d.cr4}%</strong></div>
+                      <div>Beds: <strong>{d.totalBeds.toLocaleString()}</strong></div>
+                      <div>Facilities: <strong>{d.totalFacilities}</strong></div>
+                      <div className="text-xs text-fm-sage mt-1">
+                        Top system: {d.topSystems[0]?.name} ({d.topSystems[0]?.share}%)
+                      </div>
                     </div>
-                  </div>
-                </div>
-              );
-            }}
-          />
-          <ReferenceLine
-            x={1500}
-            stroke="#E69F00"
-            strokeDasharray="5 5"
-            label={{ value: "Moderate", position: "top", fontSize: 10 }}
-          />
-          <ReferenceLine
-            x={2500}
-            stroke="#D55E00"
-            strokeDasharray="5 5"
-            label={{ value: "Highly Concentrated", position: "top", fontSize: 10 }}
-          />
-          <Bar dataKey="hhi" radius={[0, 4, 4, 0]}>
-            {sorted.map((r, i) => (
-              <Cell key={i} fill={getHHIColor(r.hhi)} />
-            ))}
-          </Bar>
-        </BarChart>
-      </ResponsiveContainer>
+                  </ChartTooltip>
+                );
+              })()}
+            </>
+          );
+        }}
+      </ChartContainer>
       <div className="flex flex-wrap items-center gap-4 mt-3 text-xs text-fm-sage">
         {[
           { color: "#009E73", label: "Competitive (< 1,500)" },
-          { color: "#E69F00", label: "Moderate (1,500–2,500)" },
+          { color: "#E69F00", label: "Moderate (1,500\u20132,500)" },
           { color: "#D55E00", label: "Highly Concentrated (> 2,500)" },
         ].map((item) => (
           <span key={item.label} className="flex items-center gap-1.5">

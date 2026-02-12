@@ -3,7 +3,11 @@ import { notFound } from "next/navigation";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Badge } from "@/components/ui/Badge";
 import { getHHITextClass } from "@/lib/colorScales";
-import { RegionCharts } from "./region-charts";
+import dynamic from "next/dynamic";
+
+const RegionCharts = dynamic(
+  () => import("./region-charts").then((m) => m.RegionCharts),
+);
 
 import regionData from "../../../../data/concentration/healthcare-regions.json";
 

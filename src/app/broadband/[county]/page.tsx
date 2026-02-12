@@ -3,7 +3,11 @@ import { notFound } from "next/navigation";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Badge } from "@/components/ui/Badge";
 import { getHHITextClass } from "@/lib/colorScales";
-import { CountyCharts } from "./county-charts";
+import dynamic from "next/dynamic";
+
+const CountyCharts = dynamic(
+  () => import("./county-charts").then((m) => m.CountyCharts),
+);
 
 import countyData from "../../../../data/concentration/broadband-counties.json";
 

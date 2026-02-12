@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Badge } from "@/components/ui/Badge";
-import { BroadbandCharts } from "./broadband-charts";
+import dynamic from "next/dynamic";
+
+const BroadbandCharts = dynamic(
+  () => import("./broadband-charts").then((m) => m.BroadbandCharts),
+);
 import { BroadbandCountyMap } from "./BroadbandCountyMap";
 
 import timeSeriesData from "../../../data/concentration/broadband-nys.json";

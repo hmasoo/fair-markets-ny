@@ -4,7 +4,14 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Badge } from "@/components/ui/Badge";
 import { HHITooltip } from "@/components/ui/HHITooltip";
 import { getHHITextClass } from "@/lib/colorScales";
-import { RegionalConcentrationChart, StatewideCharts } from "./healthcare-charts";
+import dynamic from "next/dynamic";
+
+const RegionalConcentrationChart = dynamic(
+  () => import("./healthcare-charts").then((m) => m.RegionalConcentrationChart),
+);
+const StatewideCharts = dynamic(
+  () => import("./healthcare-charts").then((m) => m.StatewideCharts),
+);
 
 import timeSeriesData from "../../../data/concentration/healthcare-nys.json";
 import marketShareData from "../../../data/concentration/healthcare-nys-market-shares.json";
