@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ConcentrationTimeSeries } from "./ConcentrationTimeSeries";
 import { MarketShareChart } from "./MarketShareChart";
+import { getHHITextClass } from "@/lib/colorScales";
 
 interface YearData {
   year: number;
@@ -78,7 +79,7 @@ export function ConcentrationSection({
           {hhi && (
             <div className="bg-gray-50 rounded-lg p-3">
               <div className="text-xs text-fm-sage uppercase tracking-wider">HHI</div>
-              <div className="text-2xl font-bold text-fm-patina">{hhi.toLocaleString()}</div>
+              <div className={`text-2xl font-bold ${getHHITextClass(hhi)}`}>{hhi.toLocaleString()}</div>
               <div className="text-xs text-fm-sage">
                 {hhi > 2500
                   ? "Highly Concentrated"

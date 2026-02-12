@@ -76,3 +76,23 @@ export function getLegendItems(scale: ColorStop[]) {
   items.push({ color: scale[0].color, label: scale[0].label });
   return items;
 }
+
+/**
+ * Map HHI value to Okabe-Ito color using DOJ/FTC concentration thresholds.
+ * Used for bar chart fills and other non-CSS contexts.
+ */
+export function getHHIColor(hhi: number): string {
+  if (hhi > 2500) return "#D55E00"; // vermillion — highly concentrated
+  if (hhi > 1500) return "#E69F00"; // orange — moderately concentrated
+  return "#009E73"; // teal — competitive
+}
+
+/**
+ * Map HHI value to a Tailwind text color class using DOJ/FTC thresholds.
+ * Used for stat card number styling.
+ */
+export function getHHITextClass(hhi: number): string {
+  if (hhi > 2500) return "text-red-600";
+  if (hhi > 1500) return "text-amber-600";
+  return "text-emerald-600";
+}

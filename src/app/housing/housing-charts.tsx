@@ -17,6 +17,7 @@ import {
 } from "recharts";
 import { ConcentrationTimeSeries } from "@/components/charts/ConcentrationTimeSeries";
 import { MarketShareChart } from "@/components/charts/MarketShareChart";
+import { getHHIColor } from "@/lib/colorScales";
 
 interface Neighborhood {
   name: string;
@@ -124,19 +125,23 @@ export function NeighborhoodConcentrationChart({
           />
           <Bar dataKey="hhi" radius={[0, 4, 4, 0]}>
             {sorted.map((n, i) => (
-              <Cell key={i} fill={BOROUGH_COLORS[n.borough] || "#6A8C7E"} />
+              <Cell key={i} fill={getHHIColor(n.hhi)} />
             ))}
           </Bar>
         </BarChart>
       </ResponsiveContainer>
       <div className="flex flex-wrap items-center gap-4 mt-3 text-xs text-fm-sage">
-        {Object.entries(BOROUGH_COLORS).map(([borough, color]) => (
-          <span key={borough} className="flex items-center gap-1.5">
+        {[
+          { color: "#009E73", label: "Competitive (≤1,500)" },
+          { color: "#E69F00", label: "Moderate (1,500–2,500)" },
+          { color: "#D55E00", label: "Highly Concentrated (>2,500)" },
+        ].map((item) => (
+          <span key={item.label} className="flex items-center gap-1.5">
             <span
               className="w-3 h-3 rounded-sm inline-block"
-              style={{ backgroundColor: color }}
+              style={{ backgroundColor: item.color }}
             />
-            {borough}
+            {item.label}
           </span>
         ))}
       </div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Badge } from "@/components/ui/Badge";
+import { getHHITextClass } from "@/lib/colorScales";
 import { NeighborhoodCharts } from "./neighborhood-charts";
 
 import neighborhoodData from "../../../../data/concentration/housing-neighborhoods.json";
@@ -57,7 +58,7 @@ export default async function NeighborhoodPage({ params }: Props) {
           <div className="text-xs text-fm-sage mt-1">Rental Units</div>
         </div>
         <div className="card text-center">
-          <div className="text-2xl font-bold text-fm-copper">
+          <div className={`text-2xl font-bold ${getHHITextClass(neighborhood.hhi)}`}>
             {neighborhood.hhi.toLocaleString()}
           </div>
           <div className="text-xs text-fm-sage mt-1">HHI (Concentration)</div>
@@ -82,7 +83,7 @@ export default async function NeighborhoodPage({ params }: Props) {
             {neighborhood.cr4}%
           </div>
           <div className="text-xs text-fm-sage mt-1">CR4 (Top 4 Landlords)</div>
-          <div className="text-xs text-fm-copper mt-1 font-medium">
+          <div className={`text-xs mt-1 font-medium ${getHHITextClass(neighborhood.hhi)}`}>
             ~1 in every {Math.round(100 / neighborhood.cr4)} units
           </div>
         </div>

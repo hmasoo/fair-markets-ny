@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Badge } from "@/components/ui/Badge";
+import { getHHITextClass } from "@/lib/colorScales";
 import { CountyCharts } from "./county-charts";
 
 import countyData from "../../../../data/concentration/broadband-counties.json";
@@ -60,7 +61,7 @@ export default async function CountyPage({ params }: Props) {
           </div>
         </div>
         <div className="card text-center">
-          <div className="text-2xl font-bold text-fm-copper">
+          <div className={`text-2xl font-bold ${getHHITextClass(county.hhi)}`}>
             {county.hhi.toLocaleString()}
           </div>
           <div className="text-xs text-fm-sage mt-1">HHI</div>

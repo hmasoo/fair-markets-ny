@@ -10,6 +10,7 @@ import {
 } from "./housing-charts";
 import { HousingNTAMap } from "./HousingNTAMap";
 import { HHITooltip } from "@/components/ui/HHITooltip";
+import { getHHITextClass } from "@/lib/colorScales";
 
 import timeSeriesData from "../../../data/concentration/housing-nyc.json";
 import marketShareData from "../../../data/concentration/housing-nyc-market-shares.json";
@@ -67,7 +68,7 @@ export default function HousingPage() {
       {/* Geographic stats — the real story */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <div className="card text-center">
-          <div className="text-3xl font-bold text-fm-copper">
+          <div className={`text-3xl font-bold ${getHHITextClass(highestHHI.hhi)}`}>
             {highestHHI.hhi.toLocaleString()}
           </div>
           <div className="text-sm text-fm-sage mt-1">
@@ -83,7 +84,7 @@ export default function HousingPage() {
             Highest CR4 (Top 4 Landlords)
           </div>
           <div className="text-xs text-fm-sage">{highestCR4.name}</div>
-          <div className="text-xs text-fm-copper mt-1 font-medium">
+          <div className={`text-xs mt-1 font-medium ${getHHITextClass(highestCR4.hhi)}`}>
             ~1 in every {Math.round(100 / highestCR4.cr4)} units
           </div>
         </div>

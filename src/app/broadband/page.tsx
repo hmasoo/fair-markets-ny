@@ -34,7 +34,7 @@ export default function BroadbandPage() {
       {/* Key findings */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
         <div className="card text-center">
-          <div className="text-3xl font-bold text-fm-copper">3,250</div>
+          <div className="text-3xl font-bold text-red-600">3,250</div>
           <div className="text-sm text-fm-sage mt-1">Statewide HHI</div>
           <div className="text-xs text-fm-sage">
             Highly concentrated (&gt;2,500)
