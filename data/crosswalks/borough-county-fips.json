@@ -1,0 +1,32 @@
+[
+  {
+    "borough": "Manhattan",
+    "boroCode": 1,
+    "county": "New York County",
+    "fips": "36061"
+  },
+  {
+    "borough": "Bronx",
+    "boroCode": 2,
+    "county": "Bronx County",
+    "fips": "36005"
+  },
+  {
+    "borough": "Brooklyn",
+    "boroCode": 3,
+    "county": "Kings County",
+    "fips": "36047"
+  },
+  {
+    "borough": "Queens",
+    "boroCode": 4,
+    "county": "Queens County",
+    "fips": "36081"
+  },
+  {
+    "borough": "Staten Island",
+    "boroCode": 5,
+    "county": "Richmond County",
+    "fips": "36085"
+  }
+]

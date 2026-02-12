@@ -23,6 +23,7 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: process.cwd(),
   },
+  serverExternalPackages: ["@prisma/client"],
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },

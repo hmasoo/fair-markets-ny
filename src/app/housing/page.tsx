@@ -5,9 +5,11 @@ import { Badge } from "@/components/ui/Badge";
 import {
   NeighborhoodConcentrationChart,
   ViolationsVsConcentrationChart,
+  ConcentrationVsIncomeChart,
   CitywideCharts,
 } from "./housing-charts";
 import { HousingNTAMap } from "./HousingNTAMap";
+import { HHITooltip } from "@/components/ui/HHITooltip";
 
 import timeSeriesData from "../../../data/concentration/housing-nyc.json";
 import marketShareData from "../../../data/concentration/housing-nyc-market-shares.json";
@@ -27,6 +29,9 @@ export default function HousingPage() {
   const highestViolations = [...neighborhoods].sort(
     (a, b) => b.hpdViolationsPerUnit - a.hpdViolationsPerUnit
   )[0];
+  const lowestIncome = [...neighborhoods]
+    .filter((n) => n.medianIncome && n.medianIncome > 0)
+    .sort((a, b) => a.medianIncome! - b.medianIncome!)[0];
 
   // Build NTA-keyed data for the choropleth map
   // Each NTA code in a neighborhood gets that neighborhood's HHI
@@ -52,20 +57,21 @@ export default function HousingPage() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-fm-patina">The New Landlords</h1>
         <p className="mt-2 text-fm-sage max-w-2xl">
-          Citywide, NYC{"'"}s rental market looks fragmented (HHI 228 across
-          ~30,000 landlords). Zoom into neighborhoods and the picture changes
-          dramatically — a handful of landlords dominate entire communities.
+          Citywide, NYC{"'"}s rental market looks fragmented (<HHITooltip>HHI</HHITooltip> 228
+          across ~30,000 landlords). Zoom into neighborhoods and the picture
+          changes dramatically — a handful of landlords dominate entire
+          communities, often in the lowest-income areas.
         </p>
       </div>
 
       {/* Geographic stats — the real story */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <div className="card text-center">
           <div className="text-3xl font-bold text-fm-copper">
             {highestHHI.hhi.toLocaleString()}
           </div>
           <div className="text-sm text-fm-sage mt-1">
-            Highest Neighborhood HHI
+            Highest Neighborhood <HHITooltip>HHI</HHITooltip>
           </div>
           <div className="text-xs text-fm-sage">{highestHHI.name}</div>
         </div>
@@ -87,6 +93,19 @@ export default function HousingPage() {
           </div>
           <div className="text-xs text-fm-sage">{highestViolations.name}</div>
         </div>
+        {lowestIncome && (
+          <div className="card text-center">
+            <div className="text-3xl font-bold text-fm-copper">
+              ${lowestIncome.medianIncome!.toLocaleString()}
+            </div>
+            <div className="text-sm text-fm-sage mt-1">
+              Lowest MHI
+            </div>
+            <div className="text-xs text-fm-sage">
+              {lowestIncome.name} ({lowestIncome.rentBurdenPct}% rent-burdened)
+            </div>
+          </div>
+        )}
       </div>
 
       {/* NTA-level concentration map */}
@@ -95,8 +114,9 @@ export default function HousingPage() {
           Housing Concentration by Neighborhood
         </h2>
         <p className="text-sm text-fm-sage mb-4">
-          Ownership concentration (HHI) across NYC{"'"}s 2020 Neighborhood
-          Tabulation Areas. Colored NTAs have data; click to explore.
+          Ownership concentration (<HHITooltip>HHI</HHITooltip>) across NYC{"'"}s
+          2020 Neighborhood Tabulation Areas. Colored NTAs have data; click to
+          explore.
         </p>
         <HousingNTAMap data={ntaHHI} details={ntaDetails} />
       </div>
@@ -109,6 +129,11 @@ export default function HousingPage() {
       {/* Scatter: violations vs concentration */}
       <div className="mt-8">
         <ViolationsVsConcentrationChart neighborhoods={neighborhoods} />
+      </div>
+
+      {/* Scatter: concentration vs income */}
+      <div className="mt-8">
+        <ConcentrationVsIncomeChart neighborhoods={neighborhoods} />
       </div>
 
       {/* Neighborhood detail table */}
@@ -130,10 +155,16 @@ export default function HousingPage() {
                   Units
                 </th>
                 <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                  HHI
+                  <HHITooltip>HHI</HHITooltip>
                 </th>
                 <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
                   CR4
+                </th>
+                <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
+                  MHI
+                </th>
+                <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
+                  Rent Burden
                 </th>
                 <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
                   Violations/Unit
@@ -180,6 +211,28 @@ export default function HousingPage() {
                     {n.cr4}%
                   </td>
                   <td className="px-4 py-3 text-sm text-right">
+                    {n.medianIncome
+                      ? `$${n.medianIncome.toLocaleString()}`
+                      : "—"}
+                  </td>
+                  <td className="px-4 py-3 text-sm text-right">
+                    {n.rentBurdenPct ? (
+                      <span
+                        className={
+                          n.rentBurdenPct >= 50
+                            ? "text-red-600 font-medium"
+                            : n.rentBurdenPct >= 40
+                            ? "text-amber-600"
+                            : ""
+                        }
+                      >
+                        {n.rentBurdenPct}%
+                      </span>
+                    ) : (
+                      "—"
+                    )}
+                  </td>
+                  <td className="px-4 py-3 text-sm text-right">
                     {n.hpdViolationsPerUnit}
                   </td>
                   <td className="px-4 py-3 text-sm text-right">
@@ -192,7 +245,8 @@ export default function HousingPage() {
         </div>
         <p className="mt-4 text-xs text-fm-sage">
           Source: ACRIS/PLUTO analysis; Local Law 18 beneficial ownership
-          filings; HPD violations data via NYC Open Data.
+          filings; HPD violations data via NYC Open Data. Income and rent burden
+          from U.S. Census Bureau ACS 2023 5-Year Estimates.
         </p>
       </div>
 

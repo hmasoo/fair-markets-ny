@@ -55,6 +55,19 @@ export function getColor(value: number | undefined, scale: ColorStop[]): string 
 }
 
 /**
+ * Median Household Income — sequential green-gold (distinct from blue/purple concentration scales)
+ */
+export const incomeScale: ColorStop[] = [
+  { threshold: 0, color: "#e5e7eb", label: "No data" },
+  { threshold: 1, color: "#d4a843", label: "< $30k" },
+  { threshold: 30000, color: "#c9b84c", label: "$30k–$50k" },
+  { threshold: 50000, color: "#a3b55a", label: "$50k–$70k" },
+  { threshold: 70000, color: "#6fa96e", label: "$70k–$90k" },
+  { threshold: 90000, color: "#3d9b6e", label: "$90k–$120k" },
+  { threshold: 120000, color: "#1a7a5c", label: "> $120k" },
+];
+
+/**
  * Get legend items from a scale (excluding the "no data" entry at index 0).
  * Returns items in display order (low → high) with no-data appended at end.
  */

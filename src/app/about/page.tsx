@@ -28,12 +28,11 @@ export default function AboutPage() {
               affordability across New York State, with a deep NYC layer.
             </p>
             <p>
-              The project provides the shared evidence base for New York{"'"}s
-              converging political agendas: Mayor Zohran Mamdani{"'"}s
-              anti-monopoly administration and Governor Kathy Hochul{"'"}s
-              targeted affordability agenda. Both respond to the same underlying
-              problem — concentrated corporate power driving up the cost of
-              living.
+              New York is seeing converging policy agendas at the city and state
+              level — anti-monopoly enforcement and targeted affordability
+              measures — that both respond to the same underlying problem:
+              concentrated corporate power driving up the cost of living. This
+              project provides the shared evidence base.
             </p>
           </div>
         </section>
@@ -44,35 +43,77 @@ export default function AboutPage() {
           </h2>
           <div className="text-sm text-gray-700 space-y-3">
             <p>
-              New York has two converging political agendas that both need data
-              infrastructure — and both respond to the same underlying problem:
-              concentrated corporate power driving up the cost of living.
+              New York has converging policy agendas at the city and state level
+              that both need data infrastructure — and both respond to the same
+              underlying problem: concentrated corporate power driving up the
+              cost of living.
             </p>
             <p>
-              <strong className="text-fm-patina">
-                Mayor Zohran Mamdani
-              </strong>{" "}
-              is leading an anti-monopoly administration in New York City, with
-              Lina Khan co-chairing his transition team. His agenda targets
-              corporate landlords, platform monopolies, and concentrated market
-              power across the sectors that shape everyday life for New Yorkers.
+              At the city level, anti-monopoly policy is targeting corporate
+              landlords, platform monopolies, and concentrated market power
+              across the sectors that shape everyday life for New Yorkers.
             </p>
             <p>
-              <strong className="text-fm-patina">
-                Governor Kathy Hochul
-              </strong>{" "}
-              is pursuing a targeted affordability agenda at the state level,
-              including the nation{"'"}s first algorithmic rent-setting ban and
-              a $1B public broadband commitment. These policies address
-              specific symptoms of market concentration — from housing costs
-              driven by corporate landlords to broadband deserts maintained by
-              monopoly ISPs.
+              At the state level, a targeted affordability agenda includes the
+              nation{"'"}s first algorithmic rent-setting ban and a $1B public
+              broadband commitment. These policies address specific symptoms of
+              market concentration — from housing costs driven by corporate
+              landlords to broadband deserts maintained by monopoly ISPs.
             </p>
             <p>
-              Fair Markets NY provides the shared evidence base for both
-              agendas: structured, public data on who controls the markets that
-              matter most to New Yorkers.
+              Fair Markets NY provides the shared evidence base: structured,
+              public data on who controls the markets that matter most to New
+              Yorkers.
             </p>
+          </div>
+        </section>
+
+        <section className="card">
+          <h2 className="text-xl font-bold text-fm-patina mb-4">Glossary</h2>
+          <div className="space-y-4 text-sm text-gray-700">
+            <div>
+              <h3 className="font-semibold text-fm-patina mb-1">
+                HHI — Herfindahl-Hirschman Index
+              </h3>
+              <p>
+                A measure of market concentration calculated by summing the
+                squares of each firm{"'"}s market share percentage. Scale: 0
+                (perfect competition) to 10,000 (monopoly). The DOJ considers
+                markets above 2,500 {'"'}highly concentrated.{'"'} Not to be
+                confused with household income.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-fm-patina mb-1">
+                MHI — Median Household Income
+              </h3>
+              <p>
+                The income level at which half of households earn more and half
+                earn less, from the U.S. Census Bureau{"'"}s American Community
+                Survey 5-Year Estimates. We aggregate tract-level data to
+                neighborhood level using a household-weighted average.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-fm-patina mb-1">
+                Rent Burden
+              </h3>
+              <p>
+                The percentage of renter households paying 30% or more of their
+                income toward rent, the standard threshold set by HUD. Areas
+                above 50% are considered severely rent-burdened.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-fm-patina mb-1">
+                CR4 — Four-Firm Concentration Ratio
+              </h3>
+              <p>
+                The combined market share of the four largest firms in a market.
+                A CR4 above 60% is generally considered oligopolistic; above 80%
+                approaches monopoly power.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -135,6 +176,12 @@ export default function AboutPage() {
                 description:
                   "Property ownership records, land use data, and housing violations. Governed by Local Law 11 of 2012. No restrictions on use.",
                 legal: "Unrestricted public data",
+              },
+              {
+                name: "U.S. Census Bureau ACS 5-Year Estimates",
+                description:
+                  "Tract-level median household income (B19013) and gross rent as a percentage of household income (B25070), aggregated to neighborhood level. Used for affordability context alongside concentration metrics.",
+                legal: "Federal public domain (17 USC § 105)",
               },
               {
                 name: "FCC Broadband Data Collection",

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "prisma generate && next build",
     "postinstall": "prisma generate",
     "seed:housing": "tsx scripts/seed/housing.ts",
@@ -13,6 +13,8 @@
     "geo:download-crosswalks": "tsx scripts/geo/download-crosswalks.ts",
     "geo:download-tracts": "tsx scripts/geo/download-census-tracts.ts",
     "geo:build": "tsx scripts/geo/build-boundaries.ts",
+    "data:download-income": "tsx scripts/scrapers/download-acs-income.ts",
+    "data:aggregate-income": "tsx scripts/scrapers/aggregate-nta-income.ts",
     "start": "next start",
     "lint": "eslint"
   },

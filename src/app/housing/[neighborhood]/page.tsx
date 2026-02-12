@@ -49,7 +49,7 @@ export default async function NeighborhoodPage({ params }: Props) {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
         <div className="card text-center">
           <div className="text-2xl font-bold text-fm-patina">
             {neighborhood.totalUnits.toLocaleString()}
@@ -60,7 +60,7 @@ export default async function NeighborhoodPage({ params }: Props) {
           <div className="text-2xl font-bold text-fm-copper">
             {neighborhood.hhi.toLocaleString()}
           </div>
-          <div className="text-xs text-fm-sage mt-1">HHI</div>
+          <div className="text-xs text-fm-sage mt-1">HHI (Concentration)</div>
           <Badge
             variant={
               neighborhood.hhi > 2500
@@ -89,6 +89,33 @@ export default async function NeighborhoodPage({ params }: Props) {
           </div>
           <div className="text-xs text-fm-sage mt-1">HPD Violations/Unit</div>
         </div>
+        {neighborhood.medianIncome && (
+          <div className="card text-center">
+            <div className="text-2xl font-bold text-fm-copper">
+              ${neighborhood.medianIncome.toLocaleString()}
+            </div>
+            <div className="text-xs text-fm-sage mt-1">
+              Median Household Income
+            </div>
+          </div>
+        )}
+        {neighborhood.rentBurdenPct && (
+          <div className="card text-center">
+            <div
+              className={`text-2xl font-bold ${
+                neighborhood.rentBurdenPct >= 50
+                  ? "text-red-600"
+                  : "text-fm-copper"
+              }`}
+            >
+              {neighborhood.rentBurdenPct}%
+            </div>
+            <div className="text-xs text-fm-sage mt-1">Rent-Burdened</div>
+            <div className="text-xs text-fm-sage">
+              (paying &ge;30% of income)
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Market share chart */}
@@ -137,15 +164,28 @@ export default async function NeighborhoodPage({ params }: Props) {
             </tbody>
           </table>
         </div>
-        <div className="mt-4 text-sm text-fm-sage">
+        <div className="mt-4 text-sm text-fm-sage space-y-1">
           <p>
             Median rent in {neighborhood.name}: $
             {neighborhood.medianRent.toLocaleString()}/month
           </p>
+          {neighborhood.medianIncome && (
+            <p>
+              Median household income: $
+              {neighborhood.medianIncome.toLocaleString()}/year — rent-to-income
+              ratio:{" "}
+              {(
+                ((neighborhood.medianRent * 12) / neighborhood.medianIncome) *
+                100
+              ).toFixed(0)}
+              %
+            </p>
+          )}
         </div>
         <p className="mt-2 text-xs text-fm-sage">
           Source: ACRIS/PLUTO analysis; Local Law 18 beneficial ownership
-          filings; HPD violations data via NYC Open Data.
+          filings; HPD violations data via NYC Open Data. Income data from U.S.
+          Census Bureau ACS 2023 5-Year Estimates.
         </p>
       </div>
     </div>

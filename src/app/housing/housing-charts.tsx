@@ -27,6 +27,8 @@ interface Neighborhood {
   cr4: number;
   hpdViolationsPerUnit: number;
   medianRent: number;
+  medianIncome?: number;
+  rentBurdenPct?: number;
 }
 
 interface YearData {
@@ -103,6 +105,12 @@ export function NeighborhoodConcentrationChart({
                     <div>Units: <strong>{d.totalUnits.toLocaleString()}</strong></div>
                     <div>HPD violations/unit: <strong>{d.hpdViolationsPerUnit}</strong></div>
                     <div>Median rent: <strong>${d.medianRent.toLocaleString()}</strong></div>
+                    {d.medianIncome && (
+                      <div>MHI: <strong>${d.medianIncome.toLocaleString()}</strong></div>
+                    )}
+                    {d.rentBurdenPct && (
+                      <div>Rent-burdened: <strong>{d.rentBurdenPct}%</strong></div>
+                    )}
                   </div>
                 </div>
               );
@@ -213,6 +221,107 @@ export function ViolationsVsConcentrationChart({
           </Scatter>
         </ScatterChart>
       </ResponsiveContainer>
+    </div>
+  );
+}
+
+export function ConcentrationVsIncomeChart({
+  neighborhoods,
+}: {
+  neighborhoods: Neighborhood[];
+}) {
+  const data = neighborhoods.filter((n) => n.medianIncome && n.medianIncome > 0);
+
+  if (data.length === 0) return null;
+
+  return (
+    <div className="card">
+      <h2 className="text-xl font-bold text-fm-patina mb-2">
+        Concentration vs. Household Income
+      </h2>
+      <p className="text-sm text-fm-sage mb-4">
+        Does landlord concentration correlate with lower incomes? Bubble size
+        shows total rental units; color shows borough.
+      </p>
+      <ResponsiveContainer width="100%" height={350}>
+        <ScatterChart margin={{ top: 10, right: 20, bottom: 20, left: 20 }}>
+          <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+          <XAxis
+            type="number"
+            dataKey="hhi"
+            name="HHI"
+            tick={{ fontSize: 12 }}
+            label={{
+              value: "HHI (Ownership Concentration)",
+              position: "insideBottom",
+              offset: -10,
+              style: { fontSize: 12, fill: "#6A8C7E" },
+            }}
+          />
+          <YAxis
+            type="number"
+            dataKey="medianIncome"
+            name="MHI"
+            tick={{ fontSize: 12 }}
+            tickFormatter={(value) => `$${(value / 1000).toFixed(0)}k`}
+            label={{
+              value: "Median Household Income",
+              angle: -90,
+              position: "insideLeft",
+              offset: -5,
+              style: { fontSize: 12, fill: "#6A8C7E" },
+            }}
+          />
+          <ZAxis
+            type="number"
+            dataKey="totalUnits"
+            range={[200, 800]}
+            name="Total Units"
+          />
+          <Tooltip
+            content={({ active, payload }) => {
+              if (!active || !payload?.length) return null;
+              const d = payload[0].payload as Neighborhood;
+              return (
+                <div className="bg-white border border-gray-200 rounded-lg shadow-md p-3 text-sm">
+                  <div className="font-bold text-fm-patina">{d.name}</div>
+                  <div className="text-fm-sage text-xs mb-2">{d.borough}</div>
+                  <div className="space-y-1">
+                    <div>HHI: <strong>{d.hhi.toLocaleString()}</strong></div>
+                    <div>MHI: <strong>${d.medianIncome?.toLocaleString()}</strong></div>
+                    <div>Rent-burdened: <strong>{d.rentBurdenPct}%</strong></div>
+                    <div>Units: <strong>{d.totalUnits.toLocaleString()}</strong></div>
+                    <div>Median rent: <strong>${d.medianRent.toLocaleString()}</strong></div>
+                  </div>
+                </div>
+              );
+            }}
+          />
+          <Scatter data={data}>
+            {data.map((n, i) => (
+              <Cell
+                key={i}
+                fill={BOROUGH_COLORS[n.borough] || "#6A8C7E"}
+                fillOpacity={0.8}
+                stroke={BOROUGH_COLORS[n.borough] || "#6A8C7E"}
+              />
+            ))}
+          </Scatter>
+        </ScatterChart>
+      </ResponsiveContainer>
+      <div className="flex flex-wrap items-center gap-4 mt-3 text-xs text-fm-sage">
+        {Object.entries(BOROUGH_COLORS)
+          .filter(([borough]) => data.some((n) => n.borough === borough))
+          .map(([borough, color]) => (
+            <span key={borough} className="flex items-center gap-1.5">
+              <span
+                className="w-3 h-3 rounded-sm inline-block"
+                style={{ backgroundColor: color }}
+              />
+              {borough}
+            </span>
+          ))}
+      </div>
     </div>
   );
 }
