@@ -1,30 +1,6 @@
-import { redirect } from "next/navigation";
-import { cookies } from "next/headers";
-
 export const metadata = {
   title: "Login",
 };
-
-async function login(formData: FormData) {
-  "use server";
-
-  const password = formData.get("password") as string;
-  const next = (formData.get("next") as string) || "/";
-
-  if (password !== (process.env.SITE_PASSWORD || "paradox")) {
-    redirect(`/login?error=1&next=${encodeURIComponent(next)}`);
-  }
-
-  const cookieStore = await cookies();
-  cookieStore.set("fm-auth", "authenticated", {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
-    maxAge: 60 * 60 * 24 * 30, // 30 days
-    path: "/",
-  });
-  redirect(next);
-}
 
 interface Props {
   searchParams: Promise<{ error?: string; next?: string }>;
@@ -43,7 +19,7 @@ export default async function LoginPage({ searchParams }: Props) {
           Enter the password to continue.
         </p>
 
-        <form action={login}>
+        <form action="/api/login" method="POST">
           <input type="hidden" name="next" value={next || "/"} />
           <div className="mb-4">
             <input

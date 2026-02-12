@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const PUBLIC_PATHS = ["/login", "/opengraph-image"];
+const PUBLIC_PATHS = ["/login", "/api/login", "/opengraph-image"];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
