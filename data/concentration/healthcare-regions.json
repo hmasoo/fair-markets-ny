@@ -1,0 +1,149 @@
+{
+  "sector": "Hospital & Health System Services",
+  "geography": "NYS Health Planning Regions",
+  "source": "NYS DOH SPARCS; AHA Annual Survey; NYS CON filings; health system disclosures",
+  "regions": [
+    {
+      "name": "NYC Metro",
+      "slug": "nyc-metro",
+      "totalBeds": 25200,
+      "totalFacilities": 58,
+      "hhi": 980,
+      "cr4": 52.1,
+      "topSystems": [
+        { "name": "NYU Langone Health", "beds": 4150, "facilities": 7, "share": 16.5 },
+        { "name": "NewYork-Presbyterian", "beds": 3950, "facilities": 6, "share": 15.7 },
+        { "name": "Mount Sinai Health System", "beds": 3200, "facilities": 8, "share": 12.7 },
+        { "name": "Montefiore Health System", "beds": 1820, "facilities": 4, "share": 7.2 },
+        { "name": "NYC Health + Hospitals", "beds": 4100, "facilities": 11, "share": 16.3 },
+        { "name": "Northwell Health", "beds": 1650, "facilities": 3, "share": 6.5 }
+      ]
+    },
+    {
+      "name": "Long Island",
+      "slug": "long-island",
+      "totalBeds": 8400,
+      "totalFacilities": 18,
+      "hhi": 2850,
+      "cr4": 88.5,
+      "topSystems": [
+        { "name": "Northwell Health", "beds": 4950, "facilities": 9, "share": 58.9 },
+        { "name": "Catholic Health", "beds": 1350, "facilities": 4, "share": 16.1 },
+        { "name": "NYU Langone Health", "beds": 680, "facilities": 2, "share": 8.1 },
+        { "name": "Stony Brook Medicine", "beds": 450, "facilities": 1, "share": 5.4 }
+      ]
+    },
+    {
+      "name": "Hudson Valley",
+      "slug": "hudson-valley",
+      "totalBeds": 5200,
+      "totalFacilities": 16,
+      "hhi": 1850,
+      "cr4": 72.3,
+      "topSystems": [
+        { "name": "WMCHealth (Westchester Medical Center)", "beds": 1450, "facilities": 3, "share": 27.9 },
+        { "name": "Nuvance Health", "beds": 1080, "facilities": 4, "share": 20.8 },
+        { "name": "Montefiore Health System", "beds": 680, "facilities": 2, "share": 13.1 },
+        { "name": "NewYork-Presbyterian", "beds": 550, "facilities": 2, "share": 10.6 }
+      ]
+    },
+    {
+      "name": "Capital District",
+      "slug": "capital-district",
+      "totalBeds": 3800,
+      "totalFacilities": 11,
+      "hhi": 2450,
+      "cr4": 86.8,
+      "topSystems": [
+        { "name": "St. Peter's Health Partners (Trinity Health)", "beds": 1520, "facilities": 4, "share": 40.0 },
+        { "name": "Albany Med Health System", "beds": 1100, "facilities": 3, "share": 28.9 },
+        { "name": "Ellis Medicine", "beds": 380, "facilities": 2, "share": 10.0 },
+        { "name": "Saratoga Hospital", "beds": 300, "facilities": 1, "share": 7.9 }
+      ]
+    },
+    {
+      "name": "Central NY",
+      "slug": "central-ny",
+      "totalBeds": 2600,
+      "totalFacilities": 8,
+      "hhi": 3200,
+      "cr4": 91.5,
+      "topSystems": [
+        { "name": "Upstate University Health System", "beds": 1200, "facilities": 2, "share": 46.2 },
+        { "name": "St. Joseph's Health", "beds": 610, "facilities": 2, "share": 23.5 },
+        { "name": "Crouse Health", "beds": 380, "facilities": 1, "share": 14.6 },
+        { "name": "Oneida Health", "beds": 190, "facilities": 1, "share": 7.3 }
+      ]
+    },
+    {
+      "name": "Western NY",
+      "slug": "western-ny",
+      "totalBeds": 4100,
+      "totalFacilities": 12,
+      "hhi": 2680,
+      "cr4": 87.1,
+      "topSystems": [
+        { "name": "Kaleida Health", "beds": 1640, "facilities": 4, "share": 40.0 },
+        { "name": "Catholic Health (Buffalo)", "beds": 980, "facilities": 3, "share": 23.9 },
+        { "name": "ECMC", "beds": 550, "facilities": 1, "share": 13.4 },
+        { "name": "Niagara Falls Memorial", "beds": 400, "facilities": 2, "share": 9.8 }
+      ]
+    },
+    {
+      "name": "Finger Lakes",
+      "slug": "finger-lakes",
+      "totalBeds": 3600,
+      "totalFacilities": 10,
+      "hhi": 2920,
+      "cr4": 90.3,
+      "topSystems": [
+        { "name": "UR Medicine (Strong Memorial)", "beds": 1650, "facilities": 4, "share": 45.8 },
+        { "name": "Rochester Regional Health", "beds": 1350, "facilities": 4, "share": 37.5 },
+        { "name": "Thompson Health", "beds": 140, "facilities": 1, "share": 3.9 },
+        { "name": "Clifton Springs Hospital", "beds": 110, "facilities": 1, "share": 3.1 }
+      ]
+    },
+    {
+      "name": "North Country",
+      "slug": "north-country",
+      "totalBeds": 1200,
+      "totalFacilities": 7,
+      "hhi": 3450,
+      "cr4": 93.3,
+      "topSystems": [
+        { "name": "UVM Health Network (Champlain Valley)", "beds": 480, "facilities": 2, "share": 40.0 },
+        { "name": "Samaritan Health", "beds": 310, "facilities": 2, "share": 25.8 },
+        { "name": "Carthage Area Hospital", "beds": 180, "facilities": 1, "share": 15.0 },
+        { "name": "Claxton-Hepburn Medical Center", "beds": 150, "facilities": 1, "share": 12.5 }
+      ]
+    },
+    {
+      "name": "Southern Tier",
+      "slug": "southern-tier",
+      "totalBeds": 1800,
+      "totalFacilities": 8,
+      "hhi": 2750,
+      "cr4": 88.9,
+      "topSystems": [
+        { "name": "UHS (United Health Services)", "beds": 720, "facilities": 3, "share": 40.0 },
+        { "name": "Guthrie Clinic", "beds": 450, "facilities": 2, "share": 25.0 },
+        { "name": "Lourdes Hospital (Ascension)", "beds": 260, "facilities": 1, "share": 14.4 },
+        { "name": "Arnot Health", "beds": 170, "facilities": 1, "share": 9.4 }
+      ]
+    },
+    {
+      "name": "Mohawk Valley",
+      "slug": "mohawk-valley",
+      "totalBeds": 1500,
+      "totalFacilities": 6,
+      "hhi": 3100,
+      "cr4": 92.0,
+      "topSystems": [
+        { "name": "Mohawk Valley Health System (MVHS)", "beds": 680, "facilities": 2, "share": 45.3 },
+        { "name": "Bassett Healthcare Network", "beds": 420, "facilities": 2, "share": 28.0 },
+        { "name": "Little Falls Hospital", "beds": 160, "facilities": 1, "share": 10.7 },
+        { "name": "Nathan Littauer Hospital", "beds": 120, "facilities": 1, "share": 8.0 }
+      ]
+    }
+  ]
+}

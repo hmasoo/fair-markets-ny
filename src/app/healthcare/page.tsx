@@ -1,13 +1,33 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
+import { Badge } from "@/components/ui/Badge";
+import { HHITooltip } from "@/components/ui/HHITooltip";
+import { getHHITextClass } from "@/lib/colorScales";
+import { RegionalConcentrationChart, StatewideCharts } from "./healthcare-charts";
+
+import timeSeriesData from "../../../data/concentration/healthcare-nys.json";
+import marketShareData from "../../../data/concentration/healthcare-nys-market-shares.json";
+import regionData from "../../../data/concentration/healthcare-regions.json";
 
 export const metadata: Metadata = {
   title: "Your Doctor's Boss — Healthcare Consolidation",
   description:
-    "Hospital mergers, PE acquisitions of physician practices, and PBM concentration across New York.",
+    "Hospital system consolidation across New York State — tracking mergers, bed counts, and regional concentration using DOH and AHA data.",
 };
 
 export default function HealthcarePage() {
+  const { regions } = regionData;
+  const sorted = [...regions].sort((a, b) => b.hhi - a.hhi);
+  const highestHHI = sorted[0];
+  const highestCR4 = [...regions].sort((a, b) => b.cr4 - a.cr4)[0];
+  const totalSystems = new Set(
+    regions.flatMap((r) => r.topSystems.map((s) => s.name))
+  ).size;
+  const singleDominantRegions = regions.filter(
+    (r) => r.topSystems[0] && r.topSystems[0].share >= 40
+  );
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb items={[{ label: "Healthcare" }]} />
@@ -17,39 +37,155 @@ export default function HealthcarePage() {
           Your Doctor{"'"}s Boss
         </h1>
         <p className="mt-2 text-fm-sage max-w-2xl">
-          Hospital mergers, PE acquisitions of physician practices, and PBM
-          concentration — tracking healthcare consolidation across New York.
+          Statewide, New York{"'"}s hospital market looks moderately
+          concentrated (<HHITooltip>HHI</HHITooltip>{" "}
+          {timeSeriesData.years[timeSeriesData.years.length - 1].hhi.toLocaleString()}).
+          But zoom into individual regions and the picture is stark — most of
+          upstate New York is a one- or two-system market where a single health
+          network controls 40–60% of all hospital beds.
         </p>
       </div>
 
-      <div className="card">
-        <div className="text-center py-12">
-          <div className="text-4xl mb-4">
-            <svg className="w-16 h-16 mx-auto text-fm-sage/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-            </svg>
+      {/* Stats grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <div className="card text-center">
+          <div className={`text-3xl font-bold ${getHHITextClass(highestHHI.hhi)}`}>
+            {highestHHI.hhi.toLocaleString()}
           </div>
-          <h2 className="text-xl font-bold text-fm-patina mb-2">Coming Soon</h2>
-          <p className="text-fm-sage max-w-md mx-auto">
-            We{"'"}re building the healthcare consolidation tracker using NYS DOH
-            Certificate of Need filings, CMS provider enrollment data, and DFS
-            PBM complaint records.
-          </p>
-          <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-lg mx-auto text-sm">
-            <div className="bg-gray-50 rounded-lg p-3">
-              <div className="font-semibold text-fm-patina">CON Tracker</div>
-              <div className="text-xs text-fm-sage">Hospital merger filings</div>
-            </div>
-            <div className="bg-gray-50 rounded-lg p-3">
-              <div className="font-semibold text-fm-patina">System Map</div>
-              <div className="text-xs text-fm-sage">Parent health systems</div>
-            </div>
-            <div className="bg-gray-50 rounded-lg p-3">
-              <div className="font-semibold text-fm-patina">PBM Watch</div>
-              <div className="text-xs text-fm-sage">Vertical integration</div>
-            </div>
+          <div className="text-sm text-fm-sage mt-1">
+            Highest Regional <HHITooltip>HHI</HHITooltip>
+          </div>
+          <div className="text-xs text-fm-sage">{highestHHI.name}</div>
+        </div>
+        <div className="card text-center">
+          <div className="text-3xl font-bold text-fm-copper">
+            {highestCR4.cr4}%
+          </div>
+          <div className="text-sm text-fm-sage mt-1">
+            Highest CR4 (Top 4 Systems)
+          </div>
+          <div className="text-xs text-fm-sage">{highestCR4.name}</div>
+          <div className={`text-xs mt-1 font-medium ${getHHITextClass(highestCR4.hhi)}`}>
+            ~{Math.round(highestCR4.cr4)} in every 100 beds
           </div>
         </div>
+        <div className="card text-center">
+          <div className="text-3xl font-bold text-fm-copper">
+            {totalSystems}
+          </div>
+          <div className="text-sm text-fm-sage mt-1">
+            Named Health Systems
+          </div>
+          <div className="text-xs text-fm-sage">Across 10 regions</div>
+        </div>
+        <div className="card text-center">
+          <div className="text-3xl font-bold text-fm-copper">
+            {singleDominantRegions.length}
+          </div>
+          <div className="text-sm text-fm-sage mt-1">
+            Single-Dominant Regions
+          </div>
+          <div className="text-xs text-fm-sage">
+            One system holds 40%+ of beds
+          </div>
+        </div>
+      </div>
+
+      {/* Regional bar chart */}
+      <RegionalConcentrationChart regions={regions} />
+
+      {/* Region detail table */}
+      <div className="card mt-8">
+        <h2 className="text-xl font-bold text-fm-patina mb-4">
+          All Regions
+        </h2>
+        <div className="overflow-x-auto -mx-4 sm:mx-0">
+          <table className="min-w-full divide-y divide-gray-200">
+            <thead>
+              <tr>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-fm-sage uppercase tracking-wider">
+                  Region
+                </th>
+                <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
+                  Beds
+                </th>
+                <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
+                  Facilities
+                </th>
+                <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
+                  <HHITooltip>HHI</HHITooltip>
+                </th>
+                <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
+                  CR4 (Top 4)
+                </th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-fm-sage uppercase tracking-wider">
+                  Top System
+                </th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-100">
+              {sorted.map((r) => (
+                <tr
+                  key={r.slug}
+                  className="hover:bg-gray-50 transition-colors"
+                >
+                  <td className="px-4 py-3 text-sm">
+                    <Link
+                      href={`/healthcare/${r.slug}`}
+                      className="text-fm-teal hover:underline font-medium"
+                    >
+                      {r.name}
+                    </Link>
+                  </td>
+                  <td className="px-4 py-3 text-sm text-right">
+                    {r.totalBeds.toLocaleString()}
+                  </td>
+                  <td className="px-4 py-3 text-sm text-right">
+                    {r.totalFacilities}
+                  </td>
+                  <td className="px-4 py-3 text-sm text-right">
+                    <Badge
+                      variant={
+                        r.hhi > 2500
+                          ? "red"
+                          : r.hhi > 1500
+                          ? "yellow"
+                          : "green"
+                      }
+                    >
+                      {r.hhi.toLocaleString()}
+                    </Badge>
+                  </td>
+                  <td className="px-4 py-3 text-sm text-right font-medium">
+                    {r.cr4}%
+                    <div className="text-xs font-normal text-fm-sage">
+                      ~{Math.round(r.cr4)} in 100 beds
+                    </div>
+                  </td>
+                  <td className="px-4 py-3 text-sm text-fm-sage">
+                    {r.topSystems[0]?.name} ({r.topSystems[0]?.share}%)
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-4 text-xs text-fm-sage">
+          Source: NYS DOH SPARCS hospital discharge data; AHA Annual Survey;
+          NYS CON filings; health system disclosures. Bed counts reflect
+          licensed acute-care beds.
+        </p>
+      </div>
+
+      {/* Statewide trend charts */}
+      <div className="mt-8">
+        <StatewideCharts
+          timeSeriesData={timeSeriesData.years}
+          marketShareData={marketShareData.marketShares.filter(
+            (s) => s.company !== "All other systems"
+          )}
+          marketShareYear={marketShareData.year}
+        />
       </div>
     </div>
   );

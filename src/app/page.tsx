@@ -24,9 +24,9 @@ const sectors = [
     subtitle: "Healthcare Consolidation",
     href: "/healthcare",
     description:
-      "When hospitals merge, your ER options shrink. We're mapping health system consolidation across New York.",
-    stat: "Coming Soon",
-    statLabel: "CON filings & health system mapping",
+      "When hospitals merge, your ER options shrink. See which health systems dominate your region's hospital beds.",
+    stat: "3,450",
+    statLabel: "Highest regional HHI (North Country)",
   },
   {
     title: "After the Merger",
@@ -140,6 +140,26 @@ export default function Home() {
               </p>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* Beta notice */}
+      <section className="bg-amber-50 border-t border-amber-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-center">
+          <p className="text-sm text-amber-800">
+            <strong>Beta:</strong> This project is under active development.
+            Concentration calculations may contain errors or use preliminary
+            data. If you spot an issue, please{" "}
+            <a
+              href="https://github.com/masuga-fair-markets/fair-markets-ny/issues"
+              className="underline hover:text-amber-900"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              open an issue
+            </a>
+            .
+          </p>
         </div>
       </section>
 

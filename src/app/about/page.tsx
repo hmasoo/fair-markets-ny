@@ -16,6 +16,25 @@ export default function AboutPage() {
         About & Methodology
       </h1>
 
+      <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-8">
+        <p className="text-sm text-amber-800">
+          <strong>Beta Project:</strong> Fair Markets NY is under active
+          development. Concentration metrics and market share calculations may
+          contain errors, use preliminary data, or reflect incomplete source
+          coverage. We are continuously refining our methodology. If you spot an
+          issue, please{" "}
+          <a
+            href="https://github.com/masuga-fair-markets/fair-markets-ny/issues"
+            className="underline hover:text-amber-900"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            open an issue on GitHub
+          </a>
+          .
+        </p>
+      </div>
+
       <div className="space-y-8">
         <section className="card">
           <h2 className="text-xl font-bold text-fm-patina mb-4">

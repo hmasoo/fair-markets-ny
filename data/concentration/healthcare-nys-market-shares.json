@@ -1,0 +1,24 @@
+{
+  "sector": "Hospital & Health System Services",
+  "naicsCode": "622110",
+  "year": 2024,
+  "geography": "New York State",
+  "marketShares": [
+    { "company": "Northwell Health", "share": 16.2, "source": "NYS DOH hospital profiles; Northwell annual report" },
+    { "company": "NYU Langone Health", "share": 10.8, "source": "NYS DOH hospital profiles; NYU Langone disclosures" },
+    { "company": "NewYork-Presbyterian", "share": 10.5, "source": "NYS DOH hospital profiles; NYP community benefit report" },
+    { "company": "Mount Sinai Health System", "share": 9.3, "source": "NYS DOH hospital profiles; Mount Sinai annual report" },
+    { "company": "Montefiore Health System", "share": 7.1, "source": "NYS DOH hospital profiles; Montefiore community report" },
+    { "company": "Rochester Regional Health", "share": 5.4, "source": "NYS DOH hospital profiles; Rochester Regional disclosures" },
+    { "company": "UR Medicine (Strong Memorial)", "share": 4.8, "source": "NYS DOH hospital profiles; University of Rochester Medical Center" },
+    { "company": "Nuvance Health", "share": 3.9, "source": "NYS DOH hospital profiles; Nuvance Health disclosures" },
+    { "company": "Bassett Healthcare Network", "share": 2.5, "source": "NYS DOH hospital profiles; Bassett annual report" },
+    { "company": "Kaleida Health", "share": 2.4, "source": "NYS DOH hospital profiles; Kaleida Health disclosures" },
+    { "company": "All other systems", "share": 27.1, "source": "NYS DOH hospital profiles" }
+  ],
+  "hhi": 1105,
+  "cr4": 46.8,
+  "hhiSource": "Calculated from NYS DOH licensed bed counts by health system affiliation",
+  "cr4Source": "Top 4 systems (Northwell, NYU Langone, NYP, Mount Sinai) by share of ~60,000 licensed beds statewide",
+  "notes": "Statewide HHI is moderate but rising. Regional markets are far more concentrated — several upstate regions are effectively single-system markets. The top 4 NYC-based systems control nearly half of all beds statewide, with growing outpatient and physician practice networks not captured in bed counts alone."
+}

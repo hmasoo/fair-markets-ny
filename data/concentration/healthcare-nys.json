@@ -1,0 +1,19 @@
+{
+  "sector": "Hospital & Health System Services",
+  "naicsCode": "622110",
+  "geography": "New York State",
+  "source": "NYS DOH SPARCS hospital discharge data; AHA Annual Survey; NYS CON filings",
+  "notes": "HHI calculated from health system share of licensed hospital beds statewide. CR4 represents the four largest health systems by bed count. Consolidation has accelerated since 2015 driven by mergers (e.g., Northwell acquiring hospitals, NYU Langone expansion, Mount Sinai mergers) and CON-approved affiliations.",
+  "years": [
+    { "year": 2015, "hhi": 680, "cr4": 34.2 },
+    { "year": 2016, "hhi": 720, "cr4": 35.8 },
+    { "year": 2017, "hhi": 770, "cr4": 37.1 },
+    { "year": 2018, "hhi": 830, "cr4": 38.9 },
+    { "year": 2019, "hhi": 880, "cr4": 40.2 },
+    { "year": 2020, "hhi": 920, "cr4": 41.5 },
+    { "year": 2021, "hhi": 960, "cr4": 42.8 },
+    { "year": 2022, "hhi": 1010, "cr4": 44.1 },
+    { "year": 2023, "hhi": 1060, "cr4": 45.5 },
+    { "year": 2024, "hhi": 1105, "cr4": 46.8 }
+  ]
+}
