@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "prisma generate && next build",
-    "postinstall": "prisma generate",
+    "build": "DATABASE_URL=\"${DATABASE_URL:-postgresql://placeholder:placeholder@localhost:5432/placeholder}\" prisma generate && next build",
+    "postinstall": "DATABASE_URL=\"${DATABASE_URL:-postgresql://placeholder:placeholder@localhost:5432/placeholder}\" prisma generate",
     "seed:housing": "tsx scripts/seed/housing.ts",
     "seed:broadband": "tsx scripts/seed/broadband.ts",
     "seed:geography": "tsx scripts/seed/geography.ts",
