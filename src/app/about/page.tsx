@@ -187,6 +187,60 @@ export default function AboutPage() {
         </section>
 
         <section className="card">
+          <h2 className="text-xl font-bold text-fm-patina mb-4">
+            Why Markets Concentrate
+          </h2>
+          <div className="space-y-4 text-sm text-gray-700">
+            <p>
+              <strong>The feedback loop:</strong> Concentration doesn{"'"}t happen
+              in a vacuum. When zoning caps density, permitting takes years, and
+              height limits block new buildings, new landlords can{"'"}t enter the
+              market. The landlords already in the neighborhood consolidate by
+              default. Supply scarcity and ownership concentration are two sides
+              of the same coin — each reinforces the other.
+            </p>
+            <p>
+              <strong>The rent stabilization paradox:</strong> In neighborhoods
+              where regulated rents haven{"'"}t kept pace with operating costs,
+              landlords face a squeeze: revenue doesn{"'"}t cover maintenance. The
+              result shows up in our violations data — but some of those
+              violations reflect underinvestment from the cost squeeze, not just
+              extractive ownership. Armlovich{"'"}s{" "}
+              <a
+                href="https://niskanencenter.org/wp-content/uploads/2025/06/Armlovich-RGB-Testimony-June-2025.pdf"
+                className="text-fm-teal hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                RGB analysis
+              </a>{" "}
+              shows that real (inflation-adjusted) rent guideline increases have
+              been negative since ~2015, putting particular pressure on pre-1974
+              buildings outside Manhattan.
+            </p>
+            <p>
+              <strong>What this means for the data:</strong> Our concentration
+              metrics measure <em>who controls the housing</em> — not{" "}
+              <em>why</em>. A neighborhood can have both too few landlords and
+              too few buildings. The Niskanen Center{"'"}s{" "}
+              <a
+                href="https://niskanencenter.org/senate-banking-housing-testimony-2025/"
+                className="text-fm-teal hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                housing research
+              </a>{" "}
+              argues that removing supply barriers — lot-size minimums,
+              single-family zoning, permitting delays — would do more for
+              affordability than targeting individual landlords. We agree this is
+              part of the picture. Concentration data and supply-side analysis
+              are complements, not competitors.
+            </p>
+          </div>
+        </section>
+
+        <section className="card">
           <h2 className="text-xl font-bold text-fm-patina mb-4">Data Sources</h2>
           <div className="space-y-3 text-sm text-gray-700">
             {[

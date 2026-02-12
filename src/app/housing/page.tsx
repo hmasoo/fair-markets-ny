@@ -27,7 +27,7 @@ import neighborhoodData from "../../../data/concentration/housing-neighborhoods.
 export const metadata: Metadata = {
   title: "The New Landlords — Housing Concentration",
   description:
-    "Mapping residential ownership concentration across NYC neighborhoods using ACRIS, PLUTO, and Local Law 18 data.",
+    "Ownership concentration and supply scarcity in NYC housing — neighborhood-level data from ACRIS, PLUTO, and Local Law 18.",
 };
 
 export default function HousingPage() {
@@ -68,8 +68,10 @@ export default function HousingPage() {
         <p className="mt-2 text-fm-sage max-w-2xl">
           Citywide, NYC{"'"}s rental market looks fragmented (<HHITooltip>HHI</HHITooltip> 228
           across ~30,000 landlords). Zoom into neighborhoods and the picture
-          changes dramatically — a handful of landlords dominate entire
-          communities, often in the lowest-income areas.
+          changes — a handful of landlords dominate entire communities. That{"'"}s
+          partly because zoning and permitting barriers keep new housing and
+          new landlords out. Concentration and supply scarcity reinforce each
+          other, and the data shows both.
         </p>
       </div>
 
@@ -274,6 +276,34 @@ export default function HousingPage() {
           )}
           marketShareYear={marketShareData.year}
         />
+      </div>
+
+      {/* Supply-side synthesis */}
+      <div className="card mt-8">
+        <h2 className="text-xl font-bold text-fm-patina mb-3">
+          Why So Few Landlords?
+        </h2>
+        <p className="text-sm text-gray-700">
+          Citywide HHI is low because NYC has ~30,000 landlords. But at the
+          neighborhood level, concentration is high — and that{"'"}s partly{" "}
+          <em>because</em> NYC{"'"}s zoning and permitting make it nearly
+          impossible for new landlords to build or enter. Supply constraints and
+          ownership concentration reinforce each other: barriers to construction
+          prevent new entrants, and incumbents consolidate. The neighborhoods
+          with the highest HHI tend to also be the ones where new construction
+          is hardest to permit.
+        </p>
+        <p className="mt-3 text-xs text-fm-sage">
+          Further reading:{" "}
+          <a
+            href="https://niskanencenter.org/senate-banking-housing-testimony-2025/"
+            className="text-fm-teal hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Niskanen Center Senate testimony on housing supply barriers
+          </a>
+        </p>
       </div>
     </div>
   );

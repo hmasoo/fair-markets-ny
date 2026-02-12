@@ -6,7 +6,7 @@ const sectors = [
     subtitle: "Housing & Landlord Concentration",
     href: "/housing",
     description:
-      "In the South Bronx, just 4 landlords control 1 in every 4 rental units. See who owns your neighborhood.",
+      "In the South Bronx, 4 landlords control 1 in 4 rental units — in a neighborhood where zoning makes new construction nearly impossible. Concentration and supply scarcity, mapped.",
     stat: "8.1%",
     statLabel: "of NYC rental units owned by top 4 landlords",
   },
@@ -49,10 +49,10 @@ export default function Home() {
             Why does your rent keep rising?
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-white/80 max-w-2xl leading-relaxed">
-            When a few companies dominate a market, prices go up and choices
-            disappear. Fair Markets NY uses public records to show where
-            it{"'"}s happening across New York — from your apartment building to
-            your internet bill.
+            Concentrated ownership and supply scarcity drive up costs and
+            shrink choices — and they reinforce each other. Fair Markets NY
+            uses public records to map both: who controls New York{"'"}s
+            essential markets, and what keeps new competitors out.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <Link
@@ -77,11 +77,13 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-lg font-bold text-fm-patina mb-2">
-                Fewer landlords, higher rent
+                Fewer landlords, fewer buildings
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                When one company owns half the buildings on your block, they set
-                the price. We map who owns what across every NYC neighborhood.
+                When one company owns half the buildings on your block and
+                zoning blocks new construction, no one can compete with them.
+                We map ownership concentration and the supply conditions that
+                entrench it.
               </p>
             </div>
             <div>
@@ -96,10 +98,11 @@ export default function Home() {
             </div>
             <div>
               <h3 className="text-lg font-bold text-fm-patina mb-2">
-                We follow the money
+                We follow the data
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Using public government records, we track who owns what — so you
+                Using public government records, we measure who controls
+                essential markets and where competition is missing — so you
                 can see it too. No paywalls, no subscriptions.
               </p>
             </div>

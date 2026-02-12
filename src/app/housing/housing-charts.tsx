@@ -393,6 +393,21 @@ export function ViolationsVsConcentrationChart({
           );
         }}
       </ChartContainer>
+      <p className="mt-3 text-xs text-fm-sage italic">
+        Note: High violations per unit can reflect extractive ownership{" "}
+        <em>and</em> chronic underinvestment in buildings where regulated rents
+        haven{"'"}t kept pace with operating costs — two problems that often
+        coexist in the same building (
+        <a
+          href="https://niskanencenter.org/wp-content/uploads/2025/06/Armlovich-RGB-Testimony-June-2025.pdf"
+          className="text-fm-teal hover:underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Armlovich, RGB June 2025
+        </a>
+        ).
+      </p>
     </div>
   );
 }
