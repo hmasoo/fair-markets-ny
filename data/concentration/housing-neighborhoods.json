@@ -38,6 +38,8 @@
           "share": 2.1
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -61,7 +63,7 @@
           "share": 2.6
         },
         {
-          "name": "Williamsburg Preservation",
+          "name": "Williamsburg Housing Preservation",
           "units": 727,
           "share": 2.2
         },
@@ -76,6 +78,8 @@
           "share": 1.5
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -94,7 +98,7 @@
       "cr4": 19.6,
       "topLandlords": [
         {
-          "name": "Williamsburg Preservation",
+          "name": "Williamsburg Housing Preservation",
           "units": 744,
           "share": 5.9
         },
@@ -104,16 +108,18 @@
           "share": 5.2
         },
         {
-          "name": "Division",
+          "name": "Division Housing",
           "units": 534,
           "share": 4.3
         },
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 525,
           "share": 4.2
         }
       ],
+      "nychaUnits": 525,
+      "nychaShare": 4.2,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -128,11 +134,11 @@
         "BK0104"
       ],
       "totalUnits": 26362,
-      "hhi": 262,
+      "hhi": 261,
       "cr4": 28.9,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 3265,
           "share": 12.4
         },
@@ -152,6 +158,8 @@
           "share": 2.9
         }
       ],
+      "nychaUnits": 3265,
+      "nychaShare": 12.4,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -170,7 +178,7 @@
       "cr4": 9.7,
       "topLandlords": [
         {
-          "name": "Cadman Towers Fund C Orporation",
+          "name": "Cadman Towers Housing Fund C Orporation",
           "units": 422,
           "share": 2.9
         },
@@ -190,6 +198,8 @@
           "share": 2.1
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -208,12 +218,12 @@
       "cr4": 17.8,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 1932,
           "share": 7
         },
         {
-          "name": "Nyc Preservation And",
+          "name": "Nyc Housing Preservation And",
           "units": 1148,
           "share": 4.2
         },
@@ -228,6 +238,8 @@
           "share": 3
         }
       ],
+      "nychaUnits": 1932,
+      "nychaShare": 7,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -246,7 +258,7 @@
       "cr4": 20.1,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 1953,
           "share": 9.9
         },
@@ -266,6 +278,8 @@
           "share": 2.9
         }
       ],
+      "nychaUnits": 1953,
+      "nychaShare": 9.9,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -304,6 +318,8 @@
           "share": 2.2
         }
       ],
+      "nychaUnits": 10,
+      "nychaShare": 0.1,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -322,12 +338,12 @@
       "cr4": 13.9,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 3332,
           "share": 9
         },
         {
-          "name": "Brooklyn Preservation",
+          "name": "Brooklyn Housing Preservation",
           "units": 710,
           "share": 1.9
         },
@@ -342,6 +358,8 @@
           "share": 1.2
         }
       ],
+      "nychaUnits": 3332,
+      "nychaShare": 9,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -360,7 +378,7 @@
       "cr4": 17.6,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 6031,
           "share": 15.4
         },
@@ -375,11 +393,13 @@
           "share": 0.7
         },
         {
-          "name": "HP Willoughby",
+          "name": "HP Willoughby Housing",
           "units": 267,
           "share": 0.7
         }
       ],
+      "nychaUnits": 6031,
+      "nychaShare": 15.4,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -413,11 +433,13 @@
           "share": 0.7
         },
         {
-          "name": "Sr.lucian Senior",
+          "name": "Sr.lucian Senior Housing",
           "units": 150,
           "share": 0.6
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -446,7 +468,7 @@
           "share": 1.9
         },
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 353,
           "share": 1.5
         },
@@ -456,6 +478,8 @@
           "share": 1.3
         }
       ],
+      "nychaUnits": 353,
+      "nychaShare": 1.5,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -474,17 +498,17 @@
       "cr4": 10,
       "topLandlords": [
         {
-          "name": "Atlantic Chestnut II Fund",
+          "name": "Atlantic Chestnut II Housing Fund",
           "units": 436,
           "share": 3.3
         },
         {
-          "name": "Atlantic Chestnut I Fund Cor Poration",
+          "name": "Atlantic Chestnut I Housing Fund Cor Poration",
           "units": 403,
           "share": 3.1
         },
         {
-          "name": "Chestnut Commons Fun D Corporat",
+          "name": "Chestnut Commons Housing Fun D Corporat",
           "units": 274,
           "share": 2.1
         },
@@ -494,6 +518,8 @@
           "share": 1.4
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -512,7 +538,7 @@
       "cr4": 12,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 997,
           "share": 6.5
         },
@@ -522,16 +548,18 @@
           "share": 2.1
         },
         {
-          "name": "Remeeder Houses Fund",
+          "name": "Remeeder Houses Housing Fund",
           "units": 260,
           "share": 1.7
         },
         {
-          "name": "Sutter",
+          "name": "Sutter Housing",
           "units": 258,
           "share": 1.7
         }
       ],
+      "nychaUnits": 997,
+      "nychaShare": 6.5,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -570,6 +598,8 @@
           "share": 2.9
         }
       ],
+      "nychaUnits": 66,
+      "nychaShare": 0.4,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -588,26 +618,28 @@
       "cr4": 77.9,
       "topLandlords": [
         {
-          "name": "Bsc",
+          "name": "Bsc Housing",
           "units": 9637,
           "share": 68.5
         },
         {
-          "name": "Iuv Phase 1A Fund Rporation",
+          "name": "Iuv Phase 1A Housing Fund Rporation",
           "units": 573,
           "share": 4.1
         },
         {
-          "name": "C1 C2 Vital BK Developmentfund C Orporation",
+          "name": "C1 C2 Vital BK Housing Developmentfund C Orporation",
           "units": 451,
           "share": 3.2
         },
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 293,
           "share": 2.1
         }
       ],
+      "nychaUnits": 293,
+      "nychaShare": 2.1,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -626,7 +658,7 @@
       "cr4": 32.5,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 3363,
           "share": 24.3
         },
@@ -636,16 +668,18 @@
           "share": 4.2
         },
         {
-          "name": "Preservation",
+          "name": "Preservation Housing",
           "units": 319,
           "share": 2.3
         },
         {
-          "name": "HP Mjm Fund",
+          "name": "HP Mjm Housing Fund",
           "units": 234,
           "share": 1.7
         }
       ],
+      "nychaUnits": 3363,
+      "nychaShare": 24.3,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -664,7 +698,7 @@
       "cr4": 21.9,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 4781,
           "share": 13.3
         },
@@ -684,6 +718,8 @@
           "share": 1.8
         }
       ],
+      "nychaUnits": 4781,
+      "nychaShare": 13.3,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -722,6 +758,8 @@
           "share": 0.6
         }
       ],
+      "nychaUnits": 3,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -745,7 +783,7 @@
           "share": 3.1
         },
         {
-          "name": "Bishop Boardman Senior",
+          "name": "Bishop Boardman Senior Housing",
           "units": 201,
           "share": 1.7
         },
@@ -760,6 +798,8 @@
           "share": 1.2
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -788,7 +828,7 @@
           "share": 1.1
         },
         {
-          "name": "Marien Heim OF Sunset Park Dvlpt Fund",
+          "name": "Marien Heim OF Sunset Park Housing Dvlpt Fund",
           "units": 168,
           "share": 1
         },
@@ -798,6 +838,8 @@
           "share": 0.9
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -816,7 +858,7 @@
       "cr4": 2.9,
       "topLandlords": [
         {
-          "name": "HP Sunset Park I Fund Compan Y",
+          "name": "HP Sunset Park I Housing Fund Compan Y",
           "units": 129,
           "share": 0.9
         },
@@ -826,7 +868,7 @@
           "share": 0.9
         },
         {
-          "name": "Fac 6309 Fourth Avenue Developme NT Fund",
+          "name": "Fac 6309 Fourth Avenue Housing Developme NT Fund",
           "units": 84,
           "share": 0.6
         },
@@ -836,6 +878,8 @@
           "share": 0.6
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -874,6 +918,8 @@
           "share": 1.5
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -892,7 +938,7 @@
       "cr4": 9.8,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 2581,
           "share": 6.8
         },
@@ -902,7 +948,7 @@
           "share": 1.6
         },
         {
-          "name": "Brooklyn Preservation",
+          "name": "Brooklyn Housing Preservation",
           "units": 274,
           "share": 0.7
         },
@@ -912,6 +958,8 @@
           "share": 0.6
         }
       ],
+      "nychaUnits": 2581,
+      "nychaShare": 6.8,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -950,6 +998,8 @@
           "share": 1.5
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -973,12 +1023,12 @@
           "share": 2.3
         },
         {
-          "name": "Chv 329 Clarkson Avenue Developm Ent Fund C",
+          "name": "Chv 329 Clarkson Avenue Housing Developm Ent Fund C",
           "units": 328,
           "share": 1.5
         },
         {
-          "name": "Harry Silver",
+          "name": "Harry Silver Housing",
           "units": 294,
           "share": 1.4
         },
@@ -988,6 +1038,8 @@
           "share": 1.4
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1006,7 +1058,7 @@
       "cr4": 4.4,
       "topLandlords": [
         {
-          "name": "Shore Hill",
+          "name": "Shore Hill Housing",
           "units": 558,
           "share": 1.5
         },
@@ -1026,6 +1078,8 @@
           "share": 0.7
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1064,6 +1118,8 @@
           "share": 0.5
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1102,6 +1158,8 @@
           "share": 0.3
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1140,6 +1198,8 @@
           "share": 1.6
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1178,6 +1238,8 @@
           "share": 0.7
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1206,16 +1268,18 @@
           "share": 1.3
         },
         {
-          "name": "Msgr. John P. O'brien Senior DE Velopment",
+          "name": "Msgr. John P. O'brien Senior Housing DE Velopment",
           "units": 113,
           "share": 1.1
         },
         {
-          "name": "Tri-senior",
+          "name": "Tri-senior Housing",
           "units": 113,
           "share": 1.1
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1254,6 +1318,8 @@
           "share": 0.3
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1292,6 +1358,8 @@
           "share": 1.2
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1330,6 +1398,8 @@
           "share": 0.9
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1348,7 +1418,7 @@
       "cr4": 34.1,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 1765,
           "share": 15.1
         },
@@ -1368,6 +1438,8 @@
           "share": 3.1
         }
       ],
+      "nychaUnits": 1765,
+      "nychaShare": 15.1,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1386,7 +1458,7 @@
       "cr4": 39.4,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 4375,
           "share": 17.8
         },
@@ -1396,7 +1468,7 @@
           "share": 10.5
         },
         {
-          "name": "Luna Park",
+          "name": "Luna Park Housing",
           "units": 1578,
           "share": 6.4
         },
@@ -1406,6 +1478,8 @@
           "share": 4.7
         }
       ],
+      "nychaUnits": 4375,
+      "nychaShare": 17.8,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1444,6 +1518,8 @@
           "share": 1.3
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1472,7 +1548,7 @@
           "share": 1
         },
         {
-          "name": "Caton Flats Fund Cor Poration",
+          "name": "Caton Flats Housing Fund Cor Poration",
           "units": 255,
           "share": 0.9
         },
@@ -1482,6 +1558,8 @@
           "share": 0.9
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1520,6 +1598,8 @@
           "share": 0.9
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1558,6 +1638,8 @@
           "share": 0.7
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1596,6 +1678,8 @@
           "share": 0.8
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1634,6 +1718,8 @@
           "share": 0.8
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1652,7 +1738,7 @@
       "cr4": 12.4,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 2204,
           "share": 7.9
         },
@@ -1672,6 +1758,8 @@
           "share": 1.3
         }
       ],
+      "nychaUnits": 2204,
+      "nychaShare": 7.9,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1686,18 +1774,18 @@
         "BK1601"
       ],
       "totalUnits": 16161,
-      "hhi": 103,
-      "cr4": 16,
+      "hhi": 121,
+      "cr4": 17.5,
       "topLandlords": [
         {
-          "name": "HP Atlantic Plaza Towers Develop Ment Fund",
-          "units": 1107,
-          "share": 6.8
+          "name": "Nyc Housing Authority",
+          "units": 1184,
+          "share": 7.3
         },
         {
-          "name": "Nyc Authority",
-          "units": 933,
-          "share": 5.8
+          "name": "HP Atlantic Plaza Towers Housing Develop Ment Fund",
+          "units": 1107,
+          "share": 6.8
         },
         {
           "name": "Nyc Pact Preservation",
@@ -1705,11 +1793,13 @@
           "share": 1.9
         },
         {
-          "name": "Nycha Triborough Preservation",
-          "units": 251,
-          "share": 1.6
+          "name": "Love Fellowship Tabernacle",
+          "units": 236,
+          "share": 1.5
         }
       ],
+      "nychaUnits": 1184,
+      "nychaShare": 7.3,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1728,17 +1818,17 @@
       "cr4": 36.7,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 7409,
           "share": 30.1
         },
         {
-          "name": "HP Marcus Garvey Preservation Mpany",
+          "name": "HP Marcus Garvey Preservation Housing Mpany",
           "units": 625,
           "share": 2.5
         },
         {
-          "name": "HP Riverdale Osborne Fund",
+          "name": "HP Riverdale Osborne Housing Fund",
           "units": 524,
           "share": 2.1
         },
@@ -1748,6 +1838,8 @@
           "share": 1.9
         }
       ],
+      "nychaUnits": 7409,
+      "nychaShare": 30.1,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1786,6 +1878,8 @@
           "share": 0.9
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1804,7 +1898,7 @@
       "cr4": 21.5,
       "topLandlords": [
         {
-          "name": "Flatbush Gardens Fun D Corporat",
+          "name": "Flatbush Gardens Housing Fun D Corporat",
           "units": 2328,
           "share": 18
         },
@@ -1814,7 +1908,7 @@
           "share": 1.5
         },
         {
-          "name": "Flatbush Gardens Fun D",
+          "name": "Flatbush Gardens Housing Fun D",
           "units": 168,
           "share": 1.3
         },
@@ -1824,6 +1918,8 @@
           "share": 0.7
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1842,7 +1938,7 @@
       "cr4": 4.4,
       "topLandlords": [
         {
-          "name": "VB Ccpopd Fund Corpo Ration",
+          "name": "VB Ccpopd Housing Fund Corpo Ration",
           "units": 322,
           "share": 2.2
         },
@@ -1862,6 +1958,8 @@
           "share": 0.7
         }
       ],
+      "nychaUnits": 2,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1900,6 +1998,8 @@
           "share": 1
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1918,7 +2018,7 @@
       "cr4": 13.6,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 1188,
           "share": 5.5
         },
@@ -1938,6 +2038,8 @@
           "share": 1.7
         }
       ],
+      "nychaUnits": 1188,
+      "nychaShare": 5.5,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1976,6 +2078,8 @@
           "share": 0.9
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -1994,7 +2098,7 @@
       "cr4": 15.1,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 3230,
           "share": 11.9
         },
@@ -2014,6 +2118,8 @@
           "share": 0.6
         }
       ],
+      "nychaUnits": 3230,
+      "nychaShare": 11.9,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -2032,7 +2138,7 @@
       "cr4": 40.1,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 7400,
           "share": 27.5
         },
@@ -2042,7 +2148,7 @@
           "share": 4.7
         },
         {
-          "name": "Diego Beekman Mutual Housi NG Fund",
+          "name": "Diego Beekman Mutual Housing Housi NG Fund",
           "units": 1204,
           "share": 4.5
         },
@@ -2052,6 +2158,8 @@
           "share": 3.4
         }
       ],
+      "nychaUnits": 7400,
+      "nychaShare": 27.5,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -2066,21 +2174,21 @@
         "BX0102"
       ],
       "totalUnits": 17721,
-      "hhi": 698,
-      "cr4": 33.8,
+      "hhi": 757,
+      "cr4": 35,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
-          "units": 4507,
-          "share": 25.4
+          "name": "Nyc Housing Authority",
+          "units": 4715,
+          "share": 26.6
         },
         {
-          "name": "HP Michelangelo",
+          "name": "HP Michelangelo Housing",
           "units": 498,
           "share": 2.8
         },
         {
-          "name": "Comunilife LA Central . Fund",
+          "name": "Comunilife LA Central Housing . Fund",
           "units": 494,
           "share": 2.8
         },
@@ -2090,6 +2198,8 @@
           "share": 2.7
         }
       ],
+      "nychaUnits": 4715,
+      "nychaShare": 26.6,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -2118,16 +2228,18 @@
           "share": 7.4
         },
         {
-          "name": "985 Bruckner Boulevard . Fund",
+          "name": "985 Bruckner Boulevard Housing . Fund",
           "units": 215,
           "share": 3.4
         },
         {
-          "name": "Hunts Point Residences Developme NT",
+          "name": "Hunts Point Residences Housing Developme NT",
           "units": 165,
           "share": 2.6
         }
       ],
+      "nychaUnits": 131,
+      "nychaShare": 2.1,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -2146,7 +2258,7 @@
       "cr4": 13.1,
       "topLandlords": [
         {
-          "name": "Union Preservation",
+          "name": "Union Housing Preservation",
           "units": 639,
           "share": 4.1
         },
@@ -2161,11 +2273,13 @@
           "share": 2.8
         },
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 407,
           "share": 2.6
         }
       ],
+      "nychaUnits": 407,
+      "nychaShare": 2.6,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -2184,17 +2298,17 @@
       "cr4": 18.2,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 1969,
           "share": 12.6
         },
         {
-          "name": "Woodstock Terrace Mutual",
+          "name": "Woodstock Terrace Mutual Housing",
           "units": 320,
           "share": 2
         },
         {
-          "name": "Bronx Commons Fund",
+          "name": "Bronx Commons Housing Fund",
           "units": 304,
           "share": 1.9
         },
@@ -2204,6 +2318,8 @@
           "share": 1.6
         }
       ],
+      "nychaUnits": 1969,
+      "nychaShare": 12.6,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -2222,7 +2338,7 @@
       "cr4": 59.4,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 4256,
           "share": 49.2
         },
@@ -2242,6 +2358,8 @@
           "share": 2.3
         }
       ],
+      "nychaUnits": 4256,
+      "nychaShare": 49.2,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -2260,26 +2378,28 @@
       "cr4": 11.8,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 483,
           "share": 3.7
         },
         {
-          "name": "Mbd Silva Taylor Fun D",
+          "name": "Mbd Silva Taylor Housing Fun D",
           "units": 365,
           "share": 2.8
         },
         {
-          "name": "Samaritan-compass Iii & IV F Und",
+          "name": "Samaritan-compass Iii & IV Housing F Und",
           "units": 365,
           "share": 2.8
         },
         {
-          "name": "West Farms Estates F Und Corpor",
+          "name": "West Farms Estates Housing F Und Corpor",
           "units": 330,
           "share": 2.5
         }
       ],
+      "nychaUnits": 483,
+      "nychaShare": 3.7,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -2303,12 +2423,12 @@
           "share": 3.4
         },
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 900,
           "share": 3.3
         },
         {
-          "name": "Bronx Preservation F Und",
+          "name": "Bronx Preservation Housing F Und",
           "units": 552,
           "share": 2
         },
@@ -2318,6 +2438,8 @@
           "share": 2
         }
       ],
+      "nychaUnits": 900,
+      "nychaShare": 3.3,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -2336,7 +2458,7 @@
       "cr4": 12.9,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 700,
           "share": 5.3
         },
@@ -2346,16 +2468,18 @@
           "share": 3.1
         },
         {
-          "name": "Anderson Avenue Fund",
+          "name": "Anderson Avenue Housing Fund",
           "units": 300,
           "share": 2.3
         },
         {
-          "name": "Mid-bronx Devel",
+          "name": "Mid-bronx Housing Devel",
           "units": 290,
           "share": 2.2
         }
       ],
+      "nychaUnits": 700,
+      "nychaShare": 5.3,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -2374,12 +2498,12 @@
       "cr4": 9.6,
       "topLandlords": [
         {
-          "name": "Nsa 2015 Fund Corpor Ation",
+          "name": "Nsa 2015 Housing Fund Corpor Ation",
           "units": 905,
           "share": 4.8
         },
         {
-          "name": "Highbridge Community Fund",
+          "name": "Highbridge Community Housing Fund",
           "units": 378,
           "share": 2
         },
@@ -2389,11 +2513,13 @@
           "share": 1.5
         },
         {
-          "name": "1331 Jerome Avenue F Und",
+          "name": "1331 Jerome Avenue Housing F Und",
           "units": 255,
           "share": 1.3
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -2412,7 +2538,7 @@
       "cr4": 33.8,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 6073,
           "share": 23.3
         },
@@ -2427,11 +2553,13 @@
           "share": 2.9
         },
         {
-          "name": "Starhill Phase I Fun D Corporat",
+          "name": "Starhill Phase I Housing Fun D Corporat",
           "units": 326,
           "share": 1.3
         }
       ],
+      "nychaUnits": 6073,
+      "nychaShare": 23.3,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -2450,7 +2578,7 @@
       "cr4": 7.4,
       "topLandlords": [
         {
-          "name": "Bronx Phase II",
+          "name": "Bronx Phase II Housing",
           "units": 536,
           "share": 2.7
         },
@@ -2460,7 +2588,7 @@
           "share": 2.1
         },
         {
-          "name": "HP 1749 Grand Concourse & 2755-69 Sedgwi CK",
+          "name": "HP 1749 Grand Concourse & 2755-69 Sedgwi CK Housing",
           "units": 278,
           "share": 1.4
         },
@@ -2470,6 +2598,8 @@
           "share": 1.2
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -2488,26 +2618,28 @@
       "cr4": 8.2,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 314,
           "share": 2.8
         },
         {
-          "name": "Bronx Phase Iii",
+          "name": "Bronx Phase Iii Housing",
           "units": 231,
           "share": 2
         },
         {
-          "name": "United Neighbors Fun D",
+          "name": "United Neighbors Housing Fun D",
           "units": 229,
           "share": 2
         },
         {
-          "name": "Neighborhood Renewal Fund",
+          "name": "Neighborhood Renewal Housing Fund",
           "units": 162,
           "share": 1.4
         }
       ],
+      "nychaUnits": 314,
+      "nychaShare": 2.8,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -2526,26 +2658,28 @@
       "cr4": 15.9,
       "topLandlords": [
         {
-          "name": "Boston Tremont . Fund Corpora Tion",
+          "name": "Boston Tremont Housing . Fund Corpora Tion",
           "units": 534,
           "share": 6.1
         },
         {
-          "name": "Boston Bryant Developent Fund Rporation",
+          "name": "Boston Bryant Housing Developent Fund Rporation",
           "units": 319,
           "share": 3.7
         },
         {
-          "name": "Daly IV Fund",
+          "name": "Daly IV Housing Fund",
           "units": 274,
           "share": 3.1
         },
         {
-          "name": "Samaritan-compass VI Fund",
+          "name": "Samaritan-compass VI Housing Fund",
           "units": 261,
           "share": 3
         }
       ],
+      "nychaUnits": 220,
+      "nychaShare": 2.5,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -2564,12 +2698,12 @@
       "cr4": 11.8,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 741,
           "share": 5.2
         },
         {
-          "name": "Bronx Phase I",
+          "name": "Bronx Phase I Housing",
           "units": 408,
           "share": 2.9
         },
@@ -2579,11 +2713,13 @@
           "share": 2
         },
         {
-          "name": "Ahc Fund",
+          "name": "Ahc Housing Fund",
           "units": 250,
           "share": 1.8
         }
       ],
+      "nychaUnits": 741,
+      "nychaShare": 5.2,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -2612,7 +2748,7 @@
           "share": 1.9
         },
         {
-          "name": "Belmont Blvd Dfc",
+          "name": "Belmont Blvd Housing Dfc",
           "units": 191,
           "share": 1.4
         },
@@ -2622,6 +2758,8 @@
           "share": 1.4
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -2645,12 +2783,12 @@
           "share": 7.1
         },
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 233,
           "share": 1.5
         },
         {
-          "name": "HP Creston Parkview Fund Compa",
+          "name": "HP Creston Parkview Housing Fund Compa",
           "units": 188,
           "share": 1.2
         },
@@ -2660,6 +2798,8 @@
           "share": 1.2
         }
       ],
+      "nychaUnits": 233,
+      "nychaShare": 1.5,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -2678,26 +2818,28 @@
       "cr4": 6.9,
       "topLandlords": [
         {
-          "name": "Nyc",
+          "name": "Nyc Housing",
           "units": 871,
           "share": 3.7
         },
         {
-          "name": "Scott Tower",
+          "name": "Scott Tower Housing",
           "units": 352,
           "share": 1.5
         },
         {
-          "name": "Serviam Heights Fund",
+          "name": "Serviam Heights Housing Fund",
           "units": 201,
           "share": 0.9
         },
         {
-          "name": "Villa Bedford Fund C Orporation",
+          "name": "Villa Bedford Housing Fund C Orporation",
           "units": 186,
           "share": 0.8
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -2716,7 +2858,7 @@
       "cr4": 5.7,
       "topLandlords": [
         {
-          "name": "Montefiore Hospital Section II I NC",
+          "name": "Montefiore Hospital Housing Section II I NC",
           "units": 399,
           "share": 2.5
         },
@@ -2736,6 +2878,8 @@
           "share": 1
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -2754,12 +2898,12 @@
       "cr4": 16.7,
       "topLandlords": [
         {
-          "name": "Amalgamated",
+          "name": "Amalgamated Housing",
           "units": 1486,
           "share": 10.7
         },
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 344,
           "share": 2.5
         },
@@ -2774,6 +2918,8 @@
           "share": 1.7
         }
       ],
+      "nychaUnits": 344,
+      "nychaShare": 2.5,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -2792,7 +2938,7 @@
       "cr4": 28,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 1696,
           "share": 18
         },
@@ -2802,16 +2948,18 @@
           "share": 4.3
         },
         {
-          "name": "HP Promenade Fund Mpany",
+          "name": "HP Promenade Housing Fund Mpany",
           "units": 318,
           "share": 3.4
         },
         {
-          "name": "New York Teachers",
+          "name": "New York Teachers Housing",
           "units": 224,
           "share": 2.4
         }
       ],
+      "nychaUnits": 1696,
+      "nychaShare": 18,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -2850,6 +2998,8 @@
           "share": 1.9
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -2868,12 +3018,12 @@
       "cr4": 22.3,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 3374,
           "share": 13.3
         },
         {
-          "name": "HP Lafayette Boynton Fund Comp",
+          "name": "HP Lafayette Boynton Housing Fund Comp",
           "units": 968,
           "share": 3.8
         },
@@ -2883,11 +3033,13 @@
           "share": 3.5
         },
         {
-          "name": "HP Story Avenue . Fund Compan Y",
+          "name": "HP Story Avenue Housing . Fund Compan Y",
           "units": 435,
           "share": 1.7
         }
       ],
+      "nychaUnits": 3374,
+      "nychaShare": 13.3,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -2902,30 +3054,32 @@
         "BX0902"
       ],
       "totalUnits": 13168,
-      "hhi": 670,
+      "hhi": 669,
       "cr4": 37.7,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 3081,
           "share": 23.4
         },
         {
-          "name": "Stevenson Commons",
+          "name": "Stevenson Commons Housing",
           "units": 948,
           "share": 7.2
         },
         {
-          "name": "HP Rosedale Gardens Fund Compa",
+          "name": "HP Rosedale Gardens Housing Fund Compa",
           "units": 470,
           "share": 3.6
         },
         {
           "name": "Underhill",
-          "units": 463,
+          "units": 459,
           "share": 3.5
         }
       ],
+      "nychaUnits": 3081,
+      "nychaShare": 23.4,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -2944,17 +3098,17 @@
       "cr4": 25.4,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 2036,
           "share": 14.6
         },
         {
-          "name": "Jamie Towers",
+          "name": "Jamie Towers Housing",
           "units": 624,
           "share": 4.5
         },
         {
-          "name": "HP Bruckner Fund",
+          "name": "HP Bruckner Housing Fund",
           "units": 530,
           "share": 3.8
         },
@@ -2964,6 +3118,8 @@
           "share": 2.5
         }
       ],
+      "nychaUnits": 2036,
+      "nychaShare": 14.6,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -2992,7 +3148,7 @@
           "share": 27.2
         },
         {
-          "name": "HP Purdy Street Fund",
+          "name": "HP Purdy Street Housing Fund",
           "units": 221,
           "share": 1.6
         },
@@ -3002,6 +3158,8 @@
           "share": 0.9
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -3030,7 +3188,7 @@
           "share": 3.3
         },
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 132,
           "share": 2.4
         },
@@ -3040,6 +3198,8 @@
           "share": 1.6
         }
       ],
+      "nychaUnits": 132,
+      "nychaShare": 2.4,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -3058,7 +3218,7 @@
       "cr4": 16.8,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 1894,
           "share": 11.1
         },
@@ -3073,11 +3233,13 @@
           "share": 2
         },
         {
-          "name": "Fort Schuyler . Fund",
+          "name": "Fort Schuyler Housing . Fund",
           "units": 143,
           "share": 0.8
         }
       ],
+      "nychaUnits": 1894,
+      "nychaShare": 11.1,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -3101,7 +3263,7 @@
           "share": 2.3
         },
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 179,
           "share": 1.4
         },
@@ -3116,6 +3278,8 @@
           "share": 1.3
         }
       ],
+      "nychaUnits": 179,
+      "nychaShare": 1.4,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -3139,12 +3303,12 @@
           "share": 68.6
         },
         {
-          "name": "Phf Fund",
+          "name": "Phf Housing Fund",
           "units": 100,
           "share": 0.6
         },
         {
-          "name": "Council Towers V Fund",
+          "name": "Council Towers V Housing Fund",
           "units": 70,
           "share": 0.4
         },
@@ -3154,6 +3318,8 @@
           "share": 0.2
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -3192,6 +3358,8 @@
           "share": 1.6
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -3230,6 +3398,8 @@
           "share": 1.4
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -3248,7 +3418,7 @@
       "cr4": 10.8,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 877,
           "share": 9.7
         },
@@ -3268,6 +3438,8 @@
           "share": 0.3
         }
       ],
+      "nychaUnits": 877,
+      "nychaShare": 9.7,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -3286,17 +3458,17 @@
       "cr4": 56.7,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 11512,
           "share": 48.4
         },
         {
-          "name": "HP Bronx Park East Dvlp Fund Com Pany",
+          "name": "HP Bronx Park East Housing Dvlp Fund Com Pany",
           "units": 1396,
           "share": 5.9
         },
         {
-          "name": "Bronx Park East",
+          "name": "Bronx Park East Housing",
           "units": 322,
           "share": 1.4
         },
@@ -3306,6 +3478,8 @@
           "share": 1.1
         }
       ],
+      "nychaUnits": 11512,
+      "nychaShare": 48.4,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -3324,12 +3498,12 @@
       "cr4": 7.4,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 733,
           "share": 3.3
         },
         {
-          "name": "Hpdc2 Fund",
+          "name": "Hpdc2 Housing Fund",
           "units": 349,
           "share": 1.6
         },
@@ -3344,6 +3518,8 @@
           "share": 1.2
         }
       ],
+      "nychaUnits": 733,
+      "nychaShare": 3.3,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -3362,12 +3538,12 @@
       "cr4": 28,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 1775,
           "share": 10.7
         },
         {
-          "name": "Eastchester Heights Fund Corpo",
+          "name": "Eastchester Heights Housing Fund Corpo",
           "units": 1416,
           "share": 8.5
         },
@@ -3382,6 +3558,8 @@
           "share": 2.7
         }
       ],
+      "nychaUnits": 1775,
+      "nychaShare": 10.7,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -3410,7 +3588,7 @@
           "share": 1
         },
         {
-          "name": "Wakefield Grace Umc Fund Corpo",
+          "name": "Wakefield Grace Umc Housing Fund Corpo",
           "units": 146,
           "share": 0.8
         },
@@ -3420,6 +3598,8 @@
           "share": 0.7
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -3458,6 +3638,8 @@
           "share": 2.2
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -3496,6 +3678,8 @@
           "share": 3.2
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -3534,6 +3718,8 @@
           "share": 1.1
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -3572,6 +3758,8 @@
           "share": 1.8
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -3595,7 +3783,7 @@
           "share": 1.9
         },
         {
-          "name": "Wvh",
+          "name": "Wvh Housing",
           "units": 445,
           "share": 1.8
         },
@@ -3605,11 +3793,13 @@
           "share": 1.7
         },
         {
-          "name": "Westbeth . Fund",
+          "name": "Westbeth . Housing Fund",
           "units": 384,
           "share": 1.6
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -3628,7 +3818,7 @@
       "cr4": 41.5,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 4261,
           "share": 24
         },
@@ -3643,11 +3833,13 @@
           "share": 5.7
         },
         {
-          "name": "HP Cherry Street Fun D",
+          "name": "HP Cherry Street Housing Fun D",
           "units": 490,
           "share": 2.8
         }
       ],
+      "nychaUnits": 4261,
+      "nychaShare": 24,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -3666,12 +3858,12 @@
       "cr4": 35.6,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 5511,
           "share": 21.4
         },
         {
-          "name": "East River",
+          "name": "East River Housing",
           "units": 1672,
           "share": 6.5
         },
@@ -3681,11 +3873,13 @@
           "share": 4.3
         },
         {
-          "name": "Seward Park",
+          "name": "Seward Park Housing",
           "units": 866,
           "share": 3.4
         }
       ],
+      "nychaUnits": 5511,
+      "nychaShare": 21.4,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -3700,16 +3894,16 @@
         "MN0303"
       ],
       "totalUnits": 40008,
-      "hhi": 185,
-      "cr4": 17.9,
+      "hhi": 204,
+      "cr4": 18.6,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
-          "units": 5115,
-          "share": 12.8
+          "name": "Nyc Housing Authority",
+          "units": 5409,
+          "share": 13.5
         },
         {
-          "name": "Village View",
+          "name": "Village View Housing",
           "units": 1236,
           "share": 3.1
         },
@@ -3719,11 +3913,13 @@
           "share": 1.1
         },
         {
-          "name": "Haven Plaza Fund Com Pany",
+          "name": "Haven Plaza Housing Fund Com Pany",
           "units": 371,
           "share": 0.9
         }
       ],
+      "nychaUnits": 5409,
+      "nychaShare": 13.5,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -3747,7 +3943,7 @@
           "share": 3.7
         },
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 1382,
           "share": 3
         },
@@ -3762,6 +3958,8 @@
           "share": 2
         }
       ],
+      "nychaUnits": 1382,
+      "nychaShare": 3,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -3800,6 +3998,8 @@
           "share": 1.6
         }
       ],
+      "nychaUnits": 377,
+      "nychaShare": 0.9,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -3838,6 +4038,8 @@
           "share": 2.4
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -3856,7 +4058,7 @@
       "cr4": 10,
       "topLandlords": [
         {
-          "name": "Common Ground Community Developm Ent Fund C",
+          "name": "Common Ground Community Housing Developm Ent Fund C",
           "units": 652,
           "share": 3
         },
@@ -3876,6 +4078,8 @@
           "share": 2.2
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -3904,6 +4108,8 @@
           "share": 22.1
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -3942,6 +4148,8 @@
           "share": 1.7
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -3956,7 +4164,7 @@
         "MN0603"
       ],
       "totalUnits": 41509,
-      "hhi": 82,
+      "hhi": 83,
       "cr4": 10.4,
       "topLandlords": [
         {
@@ -3980,6 +4188,8 @@
           "share": 2
         }
       ],
+      "nychaUnits": 492,
+      "nychaShare": 1.2,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4018,6 +4228,8 @@
           "share": 1.3
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4036,7 +4248,7 @@
       "cr4": 8,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 1259,
           "share": 2.8
         },
@@ -4056,6 +4268,8 @@
           "share": 1.5
         }
       ],
+      "nychaUnits": 1259,
+      "nychaShare": 2.8,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4079,7 +4293,7 @@
           "share": 2.1
         },
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 1006,
           "share": 1.8
         },
@@ -4094,6 +4308,8 @@
           "share": 0.6
         }
       ],
+      "nychaUnits": 1006,
+      "nychaShare": 1.8,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4109,10 +4325,10 @@
       ],
       "totalUnits": 26993,
       "hhi": 130,
-      "cr4": 15.6,
+      "cr4": 15.4,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 2465,
           "share": 9.1
         },
@@ -4122,9 +4338,9 @@
           "share": 3.2
         },
         {
-          "name": "HP Morningside Heights Portfolio",
-          "units": 463,
-          "share": 1.7
+          "name": "HP Morningside Heights Portfolio Housing",
+          "units": 417,
+          "share": 1.5
         },
         {
           "name": "The Olmstead Condo % Bhs",
@@ -4132,6 +4348,8 @@
           "share": 1.5
         }
       ],
+      "nychaUnits": 2465,
+      "nychaShare": 9.1,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4170,6 +4388,8 @@
           "share": 1.9
         }
       ],
+      "nychaUnits": 150,
+      "nychaShare": 0.2,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4208,6 +4428,8 @@
           "share": 0.9
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4226,7 +4448,7 @@
       "cr4": 7.1,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 1173,
           "share": 2.3
         },
@@ -4241,11 +4463,13 @@
           "share": 1.4
         },
         {
-          "name": "Ruppert",
+          "name": "Ruppert Housing",
           "units": 650,
           "share": 1.3
         }
       ],
+      "nychaUnits": 1173,
+      "nychaShare": 2.3,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4269,12 +4493,12 @@
           "share": 27.9
         },
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 1941,
           "share": 11.6
         },
         {
-          "name": "Morningside Hgts",
+          "name": "Morningside Hgts Housing",
           "units": 982,
           "share": 5.9
         },
@@ -4284,6 +4508,8 @@
           "share": 3.6
         }
       ],
+      "nychaUnits": 1941,
+      "nychaShare": 11.6,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4302,7 +4528,7 @@
       "cr4": 27.7,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 1272,
           "share": 15.5
         },
@@ -4312,16 +4538,18 @@
           "share": 6
         },
         {
-          "name": "Nyc Preservation And",
+          "name": "Nyc Housing Preservation And",
           "units": 263,
           "share": 3.2
         },
         {
-          "name": "HP Harlem Portfolio",
+          "name": "HP Harlem Portfolio Housing",
           "units": 247,
           "share": 3
         }
       ],
+      "nychaUnits": 1272,
+      "nychaShare": 15.5,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4345,7 +4573,7 @@
           "share": 1.7
         },
         {
-          "name": "Nyc Preservation And",
+          "name": "Nyc Housing Preservation And",
           "units": 264,
           "share": 1.2
         },
@@ -4360,6 +4588,8 @@
           "share": 1.1
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4378,12 +4608,12 @@
       "cr4": 8.4,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 915,
           "share": 4
         },
         {
-          "name": "HP Marcus Garvey Fun D",
+          "name": "HP Marcus Garvey Housing Fun D",
           "units": 507,
           "share": 2.2
         },
@@ -4393,11 +4623,13 @@
           "share": 1.1
         },
         {
-          "name": "Adc/ennis Francis II Fund",
+          "name": "Adc/ennis Francis II Housing Fund",
           "units": 247,
           "share": 1.1
         }
       ],
+      "nychaUnits": 915,
+      "nychaShare": 4,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4416,12 +4648,12 @@
       "cr4": 26.8,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 6093,
           "share": 15.6
         },
         {
-          "name": "HP Savoy Park II Fun D",
+          "name": "HP Savoy Park II Housing Fun D",
           "units": 1872,
           "share": 4.8
         },
@@ -4436,6 +4668,8 @@
           "share": 1.8
         }
       ],
+      "nychaUnits": 6093,
+      "nychaShare": 15.6,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4454,17 +4688,17 @@
       "cr4": 37.6,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 6912,
           "share": 24.3
         },
         {
-          "name": "1199",
+          "name": "1199 Housing",
           "units": 1594,
           "share": 5.6
         },
         {
-          "name": "Nyc",
+          "name": "Nyc Housing",
           "units": 1267,
           "share": 4.5
         },
@@ -4474,6 +4708,8 @@
           "share": 3.3
         }
       ],
+      "nychaUnits": 6912,
+      "nychaShare": 24.3,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4488,30 +4724,32 @@
         "MN1102"
       ],
       "totalUnits": 31191,
-      "hhi": 870,
-      "cr4": 36.8,
+      "hhi": 892,
+      "cr4": 37.1,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
-          "units": 8983,
-          "share": 28.8
+          "name": "Nyc Housing Authority",
+          "units": 9102,
+          "share": 29.2
         },
         {
-          "name": "Riverton Square Fund Corporati",
+          "name": "Riverton Square Housing Fund Corporati",
           "units": 1120,
           "share": 3.6
         },
         {
-          "name": "Riverbend",
+          "name": "Riverbend Housing",
           "units": 958,
           "share": 3.1
         },
         {
-          "name": "Miles Parker Owner F Und",
+          "name": "Miles Parker Owner Housing F Und",
           "units": 405,
           "share": 1.3
         }
       ],
+      "nychaUnits": 9102,
+      "nychaShare": 29.2,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4535,7 +4773,7 @@
           "share": 3.4
         },
         {
-          "name": "HP Rachel Bridge Fun D",
+          "name": "HP Rachel Bridge Housing Fun D",
           "units": 960,
           "share": 3.4
         },
@@ -4550,6 +4788,8 @@
           "share": 1.5
         }
       ],
+      "nychaUnits": 56,
+      "nychaShare": 0.2,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4588,6 +4828,8 @@
           "share": 1.1
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4606,12 +4848,12 @@
       "cr4": 17.6,
       "topLandlords": [
         {
-          "name": "HP Sherman Creek . Fund",
+          "name": "HP Sherman Creek Housing . Fund",
           "units": 1222,
           "share": 6.8
         },
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 1167,
           "share": 6.5
         },
@@ -4626,6 +4868,8 @@
           "share": 1.8
         }
       ],
+      "nychaUnits": 1167,
+      "nychaShare": 6.5,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4659,11 +4903,13 @@
           "share": 2.8
         },
         {
-          "name": "Marine Terrace Fund",
+          "name": "Marine Terrace Housing Fund",
           "units": 497,
           "share": 2.3
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4682,7 +4928,7 @@
       "cr4": 21.4,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 1104,
           "share": 10
         },
@@ -4702,6 +4948,8 @@
           "share": 2.7
         }
       ],
+      "nychaUnits": 1104,
+      "nychaShare": 10,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4720,12 +4968,12 @@
       "cr4": 2.9,
       "topLandlords": [
         {
-          "name": "Catherin Sheridan Fund",
+          "name": "Catherin Sheridan Housing Fund",
           "units": 241,
           "share": 0.9
         },
         {
-          "name": "George T. Douris",
+          "name": "George T. Douris Housing",
           "units": 184,
           "share": 0.7
         },
@@ -4740,6 +4988,8 @@
           "share": 0.6
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4758,7 +5008,7 @@
       "cr4": 15.9,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 1357,
           "share": 7.7
         },
@@ -4778,6 +5028,8 @@
           "share": 0.8
         }
       ],
+      "nychaUnits": 1357,
+      "nychaShare": 7.7,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4796,7 +5048,7 @@
       "cr4": 40.7,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 5123,
           "share": 28.8
         },
@@ -4816,6 +5068,8 @@
           "share": 2.4
         }
       ],
+      "nychaUnits": 5123,
+      "nychaShare": 28.8,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4844,7 +5098,7 @@
           "share": 3.7
         },
         {
-          "name": "South Point Fund Cor Poration",
+          "name": "South Point Housing Fund Cor Poration",
           "units": 1132,
           "share": 2.2
         },
@@ -4854,6 +5108,8 @@
           "share": 2.2
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4892,6 +5148,8 @@
           "share": 1.9
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4910,7 +5168,7 @@
       "cr4": 10.2,
       "topLandlords": [
         {
-          "name": "Nyc",
+          "name": "Nyc Housing",
           "units": 706,
           "share": 3.8
         },
@@ -4930,6 +5188,8 @@
           "share": 1.5
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4968,6 +5228,8 @@
           "share": 1
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -4991,12 +5253,12 @@
           "share": 1.4
         },
         {
-          "name": "Astoria Towers II Devel. Fund Rporat",
+          "name": "Astoria Towers II Housing Devel. Fund Rporat",
           "units": 106,
           "share": 1.2
         },
         {
-          "name": "Madison Court Fund C Orporation",
+          "name": "Madison Court Housing Fund C Orporation",
           "units": 84,
           "share": 1
         },
@@ -5006,6 +5268,8 @@
           "share": 0.9
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -5024,7 +5288,7 @@
       "cr4": 6.1,
       "topLandlords": [
         {
-          "name": "Dorie Miller",
+          "name": "Dorie Miller Housing",
           "units": 301,
           "share": 3
         },
@@ -5044,6 +5308,8 @@
           "share": 0.8
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -5082,6 +5348,8 @@
           "share": 1
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -5105,7 +5373,7 @@
           "share": 1.7
         },
         {
-          "name": "Queenswood Fund Oration",
+          "name": "Queenswood Housing Fund Oration",
           "units": 296,
           "share": 1.4
         },
@@ -5120,6 +5388,8 @@
           "share": 1.2
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -5158,6 +5428,8 @@
           "share": 0.3
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -5196,6 +5468,8 @@
           "share": 0.3
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -5229,11 +5503,13 @@
           "share": 0.7
         },
         {
-          "name": "Selfhelp Glendale . Fund Comp Any",
+          "name": "Selfhelp Glendale Housing . Fund Comp Any",
           "units": 72,
           "share": 0.5
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -5272,6 +5548,8 @@
           "share": 0.6
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -5310,6 +5588,8 @@
           "share": 3
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -5348,6 +5628,8 @@
           "share": 1.2
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -5386,6 +5668,8 @@
           "share": 0.8
         }
       ],
+      "nychaUnits": 13,
+      "nychaShare": 0.1,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -5424,6 +5708,8 @@
           "share": 1.3
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -5462,6 +5748,8 @@
           "share": 2.7
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -5500,6 +5788,8 @@
           "share": 1.3
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -5523,7 +5813,7 @@
           "share": 4.5
         },
         {
-          "name": "45th Avenue",
+          "name": "45th Avenue Housing",
           "units": 289,
           "share": 2.6
         },
@@ -5538,6 +5828,8 @@
           "share": 1.6
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -5576,6 +5868,8 @@
           "share": 0.4
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -5594,12 +5888,12 @@
       "cr4": 9.7,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 917,
           "share": 3
         },
         {
-          "name": "Nyc Preservation And",
+          "name": "Nyc Housing Preservation And",
           "units": 881,
           "share": 2.9
         },
@@ -5614,6 +5908,8 @@
           "share": 1.8
         }
       ],
+      "nychaUnits": 917,
+      "nychaShare": 3,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -5652,6 +5948,8 @@
           "share": 4
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -5670,17 +5968,17 @@
       "cr4": 31.3,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 2080,
           "share": 16.5
         },
         {
-          "name": "Third",
+          "name": "Third Housing",
           "units": 793,
           "share": 6.3
         },
         {
-          "name": "Second",
+          "name": "Second Housing",
           "units": 684,
           "share": 5.4
         },
@@ -5690,6 +5988,8 @@
           "share": 3
         }
       ],
+      "nychaUnits": 2080,
+      "nychaShare": 16.5,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -5728,6 +6028,8 @@
           "share": 0.5
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -5766,6 +6068,8 @@
           "share": 2.9
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -5789,7 +6093,7 @@
           "share": 3.8
         },
         {
-          "name": "HP Briarwood Fund Mpany",
+          "name": "HP Briarwood Housing Fund Mpany",
           "units": 328,
           "share": 2.4
         },
@@ -5804,6 +6108,8 @@
           "share": 2.1
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -5842,6 +6148,8 @@
           "share": 1.9
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -5860,7 +6168,7 @@
       "cr4": 3.6,
       "topLandlords": [
         {
-          "name": "Hillside Jamaica Fun D",
+          "name": "Hillside Jamaica Housing Fun D",
           "units": 117,
           "share": 1.2
         },
@@ -5880,6 +6188,8 @@
           "share": 0.7
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -5918,6 +6228,8 @@
           "share": 0.6
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -5956,6 +6268,8 @@
           "share": 0.3
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -5994,6 +6308,8 @@
           "share": 1.1
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -6032,6 +6348,8 @@
           "share": 0.2
         }
       ],
+      "nychaUnits": 9,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -6070,6 +6388,8 @@
           "share": 0.6
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -6108,6 +6428,8 @@
           "share": 1.6
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -6146,6 +6468,8 @@
           "share": 0.8
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -6184,6 +6508,8 @@
           "share": 1.6
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -6222,6 +6548,8 @@
           "share": 3.4
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -6260,6 +6588,8 @@
           "share": 5.8
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -6298,6 +6628,8 @@
           "share": 2.3
         }
       ],
+      "nychaUnits": 523,
+      "nychaShare": 2.2,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -6316,12 +6648,12 @@
       "cr4": 13.8,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 1184,
           "share": 9.6
         },
         {
-          "name": "Linden 166 Fund Comp Any",
+          "name": "Linden 166 Housing Fund Comp Any",
           "units": 267,
           "share": 2.2
         },
@@ -6336,6 +6668,8 @@
           "share": 0.9
         }
       ],
+      "nychaUnits": 1184,
+      "nychaShare": 9.6,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -6354,7 +6688,7 @@
       "cr4": 12.4,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 851,
           "share": 6.5
         },
@@ -6374,6 +6708,8 @@
           "share": 1.6
         }
       ],
+      "nychaUnits": 851,
+      "nychaShare": 6.5,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -6402,16 +6738,18 @@
           "share": 1.7
         },
         {
-          "name": "Northeastern Conf. House Annex D EV Fund",
+          "name": "Northeastern Conf. House Annex Housing D EV Fund",
           "units": 159,
           "share": 1.3
         },
         {
-          "name": "Northeastern Conference House",
+          "name": "Northeastern Conference House Housing",
           "units": 111,
           "share": 0.9
         }
       ],
+      "nychaUnits": 5,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -6435,7 +6773,7 @@
           "share": 1.4
         },
         {
-          "name": "HP Montauk Apartments Developmen T Fund Com",
+          "name": "HP Montauk Apartments Housing Developmen T Fund Com",
           "units": 145,
           "share": 0.9
         },
@@ -6450,6 +6788,8 @@
           "share": 0.5
         }
       ],
+      "nychaUnits": 45,
+      "nychaShare": 0.3,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -6488,6 +6828,8 @@
           "share": 1.6
         }
       ],
+      "nychaUnits": 3,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -6526,6 +6868,8 @@
           "share": 2.5
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -6549,12 +6893,12 @@
           "share": 6.7
         },
         {
-          "name": "United Veterans Mutual",
+          "name": "United Veterans Mutual Housing",
           "units": 500,
           "share": 5.8
         },
         {
-          "name": "United Veteran Mutual",
+          "name": "United Veteran Mutual Housing",
           "units": 350,
           "share": 4.1
         },
@@ -6564,6 +6908,8 @@
           "share": 0.6
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -6602,6 +6948,8 @@
           "share": 0.8
         }
       ],
+      "nychaUnits": 15,
+      "nychaShare": 0.1,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -6630,7 +6978,7 @@
           "share": 0.5
         },
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 6,
           "share": 0.1
         },
@@ -6640,6 +6988,8 @@
           "share": 0.1
         }
       ],
+      "nychaUnits": 6,
+      "nychaShare": 0.1,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -6678,6 +7028,8 @@
           "share": 0.5
         }
       ],
+      "nychaUnits": 4,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -6716,6 +7068,8 @@
           "share": 0.1
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -6754,6 +7108,8 @@
           "share": 0.2
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -6782,16 +7138,18 @@
           "share": 7.6
         },
         {
-          "name": "HP Sea Girt Fund , IN C",
+          "name": "HP Sea Girt Housing Fund , IN C",
           "units": 917,
           "share": 4.2
         },
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 610,
           "share": 2.8
         }
       ],
+      "nychaUnits": 610,
+      "nychaShare": 2.8,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -6810,7 +7168,7 @@
       "cr4": 35.6,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 2018,
           "share": 12.7
         },
@@ -6830,6 +7188,8 @@
           "share": 7
         }
       ],
+      "nychaUnits": 2018,
+      "nychaShare": 12.7,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -6868,6 +7228,8 @@
           "share": 2.2
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -6886,26 +7248,28 @@
       "cr4": 21.6,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 882,
           "share": 10.6
         },
         {
-          "name": "Castleton Preservation",
+          "name": "Castleton Preservation Housing",
           "units": 454,
           "share": 5.5
         },
         {
-          "name": "Seaview Estates Preservation Elopment",
+          "name": "Seaview Estates Preservation Housing Elopment",
           "units": 316,
           "share": 3.8
         },
         {
-          "name": "Fairway Richmond Devel Fund",
+          "name": "Fairway Richmond Housing Devel Fund",
           "units": 141,
           "share": 1.7
         }
       ],
+      "nychaUnits": 882,
+      "nychaShare": 10.6,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -6924,17 +7288,17 @@
       "cr4": 18.2,
       "topLandlords": [
         {
-          "name": "Si- Housingdevelopmen",
+          "name": "Si-housing Housingdevelopmen",
           "units": 693,
           "share": 10.6
         },
         {
-          "name": "475 Bay Street Fund",
+          "name": "475 Bay Street Housing Fund",
           "units": 270,
           "share": 4.1
         },
         {
-          "name": "Fairway",
+          "name": "Fairway Housing",
           "units": 118,
           "share": 1.8
         },
@@ -6944,6 +7308,8 @@
           "share": 1.7
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -6972,7 +7338,7 @@
           "share": 4.3
         },
         {
-          "name": "HP Fox Hill Fund Com Pany",
+          "name": "HP Fox Hill Housing Fund Com Pany",
           "units": 361,
           "share": 3.9
         },
@@ -6982,6 +7348,8 @@
           "share": 3.8
         }
       ],
+      "nychaUnits": 277,
+      "nychaShare": 3,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -7000,7 +7368,7 @@
       "cr4": 11.4,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 634,
           "share": 4.6
         },
@@ -7020,6 +7388,8 @@
           "share": 1.7
         }
       ],
+      "nychaUnits": 634,
+      "nychaShare": 4.6,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -7058,6 +7428,8 @@
           "share": 0.5
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -7096,6 +7468,8 @@
           "share": 0.7
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -7114,7 +7488,7 @@
       "cr4": 14.4,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 607,
           "share": 5.7
         },
@@ -7134,6 +7508,8 @@
           "share": 1.5
         }
       ],
+      "nychaUnits": 607,
+      "nychaShare": 5.7,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -7152,17 +7528,17 @@
       "cr4": 11.7,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 928,
           "share": 7.1
         },
         {
-          "name": "Concord Seaside Fund",
+          "name": "Concord Seaside Housing Fund",
           "units": 273,
           "share": 2.1
         },
         {
-          "name": "Elbee Gardens Fund C Orp",
+          "name": "Elbee Gardens Housing Fund C Orp",
           "units": 177,
           "share": 1.4
         },
@@ -7172,6 +7548,8 @@
           "share": 1.1
         }
       ],
+      "nychaUnits": 928,
+      "nychaShare": 7.1,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -7210,6 +7588,8 @@
           "share": 0.9
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -7228,7 +7608,7 @@
       "cr4": 7.1,
       "topLandlords": [
         {
-          "name": "Nyc Authority",
+          "name": "Nyc Housing Authority",
           "units": 485,
           "share": 4.5
         },
@@ -7243,11 +7623,13 @@
           "share": 1
         },
         {
-          "name": "Seaview C Fund",
+          "name": "Seaview C Housing Fund",
           "units": 81,
           "share": 0.7
         }
       ],
+      "nychaUnits": 485,
+      "nychaShare": 4.5,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -7286,6 +7668,8 @@
           "share": 1.2
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -7324,6 +7708,8 @@
           "share": 0.6
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -7362,6 +7748,8 @@
           "share": 0.4
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -7400,6 +7788,8 @@
           "share": 0.8
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -7438,6 +7828,8 @@
           "share": 0.1
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,
@@ -7476,6 +7868,8 @@
           "share": 0.2
         }
       ],
+      "nychaUnits": 0,
+      "nychaShare": 0,
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": null,

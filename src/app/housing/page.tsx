@@ -34,6 +34,8 @@ interface Neighborhood {
   hhi: number;
   cr4: number;
   topLandlords: { name: string; units: number; share: number }[];
+  nychaUnits: number;
+  nychaShare: number;
   hpdViolationsPerUnit: number;
   medianRent: number;
   medianIncome: number | null;
@@ -62,6 +64,9 @@ export default function HousingPage() {
   const lowestIncome = [...neighborhoods]
     .filter((n) => n.medianIncome && n.medianIncome > 0)
     .sort((a, b) => a.medianIncome! - b.medianIncome!)[0];
+  const highestNycha = [...neighborhoods]
+    .filter((n) => n.nychaShare > 0)
+    .sort((a, b) => b.nychaShare - a.nychaShare)[0];
 
   // Build NTA-keyed data for the choropleth map
   // Each NTA code in a neighborhood gets that neighborhood's HHI
@@ -97,7 +102,7 @@ export default function HousingPage() {
       </div>
 
       {/* Geographic stats — the real story */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
         <div className="card text-center">
           <div className={`text-3xl font-bold ${getHHITextClass(highestHHI.hhi)}`}>
             {highestHHI.hhi.toLocaleString()}
@@ -140,6 +145,19 @@ export default function HousingPage() {
             </div>
             <div className="text-xs text-fm-sage">
               {lowestIncome.name} ({lowestIncome.rentBurdenPct}% rent-burdened)
+            </div>
+          </div>
+        )}
+        {highestNycha && (
+          <div className="card text-center">
+            <div className="text-3xl font-bold text-fm-patina">
+              {highestNycha.nychaShare}%
+            </div>
+            <div className="text-sm text-fm-sage mt-1">
+              NYCHA Footprint
+            </div>
+            <div className="text-xs text-fm-sage">
+              {highestNycha.name} — {highestNycha.nychaUnits.toLocaleString()} units
             </div>
           </div>
         )}
@@ -189,6 +207,9 @@ export default function HousingPage() {
                   Borough
                 </th>
                 <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
+                  NYCHA %
+                </th>
+                <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
                   Units
                 </th>
                 <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
@@ -227,6 +248,21 @@ export default function HousingPage() {
                   </td>
                   <td className="px-4 py-3 text-sm text-fm-sage">
                     {n.borough}
+                  </td>
+                  <td className="px-4 py-3 text-sm text-right">
+                    {n.nychaShare > 0 ? (
+                      <div className="flex items-center justify-end gap-2">
+                        <div className="w-16 h-2 bg-gray-100 rounded-full overflow-hidden">
+                          <div
+                            className="h-full bg-fm-patina rounded-full"
+                            style={{ width: `${Math.min(n.nychaShare, 100)}%` }}
+                          />
+                        </div>
+                        <span className="text-fm-patina font-medium">{n.nychaShare}%</span>
+                      </div>
+                    ) : (
+                      <span className="text-gray-300">—</span>
+                    )}
                   </td>
                   <td className="px-4 py-3 text-sm text-right">
                     {n.totalUnits.toLocaleString()}

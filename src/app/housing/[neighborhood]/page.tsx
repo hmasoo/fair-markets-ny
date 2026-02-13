@@ -21,6 +21,8 @@ interface Neighborhood {
   hhi: number;
   cr4: number;
   topLandlords: { name: string; units: number; share: number }[];
+  nychaUnits: number;
+  nychaShare: number;
   hpdViolationsPerUnit: number;
   medianRent: number;
   medianIncome: number | null;
@@ -148,6 +150,16 @@ export default async function NeighborhoodPage({ params }: Props) {
             <div className="text-xs text-fm-sage mt-1">Rent-Burdened</div>
             <div className="text-xs text-fm-sage">
               (paying &ge;30% of income)
+            </div>
+          </div>
+        )}
+        {neighborhood.nychaUnits > 0 && (
+          <div className="card text-center border-fm-patina/30 bg-fm-patina/5">
+            <div className="text-2xl font-bold text-fm-patina">
+              {neighborhood.nychaUnits.toLocaleString()}
+            </div>
+            <div className="text-xs text-fm-sage mt-1">
+              NYCHA Units — {neighborhood.nychaShare}% of housing stock
             </div>
           </div>
         )}

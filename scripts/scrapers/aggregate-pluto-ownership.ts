@@ -80,6 +80,8 @@ interface NeighborhoodEntry {
   hhi: number;
   cr4: number;
   topLandlords: TopLandlord[];
+  nychaUnits: number;
+  nychaShare: number;
   hpdViolationsPerUnit: number;
   medianRent: number;
   medianIncome: number | null;
@@ -109,14 +111,36 @@ const PLACEHOLDER_OWNERS = new Set([
   "",
 ]);
 
-const SUFFIX_PATTERN = /\b(LLC|L\.?L\.?C\.?|INC\.?|INCORPORATED|CORP\.?|CORPORATION|L\.?P\.?|LTD\.?|CO\.?|COMPANY|ASSOCIATES|ASSOC\.?|HOLDINGS|HOLDING|PROPERTIES|PROPERTY|REALTY|MGMT|MANAGEMENT|GROUP|PARTNERS|PARTNERSHIP|TRUST|ESTATE|ENTERPRISES?|DEVELOPMENT|DEV|HOUSING|HDFC)\b/g;
+const SUFFIX_PATTERN = /\b(LLC|L\.?L\.?C\.?|INC\.?|INCORPORATED|CORP\.?|CORPORATION|L\.?P\.?|LTD\.?|CO\.?|COMPANY|ASSOCIATES|ASSOC\.?|HOLDINGS|HOLDING|PROPERTIES|PROPERTY|REALTY|MGMT|MANAGEMENT|GROUP|PARTNERS|PARTNERSHIP|TRUST|ESTATE|ENTERPRISES?|DEVELOPMENT|DEV|HDFC)\b/g;
+
+// NYCHA entity resolution: consolidate known NYCHA owner-name variants
+// into a single canonical name before general normalization.
+// Keeps HPD, HDC, Housing Partnership, and other city agencies separate.
+const NYCHA_CANONICAL = "NYC HOUSING AUTHORITY";
+const NYCHA_PATTERNS: RegExp[] = [
+  /^NYC\s+HOUSING\s+AUTHORITY/,      // main entity (~176K units)
+  /^NYCHA\b/,                         // PACT/RAD entities (e.g. NYCHA TRIBOROUGH PRESERVATION HDFC)
+];
+
+function resolveNYCHA(name: string): string {
+  const upper = name.trim().toUpperCase();
+  // Exclude known non-NYCHA city entities that contain "NYC HOUSING"
+  if (/^NYC\s+HOUSING\s+PRESERVATION/.test(upper)) return upper; // HPD
+  if (/^NYC\s+HOUSING\s+DEVELOPMENT/.test(upper)) return upper;  // HDC
+  if (/^NYC\s+HOUSING\s+PARTNERSHIP/.test(upper)) return upper;  // separate program
+  for (const pat of NYCHA_PATTERNS) {
+    if (pat.test(upper)) return NYCHA_CANONICAL;
+  }
+  return upper;
+}
 
 function isPlaceholderOwner(raw: string): boolean {
   return PLACEHOLDER_OWNERS.has(raw.trim().toUpperCase());
 }
 
 function normalizeOwnerName(raw: string): string {
-  let name = raw.trim().toUpperCase();
+  // Resolve NYCHA variants before general normalization
+  let name = resolveNYCHA(raw);
 
   // Remove suffixes
   name = name.replace(SUFFIX_PATTERN, "");
@@ -301,6 +325,12 @@ function main() {
         share: Math.round((units / totalUnits) * 1000) / 10,
       }));
 
+    // NYCHA presence in this NTA
+    const nychaUnits = ownerMap.get(NYCHA_CANONICAL) || 0;
+    const nychaShare = totalUnits > 0
+      ? Math.round((nychaUnits / totalUnits) * 1000) / 10
+      : 0;
+
     // Income data (from ACS if available)
     let medianIncome: number | null = null;
     let rentBurdenPct: number | null = null;
@@ -347,6 +377,8 @@ function main() {
       hhi,
       cr4,
       topLandlords,
+      nychaUnits,
+      nychaShare,
       hpdViolationsPerUnit: 0,
       medianRent: 0,
       medianIncome,
@@ -395,6 +427,16 @@ function main() {
   console.log("\nTop 5 most concentrated NTAs:");
   for (const n of topConcentrated) {
     console.log(`  ${n.name} (${n.borough}): HHI ${n.hhi}, CR4 ${n.cr4}%`);
+  }
+
+  // NYCHA summary
+  const nychaNeighborhoods = neighborhoods.filter((n) => n.nychaUnits > 0);
+  const totalNychaUnits = nychaNeighborhoods.reduce((sum, n) => sum + n.nychaUnits, 0);
+  const topNycha = [...nychaNeighborhoods].sort((a, b) => b.nychaShare - a.nychaShare).slice(0, 5);
+  console.log(`\nNYCHA: ${totalNychaUnits.toLocaleString()} units across ${nychaNeighborhoods.length} NTAs`);
+  console.log("Top 5 NYCHA NTAs by share:");
+  for (const n of topNycha) {
+    console.log(`  ${n.name} (${n.borough}): ${n.nychaUnits.toLocaleString()} units, ${n.nychaShare}%`);
   }
 
   console.log("\nDone.");
