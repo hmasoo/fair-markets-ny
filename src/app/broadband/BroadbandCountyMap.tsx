@@ -3,6 +3,11 @@
 import { useMemo } from "react";
 import { ChoroplethMap } from "@/components/maps/ChoroplethMap";
 import { broadbandHHIScale } from "@/lib/colorScales";
+import {
+  DEFAULT_JURISDICTION,
+  getTopoJsonPath,
+  getObjectName,
+} from "@/lib/geography/jurisdictions";
 
 interface CountyEntry {
   name: string;
@@ -31,10 +36,13 @@ export function BroadbandCountyMap({ counties }: BroadbandCountyMapProps) {
     return { hhiByFips: hhi, detailsByFips: details };
   }, [counties]);
 
+  const topoJsonPath = getTopoJsonPath(DEFAULT_JURISDICTION, "COUNTY") ?? "/geo/nys-counties.topojson";
+  const objectName = getObjectName(DEFAULT_JURISDICTION, "COUNTY") ?? "counties";
+
   return (
     <ChoroplethMap
-      topoJsonPath="/geo/nys-counties.topojson"
-      objectName="counties"
+      topoJsonPath={topoJsonPath}
+      objectName={objectName}
       featureKeyProp="GEOID"
       featureLabelProp="NAME"
       data={hhiByFips}

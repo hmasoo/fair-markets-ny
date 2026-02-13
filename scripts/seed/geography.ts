@@ -3,6 +3,9 @@ import { join } from "path";
 
 const DRY_RUN = process.argv.includes("--dry-run");
 
+const JURISDICTION = "us-ny";
+const COUNTRY_CODE = "us";
+
 interface CountyRef {
   fips: string;
   name: string;
@@ -55,39 +58,41 @@ async function main() {
 
   if (DRY_RUN) {
     // Preview the hierarchy without any DB connection
-    console.log("STATE: New York State (fips: 36)");
-    console.log("  CITY: New York City (fips: 3651000)");
+    console.log("COUNTRY: United States (code: us)");
+    console.log("  STATE: New York State (fips: 36)");
+    console.log("    CITY: New York City (fips: 3651000)");
 
     const nycBoroughs = counties.filter((c) => c.nycBorough);
     for (const c of nycBoroughs) {
       const boroNTAs = ntasByBoro.get(c.nycBorough!) ?? [];
-      console.log(`    BOROUGH: ${c.nycBorough} (fips: ${c.fips})`);
-      console.log(`      NTAs: ${boroNTAs.length}`);
+      console.log(`      BOROUGH: ${c.nycBorough} (fips: ${c.fips})`);
+      console.log(`        NTAs: ${boroNTAs.length}`);
       for (const nta of boroNTAs.slice(0, 3)) {
-        console.log(`        ${nta.ntaCode}: ${nta.ntaName}`);
+        console.log(`          ${nta.ntaCode}: ${nta.ntaName}`);
       }
       if (boroNTAs.length > 3) {
-        console.log(`        ... and ${boroNTAs.length - 3} more`);
+        console.log(`          ... and ${boroNTAs.length - 3} more`);
       }
     }
 
     const upstate = counties.filter((c) => !c.nycBorough);
-    console.log(`  COUNTY: ${upstate.length} non-NYC counties`);
+    console.log(`    COUNTY: ${upstate.length} non-NYC counties`);
     for (const c of upstate.slice(0, 5)) {
-      console.log(`    ${c.name} (fips: ${c.fips})`);
+      console.log(`      ${c.name} (fips: ${c.fips})`);
     }
     if (upstate.length > 5) {
-      console.log(`    ... and ${upstate.length - 5} more`);
+      console.log(`      ... and ${upstate.length - 5} more`);
     }
 
-    console.log(`  NEIGHBORHOOD: ${neighborhoods.neighborhoods.length} neighborhoods`);
+    console.log(`    NEIGHBORHOOD: ${neighborhoods.neighborhoods.length} neighborhoods`);
     for (const n of neighborhoods.neighborhoods) {
-      console.log(`    ${n.name} → ${n.borough} (ntaCodes: ${n.ntaCodes.join(", ")})`);
+      console.log(`      ${n.name} → ${n.borough} (ntaCodes: ${n.ntaCodes.join(", ")})`);
     }
 
-    const total = 1 + 1 + nycBoroughs.length + ntas.length + upstate.length + neighborhoods.neighborhoods.length;
+    // +1 for country, +1 for state
+    const total = 1 + 1 + 1 + nycBoroughs.length + ntas.length + upstate.length + neighborhoods.neighborhoods.length;
     console.log(`\nTotal: ${total} geography records would be created`);
-    console.log(`  (1 state + 1 city + ${nycBoroughs.length} boroughs + ${ntas.length} NTAs + ${upstate.length} counties + ${neighborhoods.neighborhoods.length} neighborhoods)`);
+    console.log(`  (1 country + 1 state + 1 city + ${nycBoroughs.length} boroughs + ${ntas.length} NTAs + ${upstate.length} counties + ${neighborhoods.neighborhoods.length} neighborhoods)`);
     console.log("Dry run complete — no database connection needed.");
     return;
   }
@@ -100,7 +105,9 @@ async function main() {
     data: {
       name: string;
       slug: string;
-      type: "STATE" | "CITY" | "BOROUGH" | "COUNTY" | "NTA" | "NEIGHBORHOOD";
+      type: "COUNTRY" | "STATE" | "CITY" | "BOROUGH" | "COUNTY" | "NTA" | "NEIGHBORHOOD";
+      jurisdiction: string;
+      countryCode: string;
       fipsCode?: string | null;
       parentId?: string | null;
     }
@@ -110,12 +117,26 @@ async function main() {
     return await prisma.geography.create({ data });
   }
 
+  // 0. United States (COUNTRY root)
+  const us = await findOrCreate("united-states", {
+    name: "United States",
+    slug: "united-states",
+    type: "COUNTRY",
+    jurisdiction: JURISDICTION,
+    countryCode: COUNTRY_CODE,
+    fipsCode: "us",
+  });
+  console.log("COUNTRY: United States");
+
   // 1. New York State
   const nys = await findOrCreate("new-york-state", {
     name: "New York State",
     slug: "new-york-state",
     type: "STATE",
+    jurisdiction: JURISDICTION,
+    countryCode: COUNTRY_CODE,
     fipsCode: "36",
+    parentId: us.id,
   });
   console.log("STATE: New York State (fips: 36)");
 
@@ -124,6 +145,8 @@ async function main() {
     name: "New York City",
     slug: "nyc",
     type: "CITY",
+    jurisdiction: JURISDICTION,
+    countryCode: COUNTRY_CODE,
     fipsCode: "3651000",
     parentId: nys.id,
   });
@@ -142,6 +165,8 @@ async function main() {
         name: county.nycBorough,
         slug,
         type: "BOROUGH",
+        jurisdiction: JURISDICTION,
+        countryCode: COUNTRY_CODE,
         fipsCode: county.fips,
         parentId: nyc.id,
       });
@@ -164,6 +189,8 @@ async function main() {
       name: nta.ntaName,
       slug,
       type: "NTA",
+      jurisdiction: JURISDICTION,
+      countryCode: COUNTRY_CODE,
       fipsCode: nta.ntaCode,
       parentId,
     });
@@ -184,6 +211,8 @@ async function main() {
       name: county.name,
       slug: `county-${slug}`,
       type: "COUNTY",
+      jurisdiction: JURISDICTION,
+      countryCode: COUNTRY_CODE,
       fipsCode: county.fips,
       parentId: nys.id,
     });
@@ -203,13 +232,15 @@ async function main() {
       name: n.name,
       slug: n.slug,
       type: "NEIGHBORHOOD",
+      jurisdiction: JURISDICTION,
+      countryCode: COUNTRY_CODE,
       parentId,
     });
     neighborhoodCount++;
   }
   console.log(`NEIGHBORHOOD: ${neighborhoodCount} neighborhoods`);
 
-  console.log(`\nTotal: 1 state + 1 city + ${boroughCount} boroughs + ${ntaCount} NTAs + ${upstateCount} counties + ${neighborhoodCount} neighborhoods`);
+  console.log(`\nTotal: 1 country + 1 state + 1 city + ${boroughCount} boroughs + ${ntaCount} NTAs + ${upstateCount} counties + ${neighborhoodCount} neighborhoods`);
   console.log("Geography seed complete.");
 
   await prisma.$disconnect();

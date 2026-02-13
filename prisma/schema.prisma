@@ -55,26 +55,32 @@ enum EntityType {
 }
 
 model Geography {
-  id        String        @id @default(cuid())
-  name      String
-  slug      String        @unique
-  type      GeographyType
-  parentId  String?
-  parent    Geography?    @relation("GeoParent", fields: [parentId], references: [id])
-  children  Geography[]   @relation("GeoParent")
-  fipsCode  String?       @unique // FIPS for counties/states, NTA code for NTAs, GEOID for tracts
+  id           String        @id @default(cuid())
+  name         String
+  slug         String        @unique
+  type         GeographyType
+  parentId     String?
+  parent       Geography?    @relation("GeoParent", fields: [parentId], references: [id])
+  children     Geography[]   @relation("GeoParent")
+  jurisdiction String        @default("us-ny")
+  countryCode  String        @default("us")
+  fipsCode     String?       // FIPS for counties/states, NTA code for NTAs, GEOID for tracts
   // PostGIS geometry stored via raw SQL; Prisma can't model it directly
   // Use: SELECT ST_AsGeoJSON(geom) FROM "Geography" WHERE id = ?
-  createdAt DateTime      @default(now())
+  createdAt    DateTime      @default(now())
 
   concentrationData  ConcentrationData[]
   propertyOwnerships PropertyOwnership[]
   broadbandCoverages BroadbandCoverage[]
   healthFacilities   HealthFacility[]
   enforcementActions EnforcementAction[]
+
+  @@unique([jurisdiction, fipsCode])
+  @@index([jurisdiction, type])
 }
 
 enum GeographyType {
+  COUNTRY
   STATE
   COUNTY
   BOROUGH

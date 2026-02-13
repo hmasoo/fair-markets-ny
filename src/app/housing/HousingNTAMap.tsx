@@ -3,6 +3,11 @@
 import { useRouter } from "next/navigation";
 import { ChoroplethMap } from "@/components/maps/ChoroplethMap";
 import { housingHHIScale } from "@/lib/colorScales";
+import {
+  DEFAULT_JURISDICTION,
+  getTopoJsonPath,
+  getObjectName,
+} from "@/lib/geography/jurisdictions";
 
 interface NeighborhoodDetail {
   name: string;
@@ -21,11 +26,13 @@ interface HousingNTAMapProps {
 
 export function HousingNTAMap({ data, details }: HousingNTAMapProps) {
   const router = useRouter();
+  const topoJsonPath = getTopoJsonPath(DEFAULT_JURISDICTION, "NTA") ?? "/geo/nyc-ntas.topojson";
+  const objectName = getObjectName(DEFAULT_JURISDICTION, "NTA") ?? "ntas";
 
   return (
     <ChoroplethMap
-      topoJsonPath="/geo/nyc-ntas.topojson"
-      objectName="ntas"
+      topoJsonPath={topoJsonPath}
+      objectName={objectName}
       featureKeyProp="GEOID"
       featureLabelProp="NAME"
       data={data}
