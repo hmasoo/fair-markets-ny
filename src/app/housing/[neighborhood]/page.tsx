@@ -9,7 +9,32 @@ const NeighborhoodCharts = dynamic(
   () => import("./neighborhood-charts").then((m) => m.NeighborhoodCharts),
 );
 
-import neighborhoodData from "../../../../data/concentration/housing-neighborhoods.json";
+import neighborhoodDataRaw from "../../../../data/concentration/housing-neighborhoods.json";
+
+interface Neighborhood {
+  name: string;
+  slug: string;
+  borough: string;
+  fips: string;
+  ntaCodes: string[];
+  totalUnits: number;
+  hhi: number;
+  cr4: number;
+  topLandlords: { name: string; units: number; share: number }[];
+  hpdViolationsPerUnit: number;
+  medianRent: number;
+  medianIncome: number | null;
+  rentBurdenPct: number | null;
+}
+
+const neighborhoodData = neighborhoodDataRaw as {
+  sector: string;
+  geography: string;
+  ntaVersion: string;
+  source: string;
+  incomeSource: string;
+  neighborhoods: Neighborhood[];
+};
 
 interface Props {
   params: Promise<{ neighborhood: string }>;
@@ -93,7 +118,9 @@ export default async function NeighborhoodPage({ params }: Props) {
         </div>
         <div className="card text-center">
           <div className="text-2xl font-bold text-fm-patina">
-            {neighborhood.hpdViolationsPerUnit}
+            {neighborhood.hpdViolationsPerUnit > 0
+              ? neighborhood.hpdViolationsPerUnit
+              : "—"}
           </div>
           <div className="text-xs text-fm-sage mt-1">HPD Violations/Unit</div>
         </div>
@@ -179,11 +206,13 @@ export default async function NeighborhoodPage({ params }: Props) {
           </table>
         </div>
         <div className="mt-4 text-sm text-fm-sage space-y-1">
-          <p>
-            Median rent in {neighborhood.name}: $
-            {neighborhood.medianRent.toLocaleString()}/month
-          </p>
-          {neighborhood.medianIncome && (
+          {neighborhood.medianRent > 0 && (
+            <p>
+              Median rent in {neighborhood.name}: $
+              {neighborhood.medianRent.toLocaleString()}/month
+            </p>
+          )}
+          {neighborhood.medianIncome && neighborhood.medianRent > 0 && (
             <p>
               Median household income: $
               {neighborhood.medianIncome.toLocaleString()}/year — rent-to-income
@@ -195,10 +224,16 @@ export default async function NeighborhoodPage({ params }: Props) {
               %
             </p>
           )}
+          {neighborhood.medianIncome && neighborhood.medianRent === 0 && (
+            <p>
+              Median household income: $
+              {neighborhood.medianIncome.toLocaleString()}/year
+            </p>
+          )}
         </div>
         <p className="mt-2 text-xs text-fm-sage">
-          Source: ACRIS/PLUTO analysis; Local Law 18 beneficial ownership
-          filings; HPD violations data via NYC Open Data. Income data from U.S.
+          Source: NYC Dept. of City Planning MapPLUTO 24v4; ACRIS ownership
+          records; HPD violations data via NYC Open Data. Income data from U.S.
           Census Bureau ACS 2023 5-Year Estimates.
         </p>
       </div>

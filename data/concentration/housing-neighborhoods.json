@@ -2,128 +2,7484 @@
   "sector": "Residential Rental Housing",
   "geography": "NYC Neighborhoods",
   "ntaVersion": "2020",
-  "source": "ACRIS/PLUTO analysis; Local Law 18 beneficial ownership filings",
+  "source": "NYC Dept. of City Planning — MapPLUTO 24v4; ACRIS ownership records",
   "incomeSource": "U.S. Census Bureau, ACS 2023 5-Year Estimates (Tables B19013, B25070)",
   "neighborhoods": [
     {
-      "name": "East Harlem",
-      "slug": "east-harlem",
-      "borough": "Manhattan",
-      "fips": "36061",
-      "ntaCodes": ["MN1101", "MN1102"],
-      "totalUnits": 42000,
-      "hhi": 890,
-      "cr4": 22.5,
-      "topLandlords": [
-        { "name": "A&E Real Estate", "units": 3200, "share": 7.6 },
-        { "name": "Emerald Equity Group", "units": 2800, "share": 6.7 },
-        { "name": "L+M Development", "units": 1950, "share": 4.6 },
-        { "name": "Olnick Organization", "units": 1500, "share": 3.6 }
-      ],
-      "hpdViolationsPerUnit": 1.8,
-      "medianRent": 1850,
-      "medianIncome": 38640,
-      "rentBurdenPct": 54.2
-    },
-    {
-      "name": "Bushwick",
-      "slug": "bushwick",
+      "name": "Greenpoint",
+      "slug": "greenpoint",
       "borough": "Brooklyn",
       "fips": "36047",
-      "ntaCodes": ["BK0401", "BK0402"],
-      "totalUnits": 35000,
-      "hhi": 720,
-      "cr4": 18.3,
-      "topLandlords": [
-        { "name": "Bushwick Housing Group LLC", "units": 2100, "share": 6.0 },
-        { "name": "Rheingold Holdings", "units": 1800, "share": 5.1 },
-        { "name": "All Year Management", "units": 1400, "share": 4.0 },
-        { "name": "Rabsky Group", "units": 1120, "share": 3.2 }
+      "ntaCodes": [
+        "BK0101"
       ],
-      "hpdViolationsPerUnit": 2.1,
-      "medianRent": 2100,
-      "medianIncome": 52310,
-      "rentBurdenPct": 48.7
+      "totalUnits": 26465,
+      "hhi": 49,
+      "cr4": 11,
+      "topLandlords": [
+        {
+          "name": "1 Java Owner",
+          "units": 834,
+          "share": 3.2
+        },
+        {
+          "name": "Waterview Owner",
+          "units": 766,
+          "share": 2.9
+        },
+        {
+          "name": "Bop Greenpoint D",
+          "units": 745,
+          "share": 2.8
+        },
+        {
+          "name": "West B",
+          "units": 554,
+          "share": 2.1
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
     },
     {
-      "name": "South Bronx (Mott Haven/Melrose)",
-      "slug": "south-bronx",
-      "borough": "Bronx",
-      "fips": "36005",
-      "ntaCodes": ["BX0101", "BX0102"],
-      "totalUnits": 52000,
-      "hhi": 1050,
-      "cr4": 25.8,
-      "topLandlords": [
-        { "name": "Chetrit Group", "units": 4200, "share": 8.1 },
-        { "name": "Omni Holding Corp", "units": 3600, "share": 6.9 },
-        { "name": "NYCHA", "units": 3200, "share": 6.2 },
-        { "name": "Vanguard Group", "units": 2400, "share": 4.6 }
+      "name": "Williamsburg",
+      "slug": "williamsburg",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK0102"
       ],
-      "hpdViolationsPerUnit": 2.9,
-      "medianRent": 1650,
-      "medianIncome": 28150,
-      "rentBurdenPct": 58.9
+      "totalUnits": 32952,
+      "hhi": 32,
+      "cr4": 8,
+      "topLandlords": [
+        {
+          "name": "420 Kent Avenue",
+          "units": 857,
+          "share": 2.6
+        },
+        {
+          "name": "Williamsburg Preservation",
+          "units": 727,
+          "share": 2.2
+        },
+        {
+          "name": "2 North 6th Place Owner",
+          "units": 554,
+          "share": 1.7
+        },
+        {
+          "name": "North 4th Place",
+          "units": 509,
+          "share": 1.5
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
     },
     {
-      "name": "Astoria",
-      "slug": "astoria",
-      "borough": "Queens",
-      "fips": "36081",
-      "ntaCodes": ["QN0101", "QN0102", "QN0103", "QN0104", "QN0105"],
-      "totalUnits": 38000,
-      "hhi": 450,
-      "cr4": 12.1,
-      "topLandlords": [
-        { "name": "Alma Realty", "units": 1600, "share": 4.2 },
-        { "name": "Pistilli Realty Group", "units": 1200, "share": 3.2 },
-        { "name": "Kaufman Astoria Studios", "units": 950, "share": 2.5 },
-        { "name": "30-90 Realty LLC", "units": 840, "share": 2.2 }
+      "name": "South Williamsburg",
+      "slug": "south-williamsburg",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK0103"
       ],
-      "hpdViolationsPerUnit": 1.2,
-      "medianRent": 2250,
-      "medianIncome": 71820,
-      "rentBurdenPct": 38.4
+      "totalUnits": 12520,
+      "hhi": 116,
+      "cr4": 19.6,
+      "topLandlords": [
+        {
+          "name": "Williamsburg Preservation",
+          "units": 744,
+          "share": 5.9
+        },
+        {
+          "name": "Bedford Gardens",
+          "units": 647,
+          "share": 5.2
+        },
+        {
+          "name": "Division",
+          "units": 534,
+          "share": 4.3
+        },
+        {
+          "name": "Nyc Authority",
+          "units": 525,
+          "share": 4.2
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "East Williamsburg",
+      "slug": "east-williamsburg",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK0104"
+      ],
+      "totalUnits": 26362,
+      "hhi": 262,
+      "cr4": 28.9,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 3265,
+          "share": 12.4
+        },
+        {
+          "name": "Lindsay Park Hgs",
+          "units": 1933,
+          "share": 7.3
+        },
+        {
+          "name": "Williamsburg Pact",
+          "units": 1635,
+          "share": 6.2
+        },
+        {
+          "name": "Lindsay Park",
+          "units": 774,
+          "share": 2.9
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Brooklyn Heights",
+      "slug": "brooklyn-heights",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK0201"
+      ],
+      "totalUnits": 14505,
+      "hhi": 67,
+      "cr4": 9.7,
+      "topLandlords": [
+        {
+          "name": "Cadman Towers Fund C Orporation",
+          "units": 422,
+          "share": 2.9
+        },
+        {
+          "name": "Whitman Owners",
+          "units": 370,
+          "share": 2.6
+        },
+        {
+          "name": "125 Court ST Condominum",
+          "units": 321,
+          "share": 2.2
+        },
+        {
+          "name": "110 Livingston",
+          "units": 299,
+          "share": 2.1
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Downtown Brooklyn-DUMBO-Boerum Hill",
+      "slug": "downtown-brooklyn-dumbo-boerum-hill",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK0202"
+      ],
+      "totalUnits": 27637,
+      "hhi": 153,
+      "cr4": 17.8,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 1932,
+          "share": 7
+        },
+        {
+          "name": "Nyc Preservation And",
+          "units": 1148,
+          "share": 4.2
+        },
+        {
+          "name": "Concord Village Owners",
+          "units": 1022,
+          "share": 3.7
+        },
+        {
+          "name": "Avalon Willoughby West",
+          "units": 826,
+          "share": 3
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Fort Greene",
+      "slug": "fort-greene",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK0203"
+      ],
+      "totalUnits": 19806,
+      "hhi": 187,
+      "cr4": 20.1,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 1953,
+          "share": 9.9
+        },
+        {
+          "name": "Fulton",
+          "units": 864,
+          "share": 4.4
+        },
+        {
+          "name": "Brook NY Residential",
+          "units": 591,
+          "share": 3
+        },
+        {
+          "name": "Ashland Dekalb",
+          "units": 569,
+          "share": 2.9
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Clinton Hill",
+      "slug": "clinton-hill",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK0204"
+      ],
+      "totalUnits": 14985,
+      "hhi": 98,
+      "cr4": 14.7,
+      "topLandlords": [
+        {
+          "name": "Clinton Hill Apartment Owners",
+          "units": 944,
+          "share": 6.3
+        },
+        {
+          "name": "Willoughby Walk",
+          "units": 574,
+          "share": 3.8
+        },
+        {
+          "name": "Greenpoint-goldman",
+          "units": 363,
+          "share": 2.4
+        },
+        {
+          "name": "Pratt Towers",
+          "units": 327,
+          "share": 2.2
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Bedford-Stuyvesant (West)",
+      "slug": "bedford-stuyvesant-west",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK0301"
+      ],
+      "totalUnits": 37094,
+      "hhi": 96,
+      "cr4": 13.9,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 3332,
+          "share": 9
+        },
+        {
+          "name": "Brooklyn Preservation",
+          "units": 710,
+          "share": 1.9
+        },
+        {
+          "name": "270 Nostrand Propco",
+          "units": 640,
+          "share": 1.7
+        },
+        {
+          "name": "1065 Atlantic Avenue",
+          "units": 456,
+          "share": 1.2
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Bedford-Stuyvesant (East)",
+      "slug": "bedford-stuyvesant-east",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK0302"
+      ],
+      "totalUnits": 39165,
+      "hhi": 244,
+      "cr4": 17.6,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 6031,
+          "share": 15.4
+        },
+        {
+          "name": "745 Gates",
+          "units": 325,
+          "share": 0.8
+        },
+        {
+          "name": "Fulton Park Site 4 Houses",
+          "units": 287,
+          "share": 0.7
+        },
+        {
+          "name": "HP Willoughby",
+          "units": 267,
+          "share": 0.7
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Bushwick (West)",
+      "slug": "bushwick-west",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK0401"
+      ],
+      "totalUnits": 23516,
+      "hhi": 29,
+      "cr4": 7.4,
+      "topLandlords": [
+        {
+          "name": "Aci VI Denizen",
+          "units": 911,
+          "share": 3.9
+        },
+        {
+          "name": "Evergreen Gardens II",
+          "units": 500,
+          "share": 2.1
+        },
+        {
+          "name": "Townhouse Rental",
+          "units": 169,
+          "share": 0.7
+        },
+        {
+          "name": "Sr.lucian Senior",
+          "units": 150,
+          "share": 0.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Bushwick (East)",
+      "slug": "bushwick-east",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK0402"
+      ],
+      "totalUnits": 23773,
+      "hhi": 27,
+      "cr4": 8.2,
+      "topLandlords": [
+        {
+          "name": "Hope Gardens 1",
+          "units": 839,
+          "share": 3.5
+        },
+        {
+          "name": "Bushwick",
+          "units": 449,
+          "share": 1.9
+        },
+        {
+          "name": "Nyc Authority",
+          "units": 353,
+          "share": 1.5
+        },
+        {
+          "name": "Bushwick Gardens 1",
+          "units": 300,
+          "share": 1.3
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Cypress Hills",
+      "slug": "cypress-hills",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK0501"
+      ],
+      "totalUnits": 13018,
+      "hhi": 35,
+      "cr4": 10,
+      "topLandlords": [
+        {
+          "name": "Atlantic Chestnut II Fund",
+          "units": 436,
+          "share": 3.3
+        },
+        {
+          "name": "Atlantic Chestnut I Fund Cor Poration",
+          "units": 403,
+          "share": 3.1
+        },
+        {
+          "name": "Chestnut Commons Fun D Corporat",
+          "units": 274,
+          "share": 2.1
+        },
+        {
+          "name": "2886 Atlantic Ave",
+          "units": 183,
+          "share": 1.4
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "East New York (North)",
+      "slug": "east-new-york-north",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK0502"
+      ],
+      "totalUnits": 15339,
+      "hhi": 71,
+      "cr4": 12,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 997,
+          "share": 6.5
+        },
+        {
+          "name": "Empire State Dairy",
+          "units": 320,
+          "share": 2.1
+        },
+        {
+          "name": "Remeeder Houses Fund",
+          "units": 260,
+          "share": 1.7
+        },
+        {
+          "name": "Sutter",
+          "units": 258,
+          "share": 1.7
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "East New York-New Lots",
+      "slug": "east-new-york-new-lots",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK0503"
+      ],
+      "totalUnits": 18599,
+      "hhi": 187,
+      "cr4": 23.5,
+      "topLandlords": [
+        {
+          "name": "Stanley Avenue Preservation",
+          "units": 1915,
+          "share": 10.3
+        },
+        {
+          "name": "Boulevard Together Owner",
+          "units": 1316,
+          "share": 7.1
+        },
+        {
+          "name": "Fairfield Presidential",
+          "units": 606,
+          "share": 3.3
+        },
+        {
+          "name": "Fairfield Condominium",
+          "units": 540,
+          "share": 2.9
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Spring Creek-Starrett City",
+      "slug": "spring-creek-starrett-city",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK0504"
+      ],
+      "totalUnits": 14059,
+      "hhi": 4743,
+      "cr4": 77.9,
+      "topLandlords": [
+        {
+          "name": "Bsc",
+          "units": 9637,
+          "share": 68.5
+        },
+        {
+          "name": "Iuv Phase 1A Fund Rporation",
+          "units": 573,
+          "share": 4.1
+        },
+        {
+          "name": "C1 C2 Vital BK Developmentfund C Orporation",
+          "units": 451,
+          "share": 3.2
+        },
+        {
+          "name": "Nyc Authority",
+          "units": 293,
+          "share": 2.1
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "East New York-City Line",
+      "slug": "east-new-york-city-line",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK0505"
+      ],
+      "totalUnits": 13823,
+      "hhi": 628,
+      "cr4": 32.5,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 3363,
+          "share": 24.3
+        },
+        {
+          "name": "Spring Creek Gardens Condominum",
+          "units": 582,
+          "share": 4.2
+        },
+        {
+          "name": "Preservation",
+          "units": 319,
+          "share": 2.3
+        },
+        {
+          "name": "HP Mjm Fund",
+          "units": 234,
+          "share": 1.7
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+      "slug": "carroll-gardens-cobble-hill-gowanus-red-hook",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK0601"
+      ],
+      "totalUnits": 36076,
+      "hhi": 221,
+      "cr4": 21.9,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 4781,
+          "share": 13.3
+        },
+        {
+          "name": "President Union",
+          "units": 1820,
+          "share": 5
+        },
+        {
+          "name": "Gowanus Nevins North",
+          "units": 654,
+          "share": 1.8
+        },
+        {
+          "name": "Gowanus Nevins South",
+          "units": 654,
+          "share": 1.8
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Park Slope",
+      "slug": "park-slope",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK0602"
+      ],
+      "totalUnits": 29238,
+      "hhi": 17,
+      "cr4": 5.8,
+      "topLandlords": [
+        {
+          "name": "18 Sixth Avenue Owner",
+          "units": 858,
+          "share": 2.9
+        },
+        {
+          "name": "Uspa 461 Dean",
+          "units": 363,
+          "share": 1.2
+        },
+        {
+          "name": "Atlantic Yards B2 Owner",
+          "units": 303,
+          "share": 1
+        },
+        {
+          "name": "Name Not ON File",
+          "units": 182,
+          "share": 0.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Windsor Terrace-South Slope",
+      "slug": "windsor-terrace-south-slope",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK0701"
+      ],
+      "totalUnits": 11997,
+      "hhi": 37,
+      "cr4": 7.4,
+      "topLandlords": [
+        {
+          "name": "International Bapt CH",
+          "units": 375,
+          "share": 3.1
+        },
+        {
+          "name": "Bishop Boardman Senior",
+          "units": 201,
+          "share": 1.7
+        },
+        {
+          "name": "221 Mcdonald Ave",
+          "units": 160,
+          "share": 1.3
+        },
+        {
+          "name": "Park Vanderbilt Coop Apt",
+          "units": 149,
+          "share": 1.2
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Sunset Park (West)",
+      "slug": "sunset-park-west",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK0702"
+      ],
+      "totalUnits": 17402,
+      "hhi": 15,
+      "cr4": 5.4,
+      "topLandlords": [
+        {
+          "name": "Bayridge Air Rights",
+          "units": 420,
+          "share": 2.4
+        },
+        {
+          "name": "745 4th Avenue",
+          "units": 187,
+          "share": 1.1
+        },
+        {
+          "name": "Marien Heim OF Sunset Park Dvlpt Fund",
+          "units": 168,
+          "share": 1
+        },
+        {
+          "name": "725 4th Owner",
+          "units": 164,
+          "share": 0.9
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Sunset Park (Central)",
+      "slug": "sunset-park-central",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK0703"
+      ],
+      "totalUnits": 14206,
+      "hhi": 8,
+      "cr4": 2.9,
+      "topLandlords": [
+        {
+          "name": "HP Sunset Park I Fund Compan Y",
+          "units": 129,
+          "share": 0.9
+        },
+        {
+          "name": "Sunset Park 61",
+          "units": 125,
+          "share": 0.9
+        },
+        {
+          "name": "Fac 6309 Fourth Avenue Developme NT Fund",
+          "units": 84,
+          "share": 0.6
+        },
+        {
+          "name": "RA II",
+          "units": 80,
+          "share": 0.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Prospect Heights",
+      "slug": "prospect-heights",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK0801"
+      ],
+      "totalUnits": 12278,
+      "hhi": 47,
+      "cr4": 9.6,
+      "topLandlords": [
+        {
+          "name": "595 Dean",
+          "units": 379,
+          "share": 3.1
+        },
+        {
+          "name": "662 Pacific Owner",
+          "units": 312,
+          "share": 2.5
+        },
+        {
+          "name": "Pacific Park 535 Carlton",
+          "units": 298,
+          "share": 2.4
+        },
+        {
+          "name": "888 Atlantic Owner",
+          "units": 189,
+          "share": 1.5
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Crown Heights (North)",
+      "slug": "crown-heights-north",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK0802"
+      ],
+      "totalUnits": 37839,
+      "hhi": 60,
+      "cr4": 9.8,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 2581,
+          "share": 6.8
+        },
+        {
+          "name": "Nyc Pact Preservation",
+          "units": 604,
+          "share": 1.6
+        },
+        {
+          "name": "Brooklyn Preservation",
+          "units": 274,
+          "share": 0.7
+        },
+        {
+          "name": "Dean Owner",
+          "units": 240,
+          "share": 0.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Crown Heights (South)",
+      "slug": "crown-heights-south",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK0901"
+      ],
+      "totalUnits": 21228,
+      "hhi": 75,
+      "cr4": 12.4,
+      "topLandlords": [
+        {
+          "name": "Fieldbridge",
+          "units": 1321,
+          "share": 6.2
+        },
+        {
+          "name": "CP VI Crown Heights",
+          "units": 569,
+          "share": 2.7
+        },
+        {
+          "name": "Nyc Department OF Citywide Administrative Services",
+          "units": 415,
+          "share": 2
+        },
+        {
+          "name": "Tivoli BI Llp",
+          "units": 321,
+          "share": 1.5
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Prospect Lefferts Gardens-Wingate",
+      "slug": "prospect-lefferts-gardens-wingate",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK0902"
+      ],
+      "totalUnits": 21216,
+      "hhi": 36,
+      "cr4": 6.7,
+      "topLandlords": [
+        {
+          "name": "Flatbush Patio",
+          "units": 496,
+          "share": 2.3
+        },
+        {
+          "name": "Chv 329 Clarkson Avenue Developm Ent Fund C",
+          "units": 328,
+          "share": 1.5
+        },
+        {
+          "name": "Harry Silver",
+          "units": 294,
+          "share": 1.4
+        },
+        {
+          "name": "Nyc Health And Hospitals",
+          "units": 293,
+          "share": 1.4
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
     },
     {
       "name": "Bay Ridge",
       "slug": "bay-ridge",
       "borough": "Brooklyn",
       "fips": "36047",
-      "ntaCodes": ["BK1001"],
-      "totalUnits": 28000,
-      "hhi": 380,
-      "cr4": 10.5,
-      "topLandlords": [
-        { "name": "Bay Ridge Properties LLC", "units": 1050, "share": 3.8 },
-        { "name": "Panzer Properties", "units": 800, "share": 2.9 },
-        { "name": "Verrazano Holdings", "units": 600, "share": 2.1 },
-        { "name": "68th Street Realty", "units": 480, "share": 1.7 }
+      "ntaCodes": [
+        "BK1001"
       ],
-      "hpdViolationsPerUnit": 0.8,
-      "medianRent": 1950,
-      "medianIncome": 68450,
-      "rentBurdenPct": 35.1
+      "totalUnits": 37474,
+      "hhi": 15,
+      "cr4": 4.4,
+      "topLandlords": [
+        {
+          "name": "Shore Hill",
+          "units": 558,
+          "share": 1.5
+        },
+        {
+          "name": "Flagg Court Owners",
+          "units": 455,
+          "share": 1.2
+        },
+        {
+          "name": "Bayridge Air Rights",
+          "units": 391,
+          "share": 1
+        },
+        {
+          "name": "9201 Shore Tenants",
+          "units": 254,
+          "share": 0.7
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
     },
     {
-      "name": "Washington Heights",
-      "slug": "washington-heights",
+      "name": "Dyker Heights",
+      "slug": "dyker-heights",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK1002"
+      ],
+      "totalUnits": 15010,
+      "hhi": 6,
+      "cr4": 2.7,
+      "topLandlords": [
+        {
+          "name": "12 Ave Real",
+          "units": 146,
+          "share": 1
+        },
+        {
+          "name": "Name Not ON File",
+          "units": 91,
+          "share": 0.6
+        },
+        {
+          "name": "Norw Christian Home A",
+          "units": 86,
+          "share": 0.6
+        },
+        {
+          "name": "Kgs 80th",
+          "units": 77,
+          "share": 0.5
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Bensonhurst",
+      "slug": "bensonhurst",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK1101"
+      ],
+      "totalUnits": 34666,
+      "hhi": 5,
+      "cr4": 1.4,
+      "topLandlords": [
+        {
+          "name": "1653",
+          "units": 136,
+          "share": 0.4
+        },
+        {
+          "name": "Fiesta Park Assets",
+          "units": 120,
+          "share": 0.3
+        },
+        {
+          "name": "Adam Pokrzywa",
+          "units": 112,
+          "share": 0.3
+        },
+        {
+          "name": "Svetlana Maniscalw",
+          "units": 102,
+          "share": 0.3
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Bath Beach",
+      "slug": "bath-beach",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK1102"
+      ],
+      "totalUnits": 11994,
+      "hhi": 144,
+      "cr4": 16.6,
+      "topLandlords": [
+        {
+          "name": "Shore Haven Apartments Del",
+          "units": 1344,
+          "share": 11.2
+        },
+        {
+          "name": "Southhampton Apartments Del",
+          "units": 263,
+          "share": 2.2
+        },
+        {
+          "name": "Independence Grdn Owners",
+          "units": 198,
+          "share": 1.7
+        },
+        {
+          "name": "Bayview Owners",
+          "units": 192,
+          "share": 1.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Gravesend (West)",
+      "slug": "gravesend-west",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK1103"
+      ],
+      "totalUnits": 20862,
+      "hhi": 16,
+      "cr4": 4.7,
+      "topLandlords": [
+        {
+          "name": "Shore Towers Qzb",
+          "units": 496,
+          "share": 2.4
+        },
+        {
+          "name": "Livonia Regina",
+          "units": 166,
+          "share": 0.8
+        },
+        {
+          "name": "Fontainebleau Towers Del",
+          "units": 164,
+          "share": 0.8
+        },
+        {
+          "name": "Cropsey",
+          "units": 151,
+          "share": 0.7
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Sunset Park (East)-Borough Park (West)",
+      "slug": "sunset-park-east-borough-park-west",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK1201"
+      ],
+      "totalUnits": 10176,
+      "hhi": 24,
+      "cr4": 5.7,
+      "topLandlords": [
+        {
+          "name": "Park Affordable , AS Nominee And ON Behalf",
+          "units": 228,
+          "share": 2.2
+        },
+        {
+          "name": "Borough Park Courtsasso",
+          "units": 131,
+          "share": 1.3
+        },
+        {
+          "name": "Msgr. John P. O'brien Senior DE Velopment",
+          "units": 113,
+          "share": 1.1
+        },
+        {
+          "name": "Tri-senior",
+          "units": 113,
+          "share": 1.1
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Borough Park",
+      "slug": "borough-park",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK1202"
+      ],
+      "totalUnits": 25395,
+      "hhi": 7,
+      "cr4": 2.4,
+      "topLandlords": [
+        {
+          "name": "Name Not ON File",
+          "units": 219,
+          "share": 0.9
+        },
+        {
+          "name": "Boro Park Portfolio Owner",
+          "units": 194,
+          "share": 0.8
+        },
+        {
+          "name": "5100 15th Ave Owners",
+          "units": 100,
+          "share": 0.4
+        },
+        {
+          "name": "Stamford Equities",
+          "units": 87,
+          "share": 0.3
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Kensington",
+      "slug": "kensington",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK1203"
+      ],
+      "totalUnits": 14446,
+      "hhi": 38,
+      "cr4": 6.8,
+      "topLandlords": [
+        {
+          "name": "Ville DE Port",
+          "units": 314,
+          "share": 2.2
+        },
+        {
+          "name": "Caton Towers",
+          "units": 286,
+          "share": 2
+        },
+        {
+          "name": "465 East 7th Street",
+          "units": 210,
+          "share": 1.5
+        },
+        {
+          "name": "217-227 East 7th Street",
+          "units": 174,
+          "share": 1.2
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Mapleton-Midwood (West)",
+      "slug": "mapleton-midwood-west",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK1204"
+      ],
+      "totalUnits": 13102,
+      "hhi": 21,
+      "cr4": 4.8,
+      "topLandlords": [
+        {
+          "name": "1360 Ocean Pkway Owners",
+          "units": 176,
+          "share": 1.3
+        },
+        {
+          "name": "19th Avenue",
+          "units": 170,
+          "share": 1.3
+        },
+        {
+          "name": "840 East 8th Street L",
+          "units": 168,
+          "share": 1.3
+        },
+        {
+          "name": "825 Ocean",
+          "units": 121,
+          "share": 0.9
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Gravesend (South)",
+      "slug": "gravesend-south",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK1301"
+      ],
+      "totalUnits": 11699,
+      "hhi": 417,
+      "cr4": 34.1,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 1765,
+          "share": 15.1
+        },
+        {
+          "name": "Beach Haven Apartments",
+          "units": 1260,
+          "share": 10.8
+        },
+        {
+          "name": "Beach Haven",
+          "units": 601,
+          "share": 5.1
+        },
+        {
+          "name": "Harway Terrace",
+          "units": 364,
+          "share": 3.1
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Coney Island-Sea Gate",
+      "slug": "coney-island-sea-gate",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK1302"
+      ],
+      "totalUnits": 24597,
+      "hhi": 538,
+      "cr4": 39.4,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 4375,
+          "share": 17.8
+        },
+        {
+          "name": "Amalgamated Warbasse House",
+          "units": 2585,
+          "share": 10.5
+        },
+        {
+          "name": "Luna Park",
+          "units": 1578,
+          "share": 6.4
+        },
+        {
+          "name": "Trump Village Section 4",
+          "units": 1144,
+          "share": 4.7
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Brighton Beach",
+      "slug": "brighton-beach",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK1303"
+      ],
+      "totalUnits": 14860,
+      "hhi": 60,
+      "cr4": 9.7,
+      "topLandlords": [
+        {
+          "name": "Tower Owners",
+          "units": 591,
+          "share": 4
+        },
+        {
+          "name": "40-50 Brighton Firstroad Apts",
+          "units": 448,
+          "share": 3
+        },
+        {
+          "name": "Name Not ON File",
+          "units": 200,
+          "share": 1.3
+        },
+        {
+          "name": "Brighton House",
+          "units": 195,
+          "share": 1.3
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Flatbush",
+      "slug": "flatbush",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK1401"
+      ],
+      "totalUnits": 28609,
+      "hhi": 24,
+      "cr4": 4,
+      "topLandlords": [
+        {
+          "name": "Bedford Beverly B",
+          "units": 354,
+          "share": 1.2
+        },
+        {
+          "name": "Bedford Beverly A",
+          "units": 296,
+          "share": 1
+        },
+        {
+          "name": "Caton Flats Fund Cor Poration",
+          "units": 255,
+          "share": 0.9
+        },
+        {
+          "name": "123 ON The Park",
+          "units": 250,
+          "share": 0.9
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Flatbush (West)-Ditmas Park-Parkville",
+      "slug": "flatbush-west-ditmas-park-parkville",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK1402"
+      ],
+      "totalUnits": 16048,
+      "hhi": 33,
+      "cr4": 4.1,
+      "topLandlords": [
+        {
+          "name": "Westminster Owners",
+          "units": 185,
+          "share": 1.2
+        },
+        {
+          "name": "Marien Hein Tower",
+          "units": 183,
+          "share": 1.1
+        },
+        {
+          "name": "Argyle",
+          "units": 150,
+          "share": 0.9
+        },
+        {
+          "name": "Daniel W Owners",
+          "units": 145,
+          "share": 0.9
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Midwood",
+      "slug": "midwood",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK1403"
+      ],
+      "totalUnits": 19727,
+      "hhi": 23,
+      "cr4": 4.2,
+      "topLandlords": [
+        {
+          "name": "Vitagraph Reit, (the)",
+          "units": 302,
+          "share": 1.5
+        },
+        {
+          "name": "Town",
+          "units": 199,
+          "share": 1
+        },
+        {
+          "name": "Premier House",
+          "units": 184,
+          "share": 0.9
+        },
+        {
+          "name": "Carlton Apts",
+          "units": 144,
+          "share": 0.7
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Gravesend (East)-Homecrest",
+      "slug": "gravesend-east-homecrest",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK1501"
+      ],
+      "totalUnits": 19382,
+      "hhi": 23,
+      "cr4": 5.4,
+      "topLandlords": [
+        {
+          "name": "Atlantic Towers Apartment",
+          "units": 493,
+          "share": 2.5
+        },
+        {
+          "name": "Shorefront Apartments",
+          "units": 209,
+          "share": 1.1
+        },
+        {
+          "name": "2400 East 3 Owners",
+          "units": 180,
+          "share": 0.9
+        },
+        {
+          "name": "Senate Aprtmetns",
+          "units": 156,
+          "share": 0.8
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Madison",
+      "slug": "madison",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK1502"
+      ],
+      "totalUnits": 15870,
+      "hhi": 22,
+      "cr4": 4.1,
+      "topLandlords": [
+        {
+          "name": "Lawrence Gardens Apartments Del",
+          "units": 214,
+          "share": 1.3
+        },
+        {
+          "name": "Lawrence Towers Del",
+          "units": 177,
+          "share": 1.1
+        },
+        {
+          "name": "2425 Kings Hwy Owners",
+          "units": 137,
+          "share": 0.9
+        },
+        {
+          "name": "Ave T",
+          "units": 129,
+          "share": 0.8
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Sheepshead Bay-Manhattan Beach-Gerritsen Beach",
+      "slug": "sheepshead-bay-manhattan-beach-gerritsen-beach",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK1503"
+      ],
+      "totalUnits": 27756,
+      "hhi": 87,
+      "cr4": 12.4,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 2204,
+          "share": 7.9
+        },
+        {
+          "name": "Kingsbay Section One Land",
+          "units": 540,
+          "share": 1.9
+        },
+        {
+          "name": "Kings Bay Houses Sect 2",
+          "units": 357,
+          "share": 1.3
+        },
+        {
+          "name": "2425 Haring Street",
+          "units": 348,
+          "share": 1.3
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Ocean Hill",
+      "slug": "ocean-hill",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK1601"
+      ],
+      "totalUnits": 16161,
+      "hhi": 103,
+      "cr4": 16,
+      "topLandlords": [
+        {
+          "name": "HP Atlantic Plaza Towers Develop Ment Fund",
+          "units": 1107,
+          "share": 6.8
+        },
+        {
+          "name": "Nyc Authority",
+          "units": 933,
+          "share": 5.8
+        },
+        {
+          "name": "Nyc Pact Preservation",
+          "units": 301,
+          "share": 1.9
+        },
+        {
+          "name": "Nycha Triborough Preservation",
+          "units": 251,
+          "share": 1.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Brownsville",
+      "slug": "brownsville",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK1602"
+      ],
+      "totalUnits": 24594,
+      "hhi": 947,
+      "cr4": 36.7,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 7409,
+          "share": 30.1
+        },
+        {
+          "name": "HP Marcus Garvey Preservation Mpany",
+          "units": 625,
+          "share": 2.5
+        },
+        {
+          "name": "HP Riverdale Osborne Fund",
+          "units": 524,
+          "share": 2.1
+        },
+        {
+          "name": "HP Ebenezer Plaza",
+          "units": 469,
+          "share": 1.9
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "East Flatbush-Erasmus",
+      "slug": "east-flatbush-erasmus",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK1701"
+      ],
+      "totalUnits": 21561,
+      "hhi": 26,
+      "cr4": 5.3,
+      "topLandlords": [
+        {
+          "name": "123 Linden",
+          "units": 467,
+          "share": 2.2
+        },
+        {
+          "name": "Sandy 350",
+          "units": 250,
+          "share": 1.2
+        },
+        {
+          "name": "Bedford Beverly 2359",
+          "units": 227,
+          "share": 1.1
+        },
+        {
+          "name": "B. Clark Associatesinc",
+          "units": 199,
+          "share": 0.9
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "East Flatbush-Farragut",
+      "slug": "east-flatbush-farragut",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK1702"
+      ],
+      "totalUnits": 12911,
+      "hhi": 337,
+      "cr4": 21.5,
+      "topLandlords": [
+        {
+          "name": "Flatbush Gardens Fun D Corporat",
+          "units": 2328,
+          "share": 18
+        },
+        {
+          "name": "Norma Apartments Tenants",
+          "units": 190,
+          "share": 1.5
+        },
+        {
+          "name": "Flatbush Gardens Fun D",
+          "units": 168,
+          "share": 1.3
+        },
+        {
+          "name": "Jonah",
+          "units": 90,
+          "share": 0.7
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "East Flatbush-Rugby",
+      "slug": "east-flatbush-rugby",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK1703"
+      ],
+      "totalUnits": 14401,
+      "hhi": 13,
+      "cr4": 4.4,
+      "topLandlords": [
+        {
+          "name": "VB Ccpopd Fund Corpo Ration",
+          "units": 322,
+          "share": 2.2
+        },
+        {
+          "name": "Lenox Arms Cooperative",
+          "units": 120,
+          "share": 0.8
+        },
+        {
+          "name": "406 Remsen",
+          "units": 95,
+          "share": 0.7
+        },
+        {
+          "name": "Anna & Rose",
+          "units": 94,
+          "share": 0.7
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "East Flatbush-Remsen Village",
+      "slug": "east-flatbush-remsen-village",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK1704"
+      ],
+      "totalUnits": 14164,
+      "hhi": 32,
+      "cr4": 7.6,
+      "topLandlords": [
+        {
+          "name": "Rutland Road Houses",
+          "units": 438,
+          "share": 3.1
+        },
+        {
+          "name": "Nyc Pact Preservation",
+          "units": 328,
+          "share": 2.3
+        },
+        {
+          "name": "950 Rutland Road",
+          "units": 172,
+          "share": 1.2
+        },
+        {
+          "name": "Rockaway154",
+          "units": 142,
+          "share": 1
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Flatlands",
+      "slug": "flatlands",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK1801"
+      ],
+      "totalUnits": 21716,
+      "hhi": 60,
+      "cr4": 13.6,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 1188,
+          "share": 5.5
+        },
+        {
+          "name": "Kings Village",
+          "units": 780,
+          "share": 3.6
+        },
+        {
+          "name": "Philip Howard Apartments Tenants CP",
+          "units": 634,
+          "share": 2.9
+        },
+        {
+          "name": "Mansfield Owners Medallion Realestat E",
+          "units": 360,
+          "share": 1.7
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Marine Park-Mill Basin-Bergen Beach",
+      "slug": "marine-park-mill-basin-bergen-beach",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK1802"
+      ],
+      "totalUnits": 16856,
+      "hhi": 10,
+      "cr4": 5.2,
+      "topLandlords": [
+        {
+          "name": "Fillmore Gardens -operative",
+          "units": 318,
+          "share": 1.9
+        },
+        {
+          "name": "Parkmore",
+          "units": 208,
+          "share": 1.2
+        },
+        {
+          "name": "Name Not ON File",
+          "units": 206,
+          "share": 1.2
+        },
+        {
+          "name": "Bergen Cove",
+          "units": 151,
+          "share": 0.9
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Canarsie",
+      "slug": "canarsie",
+      "borough": "Brooklyn",
+      "fips": "36047",
+      "ntaCodes": [
+        "BK1803"
+      ],
+      "totalUnits": 27248,
+      "hhi": 146,
+      "cr4": 15.1,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 3230,
+          "share": 11.9
+        },
+        {
+          "name": "Name Not ON File",
+          "units": 527,
+          "share": 1.9
+        },
+        {
+          "name": "Frederick H. Buz",
+          "units": 210,
+          "share": 0.8
+        },
+        {
+          "name": "1625 Rockaway Parkway Owner",
+          "units": 153,
+          "share": 0.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Mott Haven-Port Morris",
+      "slug": "mott-haven-port-morris",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX0101"
+      ],
+      "totalUnits": 26953,
+      "hhi": 839,
+      "cr4": 40.1,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 7400,
+          "share": 27.5
+        },
+        {
+          "name": "Betances Rad",
+          "units": 1272,
+          "share": 4.7
+        },
+        {
+          "name": "Diego Beekman Mutual Housi NG Fund",
+          "units": 1204,
+          "share": 4.5
+        },
+        {
+          "name": "Bop 101 Lincoln Avenue",
+          "units": 921,
+          "share": 3.4
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Melrose",
+      "slug": "melrose",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX0102"
+      ],
+      "totalUnits": 17721,
+      "hhi": 698,
+      "cr4": 33.8,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 4507,
+          "share": 25.4
+        },
+        {
+          "name": "HP Michelangelo",
+          "units": 498,
+          "share": 2.8
+        },
+        {
+          "name": "Comunilife LA Central . Fund",
+          "units": 494,
+          "share": 2.8
+        },
+        {
+          "name": "Senior Living Options",
+          "units": 487,
+          "share": 2.7
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Hunts Point",
+      "slug": "hunts-point",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX0201"
+      ],
+      "totalUnits": 6378,
+      "hhi": 214,
+      "cr4": 21.9,
+      "topLandlords": [
+        {
+          "name": "Nyc Administration For Childrens Services",
+          "units": 542,
+          "share": 8.5
+        },
+        {
+          "name": "Hunts Point Hsng Devfun",
+          "units": 472,
+          "share": 7.4
+        },
+        {
+          "name": "985 Bruckner Boulevard . Fund",
+          "units": 215,
+          "share": 3.4
+        },
+        {
+          "name": "Hunts Point Residences Developme NT",
+          "units": 165,
+          "share": 2.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Longwood",
+      "slug": "longwood",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX0202"
+      ],
+      "totalUnits": 15413,
+      "hhi": 95,
+      "cr4": 13.1,
+      "topLandlords": [
+        {
+          "name": "Union Preservation",
+          "units": 639,
+          "share": 4.1
+        },
+        {
+          "name": "Prc Westchester Avenue",
+          "units": 551,
+          "share": 3.6
+        },
+        {
+          "name": "Aldus Green",
+          "units": 426,
+          "share": 2.8
+        },
+        {
+          "name": "Nyc Authority",
+          "units": 407,
+          "share": 2.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Morrisania",
+      "slug": "morrisania",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX0301"
+      ],
+      "totalUnits": 15614,
+      "hhi": 207,
+      "cr4": 18.2,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 1969,
+          "share": 12.6
+        },
+        {
+          "name": "Woodstock Terrace Mutual",
+          "units": 320,
+          "share": 2
+        },
+        {
+          "name": "Bronx Commons Fund",
+          "units": 304,
+          "share": 1.9
+        },
+        {
+          "name": "Courtlandt Corners II",
+          "units": 255,
+          "share": 1.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Claremont Village-Claremont (East)",
+      "slug": "claremont-village-claremont-east",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX0302"
+      ],
+      "totalUnits": 8653,
+      "hhi": 2480,
+      "cr4": 59.4,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 4256,
+          "share": 49.2
+        },
+        {
+          "name": "Crotona Park West Hsng",
+          "units": 367,
+          "share": 4.2
+        },
+        {
+          "name": "Fordham Fulton",
+          "units": 321,
+          "share": 3.7
+        },
+        {
+          "name": "The Doe Fund",
+          "units": 196,
+          "share": 2.3
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Crotona Park East",
+      "slug": "crotona-park-east",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX0303"
+      ],
+      "totalUnits": 13082,
+      "hhi": 78,
+      "cr4": 11.8,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 483,
+          "share": 3.7
+        },
+        {
+          "name": "Mbd Silva Taylor Fun D",
+          "units": 365,
+          "share": 2.8
+        },
+        {
+          "name": "Samaritan-compass Iii & IV F Und",
+          "units": 365,
+          "share": 2.8
+        },
+        {
+          "name": "West Farms Estates F Und Corpor",
+          "units": 330,
+          "share": 2.5
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Concourse-Concourse Village",
+      "slug": "concourse-concourse-village",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX0401"
+      ],
+      "totalUnits": 27572,
+      "hhi": 66,
+      "cr4": 10.6,
+      "topLandlords": [
+        {
+          "name": "Concourse Village",
+          "units": 936,
+          "share": 3.4
+        },
+        {
+          "name": "Nyc Authority",
+          "units": 900,
+          "share": 3.3
+        },
+        {
+          "name": "Bronx Preservation F Und",
+          "units": 552,
+          "share": 2
+        },
+        {
+          "name": "Nyc Department OF Citywide Administrative Services",
+          "units": 541,
+          "share": 2
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Highbridge",
+      "slug": "highbridge",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX0402"
+      ],
+      "totalUnits": 13101,
+      "hhi": 105,
+      "cr4": 12.9,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 700,
+          "share": 5.3
+        },
+        {
+          "name": "Highbridge Preservation",
+          "units": 400,
+          "share": 3.1
+        },
+        {
+          "name": "Anderson Avenue Fund",
+          "units": 300,
+          "share": 2.3
+        },
+        {
+          "name": "Mid-bronx Devel",
+          "units": 290,
+          "share": 2.2
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Mount Eden-Claremont (West)",
+      "slug": "mount-eden-claremont-west",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX0403"
+      ],
+      "totalUnits": 18961,
+      "hhi": 70,
+      "cr4": 9.6,
+      "topLandlords": [
+        {
+          "name": "Nsa 2015 Fund Corpor Ation",
+          "units": 905,
+          "share": 4.8
+        },
+        {
+          "name": "Highbridge Community Fund",
+          "units": 378,
+          "share": 2
+        },
+        {
+          "name": "Roosevelt Gardens",
+          "units": 291,
+          "share": 1.5
+        },
+        {
+          "name": "1331 Jerome Avenue F Und",
+          "units": 255,
+          "share": 1.3
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "University Heights (South)-Morris Heights",
+      "slug": "university-heights-south-morris-heights",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX0501"
+      ],
+      "totalUnits": 26065,
+      "hhi": 615,
+      "cr4": 33.8,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 6073,
+          "share": 23.3
+        },
+        {
+          "name": "River Park Bronx Apartments",
+          "units": 1654,
+          "share": 6.3
+        },
+        {
+          "name": "Riverview Redevelopment",
+          "units": 766,
+          "share": 2.9
+        },
+        {
+          "name": "Starhill Phase I Fun D Corporat",
+          "units": 326,
+          "share": 1.3
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Mount Hope",
+      "slug": "mount-hope",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX0502"
+      ],
+      "totalUnits": 20000,
+      "hhi": 45,
+      "cr4": 7.4,
+      "topLandlords": [
+        {
+          "name": "Bronx Phase II",
+          "units": 536,
+          "share": 2.7
+        },
+        {
+          "name": "Mount Hope Renaissance",
+          "units": 416,
+          "share": 2.1
+        },
+        {
+          "name": "HP 1749 Grand Concourse & 2755-69 Sedgwi CK",
+          "units": 278,
+          "share": 1.4
+        },
+        {
+          "name": "Webster Avenue",
+          "units": 248,
+          "share": 1.2
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Fordham Heights",
+      "slug": "fordham-heights",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX0503"
+      ],
+      "totalUnits": 11374,
+      "hhi": 60,
+      "cr4": 8.2,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 314,
+          "share": 2.8
+        },
+        {
+          "name": "Bronx Phase Iii",
+          "units": 231,
+          "share": 2
+        },
+        {
+          "name": "United Neighbors Fun D",
+          "units": 229,
+          "share": 2
+        },
+        {
+          "name": "Neighborhood Renewal Fund",
+          "units": 162,
+          "share": 1.4
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "West Farms",
+      "slug": "west-farms",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX0601"
+      ],
+      "totalUnits": 8708,
+      "hhi": 154,
+      "cr4": 15.9,
+      "topLandlords": [
+        {
+          "name": "Boston Tremont . Fund Corpora Tion",
+          "units": 534,
+          "share": 6.1
+        },
+        {
+          "name": "Boston Bryant Developent Fund Rporation",
+          "units": 319,
+          "share": 3.7
+        },
+        {
+          "name": "Daly IV Fund",
+          "units": 274,
+          "share": 3.1
+        },
+        {
+          "name": "Samaritan-compass VI Fund",
+          "units": 261,
+          "share": 3
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Tremont",
+      "slug": "tremont",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX0602"
+      ],
+      "totalUnits": 14253,
+      "hhi": 82,
+      "cr4": 11.8,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 741,
+          "share": 5.2
+        },
+        {
+          "name": "Bronx Phase I",
+          "units": 408,
+          "share": 2.9
+        },
+        {
+          "name": "Dennis Lane Apt",
+          "units": 281,
+          "share": 2
+        },
+        {
+          "name": "Ahc Fund",
+          "units": 250,
+          "share": 1.8
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Belmont",
+      "slug": "belmont",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX0603"
+      ],
+      "totalUnits": 13405,
+      "hhi": 41,
+      "cr4": 6.7,
+      "topLandlords": [
+        {
+          "name": "Twin Parks Apartments",
+          "units": 274,
+          "share": 2
+        },
+        {
+          "name": "Grote Street Apartment Houses",
+          "units": 249,
+          "share": 1.9
+        },
+        {
+          "name": "Belmont Blvd Dfc",
+          "units": 191,
+          "share": 1.4
+        },
+        {
+          "name": "The New York Botanical Garden",
+          "units": 188,
+          "share": 1.4
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "University Heights (North)-Fordham",
+      "slug": "university-heights-north-fordham",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX0701"
+      ],
+      "totalUnits": 16050,
+      "hhi": 83,
+      "cr4": 10.9,
+      "topLandlords": [
+        {
+          "name": "Fordham Hill Oval",
+          "units": 1145,
+          "share": 7.1
+        },
+        {
+          "name": "Nyc Authority",
+          "units": 233,
+          "share": 1.5
+        },
+        {
+          "name": "HP Creston Parkview Fund Compa",
+          "units": 188,
+          "share": 1.2
+        },
+        {
+          "name": "2630 Kingsbridge Terrace Owners",
+          "units": 185,
+          "share": 1.2
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Bedford Park",
+      "slug": "bedford-park",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX0702"
+      ],
+      "totalUnits": 23352,
+      "hhi": 40,
+      "cr4": 6.9,
+      "topLandlords": [
+        {
+          "name": "Nyc",
+          "units": 871,
+          "share": 3.7
+        },
+        {
+          "name": "Scott Tower",
+          "units": 352,
+          "share": 1.5
+        },
+        {
+          "name": "Serviam Heights Fund",
+          "units": 201,
+          "share": 0.9
+        },
+        {
+          "name": "Villa Bedford Fund C Orporation",
+          "units": 186,
+          "share": 0.8
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Norwood",
+      "slug": "norwood",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX0703"
+      ],
+      "totalUnits": 16048,
+      "hhi": 42,
+      "cr4": 5.7,
+      "topLandlords": [
+        {
+          "name": "Montefiore Hospital Section II I NC",
+          "units": 399,
+          "share": 2.5
+        },
+        {
+          "name": "GL Botanical",
+          "units": 188,
+          "share": 1.2
+        },
+        {
+          "name": "Ivory Bainbridge",
+          "units": 173,
+          "share": 1.1
+        },
+        {
+          "name": "Mmc Residential",
+          "units": 156,
+          "share": 1
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Kingsbridge Heights-Van Cortlandt Village",
+      "slug": "kingsbridge-heights-van-cortlandt-village",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX0801"
+      ],
+      "totalUnits": 13950,
+      "hhi": 167,
+      "cr4": 16.7,
+      "topLandlords": [
+        {
+          "name": "Amalgamated",
+          "units": 1486,
+          "share": 10.7
+        },
+        {
+          "name": "Nyc Authority",
+          "units": 344,
+          "share": 2.5
+        },
+        {
+          "name": "St. Patrick's Home/aged",
+          "units": 264,
+          "share": 1.9
+        },
+        {
+          "name": "Shalom Aleichem",
+          "units": 235,
+          "share": 1.7
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Kingsbridge-Marble Hill",
+      "slug": "kingsbridge-marble-hill",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX0802"
+      ],
+      "totalUnits": 9419,
+      "hhi": 405,
+      "cr4": 28,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 1696,
+          "share": 18
+        },
+        {
+          "name": "Nathan Hale Gardens",
+          "units": 401,
+          "share": 4.3
+        },
+        {
+          "name": "HP Promenade Fund Mpany",
+          "units": 318,
+          "share": 3.4
+        },
+        {
+          "name": "New York Teachers",
+          "units": 224,
+          "share": 2.4
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Riverdale-Spuyten Duyvil",
+      "slug": "riverdale-spuyten-duyvil",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX0803"
+      ],
+      "totalUnits": 22545,
+      "hhi": 94,
+      "cr4": 12.3,
+      "topLandlords": [
+        {
+          "name": "Skyview Owners",
+          "units": 1309,
+          "share": 5.8
+        },
+        {
+          "name": "Edgehill",
+          "units": 570,
+          "share": 2.5
+        },
+        {
+          "name": "Netherland Gardens",
+          "units": 462,
+          "share": 2
+        },
+        {
+          "name": "Whitehall Tenants",
+          "units": 439,
+          "share": 1.9
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Soundview-Bruckner-Bronx River",
+      "slug": "soundview-bruckner-bronx-river",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX0901"
+      ],
+      "totalUnits": 25409,
+      "hhi": 224,
+      "cr4": 22.3,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 3374,
+          "share": 13.3
+        },
+        {
+          "name": "HP Lafayette Boynton Fund Comp",
+          "units": 968,
+          "share": 3.8
+        },
+        {
+          "name": "Lafayette Morrison",
+          "units": 900,
+          "share": 3.5
+        },
+        {
+          "name": "HP Story Avenue . Fund Compan Y",
+          "units": 435,
+          "share": 1.7
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Soundview-Clason Point",
+      "slug": "soundview-clason-point",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX0902"
+      ],
+      "totalUnits": 13168,
+      "hhi": 670,
+      "cr4": 37.7,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 3081,
+          "share": 23.4
+        },
+        {
+          "name": "Stevenson Commons",
+          "units": 948,
+          "share": 7.2
+        },
+        {
+          "name": "HP Rosedale Gardens Fund Compa",
+          "units": 470,
+          "share": 3.6
+        },
+        {
+          "name": "Underhill",
+          "units": 463,
+          "share": 3.5
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Castle Hill-Unionport",
+      "slug": "castle-hill-unionport",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX0903"
+      ],
+      "totalUnits": 13963,
+      "hhi": 278,
+      "cr4": 25.4,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 2036,
+          "share": 14.6
+        },
+        {
+          "name": "Jamie Towers",
+          "units": 624,
+          "share": 4.5
+        },
+        {
+          "name": "HP Bruckner Fund",
+          "units": 530,
+          "share": 3.8
+        },
+        {
+          "name": "Story Towers",
+          "units": 355,
+          "share": 2.5
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Parkchester",
+      "slug": "parkchester",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX0904"
+      ],
+      "totalUnits": 14179,
+      "hhi": 4162,
+      "cr4": 88.1,
+      "topLandlords": [
+        {
+          "name": "Parkchester South Condominium",
+          "units": 8286,
+          "share": 58.4
+        },
+        {
+          "name": "Ppc Residential",
+          "units": 3857,
+          "share": 27.2
+        },
+        {
+          "name": "HP Purdy Street Fund",
+          "units": 221,
+          "share": 1.6
+        },
+        {
+          "name": "Parkchester Preservation",
+          "units": 128,
+          "share": 0.9
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Westchester Square",
+      "slug": "westchester-square",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX1001"
+      ],
+      "totalUnits": 5393,
+      "hhi": 67,
+      "cr4": 11.3,
+      "topLandlords": [
+        {
+          "name": "Tratman Gardens",
+          "units": 213,
+          "share": 3.9
+        },
+        {
+          "name": "Overing",
+          "units": 180,
+          "share": 3.3
+        },
+        {
+          "name": "Nyc Authority",
+          "units": 132,
+          "share": 2.4
+        },
+        {
+          "name": "MK Farmington",
+          "units": 85,
+          "share": 1.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Throgs Neck-Schuylerville",
+      "slug": "throgs-neck-schuylerville",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX1002"
+      ],
+      "totalUnits": 17085,
+      "hhi": 140,
+      "cr4": 16.8,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 1894,
+          "share": 11.1
+        },
+        {
+          "name": "Silver Beach Gardens",
+          "units": 491,
+          "share": 2.9
+        },
+        {
+          "name": "Edgewater Park Ownrsetc",
+          "units": 339,
+          "share": 2
+        },
+        {
+          "name": "Fort Schuyler . Fund",
+          "units": 143,
+          "share": 0.8
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Pelham Bay-Country Club-City Island",
+      "slug": "pelham-bay-country-club-city-island",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX1003"
+      ],
+      "totalUnits": 12408,
+      "hhi": 26,
+      "cr4": 6.3,
+      "topLandlords": [
+        {
+          "name": "Hazel Towers",
+          "units": 285,
+          "share": 2.3
+        },
+        {
+          "name": "Nyc Authority",
+          "units": 179,
+          "share": 1.4
+        },
+        {
+          "name": "Hutchinson Pway Apts",
+          "units": 158,
+          "share": 1.3
+        },
+        {
+          "name": "Pelham Bay Owners",
+          "units": 157,
+          "share": 1.3
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Co-op City",
+      "slug": "co-op-city",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX1004"
+      ],
+      "totalUnits": 15899,
+      "hhi": 4713,
+      "cr4": 69.9,
+      "topLandlords": [
+        {
+          "name": "Riverbay",
+          "units": 10914,
+          "share": 68.6
+        },
+        {
+          "name": "Phf Fund",
+          "units": 100,
+          "share": 0.6
+        },
+        {
+          "name": "Council Towers V Fund",
+          "units": 70,
+          "share": 0.4
+        },
+        {
+          "name": "Nysd Rombouts",
+          "units": 28,
+          "share": 0.2
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Pelham Parkway-Van Nest",
+      "slug": "pelham-parkway-van-nest",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX1101"
+      ],
+      "totalUnits": 11708,
+      "hhi": 67,
+      "cr4": 8.8,
+      "topLandlords": [
+        {
+          "name": "754 768 Brady Owners",
+          "units": 315,
+          "share": 2.7
+        },
+        {
+          "name": "Uport",
+          "units": 290,
+          "share": 2.5
+        },
+        {
+          "name": "Janel Towers",
+          "units": 230,
+          "share": 2
+        },
+        {
+          "name": "Wallace Holland Owners",
+          "units": 191,
+          "share": 1.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Morris Park",
+      "slug": "morris-park",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX1102"
+      ],
+      "totalUnits": 9164,
+      "hhi": 36,
+      "cr4": 8.1,
+      "topLandlords": [
+        {
+          "name": "ZM Force",
+          "units": 354,
+          "share": 3.9
+        },
+        {
+          "name": "Albert Einstein College OF Medicine",
+          "units": 135,
+          "share": 1.5
+        },
+        {
+          "name": "Ashleys Backflips",
+          "units": 129,
+          "share": 1.4
+        },
+        {
+          "name": "1541 Williamsbridge",
+          "units": 125,
+          "share": 1.4
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Pelham Gardens",
+      "slug": "pelham-gardens",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX1103"
+      ],
+      "totalUnits": 9056,
+      "hhi": 96,
+      "cr4": 10.8,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 877,
+          "share": 9.7
+        },
+        {
+          "name": "Pelham 1135",
+          "units": 52,
+          "share": 0.6
+        },
+        {
+          "name": "1466 East Gunhill Road",
+          "units": 30,
+          "share": 0.3
+        },
+        {
+          "name": "Mariani Rlty CP",
+          "units": 23,
+          "share": 0.3
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Allerton",
+      "slug": "allerton",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX1104"
+      ],
+      "totalUnits": 23773,
+      "hhi": 2393,
+      "cr4": 56.7,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 11512,
+          "share": 48.4
+        },
+        {
+          "name": "HP Bronx Park East Dvlp Fund Com Pany",
+          "units": 1396,
+          "share": 5.9
+        },
+        {
+          "name": "Bronx Park East",
+          "units": 322,
+          "share": 1.4
+        },
+        {
+          "name": "Olinville II",
+          "units": 256,
+          "share": 1.1
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Williamsbridge-Olinville",
+      "slug": "williamsbridge-olinville",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX1201"
+      ],
+      "totalUnits": 22372,
+      "hhi": 29,
+      "cr4": 7.4,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 733,
+          "share": 3.3
+        },
+        {
+          "name": "Hpdc2 Fund",
+          "units": 349,
+          "share": 1.6
+        },
+        {
+          "name": "Adee Towers",
+          "units": 297,
+          "share": 1.3
+        },
+        {
+          "name": "Ocwen Federal Bank Fsb",
+          "units": 269,
+          "share": 1.2
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Eastchester-Edenwald-Baychester",
+      "slug": "eastchester-edenwald-baychester",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX1202"
+      ],
+      "totalUnits": 16606,
+      "hhi": 235,
+      "cr4": 28,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 1775,
+          "share": 10.7
+        },
+        {
+          "name": "Eastchester Heights Fund Corpo",
+          "units": 1416,
+          "share": 8.5
+        },
+        {
+          "name": "Csa Preservation",
+          "units": 1019,
+          "share": 6.1
+        },
+        {
+          "name": "Cross Bronx Preservation",
+          "units": 441,
+          "share": 2.7
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Wakefield-Woodlawn",
+      "slug": "wakefield-woodlawn",
+      "borough": "Bronx",
+      "fips": "36005",
+      "ntaCodes": [
+        "BX1203"
+      ],
+      "totalUnits": 18071,
+      "hhi": 16,
+      "cr4": 3.6,
+      "topLandlords": [
+        {
+          "name": "Wakefield Cooperative",
+          "units": 201,
+          "share": 1.1
+        },
+        {
+          "name": "Jja",
+          "units": 181,
+          "share": 1
+        },
+        {
+          "name": "Wakefield Grace Umc Fund Corpo",
+          "units": 146,
+          "share": 0.8
+        },
+        {
+          "name": "Parkash 242",
+          "units": 130,
+          "share": 0.7
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Financial District-Battery Park City",
+      "slug": "financial-district-battery-park-city",
       "borough": "Manhattan",
       "fips": "36061",
-      "ntaCodes": ["MN1201", "MN1202"],
-      "totalUnits": 55000,
-      "hhi": 780,
-      "cr4": 19.2,
-      "topLandlords": [
-        { "name": "Sugar Hill Capital Partners", "units": 3100, "share": 5.6 },
-        { "name": "Pinnacle City Living", "units": 2800, "share": 5.1 },
-        { "name": "BCB Property Management", "units": 2500, "share": 4.5 },
-        { "name": "Fort George Holdings", "units": 2200, "share": 4.0 }
+      "ntaCodes": [
+        "MN0101"
       ],
-      "hpdViolationsPerUnit": 2.3,
-      "medianRent": 1750,
-      "medianIncome": 43280,
-      "rentBurdenPct": 51.6
+      "totalUnits": 34217,
+      "hhi": 134,
+      "cr4": 15.9,
+      "topLandlords": [
+        {
+          "name": "Battery Park City Authory",
+          "units": 1712,
+          "share": 5
+        },
+        {
+          "name": "Southbridge Towers",
+          "units": 1641,
+          "share": 4.8
+        },
+        {
+          "name": "25 Water Owner",
+          "units": 1320,
+          "share": 3.9
+        },
+        {
+          "name": "Twenty Exchange Place Condomimium",
+          "units": 762,
+          "share": 2.2
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Tribeca-Civic Center",
+      "slug": "tribeca-civic-center",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN0102"
+      ],
+      "totalUnits": 12215,
+      "hhi": 209,
+      "cr4": 21.9,
+      "topLandlords": [
+        {
+          "name": "IP Mortgage Borrower",
+          "units": 1328,
+          "share": 10.9
+        },
+        {
+          "name": "50 Murray Street Acquisition",
+          "units": 507,
+          "share": 4.2
+        },
+        {
+          "name": "Tribeca Equity L P",
+          "units": 440,
+          "share": 3.6
+        },
+        {
+          "name": "Barclay Street",
+          "units": 396,
+          "share": 3.2
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "SoHo-Little Italy-Hudson Square",
+      "slug": "soho-little-italy-hudson-square",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN0201"
+      ],
+      "totalUnits": 15314,
+      "hhi": 25,
+      "cr4": 4.4,
+      "topLandlords": [
+        {
+          "name": "2 Charlton Owners",
+          "units": 175,
+          "share": 1.1
+        },
+        {
+          "name": "Name Not ON File",
+          "units": 173,
+          "share": 1.1
+        },
+        {
+          "name": "Strategic Greenwich Equity",
+          "units": 170,
+          "share": 1.1
+        },
+        {
+          "name": "Almark",
+          "units": 162,
+          "share": 1.1
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Greenwich Village",
+      "slug": "greenwich-village",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN0202"
+      ],
+      "totalUnits": 21522,
+      "hhi": 236,
+      "cr4": 19.8,
+      "topLandlords": [
+        {
+          "name": "New York University",
+          "units": 2975,
+          "share": 13.8
+        },
+        {
+          "name": "Hilary Gardens",
+          "units": 480,
+          "share": 2.2
+        },
+        {
+          "name": "24 Fifth Owners",
+          "units": 420,
+          "share": 2
+        },
+        {
+          "name": "Georgetown Plz Owners",
+          "units": 390,
+          "share": 1.8
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "West Village",
+      "slug": "west-village",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN0203"
+      ],
+      "totalUnits": 24602,
+      "hhi": 37,
+      "cr4": 7,
+      "topLandlords": [
+        {
+          "name": "Nyc Department OF Citywide Administrative Services",
+          "units": 479,
+          "share": 1.9
+        },
+        {
+          "name": "Wvh",
+          "units": 445,
+          "share": 1.8
+        },
+        {
+          "name": "The John Adams Owners",
+          "units": 416,
+          "share": 1.7
+        },
+        {
+          "name": "Westbeth . Fund",
+          "units": 384,
+          "share": 1.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Chinatown-Two Bridges",
+      "slug": "chinatown-two-bridges",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN0301"
+      ],
+      "totalUnits": 17761,
+      "hhi": 715,
+      "cr4": 41.5,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 4261,
+          "share": 24
+        },
+        {
+          "name": "Kvi Mezz",
+          "units": 1590,
+          "share": 9
+        },
+        {
+          "name": "Cps Fee",
+          "units": 1021,
+          "share": 5.7
+        },
+        {
+          "name": "HP Cherry Street Fun D",
+          "units": 490,
+          "share": 2.8
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Lower East Side",
+      "slug": "lower-east-side",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN0302"
+      ],
+      "totalUnits": 25707,
+      "hhi": 563,
+      "cr4": 35.6,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 5511,
+          "share": 21.4
+        },
+        {
+          "name": "East River",
+          "units": 1672,
+          "share": 6.5
+        },
+        {
+          "name": "Masaryk Towers",
+          "units": 1099,
+          "share": 4.3
+        },
+        {
+          "name": "Seward Park",
+          "units": 866,
+          "share": 3.4
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "East Village",
+      "slug": "east-village",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN0303"
+      ],
+      "totalUnits": 40008,
+      "hhi": 185,
+      "cr4": 17.9,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 5115,
+          "share": 12.8
+        },
+        {
+          "name": "Village View",
+          "units": 1236,
+          "share": 3.1
+        },
+        {
+          "name": "Village East Towers",
+          "units": 439,
+          "share": 1.1
+        },
+        {
+          "name": "Haven Plaza Fund Com Pany",
+          "units": 371,
+          "share": 0.9
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Chelsea-Hudson Yards",
+      "slug": "chelsea-hudson-yards",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN0401"
+      ],
+      "totalUnits": 46093,
+      "hhi": 69,
+      "cr4": 11.6,
+      "topLandlords": [
+        {
+          "name": "Mutual Redevelopment Houses",
+          "units": 1696,
+          "share": 3.7
+        },
+        {
+          "name": "Nyc Authority",
+          "units": 1382,
+          "share": 3
+        },
+        {
+          "name": "Mut Redevelopment",
+          "units": 1316,
+          "share": 2.9
+        },
+        {
+          "name": "West Side 11th & 29th",
+          "units": 938,
+          "share": 2
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Hell's Kitchen",
+      "slug": "hells-kitchen",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN0402"
+      ],
+      "totalUnits": 40581,
+      "hhi": 57,
+      "cr4": 9.9,
+      "topLandlords": [
+        {
+          "name": "Manhattan Plaza",
+          "units": 1689,
+          "share": 4.2
+        },
+        {
+          "name": "Fpc 57 South",
+          "units": 1028,
+          "share": 2.5
+        },
+        {
+          "name": "Fpc 57 North",
+          "units": 662,
+          "share": 1.6
+        },
+        {
+          "name": "World Wide Plaza Condominium",
+          "units": 654,
+          "share": 1.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Midtown South-Flatiron-Union Square",
+      "slug": "midtown-south-flatiron-union-square",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN0501"
+      ],
+      "totalUnits": 20941,
+      "hhi": 105,
+      "cr4": 11.8,
+      "topLandlords": [
+        {
+          "name": "Akam",
+          "units": 749,
+          "share": 3.6
+        },
+        {
+          "name": "Herald Towers",
+          "units": 690,
+          "share": 3.3
+        },
+        {
+          "name": "Cyh Manhattan",
+          "units": 529,
+          "share": 2.5
+        },
+        {
+          "name": "Victoria Owners",
+          "units": 495,
+          "share": 2.4
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Midtown-Times Square",
+      "slug": "midtown-times-square",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN0502"
+      ],
+      "totalUnits": 21562,
+      "hhi": 95,
+      "cr4": 10,
+      "topLandlords": [
+        {
+          "name": "Common Ground Community Developm Ent Fund C",
+          "units": 652,
+          "share": 3
+        },
+        {
+          "name": "Asn 50th ST",
+          "units": 550,
+          "share": 2.6
+        },
+        {
+          "name": "Broadway 56th Street Associa",
+          "units": 482,
+          "share": 2.2
+        },
+        {
+          "name": "CS Ritz Residences",
+          "units": 477,
+          "share": 2.2
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Stuyvesant Town-Peter Cooper Village",
+      "slug": "stuyvesant-town-peter-cooper-village",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN0601"
+      ],
+      "totalUnits": 11255,
+      "hhi": 6553,
+      "cr4": 100,
+      "topLandlords": [
+        {
+          "name": "Bpp ST Owner",
+          "units": 8764,
+          "share": 77.9
+        },
+        {
+          "name": "Bpp Pcv Owner",
+          "units": 2491,
+          "share": 22.1
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Gramercy",
+      "slug": "gramercy",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN0602"
+      ],
+      "totalUnits": 18882,
+      "hhi": 76,
+      "cr4": 9.6,
+      "topLandlords": [
+        {
+          "name": "East Union Square C",
+          "units": 645,
+          "share": 3.4
+        },
+        {
+          "name": "East Midtown Plaza",
+          "units": 510,
+          "share": 2.7
+        },
+        {
+          "name": "Kenmore",
+          "units": 326,
+          "share": 1.7
+        },
+        {
+          "name": "205 3 Ave",
+          "units": 326,
+          "share": 1.7
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Murray Hill-Kips Bay",
+      "slug": "murray-hill-kips-bay",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN0603"
+      ],
+      "totalUnits": 41509,
+      "hhi": 82,
+      "cr4": 10.4,
+      "topLandlords": [
+        {
+          "name": "Waterside Propco",
+          "units": 1471,
+          "share": 3.5
+        },
+        {
+          "name": "The Kips Bay Towers Condominium",
+          "units": 1118,
+          "share": 2.7
+        },
+        {
+          "name": "Bpp Kips Bay",
+          "units": 894,
+          "share": 2.2
+        },
+        {
+          "name": "The Corinthian Condominium",
+          "units": 830,
+          "share": 2
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "East Midtown-Turtle Bay",
+      "slug": "east-midtown-turtle-bay",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN0604"
+      ],
+      "totalUnits": 33839,
+      "hhi": 49,
+      "cr4": 6.4,
+      "topLandlords": [
+        {
+          "name": "Plaza 400 Owners",
+          "units": 629,
+          "share": 1.9
+        },
+        {
+          "name": "Name Not ON File",
+          "units": 625,
+          "share": 1.8
+        },
+        {
+          "name": "Southgate Owners",
+          "units": 468,
+          "share": 1.4
+        },
+        {
+          "name": "Bevard Owners",
+          "units": 444,
+          "share": 1.3
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Upper West Side-Lincoln Square",
+      "slug": "upper-west-side-lincoln-square",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN0701"
+      ],
+      "totalUnits": 45391,
+      "hhi": 63,
+      "cr4": 8,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 1259,
+          "share": 2.8
+        },
+        {
+          "name": "Brodcom West",
+          "units": 973,
+          "share": 2.1
+        },
+        {
+          "name": "400 West 59th ST Ptrs",
+          "units": 729,
+          "share": 1.6
+        },
+        {
+          "name": "Dorchester Tower Condomlinilum",
+          "units": 681,
+          "share": 1.5
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Upper West Side (Central)",
+      "slug": "upper-west-side-central",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN0702"
+      ],
+      "totalUnits": 57189,
+      "hhi": 22,
+      "cr4": 5.2,
+      "topLandlords": [
+        {
+          "name": "Pact Renaissance Collaborative",
+          "units": 1197,
+          "share": 2.1
+        },
+        {
+          "name": "Nyc Authority",
+          "units": 1006,
+          "share": 1.8
+        },
+        {
+          "name": "Uws Ventures Iii",
+          "units": 418,
+          "share": 0.7
+        },
+        {
+          "name": "Broadway Greystone",
+          "units": 363,
+          "share": 0.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Upper West Side-Manhattan Valley",
+      "slug": "upper-west-side-manhattan-valley",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN0703"
+      ],
+      "totalUnits": 26993,
+      "hhi": 130,
+      "cr4": 15.6,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 2465,
+          "share": 9.1
+        },
+        {
+          "name": "CF Pwv",
+          "units": 861,
+          "share": 3.2
+        },
+        {
+          "name": "HP Morningside Heights Portfolio",
+          "units": 463,
+          "share": 1.7
+        },
+        {
+          "name": "The Olmstead Condo % Bhs",
+          "units": 414,
+          "share": 1.5
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Upper East Side-Lenox Hill-Roosevelt Island",
+      "slug": "upper-east-side-lenox-hill-roosevelt-island",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN0801"
+      ],
+      "totalUnits": 60433,
+      "hhi": 214,
+      "cr4": 19.6,
+      "topLandlords": [
+        {
+          "name": "Riverwalk 8 Affordable",
+          "units": 8018,
+          "share": 13.3
+        },
+        {
+          "name": "Roosevelt Island Operating",
+          "units": 1345,
+          "share": 2.2
+        },
+        {
+          "name": "78/79 York",
+          "units": 1344,
+          "share": 2.2
+        },
+        {
+          "name": "Stahl York Ave",
+          "units": 1125,
+          "share": 1.9
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Upper East Side-Carnegie Hill",
+      "slug": "upper-east-side-carnegie-hill",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN0802"
+      ],
+      "totalUnits": 40016,
+      "hhi": 20,
+      "cr4": 3.9,
+      "topLandlords": [
+        {
+          "name": "Drmbre-85 Fee",
+          "units": 430,
+          "share": 1.1
+        },
+        {
+          "name": "Name Not ON File",
+          "units": 423,
+          "share": 1.1
+        },
+        {
+          "name": "69th Tenants",
+          "units": 378,
+          "share": 0.9
+        },
+        {
+          "name": "12 East 86th Streetllc",
+          "units": 343,
+          "share": 0.9
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Upper East Side-Yorkville",
+      "slug": "upper-east-side-yorkville",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN0803"
+      ],
+      "totalUnits": 50815,
+      "hhi": 37,
+      "cr4": 7.1,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 1173,
+          "share": 2.3
+        },
+        {
+          "name": "MF OF New York",
+          "units": 1092,
+          "share": 2.1
+        },
+        {
+          "name": "CF E 86",
+          "units": 692,
+          "share": 1.4
+        },
+        {
+          "name": "Ruppert",
+          "units": 650,
+          "share": 1.3
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Morningside Heights",
+      "slug": "morningside-heights",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN0901"
+      ],
+      "totalUnits": 16685,
+      "hhi": 995,
+      "cr4": 49,
+      "topLandlords": [
+        {
+          "name": "Trustees OF Columbia University",
+          "units": 4659,
+          "share": 27.9
+        },
+        {
+          "name": "Nyc Authority",
+          "units": 1941,
+          "share": 11.6
+        },
+        {
+          "name": "Morningside Hgts",
+          "units": 982,
+          "share": 5.9
+        },
+        {
+          "name": "Teachers College Columbia Univerity",
+          "units": 601,
+          "share": 3.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Manhattanville-West Harlem",
+      "slug": "manhattanville-west-harlem",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN0902"
+      ],
+      "totalUnits": 8199,
+      "hhi": 342,
+      "cr4": 27.7,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 1272,
+          "share": 15.5
+        },
+        {
+          "name": "1440 Owner",
+          "units": 490,
+          "share": 6
+        },
+        {
+          "name": "Nyc Preservation And",
+          "units": 263,
+          "share": 3.2
+        },
+        {
+          "name": "HP Harlem Portfolio",
+          "units": 247,
+          "share": 3
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Hamilton Heights-Sugar Hill",
+      "slug": "hamilton-heights-sugar-hill",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN0903"
+      ],
+      "totalUnits": 21637,
+      "hhi": 30,
+      "cr4": 5.1,
+      "topLandlords": [
+        {
+          "name": "Riverview Towers",
+          "units": 369,
+          "share": 1.7
+        },
+        {
+          "name": "Nyc Preservation And",
+          "units": 264,
+          "share": 1.2
+        },
+        {
+          "name": "620 W 153",
+          "units": 238,
+          "share": 1.1
+        },
+        {
+          "name": "Ecdo Community",
+          "units": 237,
+          "share": 1.1
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Harlem (South)",
+      "slug": "harlem-south",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN1001"
+      ],
+      "totalUnits": 22789,
+      "hhi": 45,
+      "cr4": 8.4,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 915,
+          "share": 4
+        },
+        {
+          "name": "HP Marcus Garvey Fun D",
+          "units": 507,
+          "share": 2.2
+        },
+        {
+          "name": "Towers ON The PK Condo",
+          "units": 256,
+          "share": 1.1
+        },
+        {
+          "name": "Adc/ennis Francis II Fund",
+          "units": 247,
+          "share": 1.1
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Harlem (North)",
+      "slug": "harlem-north",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN1002"
+      ],
+      "totalUnits": 39103,
+      "hhi": 309,
+      "cr4": 26.8,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 6093,
+          "share": 15.6
+        },
+        {
+          "name": "HP Savoy Park II Fun D",
+          "units": 1872,
+          "share": 4.8
+        },
+        {
+          "name": "Esplanade Gardens",
+          "units": 1809,
+          "share": 4.6
+        },
+        {
+          "name": "Harlem River Preservation",
+          "units": 689,
+          "share": 1.8
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "East Harlem (South)",
+      "slug": "east-harlem-south",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN1101"
+      ],
+      "totalUnits": 28460,
+      "hhi": 692,
+      "cr4": 37.6,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 6912,
+          "share": 24.3
+        },
+        {
+          "name": "1199",
+          "units": 1594,
+          "share": 5.6
+        },
+        {
+          "name": "Nyc",
+          "units": 1267,
+          "share": 4.5
+        },
+        {
+          "name": "Franklin Plaza Apartments",
+          "units": 936,
+          "share": 3.3
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "East Harlem (North)",
+      "slug": "east-harlem-north",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN1102"
+      ],
+      "totalUnits": 31191,
+      "hhi": 870,
+      "cr4": 36.8,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 8983,
+          "share": 28.8
+        },
+        {
+          "name": "Riverton Square Fund Corporati",
+          "units": 1120,
+          "share": 3.6
+        },
+        {
+          "name": "Riverbend",
+          "units": 958,
+          "share": 3.1
+        },
+        {
+          "name": "Miles Parker Owner F Und",
+          "units": 405,
+          "share": 1.3
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Washington Heights (South)",
+      "slug": "washington-heights-south",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN1201"
+      ],
+      "totalUnits": 28316,
+      "hhi": 52,
+      "cr4": 10.5,
+      "topLandlords": [
+        {
+          "name": "Royal Charter",
+          "units": 970,
+          "share": 3.4
+        },
+        {
+          "name": "HP Rachel Bridge Fun D",
+          "units": 960,
+          "share": 3.4
+        },
+        {
+          "name": "Pact Renaissance Collaborative",
+          "units": 603,
+          "share": 2.1
+        },
+        {
+          "name": "158th Street Riverside Drive Hsg Compan Y",
+          "units": 434,
+          "share": 1.5
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Washington Heights (North)",
+      "slug": "washington-heights-north",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN1202"
+      ],
+      "totalUnits": 30046,
+      "hhi": 31,
+      "cr4": 5.4,
+      "topLandlords": [
+        {
+          "name": "Castle Village Ownrs",
+          "units": 594,
+          "share": 2
+        },
+        {
+          "name": "Hudson View Gardens",
+          "units": 353,
+          "share": 1.2
+        },
+        {
+          "name": "Fort Tryon Apartments",
+          "units": 350,
+          "share": 1.2
+        },
+        {
+          "name": "Gvs IV",
+          "units": 339,
+          "share": 1.1
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Inwood",
+      "slug": "inwood",
+      "borough": "Manhattan",
+      "fips": "36061",
+      "ntaCodes": [
+        "MN1203"
+      ],
+      "totalUnits": 18045,
+      "hhi": 133,
+      "cr4": 17.6,
+      "topLandlords": [
+        {
+          "name": "HP Sherman Creek . Fund",
+          "units": 1222,
+          "share": 6.8
+        },
+        {
+          "name": "Nyc Authority",
+          "units": 1167,
+          "share": 6.5
+        },
+        {
+          "name": "West 207 Grocery Owners",
+          "units": 474,
+          "share": 2.6
+        },
+        {
+          "name": "Park Terr",
+          "units": 317,
+          "share": 1.8
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Astoria (North)-Ditmars-Steinway",
+      "slug": "astoria-north-ditmars-steinway",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0101"
+      ],
+      "totalUnits": 21870,
+      "hhi": 49,
+      "cr4": 12.6,
+      "topLandlords": [
+        {
+          "name": "Name Not ON File",
+          "units": 888,
+          "share": 4.1
+        },
+        {
+          "name": "Cental Astoria",
+          "units": 762,
+          "share": 3.5
+        },
+        {
+          "name": "Acropolis",
+          "units": 617,
+          "share": 2.8
+        },
+        {
+          "name": "Marine Terrace Fund",
+          "units": 497,
+          "share": 2.3
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Old Astoria-Hallets Point",
+      "slug": "old-astoria-hallets-point",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0102"
+      ],
+      "totalUnits": 11057,
+      "hhi": 184,
+      "cr4": 21.4,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 1104,
+          "share": 10
+        },
+        {
+          "name": "Astoria West",
+          "units": 557,
+          "share": 5
+        },
+        {
+          "name": "Shore Towers Condomin",
+          "units": 409,
+          "share": 3.7
+        },
+        {
+          "name": "Halletts Building 3 Spe",
+          "units": 294,
+          "share": 2.7
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Astoria (Central)",
+      "slug": "astoria-central",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0103"
+      ],
+      "totalUnits": 26917,
+      "hhi": 12,
+      "cr4": 2.9,
+      "topLandlords": [
+        {
+          "name": "Catherin Sheridan Fund",
+          "units": 241,
+          "share": 0.9
+        },
+        {
+          "name": "George T. Douris",
+          "units": 184,
+          "share": 0.7
+        },
+        {
+          "name": "29th Street Pvp",
+          "units": 182,
+          "share": 0.7
+        },
+        {
+          "name": "Astoria 35",
+          "units": 172,
+          "share": 0.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Astoria (East)-Woodside (North)",
+      "slug": "astoria-east-woodside-north",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0104"
+      ],
+      "totalUnits": 17687,
+      "hhi": 100,
+      "cr4": 15.9,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 1357,
+          "share": 7.7
+        },
+        {
+          "name": "Boulevard Gardens Owners Douglas Elliman Manag",
+          "units": 966,
+          "share": 5.5
+        },
+        {
+          "name": "44-01 Northern Owner",
+          "units": 354,
+          "share": 2
+        },
+        {
+          "name": "Cactus 36-20 Steinway",
+          "units": 143,
+          "share": 0.8
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Queensbridge-Ravenswood-Dutch Kills",
+      "slug": "queensbridge-ravenswood-dutch-kills",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0105"
+      ],
+      "totalUnits": 17787,
+      "hhi": 914,
+      "cr4": 40.7,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 5123,
+          "share": 28.8
+        },
+        {
+          "name": "Qpp",
+          "units": 958,
+          "share": 5.4
+        },
+        {
+          "name": "Queensview",
+          "units": 726,
+          "share": 4.1
+        },
+        {
+          "name": "30-02",
+          "units": 428,
+          "share": 2.4
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Long Island City-Hunters Point",
+      "slug": "long-island-city-hunters-point",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0201"
+      ],
+      "totalUnits": 51088,
+      "hhi": 1854,
+      "cr4": 50.4,
+      "topLandlords": [
+        {
+          "name": "Mps Two",
+          "units": 21620,
+          "share": 42.3
+        },
+        {
+          "name": "Lic Owner",
+          "units": 1871,
+          "share": 3.7
+        },
+        {
+          "name": "South Point Fund Cor Poration",
+          "units": 1132,
+          "share": 2.2
+        },
+        {
+          "name": "G&m 2",
+          "units": 1122,
+          "share": 2.2
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Sunnyside",
+      "slug": "sunnyside",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0202"
+      ],
+      "totalUnits": 22079,
+      "hhi": 48,
+      "cr4": 9.6,
+      "topLandlords": [
+        {
+          "name": "Celtic Park Owners Inc3",
+          "units": 754,
+          "share": 3.4
+        },
+        {
+          "name": "Sunnyside Garden Apartments",
+          "units": 472,
+          "share": 2.1
+        },
+        {
+          "name": "Cosmopolitan Iii",
+          "units": 468,
+          "share": 2.1
+        },
+        {
+          "name": "51 52 Tennants",
+          "units": 427,
+          "share": 1.9
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Woodside",
+      "slug": "woodside",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0203"
+      ],
+      "totalUnits": 18616,
+      "hhi": 46,
+      "cr4": 10.2,
+      "topLandlords": [
+        {
+          "name": "Nyc",
+          "units": 706,
+          "share": 3.8
+        },
+        {
+          "name": "QB Owner",
+          "units": 478,
+          "share": 2.6
+        },
+        {
+          "name": "Berkeley Coop Towers Sec 2",
+          "units": 442,
+          "share": 2.4
+        },
+        {
+          "name": "Big Six Towers",
+          "units": 282,
+          "share": 1.5
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Jackson Heights",
+      "slug": "jackson-heights",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0301"
+      ],
+      "totalUnits": 35132,
+      "hhi": 26,
+      "cr4": 4.3,
+      "topLandlords": [
+        {
+          "name": "Northridge -op Section II",
+          "units": 396,
+          "share": 1.1
+        },
+        {
+          "name": "88-09 Northern Blvd",
+          "units": 394,
+          "share": 1.1
+        },
+        {
+          "name": "69-70",
+          "units": 370,
+          "share": 1.1
+        },
+        {
+          "name": "Southridge Coop Section Iii",
+          "units": 360,
+          "share": 1
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "East Elmhurst",
+      "slug": "east-elmhurst",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0302"
+      ],
+      "totalUnits": 8732,
+      "hhi": 10,
+      "cr4": 4.5,
+      "topLandlords": [
+        {
+          "name": "Eastern Emerald",
+          "units": 126,
+          "share": 1.4
+        },
+        {
+          "name": "Astoria Towers II Devel. Fund Rporat",
+          "units": 106,
+          "share": 1.2
+        },
+        {
+          "name": "Madison Court Fund C Orporation",
+          "units": 84,
+          "share": 1
+        },
+        {
+          "name": "32-15/25 93rd Street",
+          "units": 78,
+          "share": 0.9
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "North Corona",
+      "slug": "north-corona",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0303"
+      ],
+      "totalUnits": 9892,
+      "hhi": 20,
+      "cr4": 6.1,
+      "topLandlords": [
+        {
+          "name": "Dorie Miller",
+          "units": 301,
+          "share": 3
+        },
+        {
+          "name": "The Jonathan MM",
+          "units": 132,
+          "share": 1.3
+        },
+        {
+          "name": "Corona Apartments",
+          "units": 93,
+          "share": 0.9
+        },
+        {
+          "name": "Brg 9610",
+          "units": 76,
+          "share": 0.8
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Elmhurst",
+      "slug": "elmhurst",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0401"
+      ],
+      "totalUnits": 34515,
+      "hhi": 21,
+      "cr4": 5.1,
+      "topLandlords": [
+        {
+          "name": "Elmback Owners",
+          "units": 565,
+          "share": 1.6
+        },
+        {
+          "name": "Name Not ON File",
+          "units": 483,
+          "share": 1.4
+        },
+        {
+          "name": "QB",
+          "units": 371,
+          "share": 1.1
+        },
+        {
+          "name": "King Edward",
+          "units": 353,
+          "share": 1
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Corona",
+      "slug": "corona",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0402"
+      ],
+      "totalUnits": 20452,
+      "hhi": 39,
+      "cr4": 5.5,
+      "topLandlords": [
+        {
+          "name": "Sherwood Village Own/",
+          "units": 345,
+          "share": 1.7
+        },
+        {
+          "name": "Queenswood Fund Oration",
+          "units": 296,
+          "share": 1.4
+        },
+        {
+          "name": "Argentine Leasing Limited",
+          "units": 243,
+          "share": 1.2
+        },
+        {
+          "name": "Brazilia Leasing",
+          "units": 238,
+          "share": 1.2
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Maspeth",
+      "slug": "maspeth",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0501"
+      ],
+      "totalUnits": 15509,
+      "hhi": 10,
+      "cr4": 3.8,
+      "topLandlords": [
+        {
+          "name": "Ridgewood",
+          "units": 450,
+          "share": 2.9
+        },
+        {
+          "name": "Jangla Rlty",
+          "units": 60,
+          "share": 0.4
+        },
+        {
+          "name": "Horizon",
+          "units": 44,
+          "share": 0.3
+        },
+        {
+          "name": "Name Not ON File",
+          "units": 43,
+          "share": 0.3
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Ridgewood",
+      "slug": "ridgewood",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0502"
+      ],
+      "totalUnits": 25390,
+      "hhi": 3,
+      "cr4": 1.5,
+      "topLandlords": [
+        {
+          "name": "176 Woodward Ave Lessee",
+          "units": 125,
+          "share": 0.5
+        },
+        {
+          "name": "Adar Usa",
+          "units": 97,
+          "share": 0.4
+        },
+        {
+          "name": "1614 Madison",
+          "units": 90,
+          "share": 0.4
+        },
+        {
+          "name": "69-01",
+          "units": 81,
+          "share": 0.3
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Glendale",
+      "slug": "glendale",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0503"
+      ],
+      "totalUnits": 13175,
+      "hhi": 7,
+      "cr4": 3.9,
+      "topLandlords": [
+        {
+          "name": "Forest View Crescent",
+          "units": 241,
+          "share": 1.8
+        },
+        {
+          "name": "Rutledge Apartments",
+          "units": 112,
+          "share": 0.9
+        },
+        {
+          "name": "Glen Bay Rlty",
+          "units": 92,
+          "share": 0.7
+        },
+        {
+          "name": "Selfhelp Glendale . Fund Comp Any",
+          "units": 72,
+          "share": 0.5
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Middle Village",
+      "slug": "middle-village",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0504"
+      ],
+      "totalUnits": 13564,
+      "hhi": 39,
+      "cr4": 8.5,
+      "topLandlords": [
+        {
+          "name": "Rego Gardens Owners",
+          "units": 792,
+          "share": 5.8
+        },
+        {
+          "name": "Fleet Street",
+          "units": 189,
+          "share": 1.4
+        },
+        {
+          "name": "62-98",
+          "units": 92,
+          "share": 0.7
+        },
+        {
+          "name": "Name Not ON File",
+          "units": 79,
+          "share": 0.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Rego Park",
+      "slug": "rego-park",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0601"
+      ],
+      "totalUnits": 14131,
+      "hhi": 169,
+      "cr4": 20.3,
+      "topLandlords": [
+        {
+          "name": "Park City 3 & 4 Apts",
+          "units": 1094,
+          "share": 7.7
+        },
+        {
+          "name": "Park City Estates Tenants",
+          "units": 912,
+          "share": 6.5
+        },
+        {
+          "name": "Park Plz Owners",
+          "units": 445,
+          "share": 3.1
+        },
+        {
+          "name": "62-60 99th Street Owner II",
+          "units": 419,
+          "share": 3
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Forest Hills",
+      "slug": "forest-hills",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0602"
+      ],
+      "totalUnits": 43456,
+      "hhi": 42,
+      "cr4": 7,
+      "topLandlords": [
+        {
+          "name": "Bpp Parker Tower Owner",
+          "units": 1327,
+          "share": 3.1
+        },
+        {
+          "name": "Forest Hills South Owners",
+          "units": 607,
+          "share": 1.4
+        },
+        {
+          "name": "Gerard Owners",
+          "units": 563,
+          "share": 1.3
+        },
+        {
+          "name": "Queens Portfolio V",
+          "units": 538,
+          "share": 1.2
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "College Point",
+      "slug": "college-point",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0701"
+      ],
+      "totalUnits": 10010,
+      "hhi": 9,
+      "cr4": 4.8,
+      "topLandlords": [
+        {
+          "name": "Name Not ON File",
+          "units": 172,
+          "share": 1.7
+        },
+        {
+          "name": "Waterfront Resort",
+          "units": 134,
+          "share": 1.3
+        },
+        {
+          "name": "Silverpointe Condo",
+          "units": 88,
+          "share": 0.9
+        },
+        {
+          "name": "Riverview AT College Point Condo Iii",
+          "units": 82,
+          "share": 0.8
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Whitestone-Beechhurst",
+      "slug": "whitestone-beechhurst",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0702"
+      ],
+      "totalUnits": 10747,
+      "hhi": 110,
+      "cr4": 16.1,
+      "topLandlords": [
+        {
+          "name": "LE Havre Owners",
+          "units": 1024,
+          "share": 9.5
+        },
+        {
+          "name": "Cryder Point Owners",
+          "units": 324,
+          "share": 3
+        },
+        {
+          "name": "Cryder House",
+          "units": 237,
+          "share": 2.2
+        },
+        {
+          "name": "Clearview Gardens Sixth",
+          "units": 140,
+          "share": 1.3
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Bay Terrace-Clearview",
+      "slug": "bay-terrace-clearview",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0703"
+      ],
+      "totalUnits": 10993,
+      "hhi": 195,
+      "cr4": 17.8,
+      "topLandlords": [
+        {
+          "name": "The Bay Club Condo",
+          "units": 1037,
+          "share": 9.4
+        },
+        {
+          "name": "Bell Apartments Owners",
+          "units": 310,
+          "share": 2.8
+        },
+        {
+          "name": "Clearview Gardens Sixth",
+          "units": 308,
+          "share": 2.8
+        },
+        {
+          "name": "Baybridge Condo Iii",
+          "units": 302,
+          "share": 2.7
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Murray Hill-Broadway Flushing",
+      "slug": "murray-hill-broadway-flushing",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0704"
+      ],
+      "totalUnits": 21300,
+      "hhi": 34,
+      "cr4": 7.5,
+      "topLandlords": [
+        {
+          "name": "Mitchell Gardens #3 Cooperative",
+          "units": 504,
+          "share": 2.4
+        },
+        {
+          "name": "Mitchell Gardens #2 Coop",
+          "units": 420,
+          "share": 2
+        },
+        {
+          "name": "Linden Hill NO 2 Cooperative",
+          "units": 384,
+          "share": 1.8
+        },
+        {
+          "name": "Mid-island Limited",
+          "units": 279,
+          "share": 1.3
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "East Flushing",
+      "slug": "east-flushing",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0705"
+      ],
+      "totalUnits": 11142,
+      "hhi": 49,
+      "cr4": 11,
+      "topLandlords": [
+        {
+          "name": "Flushing Preservation , AS Nominee",
+          "units": 506,
+          "share": 4.5
+        },
+        {
+          "name": "45th Avenue",
+          "units": 289,
+          "share": 2.6
+        },
+        {
+          "name": "Stratton Owners",
+          "units": 252,
+          "share": 2.3
+        },
+        {
+          "name": "Sanford Plaza Apartment",
+          "units": 180,
+          "share": 1.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Queensboro Hill",
+      "slug": "queensboro-hill",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0706"
+      ],
+      "totalUnits": 6928,
+      "hhi": 4,
+      "cr4": 1.8,
+      "topLandlords": [
+        {
+          "name": "133-01 Booth Memorial Ave",
+          "units": 36,
+          "share": 0.5
+        },
+        {
+          "name": "Name Not ON File",
+          "units": 34,
+          "share": 0.5
+        },
+        {
+          "name": "Trosant",
+          "units": 28,
+          "share": 0.4
+        },
+        {
+          "name": "153-01 HH",
+          "units": 26,
+          "share": 0.4
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Flushing-Willets Point",
+      "slug": "flushing-willets-point",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0707"
+      ],
+      "totalUnits": 30106,
+      "hhi": 56,
+      "cr4": 9.7,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 917,
+          "share": 3
+        },
+        {
+          "name": "Nyc Preservation And",
+          "units": 881,
+          "share": 2.9
+        },
+        {
+          "name": "Carlyle Three",
+          "units": 569,
+          "share": 1.9
+        },
+        {
+          "name": "Flushing Point",
+          "units": 553,
+          "share": 1.8
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Kew Gardens Hills",
+      "slug": "kew-gardens-hills",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0801"
+      ],
+      "totalUnits": 13511,
+      "hhi": 244,
+      "cr4": 23.9,
+      "topLandlords": [
+        {
+          "name": "Kew Gardens Hills",
+          "units": 1268,
+          "share": 9.4
+        },
+        {
+          "name": "Hyde Park Owners",
+          "units": 746,
+          "share": 5.5
+        },
+        {
+          "name": "Parkway Village Equities",
+          "units": 675,
+          "share": 5
+        },
+        {
+          "name": "Regency Gardens Apartment",
+          "units": 542,
+          "share": 4
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Pomonok-Electchester-Hillcrest",
+      "slug": "pomonok-electchester-hillcrest",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0802"
+      ],
+      "totalUnits": 12591,
+      "hhi": 378,
+      "cr4": 31.3,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 2080,
+          "share": 16.5
+        },
+        {
+          "name": "Third",
+          "units": 793,
+          "share": 6.3
+        },
+        {
+          "name": "Second",
+          "units": 684,
+          "share": 5.4
+        },
+        {
+          "name": "Electchester 1 Hous C",
+          "units": 383,
+          "share": 3
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Fresh Meadows-Utopia",
+      "slug": "fresh-meadows-utopia",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0803"
+      ],
+      "totalUnits": 8128,
+      "hhi": 1650,
+      "cr4": 44.9,
+      "topLandlords": [
+        {
+          "name": "Queens Fresh Meadows",
+          "units": 3287,
+          "share": 40.4
+        },
+        {
+          "name": "Meadowlark Gardens Owners",
+          "units": 288,
+          "share": 3.5
+        },
+        {
+          "name": "FM",
+          "units": 39,
+          "share": 0.5
+        },
+        {
+          "name": "High Meadows Tenants",
+          "units": 37,
+          "share": 0.5
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Jamaica Estates-Holliswood",
+      "slug": "jamaica-estates-holliswood",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0804"
+      ],
+      "totalUnits": 9030,
+      "hhi": 220,
+      "cr4": 21.7,
+      "topLandlords": [
+        {
+          "name": "Cunningham Heights",
+          "units": 1056,
+          "share": 11.7
+        },
+        {
+          "name": "175-20 Wexford Terrace Owners",
+          "units": 342,
+          "share": 3.8
+        },
+        {
+          "name": "8710 204th Street LL",
+          "units": 296,
+          "share": 3.3
+        },
+        {
+          "name": "Holliswood Owners",
+          "units": 264,
+          "share": 2.9
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Jamaica Hills-Briarwood",
+      "slug": "jamaica-hills-briarwood",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0805"
+      ],
+      "totalUnits": 13649,
+      "hhi": 64,
+      "cr4": 10.4,
+      "topLandlords": [
+        {
+          "name": "Briarwood",
+          "units": 514,
+          "share": 3.8
+        },
+        {
+          "name": "HP Briarwood Fund Mpany",
+          "units": 328,
+          "share": 2.4
+        },
+        {
+          "name": "Briarwood Gardens #3",
+          "units": 291,
+          "share": 2.1
+        },
+        {
+          "name": "Arlington Owners",
+          "units": 282,
+          "share": 2.1
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Kew Gardens",
+      "slug": "kew-gardens",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0901"
+      ],
+      "totalUnits": 11099,
+      "hhi": 79,
+      "cr4": 10.1,
+      "topLandlords": [
+        {
+          "name": "Towers Owners",
+          "units": 377,
+          "share": 3.4
+        },
+        {
+          "name": "Hampton Court Owners",
+          "units": 320,
+          "share": 2.9
+        },
+        {
+          "name": "Park Lane South Owners",
+          "units": 213,
+          "share": 1.9
+        },
+        {
+          "name": "Cadillac Leasing Limited",
+          "units": 210,
+          "share": 1.9
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Richmond Hill",
+      "slug": "richmond-hill",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0902"
+      ],
+      "totalUnits": 9884,
+      "hhi": 10,
+      "cr4": 3.6,
+      "topLandlords": [
+        {
+          "name": "Hillside Jamaica Fun D",
+          "units": 117,
+          "share": 1.2
+        },
+        {
+          "name": "Park Lane South Condo",
+          "units": 87,
+          "share": 0.9
+        },
+        {
+          "name": "Karan",
+          "units": 77,
+          "share": 0.8
+        },
+        {
+          "name": "Framingham Apt",
+          "units": 73,
+          "share": 0.7
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "South Richmond Hill",
+      "slug": "south-richmond-hill",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0903"
+      ],
+      "totalUnits": 6456,
+      "hhi": 7,
+      "cr4": 3.1,
+      "topLandlords": [
+        {
+          "name": "114 Atlantic",
+          "units": 60,
+          "share": 0.9
+        },
+        {
+          "name": "Surjit & Swarn",
+          "units": 58,
+          "share": 0.9
+        },
+        {
+          "name": "97th Avenue",
+          "units": 46,
+          "share": 0.7
+        },
+        {
+          "name": "Nagendeven",
+          "units": 36,
+          "share": 0.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Ozone Park (North)",
+      "slug": "ozone-park-north",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0904"
+      ],
+      "totalUnits": 7268,
+      "hhi": 5,
+      "cr4": 1.8,
+      "topLandlords": [
+        {
+          "name": "95th ST",
+          "units": 43,
+          "share": 0.6
+        },
+        {
+          "name": "The Kaybern Court Condominium",
+          "units": 40,
+          "share": 0.6
+        },
+        {
+          "name": "Dom",
+          "units": 24,
+          "share": 0.3
+        },
+        {
+          "name": "Tummolo Mauro",
+          "units": 24,
+          "share": 0.3
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Woodhaven",
+      "slug": "woodhaven",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN0905"
+      ],
+      "totalUnits": 12007,
+      "hhi": 25,
+      "cr4": 8.3,
+      "topLandlords": [
+        {
+          "name": "Forest Park Coop Sec 1",
+          "units": 390,
+          "share": 3.2
+        },
+        {
+          "name": "Forest Park Coop Sec2",
+          "units": 288,
+          "share": 2.4
+        },
+        {
+          "name": "Forest Park Cooperative ., Section 3",
+          "units": 190,
+          "share": 1.6
+        },
+        {
+          "name": "Woodhaven 88",
+          "units": 127,
+          "share": 1.1
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "South Ozone Park",
+      "slug": "south-ozone-park",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN1001"
+      ],
+      "totalUnits": 21686,
+      "hhi": 1,
+      "cr4": 0.9,
+      "topLandlords": [
+        {
+          "name": "103 35 120th ST",
+          "units": 59,
+          "share": 0.3
+        },
+        {
+          "name": "Spartan",
+          "units": 48,
+          "share": 0.2
+        },
+        {
+          "name": "Irason",
+          "units": 42,
+          "share": 0.2
+        },
+        {
+          "name": "Dale Hughes",
+          "units": 36,
+          "share": 0.2
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Ozone Park",
+      "slug": "ozone-park",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN1002"
+      ],
+      "totalUnits": 7291,
+      "hhi": 13,
+      "cr4": 5.4,
+      "topLandlords": [
+        {
+          "name": "Balsam Village 1",
+          "units": 192,
+          "share": 2.6
+        },
+        {
+          "name": "Name Not ON File",
+          "units": 80,
+          "share": 1.1
+        },
+        {
+          "name": "Balsam Village 3",
+          "units": 76,
+          "share": 1
+        },
+        {
+          "name": "Tudor Village Condo",
+          "units": 45,
+          "share": 0.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Howard Beach-Lindenwood",
+      "slug": "howard-beach-lindenwood",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN1003"
+      ],
+      "totalUnits": 10618,
+      "hhi": 45,
+      "cr4": 6.8,
+      "topLandlords": [
+        {
+          "name": "Lindenwood Gardens Cooperative",
+          "units": 192,
+          "share": 1.8
+        },
+        {
+          "name": "Delkap",
+          "units": 184,
+          "share": 1.7
+        },
+        {
+          "name": "Lindenwood Owners",
+          "units": 173,
+          "share": 1.6
+        },
+        {
+          "name": "Rubin, William",
+          "units": 172,
+          "share": 1.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Auburndale",
+      "slug": "auburndale",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN1101"
+      ],
+      "totalUnits": 12508,
+      "hhi": 9,
+      "cr4": 4.7,
+      "topLandlords": [
+        {
+          "name": "Name Not ON File",
+          "units": 189,
+          "share": 1.5
+        },
+        {
+          "name": "Baydale Tenants",
+          "units": 188,
+          "share": 1.5
+        },
+        {
+          "name": "Quickfoot",
+          "units": 109,
+          "share": 0.9
+        },
+        {
+          "name": "Beechwood Gardens OW",
+          "units": 96,
+          "share": 0.8
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Bayside",
+      "slug": "bayside",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN1102"
+      ],
+      "totalUnits": 13074,
+      "hhi": 20,
+      "cr4": 7.5,
+      "topLandlords": [
+        {
+          "name": "220-55 46 Ave Owners",
+          "units": 314,
+          "share": 2.4
+        },
+        {
+          "name": "Rocky Hill Tenants",
+          "units": 234,
+          "share": 1.8
+        },
+        {
+          "name": "Shr Apartments",
+          "units": 219,
+          "share": 1.7
+        },
+        {
+          "name": "Jeffrey Gardens Apartment",
+          "units": 213,
+          "share": 1.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Douglaston-Little Neck",
+      "slug": "douglaston-little-neck",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN1103"
+      ],
+      "totalUnits": 9930,
+      "hhi": 90,
+      "cr4": 15.5,
+      "topLandlords": [
+        {
+          "name": "Deepdale Gardens Second",
+          "units": 456,
+          "share": 4.6
+        },
+        {
+          "name": "Deepdale Gardens Third",
+          "units": 388,
+          "share": 3.9
+        },
+        {
+          "name": "Deepdale Gardens First",
+          "units": 360,
+          "share": 3.6
+        },
+        {
+          "name": "Sol Goldman Investme",
+          "units": 340,
+          "share": 3.4
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Oakland Gardens-Hollis Hills",
+      "slug": "oakland-gardens-hollis-hills",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN1104"
+      ],
+      "totalUnits": 10326,
+      "hhi": 546,
+      "cr4": 39.1,
+      "topLandlords": [
+        {
+          "name": "WP Owners",
+          "units": 1870,
+          "share": 18.1
+        },
+        {
+          "name": "Wotc Tenants",
+          "units": 892,
+          "share": 8.6
+        },
+        {
+          "name": "Mid Queens",
+          "units": 676,
+          "share": 6.5
+        },
+        {
+          "name": "Bell Park Gardens",
+          "units": 601,
+          "share": 5.8
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Jamaica",
+      "slug": "jamaica",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN1201"
+      ],
+      "totalUnits": 23810,
+      "hhi": 72,
+      "cr4": 10.3,
+      "topLandlords": [
+        {
+          "name": "88th Avenue Owner",
+          "units": 689,
+          "share": 2.9
+        },
+        {
+          "name": "90ninety",
+          "units": 614,
+          "share": 2.6
+        },
+        {
+          "name": "Archer Towers Phase I",
+          "units": 605,
+          "share": 2.5
+        },
+        {
+          "name": "Land & Sea",
+          "units": 543,
+          "share": 2.3
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "South Jamaica",
+      "slug": "south-jamaica",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN1202"
+      ],
+      "totalUnits": 12295,
+      "hhi": 103,
+      "cr4": 13.8,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 1184,
+          "share": 9.6
+        },
+        {
+          "name": "Linden 166 Fund Comp Any",
+          "units": 267,
+          "share": 2.2
+        },
+        {
+          "name": "109-15 Merrick Blvd",
+          "units": 133,
+          "share": 1.1
+        },
+        {
+          "name": "Merrick Park Gardens Coop Apts",
+          "units": 116,
+          "share": 0.9
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Baisley Park",
+      "slug": "baisley-park",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN1203"
+      ],
+      "totalUnits": 13041,
+      "hhi": 56,
+      "cr4": 12.4,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 851,
+          "share": 6.5
+        },
+        {
+          "name": "Crowne",
+          "units": 335,
+          "share": 2.6
+        },
+        {
+          "name": "Cedar Manor Mut Hous",
+          "units": 215,
+          "share": 1.6
+        },
+        {
+          "name": "Baisley",
+          "units": 210,
+          "share": 1.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Springfield Gardens (North)-Rochdale Village",
+      "slug": "springfield-gardens-north-rochdale-village",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN1204"
+      ],
+      "totalUnits": 12262,
+      "hhi": 2292,
+      "cr4": 51.7,
+      "topLandlords": [
+        {
+          "name": "Rochdale Village",
+          "units": 5860,
+          "share": 47.8
+        },
+        {
+          "name": "Kennedy Plaza",
+          "units": 206,
+          "share": 1.7
+        },
+        {
+          "name": "Northeastern Conf. House Annex D EV Fund",
+          "units": 159,
+          "share": 1.3
+        },
+        {
+          "name": "Northeastern Conference House",
+          "units": 111,
+          "share": 0.9
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "St. Albans",
+      "slug": "st-albans",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN1205"
+      ],
+      "totalUnits": 15539,
+      "hhi": 5,
+      "cr4": 3.4,
+      "topLandlords": [
+        {
+          "name": "Portia",
+          "units": 214,
+          "share": 1.4
+        },
+        {
+          "name": "HP Montauk Apartments Developmen T Fund Com",
+          "units": 145,
+          "share": 0.9
+        },
+        {
+          "name": "Bns",
+          "units": 89,
+          "share": 0.6
+        },
+        {
+          "name": "American Gardens Owners",
+          "units": 80,
+          "share": 0.5
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Hollis",
+      "slug": "hollis",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN1206"
+      ],
+      "totalUnits": 7433,
+      "hhi": 58,
+      "cr4": 12,
+      "topLandlords": [
+        {
+          "name": "Rdh Crystal Gardens",
+          "units": 324,
+          "share": 4.4
+        },
+        {
+          "name": "Hollis Real",
+          "units": 314,
+          "share": 4.2
+        },
+        {
+          "name": "BR Jamaica",
+          "units": 133,
+          "share": 1.8
+        },
+        {
+          "name": "Harold Stark 193-20",
+          "units": 120,
+          "share": 1.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Glen Oaks-Floral Park-New Hyde Park",
+      "slug": "glen-oaks-floral-park-new-hyde-park",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN1301"
+      ],
+      "totalUnits": 9684,
+      "hhi": 966,
+      "cr4": 49.7,
+      "topLandlords": [
+        {
+          "name": "Glen Oaks Village Owners",
+          "units": 2328,
+          "share": 24
+        },
+        {
+          "name": "North Shore Towers Apartments",
+          "units": 1844,
+          "share": 19
+        },
+        {
+          "name": "Floral Park Ownrs",
+          "units": 400,
+          "share": 4.1
+        },
+        {
+          "name": "GF Grand Central",
+          "units": 240,
+          "share": 2.5
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Bellerose",
+      "slug": "bellerose",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN1302"
+      ],
+      "totalUnits": 8552,
+      "hhi": 99,
+      "cr4": 17.3,
+      "topLandlords": [
+        {
+          "name": "Glen Oaks Village Owners",
+          "units": 576,
+          "share": 6.7
+        },
+        {
+          "name": "United Veterans Mutual",
+          "units": 500,
+          "share": 5.8
+        },
+        {
+          "name": "United Veteran Mutual",
+          "units": 350,
+          "share": 4.1
+        },
+        {
+          "name": "Bellerose Senior House",
+          "units": 51,
+          "share": 0.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Queens Village",
+      "slug": "queens-village",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN1303"
+      ],
+      "totalUnits": 15475,
+      "hhi": 6,
+      "cr4": 3.7,
+      "topLandlords": [
+        {
+          "name": "Diversified Equities",
+          "units": 180,
+          "share": 1.2
+        },
+        {
+          "name": "Braddock Garden Apts",
+          "units": 154,
+          "share": 1
+        },
+        {
+          "name": "Tyh Queens Village",
+          "units": 127,
+          "share": 0.8
+        },
+        {
+          "name": "Gold Seal",
+          "units": 119,
+          "share": 0.8
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Cambria Heights",
+      "slug": "cambria-heights",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN1304"
+      ],
+      "totalUnits": 5855,
+      "hhi": 3,
+      "cr4": 1.2,
+      "topLandlords": [
+        {
+          "name": "115 Spring",
+          "units": 30,
+          "share": 0.5
+        },
+        {
+          "name": "Battersea Gardens",
+          "units": 28,
+          "share": 0.5
+        },
+        {
+          "name": "Nyc Authority",
+          "units": 6,
+          "share": 0.1
+        },
+        {
+          "name": "Ogle, Nigel",
+          "units": 6,
+          "share": 0.1
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Laurelton",
+      "slug": "laurelton",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN1305"
+      ],
+      "totalUnits": 8072,
+      "hhi": 20,
+      "cr4": 6.1,
+      "topLandlords": [
+        {
+          "name": "Laurelton Gardens",
+          "units": 332,
+          "share": 4.1
+        },
+        {
+          "name": "Metrogarden Developme",
+          "units": 62,
+          "share": 0.8
+        },
+        {
+          "name": "Laurelton Gardens Coep",
+          "units": 60,
+          "share": 0.7
+        },
+        {
+          "name": "Northeastern Conference OF Seventh Day Advent",
+          "units": 40,
+          "share": 0.5
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Springfield Gardens (South)-Brookville",
+      "slug": "springfield-gardens-south-brookville",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN1306"
+      ],
+      "totalUnits": 6085,
+      "hhi": 3,
+      "cr4": 1.2,
+      "topLandlords": [
+        {
+          "name": "South Conduit Avenue",
+          "units": 32,
+          "share": 0.5
+        },
+        {
+          "name": "Broadway Homes",
+          "units": 25,
+          "share": 0.4
+        },
+        {
+          "name": "Singh, Jaswinder",
+          "units": 10,
+          "share": 0.2
+        },
+        {
+          "name": "White AS Trustee, Arnott",
+          "units": 7,
+          "share": 0.1
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Rosedale",
+      "slug": "rosedale",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN1307"
+      ],
+      "totalUnits": 7806,
+      "hhi": 3,
+      "cr4": 1.1,
+      "topLandlords": [
+        {
+          "name": "Name Not ON File",
+          "units": 30,
+          "share": 0.4
+        },
+        {
+          "name": "Manor & Tee",
+          "units": 20,
+          "share": 0.3
+        },
+        {
+          "name": "Matanah.m.h",
+          "units": 20,
+          "share": 0.3
+        },
+        {
+          "name": "Neville Premdas",
+          "units": 18,
+          "share": 0.2
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Far Rockaway-Bayswater",
+      "slug": "far-rockaway-bayswater",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN1401"
+      ],
+      "totalUnits": 21798,
+      "hhi": 180,
+      "cr4": 22.4,
+      "topLandlords": [
+        {
+          "name": "Mott Center",
+          "units": 1701,
+          "share": 7.8
+        },
+        {
+          "name": "Rockaway One",
+          "units": 1657,
+          "share": 7.6
+        },
+        {
+          "name": "HP Sea Girt Fund , IN C",
+          "units": 917,
+          "share": 4.2
+        },
+        {
+          "name": "Nyc Authority",
+          "units": 610,
+          "share": 2.8
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Rockaway Beach-Arverne-Edgemere",
+      "slug": "rockaway-beach-arverne-edgemere",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN1402"
+      ],
+      "totalUnits": 15903,
+      "hhi": 410,
+      "cr4": 35.6,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 2018,
+          "share": 12.7
+        },
+        {
+          "name": "Ocean Bay Rad",
+          "units": 1395,
+          "share": 8.8
+        },
+        {
+          "name": "Dayton Beach Park 1",
+          "units": 1145,
+          "share": 7.2
+        },
+        {
+          "name": "Dayton Towers",
+          "units": 1108,
+          "share": 7
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Breezy Point-Belle Harbor-Rockaway Park-Broad Channel",
+      "slug": "breezy-point-belle-harbor-rockaway-park-broad-channel",
+      "borough": "Queens",
+      "fips": "36081",
+      "ntaCodes": [
+        "QN1403"
+      ],
+      "totalUnits": 12169,
+      "hhi": 457,
+      "cr4": 30.8,
+      "topLandlords": [
+        {
+          "name": "Breezy Point Cooperative",
+          "units": 2426,
+          "share": 19.9
+        },
+        {
+          "name": "Dayton Towers",
+          "units": 651,
+          "share": 5.3
+        },
+        {
+          "name": "National Park Service",
+          "units": 411,
+          "share": 3.4
+        },
+        {
+          "name": "107-10 Shorefront Rea",
+          "units": 265,
+          "share": 2.2
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "St. George-New Brighton",
+      "slug": "st-george-new-brighton",
+      "borough": "Staten Island",
+      "fips": "36085",
+      "ntaCodes": [
+        "SI0101"
+      ],
+      "totalUnits": 8303,
+      "hhi": 189,
+      "cr4": 21.6,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 882,
+          "share": 10.6
+        },
+        {
+          "name": "Castleton Preservation",
+          "units": 454,
+          "share": 5.5
+        },
+        {
+          "name": "Seaview Estates Preservation Elopment",
+          "units": 316,
+          "share": 3.8
+        },
+        {
+          "name": "Fairway Richmond Devel Fund",
+          "units": 141,
+          "share": 1.7
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Tompkinsville-Stapleton-Clifton-Fox Hills",
+      "slug": "tompkinsville-stapleton-clifton-fox-hills",
+      "borough": "Staten Island",
+      "fips": "36085",
+      "ntaCodes": [
+        "SI0102"
+      ],
+      "totalUnits": 6534,
+      "hhi": 148,
+      "cr4": 18.2,
+      "topLandlords": [
+        {
+          "name": "Si- Housingdevelopmen",
+          "units": 693,
+          "share": 10.6
+        },
+        {
+          "name": "475 Bay Street Fund",
+          "units": 270,
+          "share": 4.1
+        },
+        {
+          "name": "Fairway",
+          "units": 118,
+          "share": 1.8
+        },
+        {
+          "name": "Tompkins Court Apts",
+          "units": 108,
+          "share": 1.7
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Rosebank-Shore Acres-Park Hill",
+      "slug": "rosebank-shore-acres-park-hill",
+      "borough": "Staten Island",
+      "fips": "36085",
+      "ntaCodes": [
+        "SI0103"
+      ],
+      "totalUnits": 9285,
+      "hhi": 107,
+      "cr4": 16.3,
+      "topLandlords": [
+        {
+          "name": "Kimso Apartments",
+          "units": 404,
+          "share": 4.4
+        },
+        {
+          "name": "Poonam Apartments",
+          "units": 403,
+          "share": 4.3
+        },
+        {
+          "name": "HP Fox Hill Fund Com Pany",
+          "units": 361,
+          "share": 3.9
+        },
+        {
+          "name": "Name Not ON File",
+          "units": 350,
+          "share": 3.8
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "West New Brighton-Silver Lake-Grymes Hill",
+      "slug": "west-new-brighton-silver-lake-grymes-hill",
+      "borough": "Staten Island",
+      "fips": "36085",
+      "ntaCodes": [
+        "SI0104"
+      ],
+      "totalUnits": 13814,
+      "hhi": 51,
+      "cr4": 11.4,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 634,
+          "share": 4.6
+        },
+        {
+          "name": "Grymes Hill Apartment",
+          "units": 416,
+          "share": 3
+        },
+        {
+          "name": "Castleton Castle Condominium",
+          "units": 282,
+          "share": 2
+        },
+        {
+          "name": "Markham Gardens",
+          "units": 240,
+          "share": 1.7
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Westerleigh-Castleton Corners",
+      "slug": "westerleigh-castleton-corners",
+      "borough": "Staten Island",
+      "fips": "36085",
+      "ntaCodes": [
+        "SI0105"
+      ],
+      "totalUnits": 11869,
+      "hhi": 9,
+      "cr4": 4.3,
+      "topLandlords": [
+        {
+          "name": "Fountain Clove RD Apts",
+          "units": 286,
+          "share": 2.4
+        },
+        {
+          "name": "Name Not ON File",
+          "units": 98,
+          "share": 0.8
+        },
+        {
+          "name": "Horizon Village Condominium # 1",
+          "units": 64,
+          "share": 0.5
+        },
+        {
+          "name": "Jeffrey Hand",
+          "units": 58,
+          "share": 0.5
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Port Richmond",
+      "slug": "port-richmond",
+      "borough": "Staten Island",
+      "fips": "36085",
+      "ntaCodes": [
+        "SI0106"
+      ],
+      "totalUnits": 6903,
+      "hhi": 14,
+      "cr4": 5.1,
+      "topLandlords": [
+        {
+          "name": "Ufaratzta",
+          "units": 177,
+          "share": 2.6
+        },
+        {
+          "name": "Northfield ST Vincent",
+          "units": 72,
+          "share": 1
+        },
+        {
+          "name": "Nm-rm",
+          "units": 54,
+          "share": 0.8
+        },
+        {
+          "name": "Castleton Hosing Fund Corpor Ation",
+          "units": 48,
+          "share": 0.7
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Mariner's Harbor-Arlington-Graniteville",
+      "slug": "mariners-harbor-arlington-graniteville",
+      "borough": "Staten Island",
+      "fips": "36085",
+      "ntaCodes": [
+        "SI0107"
+      ],
+      "totalUnits": 10609,
+      "hhi": 78,
+      "cr4": 14.4,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 607,
+          "share": 5.7
+        },
+        {
+          "name": "North Shore Houses Preservation",
+          "units": 536,
+          "share": 5.1
+        },
+        {
+          "name": "Name Not ON File",
+          "units": 225,
+          "share": 2.1
+        },
+        {
+          "name": "Willowbrook Apartments",
+          "units": 164,
+          "share": 1.5
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Grasmere-Arrochar-South Beach-Dongan Hills",
+      "slug": "grasmere-arrochar-south-beach-dongan-hills",
+      "borough": "Staten Island",
+      "fips": "36085",
+      "ntaCodes": [
+        "SI0201"
+      ],
+      "totalUnits": 12983,
+      "hhi": 65,
+      "cr4": 11.7,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 928,
+          "share": 7.1
+        },
+        {
+          "name": "Concord Seaside Fund",
+          "units": 273,
+          "share": 2.1
+        },
+        {
+          "name": "Elbee Gardens Fund C Orp",
+          "units": 177,
+          "share": 1.4
+        },
+        {
+          "name": "Colonial Gardens Owners",
+          "units": 138,
+          "share": 1.1
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "New Dorp-Midland Beach",
+      "slug": "new-dorp-midland-beach",
+      "borough": "Staten Island",
+      "fips": "36085",
+      "ntaCodes": [
+        "SI0202"
+      ],
+      "totalUnits": 10905,
+      "hhi": 9,
+      "cr4": 5,
+      "topLandlords": [
+        {
+          "name": "Name Not ON File",
+          "units": 175,
+          "share": 1.6
+        },
+        {
+          "name": "The Lincoln Avenue Condominium",
+          "units": 148,
+          "share": 1.4
+        },
+        {
+          "name": "Homes For The Homeles",
+          "units": 130,
+          "share": 1.2
+        },
+        {
+          "name": "Sunrise OF New Dorp Propco",
+          "units": 95,
+          "share": 0.9
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Todt Hill-Emerson Hill-Lighthouse Hill-Manor Heights",
+      "slug": "todt-hill-emerson-hill-lighthouse-hill-manor-heights",
+      "borough": "Staten Island",
+      "fips": "36085",
+      "ntaCodes": [
+        "SI0203"
+      ],
+      "totalUnits": 10836,
+      "hhi": 25,
+      "cr4": 7.1,
+      "topLandlords": [
+        {
+          "name": "Nyc Authority",
+          "units": 485,
+          "share": 4.5
+        },
+        {
+          "name": "Allied Manor Road",
+          "units": 104,
+          "share": 1
+        },
+        {
+          "name": "Park Lane AT Sea View",
+          "units": 104,
+          "share": 1
+        },
+        {
+          "name": "Seaview C Fund",
+          "units": 81,
+          "share": 0.7
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "New Springville-Willowbrook-Bulls Head-Travis",
+      "slug": "new-springville-willowbrook-bulls-head-travis",
+      "borough": "Staten Island",
+      "fips": "36085",
+      "ntaCodes": [
+        "SI0204"
+      ],
+      "totalUnits": 15390,
+      "hhi": 47,
+      "cr4": 9.9,
+      "topLandlords": [
+        {
+          "name": "Name Not ON File",
+          "units": 865,
+          "share": 5.6
+        },
+        {
+          "name": "Gorani Family",
+          "units": 243,
+          "share": 1.6
+        },
+        {
+          "name": "Honey Bee Condominiumi",
+          "units": 240,
+          "share": 1.6
+        },
+        {
+          "name": "Foxwood Square Condo II",
+          "units": 177,
+          "share": 1.2
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Oakwood-Richmondtown",
+      "slug": "oakwood-richmondtown",
+      "borough": "Staten Island",
+      "fips": "36085",
+      "ntaCodes": [
+        "SI0301"
+      ],
+      "totalUnits": 8482,
+      "hhi": 152,
+      "cr4": 15.4,
+      "topLandlords": [
+        {
+          "name": "Staten Island 18 Acres",
+          "units": 1019,
+          "share": 12
+        },
+        {
+          "name": "2862 Hylan Boulevard",
+          "units": 176,
+          "share": 2.1
+        },
+        {
+          "name": "25 Bay Terrace",
+          "units": 65,
+          "share": 0.8
+        },
+        {
+          "name": "Nm-rm",
+          "units": 48,
+          "share": 0.6
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Great Kills-Eltingville",
+      "slug": "great-kills-eltingville",
+      "borough": "Staten Island",
+      "fips": "36085",
+      "ntaCodes": [
+        "SI0302"
+      ],
+      "totalUnits": 20710,
+      "hhi": 3,
+      "cr4": 2.7,
+      "topLandlords": [
+        {
+          "name": "Name Not ON File",
+          "units": 222,
+          "share": 1.1
+        },
+        {
+          "name": "Evergreen Park Condo Assn",
+          "units": 144,
+          "share": 0.7
+        },
+        {
+          "name": "Kensington Gardens Apt",
+          "units": 108,
+          "share": 0.5
+        },
+        {
+          "name": "Avon AT Great Kills Condominium",
+          "units": 91,
+          "share": 0.4
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Arden Heights-Rossville",
+      "slug": "arden-heights-rossville",
+      "borough": "Staten Island",
+      "fips": "36085",
+      "ntaCodes": [
+        "SI0303"
+      ],
+      "totalUnits": 11057,
+      "hhi": 30,
+      "cr4": 8.1,
+      "topLandlords": [
+        {
+          "name": "Name Not ON File",
+          "units": 547,
+          "share": 4.9
+        },
+        {
+          "name": "Woodbrooke Condo I",
+          "units": 148,
+          "share": 1.3
+        },
+        {
+          "name": "Fawn Ridge Condominium II",
+          "units": 108,
+          "share": 1
+        },
+        {
+          "name": "Woodbrooke Condominuim Sect",
+          "units": 93,
+          "share": 0.8
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Annadale-Huguenot-Prince's Bay-Woodrow",
+      "slug": "annadale-huguenot-princes-bay-woodrow",
+      "borough": "Staten Island",
+      "fips": "36085",
+      "ntaCodes": [
+        "SI0304"
+      ],
+      "totalUnits": 15588,
+      "hhi": 1,
+      "cr4": 0.4,
+      "topLandlords": [
+        {
+          "name": "Mesivtha Tifereth Jerusalem",
+          "units": 35,
+          "share": 0.2
+        },
+        {
+          "name": "ON Your Mark",
+          "units": 11,
+          "share": 0.1
+        },
+        {
+          "name": "Nys Office For People With Disabil",
+          "units": 10,
+          "share": 0.1
+        },
+        {
+          "name": "Sheldon SI",
+          "units": 8,
+          "share": 0.1
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
+    },
+    {
+      "name": "Tottenville-Charleston",
+      "slug": "tottenville-charleston",
+      "borough": "Staten Island",
+      "fips": "36085",
+      "ntaCodes": [
+        "SI0305"
+      ],
+      "totalUnits": 6505,
+      "hhi": 4,
+      "cr4": 2.1,
+      "topLandlords": [
+        {
+          "name": "Surf Side Village Condo II",
+          "units": 56,
+          "share": 0.9
+        },
+        {
+          "name": "Surfside Village Condo 1",
+          "units": 44,
+          "share": 0.7
+        },
+        {
+          "name": "Potamos",
+          "units": 22,
+          "share": 0.3
+        },
+        {
+          "name": "Robin J. Cohen-goodman",
+          "units": 14,
+          "share": 0.2
+        }
+      ],
+      "hpdViolationsPerUnit": 0,
+      "medianRent": 0,
+      "medianIncome": null,
+      "rentBurdenPct": null
     }
   ]
 }

@@ -22,8 +22,8 @@ interface Neighborhood {
   cr4: number;
   hpdViolationsPerUnit: number;
   medianRent: number;
-  medianIncome?: number;
-  rentBurdenPct?: number;
+  medianIncome?: number | null;
+  rentBurdenPct?: number | null;
 }
 
 interface YearData {
@@ -189,8 +189,12 @@ export function NeighborhoodConcentrationChart({
                       <div>HHI: <strong>{d.hhi.toLocaleString()}</strong></div>
                       <div>CR4: <strong>{d.cr4}%</strong> (top 4 landlords)</div>
                       <div>Units: <strong>{d.totalUnits.toLocaleString()}</strong></div>
-                      <div>HPD violations/unit: <strong>{d.hpdViolationsPerUnit}</strong></div>
-                      <div>Median rent: <strong>${d.medianRent.toLocaleString()}</strong></div>
+                      {d.hpdViolationsPerUnit > 0 && (
+                        <div>HPD violations/unit: <strong>{d.hpdViolationsPerUnit}</strong></div>
+                      )}
+                      {d.medianRent > 0 && (
+                        <div>Median rent: <strong>${d.medianRent.toLocaleString()}</strong></div>
+                      )}
                       {d.medianIncome && (
                         <div>MHI: <strong>${d.medianIncome.toLocaleString()}</strong></div>
                       )}
@@ -236,7 +240,8 @@ export function ViolationsVsConcentrationChart({
   const hhiValues = neighborhoods.map((n) => n.hhi);
   const violValues = neighborhoods.map((n) => n.hpdViolationsPerUnit);
   const xTicks = niceLinearTicks(0, Math.max(...hhiValues) * 1.1, 6);
-  const yTicks = niceLinearTicks(0, Math.max(...violValues) * 1.1, 6);
+  const maxViol = Math.max(...violValues);
+  const yTicks = niceLinearTicks(0, maxViol > 0 ? maxViol * 1.1 : 1, 6);
   const xDomain: [number, number] = [xTicks[0], xTicks[xTicks.length - 1]];
   const yDomain: [number, number] = [yTicks[0], yTicks[yTicks.length - 1]];
 
@@ -382,9 +387,13 @@ export function ViolationsVsConcentrationChart({
                     <div className="text-fm-sage text-xs mb-2">{d.borough}</div>
                     <div className="space-y-1">
                       <div>HHI: <strong>{d.hhi.toLocaleString()}</strong></div>
-                      <div>Violations/unit: <strong>{d.hpdViolationsPerUnit}</strong></div>
+                      {d.hpdViolationsPerUnit > 0 && (
+                        <div>Violations/unit: <strong>{d.hpdViolationsPerUnit}</strong></div>
+                      )}
                       <div>Units: <strong>{d.totalUnits.toLocaleString()}</strong></div>
-                      <div>Median rent: <strong>${d.medianRent.toLocaleString()}</strong></div>
+                      {d.medianRent > 0 && (
+                        <div>Median rent: <strong>${d.medianRent.toLocaleString()}</strong></div>
+                      )}
                     </div>
                   </ChartTooltip>
                 );
@@ -579,9 +588,13 @@ export function ConcentrationVsIncomeChart({
                     <div className="space-y-1">
                       <div>HHI: <strong>{d.hhi.toLocaleString()}</strong></div>
                       <div>MHI: <strong>${d.medianIncome?.toLocaleString()}</strong></div>
-                      <div>Rent-burdened: <strong>{d.rentBurdenPct}%</strong></div>
+                      {d.rentBurdenPct && (
+                        <div>Rent-burdened: <strong>{d.rentBurdenPct}%</strong></div>
+                      )}
                       <div>Units: <strong>{d.totalUnits.toLocaleString()}</strong></div>
-                      <div>Median rent: <strong>${d.medianRent.toLocaleString()}</strong></div>
+                      {d.medianRent > 0 && (
+                        <div>Median rent: <strong>${d.medianRent.toLocaleString()}</strong></div>
+                      )}
                     </div>
                   </ChartTooltip>
                 );

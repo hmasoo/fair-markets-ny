@@ -22,7 +22,28 @@ import { getHHITextClass } from "@/lib/colorScales";
 
 import timeSeriesData from "../../../data/concentration/housing-nyc.json";
 import marketShareData from "../../../data/concentration/housing-nyc-market-shares.json";
-import neighborhoodData from "../../../data/concentration/housing-neighborhoods.json";
+import neighborhoodDataRaw from "../../../data/concentration/housing-neighborhoods.json";
+
+interface Neighborhood {
+  name: string;
+  slug: string;
+  borough: string;
+  fips: string;
+  ntaCodes: string[];
+  totalUnits: number;
+  hhi: number;
+  cr4: number;
+  topLandlords: { name: string; units: number; share: number }[];
+  hpdViolationsPerUnit: number;
+  medianRent: number;
+  medianIncome: number | null;
+  rentBurdenPct: number | null;
+}
+
+const neighborhoodData = neighborhoodDataRaw as {
+  neighborhoods: Neighborhood[];
+  [key: string]: unknown;
+};
 
 export const metadata: Metadata = {
   title: "Rental Ownership — Housing Market Data",
@@ -35,9 +56,9 @@ export default function HousingPage() {
   const sorted = [...neighborhoods].sort((a, b) => b.hhi - a.hhi);
   const highestHHI = sorted[0];
   const highestCR4 = [...neighborhoods].sort((a, b) => b.cr4 - a.cr4)[0];
-  const highestViolations = [...neighborhoods].sort(
-    (a, b) => b.hpdViolationsPerUnit - a.hpdViolationsPerUnit
-  )[0];
+  const highestViolations = [...neighborhoods]
+    .filter((n) => n.hpdViolationsPerUnit > 0)
+    .sort((a, b) => b.hpdViolationsPerUnit - a.hpdViolationsPerUnit)[0];
   const lowestIncome = [...neighborhoods]
     .filter((n) => n.medianIncome && n.medianIncome > 0)
     .sort((a, b) => a.medianIncome! - b.medianIncome!)[0];
@@ -98,15 +119,17 @@ export default function HousingPage() {
             ~1 in every {Math.round(100 / highestCR4.cr4)} units
           </div>
         </div>
-        <div className="card text-center">
-          <div className="text-3xl font-bold text-fm-copper">
-            {highestViolations.hpdViolationsPerUnit}
+        {highestViolations && (
+          <div className="card text-center">
+            <div className="text-3xl font-bold text-fm-copper">
+              {highestViolations.hpdViolationsPerUnit}
+            </div>
+            <div className="text-sm text-fm-sage mt-1">
+              Most HPD Violations/Unit
+            </div>
+            <div className="text-xs text-fm-sage">{highestViolations.name}</div>
           </div>
-          <div className="text-sm text-fm-sage mt-1">
-            Most HPD Violations/Unit
-          </div>
-          <div className="text-xs text-fm-sage">{highestViolations.name}</div>
-        </div>
+        )}
         {lowestIncome && (
           <div className="card text-center">
             <div className="text-3xl font-bold text-fm-copper">
@@ -250,10 +273,10 @@ export default function HousingPage() {
                     )}
                   </td>
                   <td className="px-4 py-3 text-sm text-right">
-                    {n.hpdViolationsPerUnit}
+                    {n.hpdViolationsPerUnit > 0 ? n.hpdViolationsPerUnit : "—"}
                   </td>
                   <td className="px-4 py-3 text-sm text-right">
-                    ${n.medianRent.toLocaleString()}
+                    {n.medianRent > 0 ? `$${n.medianRent.toLocaleString()}` : "—"}
                   </td>
                 </tr>
               ))}
@@ -261,8 +284,8 @@ export default function HousingPage() {
           </table>
         </div>
         <p className="mt-4 text-xs text-fm-sage">
-          Source: ACRIS/PLUTO analysis; Local Law 18 beneficial ownership
-          filings; HPD violations data via NYC Open Data. Income and rent burden
+          Source: NYC Dept. of City Planning MapPLUTO 24v4; ACRIS ownership
+          records; HPD violations data via NYC Open Data. Income and rent burden
           from U.S. Census Bureau ACS 2023 5-Year Estimates.
         </p>
       </div>
