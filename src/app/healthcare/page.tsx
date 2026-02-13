@@ -18,9 +18,9 @@ import marketShareData from "../../../data/concentration/healthcare-nys-market-s
 import regionData from "../../../data/concentration/healthcare-regions.json";
 
 export const metadata: Metadata = {
-  title: "Your Doctor's Boss — Healthcare Consolidation",
+  title: "Hospital Market Structure in New York State",
   description:
-    "Hospital system consolidation across New York State — tracking mergers, bed counts, and regional concentration using DOH and AHA data.",
+    "Hospital system market structure across New York State — bed counts, system affiliations, and regional concentration using DOH and AHA data.",
 };
 
 export default function HealthcarePage() {
@@ -41,15 +41,15 @@ export default function HealthcarePage() {
 
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-fm-patina">
-          Your Doctor{"'"}s Boss
+          Hospital Market Structure
         </h1>
         <p className="mt-2 text-fm-sage max-w-2xl">
-          Statewide, New York{"'"}s hospital market looks moderately
+          Statewide, New York{"'"}s hospital market is moderately
           concentrated (<HHITooltip>HHI</HHITooltip>{" "}
           {timeSeriesData.years[timeSeriesData.years.length - 1].hhi.toLocaleString()}).
-          But zoom into individual regions and the picture is stark — most of
-          upstate New York is a one- or two-system market where a single health
-          network controls 40–60% of all hospital beds.
+          At the regional level, the picture varies considerably — in
+          parts of upstate New York, a single health system accounts for
+          40–60% of all hospital beds.
         </p>
       </div>
 

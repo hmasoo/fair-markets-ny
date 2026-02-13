@@ -14,9 +14,9 @@ import marketShareData from "../../../data/concentration/broadband-nys-market-sh
 import countyData from "../../../data/concentration/broadband-counties.json";
 
 export const metadata: Metadata = {
-  title: "One Wire — Broadband Competition",
+  title: "Broadband Competition in New York State",
   description:
-    "How many real choices do you have for internet? FCC data reveals a broadband duopoly across most of New York State.",
+    "How many internet providers serve your area? FCC data on broadband availability and provider competition across New York State.",
 };
 
 export default function BroadbandPage() {
@@ -27,11 +27,12 @@ export default function BroadbandPage() {
       <Breadcrumb items={[{ label: "Broadband" }]} />
 
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-fm-patina">One Wire</h1>
+        <h1 className="text-3xl font-bold text-fm-patina">Broadband Competition</h1>
         <p className="mt-2 text-fm-sage max-w-2xl">
-          How many real internet choices do you have? FCC Broadband Data
-          Collection reveals a duopoly across most of New York State, with large
-          rural areas served by only one wired provider.
+          How many internet providers serve your area? FCC Broadband Data
+          Collection filings show the number of wired providers available at
+          each census block across New York State. Provider availability varies
+          widely between urban and rural areas.
         </p>
       </div>
 
@@ -48,14 +49,14 @@ export default function BroadbandPage() {
           <div className="text-3xl font-bold text-fm-copper">87.9%</div>
           <div className="text-sm text-fm-sage mt-1">CR4 (Statewide)</div>
           <div className="text-xs text-fm-sage">
-            Top 4 ISPs control nearly all subscriptions
+            Combined share of top 4 ISPs
           </div>
         </div>
         <div className="card text-center">
           <div className="text-3xl font-bold text-fm-copper">$1B</div>
           <div className="text-sm text-fm-sage mt-1">ConnectALL Investment</div>
           <div className="text-xs text-fm-sage">
-            Hochul&apos;s public broadband commitment
+            NYS public broadband investment
           </div>
         </div>
       </div>
@@ -89,8 +90,8 @@ export default function BroadbandPage() {
           Competition by County
         </h2>
         <p className="text-sm text-fm-sage mb-4">
-          Rural upstate counties face near-monopoly conditions, with some having
-          15%+ of census blocks with zero broadband providers at 100 Mbps.
+          Provider availability varies widely across the state. Some counties
+          have 15%+ of census blocks with zero broadband providers at 100 Mbps.
         </p>
         <div className="overflow-x-auto -mx-4 sm:mx-0">
           <table className="min-w-full divide-y divide-gray-200">

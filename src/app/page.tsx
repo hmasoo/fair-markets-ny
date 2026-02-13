@@ -2,38 +2,38 @@ import Link from "next/link";
 
 const sectors = [
   {
-    title: "The New Landlords",
-    subtitle: "Housing & Landlord Concentration",
+    title: "Rental Ownership",
+    subtitle: "Housing & Ownership Patterns",
     href: "/housing",
     description:
-      "In the South Bronx, 4 landlords control 1 in 4 rental units — in a neighborhood where zoning makes new construction nearly impossible. Concentration and supply scarcity, mapped.",
+      "In the South Bronx, the top 4 landlords hold about 1 in 4 rental units — while zoning limits new construction. How concentrated is rental ownership in your neighborhood, and what shapes it?",
     stat: "8.1%",
     statLabel: "of NYC rental units owned by top 4 landlords",
   },
   {
-    title: "One Wire",
-    subtitle: "Broadband & Utility Monopolies",
+    title: "Internet Access",
+    subtitle: "Broadband Competition by County",
     href: "/broadband",
     description:
-      "42% of census blocks in St. Lawrence County have zero broadband providers. Check your county.",
+      "42% of census blocks in St. Lawrence County have zero broadband providers at 100 Mbps. How many choices does your county have?",
     stat: "3,250",
     statLabel: "Statewide concentration score",
   },
   {
-    title: "Your Doctor's Boss",
-    subtitle: "Healthcare Consolidation",
+    title: "Hospital Systems",
+    subtitle: "Healthcare Market Structure",
     href: "/healthcare",
     description:
-      "When hospitals merge, your ER options shrink. See which health systems dominate your region's hospital beds.",
+      "How many hospital systems operate in your region? In parts of upstate New York, a single system accounts for over half of all beds. See the data by region.",
     stat: "3,450",
     statLabel: "Highest regional HHI (North Country)",
   },
   {
-    title: "After the Merger",
-    subtitle: "AG & State Enforcement Tracker",
+    title: "Regulatory Actions",
+    subtitle: "State Enforcement & Policy Tracker",
     href: "/enforcement",
     description:
-      "What happens after the merger? Track NY Attorney General actions on antitrust and corporate consolidation.",
+      "A public record of competition-related enforcement actions, regulatory decisions, and legislation across New York State agencies.",
     stat: "Coming Soon",
     statLabel: "AG press releases & court filings",
   },
@@ -46,13 +46,14 @@ export default function Home() {
       <section className="bg-fm-patina text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
           <h1 className="text-3xl sm:text-5xl font-bold tracking-tight max-w-3xl">
-            Why does your rent keep rising?
+            How competitive are New York{"'"}s essential markets?
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-white/80 max-w-2xl leading-relaxed">
-            Concentrated ownership and supply scarcity drive up costs and
-            shrink choices — and they reinforce each other. Fair Markets NY
-            uses public records to map both: who controls New York{"'"}s
-            essential markets, and what keeps new competitors out.
+            From rental housing to broadband to healthcare, Fair Markets NY
+            uses public government records to measure ownership, competition,
+            and the conditions that shape your choices. Where are markets
+            working? Where could more supply or more competition make a
+            difference? The data is open — explore it yourself.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <Link
@@ -77,33 +78,32 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-lg font-bold text-fm-patina mb-2">
-                Fewer landlords, fewer buildings
+                Who owns the rentals on your block?
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                When one company owns half the buildings on your block and
-                zoning blocks new construction, no one can compete with them.
-                We map ownership concentration and the supply conditions that
-                entrench it.
+                Ownership patterns vary widely by neighborhood. We map how
+                concentrated rental ownership is, alongside the zoning and
+                supply conditions that shape each market.
               </p>
             </div>
             <div>
               <h3 className="text-lg font-bold text-fm-patina mb-2">
-                One internet provider, no choice
+                How many internet providers serve your area?
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Most New Yorkers can{"'"}t switch ISPs. That{"'"}s not a free
-                market. We show how many options you actually have, county by
-                county.
+                In many parts of New York, residents have one or two options
+                for wired broadband. We show provider availability county by
+                county, using FCC filing data.
               </p>
             </div>
             <div>
               <h3 className="text-lg font-bold text-fm-patina mb-2">
-                We follow the data
+                Open data, open methodology
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Using public government records, we measure who controls
-                essential markets and where competition is missing — so you
-                can see it too. No paywalls, no subscriptions.
+                Every number comes from public government records — ownership
+                filings, FCC data, health facility reports. We document our
+                sources so you can verify the data yourself.
               </p>
             </div>
           </div>
@@ -113,7 +113,7 @@ export default function Home() {
       {/* Sector cards */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="text-2xl font-bold text-fm-patina mb-8">
-          What We Track
+          Research Areas
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {sectors.map((sector) => (

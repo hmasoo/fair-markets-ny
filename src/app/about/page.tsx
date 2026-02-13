@@ -42,47 +42,44 @@ export default function AboutPage() {
           </h2>
           <div className="text-sm text-gray-700 space-y-3">
             <p>
-              Fair Markets NY is a public-interest data site tracking market
-              concentration, corporate consolidation, and their impact on
-              affordability across New York State, with a deep NYC layer.
+              Fair Markets NY is a public data project that measures market
+              competition and ownership structure across New York State, with
+              a deep NYC layer.
             </p>
             <p>
-              New York is seeing converging policy agendas at the city and state
-              level — anti-monopoly enforcement and targeted affordability
-              measures — that both respond to the same underlying problem:
-              concentrated corporate power driving up the cost of living. This
-              project provides the shared evidence base.
+              Policymakers, researchers, and residents are asking questions
+              about competition in the markets that shape everyday life —
+              housing, broadband, healthcare, and more. This project provides
+              an accessible, transparent evidence base built from public
+              government records.
             </p>
           </div>
         </section>
 
         <section className="card">
           <h2 className="text-xl font-bold text-fm-patina mb-4">
-            NYS Policy Context
+            Why This Data Matters
           </h2>
           <div className="text-sm text-gray-700 space-y-3">
             <p>
-              New York has converging policy agendas at the city and state level
-              that both need data infrastructure — and both respond to the same
-              underlying problem: concentrated corporate power driving up the
-              cost of living.
+              New York has active policy debates about housing supply,
+              broadband access, and healthcare competition. These debates
+              benefit from accessible data on market structure — who owns
+              what, how many choices residents have, and how conditions vary
+              by geography.
             </p>
             <p>
-              At the city level, anti-monopoly policy is targeting corporate
-              landlords, platform monopolies, and concentrated market power
-              across the sectors that shape everyday life for New Yorkers.
+              Recent policy developments include the nation{"'"}s first
+              algorithmic rent-setting ban, a $1B public broadband
+              investment, and extended review periods for hospital mergers.
+              Whether these policies are well-targeted depends on understanding
+              local market conditions — questions that are empirical, not
+              ideological.
             </p>
             <p>
-              At the state level, a targeted affordability agenda includes the
-              nation{"'"}s first algorithmic rent-setting ban and a $1B public
-              broadband commitment. These policies address specific symptoms of
-              market concentration — from housing costs driven by corporate
-              landlords to broadband deserts maintained by monopoly ISPs.
-            </p>
-            <p>
-              Fair Markets NY provides the shared evidence base: structured,
-              public data on who controls the markets that matter most to New
-              Yorkers.
+              Fair Markets NY organizes public government data so that
+              residents, policymakers, and researchers can examine market
+              structure for themselves and form their own conclusions.
             </p>
           </div>
         </section>
@@ -180,7 +177,8 @@ export default function AboutPage() {
                 Market concentration varies dramatically by geography. The NYC
                 rental market looks competitive at the citywide level (HHI ~228)
                 but is highly concentrated at the neighborhood level. We present
-                data at both levels to avoid masking local monopoly power.
+                data at both levels so readers can assess conditions at the
+                level most relevant to their experience.
               </p>
             </div>
           </div>
@@ -188,16 +186,17 @@ export default function AboutPage() {
 
         <section className="card">
           <h2 className="text-xl font-bold text-fm-patina mb-4">
-            Why Markets Concentrate
+            Understanding Market Concentration
           </h2>
           <div className="space-y-4 text-sm text-gray-700">
             <p>
-              <strong>The feedback loop:</strong> Concentration doesn{"'"}t happen
-              in a vacuum. When zoning caps density, permitting takes years, and
-              height limits block new buildings, new landlords can{"'"}t enter the
-              market. The landlords already in the neighborhood consolidate by
-              default. Supply scarcity and ownership concentration are two sides
-              of the same coin — each reinforces the other.
+              <strong>Supply and ownership:</strong> Market concentration can
+              reflect barriers to entry, economies of scale, acquisition
+              strategies, or all three. In housing, for example, zoning and
+              permitting constraints limit new construction, which can
+              contribute to ownership concentration by reducing the number of
+              market participants. Researchers are actively studying the
+              relative contribution of these factors.
             </p>
             <p>
               <strong>The rent stabilization paradox:</strong> In neighborhoods
@@ -220,9 +219,9 @@ export default function AboutPage() {
             </p>
             <p>
               <strong>What this means for the data:</strong> Our concentration
-              metrics measure <em>who controls the housing</em> — not{" "}
-              <em>why</em>. A neighborhood can have both too few landlords and
-              too few buildings. The Niskanen Center{"'"}s{" "}
+              metrics measure <em>ownership structure</em> — not the causes
+              behind it. A neighborhood can have both concentrated ownership and
+              constrained supply. The Niskanen Center{"'"}s{" "}
               <a
                 href="https://niskanencenter.org/senate-banking-housing-testimony-2025/"
                 className="text-fm-teal hover:underline"
@@ -233,9 +232,9 @@ export default function AboutPage() {
               </a>{" "}
               argues that removing supply barriers — lot-size minimums,
               single-family zoning, permitting delays — would do more for
-              affordability than targeting individual landlords. We agree this is
-              part of the picture. Concentration data and supply-side analysis
-              are complements, not competitors.
+              affordability than targeting individual landlords. Readers and
+              policymakers can draw their own conclusions. Concentration data
+              and supply-side analysis are complements, not competitors.
             </p>
           </div>
         </section>
@@ -343,25 +342,26 @@ export default function AboutPage() {
 
         <section className="card">
           <h2 className="text-xl font-bold text-fm-patina mb-4">
-            Intellectual Foundations
+            Project Background
           </h2>
           <div className="text-sm text-gray-700 space-y-3">
             <p>
-              This project draws from the {'"'}New Brandeis{'"'} school of
-              antitrust thinking and is modeled on two direct precedents:
+              This project builds on the approach of two precedent data
+              transparency efforts:
             </p>
             <ul className="space-y-2 ml-4 list-disc">
               <li>
                 <strong>CAMP (Canadian Anti-Monopoly Project)</strong> —
-                structured concentration data, sector-by-sector HHI/CR4 tracking
-                with methodology-transparent market share analysis.
+                structured concentration data using standard DOJ/FTC
+                measurement tools (HHI, CR4) with methodology-transparent
+                market share analysis, applied sector by sector.
               </li>
               <li>
                 <strong>NLRB Edge / NLRB Research (Matt Bruenig)</strong> —
-                automated government data scraping + searchable database +
-                analysis pattern. Demonstrates that one person with scraping
-                infrastructure can build a more useful research tool than the
-                government itself provides.
+                automated government data scraping combined with a searchable
+                database and analysis layer, demonstrating that structured
+                access to public records can make government data more useful
+                to researchers and the public.
               </li>
             </ul>
           </div>

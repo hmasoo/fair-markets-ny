@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 const description =
-  "Tracking market concentration, corporate consolidation, and their impact on affordability across New York State.";
+  "Public data on market competition and ownership structure across New York State — housing, broadband, healthcare, and more.";
 
 export const metadata: Metadata = {
   title: {

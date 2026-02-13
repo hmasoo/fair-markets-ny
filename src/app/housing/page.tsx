@@ -25,9 +25,9 @@ import marketShareData from "../../../data/concentration/housing-nyc-market-shar
 import neighborhoodData from "../../../data/concentration/housing-neighborhoods.json";
 
 export const metadata: Metadata = {
-  title: "The New Landlords — Housing Concentration",
+  title: "Rental Ownership — Housing Market Data",
   description:
-    "Ownership concentration and supply scarcity in NYC housing — neighborhood-level data from ACRIS, PLUTO, and Local Law 18.",
+    "Rental ownership patterns and housing supply conditions in NYC — neighborhood-level data from ACRIS, PLUTO, and Local Law 18.",
 };
 
 export default function HousingPage() {
@@ -64,14 +64,14 @@ export default function HousingPage() {
       <Breadcrumb items={[{ label: "Housing" }]} />
 
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-fm-patina">The New Landlords</h1>
+        <h1 className="text-3xl font-bold text-fm-patina">Rental Ownership in NYC</h1>
         <p className="mt-2 text-fm-sage max-w-2xl">
-          Citywide, NYC{"'"}s rental market looks fragmented (<HHITooltip>HHI</HHITooltip> 228
-          across ~30,000 landlords). Zoom into neighborhoods and the picture
-          changes — a handful of landlords dominate entire communities. That{"'"}s
-          partly because zoning and permitting barriers keep new housing and
-          new landlords out. Concentration and supply scarcity reinforce each
-          other, and the data shows both.
+          Citywide, NYC{"'"}s rental market appears fragmented (<HHITooltip>HHI</HHITooltip> 228
+          across ~30,000 landlords). At the neighborhood level, ownership is
+          often significantly more concentrated. Factors including zoning
+          restrictions, permitting timelines, and acquisition patterns all
+          play a role. Explore the data below to see how ownership and supply
+          conditions vary across neighborhoods.
         </p>
       </div>
 
@@ -103,7 +103,7 @@ export default function HousingPage() {
             {highestViolations.hpdViolationsPerUnit}
           </div>
           <div className="text-sm text-fm-sage mt-1">
-            Worst HPD Violations/Unit
+            Most HPD Violations/Unit
           </div>
           <div className="text-xs text-fm-sage">{highestViolations.name}</div>
         </div>
@@ -281,17 +281,16 @@ export default function HousingPage() {
       {/* Supply-side synthesis */}
       <div className="card mt-8">
         <h2 className="text-xl font-bold text-fm-patina mb-3">
-          Why So Few Landlords?
+          Ownership Concentration and Housing Supply
         </h2>
         <p className="text-sm text-gray-700">
-          Citywide HHI is low because NYC has ~30,000 landlords. But at the
-          neighborhood level, concentration is high — and that{"'"}s partly{" "}
-          <em>because</em> NYC{"'"}s zoning and permitting make it nearly
-          impossible for new landlords to build or enter. Supply constraints and
-          ownership concentration reinforce each other: barriers to construction
-          prevent new entrants, and incumbents consolidate. The neighborhoods
-          with the highest HHI tend to also be the ones where new construction
-          is hardest to permit.
+          Researchers point to several contributing factors: zoning and
+          permitting limits on new construction, acquisition strategies by
+          larger owners, and regulatory conditions that affect landlord
+          economics. The relative contribution of each is an active area of
+          policy research. The neighborhoods with the highest HHI tend to
+          also be the ones where new construction is hardest to permit —
+          though the causal relationship is debated.
         </p>
         <p className="mt-3 text-xs text-fm-sage">
           Further reading:{" "}

@@ -3,9 +3,9 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Badge } from "@/components/ui/Badge";
 
 export const metadata: Metadata = {
-  title: "After the Merger — Enforcement Tracker",
+  title: "State Regulatory & Enforcement Actions",
   description:
-    "Tracking antitrust enforcement actions by the NY Attorney General and state agencies.",
+    "Competition-related enforcement actions, regulatory decisions, and legislation across New York State agencies, sourced from official press releases and filings.",
 };
 
 const sampleActions = [
@@ -64,13 +64,14 @@ const sampleActions = [
 export default function EnforcementPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <Breadcrumb items={[{ label: "Enforcement Tracker" }]} />
+      <Breadcrumb items={[{ label: "Regulatory Tracker" }]} />
 
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-fm-patina">After the Merger</h1>
+        <h1 className="text-3xl font-bold text-fm-patina">Regulatory & Enforcement Tracker</h1>
         <p className="mt-2 text-fm-sage max-w-2xl">
-          Tracking antitrust enforcement actions, regulatory decisions, and
-          competition legislation across New York State.
+          Competition-related enforcement actions, regulatory decisions, and
+          legislation across New York State, sourced from official press
+          releases and filings.
         </p>
       </div>
 

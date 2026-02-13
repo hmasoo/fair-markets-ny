@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const n = neighborhoodData.neighborhoods.find((n) => n.slug === slug);
   if (!n) return { title: "Not Found" };
   return {
-    title: `${n.name} — Landlord Concentration`,
+    title: `${n.name} — Rental Ownership Data`,
     description: `Top landlords, ownership concentration (HHI: ${n.hhi}), and HPD violations data for ${n.name}, ${n.borough}.`,
   };
 }

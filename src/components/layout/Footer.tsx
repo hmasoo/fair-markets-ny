@@ -8,8 +8,8 @@ export function Footer() {
           <div>
             <h3 className="text-white font-bold text-lg mb-3">Fair Markets NY</h3>
             <p className="text-sm leading-relaxed">
-              Tracking market concentration, corporate consolidation, and their impact on
-              affordability across New York State.
+              Public data on market competition and ownership structure across
+              New York State — housing, broadband, healthcare, and more.
             </p>
           </div>
           <div>
@@ -18,7 +18,7 @@ export function Footer() {
               <li><Link href="/housing" className="hover:text-white transition-colors">Housing</Link></li>
               <li><Link href="/broadband" className="hover:text-white transition-colors">Broadband</Link></li>
               <li><Link href="/healthcare" className="hover:text-white transition-colors">Healthcare</Link></li>
-              <li><Link href="/enforcement" className="hover:text-white transition-colors">Enforcement Tracker</Link></li>
+              <li><Link href="/enforcement" className="hover:text-white transition-colors">Regulatory Tracker</Link></li>
             </ul>
           </div>
           <div>
