@@ -38,6 +38,57 @@
       "onePctBlocks": 8.2
     },
     {
+      "name": "Bronx County (Bronx)",
+      "slug": "bronx",
+      "fips": "36005",
+      "totalHouseholds": 511000,
+      "providersAt100Mbps": 3,
+      "hhi": 3350,
+      "cr4": 95.2,
+      "topProviders": [
+        { "name": "Optimum", "share": 42.1, "maxDownload": 940 },
+        { "name": "Verizon FiOS", "share": 25.5, "maxDownload": 2000 },
+        { "name": "Spectrum", "share": 16.8, "maxDownload": 1000 },
+        { "name": "T-Mobile", "share": 10.8, "maxDownload": 245 }
+      ],
+      "zeroPctBlocks": 0.8,
+      "onePctBlocks": 9.5
+    },
+    {
+      "name": "Queens County (Queens)",
+      "slug": "queens",
+      "fips": "36081",
+      "totalHouseholds": 793000,
+      "providersAt100Mbps": 3,
+      "hhi": 2950,
+      "cr4": 93.8,
+      "topProviders": [
+        { "name": "Spectrum", "share": 33.8, "maxDownload": 1000 },
+        { "name": "Optimum", "share": 28.2, "maxDownload": 940 },
+        { "name": "Verizon FiOS", "share": 22.5, "maxDownload": 2000 },
+        { "name": "T-Mobile", "share": 9.3, "maxDownload": 245 }
+      ],
+      "zeroPctBlocks": 0.4,
+      "onePctBlocks": 6.8
+    },
+    {
+      "name": "Richmond County (Staten Island)",
+      "slug": "richmond",
+      "fips": "36085",
+      "totalHouseholds": 176000,
+      "providersAt100Mbps": 3,
+      "hhi": 3500,
+      "cr4": 96.5,
+      "topProviders": [
+        { "name": "Spectrum", "share": 45.2, "maxDownload": 1000 },
+        { "name": "Verizon FiOS", "share": 30.1, "maxDownload": 2000 },
+        { "name": "T-Mobile", "share": 13.5, "maxDownload": 245 },
+        { "name": "Optimum", "share": 7.7, "maxDownload": 940 }
+      ],
+      "zeroPctBlocks": 1.2,
+      "onePctBlocks": 10.2
+    },
+    {
       "name": "Erie County (Buffalo)",
       "slug": "erie",
       "fips": "36029",

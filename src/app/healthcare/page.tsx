@@ -12,6 +12,9 @@ const RegionalConcentrationChart = dynamic(
 const StatewideCharts = dynamic(
   () => import("./healthcare-charts").then((m) => m.StatewideCharts),
 );
+const HealthcareCountyMap = dynamic(
+  () => import("./HealthcareCountyMap").then((m) => m.HealthcareCountyMap),
+);
 
 import timeSeriesData from "../../../data/concentration/healthcare-nys.json";
 import marketShareData from "../../../data/concentration/healthcare-nys-market-shares.json";
@@ -96,6 +99,18 @@ export default function HealthcarePage() {
             One system holds 40%+ of beds
           </div>
         </div>
+      </div>
+
+      {/* County map colored by region HHI */}
+      <div className="card mb-8">
+        <h2 className="text-xl font-bold text-fm-patina mb-2">
+          Hospital Concentration by Region
+        </h2>
+        <p className="text-sm text-fm-sage mb-4">
+          Counties colored by their health planning region{"'"}s{" "}
+          <HHITooltip>HHI</HHITooltip>. Click any county to explore its region.
+        </p>
+        <HealthcareCountyMap regions={regions} />
       </div>
 
       {/* Regional bar chart */}

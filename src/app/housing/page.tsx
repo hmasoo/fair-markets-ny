@@ -16,9 +16,10 @@ const ConcentrationVsIncomeChart = dynamic(
 const CitywideCharts = dynamic(
   () => import("./housing-charts").then((m) => m.CitywideCharts),
 );
-import { HousingNTAMap } from "./HousingNTAMap";
+import { HousingMapSection } from "./HousingMapSection";
 import { HHITooltip } from "@/components/ui/HHITooltip";
 import { getHHITextClass } from "@/lib/colorScales";
+import { aggregateByBorough } from "@/lib/aggregations/housing-boroughs";
 
 import timeSeriesData from "../../../data/concentration/housing-nyc.json";
 import marketShareData from "../../../data/concentration/housing-nyc-market-shares.json";
@@ -84,6 +85,9 @@ export default function HousingPage() {
       };
     }
   }
+
+  // Borough-level aggregation (unit-weighted averages)
+  const boroughSummaries = aggregateByBorough(neighborhoods);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -163,17 +167,20 @@ export default function HousingPage() {
         )}
       </div>
 
-      {/* NTA-level concentration map */}
+      {/* Concentration map with NTA/Borough toggle */}
       <div className="card">
         <h2 className="text-xl font-bold text-fm-patina mb-2">
-          Housing Concentration by Neighborhood
+          Housing Concentration Map
         </h2>
         <p className="text-sm text-fm-sage mb-4">
-          Ownership concentration (<HHITooltip>HHI</HHITooltip>) across NYC{"'"}s
-          2020 Neighborhood Tabulation Areas. Colored NTAs have data; click to
-          explore.
+          Ownership concentration (<HHITooltip>HHI</HHITooltip>) across NYC.
+          Toggle between neighborhood-level (NTA) and borough-level views.
         </p>
-        <HousingNTAMap data={ntaHHI} details={ntaDetails} />
+        <HousingMapSection
+          ntaHHI={ntaHHI}
+          ntaDetails={ntaDetails}
+          boroughSummaries={boroughSummaries}
+        />
       </div>
 
       {/* Primary chart: neighborhood HHI comparison */}

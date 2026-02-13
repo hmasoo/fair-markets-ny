@@ -7,7 +7,7 @@ import dynamic from "next/dynamic";
 const BroadbandCharts = dynamic(
   () => import("./broadband-charts").then((m) => m.BroadbandCharts),
 );
-import { BroadbandCountyMap } from "./BroadbandCountyMap";
+import { BroadbandMapSection } from "./BroadbandMapSection";
 
 import timeSeriesData from "../../../data/concentration/broadband-nys.json";
 import marketShareData from "../../../data/concentration/broadband-nys-market-shares.json";
@@ -61,16 +61,16 @@ export default function BroadbandPage() {
         </div>
       </div>
 
-      {/* State map */}
+      {/* Map with statewide/NYC toggle */}
       <div className="card">
         <h2 className="text-xl font-bold text-fm-patina mb-2">
-          Broadband Concentration Across NYS
+          Broadband Concentration Map
         </h2>
         <p className="text-sm text-fm-sage mb-4">
-          Counties with data are colored by HHI. Higher concentration means fewer
-          ISP choices for residents.
+          Counties colored by HHI. Toggle between the statewide view and NYC
+          borough detail.
         </p>
-        <BroadbandCountyMap counties={counties} />
+        <BroadbandMapSection counties={counties} />
       </div>
 
       {/* Charts */}

@@ -42,6 +42,19 @@ export const providerCountScale: ColorStop[] = [
 ];
 
 /**
+ * Healthcare HHI — sequential orange scale (colorblind-safe, distinct from blue/purple)
+ */
+export const healthcareHHIScale: ColorStop[] = [
+  { threshold: 0, color: "#f3f4f6", label: "No data" },
+  { threshold: 1, color: "#fee8c8", label: "< 1,500 Competitive" },
+  { threshold: 1500, color: "#fdbb84", label: "1,500\u20132,000" },
+  { threshold: 2000, color: "#fc8d59", label: "2,000\u20132,500" },
+  { threshold: 2500, color: "#ef6548", label: "2,500\u20133,000" },
+  { threshold: 3000, color: "#d7301f", label: "3,000\u20133,500" },
+  { threshold: 3500, color: "#990000", label: "> 3,500 Highly concentrated" },
+];
+
+/**
  * Look up color for a value using a threshold-based scale.
  * Walks the scale in reverse to find the highest matching threshold.
  */
