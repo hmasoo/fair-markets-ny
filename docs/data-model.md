@@ -1,0 +1,478 @@
+# Fair Markets NY — Data Model
+
+This diagram shows every data entity in the platform, the geographic keys that join them, and the aggregation pipeline from raw Census data to page-level views.
+
+## Entity Relationship Diagram
+
+```mermaid
+erDiagram
+    %% ─── Geographic Hierarchy ───────────────────────────────────
+
+    CensusTract {
+        string geoid PK "11-digit FIPS (e.g. 36047049900)"
+        string countyFips
+        string countyName
+        string tract
+    }
+
+    NTA {
+        string ntaCode PK "e.g. BK0101"
+        string ntaName
+        string ntaAbbrev
+        string boroCode
+        string boroName
+        string countyFips
+        string cdta
+    }
+
+    Neighborhood {
+        string slug PK "URL-safe name"
+        string name
+        string borough
+        string fips
+        string ntaVersion
+        string[] ntaCodes "1-to-many NTAs"
+        string[] ntaNames
+    }
+
+    Borough {
+        string borough PK
+        int boroCode
+        string county
+        string fips "5-digit county FIPS"
+    }
+
+    County {
+        string fips PK "5-digit FIPS"
+        string name
+        string nycBorough "nullable, NYC only"
+    }
+
+    HealthRegion {
+        string slug PK "e.g. nyc-metro"
+        string name
+    }
+
+    %% Geographic crosswalk relationships
+    CensusTract }|--|| NTA : "nta-to-census-tract.json"
+    NTA }|--|| Neighborhood : "neighborhood-to-nta.json"
+    Neighborhood }|--|| Borough : "borough"
+    Borough ||--|| County : "borough-county-fips.json"
+    County }|--|| HealthRegion : "healthcare-region-counties.json"
+
+    %% ─── Housing Domain ─────────────────────────────────────────
+
+    HousingNeighborhood {
+        string slug PK
+        string name
+        string borough
+        string fips
+        string[] ntaCodes
+        int totalUnits
+        int hhi
+        float cr4
+        float hpdViolationsPerUnit
+        int medianRent "ACS 2024"
+        int medianIncome "ACS 2024"
+        float rentBurdenPct "ACS 2024"
+        float rentGrowthPct "merged from rent-history"
+        int nychaUnits
+        float nychaShare
+        int universityUnits
+        float universityShare
+        int stabilizedUnits
+        float stabilizedShare
+    }
+
+    TopLandlord {
+        string name
+        int units
+        float share
+    }
+
+    RentHistory {
+        string ntaCode
+        string slug PK
+        string name
+        string borough
+        float rentGrowthPct "2019 to 2024"
+    }
+
+    RentHistoryEntry {
+        int year "2019, 2023, 2024"
+        int medianRent
+    }
+
+    HousingTimeSeries {
+        string sector "Housing"
+        string geography "New York City"
+    }
+
+    HousingTimeSeriesYear {
+        int year "2015-2024"
+        int hhi
+        float cr4
+    }
+
+    HousingMarketShare {
+        string company
+        float share
+        string source
+    }
+
+    HousingNeighborhood ||--|{ TopLandlord : "topLandlords[]"
+    HousingNeighborhood ||--o| RentHistory : "joined by slug"
+    RentHistory ||--|{ RentHistoryEntry : "rentHistory[]"
+    HousingTimeSeries ||--|{ HousingTimeSeriesYear : "years[]"
+    Neighborhood ||--|| HousingNeighborhood : "slug"
+
+    %% ─── Broadband Domain ───────────────────────────────────────
+
+    BroadbandCounty {
+        string slug PK
+        string name
+        string fips
+        int totalHouseholds
+        int providersAt100Mbps
+        int hhi
+        float cr4
+        float zeroPctBlocks "pct with 0 providers"
+        float onePctBlocks "pct with 1 provider"
+    }
+
+    BroadbandProvider {
+        string name
+        float share
+        int maxDownload
+    }
+
+    BroadbandTimeSeries {
+        string sector "Broadband"
+        string geography "New York State"
+    }
+
+    BroadbandTimeSeriesYear {
+        int year "2015-2024"
+        int hhi
+        float cr4
+    }
+
+    BroadbandMarketShare {
+        string company
+        float share
+        string source
+    }
+
+    NYCMeshNodes {
+        int activeNodes
+        int supernodes
+        int hubs
+    }
+
+    NYCMeshBorough {
+        string borough
+        string slug
+        int activeNodes
+        int supernodes
+        int hubs
+    }
+
+    BroadbandCounty ||--|{ BroadbandProvider : "topProviders[]"
+    BroadbandTimeSeries ||--|{ BroadbandTimeSeriesYear : "years[]"
+    County ||--|| BroadbandCounty : "fips"
+    NYCMeshNodes ||--|{ NYCMeshBorough : "boroughs[]"
+
+    %% ─── Healthcare Domain ──────────────────────────────────────
+
+    HealthcareRegion {
+        string slug PK
+        string name
+        int totalBeds
+        int totalFacilities
+        int hhi
+        float cr4
+    }
+
+    HealthSystem {
+        string name
+        int beds
+        int facilities
+        float share
+    }
+
+    HealthcareTimeSeries {
+        string sector "Healthcare"
+        string geography "New York State"
+    }
+
+    HealthcareTimeSeriesYear {
+        int year "2015-2024"
+        int hhi
+        float cr4
+    }
+
+    HealthcareMarketShare {
+        string company
+        float share
+        string source
+    }
+
+    HealthcareRegion ||--|{ HealthSystem : "topSystems[]"
+    HealthcareTimeSeries ||--|{ HealthcareTimeSeriesYear : "years[]"
+    HealthRegion ||--|| HealthcareRegion : "slug"
+
+    %% ─── Transportation Domain ──────────────────────────────────
+
+    TransportNeighborhood {
+        string slug PK
+        string name
+        string borough
+        string[] ntaCodes
+        int workers
+        float transitPct
+        float drovePct
+        float carpoolPct
+        float walkBikePct
+        float wfhPct
+        float zeroCarPct
+        float avgCommuteMins
+        int medianIncome
+        int estMonthlyCost
+    }
+
+    MTAFare {
+        int year PK "2003-2026"
+        string effectiveDate
+        float baseFare
+        float monthlyPass
+        float baseFareReal2024 "inflation-adjusted"
+        float monthlyPassReal2024
+        string notes
+    }
+
+    Neighborhood ||--|| TransportNeighborhood : "slug"
+
+    %% ─── Spending / Homepage ────────────────────────────────────
+
+    HouseholdSpending {
+        string geography "NY Metro MSA or US National"
+        string table
+        string period
+        int totalExpenditure
+        int meanIncomeBefore
+    }
+
+    SpendingCategory {
+        string name
+        int amount
+        boolean tracked
+        boolean coming "roadmap item"
+        string href "nullable"
+    }
+
+    HouseholdSpending ||--|{ SpendingCategory : "categories[]"
+
+    %% ─── Raw Census Data (inputs to aggregation) ───────────────
+
+    ACSIncomeTract {
+        string geoid PK
+        string countyFips
+        int medianIncome
+        int moe
+        int totalHouseholds
+        int medianRent
+        int renterHouseholds
+        int rentBurdened30to35
+        int rentBurdened35to40
+        int rentBurdened40to50
+        int rentBurdened50plus
+    }
+
+    ACSRentTract {
+        string geoid PK
+        string countyFips
+        int medianRent
+        int renterHouseholds
+    }
+
+    ACSCommuteTract {
+        string geoid PK
+        string countyFips
+        int totalWorkers
+        int transitWorkers
+        int droveAlone
+        int carpooled
+        int bicycle
+        int walked
+        int wfh
+        int aggTravelTime
+    }
+
+    CensusTract ||--o| ACSIncomeTract : "geoid"
+    CensusTract ||--o| ACSRentTract : "geoid (per vintage)"
+    CensusTract ||--o| ACSCommuteTract : "geoid"
+```
+
+## Data Aggregation Pipeline
+
+```mermaid
+flowchart TB
+    subgraph sources["External Data Sources"]
+        census["Census ACS API<br/><i>B19013, B25064, B25070, B08301</i>"]
+        pluto["NYC MapPLUTO 24v4"]
+        acris["ACRIS Ownership Records"]
+        hpd["HPD Violations"]
+        fcc["FCC Broadband Data Collection"]
+        doh["NYS DOH SPARCS + AHA"]
+        mta["MTA Board Resolutions"]
+        bls["BLS Consumer Expenditure Survey"]
+        mesh["NYC Mesh API"]
+    end
+
+    subgraph raw["data/raw/ (gitignored)"]
+        acs_income["acs-income-tracts-2024.json<br/><i>2,327 tracts × income/rent/burden</i>"]
+        acs_rent19["acs-rent-tracts-2019.json"]
+        acs_rent23["acs-rent-tracts-2023.json"]
+        acs_rent24["acs-rent-tracts-2024.json"]
+        acs_commute["acs-commute-tracts-2023.json"]
+        pluto_raw["pluto-residential.json"]
+        hpd_raw["hpd-violations.json"]
+    end
+
+    subgraph crosswalks["data/crosswalks/"]
+        xw_tract["nta-to-census-tract.json<br/><i>geoid → ntaCode</i>"]
+        xw_nta["neighborhood-to-nta.json<br/><i>slug → ntaCodes[]</i>"]
+        xw_boro["borough-county-fips.json<br/><i>borough → fips</i>"]
+        xw_health["healthcare-region-counties.json<br/><i>fips → regionSlug</i>"]
+    end
+
+    subgraph scripts["scripts/scrapers/"]
+        dl_income["download-acs-income.ts"]
+        dl_rent["download-acs-rent-history.ts"]
+        agg_pluto["aggregate-pluto-ownership.ts"]
+        agg_rent["aggregate-nta-rent-history.ts"]
+        agg_income["aggregate-nta-income.ts"]
+        agg_commute["aggregate-nta-commute.ts"]
+    end
+
+    subgraph output["data/concentration/ (committed)"]
+        housing_n["housing-neighborhoods.json<br/><i>197 neighborhoods</i>"]
+        rent_hist["rent-history-neighborhoods.json<br/><i>197 neighborhoods × 3 vintages</i>"]
+        transport_n["transportation-neighborhoods.json<br/><i>~190 neighborhoods</i>"]
+        broadband_c["broadband-counties.json<br/><i>62 counties</i>"]
+        health_r["healthcare-regions.json<br/><i>10 regions</i>"]
+        spending["household-spending.json<br/><i>2 geographies</i>"]
+        mta_fares["mta-fares.json<br/><i>2003–2026</i>"]
+        nycmesh["nycmesh-nodes.json"]
+        housing_ts["housing-nyc.json + market-shares"]
+        broadband_ts["broadband-nys.json + market-shares"]
+        health_ts["healthcare-nys.json + market-shares"]
+    end
+
+    subgraph pages["Next.js Pages"]
+        p_home["/ Homepage"]
+        p_housing["/housing"]
+        p_hood["/housing/[neighborhood]"]
+        p_broadband["/broadband"]
+        p_county["/broadband/[county]"]
+        p_health["/healthcare"]
+        p_transport["/transportation"]
+    end
+
+    %% Download flows
+    census --> dl_income --> acs_income
+    census --> dl_rent --> acs_rent19 & acs_rent23 & acs_rent24
+    census --> acs_commute
+    pluto --> pluto_raw
+    hpd --> hpd_raw
+
+    %% Aggregation flows
+    acs_income --> agg_pluto
+    pluto_raw --> agg_pluto
+    hpd_raw --> agg_pluto
+    xw_tract --> agg_pluto
+    xw_nta --> agg_pluto
+    agg_pluto --> housing_n
+
+    acs_rent19 --> agg_rent
+    acs_rent23 --> agg_rent
+    acs_rent24 --> agg_rent
+    xw_tract --> agg_rent
+    agg_rent --> rent_hist
+
+    acs_income --> agg_income
+    xw_tract --> agg_income
+
+    acs_commute --> agg_commute
+    xw_tract --> agg_commute
+    xw_nta --> agg_commute
+    agg_commute --> transport_n
+
+    fcc --> broadband_c
+    doh --> health_r
+    mta --> mta_fares
+    bls --> spending
+    mesh --> nycmesh
+
+    %% Page data imports
+    housing_n --> p_housing
+    rent_hist --> p_housing
+    housing_ts --> p_housing
+    housing_n --> p_hood
+    rent_hist --> p_hood
+
+    broadband_c --> p_broadband
+    broadband_ts --> p_broadband
+    nycmesh --> p_broadband
+    broadband_c --> p_county
+
+    health_r --> p_health
+    health_ts --> p_health
+
+    transport_n --> p_transport
+    mta_fares --> p_transport
+
+    spending --> p_home
+    housing_n --> p_home
+
+    %% Styling
+    classDef source fill:#E8F5E9,stroke:#2E7D32
+    classDef raw fill:#FFF3E0,stroke:#E65100
+    classDef crosswalk fill:#E3F2FD,stroke:#1565C0
+    classDef script fill:#F3E5F5,stroke:#6A1B9A
+    classDef output fill:#E0F2F1,stroke:#00695C
+    classDef page fill:#FCE4EC,stroke:#AD1457
+
+    class census,pluto,acris,hpd,fcc,doh,mta,bls,mesh source
+    class acs_income,acs_rent19,acs_rent23,acs_rent24,acs_commute,pluto_raw,hpd_raw raw
+    class xw_tract,xw_nta,xw_boro,xw_health crosswalk
+    class dl_income,dl_rent,agg_pluto,agg_rent,agg_income,agg_commute script
+    class housing_n,rent_hist,transport_n,broadband_c,health_r,spending,mta_fares,nycmesh,housing_ts,broadband_ts,health_ts output
+    class p_home,p_housing,p_hood,p_broadband,p_county,p_health,p_transport page
+```
+
+## Geographic Key Reference
+
+| Key | Format | Example | Used By |
+|-----|--------|---------|---------|
+| `geoid` | 11-digit Census tract | `36047049900` | Raw ACS data, crosswalks |
+| `ntaCode` | DCP NTA code | `BK0101` | Tract→neighborhood aggregation |
+| `slug` | URL-safe name | `greenpoint` | All neighborhood-level data, page routing |
+| `fips` | 5-digit county FIPS | `36047` | County-level data, borough↔county mapping |
+| `regionSlug` | Kebab-case region | `nyc-metro` | Healthcare regions |
+| `borough` | Proper name | `Brooklyn` | NYC borough aggregation |
+
+## Data Sources
+
+| Domain | Source | API | Vintage |
+|--------|--------|-----|---------|
+| Housing ownership | NYC MapPLUTO + ACRIS | Socrata | 24v4 |
+| Housing violations | HPD via NYC Open Data | Socrata | Rolling |
+| Income & rent burden | Census ACS 5-Year | REST | 2020–2024 |
+| Rent history | Census ACS 5-Year (B25064) | REST | 2019, 2023, 2024 |
+| Commute patterns | Census ACS 5-Year (B08301) | REST | 2019–2023 |
+| Broadband availability | FCC BDC | REST | Dec 2024 |
+| Healthcare facilities | NYS DOH SPARCS + AHA | Bulk download | 2024 |
+| Transit fares | MTA Board Resolutions | Manual | 2003–2026 |
+| Household spending | BLS CEX | Bulk download | 2023–2024 avg |
+| Community broadband | NYC Mesh | Web scrape | Feb 2026 |
