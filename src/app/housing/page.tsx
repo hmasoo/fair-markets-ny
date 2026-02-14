@@ -13,6 +13,7 @@ const CitywideCharts = dynamic(
 );
 import { HousingMapSection } from "./HousingMapSection";
 import { HousingTable } from "./HousingTable";
+import { NeighborhoodSearch } from "./NeighborhoodSearch";
 import { aggregateByBorough } from "@/lib/aggregations/housing-boroughs";
 
 import timeSeriesData from "../../../data/concentration/housing-nyc.json";
@@ -119,6 +120,15 @@ export default function HousingPage() {
           siloed: city ownership records (ACRIS/PLUTO), HPD housing violations,
           Census income surveys, and rent stabilization filings.
         </p>
+        <div className="mt-4">
+          <NeighborhoodSearch
+            neighborhoods={neighborhoods.map((n) => ({
+              name: n.name,
+              slug: n.slug,
+              borough: n.borough,
+            }))}
+          />
+        </div>
       </div>
 
       {/* Key stats — all cost/outcome focused */}
