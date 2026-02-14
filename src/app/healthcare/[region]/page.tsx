@@ -6,8 +6,16 @@ import dynamic from "next/dynamic";
 const RegionCharts = dynamic(
   () => import("./region-charts").then((m) => m.RegionCharts),
 );
+const RegionPricingTable = dynamic(
+  () => import("../pricing-charts").then((m) => m.RegionPricingTable),
+);
+const RegionLocatorMap = dynamic(
+  () => import("./RegionLocatorMap").then((m) => m.RegionLocatorMap),
+  { ssr: false },
+);
 
 import regionData from "../../../../data/concentration/healthcare-regions.json";
+import pricingData from "../../../../data/concentration/healthcare-pricing.json";
 
 interface Props {
   params: Promise<{ region: string }>;
@@ -53,12 +61,15 @@ export default async function RegionPage({ params }: Props) {
         ]}
       />
 
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-fm-patina">{region.name}</h1>
-        <p className="mt-1 text-fm-sage">
-          {region.totalFacilities} hospital facilities &middot;{" "}
-          {region.totalBeds.toLocaleString()} licensed beds
-        </p>
+      <div className="mb-8 flex flex-col sm:flex-row sm:items-start gap-6">
+        <div className="flex-1">
+          <h1 className="text-3xl font-bold text-fm-patina">{region.name}</h1>
+          <p className="mt-1 text-fm-sage">
+            {region.totalFacilities} hospital facilities &middot;{" "}
+            {region.totalBeds.toLocaleString()} licensed beds
+          </p>
+        </div>
+        <RegionLocatorMap regionSlug={slug} name={region.name} />
       </div>
 
       {/* Stats — lead with dominant system */}
@@ -113,6 +124,15 @@ export default async function RegionPage({ params }: Props) {
         regionName={region.name}
         topSystems={region.topSystems}
       />
+
+      {/* Hospital pricing comparison */}
+      <div className="mt-8">
+        <RegionPricingTable
+          procedures={pricingData.procedures}
+          regionSlug={slug}
+          dominantSystem={topSystem?.name}
+        />
+      </div>
 
       {/* System detail table */}
       <div className="card mt-8">

@@ -217,9 +217,49 @@ erDiagram
         string source
     }
 
+    HospitalCrosswalk {
+        string pfi PK "SPARCS facility ID"
+        string facilityName
+        string system "health system or Independent"
+        string county
+        string regionSlug
+    }
+
+    ProcedurePricing {
+        string drgCode PK "e.g. 560"
+        string drgDescription
+        string type "Surgical or Medical"
+        int statewideMeanCharge
+        int statewideMeanCost
+        int totalDischarges
+        int hospitalCount
+    }
+
+    RegionProcedurePricing {
+        string regionSlug
+        int meanCharge
+        int meanCost
+        int discharges
+    }
+
+    HospitalProcedurePricing {
+        string pfi
+        string name
+        string system
+        int meanCharge
+        int medianCharge
+        int meanCost
+        int medianCost
+        int discharges
+    }
+
     HealthcareRegion ||--|{ HealthSystem : "topSystems[]"
     HealthcareTimeSeries ||--|{ HealthcareTimeSeriesYear : "years[]"
     HealthRegion ||--|| HealthcareRegion : "slug"
+    HospitalCrosswalk }|--|| HealthRegion : "regionSlug"
+    ProcedurePricing ||--|{ RegionProcedurePricing : "byRegion[]"
+    RegionProcedurePricing ||--|{ HospitalProcedurePricing : "hospitals[]"
+    HospitalProcedurePricing }|--|| HospitalCrosswalk : "pfi"
 
     %% ─── Transportation Domain ──────────────────────────────────
 
@@ -337,6 +377,7 @@ flowchart TB
         acs_commute["acs-commute-tracts-2023.json"]
         pluto_raw["pluto-residential.json"]
         hpd_raw["hpd-violations.json"]
+        sparcs_raw["sparcs-hospital-costs.json<br/><i>24,846 records × 6 DRGs</i>"]
     end
 
     subgraph crosswalks["data/crosswalks/"]
@@ -344,15 +385,18 @@ flowchart TB
         xw_nta["neighborhood-to-nta.json<br/><i>slug → ntaCodes[]</i>"]
         xw_boro["borough-county-fips.json<br/><i>borough → fips</i>"]
         xw_health["healthcare-region-counties.json<br/><i>fips → regionSlug</i>"]
+        xw_hospital["hospital-to-system.json<br/><i>pfi → system + regionSlug</i>"]
     end
 
     subgraph scripts["scripts/scrapers/"]
         dl_income["download-acs-income.ts"]
         dl_rent["download-acs-rent-history.ts"]
+        dl_sparcs["download-sparcs-pricing.ts"]
         agg_pluto["aggregate-pluto-ownership.ts"]
         agg_rent["aggregate-nta-rent-history.ts"]
         agg_income["aggregate-nta-income.ts"]
         agg_commute["aggregate-nta-commute.ts"]
+        agg_sparcs["aggregate-sparcs-pricing.ts"]
     end
 
     subgraph output["data/concentration/ (committed)"]
@@ -361,6 +405,7 @@ flowchart TB
         transport_n["transportation-neighborhoods.json<br/><i>~190 neighborhoods</i>"]
         broadband_c["broadband-counties.json<br/><i>62 counties</i>"]
         health_r["healthcare-regions.json<br/><i>10 regions</i>"]
+        health_pricing["healthcare-pricing.json<br/><i>6 procedures × 10 regions</i>"]
         spending["household-spending.json<br/><i>2 geographies</i>"]
         mta_fares["mta-fares.json<br/><i>2003–2026</i>"]
         nycmesh["nycmesh-nodes.json"]
@@ -376,6 +421,7 @@ flowchart TB
         p_broadband["/broadband"]
         p_county["/broadband/[county]"]
         p_health["/healthcare"]
+        p_region["/healthcare/[region]"]
         p_transport["/transportation"]
     end
 
@@ -409,6 +455,10 @@ flowchart TB
     agg_commute --> transport_n
 
     fcc --> broadband_c
+    doh --> dl_sparcs --> sparcs_raw
+    sparcs_raw --> agg_sparcs
+    xw_hospital --> agg_sparcs
+    agg_sparcs --> health_pricing
     doh --> health_r
     mta --> mta_fares
     bls --> spending
@@ -427,7 +477,10 @@ flowchart TB
     broadband_c --> p_county
 
     health_r --> p_health
+    health_pricing --> p_health
     health_ts --> p_health
+    health_r --> p_region
+    health_pricing --> p_region
 
     transport_n --> p_transport
     mta_fares --> p_transport
@@ -444,11 +497,11 @@ flowchart TB
     classDef page fill:#FCE4EC,stroke:#AD1457
 
     class census,pluto,acris,hpd,fcc,doh,mta,bls,mesh source
-    class acs_income,acs_rent19,acs_rent23,acs_rent24,acs_commute,pluto_raw,hpd_raw raw
-    class xw_tract,xw_nta,xw_boro,xw_health crosswalk
-    class dl_income,dl_rent,agg_pluto,agg_rent,agg_income,agg_commute script
-    class housing_n,rent_hist,transport_n,broadband_c,health_r,spending,mta_fares,nycmesh,housing_ts,broadband_ts,health_ts output
-    class p_home,p_housing,p_hood,p_broadband,p_county,p_health,p_transport page
+    class acs_income,acs_rent19,acs_rent23,acs_rent24,acs_commute,pluto_raw,hpd_raw,sparcs_raw raw
+    class xw_tract,xw_nta,xw_boro,xw_health,xw_hospital crosswalk
+    class dl_income,dl_rent,dl_sparcs,agg_pluto,agg_rent,agg_income,agg_commute,agg_sparcs script
+    class housing_n,rent_hist,transport_n,broadband_c,health_r,health_pricing,spending,mta_fares,nycmesh,housing_ts,broadband_ts,health_ts output
+    class p_home,p_housing,p_hood,p_broadband,p_county,p_health,p_region,p_transport page
 ```
 
 ## Geographic Key Reference
@@ -473,6 +526,7 @@ flowchart TB
 | Commute patterns | Census ACS 5-Year (B08301) | REST | 2019–2023 |
 | Broadband availability | FCC BDC | REST | Dec 2024 |
 | Healthcare facilities | NYS DOH SPARCS + AHA | Bulk download | 2024 |
+| Hospital pricing | NYS DOH SPARCS Cost Transparency | Socrata API | 2009–2021 |
 | Transit fares | MTA Board Resolutions | Manual | 2003–2026 |
 | Household spending | BLS CEX | Bulk download | 2023–2024 avg |
 | Community broadband | NYC Mesh | Web scrape | Feb 2026 |

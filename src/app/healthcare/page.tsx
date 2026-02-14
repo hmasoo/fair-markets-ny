@@ -11,13 +11,17 @@ const RegionalConcentrationChart = dynamic(
 const StatewideCharts = dynamic(
   () => import("./healthcare-charts").then((m) => m.StatewideCharts),
 );
-const HealthcareCountyMap = dynamic(
-  () => import("./HealthcareCountyMap").then((m) => m.HealthcareCountyMap),
+const HealthcareMapSection = dynamic(
+  () => import("./HealthcareMapSection").then((m) => m.HealthcareMapSection),
+);
+const PricingSection = dynamic(
+  () => import("./pricing-charts").then((m) => m.PricingSection),
 );
 
 import timeSeriesData from "../../../data/concentration/healthcare-nys.json";
 import marketShareData from "../../../data/concentration/healthcare-nys-market-shares.json";
 import regionData from "../../../data/concentration/healthcare-regions.json";
+import pricingData from "../../../data/concentration/healthcare-pricing.json";
 
 export const metadata: Metadata = {
   title: "Who Runs the Hospitals in Your Region?",
@@ -120,8 +124,8 @@ export default function HealthcarePage() {
             choose by location, insurance network, specialty, and reputation.
           </p>
           <p>
-            That said, the academic evidence on hospital consolidation is
-            substantial. Studies by{" "}
+            The academic evidence on hospital consolidation is substantial.
+            Studies by{" "}
             <a
               href="https://www.aeaweb.org/articles?id=10.1257/aer.p20191020"
               className="text-fm-teal hover:underline"
@@ -141,9 +145,17 @@ export default function HealthcarePage() {
             </a>
             , and Craig et al. consistently find that hospital mergers lead to
             higher prices for commercially insured patients — typically 5–20%
-            increases. Whether that pattern holds in specific New York regions
-            requires price data we don{"\u2019"}t yet have. NYS SPARCS discharge
-            data and CMS transparency files could fill this gap.
+            increases. Below, we pair ownership structure with NYS SPARCS
+            hospital charge and cost data to show how pricing varies across
+            hospitals and regions.
+          </p>
+          <p>
+            <strong>Charges vs. costs vs. what you pay:</strong> Hospital
+            charges (chargemaster rates) are list prices — they rarely reflect
+            what insurers actually pay. Mean cost data, from Institutional Cost
+            Reports, measures resource use and is more comparable. But wide
+            charge variation within a region for the same procedure at the same
+            severity level signals differences in pricing power.
           </p>
         </div>
       </div>
@@ -157,8 +169,11 @@ export default function HealthcarePage() {
           Counties colored by how concentrated their health planning region is.
           Click any county to explore its region.
         </p>
-        <HealthcareCountyMap regions={regions} />
+        <HealthcareMapSection regions={regions} />
       </div>
+
+      {/* Hospital pricing section */}
+      <PricingSection procedures={pricingData.procedures} />
 
       {/* Regional bar chart — now shows dominant system share */}
       <RegionalConcentrationChart regions={regions} />
