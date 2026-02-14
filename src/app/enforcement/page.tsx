@@ -4,59 +4,116 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Badge } from "@/components/ui/Badge";
 
 export const metadata: Metadata = {
-  title: "When Markets Don't Work — What New York Did About It",
+  title: "Regulatory Tracker — What New York Did About It",
   description:
-    "Real consumer problems and how New York regulators responded — from algorithmic rent-setting to hospital mergers to nursing home quality.",
+    "Real consumer problems and how New York regulators responded — from algorithmic rent-setting to hospital mergers to nursing home quality. Tracked alongside structure and cost data from elsewhere on this site.",
 };
 
-const actions = [
+interface CrossRef {
+  text: string;
+  href: string;
+  detail: string;
+}
+
+interface Action {
+  id: string;
+  problem: string;
+  sector: string;
+  description: string;
+  response: string;
+  agency: string;
+  date: string;
+  outcome: string;
+  outcomeVariant: "green" | "yellow" | "red" | "gray";
+  crossRefs?: CrossRef[];
+}
+
+const actions: Action[] = [
   {
     id: "realpage",
     problem: "Landlords were using the same software to set rents",
     sector: "Housing",
     description:
-      "RealPage's revenue management tool let large landlords feed their pricing data into a shared algorithm that recommended rent increases — effectively coordinating prices without a phone call. Tenants in buildings using the software paid more than comparable units nearby.",
+      "RealPage\u2019s revenue management tool let large landlords feed their pricing data into a shared algorithm that recommended rent increases \u2014 effectively coordinating prices without a phone call. Tenants in buildings using the software paid more than comparable units nearby.",
     response: "First-in-nation ban on algorithmic rent-setting",
     agency: "NYS Legislature / Governor",
     date: "2024-12-20",
     outcome: "Signed into law",
-    outcomeVariant: "green" as const,
+    outcomeVariant: "green",
+    crossRefs: [
+      {
+        text: "Housing ownership concentration",
+        href: "/housing",
+        detail:
+          "Algorithmic pricing tools are most effective where a few landlords control a large share of units. Our housing data shows which neighborhoods have the highest ownership concentration.",
+      },
+    ],
   },
   {
     id: "pe-nursing",
     problem: "Private equity firms bought nursing homes, then cut staffing",
     sector: "Healthcare",
     description:
-      "When PE firms acquire nursing homes, research shows they often reduce staffing to boost returns. Residents and families noticed declining care quality — more falls, slower response times, fewer activities — but had no visibility into who actually owned the facility.",
+      "When PE firms acquire nursing homes, research shows they often reduce staffing to boost returns. Residents and families noticed declining care quality \u2014 more falls, slower response times, fewer activities \u2014 but had no visibility into who actually owned the facility.",
     response: "AG investigation into PE nursing home acquisitions",
     agency: "NY Attorney General",
     date: "2024-06-15",
     outcome: "Investigation ongoing",
-    outcomeVariant: "yellow" as const,
+    outcomeVariant: "yellow",
+    crossRefs: [
+      {
+        text: "Healthcare system dominance by region",
+        href: "/healthcare",
+        detail:
+          "Our healthcare page maps which systems control the most beds in each region. In 8 of 10 regions, a single system holds 40%+ of beds \u2014 the kind of market structure where acquisitions face less competitive pressure.",
+      },
+    ],
   },
   {
     id: "pbm",
     problem: "Pharmacy middlemen control drug pricing with no oversight",
     sector: "Healthcare",
     description:
-      "Pharmacy Benefit Managers (PBMs) negotiate drug prices between insurers and pharmacies — but they're vertically integrated with the insurers, creating conflicts of interest. Patients see the result at the counter: opaque pricing, restricted pharmacy choices, and surprise costs.",
-    response: "Nation's first PBM watchdog bureau created",
+      "Pharmacy Benefit Managers (PBMs) negotiate drug prices between insurers and pharmacies \u2014 but they\u2019re vertically integrated with the insurers, creating conflicts of interest. Patients see the result at the counter: opaque pricing, restricted pharmacy choices, and surprise costs.",
+    response: "Nation\u2019s first PBM watchdog bureau created",
     agency: "NYS DFS",
     date: "2024-09-01",
     outcome: "Bureau operational",
-    outcomeVariant: "green" as const,
+    outcomeVariant: "green",
   },
   {
     id: "con-review",
-    problem: "Hospital mergers were approved too quickly to assess patient impact",
+    problem:
+      "Hospital mergers were approved too quickly to assess patient impact",
     sector: "Healthcare",
     description:
-      "When hospital systems merge, patients in the affected area may lose access to competing providers. The previous 30-day review period didn't allow enough time to evaluate how a merger would affect patient choice, pricing, or service availability.",
-    response: "CON review period extended to 60 days with post-merger reporting",
+      "When hospital systems merge, patients in the affected area may lose access to competing providers. The previous 30-day review period didn\u2019t allow enough time to evaluate how a merger would affect patient choice, pricing, or service availability. Meanwhile, statewide hospital HHI rose 63% from 2015 to 2024 (680 to 1,105).",
+    response:
+      "CON review period extended to 60 days with post-merger reporting",
     agency: "NYS DOH",
     date: "2024-03-10",
     outcome: "Implemented",
-    outcomeVariant: "green" as const,
+    outcomeVariant: "green",
+    crossRefs: [
+      {
+        text: "Finger Lakes: UR Medicine holds 46% of beds",
+        href: "/healthcare/finger-lakes",
+        detail:
+          "UR Medicine (Strong Memorial) controls 46% of hospital beds in the Finger Lakes region (HHI 2,920). The region\u2019s consolidation accelerated through exactly the kind of system expansion that CON review is meant to evaluate.",
+      },
+      {
+        text: "Long Island: Northwell holds 59% of beds",
+        href: "/healthcare/long-island",
+        detail:
+          "Northwell Health controls 59% of beds on Long Island (HHI 2,850) \u2014 the most dominant single-system market in the state. Future mergers in this region face a high bar for demonstrating consumer benefit.",
+      },
+      {
+        text: "Statewide consolidation trend",
+        href: "/healthcare",
+        detail:
+          "The RAND Hospital Price Transparency Study (2024) found that market power \u2014 not payer mix or cost of care \u2014 explains most commercial price variation. NYS commercial prices exceed 300% of Medicare rates.",
+      },
+    ],
   },
 ];
 
@@ -80,14 +137,45 @@ export default function EnforcementPage() {
           When markets don{"'"}t work — what New York did about it
         </h1>
         <p className="mt-2 text-fm-sage max-w-2xl">
-          Algorithmic rent-setting. Hospital mergers that reduce patient
-          choices. Pharmacy middlemen with no oversight. These are real
-          problems New Yorkers face — and in some cases, regulators have
-          stepped in. Here{"'"}s what happened.
+          Real consumer problems, the regulatory response, and what our data
+          shows about the markets where these problems occurred.
         </p>
       </div>
 
-      {/* Stats — consumer-facing */}
+      {/* Lead with limitations — signals intellectual seriousness */}
+      <div className="card mb-8">
+        <h2 className="text-xl font-bold text-fm-patina mb-2">
+          What this tracker captures — and what it doesn{"'"}t
+        </h2>
+        <div className="text-sm text-gray-700 space-y-3">
+          <p>
+            This is the hardest page on the site to get right. Regulatory
+            action is one response to market problems, but it{"'"}s not the only
+            one — and it{"'"}s not always the most effective. Some consumer harms
+            reflect supply constraints (not enough housing, not enough
+            broadband infrastructure) that enforcement alone can{"'"}t fix.
+            Others involve genuine tradeoffs: extending hospital merger review
+            periods adds scrutiny but also delays access to potential
+            efficiencies.
+          </p>
+          <p>
+            This tracker covers publicly announced actions from New York State
+            agencies — not federal enforcement (FTC, DOJ), private litigation,
+            or informal regulatory guidance. We include only actions that
+            connect to sectors covered elsewhere on this platform, so you can
+            see the market structure data alongside the policy response.
+          </p>
+          <p>
+            <strong>The connection to data:</strong> Where possible, each
+            entry below links to the relevant sector page on this site. Those
+            cross-references are the point — they let you see what
+            concentration, pricing, or ownership looked like in the markets
+            where regulators intervened.
+          </p>
+        </div>
+      </div>
+
+      {/* Stats — below the framing */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
         <div className="card text-center">
           <div className="text-3xl font-bold text-fm-copper">
@@ -118,35 +206,7 @@ export default function EnforcementPage() {
         </div>
       </div>
 
-      {/* How to read this + caveats — lead with limitations */}
-      <div className="card mb-8">
-        <h2 className="text-xl font-bold text-fm-patina mb-2">
-          How to read this page
-        </h2>
-        <div className="text-sm text-gray-700 space-y-3">
-          <p>
-            Each entry starts with the consumer problem — what people
-            experienced — followed by the regulatory or legislative response.
-            Not every market problem gets fixed, and not every fix works. We
-            track both the interventions and the outcomes so you can judge for
-            yourself.
-          </p>
-          <p>
-            <strong>What this tracker doesn{"\u2019"}t capture:</strong>{" "}
-            Regulatory action is one response to market problems, but it{"\u2019"}s
-            not the only one — and it{"\u2019"}s not always the most effective.
-            Some consumer harms reflect supply constraints (not enough housing,
-            not enough broadband infrastructure) that enforcement alone
-            can{"\u2019"}t fix. Others involve tradeoffs: extending hospital merger
-            review periods adds scrutiny but also delays access to potential
-            efficiencies. This tracker covers publicly announced actions from
-            New York State agencies — not federal enforcement (FTC, DOJ),
-            private litigation, or informal regulatory guidance.
-          </p>
-        </div>
-      </div>
-
-      {/* Actions list — problem first */}
+      {/* Actions list — problem first, with cross-references */}
       <div className="space-y-6">
         {actions.map((action) => (
           <div key={action.id} className="card">
@@ -182,27 +242,33 @@ export default function EnforcementPage() {
                 <span className="text-fm-sage"> — {action.agency}</span>
               </p>
             </div>
+
+            {/* Cross-references to data on other pages */}
+            {action.crossRefs && action.crossRefs.length > 0 && (
+              <div className="mt-4 pt-3 border-t border-gray-100">
+                <p className="text-xs font-semibold text-fm-sage uppercase tracking-wider mb-2">
+                  See the data
+                </p>
+                <div className="space-y-2">
+                  {action.crossRefs.map((ref) => (
+                    <Link
+                      key={ref.href}
+                      href={ref.href}
+                      className="block bg-gray-50 hover:bg-gray-100 rounded-lg p-3 transition-colors group"
+                    >
+                      <span className="text-sm font-medium text-fm-teal group-hover:underline">
+                        {ref.text} &rarr;
+                      </span>
+                      <span className="block text-xs text-fm-sage mt-1">
+                        {ref.detail}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         ))}
-      </div>
-
-      {/* Cross-references to other pages */}
-      <div className="card mt-8">
-        <h2 className="text-lg font-bold text-fm-patina mb-2">
-          Related data on this site
-        </h2>
-        <div className="text-sm text-gray-700 space-y-2">
-          <p>
-            The problems tracked here connect to data elsewhere on the
-            platform. The{" "}
-            <Link href="/housing" className="text-fm-teal hover:underline font-medium">housing page</Link>{" "}
-            shows ownership concentration in the neighborhoods where
-            algorithmic rent-setting tools were used. The{" "}
-            <Link href="/healthcare" className="text-fm-teal hover:underline font-medium">healthcare page</Link>{" "}
-            maps hospital system dominance across the regions where CON
-            reviews and PE acquisitions are most relevant.
-          </p>
-        </div>
       </div>
     </div>
   );
