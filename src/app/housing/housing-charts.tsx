@@ -280,7 +280,7 @@ export function NeighborhoodExplorerChart({
   neighborhoods: Neighborhood[];
 }) {
   const [xMetric, setXMetric] = useState<MetricKey>("hhi");
-  const [yMetric, setYMetric] = useState<MetricKey>("rentBurdenPct");
+  const [yMetric, setYMetric] = useState<MetricKey>("hpdViolationsPerUnit");
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const margin = { top: 10, right: 20, bottom: 45, left: 75 };
@@ -340,11 +340,12 @@ export function NeighborhoodExplorerChart({
   return (
     <div className="card">
       <h2 className="text-xl font-bold text-fm-patina mb-2">
-        Explore the data
+        Does concentration affect housing quality?
       </h2>
       <p className="text-sm text-fm-sage mb-4">
-        Pick any two measures to compare across neighborhoods. Each bubble is
-        one neighborhood — bigger means more rental units.
+        The default view plots ownership concentration against HPD violations.
+        Pick any two measures to compare — each bubble is one neighborhood,
+        sized by its number of rental units.
       </p>
 
       {/* Axis selectors */}

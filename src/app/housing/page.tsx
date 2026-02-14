@@ -13,7 +13,6 @@ const CitywideCharts = dynamic(
 );
 import { HousingMapSection } from "./HousingMapSection";
 import { HousingTable } from "./HousingTable";
-import { HHITooltip } from "@/components/ui/HHITooltip";
 import { getCR4TextClass } from "@/lib/colorScales";
 import { aggregateByBorough } from "@/lib/aggregations/housing-boroughs";
 
@@ -45,9 +44,9 @@ const neighborhoodData = neighborhoodDataRaw as {
 };
 
 export const metadata: Metadata = {
-  title: "Rental Ownership — Housing Market Data",
+  title: "Who Owns the Apartments in Your Neighborhood?",
   description:
-    "Rental ownership patterns and housing supply conditions in NYC — neighborhood-level data from ACRIS, PLUTO, and Local Law 18.",
+    "Ownership concentration, housing quality, and affordability across 197 NYC neighborhoods — data from ACRIS, PLUTO, HPD, and the Census Bureau.",
 };
 
 export default function HousingPage() {
@@ -59,10 +58,9 @@ export default function HousingPage() {
   const lowestIncome = [...neighborhoods]
     .filter((n) => n.medianIncome && n.medianIncome > 0)
     .sort((a, b) => a.medianIncome! - b.medianIncome!)[0];
-  const highestNycha = [...neighborhoods]
-    .filter((n) => n.nychaShare > 0)
-    .sort((a, b) => b.nychaShare - a.nychaShare)[0];
-  const highlyConcentrated = neighborhoods.filter((n) => n.hhi > 2500).length;
+  const highestRentBurden = [...neighborhoods]
+    .filter((n) => n.rentBurdenPct && n.rentBurdenPct > 0)
+    .sort((a, b) => b.rentBurdenPct! - a.rentBurdenPct!)[0];
 
   // Build NTA-keyed data for the choropleth map
   // Each NTA code in a neighborhood gets that neighborhood's HHI
@@ -89,21 +87,41 @@ export default function HousingPage() {
       <Breadcrumb items={[{ label: "Housing" }]} />
 
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-fm-patina">Rental Ownership in NYC</h1>
+        <h1 className="text-3xl font-bold text-fm-patina">Who owns the apartments in your neighborhood?</h1>
         <p className="mt-2 text-fm-sage max-w-2xl">
-          Ownership concentration varies widely across NYC. In some
-          neighborhoods, a handful of landlords control most apartments. In
-          others — like Stuyvesant Town or Co-op City — a single entity
-          dominates, but tenants are protected by rent stabilization or co-op
-          governance. Citywide, about 30,000 landlords share the market. We
-          measure structure using <HHITooltip>HHI</HHITooltip>, a standard
-          index — but structure alone doesn{"'"}t tell you whether tenants are
-          well-served.
+          In some NYC neighborhoods, a handful of landlords control most
+          apartments. In others, ownership is spread across thousands.
+          We combined city ownership records, HPD housing violations, and
+          Census income data to show what{"'"}s happening in all 197
+          neighborhoods — who owns the buildings, how well they{"'"}re
+          maintained, and whether people can afford to live there.
         </p>
       </div>
 
       {/* Key stats */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        {highestViolations && (
+          <div className="card text-center">
+            <div className="text-3xl font-bold text-fm-copper">
+              {highestViolations.hpdViolationsPerUnit}
+            </div>
+            <div className="text-sm text-fm-sage mt-1">
+              hazardous violations per apartment
+            </div>
+            <div className="text-xs text-fm-sage">{highestViolations.name}</div>
+          </div>
+        )}
+        {highestRentBurden && (
+          <div className="card text-center">
+            <div className="text-3xl font-bold text-fm-copper">
+              {highestRentBurden.rentBurdenPct}%
+            </div>
+            <div className="text-sm text-fm-sage mt-1">
+              of income goes to rent
+            </div>
+            <div className="text-xs text-fm-sage">{highestRentBurden.name}</div>
+          </div>
+        )}
         <div className="card text-center">
           <div className={`text-3xl font-bold ${getCR4TextClass(highestCR4.cr4)}`}>
             {highestCR4.cr4}%
@@ -113,55 +131,13 @@ export default function HousingPage() {
           </div>
           <div className="text-xs text-fm-sage">{highestCR4.name}</div>
         </div>
-        <div className="card text-center">
-          <div className="text-3xl font-bold text-fm-copper">
-            {highlyConcentrated}
-          </div>
-          <div className="text-sm text-fm-sage mt-1">
-            highly concentrated neighborhoods
-          </div>
-          <div className="text-xs text-fm-sage">HHI above 2,500 (DOJ threshold)</div>
-        </div>
-        <div className="card text-center">
-          <div className="text-3xl font-bold text-fm-patina">
-            {neighborhoods.length}
-          </div>
-          <div className="text-sm text-fm-sage mt-1">
-            neighborhoods tracked
-          </div>
-          <div className="text-xs text-fm-sage">Across 5 boroughs</div>
-        </div>
-        {highestNycha && (
-          <div className="card text-center">
-            <div className="text-3xl font-bold text-fm-patina">
-              {highestNycha.nychaShare}%
-            </div>
-            <div className="text-sm text-fm-sage mt-1">
-              NYCHA Footprint
-            </div>
-            <div className="text-xs text-fm-sage">
-              {highestNycha.name} — {highestNycha.nychaUnits.toLocaleString()} units
-            </div>
-          </div>
-        )}
-        {highestViolations && (
-          <div className="card text-center">
-            <div className="text-3xl font-bold text-fm-copper">
-              {highestViolations.hpdViolationsPerUnit}
-            </div>
-            <div className="text-sm text-fm-sage mt-1">
-              Most HPD Violations/Unit
-            </div>
-            <div className="text-xs text-fm-sage">{highestViolations.name}</div>
-          </div>
-        )}
         {lowestIncome && (
           <div className="card text-center">
-            <div className="text-3xl font-bold text-fm-copper">
+            <div className="text-3xl font-bold text-fm-patina">
               ${lowestIncome.medianIncome!.toLocaleString()}
             </div>
             <div className="text-sm text-fm-sage mt-1">
-              Lowest Median Household Income
+              median household income
             </div>
             <div className="text-xs text-fm-sage">
               {lowestIncome.name} ({lowestIncome.rentBurdenPct}% rent-burdened)
@@ -199,6 +175,24 @@ export default function HousingPage() {
           boroughSummaries={boroughSummaries}
         />
       </div>
+
+      {/* Affordability framing */}
+      {highestRentBurden && (
+        <div className="card mt-8">
+          <h2 className="text-xl font-bold text-fm-patina mb-2">
+            Can people afford it?
+          </h2>
+          <p className="text-sm text-gray-700">
+            Across NYC, many neighborhoods have a majority of renters spending
+            more than 30% of their income on housing — the federal threshold
+            for being {'"'}rent-burdened.{'"'} In {highestRentBurden.name},{" "}
+            <strong>{highestRentBurden.rentBurdenPct}%</strong> of households
+            cross that line. Concentration doesn{"'"}t cause high rents on its
+            own, but when fewer landlords control more apartments, tenants have
+            fewer options — and less leverage — when rents climb.
+          </p>
+        </div>
+      )}
 
       {/* Primary chart: neighborhood HHI comparison */}
       <div className="mt-8">
