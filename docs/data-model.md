@@ -515,6 +515,32 @@ flowchart TB
 | `regionSlug` | Kebab-case region | `nyc-metro` | Healthcare regions |
 | `borough` | Proper name | `Brooklyn` | NYC borough aggregation |
 
+## Geographic Boundary Files
+
+Map rendering uses TopoJSON files in `public/geo/`, built from GeoJSON or shapefiles via `scripts/geo/build-boundaries.ts`.
+
+| File | Features | Source | Join Key |
+|------|----------|--------|----------|
+| `nys-counties.topojson` | 62 counties | Census TIGER 2023 CB 500k | `GEOID` (5-digit FIPS) |
+| `nyc-boroughs.topojson` | 5 boroughs | DCP borough boundaries | `GEOID` (county FIPS) |
+| `nyc-ntas.topojson` | ~197 NTAs | DCP NTA 2020 boundaries | `GEOID` (NTA code) |
+| `nyc-census-tracts.topojson` | ~2,100 tracts | Census TIGER | `GEOID` (11-digit) |
+
+### Topology requirements
+
+TopoJSON files **must** have shared arcs between adjacent features. Without shared arcs, SVG rendering produces visible gaps between polygons — even with thin strokes.
+
+- **Good source**: Census TIGER cartographic boundary shapefiles (`.shp`). These are topologically derived, so adjacent counties/tracts share exact boundary coordinates. Use `mapshaper` to filter and convert: `npx mapshaper input.shp -filter 'STATEFP === "36"' -simplify 50% keep-shapes -rename-layers counties -o format=topojson output.topojson`
+- **Bad source**: Independently simplified GeoJSON (e.g., from APIs that return per-feature geometry). Adjacent features will have slightly different coordinates at shared boundaries, and `topojson.topology()` won't detect them as shared arcs — even with quantization.
+- **Diagnostic**: Check shared arc percentage. 60%+ shared arcs = good topology. <30% = boundaries are independently digitized and the map will have gaps.
+- **Quantization**: Pass `1e5` as the second argument to `topojson.topology()` in `build-boundaries.ts` to quantize coordinates and reduce file size. This helps with size but does not fix topology if the source geometry lacks shared boundaries.
+
+### Rendering pipeline
+
+`ChoroplethMap.tsx` (shared component) → `useTopoJson` hook (fetch + ring rewind) → d3-geo `geoMercator` projection → SVG `<path>` elements. The `useTopoJson` hook rewinds polygon rings after TopoJSON→GeoJSON conversion to fix d3-geo's spherical winding interpretation.
+
+Boundary files join to data through the same FIPS/GEOID keys used in the crosswalk files. For example, `nys-counties.topojson` features have `GEOID: "36047"`, which matches `fips` in `healthcare-region-counties.json`, which maps to `regionSlug` in `healthcare-regions.json`.
+
 ## Data Sources
 
 | Domain | Source | API | Vintage |
