@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
-import { Badge } from "@/components/ui/Badge";
 import dynamic from "next/dynamic";
 
 const BroadbandCharts = dynamic(
   () => import("./broadband-charts").then((m) => m.BroadbandCharts),
 );
 import { BroadbandMapSection } from "./BroadbandMapSection";
+import { BroadbandTable } from "./BroadbandTable";
 
 import timeSeriesData from "../../../data/concentration/broadband-nys.json";
 import marketShareData from "../../../data/concentration/broadband-nys-market-shares.json";
@@ -93,76 +92,7 @@ export default function BroadbandPage() {
           Provider availability varies widely across the state. Some counties
           have 15%+ of census blocks with zero broadband providers at 100 Mbps.
         </p>
-        <div className="overflow-x-auto -mx-4 sm:mx-0">
-          <table className="min-w-full divide-y divide-gray-200">
-            <thead>
-              <tr>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                  County
-                </th>
-                <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                  Households
-                </th>
-                <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                  100+ Mbps Providers
-                </th>
-                <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                  HHI
-                </th>
-                <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                  Zero-Provider Blocks
-                </th>
-                <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                  One-Provider Blocks
-                </th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-100">
-              {counties
-                .sort((a, b) => b.hhi - a.hhi)
-                .map((c) => (
-                  <tr
-                    key={c.slug}
-                    className="hover:bg-gray-50 transition-colors"
-                  >
-                    <td className="px-4 py-3 text-sm">
-                      <Link
-                        href={`/broadband/${c.slug}`}
-                        className="text-fm-teal hover:underline font-medium"
-                      >
-                        {c.name}
-                      </Link>
-                    </td>
-                    <td className="px-4 py-3 text-sm text-right">
-                      {c.totalHouseholds.toLocaleString()}
-                    </td>
-                    <td className="px-4 py-3 text-sm text-right font-medium">
-                      {c.providersAt100Mbps}
-                    </td>
-                    <td className="px-4 py-3 text-sm text-right">
-                      <Badge
-                        variant={
-                          c.hhi > 5000
-                            ? "red"
-                            : c.hhi > 2500
-                            ? "yellow"
-                            : "green"
-                        }
-                      >
-                        {c.hhi.toLocaleString()}
-                      </Badge>
-                    </td>
-                    <td className="px-4 py-3 text-sm text-right">
-                      {c.zeroPctBlocks}%
-                    </td>
-                    <td className="px-4 py-3 text-sm text-right">
-                      {c.onePctBlocks}%
-                    </td>
-                  </tr>
-                ))}
-            </tbody>
-          </table>
-        </div>
+        <BroadbandTable counties={counties} />
         <p className="mt-4 text-xs text-fm-sage">
           Source: FCC Broadband Data Collection (BDC), December 2024 filing.
           Providers counted at 100+ Mbps download threshold.

@@ -20,6 +20,7 @@ interface MarketShareChartProps {
   data: MarketShareEntry[];
   title?: string;
   year?: number;
+  initialLimit?: number;
 }
 
 // Okabe-Ito colorblind-safe categorical palette
@@ -38,9 +39,13 @@ export function MarketShareChart({
   data,
   title,
   year,
+  initialLimit,
 }: MarketShareChartProps) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const chartHeight = Math.max(250, data.length * 45);
+  const [showAll, setShowAll] = useState(false);
+  const hasMore = initialLimit != null && data.length > initialLimit;
+  const visible = hasMore && !showAll ? data.slice(0, initialLimit) : data;
+  const chartHeight = Math.max(250, visible.length * 45);
   const margin = { top: 5, right: 30, bottom: 30, left: 140 };
   const xTicks = niceLinearTicks(0, 100, 6);
 
@@ -58,7 +63,7 @@ export function MarketShareChart({
         {({ svgWidth, svgHeight, width, height, margin: m }) => {
           const xScale = linearScale([0, 100], [0, width]);
           const { scale: yScale, bandwidth } = bandScale(
-            data.map((d) => d.company),
+            visible.map((d) => d.company),
             [0, height],
             0.3,
           );
@@ -81,7 +86,7 @@ export function MarketShareChart({
                   ))}
 
                   {/* Bars */}
-                  {data.map((d, i) => (
+                  {visible.map((d, i) => (
                     <path
                       key={i}
                       d={roundedRightRect(
@@ -120,7 +125,7 @@ export function MarketShareChart({
                   ))}
 
                   {/* Y-axis labels */}
-                  {data.map((d, i) => (
+                  {visible.map((d, i) => (
                     <text
                       key={i}
                       x={-8}
@@ -137,17 +142,17 @@ export function MarketShareChart({
               </svg>
 
               {/* Tooltip */}
-              {hoveredIndex !== null && data[hoveredIndex] && (
+              {hoveredIndex !== null && visible[hoveredIndex] && (
                 <ChartTooltip
-                  x={m.left + xScale(data[hoveredIndex].share)}
+                  x={m.left + xScale(visible[hoveredIndex].share)}
                   y={m.top + yScale(hoveredIndex) + bandwidth / 2}
                 >
                   <div className="font-medium">
-                    {data[hoveredIndex].company}
+                    {visible[hoveredIndex].company}
                   </div>
                   <div>
                     Market Share:{" "}
-                    <strong>{data[hoveredIndex].share.toFixed(1)}%</strong>
+                    <strong>{visible[hoveredIndex].share.toFixed(1)}%</strong>
                   </div>
                 </ChartTooltip>
               )}
@@ -155,6 +160,16 @@ export function MarketShareChart({
           );
         }}
       </ChartContainer>
+      {hasMore && (
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className="mt-3 text-sm text-fm-teal hover:underline font-medium"
+        >
+          {showAll
+            ? `Show top ${initialLimit} only`
+            : `Show all ${data.length} entries`}
+        </button>
+      )}
     </div>
   );
 }

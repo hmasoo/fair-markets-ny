@@ -47,14 +47,19 @@ const BOROUGH_COLORS: Record<string, string> = {
   "Staten Island": "#009E73",
 };
 
+const BAR_CHART_LIMIT = 25;
+
 export function NeighborhoodConcentrationChart({
   neighborhoods,
 }: {
   neighborhoods: Neighborhood[];
 }) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [showAll, setShowAll] = useState(false);
   const sorted = [...neighborhoods].sort((a, b) => b.hhi - a.hhi);
-  const chartHeight = sorted.length * 56 + 40;
+  const visible = showAll ? sorted : sorted.slice(0, BAR_CHART_LIMIT);
+  const hasMore = sorted.length > BAR_CHART_LIMIT;
+  const chartHeight = visible.length * 56 + 40;
   const margin = { top: 10, right: 30, bottom: 30, left: 200 };
 
   // X domain from data
@@ -75,7 +80,7 @@ export function NeighborhoodConcentrationChart({
         {({ svgWidth, svgHeight, width, height, margin: m }) => {
           const xScale = linearScale(xDomain, [0, width]);
           const { scale: yScale, bandwidth } = bandScale(
-            sorted.map((n) => n.name),
+            visible.map((n) => n.name),
             [0, height],
             0.3,
           );
@@ -121,7 +126,7 @@ export function NeighborhoodConcentrationChart({
                   )}
 
                   {/* Bars */}
-                  {sorted.map((n, i) => (
+                  {visible.map((n, i) => (
                     <path
                       key={i}
                       d={roundedRightRect(
@@ -159,7 +164,7 @@ export function NeighborhoodConcentrationChart({
                     </text>
                   ))}
                   {/* Y-axis labels */}
-                  {sorted.map((n, i) => (
+                  {visible.map((n, i) => (
                     <text
                       key={i}
                       x={-8}
@@ -176,8 +181,8 @@ export function NeighborhoodConcentrationChart({
               </svg>
 
               {/* Tooltip */}
-              {hoveredIndex !== null && sorted[hoveredIndex] && (() => {
-                const d = sorted[hoveredIndex];
+              {hoveredIndex !== null && visible[hoveredIndex] && (() => {
+                const d = visible[hoveredIndex];
                 return (
                   <ChartTooltip
                     x={m.left + xScale(d.hhi)}
@@ -224,6 +229,16 @@ export function NeighborhoodConcentrationChart({
           </span>
         ))}
       </div>
+      {hasMore && (
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className="mt-3 text-sm text-fm-teal hover:underline font-medium"
+        >
+          {showAll
+            ? "Show top 25 only"
+            : `Show all ${sorted.length} neighborhoods`}
+        </button>
+      )}
     </div>
   );
 }
@@ -673,6 +688,7 @@ export function CitywideCharts({
             data={marketShareData}
             title="Largest Landlords by Unit Share"
             year={marketShareYear}
+            initialLimit={15}
           />
         )}
       </div>
