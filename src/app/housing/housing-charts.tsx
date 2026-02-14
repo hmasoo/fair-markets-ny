@@ -25,6 +25,7 @@ interface Neighborhood {
   rentBurdenPct?: number | null;
   nychaShare: number;
   stabilizedShare: number;
+  rentGrowthPct?: number | null;
 }
 
 interface YearData {
@@ -48,7 +49,7 @@ const BOROUGH_COLORS: Record<string, string> = {
   "Staten Island": "#009E73",
 };
 
-const BAR_CHART_LIMIT = 25;
+const BAR_CHART_LIMIT = 15;
 
 function getRentBurdenColor(pct: number): string {
   if (pct >= 50) return "#D55E00";
@@ -246,7 +247,7 @@ export function NeighborhoodRentBurdenChart({
   );
 }
 
-type MetricKey = "medianIncome" | "rentBurdenPct" | "medianRent" | "hpdViolationsPerUnit" | "totalUnits" | "stabilizedShare" | "nychaShare" | "cr4" | "hhi";
+type MetricKey = "medianIncome" | "rentBurdenPct" | "medianRent" | "rentGrowthPct" | "hpdViolationsPerUnit" | "totalUnits" | "stabilizedShare" | "nychaShare" | "cr4" | "hhi";
 
 interface MetricConfig {
   key: MetricKey;
@@ -260,6 +261,7 @@ const METRICS: MetricConfig[] = [
   { key: "medianIncome", label: "Median Household Income", format: (v) => `$${(v / 1000).toFixed(0)}k`, domainMin: "data", nullable: true },
   { key: "rentBurdenPct", label: "Rent-Burdened Households (%)", format: (v) => `${v}%`, domainMin: "zero", nullable: true },
   { key: "medianRent", label: "Median Rent", format: (v) => `$${v.toLocaleString()}`, domainMin: "zero" },
+  { key: "rentGrowthPct", label: "Rent Growth 2019\u20132023 (%)", format: (v) => `${v.toFixed(1)}%`, domainMin: "data", nullable: true },
   { key: "hpdViolationsPerUnit", label: "HPD Violations / Unit", format: (v) => v.toFixed(2), domainMin: "zero" },
   { key: "totalUnits", label: "Total Housing Units", format: (v) => v.toLocaleString(), domainMin: "zero" },
   { key: "stabilizedShare", label: "Rent-Stabilized Share (%)", format: (v) => `${v}%`, domainMin: "zero" },

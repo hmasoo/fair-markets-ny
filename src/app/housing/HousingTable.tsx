@@ -25,7 +25,7 @@ interface Neighborhood {
   rentBurdenPct: number | null;
 }
 
-const DEFAULT_ROWS = 20;
+const DEFAULT_ROWS = 10;
 
 export function HousingTable({ neighborhoods }: { neighborhoods: Neighborhood[] }) {
   const [showAll, setShowAll] = useState(false);
