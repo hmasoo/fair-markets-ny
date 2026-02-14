@@ -5,11 +5,8 @@ import dynamic from "next/dynamic";
 const NeighborhoodConcentrationChart = dynamic(
   () => import("./housing-charts").then((m) => m.NeighborhoodConcentrationChart),
 );
-const ViolationsVsConcentrationChart = dynamic(
-  () => import("./housing-charts").then((m) => m.ViolationsVsConcentrationChart),
-);
-const ConcentrationVsIncomeChart = dynamic(
-  () => import("./housing-charts").then((m) => m.ConcentrationVsIncomeChart),
+const NeighborhoodExplorerChart = dynamic(
+  () => import("./housing-charts").then((m) => m.NeighborhoodExplorerChart),
 );
 const CitywideCharts = dynamic(
   () => import("./housing-charts").then((m) => m.CitywideCharts),
@@ -187,14 +184,9 @@ export default function HousingPage() {
         <NeighborhoodConcentrationChart neighborhoods={neighborhoods} />
       </div>
 
-      {/* Scatter: violations vs concentration */}
+      {/* Neighborhood Explorer: toggleable scatter chart */}
       <div className="mt-8">
-        <ViolationsVsConcentrationChart neighborhoods={neighborhoods} />
-      </div>
-
-      {/* Scatter: concentration vs income */}
-      <div className="mt-8">
-        <ConcentrationVsIncomeChart neighborhoods={neighborhoods} />
+        <NeighborhoodExplorerChart neighborhoods={neighborhoods} />
       </div>
 
       {/* Neighborhood detail table */}

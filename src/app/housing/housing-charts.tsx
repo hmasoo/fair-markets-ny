@@ -24,6 +24,7 @@ interface Neighborhood {
   medianRent: number;
   medianIncome?: number | null;
   rentBurdenPct?: number | null;
+  nychaShare: number;
 }
 
 interface YearData {
@@ -243,224 +244,72 @@ export function NeighborhoodConcentrationChart({
   );
 }
 
-export function ViolationsVsConcentrationChart({
+type MetricKey = "hhi" | "cr4" | "medianIncome" | "rentBurdenPct" | "nychaShare" | "totalUnits" | "hpdViolationsPerUnit" | "medianRent";
+
+interface MetricConfig {
+  key: MetricKey;
+  label: string;
+  format: (v: number) => string;
+  domainMin: "zero" | "data";
+  nullable?: boolean;
+}
+
+const METRICS: MetricConfig[] = [
+  { key: "hhi", label: "Ownership Concentration (HHI)", format: (v) => v.toLocaleString(), domainMin: "zero" },
+  { key: "cr4", label: "Top-4 Landlord Share (CR4 %)", format: (v) => `${v}%`, domainMin: "zero" },
+  { key: "medianIncome", label: "Median Household Income", format: (v) => `$${(v / 1000).toFixed(0)}k`, domainMin: "data", nullable: true },
+  { key: "rentBurdenPct", label: "Rent-Burdened Households (%)", format: (v) => `${v}%`, domainMin: "zero", nullable: true },
+  { key: "nychaShare", label: "NYCHA Footprint (%)", format: (v) => `${v}%`, domainMin: "zero" },
+  { key: "totalUnits", label: "Total Housing Units", format: (v) => v.toLocaleString(), domainMin: "zero" },
+  { key: "hpdViolationsPerUnit", label: "HPD Violations / Unit", format: (v) => v.toFixed(2), domainMin: "zero" },
+  { key: "medianRent", label: "Median Rent", format: (v) => `$${v.toLocaleString()}`, domainMin: "zero" },
+];
+
+function getMetricValue(n: Neighborhood, key: MetricKey): number | null {
+  const v = n[key];
+  if (v == null || v === 0) {
+    const metric = METRICS.find((m) => m.key === key);
+    if (metric?.nullable) return null;
+  }
+  return v as number;
+}
+
+export function NeighborhoodExplorerChart({
   neighborhoods,
 }: {
   neighborhoods: Neighborhood[];
 }) {
+  const [xMetric, setXMetric] = useState<MetricKey>("hhi");
+  const [yMetric, setYMetric] = useState<MetricKey>("rentBurdenPct");
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const margin = { top: 10, right: 20, bottom: 45, left: 65 };
+
+  const margin = { top: 10, right: 20, bottom: 45, left: 75 };
+
+  const xConfig = METRICS.find((m) => m.key === xMetric)!;
+  const yConfig = METRICS.find((m) => m.key === yMetric)!;
+
+  // Filter to neighborhoods with valid values for both axes
+  const data = neighborhoods.filter((n) => {
+    const xVal = getMetricValue(n, xMetric);
+    const yVal = getMetricValue(n, yMetric);
+    return xVal != null && yVal != null;
+  });
+
+  if (data.length === 0) return null;
 
   // Domains
-  const hhiValues = neighborhoods.map((n) => n.hhi);
-  const violValues = neighborhoods.map((n) => n.hpdViolationsPerUnit);
-  const xTicks = niceLinearTicks(0, Math.max(...hhiValues) * 1.1, 6);
-  const maxViol = Math.max(...violValues);
-  const yTicks = niceLinearTicks(0, maxViol > 0 ? maxViol * 1.1 : 1, 6);
+  const xValues = data.map((n) => n[xMetric] as number);
+  const yValues = data.map((n) => n[yMetric] as number);
+
+  const xMin = xConfig.domainMin === "zero" ? 0 : Math.min(...xValues) * 0.9;
+  const yMin = yConfig.domainMin === "zero" ? 0 : Math.min(...yValues) * 0.9;
+
+  const xTicks = niceLinearTicks(xMin, Math.max(...xValues) * 1.1, 6);
+  const yTicks = niceLinearTicks(yMin, Math.max(...yValues) * 1.1, 6);
   const xDomain: [number, number] = [xTicks[0], xTicks[xTicks.length - 1]];
   const yDomain: [number, number] = [yTicks[0], yTicks[yTicks.length - 1]];
 
   // Bubble radius scale (sqrt so area is proportional)
-  const unitValues = neighborhoods.map((n) => n.totalUnits);
-  const minUnits = Math.min(...unitValues);
-  const maxUnits = Math.max(...unitValues);
-  const radiusScale = (units: number) => {
-    if (maxUnits === minUnits) return 10;
-    const t =
-      (Math.sqrt(units) - Math.sqrt(minUnits)) /
-      (Math.sqrt(maxUnits) - Math.sqrt(minUnits));
-    return 6 + t * 12;
-  };
-
-  return (
-    <div className="card">
-      <h2 className="text-xl font-bold text-fm-patina mb-2">
-        Concentration vs. Housing Violations
-      </h2>
-      <p className="text-sm text-fm-sage mb-4">
-        Do more concentrated neighborhoods have worse housing conditions? Bubble
-        size shows total rental units.
-      </p>
-      <ChartContainer height={350} margin={margin}>
-        {({ svgWidth, svgHeight, width, height, margin: m }) => {
-          const xScale = linearScale(xDomain, [0, width]);
-          const yScale = linearScale(yDomain, [height, 0]);
-
-          return (
-            <>
-              <svg width={svgWidth} height={svgHeight}>
-                <g transform={`translate(${m.left},${m.top})`}>
-                  {/* Grid */}
-                  {yTicks.map((tick) => (
-                    <line
-                      key={`gy-${tick}`}
-                      x1={0}
-                      y1={yScale(tick)}
-                      x2={width}
-                      y2={yScale(tick)}
-                      stroke="#e2e8f0"
-                      strokeDasharray="3 3"
-                    />
-                  ))}
-                  {xTicks.map((tick) => (
-                    <line
-                      key={`gx-${tick}`}
-                      x1={xScale(tick)}
-                      y1={0}
-                      x2={xScale(tick)}
-                      y2={height}
-                      stroke="#e2e8f0"
-                      strokeDasharray="3 3"
-                    />
-                  ))}
-
-                  {/* Data points */}
-                  {neighborhoods.map((n, i) => (
-                    <circle
-                      key={i}
-                      cx={xScale(n.hhi)}
-                      cy={yScale(n.hpdViolationsPerUnit)}
-                      r={radiusScale(n.totalUnits)}
-                      fill={BOROUGH_COLORS[n.borough] || "#6A8C7E"}
-                      fillOpacity={0.8}
-                      stroke={BOROUGH_COLORS[n.borough] || "#6A8C7E"}
-                      strokeWidth={1}
-                      onMouseEnter={() => setHoveredIndex(i)}
-                      onMouseLeave={() => setHoveredIndex(null)}
-                      style={{ cursor: "pointer" }}
-                    />
-                  ))}
-
-                  {/* X-axis */}
-                  <line
-                    x1={0}
-                    y1={height}
-                    x2={width}
-                    y2={height}
-                    stroke="#cbd5e1"
-                  />
-                  {xTicks.map((tick) => (
-                    <text
-                      key={tick}
-                      x={xScale(tick)}
-                      y={height + 16}
-                      textAnchor="middle"
-                      fontSize={12}
-                      fill="#64748b"
-                    >
-                      {tick.toLocaleString()}
-                    </text>
-                  ))}
-                  <text
-                    x={width / 2}
-                    y={height + 35}
-                    textAnchor="middle"
-                    fontSize={12}
-                    fill="#6A8C7E"
-                  >
-                    HHI (Ownership Concentration)
-                  </text>
-
-                  {/* Y-axis */}
-                  <line x1={0} y1={0} x2={0} y2={height} stroke="#cbd5e1" />
-                  {yTicks.map((tick) => (
-                    <text
-                      key={tick}
-                      x={-8}
-                      y={yScale(tick)}
-                      textAnchor="end"
-                      dominantBaseline="middle"
-                      fontSize={12}
-                      fill="#64748b"
-                    >
-                      {tick}
-                    </text>
-                  ))}
-                  <text
-                    x={-50}
-                    y={height / 2}
-                    textAnchor="middle"
-                    dominantBaseline="middle"
-                    fontSize={12}
-                    fill="#6A8C7E"
-                    transform={`rotate(-90, -50, ${height / 2})`}
-                  >
-                    HPD Violations per Unit
-                  </text>
-                </g>
-              </svg>
-
-              {/* Tooltip */}
-              {hoveredIndex !== null && neighborhoods[hoveredIndex] && (() => {
-                const d = neighborhoods[hoveredIndex];
-                return (
-                  <ChartTooltip
-                    x={m.left + xScale(d.hhi)}
-                    y={m.top + yScale(d.hpdViolationsPerUnit)}
-                  >
-                    <div className="font-bold text-fm-patina">{d.name}</div>
-                    <div className="text-fm-sage text-xs mb-2">{d.borough}</div>
-                    <div className="space-y-1">
-                      <div>HHI: <strong>{d.hhi.toLocaleString()}</strong></div>
-                      {d.hpdViolationsPerUnit > 0 && (
-                        <div>Violations/unit: <strong>{d.hpdViolationsPerUnit}</strong></div>
-                      )}
-                      <div>Units: <strong>{d.totalUnits.toLocaleString()}</strong></div>
-                      {d.medianRent > 0 && (
-                        <div>Median rent: <strong>${d.medianRent.toLocaleString()}</strong></div>
-                      )}
-                    </div>
-                  </ChartTooltip>
-                );
-              })()}
-            </>
-          );
-        }}
-      </ChartContainer>
-      <p className="mt-3 text-xs text-fm-sage italic">
-        Note: High violations per unit can reflect extractive ownership{" "}
-        <em>and</em> chronic underinvestment in buildings where regulated rents
-        haven{"'"}t kept pace with operating costs — two problems that often
-        coexist in the same building (
-        <a
-          href="https://niskanencenter.org/wp-content/uploads/2025/06/Armlovich-RGB-Testimony-June-2025.pdf"
-          className="text-fm-teal hover:underline"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Armlovich, RGB June 2025
-        </a>
-        ).
-      </p>
-    </div>
-  );
-}
-
-export function ConcentrationVsIncomeChart({
-  neighborhoods,
-}: {
-  neighborhoods: Neighborhood[];
-}) {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const data = neighborhoods.filter((n) => n.medianIncome && n.medianIncome > 0);
-
-  if (data.length === 0) return null;
-
-  const margin = { top: 10, right: 20, bottom: 45, left: 75 };
-
-  // Domains
-  const hhiValues = data.map((n) => n.hhi);
-  const incomeValues = data.map((n) => n.medianIncome!);
-  const xTicks = niceLinearTicks(0, Math.max(...hhiValues) * 1.1, 6);
-  const yTicks = niceLinearTicks(
-    Math.min(...incomeValues) * 0.9,
-    Math.max(...incomeValues) * 1.1,
-    6,
-  );
-  const xDomain: [number, number] = [xTicks[0], xTicks[xTicks.length - 1]];
-  const yDomain: [number, number] = [yTicks[0], yTicks[yTicks.length - 1]];
-
-  // Bubble radius scale
   const unitValues = data.map((n) => n.totalUnits);
   const minUnits = Math.min(...unitValues);
   const maxUnits = Math.max(...unitValues);
@@ -472,16 +321,64 @@ export function ConcentrationVsIncomeChart({
     return 6 + t * 12;
   };
 
+  const handleAxisChange = (axis: "x" | "y", key: MetricKey) => {
+    if (axis === "x") setXMetric(key);
+    else setYMetric(key);
+    setHoveredIndex(null);
+    try {
+      import("@vercel/analytics").then(({ track }) => {
+        track("chart_axis_change", { chart: "neighborhood-explorer", axis, metric: key });
+      });
+    } catch { /* analytics optional */ }
+  };
+
+  // Boroughs present in filtered data
+  const activeBoroughs = Object.entries(BOROUGH_COLORS).filter(([borough]) =>
+    data.some((n) => n.borough === borough),
+  );
+
   return (
     <div className="card">
       <h2 className="text-xl font-bold text-fm-patina mb-2">
-        Concentration vs. Household Income
+        Neighborhood Explorer
       </h2>
       <p className="text-sm text-fm-sage mb-4">
-        Does landlord concentration correlate with lower incomes? Bubble size
-        shows total rental units; color shows borough.
+        Compare any two metrics across neighborhoods. Bubble size shows total
+        rental units; color shows borough.
       </p>
-      <ChartContainer height={350} margin={margin}>
+
+      {/* Axis selectors */}
+      <div className="flex flex-col sm:flex-row gap-3 mb-4">
+        <label className="flex items-center gap-2 text-sm text-fm-sage">
+          <span className="font-medium whitespace-nowrap">X axis:</span>
+          <select
+            value={xMetric}
+            onChange={(e) => handleAxisChange("x", e.target.value as MetricKey)}
+            className="border border-gray-200 rounded-md px-2 py-1.5 text-sm text-fm-patina bg-white"
+          >
+            {METRICS.map((m) => (
+              <option key={m.key} value={m.key}>{m.label}</option>
+            ))}
+          </select>
+        </label>
+        <label className="flex items-center gap-2 text-sm text-fm-sage">
+          <span className="font-medium whitespace-nowrap">Y axis:</span>
+          <select
+            value={yMetric}
+            onChange={(e) => handleAxisChange("y", e.target.value as MetricKey)}
+            className="border border-gray-200 rounded-md px-2 py-1.5 text-sm text-fm-patina bg-white"
+          >
+            {METRICS.map((m) => (
+              <option key={m.key} value={m.key}>{m.label}</option>
+            ))}
+          </select>
+        </label>
+        <span className="text-xs text-fm-sage self-center">
+          Showing {data.length} of {neighborhoods.length} neighborhoods
+        </span>
+      </div>
+
+      <ChartContainer height={350} margin={margin} key={`${xMetric}-${yMetric}`}>
         {({ svgWidth, svgHeight, width, height, margin: m }) => {
           const xScale = linearScale(xDomain, [0, width]);
           const yScale = linearScale(yDomain, [height, 0]);
@@ -518,8 +415,8 @@ export function ConcentrationVsIncomeChart({
                   {data.map((n, i) => (
                     <circle
                       key={i}
-                      cx={xScale(n.hhi)}
-                      cy={yScale(n.medianIncome!)}
+                      cx={xScale(n[xMetric] as number)}
+                      cy={yScale(n[yMetric] as number)}
                       r={radiusScale(n.totalUnits)}
                       fill={BOROUGH_COLORS[n.borough] || "#6A8C7E"}
                       fillOpacity={0.8}
@@ -548,7 +445,7 @@ export function ConcentrationVsIncomeChart({
                       fontSize={12}
                       fill="#64748b"
                     >
-                      {tick.toLocaleString()}
+                      {xConfig.format(tick)}
                     </text>
                   ))}
                   <text
@@ -558,7 +455,7 @@ export function ConcentrationVsIncomeChart({
                     fontSize={12}
                     fill="#6A8C7E"
                   >
-                    HHI (Ownership Concentration)
+                    {xConfig.label}
                   </text>
 
                   {/* Y-axis */}
@@ -573,7 +470,7 @@ export function ConcentrationVsIncomeChart({
                       fontSize={12}
                       fill="#64748b"
                     >
-                      ${(tick / 1000).toFixed(0)}k
+                      {yConfig.format(tick)}
                     </text>
                   ))}
                   <text
@@ -585,7 +482,7 @@ export function ConcentrationVsIncomeChart({
                     fill="#6A8C7E"
                     transform={`rotate(-90, -58, ${height / 2})`}
                   >
-                    Median Household Income
+                    {yConfig.label}
                   </text>
                 </g>
               </svg>
@@ -595,21 +492,15 @@ export function ConcentrationVsIncomeChart({
                 const d = data[hoveredIndex];
                 return (
                   <ChartTooltip
-                    x={m.left + xScale(d.hhi)}
-                    y={m.top + yScale(d.medianIncome!)}
+                    x={m.left + xScale(d[xMetric] as number)}
+                    y={m.top + yScale(d[yMetric] as number)}
                   >
                     <div className="font-bold text-fm-patina">{d.name}</div>
                     <div className="text-fm-sage text-xs mb-2">{d.borough}</div>
                     <div className="space-y-1">
-                      <div>HHI: <strong>{d.hhi.toLocaleString()}</strong></div>
-                      <div>MHI: <strong>${d.medianIncome?.toLocaleString()}</strong></div>
-                      {d.rentBurdenPct && (
-                        <div>Rent-burdened: <strong>{d.rentBurdenPct}%</strong></div>
-                      )}
+                      <div>{xConfig.label}: <strong>{xConfig.format(d[xMetric] as number)}</strong></div>
+                      <div>{yConfig.label}: <strong>{yConfig.format(d[yMetric] as number)}</strong></div>
                       <div>Units: <strong>{d.totalUnits.toLocaleString()}</strong></div>
-                      {d.medianRent > 0 && (
-                        <div>Median rent: <strong>${d.medianRent.toLocaleString()}</strong></div>
-                      )}
                     </div>
                   </ChartTooltip>
                 );
@@ -618,19 +509,35 @@ export function ConcentrationVsIncomeChart({
           );
         }}
       </ChartContainer>
+
+      {/* Borough legend */}
       <div className="flex flex-wrap items-center gap-4 mt-3 text-xs text-fm-sage">
-        {Object.entries(BOROUGH_COLORS)
-          .filter(([borough]) => data.some((n) => n.borough === borough))
-          .map(([borough, color]) => (
-            <span key={borough} className="flex items-center gap-1.5">
-              <span
-                className="w-3 h-3 rounded-sm inline-block"
-                style={{ backgroundColor: color }}
-              />
-              {borough}
-            </span>
-          ))}
+        {activeBoroughs.map(([borough, color]) => (
+          <span key={borough} className="flex items-center gap-1.5">
+            <span
+              className="w-3 h-3 rounded-sm inline-block"
+              style={{ backgroundColor: color }}
+            />
+            {borough}
+          </span>
+        ))}
       </div>
+
+      <p className="mt-3 text-xs text-fm-sage italic">
+        Note: High violations per unit can reflect extractive ownership{" "}
+        <em>and</em> chronic underinvestment in buildings where regulated rents
+        haven{"'"}t kept pace with operating costs — two problems that often
+        coexist in the same building (
+        <a
+          href="https://niskanencenter.org/wp-content/uploads/2025/06/Armlovich-RGB-Testimony-June-2025.pdf"
+          className="text-fm-teal hover:underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Armlovich, RGB June 2025
+        </a>
+        ).
+      </p>
     </div>
   );
 }
