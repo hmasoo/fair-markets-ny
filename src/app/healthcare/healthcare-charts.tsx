@@ -5,7 +5,6 @@ import { ConcentrationTimeSeries } from "@/components/charts/ConcentrationTimeSe
 import { MarketShareChart } from "@/components/charts/MarketShareChart";
 import { ChartContainer } from "@/components/charts/ChartContainer";
 import { ChartTooltip } from "@/components/charts/ChartTooltip";
-import { getHHIColor } from "@/lib/colorScales";
 import {
   linearScale,
   bandScale,
@@ -35,29 +34,39 @@ interface MarketShareEntry {
   source: string;
 }
 
+function getDominanceColor(share: number): string {
+  if (share >= 50) return "#D55E00";
+  if (share >= 30) return "#E69F00";
+  return "#009E73";
+}
+
 export function RegionalConcentrationChart({
   regions,
 }: {
   regions: Region[];
 }) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const sorted = [...regions].sort((a, b) => b.hhi - a.hhi);
+  // Sort by dominant system share
+  const sorted = [...regions].sort(
+    (a, b) => (b.topSystems[0]?.share ?? 0) - (a.topSystems[0]?.share ?? 0),
+  );
   const chartHeight = sorted.length * 56 + 40;
   const margin = { top: 10, right: 30, bottom: 30, left: 160 };
 
-  // X domain from data
-  const maxHHI = Math.max(...sorted.map((r) => r.hhi));
-  const xTicks = niceLinearTicks(0, maxHHI * 1.1, 6);
+  // X domain: dominant system share (0–100%)
+  const maxShare = Math.max(...sorted.map((r) => r.topSystems[0]?.share ?? 0));
+  const xTicks = niceLinearTicks(0, Math.min(maxShare * 1.1, 100), 6);
   const xDomain: [number, number] = [0, xTicks[xTicks.length - 1]];
 
   return (
     <div className="card">
       <h2 className="text-xl font-bold text-fm-patina mb-2">
-        Hospital Concentration by Region
+        How dominant is the largest system?
       </h2>
       <p className="text-sm text-fm-sage mb-4">
-        HHI measures how concentrated hospital beds are among health systems.
-        Higher values mean fewer systems control more beds.
+        Share of hospital beds controlled by the single largest health system
+        in each region. When one system holds a majority of beds, patients
+        have fewer alternatives.
       </p>
       <ChartContainer height={chartHeight} margin={margin}>
         {({ svgWidth, svgHeight, width, height, margin: m }) => {
@@ -85,67 +94,49 @@ export function RegionalConcentrationChart({
                     />
                   ))}
 
-                  {/* Reference lines */}
-                  {xDomain[1] >= 1500 && (
+                  {/* Reference line at 50% */}
+                  {xDomain[1] >= 50 && (
                     <>
                       <line
-                        x1={xScale(1500)}
+                        x1={xScale(50)}
                         y1={0}
-                        x2={xScale(1500)}
-                        y2={height}
-                        stroke="#E69F00"
-                        strokeDasharray="5 5"
-                      />
-                      <text
-                        x={xScale(1500)}
-                        y={-4}
-                        textAnchor="middle"
-                        fontSize={10}
-                        fill="#E69F00"
-                      >
-                        Moderate
-                      </text>
-                    </>
-                  )}
-                  {xDomain[1] >= 2500 && (
-                    <>
-                      <line
-                        x1={xScale(2500)}
-                        y1={0}
-                        x2={xScale(2500)}
+                        x2={xScale(50)}
                         y2={height}
                         stroke="#D55E00"
                         strokeDasharray="5 5"
                       />
                       <text
-                        x={xScale(2500)}
+                        x={xScale(50)}
                         y={-4}
                         textAnchor="middle"
                         fontSize={10}
                         fill="#D55E00"
                       >
-                        Highly Concentrated
+                        Majority control
                       </text>
                     </>
                   )}
 
                   {/* Bars */}
-                  {sorted.map((r, i) => (
-                    <path
-                      key={i}
-                      d={roundedRightRect(
-                        0,
-                        yScale(i),
-                        xScale(r.hhi),
-                        bandwidth,
-                        4,
-                      )}
-                      fill={getHHIColor(r.hhi)}
-                      onMouseEnter={() => setHoveredIndex(i)}
-                      onMouseLeave={() => setHoveredIndex(null)}
-                      style={{ cursor: "pointer" }}
-                    />
-                  ))}
+                  {sorted.map((r, i) => {
+                    const share = r.topSystems[0]?.share ?? 0;
+                    return (
+                      <path
+                        key={i}
+                        d={roundedRightRect(
+                          0,
+                          yScale(i),
+                          xScale(share),
+                          bandwidth,
+                          4,
+                        )}
+                        fill={getDominanceColor(share)}
+                        onMouseEnter={() => setHoveredIndex(i)}
+                        onMouseLeave={() => setHoveredIndex(null)}
+                        style={{ cursor: "pointer" }}
+                      />
+                    );
+                  })}
 
                   {/* X-axis */}
                   <line
@@ -164,7 +155,7 @@ export function RegionalConcentrationChart({
                       fontSize={12}
                       fill="#64748b"
                     >
-                      {tick.toLocaleString()}
+                      {tick}%
                     </text>
                   ))}
 
@@ -188,19 +179,20 @@ export function RegionalConcentrationChart({
               {/* Tooltip */}
               {hoveredIndex !== null && sorted[hoveredIndex] && (() => {
                 const d = sorted[hoveredIndex];
+                const topSystem = d.topSystems[0];
                 return (
                   <ChartTooltip
-                    x={m.left + xScale(d.hhi)}
+                    x={m.left + xScale(topSystem?.share ?? 0)}
                     y={m.top + yScale(hoveredIndex) + bandwidth / 2}
                   >
                     <div className="font-bold text-fm-patina">{d.name}</div>
                     <div className="space-y-1 mt-1">
-                      <div>HHI: <strong>{d.hhi.toLocaleString()}</strong></div>
-                      <div>CR4: <strong>{d.cr4}%</strong></div>
-                      <div>Beds: <strong>{d.totalBeds.toLocaleString()}</strong></div>
+                      <div>Largest system: <strong>{topSystem?.name}</strong></div>
+                      <div>Their share: <strong>{topSystem?.share}%</strong> of beds</div>
+                      <div>Total beds: <strong>{d.totalBeds.toLocaleString()}</strong></div>
                       <div>Facilities: <strong>{d.totalFacilities}</strong></div>
-                      <div className="text-xs text-fm-sage mt-1">
-                        Top system: {d.topSystems[0]?.name} ({d.topSystems[0]?.share}%)
+                      <div className="text-fm-sage text-xs pt-1 border-t border-gray-100">
+                        Top 4 systems: {d.cr4}% of beds
                       </div>
                     </div>
                   </ChartTooltip>
@@ -212,9 +204,9 @@ export function RegionalConcentrationChart({
       </ChartContainer>
       <div className="flex flex-wrap items-center gap-4 mt-3 text-xs text-fm-sage">
         {[
-          { color: "#009E73", label: "Competitive (< 1,500)" },
-          { color: "#E69F00", label: "Moderate (1,500\u20132,500)" },
-          { color: "#D55E00", label: "Highly Concentrated (> 2,500)" },
+          { color: "#D55E00", label: "\u226550% Majority control" },
+          { color: "#E69F00", label: "30\u201350% Dominant" },
+          { color: "#009E73", label: "<30% Competitive" },
         ].map((item) => (
           <span key={item.label} className="flex items-center gap-1.5">
             <span
@@ -245,10 +237,10 @@ export function StatewideCharts({
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
         <div>
           <h2 className="text-xl font-bold text-fm-patina">
-            Statewide Trend
+            Statewide consolidation trend
           </h2>
           <p className="text-sm text-fm-sage">
-            NYS hospital market — moderate overall, rising steadily
+            How hospital system concentration has changed across New York
           </p>
         </div>
         <div className="flex gap-1 bg-gray-100 rounded-lg p-1">
@@ -260,7 +252,7 @@ export function StatewideCharts({
                 : "text-fm-sage hover:text-fm-patina"
             }`}
           >
-            HHI Over Time
+            Concentration Trend
           </button>
           <button
             onClick={() => setTab("topSystems")}

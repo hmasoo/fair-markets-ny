@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Badge } from "@/components/ui/Badge";
 import { HHITooltip } from "@/components/ui/HHITooltip";
-import { getHHITextClass, getCR4TextClass } from "@/lib/colorScales";
 import dynamic from "next/dynamic";
 
 const RegionalConcentrationChart = dynamic(
@@ -21,22 +20,26 @@ import marketShareData from "../../../data/concentration/healthcare-nys-market-s
 import regionData from "../../../data/concentration/healthcare-regions.json";
 
 export const metadata: Metadata = {
-  title: "Hospital Market Structure in New York State",
+  title: "Who Runs the Hospitals in Your Region?",
   description:
-    "Hospital system market structure across New York State — bed counts, system affiliations, and regional concentration using DOH and AHA data.",
+    "Hospital system dominance across New York State — which systems control the most beds, and how many choices patients have, by region.",
 };
 
 export default function HealthcarePage() {
   const { regions } = regionData;
-  const sorted = [...regions].sort((a, b) => b.hhi - a.hhi);
-  const highestHHI = sorted[0];
-  const highestCR4 = [...regions].sort((a, b) => b.cr4 - a.cr4)[0];
-  const totalSystems = new Set(
-    regions.flatMap((r) => r.topSystems.map((s) => s.name))
-  ).size;
-  const singleDominantRegions = regions.filter(
-    (r) => r.topSystems[0] && r.topSystems[0].share >= 40
+
+  // Sort by dominant system share for display
+  const sortedByDominance = [...regions].sort(
+    (a, b) => (b.topSystems[0]?.share ?? 0) - (a.topSystems[0]?.share ?? 0),
   );
+  const mostDominant = sortedByDominance[0];
+  const mostDominantSystem = mostDominant.topSystems[0];
+
+  const singleDominantRegions = regions.filter(
+    (r) => r.topSystems[0] && r.topSystems[0].share >= 40,
+  );
+  const totalBeds = regions.reduce((sum, r) => sum + r.totalBeds, 0);
+  const totalFacilities = regions.reduce((sum, r) => sum + r.totalFacilities, 0);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -44,59 +47,61 @@ export default function HealthcarePage() {
 
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-fm-patina">
-          Hospital Market Structure
+          Who runs the hospitals in your region?
         </h1>
         <p className="mt-2 text-fm-sage max-w-2xl">
-          Statewide, New York{"'"}s hospital market is moderately
-          concentrated (<HHITooltip>HHI</HHITooltip>{" "}
-          {timeSeriesData.years[timeSeriesData.years.length - 1].hhi.toLocaleString()}).
-          At the regional level, the picture varies considerably — in
-          parts of upstate New York, a single health system accounts for
-          40–60% of all hospital beds.
+          New York has {totalFacilities} hospital facilities with{" "}
+          {totalBeds.toLocaleString()} beds across 10 health planning regions.
+          In parts of upstate New York, a single health system accounts for
+          40–60% of all hospital beds — limiting where patients can go for
+          care.
         </p>
       </div>
 
-      {/* Stats grid */}
+      {/* Stats grid — lead with patient experience */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <div className="card text-center">
-          <div className={`text-3xl font-bold ${getHHITextClass(highestHHI.hhi)}`}>
-            {highestHHI.hhi.toLocaleString()}
-          </div>
-          <div className="text-sm text-fm-sage mt-1">
-            Highest Regional <HHITooltip>HHI</HHITooltip>
-          </div>
-          <div className="text-xs text-fm-sage">{highestHHI.name}</div>
-        </div>
-        <div className="card text-center">
-          <div className={`text-3xl font-bold ${getCR4TextClass(highestCR4.cr4)}`}>
-            {highestCR4.cr4}%
-          </div>
-          <div className="text-sm text-fm-sage mt-1">
-            Highest CR4 (Top 4 Systems)
-          </div>
-          <div className="text-xs text-fm-sage">{highestCR4.name}</div>
-          <div className={`text-xs mt-1 font-medium ${getHHITextClass(highestCR4.hhi)}`}>
-            ~{Math.round(highestCR4.cr4)} in every 100 beds
-          </div>
-        </div>
-        <div className="card text-center">
           <div className="text-3xl font-bold text-fm-copper">
-            {totalSystems}
+            {mostDominantSystem.share}%
           </div>
           <div className="text-sm text-fm-sage mt-1">
-            Named Health Systems
+            of beds held by one system
           </div>
-          <div className="text-xs text-fm-sage">Across 10 regions</div>
+          <div className="text-xs text-fm-sage">
+            {mostDominantSystem.name} ({mostDominant.name})
+          </div>
         </div>
         <div className="card text-center">
           <div className="text-3xl font-bold text-fm-copper">
             {singleDominantRegions.length}
           </div>
           <div className="text-sm text-fm-sage mt-1">
-            Single-Dominant Regions
+            regions with a dominant system
           </div>
           <div className="text-xs text-fm-sage">
             One system holds 40%+ of beds
+          </div>
+        </div>
+        <div className="card text-center">
+          <div className="text-3xl font-bold text-fm-patina">
+            {totalFacilities}
+          </div>
+          <div className="text-sm text-fm-sage mt-1">
+            hospital facilities statewide
+          </div>
+          <div className="text-xs text-fm-sage">
+            {totalBeds.toLocaleString()} licensed beds
+          </div>
+        </div>
+        <div className="card text-center">
+          <div className="text-3xl font-bold text-fm-patina">
+            10
+          </div>
+          <div className="text-sm text-fm-sage mt-1">
+            health planning regions
+          </div>
+          <div className="text-xs text-fm-sage">
+            From competitive to near-monopoly
           </div>
         </div>
       </div>
@@ -104,22 +109,22 @@ export default function HealthcarePage() {
       {/* County map colored by region HHI */}
       <div className="card mb-8">
         <h2 className="text-xl font-bold text-fm-patina mb-2">
-          Hospital Concentration by Region
+          Hospital competition by region
         </h2>
         <p className="text-sm text-fm-sage mb-4">
-          Counties colored by their health planning region{"'"}s{" "}
-          <HHITooltip>HHI</HHITooltip>. Click any county to explore its region.
+          Counties colored by how concentrated their health planning region is.
+          Click any county to explore its region.
         </p>
         <HealthcareCountyMap regions={regions} />
       </div>
 
-      {/* Regional bar chart */}
+      {/* Regional bar chart — now shows dominant system share */}
       <RegionalConcentrationChart regions={regions} />
 
       {/* Region detail table */}
       <div className="card mt-8">
         <h2 className="text-xl font-bold text-fm-patina mb-4">
-          All Regions
+          All 10 regions
         </h2>
         <div className="overflow-x-auto -mx-4 sm:mx-0">
           <table className="min-w-full divide-y divide-gray-200">
@@ -128,6 +133,12 @@ export default function HealthcarePage() {
                 <th className="px-4 py-3 text-left text-xs font-semibold text-fm-sage uppercase tracking-wider">
                   Region
                 </th>
+                <th className="px-4 py-3 text-left text-xs font-semibold text-fm-sage uppercase tracking-wider">
+                  Dominant System
+                </th>
+                <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
+                  Their Share
+                </th>
                 <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
                   Beds
                 </th>
@@ -135,18 +146,15 @@ export default function HealthcarePage() {
                   Facilities
                 </th>
                 <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                  <HHITooltip>HHI</HHITooltip>
+                  Top 4 Share
                 </th>
                 <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                  CR4 (Top 4)
-                </th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                  Top System
+                  <HHITooltip>HHI</HHITooltip>
                 </th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
-              {sorted.map((r) => (
+              {sortedByDominance.map((r) => (
                 <tr
                   key={r.slug}
                   className="hover:bg-gray-50 transition-colors"
@@ -159,11 +167,30 @@ export default function HealthcarePage() {
                       {r.name}
                     </Link>
                   </td>
+                  <td className="px-4 py-3 text-sm text-fm-sage">
+                    {r.topSystems[0]?.name}
+                  </td>
+                  <td className="px-4 py-3 text-sm text-right">
+                    <span
+                      className={
+                        (r.topSystems[0]?.share ?? 0) >= 50
+                          ? "text-red-600 font-medium"
+                          : (r.topSystems[0]?.share ?? 0) >= 30
+                          ? "text-amber-600 font-medium"
+                          : "font-medium"
+                      }
+                    >
+                      {r.topSystems[0]?.share}%
+                    </span>
+                  </td>
                   <td className="px-4 py-3 text-sm text-right">
                     {r.totalBeds.toLocaleString()}
                   </td>
                   <td className="px-4 py-3 text-sm text-right">
                     {r.totalFacilities}
+                  </td>
+                  <td className="px-4 py-3 text-sm text-right font-medium">
+                    {r.cr4}%
                   </td>
                   <td className="px-4 py-3 text-sm text-right">
                     <Badge
@@ -177,15 +204,6 @@ export default function HealthcarePage() {
                     >
                       {r.hhi.toLocaleString()}
                     </Badge>
-                  </td>
-                  <td className="px-4 py-3 text-sm text-right font-medium">
-                    {r.cr4}%
-                    <div className="text-xs font-normal text-fm-sage">
-                      ~{Math.round(r.cr4)} in 100 beds
-                    </div>
-                  </td>
-                  <td className="px-4 py-3 text-sm text-fm-sage">
-                    {r.topSystems[0]?.name} ({r.topSystems[0]?.share}%)
                   </td>
                 </tr>
               ))}

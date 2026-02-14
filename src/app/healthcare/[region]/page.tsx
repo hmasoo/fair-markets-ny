@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
-import { Badge } from "@/components/ui/Badge";
-import { getHHITextClass } from "@/lib/colorScales";
 import dynamic from "next/dynamic";
 
 const RegionCharts = dynamic(
@@ -25,10 +23,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { region: slug } = await params;
   const r = regionData.regions.find((r) => r.slug === slug);
   if (!r) return { title: "Not Found" };
+  const topSystem = r.topSystems[0];
   return {
-    title: `${r.name} — Healthcare Concentration`,
-    description: `Hospital concentration in ${r.name}: ${r.totalBeds.toLocaleString()} beds across ${r.totalFacilities} facilities, HHI ${r.hhi}.`,
+    title: `${r.name} — Hospital Systems`,
+    description: `Hospital systems in ${r.name}: ${r.totalBeds.toLocaleString()} beds across ${r.totalFacilities} facilities. ${topSystem?.name} holds ${topSystem?.share}% of beds.`,
   };
+}
+
+function getHHILabel(hhi: number): string {
+  if (hhi > 2500) return "Highly Concentrated";
+  if (hhi > 1500) return "Moderately Concentrated";
+  return "Competitive";
 }
 
 export default async function RegionPage({ params }: Props) {
@@ -36,6 +41,8 @@ export default async function RegionPage({ params }: Props) {
   const region = regionData.regions.find((r) => r.slug === slug);
 
   if (!region) notFound();
+
+  const topSystem = region.topSystems[0];
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -54,43 +61,29 @@ export default async function RegionPage({ params }: Props) {
         </p>
       </div>
 
-      {/* Stats */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+      {/* Stats — lead with dominant system */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
         <div className="card text-center">
-          <div className="text-2xl font-bold text-fm-patina">
-            {region.totalBeds.toLocaleString()}
+          <div className={`text-2xl font-bold ${(topSystem?.share ?? 0) >= 50 ? "text-red-600" : "text-fm-copper"}`}>
+            {topSystem?.share}%
           </div>
-          <div className="text-xs text-fm-sage mt-1">Licensed Beds</div>
-        </div>
-        <div className="card text-center">
-          <div className={`text-2xl font-bold ${getHHITextClass(region.hhi)}`}>
-            {region.hhi.toLocaleString()}
+          <div className="text-xs text-fm-sage mt-1">
+            of beds ({topSystem?.name})
           </div>
-          <div className="text-xs text-fm-sage mt-1">HHI</div>
-          <Badge
-            variant={
-              region.hhi > 2500
-                ? "red"
-                : region.hhi > 1500
-                ? "yellow"
-                : "green"
-            }
-          >
-            {region.hhi > 2500
-              ? "Highly Concentrated"
-              : region.hhi > 1500
-              ? "Moderate"
-              : "Competitive"}
-          </Badge>
         </div>
         <div className="card text-center">
           <div className="text-2xl font-bold text-fm-copper">
             {region.cr4}%
           </div>
-          <div className="text-xs text-fm-sage mt-1">CR4 (Top 4 Systems)</div>
-          <div className="text-xs text-fm-sage">
-            ~{Math.round(region.cr4)} in 100 beds
+          <div className="text-xs text-fm-sage mt-1">
+            held by top 4 systems
           </div>
+        </div>
+        <div className="card text-center">
+          <div className="text-2xl font-bold text-fm-patina">
+            {region.totalBeds.toLocaleString()}
+          </div>
+          <div className="text-xs text-fm-sage mt-1">Licensed Beds</div>
         </div>
         <div className="card text-center">
           <div className="text-2xl font-bold text-fm-patina">
@@ -99,6 +92,21 @@ export default async function RegionPage({ params }: Props) {
           <div className="text-xs text-fm-sage mt-1">Facilities</div>
         </div>
       </div>
+
+      {/* Collapsible technical details */}
+      <details className="mb-8 text-sm">
+        <summary className="text-fm-sage cursor-pointer hover:text-fm-patina font-medium">
+          Technical metrics (for researchers)
+        </summary>
+        <div className="mt-2 pl-4 border-l-2 border-gray-200 space-y-1 text-fm-sage">
+          <p>
+            HHI: <strong className="text-fm-patina">{region.hhi.toLocaleString()}</strong> — {getHHILabel(region.hhi)}
+          </p>
+          <p>
+            CR4: <strong className="text-fm-patina">{region.cr4}%</strong> — the top 4 systems{"'"} combined bed share
+          </p>
+        </div>
+      </details>
 
       {/* Market share chart */}
       <RegionCharts
