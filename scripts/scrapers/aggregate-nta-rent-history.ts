@@ -4,6 +4,7 @@
  * Reads:
  *   data/raw/acs-rent-tracts-2019.json
  *   data/raw/acs-rent-tracts-2023.json
+ *   data/raw/acs-rent-tracts-2024.json
  *   data/crosswalks/nta-to-census-tract.json
  *   data/geography/nyc-ntas-2020.json
  *
@@ -11,7 +12,7 @@
  *   data/concentration/rent-history-neighborhoods.json
  *
  * Aggregation: renter-household-weighted average of tract median rents per NTA.
- * Computes rentGrowthPct as percentage change from 2019 to 2023.
+ * Computes rentGrowthPct as percentage change from 2019 to latest (2024).
  *
  * Usage:
  *   npx tsx scripts/scrapers/aggregate-nta-rent-history.ts
@@ -68,7 +69,7 @@ function toSlug(name: string): string {
     .replace(/^-|-$/g, "");
 }
 
-const VINTAGES = [2019, 2023];
+const VINTAGES = [2019, 2023, 2024];
 
 function main() {
   // Load crosswalk
@@ -143,15 +144,15 @@ function main() {
       }
     }
 
-    // Only include NTAs with data for both vintages
+    // Only include NTAs with data for at least first and last vintages
     if (rentHistory.length < 2) continue;
 
     const rent2019 = rentHistory.find((r) => r.year === 2019)?.medianRent;
-    const rent2023 = rentHistory.find((r) => r.year === 2023)?.medianRent;
+    const rentLatest = rentHistory.find((r) => r.year === VINTAGES[VINTAGES.length - 1])?.medianRent;
 
     let rentGrowthPct: number | null = null;
-    if (rent2019 && rent2023 && rent2019 > 0) {
-      rentGrowthPct = Math.round(((rent2023 - rent2019) / rent2019) * 1000) / 10;
+    if (rent2019 && rentLatest && rent2019 > 0) {
+      rentGrowthPct = Math.round(((rentLatest - rent2019) / rent2019) * 1000) / 10;
     }
 
     neighborhoods.push({
@@ -186,12 +187,14 @@ function main() {
     .sort((a, b) => a - b);
 
   if (growths.length > 0) {
-    console.log(`\nRent growth 2019–2023:`);
+    const latestYear = VINTAGES[VINTAGES.length - 1];
+    console.log(`\nRent growth 2019–${latestYear}:`);
     console.log(`  Median: ${growths[Math.floor(growths.length / 2)]}%`);
     console.log(`  Range: ${growths[0]}% – ${growths[growths.length - 1]}%`);
   }
 
   // Top 5 fastest growing
+  const latestYear = VINTAGES[VINTAGES.length - 1];
   const topGrowing = [...neighborhoods]
     .filter((n) => n.rentGrowthPct !== null)
     .sort((a, b) => b.rentGrowthPct! - a.rentGrowthPct!)
@@ -199,8 +202,8 @@ function main() {
   console.log("\nTop 5 fastest rent growth:");
   for (const n of topGrowing) {
     const r2019 = n.rentHistory.find((r) => r.year === 2019)?.medianRent;
-    const r2023 = n.rentHistory.find((r) => r.year === 2023)?.medianRent;
-    console.log(`  ${n.name} (${n.borough}): $${r2019} → $${r2023} (+${n.rentGrowthPct}%)`);
+    const rLatest = n.rentHistory.find((r) => r.year === latestYear)?.medianRent;
+    console.log(`  ${n.name} (${n.borough}): $${r2019} → $${rLatest} (+${n.rentGrowthPct}%)`);
   }
 
   console.log("\nDone.");

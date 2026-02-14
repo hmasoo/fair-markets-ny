@@ -1,5 +1,5 @@
 /**
- * Download ACS 2023 5-year tract-level income and rent burden data for NYC.
+ * Download ACS 2024 5-year tract-level income and rent burden data for NYC.
  *
  * Source: U.S. Census Bureau — American Community Survey 5-Year Estimates
  * Variables:
@@ -16,7 +16,7 @@
  *
  * Requires: CENSUS_API_KEY env var (free from https://api.census.gov/data/key_signup.html)
  *
- * Output: data/raw/acs-income-tracts-2023.json (gitignored)
+ * Output: data/raw/acs-income-tracts-2024.json (gitignored)
  *
  * Usage:
  *   npx tsx scripts/scrapers/download-acs-income.ts
@@ -58,7 +58,7 @@ const VARIABLES = [
   "B25070_010E", // Rent 50.0% or more
 ].join(",");
 
-const BASE_URL = "https://api.census.gov/data/2023/acs/acs5";
+const BASE_URL = "https://api.census.gov/data/2024/acs/acs5";
 
 function sleep(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -134,7 +134,7 @@ async function fetchCounty(countyFips: string, countyName: string): Promise<Trac
 async function main() {
   mkdirSync(RAW_DIR, { recursive: true });
 
-  console.log("Downloading ACS 2023 5-year tract-level income data for NYC...\n");
+  console.log("Downloading ACS 2024 5-year tract-level income data for NYC...\n");
 
   const allTracts: TractRecord[] = [];
   const counties = Object.entries(NYC_COUNTIES);
@@ -148,7 +148,7 @@ async function main() {
     if (i < counties.length - 1) await sleep(1000);
   }
 
-  const outPath = join(RAW_DIR, "acs-income-tracts-2023.json");
+  const outPath = join(RAW_DIR, "acs-income-tracts-2024.json");
   writeFileSync(outPath, JSON.stringify(allTracts, null, 2));
 
   console.log(`\nSaved ${outPath}`);

@@ -1,11 +1,10 @@
 /**
  * Download ACS tract-level median rent data for multiple vintages (NYC).
  *
- * Fetches B25064_001E (median gross rent) for 2019 and 2023 ACS 5-year
- * estimates, plus B25070_001E (renter households) for weighting.
+ * Fetches B25064_001E (median gross rent) for 2019, 2023, and 2024 ACS
+ * 5-year estimates, plus B25070_001E (renter households) for weighting.
  *
- * These two non-overlapping windows give a clean pre-COVID vs. latest
- * comparison without the noise of overlapping intermediate years.
+ * 2019 = pre-COVID baseline, 2023 = post-COVID recovery, 2024 = latest.
  *
  * Source: U.S. Census Bureau — American Community Survey 5-Year Estimates
  *
@@ -40,7 +39,7 @@ const NYC_COUNTIES: Record<string, string> = {
   "085": "Richmond (Staten Island)",
 };
 
-const VINTAGES = [2019, 2023];
+const VINTAGES = [2019, 2023, 2024];
 
 const VARIABLES = [
   "B25064_001E", // Median gross rent

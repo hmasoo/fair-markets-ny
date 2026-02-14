@@ -98,7 +98,7 @@ export default async function NeighborhoodPage({ params }: Props) {
   const rentHistory = rentHistoryBySlug.get(slug);
   const rentGrowthPct = rentHistory?.rentGrowthPct ?? null;
   const rent2019 = rentHistory?.rentHistory.find((r) => r.year === 2019)?.medianRent;
-  const rent2023 = rentHistory?.rentHistory.find((r) => r.year === 2023)?.medianRent;
+  const rent2024 = rentHistory?.rentHistory.find((r) => r.year === 2024)?.medianRent;
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -140,16 +140,16 @@ export default async function NeighborhoodPage({ params }: Props) {
             <div className="text-xs text-fm-sage mt-1">Median Rent</div>
           </div>
         )}
-        {rentGrowthPct !== null && rent2019 && rent2023 && (
+        {rentGrowthPct !== null && rent2019 && rent2024 && (
           <div className="card text-center">
             <div className={`text-2xl font-bold ${rentGrowthPct > 0 ? "text-fm-copper" : "text-fm-teal"}`}>
               {rentGrowthPct > 0 ? "+" : ""}{rentGrowthPct}%
             </div>
             <div className="text-xs text-fm-sage mt-1">
-              Rent Growth 2019{"\u2013"}2023
+              Rent Growth 2019{"\u2013"}2024
             </div>
             <div className="text-xs text-fm-sage">
-              ${rent2019.toLocaleString()} {"\u2192"} ${rent2023.toLocaleString()}
+              ${rent2019.toLocaleString()} {"\u2192"} ${rent2024.toLocaleString()}
             </div>
           </div>
         )}
@@ -304,7 +304,7 @@ export default async function NeighborhoodPage({ params }: Props) {
         <p className="mt-4 text-xs text-fm-sage">
           Source: NYC Dept. of City Planning MapPLUTO 24v4; ACRIS ownership
           records; HPD violations data via NYC Open Data. Income, median rent,
-          and rent burden from U.S. Census Bureau ACS 5-Year Estimates (2019, 2023).
+          and rent burden from U.S. Census Bureau ACS 5-Year Estimates (2019, 2023, 2024).
         </p>
       </div>
     </div>

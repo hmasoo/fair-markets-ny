@@ -148,7 +148,7 @@ export default function HousingPage() {
               +{highestRentGrowth.rentGrowthPct}%
             </div>
             <div className="text-sm text-fm-sage mt-1">
-              rent growth, 2019–2023
+              rent growth, 2019–2024
             </div>
             <div className="text-xs text-fm-sage">{highestRentGrowth.name}</div>
           </div>
@@ -312,7 +312,7 @@ export default function HousingPage() {
         <p className="mt-4 text-xs text-fm-sage">
           Source: NYC Dept. of City Planning MapPLUTO 24v4; ACRIS ownership
           records; HPD violations data via NYC Open Data. Income, median rent,
-          and rent burden from U.S. Census Bureau ACS 2023 5-Year Estimates.
+          and rent burden from U.S. Census Bureau ACS 2024 5-Year Estimates.
         </p>
       </div>
 

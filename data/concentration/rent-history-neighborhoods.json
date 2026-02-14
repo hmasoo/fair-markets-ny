@@ -2,7 +2,8 @@
   "source": "U.S. Census Bureau, ACS 5-Year Estimates, Table B25064",
   "vintages": [
     "2019",
-    "2023"
+    "2023",
+    "2024"
   ],
   "neighborhoods": [
     {
@@ -18,9 +19,13 @@
         {
           "year": 2023,
           "medianRent": 2583
+        },
+        {
+          "year": 2024,
+          "medianRent": 2642
         }
       ],
-      "rentGrowthPct": 25.9
+      "rentGrowthPct": 28.8
     },
     {
       "ntaCode": "BK0102",
@@ -35,9 +40,13 @@
         {
           "year": 2023,
           "medianRent": 2865
+        },
+        {
+          "year": 2024,
+          "medianRent": 3014
         }
       ],
-      "rentGrowthPct": 22.9
+      "rentGrowthPct": 29.2
     },
     {
       "ntaCode": "BK0103",
@@ -52,9 +61,13 @@
         {
           "year": 2023,
           "medianRent": 1474
+        },
+        {
+          "year": 2024,
+          "medianRent": 1577
         }
       ],
-      "rentGrowthPct": 41.7
+      "rentGrowthPct": 51.6
     },
     {
       "ntaCode": "BK0104",
@@ -69,9 +82,13 @@
         {
           "year": 2023,
           "medianRent": 1991
+        },
+        {
+          "year": 2024,
+          "medianRent": 1975
         }
       ],
-      "rentGrowthPct": 20.7
+      "rentGrowthPct": 19.7
     },
     {
       "ntaCode": "BK0201",
@@ -86,9 +103,13 @@
         {
           "year": 2023,
           "medianRent": 2972
+        },
+        {
+          "year": 2024,
+          "medianRent": 3146
         }
       ],
-      "rentGrowthPct": 28.3
+      "rentGrowthPct": 35.8
     },
     {
       "ntaCode": "BK0202",
@@ -103,9 +124,13 @@
         {
           "year": 2023,
           "medianRent": 2996
+        },
+        {
+          "year": 2024,
+          "medianRent": 3092
         }
       ],
-      "rentGrowthPct": 30.6
+      "rentGrowthPct": 34.8
     },
     {
       "ntaCode": "BK0203",
@@ -120,9 +145,13 @@
         {
           "year": 2023,
           "medianRent": 2292
+        },
+        {
+          "year": 2024,
+          "medianRent": 2357
         }
       ],
-      "rentGrowthPct": 47
+      "rentGrowthPct": 51.2
     },
     {
       "ntaCode": "BK0204",
@@ -137,9 +166,13 @@
         {
           "year": 2023,
           "medianRent": 2680
+        },
+        {
+          "year": 2024,
+          "medianRent": 2673
         }
       ],
-      "rentGrowthPct": 39.7
+      "rentGrowthPct": 39.3
     },
     {
       "ntaCode": "BK0301",
@@ -154,9 +187,13 @@
         {
           "year": 2023,
           "medianRent": 2077
+        },
+        {
+          "year": 2024,
+          "medianRent": 2207
         }
       ],
-      "rentGrowthPct": 40.3
+      "rentGrowthPct": 49.1
     },
     {
       "ntaCode": "BK0302",
@@ -171,9 +208,13 @@
         {
           "year": 2023,
           "medianRent": 1876
+        },
+        {
+          "year": 2024,
+          "medianRent": 1947
         }
       ],
-      "rentGrowthPct": 45.7
+      "rentGrowthPct": 51.2
     },
     {
       "ntaCode": "BK0401",
@@ -188,9 +229,13 @@
         {
           "year": 2023,
           "medianRent": 2298
+        },
+        {
+          "year": 2024,
+          "medianRent": 2357
         }
       ],
-      "rentGrowthPct": 41.2
+      "rentGrowthPct": 44.9
     },
     {
       "ntaCode": "BK0402",
@@ -205,9 +250,13 @@
         {
           "year": 2023,
           "medianRent": 1979
+        },
+        {
+          "year": 2024,
+          "medianRent": 2036
         }
       ],
-      "rentGrowthPct": 33.4
+      "rentGrowthPct": 37.3
     },
     {
       "ntaCode": "BK0501",
@@ -222,9 +271,13 @@
         {
           "year": 2023,
           "medianRent": 1815
+        },
+        {
+          "year": 2024,
+          "medianRent": 1909
         }
       ],
-      "rentGrowthPct": 26
+      "rentGrowthPct": 32.5
     },
     {
       "ntaCode": "BK0502",
@@ -239,9 +292,13 @@
         {
           "year": 2023,
           "medianRent": 1411
+        },
+        {
+          "year": 2024,
+          "medianRent": 1384
         }
       ],
-      "rentGrowthPct": 13.5
+      "rentGrowthPct": 11.3
     },
     {
       "ntaCode": "BK0503",
@@ -256,9 +313,13 @@
         {
           "year": 2023,
           "medianRent": 1388
+        },
+        {
+          "year": 2024,
+          "medianRent": 1460
         }
       ],
-      "rentGrowthPct": 30.9
+      "rentGrowthPct": 37.7
     },
     {
       "ntaCode": "BK0504",
@@ -273,9 +334,13 @@
         {
           "year": 2023,
           "medianRent": 957
+        },
+        {
+          "year": 2024,
+          "medianRent": 889
         }
       ],
-      "rentGrowthPct": 21.9
+      "rentGrowthPct": 13.2
     },
     {
       "ntaCode": "BK0505",
@@ -290,9 +355,13 @@
         {
           "year": 2023,
           "medianRent": 1274
+        },
+        {
+          "year": 2024,
+          "medianRent": 1360
         }
       ],
-      "rentGrowthPct": 24.5
+      "rentGrowthPct": 32.9
     },
     {
       "ntaCode": "BK0601",
@@ -307,9 +376,13 @@
         {
           "year": 2023,
           "medianRent": 2244
+        },
+        {
+          "year": 2024,
+          "medianRent": 2326
         }
       ],
-      "rentGrowthPct": 35.8
+      "rentGrowthPct": 40.8
     },
     {
       "ntaCode": "BK0602",
@@ -324,9 +397,13 @@
         {
           "year": 2023,
           "medianRent": 2995
+        },
+        {
+          "year": 2024,
+          "medianRent": 3043
         }
       ],
-      "rentGrowthPct": 22.3
+      "rentGrowthPct": 24.3
     },
     {
       "ntaCode": "BK0701",
@@ -341,9 +418,13 @@
         {
           "year": 2023,
           "medianRent": 2537
+        },
+        {
+          "year": 2024,
+          "medianRent": 2443
         }
       ],
-      "rentGrowthPct": 21.3
+      "rentGrowthPct": 16.8
     },
     {
       "ntaCode": "BK0702",
@@ -358,9 +439,13 @@
         {
           "year": 2023,
           "medianRent": 1911
+        },
+        {
+          "year": 2024,
+          "medianRent": 1969
         }
       ],
-      "rentGrowthPct": 19.7
+      "rentGrowthPct": 23.3
     },
     {
       "ntaCode": "BK0703",
@@ -375,9 +460,13 @@
         {
           "year": 2023,
           "medianRent": 1785
+        },
+        {
+          "year": 2024,
+          "medianRent": 1859
         }
       ],
-      "rentGrowthPct": 26.8
+      "rentGrowthPct": 32
     },
     {
       "ntaCode": "BK0801",
@@ -392,9 +481,13 @@
         {
           "year": 2023,
           "medianRent": 2480
+        },
+        {
+          "year": 2024,
+          "medianRent": 2650
         }
       ],
-      "rentGrowthPct": 24.8
+      "rentGrowthPct": 33.4
     },
     {
       "ntaCode": "BK0802",
@@ -409,9 +502,13 @@
         {
           "year": 2023,
           "medianRent": 1789
+        },
+        {
+          "year": 2024,
+          "medianRent": 1849
         }
       ],
-      "rentGrowthPct": 36.3
+      "rentGrowthPct": 40.8
     },
     {
       "ntaCode": "BK0901",
@@ -426,9 +523,13 @@
         {
           "year": 2023,
           "medianRent": 1644
+        },
+        {
+          "year": 2024,
+          "medianRent": 1668
         }
       ],
-      "rentGrowthPct": 15.8
+      "rentGrowthPct": 17.5
     },
     {
       "ntaCode": "BK0902",
@@ -443,9 +544,13 @@
         {
           "year": 2023,
           "medianRent": 1670
+        },
+        {
+          "year": 2024,
+          "medianRent": 1711
         }
       ],
-      "rentGrowthPct": 20.1
+      "rentGrowthPct": 23.1
     },
     {
       "ntaCode": "BK1001",
@@ -460,9 +565,13 @@
         {
           "year": 2023,
           "medianRent": 1844
+        },
+        {
+          "year": 2024,
+          "medianRent": 1868
         }
       ],
-      "rentGrowthPct": 21.2
+      "rentGrowthPct": 22.8
     },
     {
       "ntaCode": "BK1002",
@@ -477,9 +586,13 @@
         {
           "year": 2023,
           "medianRent": 1764
+        },
+        {
+          "year": 2024,
+          "medianRent": 1813
         }
       ],
-      "rentGrowthPct": 23.4
+      "rentGrowthPct": 26.8
     },
     {
       "ntaCode": "BK1101",
@@ -494,9 +607,13 @@
         {
           "year": 2023,
           "medianRent": 1697
+        },
+        {
+          "year": 2024,
+          "medianRent": 1714
         }
       ],
-      "rentGrowthPct": 19.7
+      "rentGrowthPct": 20.9
     },
     {
       "ntaCode": "BK1102",
@@ -511,9 +628,13 @@
         {
           "year": 2023,
           "medianRent": 1787
+        },
+        {
+          "year": 2024,
+          "medianRent": 1791
         }
       ],
-      "rentGrowthPct": 21.4
+      "rentGrowthPct": 21.7
     },
     {
       "ntaCode": "BK1103",
@@ -528,9 +649,13 @@
         {
           "year": 2023,
           "medianRent": 1711
+        },
+        {
+          "year": 2024,
+          "medianRent": 1773
         }
       ],
-      "rentGrowthPct": 23.4
+      "rentGrowthPct": 27.9
     },
     {
       "ntaCode": "BK1201",
@@ -545,9 +670,13 @@
         {
           "year": 2023,
           "medianRent": 1573
+        },
+        {
+          "year": 2024,
+          "medianRent": 1661
         }
       ],
-      "rentGrowthPct": 16.4
+      "rentGrowthPct": 22.9
     },
     {
       "ntaCode": "BK1202",
@@ -562,9 +691,13 @@
         {
           "year": 2023,
           "medianRent": 1732
+        },
+        {
+          "year": 2024,
+          "medianRent": 1803
         }
       ],
-      "rentGrowthPct": 17.3
+      "rentGrowthPct": 22.2
     },
     {
       "ntaCode": "BK1203",
@@ -579,9 +712,13 @@
         {
           "year": 2023,
           "medianRent": 1946
+        },
+        {
+          "year": 2024,
+          "medianRent": 1943
         }
       ],
-      "rentGrowthPct": 21.9
+      "rentGrowthPct": 21.7
     },
     {
       "ntaCode": "BK1204",
@@ -596,9 +733,13 @@
         {
           "year": 2023,
           "medianRent": 1940
+        },
+        {
+          "year": 2024,
+          "medianRent": 1881
         }
       ],
-      "rentGrowthPct": 26.9
+      "rentGrowthPct": 23
     },
     {
       "ntaCode": "BK1301",
@@ -612,6 +753,10 @@
         },
         {
           "year": 2023,
+          "medianRent": 1326
+        },
+        {
+          "year": 2024,
           "medianRent": 1326
         }
       ],
@@ -630,9 +775,13 @@
         {
           "year": 2023,
           "medianRent": 1001
+        },
+        {
+          "year": 2024,
+          "medianRent": 1067
         }
       ],
-      "rentGrowthPct": 14
+      "rentGrowthPct": 21.5
     },
     {
       "ntaCode": "BK1303",
@@ -647,9 +796,13 @@
         {
           "year": 2023,
           "medianRent": 1584
+        },
+        {
+          "year": 2024,
+          "medianRent": 1635
         }
       ],
-      "rentGrowthPct": 35.6
+      "rentGrowthPct": 40
     },
     {
       "ntaCode": "BK1401",
@@ -664,9 +817,13 @@
         {
           "year": 2023,
           "medianRent": 1763
+        },
+        {
+          "year": 2024,
+          "medianRent": 1791
         }
       ],
-      "rentGrowthPct": 22.1
+      "rentGrowthPct": 24
     },
     {
       "ntaCode": "BK1402",
@@ -681,9 +838,13 @@
         {
           "year": 2023,
           "medianRent": 1802
+        },
+        {
+          "year": 2024,
+          "medianRent": 1826
         }
       ],
-      "rentGrowthPct": 25
+      "rentGrowthPct": 26.6
     },
     {
       "ntaCode": "BK1403",
@@ -698,9 +859,13 @@
         {
           "year": 2023,
           "medianRent": 1708
+        },
+        {
+          "year": 2024,
+          "medianRent": 1740
         }
       ],
-      "rentGrowthPct": 23.7
+      "rentGrowthPct": 26
     },
     {
       "ntaCode": "BK1501",
@@ -715,9 +880,13 @@
         {
           "year": 2023,
           "medianRent": 1763
+        },
+        {
+          "year": 2024,
+          "medianRent": 1776
         }
       ],
-      "rentGrowthPct": 18.4
+      "rentGrowthPct": 19.3
     },
     {
       "ntaCode": "BK1502",
@@ -732,9 +901,13 @@
         {
           "year": 2023,
           "medianRent": 1737
+        },
+        {
+          "year": 2024,
+          "medianRent": 1746
         }
       ],
-      "rentGrowthPct": 17.4
+      "rentGrowthPct": 18
     },
     {
       "ntaCode": "BK1503",
@@ -749,9 +922,13 @@
         {
           "year": 2023,
           "medianRent": 1551
+        },
+        {
+          "year": 2024,
+          "medianRent": 1623
         }
       ],
-      "rentGrowthPct": 26.7
+      "rentGrowthPct": 32.6
     },
     {
       "ntaCode": "BK1601",
@@ -766,9 +943,13 @@
         {
           "year": 2023,
           "medianRent": 1411
+        },
+        {
+          "year": 2024,
+          "medianRent": 1440
         }
       ],
-      "rentGrowthPct": 16.4
+      "rentGrowthPct": 18.8
     },
     {
       "ntaCode": "BK1602",
@@ -783,9 +964,13 @@
         {
           "year": 2023,
           "medianRent": 1026
+        },
+        {
+          "year": 2024,
+          "medianRent": 992
         }
       ],
-      "rentGrowthPct": 31.5
+      "rentGrowthPct": 27.2
     },
     {
       "ntaCode": "BK1701",
@@ -800,9 +985,13 @@
         {
           "year": 2023,
           "medianRent": 1719
+        },
+        {
+          "year": 2024,
+          "medianRent": 1789
         }
       ],
-      "rentGrowthPct": 24.8
+      "rentGrowthPct": 29.9
     },
     {
       "ntaCode": "BK1702",
@@ -817,9 +1006,13 @@
         {
           "year": 2023,
           "medianRent": 1700
+        },
+        {
+          "year": 2024,
+          "medianRent": 1761
         }
       ],
-      "rentGrowthPct": 20.3
+      "rentGrowthPct": 24.6
     },
     {
       "ntaCode": "BK1703",
@@ -834,9 +1027,13 @@
         {
           "year": 2023,
           "medianRent": 1645
+        },
+        {
+          "year": 2024,
+          "medianRent": 1664
         }
       ],
-      "rentGrowthPct": 21.2
+      "rentGrowthPct": 22.6
     },
     {
       "ntaCode": "BK1704",
@@ -851,9 +1048,13 @@
         {
           "year": 2023,
           "medianRent": 1549
+        },
+        {
+          "year": 2024,
+          "medianRent": 1579
         }
       ],
-      "rentGrowthPct": 23.3
+      "rentGrowthPct": 25.7
     },
     {
       "ntaCode": "BK1801",
@@ -868,9 +1069,13 @@
         {
           "year": 2023,
           "medianRent": 1607
+        },
+        {
+          "year": 2024,
+          "medianRent": 1720
         }
       ],
-      "rentGrowthPct": 17
+      "rentGrowthPct": 25.2
     },
     {
       "ntaCode": "BK1802",
@@ -885,9 +1090,13 @@
         {
           "year": 2023,
           "medianRent": 2069
+        },
+        {
+          "year": 2024,
+          "medianRent": 2136
         }
       ],
-      "rentGrowthPct": 28.4
+      "rentGrowthPct": 32.6
     },
     {
       "ntaCode": "BK1803",
@@ -902,9 +1111,13 @@
         {
           "year": 2023,
           "medianRent": 1495
+        },
+        {
+          "year": 2024,
+          "medianRent": 1518
         }
       ],
-      "rentGrowthPct": 4.8
+      "rentGrowthPct": 6.5
     },
     {
       "ntaCode": "BX0101",
@@ -919,9 +1132,13 @@
         {
           "year": 2023,
           "medianRent": 1066
+        },
+        {
+          "year": 2024,
+          "medianRent": 1031
         }
       ],
-      "rentGrowthPct": 34.8
+      "rentGrowthPct": 30.3
     },
     {
       "ntaCode": "BX0102",
@@ -936,9 +1153,13 @@
         {
           "year": 2023,
           "medianRent": 1037
+        },
+        {
+          "year": 2024,
+          "medianRent": 1194
         }
       ],
-      "rentGrowthPct": 6.8
+      "rentGrowthPct": 23
     },
     {
       "ntaCode": "BX0201",
@@ -953,9 +1174,13 @@
         {
           "year": 2023,
           "medianRent": 1321
+        },
+        {
+          "year": 2024,
+          "medianRent": 1322
         }
       ],
-      "rentGrowthPct": 32.2
+      "rentGrowthPct": 32.3
     },
     {
       "ntaCode": "BX0202",
@@ -970,9 +1195,13 @@
         {
           "year": 2023,
           "medianRent": 1212
+        },
+        {
+          "year": 2024,
+          "medianRent": 1228
         }
       ],
-      "rentGrowthPct": 20.6
+      "rentGrowthPct": 22.2
     },
     {
       "ntaCode": "BX0301",
@@ -987,9 +1216,13 @@
         {
           "year": 2023,
           "medianRent": 1196
+        },
+        {
+          "year": 2024,
+          "medianRent": 1205
         }
       ],
-      "rentGrowthPct": 21.3
+      "rentGrowthPct": 22.2
     },
     {
       "ntaCode": "BX0302",
@@ -1004,9 +1237,13 @@
         {
           "year": 2023,
           "medianRent": 997
+        },
+        {
+          "year": 2024,
+          "medianRent": 1011
         }
       ],
-      "rentGrowthPct": 21.3
+      "rentGrowthPct": 23
     },
     {
       "ntaCode": "BX0303",
@@ -1021,9 +1258,13 @@
         {
           "year": 2023,
           "medianRent": 1274
+        },
+        {
+          "year": 2024,
+          "medianRent": 1281
         }
       ],
-      "rentGrowthPct": 35.8
+      "rentGrowthPct": 36.6
     },
     {
       "ntaCode": "BX0401",
@@ -1038,9 +1279,13 @@
         {
           "year": 2023,
           "medianRent": 1388
+        },
+        {
+          "year": 2024,
+          "medianRent": 1417
         }
       ],
-      "rentGrowthPct": 21.3
+      "rentGrowthPct": 23.9
     },
     {
       "ntaCode": "BX0402",
@@ -1055,9 +1300,13 @@
         {
           "year": 2023,
           "medianRent": 1322
+        },
+        {
+          "year": 2024,
+          "medianRent": 1399
         }
       ],
-      "rentGrowthPct": 18.4
+      "rentGrowthPct": 25.2
     },
     {
       "ntaCode": "BX0403",
@@ -1072,9 +1321,13 @@
         {
           "year": 2023,
           "medianRent": 1409
+        },
+        {
+          "year": 2024,
+          "medianRent": 1424
         }
       ],
-      "rentGrowthPct": 16.9
+      "rentGrowthPct": 18.2
     },
     {
       "ntaCode": "BX0501",
@@ -1089,9 +1342,13 @@
         {
           "year": 2023,
           "medianRent": 1304
+        },
+        {
+          "year": 2024,
+          "medianRent": 1366
         }
       ],
-      "rentGrowthPct": 18.2
+      "rentGrowthPct": 23.8
     },
     {
       "ntaCode": "BX0502",
@@ -1106,9 +1363,13 @@
         {
           "year": 2023,
           "medianRent": 1478
+        },
+        {
+          "year": 2024,
+          "medianRent": 1446
         }
       ],
-      "rentGrowthPct": 18.5
+      "rentGrowthPct": 16
     },
     {
       "ntaCode": "BX0503",
@@ -1123,9 +1384,13 @@
         {
           "year": 2023,
           "medianRent": 1505
+        },
+        {
+          "year": 2024,
+          "medianRent": 1594
         }
       ],
-      "rentGrowthPct": 21.7
+      "rentGrowthPct": 28.9
     },
     {
       "ntaCode": "BX0601",
@@ -1140,9 +1405,13 @@
         {
           "year": 2023,
           "medianRent": 1116
+        },
+        {
+          "year": 2024,
+          "medianRent": 1171
         }
       ],
-      "rentGrowthPct": 17.5
+      "rentGrowthPct": 23.3
     },
     {
       "ntaCode": "BX0602",
@@ -1157,9 +1426,13 @@
         {
           "year": 2023,
           "medianRent": 1262
+        },
+        {
+          "year": 2024,
+          "medianRent": 1263
         }
       ],
-      "rentGrowthPct": 24
+      "rentGrowthPct": 24.1
     },
     {
       "ntaCode": "BX0603",
@@ -1174,9 +1447,13 @@
         {
           "year": 2023,
           "medianRent": 1437
+        },
+        {
+          "year": 2024,
+          "medianRent": 1417
         }
       ],
-      "rentGrowthPct": 22.6
+      "rentGrowthPct": 20.9
     },
     {
       "ntaCode": "BX0701",
@@ -1191,9 +1468,13 @@
         {
           "year": 2023,
           "medianRent": 1568
+        },
+        {
+          "year": 2024,
+          "medianRent": 1545
         }
       ],
-      "rentGrowthPct": 25.5
+      "rentGrowthPct": 23.7
     },
     {
       "ntaCode": "BX0702",
@@ -1208,9 +1489,13 @@
         {
           "year": 2023,
           "medianRent": 1605
+        },
+        {
+          "year": 2024,
+          "medianRent": 1607
         }
       ],
-      "rentGrowthPct": 23.1
+      "rentGrowthPct": 23.2
     },
     {
       "ntaCode": "BX0703",
@@ -1225,9 +1510,13 @@
         {
           "year": 2023,
           "medianRent": 1568
+        },
+        {
+          "year": 2024,
+          "medianRent": 1565
         }
       ],
-      "rentGrowthPct": 19.4
+      "rentGrowthPct": 19.2
     },
     {
       "ntaCode": "BX0801",
@@ -1242,9 +1531,13 @@
         {
           "year": 2023,
           "medianRent": 1543
+        },
+        {
+          "year": 2024,
+          "medianRent": 1597
         }
       ],
-      "rentGrowthPct": 14.8
+      "rentGrowthPct": 18.8
     },
     {
       "ntaCode": "BX0802",
@@ -1259,9 +1552,13 @@
         {
           "year": 2023,
           "medianRent": 1429
+        },
+        {
+          "year": 2024,
+          "medianRent": 1533
         }
       ],
-      "rentGrowthPct": 15.1
+      "rentGrowthPct": 23.4
     },
     {
       "ntaCode": "BX0803",
@@ -1276,9 +1573,13 @@
         {
           "year": 2023,
           "medianRent": 2058
+        },
+        {
+          "year": 2024,
+          "medianRent": 2034
         }
       ],
-      "rentGrowthPct": 19.9
+      "rentGrowthPct": 18.5
     },
     {
       "ntaCode": "BX0901",
@@ -1293,9 +1594,13 @@
         {
           "year": 2023,
           "medianRent": 1373
+        },
+        {
+          "year": 2024,
+          "medianRent": 1390
         }
       ],
-      "rentGrowthPct": 22.2
+      "rentGrowthPct": 23.7
     },
     {
       "ntaCode": "BX0902",
@@ -1310,9 +1615,13 @@
         {
           "year": 2023,
           "medianRent": 1053
+        },
+        {
+          "year": 2024,
+          "medianRent": 1145
         }
       ],
-      "rentGrowthPct": -3.3
+      "rentGrowthPct": 5.1
     },
     {
       "ntaCode": "BX0903",
@@ -1327,9 +1636,13 @@
         {
           "year": 2023,
           "medianRent": 1399
+        },
+        {
+          "year": 2024,
+          "medianRent": 1401
         }
       ],
-      "rentGrowthPct": 19.6
+      "rentGrowthPct": 19.7
     },
     {
       "ntaCode": "BX0904",
@@ -1344,9 +1657,13 @@
         {
           "year": 2023,
           "medianRent": 1707
+        },
+        {
+          "year": 2024,
+          "medianRent": 1742
         }
       ],
-      "rentGrowthPct": 25.1
+      "rentGrowthPct": 27.7
     },
     {
       "ntaCode": "BX1001",
@@ -1361,9 +1678,13 @@
         {
           "year": 2023,
           "medianRent": 1626
+        },
+        {
+          "year": 2024,
+          "medianRent": 1621
         }
       ],
-      "rentGrowthPct": 21.6
+      "rentGrowthPct": 21.2
     },
     {
       "ntaCode": "BX1002",
@@ -1378,9 +1699,13 @@
         {
           "year": 2023,
           "medianRent": 1651
+        },
+        {
+          "year": 2024,
+          "medianRent": 1682
         }
       ],
-      "rentGrowthPct": 26.9
+      "rentGrowthPct": 29.3
     },
     {
       "ntaCode": "BX1003",
@@ -1395,9 +1720,30 @@
         {
           "year": 2023,
           "medianRent": 1821
+        },
+        {
+          "year": 2024,
+          "medianRent": 1952
         }
       ],
-      "rentGrowthPct": 24.4
+      "rentGrowthPct": 33.3
+    },
+    {
+      "ntaCode": "BX1004",
+      "name": "Co-op City",
+      "slug": "co-op-city",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2023,
+          "medianRent": 1268
+        },
+        {
+          "year": 2024,
+          "medianRent": 1317
+        }
+      ],
+      "rentGrowthPct": null
     },
     {
       "ntaCode": "BX1101",
@@ -1412,9 +1758,13 @@
         {
           "year": 2023,
           "medianRent": 1778
+        },
+        {
+          "year": 2024,
+          "medianRent": 1769
         }
       ],
-      "rentGrowthPct": 26.8
+      "rentGrowthPct": 26.2
     },
     {
       "ntaCode": "BX1102",
@@ -1429,9 +1779,13 @@
         {
           "year": 2023,
           "medianRent": 1805
+        },
+        {
+          "year": 2024,
+          "medianRent": 1833
         }
       ],
-      "rentGrowthPct": 23
+      "rentGrowthPct": 24.9
     },
     {
       "ntaCode": "BX1103",
@@ -1446,9 +1800,13 @@
         {
           "year": 2023,
           "medianRent": 1562
+        },
+        {
+          "year": 2024,
+          "medianRent": 1600
         }
       ],
-      "rentGrowthPct": 15.2
+      "rentGrowthPct": 18
     },
     {
       "ntaCode": "BX1104",
@@ -1463,9 +1821,13 @@
         {
           "year": 2023,
           "medianRent": 1305
+        },
+        {
+          "year": 2024,
+          "medianRent": 1307
         }
       ],
-      "rentGrowthPct": 5.3
+      "rentGrowthPct": 5.5
     },
     {
       "ntaCode": "BX1201",
@@ -1480,9 +1842,13 @@
         {
           "year": 2023,
           "medianRent": 1516
+        },
+        {
+          "year": 2024,
+          "medianRent": 1530
         }
       ],
-      "rentGrowthPct": 9.1
+      "rentGrowthPct": 10.2
     },
     {
       "ntaCode": "BX1202",
@@ -1497,9 +1863,13 @@
         {
           "year": 2023,
           "medianRent": 1392
+        },
+        {
+          "year": 2024,
+          "medianRent": 1416
         }
       ],
-      "rentGrowthPct": 17
+      "rentGrowthPct": 19
     },
     {
       "ntaCode": "BX1203",
@@ -1514,9 +1884,13 @@
         {
           "year": 2023,
           "medianRent": 1641
+        },
+        {
+          "year": 2024,
+          "medianRent": 1684
         }
       ],
-      "rentGrowthPct": 17.4
+      "rentGrowthPct": 20.5
     },
     {
       "ntaCode": "MN0101",
@@ -1531,9 +1905,13 @@
         {
           "year": 2023,
           "medianRent": 3489
+        },
+        {
+          "year": 2024,
+          "medianRent": 3501
         }
       ],
-      "rentGrowthPct": 7.2
+      "rentGrowthPct": 7.6
     },
     {
       "ntaCode": "MN0102",
@@ -1548,9 +1926,13 @@
         {
           "year": 2023,
           "medianRent": 3171
+        },
+        {
+          "year": 2024,
+          "medianRent": 3166
         }
       ],
-      "rentGrowthPct": 13.8
+      "rentGrowthPct": 13.6
     },
     {
       "ntaCode": "MN0201",
@@ -1565,9 +1947,13 @@
         {
           "year": 2023,
           "medianRent": 2645
+        },
+        {
+          "year": 2024,
+          "medianRent": 2841
         }
       ],
-      "rentGrowthPct": 43.7
+      "rentGrowthPct": 54.3
     },
     {
       "ntaCode": "MN0202",
@@ -1582,9 +1968,13 @@
         {
           "year": 2023,
           "medianRent": 2925
+        },
+        {
+          "year": 2024,
+          "medianRent": 2976
         }
       ],
-      "rentGrowthPct": 12.2
+      "rentGrowthPct": 14.2
     },
     {
       "ntaCode": "MN0203",
@@ -1599,9 +1989,13 @@
         {
           "year": 2023,
           "medianRent": 3065
+        },
+        {
+          "year": 2024,
+          "medianRent": 3124
         }
       ],
-      "rentGrowthPct": 31.4
+      "rentGrowthPct": 34
     },
     {
       "ntaCode": "MN0301",
@@ -1616,9 +2010,13 @@
         {
           "year": 2023,
           "medianRent": 1097
+        },
+        {
+          "year": 2024,
+          "medianRent": 1089
         }
       ],
-      "rentGrowthPct": 27.6
+      "rentGrowthPct": 26.6
     },
     {
       "ntaCode": "MN0302",
@@ -1633,9 +2031,13 @@
         {
           "year": 2023,
           "medianRent": 1313
+        },
+        {
+          "year": 2024,
+          "medianRent": 1433
         }
       ],
-      "rentGrowthPct": 25
+      "rentGrowthPct": 36.5
     },
     {
       "ntaCode": "MN0303",
@@ -1650,9 +2052,13 @@
         {
           "year": 2023,
           "medianRent": 2004
+        },
+        {
+          "year": 2024,
+          "medianRent": 2168
         }
       ],
-      "rentGrowthPct": 29.5
+      "rentGrowthPct": 40.1
     },
     {
       "ntaCode": "MN0401",
@@ -1667,9 +2073,13 @@
         {
           "year": 2023,
           "medianRent": 2822
+        },
+        {
+          "year": 2024,
+          "medianRent": 2865
         }
       ],
-      "rentGrowthPct": 25.8
+      "rentGrowthPct": 27.7
     },
     {
       "ntaCode": "MN0402",
@@ -1684,9 +2094,13 @@
         {
           "year": 2023,
           "medianRent": 2269
+        },
+        {
+          "year": 2024,
+          "medianRent": 2527
         }
       ],
-      "rentGrowthPct": 5.7
+      "rentGrowthPct": 17.7
     },
     {
       "ntaCode": "MN0501",
@@ -1701,9 +2115,13 @@
         {
           "year": 2023,
           "medianRent": 3083
+        },
+        {
+          "year": 2024,
+          "medianRent": 3302
         }
       ],
-      "rentGrowthPct": 20.9
+      "rentGrowthPct": 29.5
     },
     {
       "ntaCode": "MN0502",
@@ -1718,9 +2136,13 @@
         {
           "year": 2023,
           "medianRent": 3007
+        },
+        {
+          "year": 2024,
+          "medianRent": 3036
         }
       ],
-      "rentGrowthPct": 6.7
+      "rentGrowthPct": 7.7
     },
     {
       "ntaCode": "MN0601",
@@ -1735,9 +2157,13 @@
         {
           "year": 2023,
           "medianRent": 3187
+        },
+        {
+          "year": 2024,
+          "medianRent": 3213
         }
       ],
-      "rentGrowthPct": 22.9
+      "rentGrowthPct": 23.9
     },
     {
       "ntaCode": "MN0602",
@@ -1752,9 +2178,13 @@
         {
           "year": 2023,
           "medianRent": 2945
+        },
+        {
+          "year": 2024,
+          "medianRent": 2968
         }
       ],
-      "rentGrowthPct": 12.8
+      "rentGrowthPct": 13.7
     },
     {
       "ntaCode": "MN0603",
@@ -1769,9 +2199,13 @@
         {
           "year": 2023,
           "medianRent": 3106
+        },
+        {
+          "year": 2024,
+          "medianRent": 3112
         }
       ],
-      "rentGrowthPct": 32.1
+      "rentGrowthPct": 32.4
     },
     {
       "ntaCode": "MN0604",
@@ -1786,9 +2220,13 @@
         {
           "year": 2023,
           "medianRent": 3059
+        },
+        {
+          "year": 2024,
+          "medianRent": 3021
         }
       ],
-      "rentGrowthPct": 16
+      "rentGrowthPct": 14.6
     },
     {
       "ntaCode": "MN0701",
@@ -1803,9 +2241,13 @@
         {
           "year": 2023,
           "medianRent": 3009
+        },
+        {
+          "year": 2024,
+          "medianRent": 3150
         }
       ],
-      "rentGrowthPct": 19
+      "rentGrowthPct": 24.6
     },
     {
       "ntaCode": "MN0702",
@@ -1820,9 +2262,13 @@
         {
           "year": 2023,
           "medianRent": 2625
+        },
+        {
+          "year": 2024,
+          "medianRent": 2759
         }
       ],
-      "rentGrowthPct": 28.7
+      "rentGrowthPct": 35.2
     },
     {
       "ntaCode": "MN0703",
@@ -1837,9 +2283,13 @@
         {
           "year": 2023,
           "medianRent": 1943
+        },
+        {
+          "year": 2024,
+          "medianRent": 2043
         }
       ],
-      "rentGrowthPct": 24.9
+      "rentGrowthPct": 31.3
     },
     {
       "ntaCode": "MN0801",
@@ -1854,9 +2304,13 @@
         {
           "year": 2023,
           "medianRent": 2857
+        },
+        {
+          "year": 2024,
+          "medianRent": 2906
         }
       ],
-      "rentGrowthPct": 17.1
+      "rentGrowthPct": 19.1
     },
     {
       "ntaCode": "MN0802",
@@ -1871,9 +2325,13 @@
         {
           "year": 2023,
           "medianRent": 2874
+        },
+        {
+          "year": 2024,
+          "medianRent": 3026
         }
       ],
-      "rentGrowthPct": 21.1
+      "rentGrowthPct": 27.5
     },
     {
       "ntaCode": "MN0803",
@@ -1888,9 +2346,13 @@
         {
           "year": 2023,
           "medianRent": 2633
+        },
+        {
+          "year": 2024,
+          "medianRent": 2660
         }
       ],
-      "rentGrowthPct": 18
+      "rentGrowthPct": 19.2
     },
     {
       "ntaCode": "MN0901",
@@ -1905,9 +2367,13 @@
         {
           "year": 2023,
           "medianRent": 2072
+        },
+        {
+          "year": 2024,
+          "medianRent": 1995
         }
       ],
-      "rentGrowthPct": 24.8
+      "rentGrowthPct": 20.2
     },
     {
       "ntaCode": "MN0902",
@@ -1922,9 +2388,13 @@
         {
           "year": 2023,
           "medianRent": 1402
+        },
+        {
+          "year": 2024,
+          "medianRent": 1418
         }
       ],
-      "rentGrowthPct": 26
+      "rentGrowthPct": 27.4
     },
     {
       "ntaCode": "MN0903",
@@ -1939,9 +2409,13 @@
         {
           "year": 2023,
           "medianRent": 1821
+        },
+        {
+          "year": 2024,
+          "medianRent": 1791
         }
       ],
-      "rentGrowthPct": 29.5
+      "rentGrowthPct": 27.4
     },
     {
       "ntaCode": "MN1001",
@@ -1956,9 +2430,13 @@
         {
           "year": 2023,
           "medianRent": 1676
+        },
+        {
+          "year": 2024,
+          "medianRent": 1787
         }
       ],
-      "rentGrowthPct": 29.2
+      "rentGrowthPct": 37.8
     },
     {
       "ntaCode": "MN1002",
@@ -1973,9 +2451,13 @@
         {
           "year": 2023,
           "medianRent": 1389
+        },
+        {
+          "year": 2024,
+          "medianRent": 1380
         }
       ],
-      "rentGrowthPct": 23.5
+      "rentGrowthPct": 22.7
     },
     {
       "ntaCode": "MN1101",
@@ -1990,9 +2472,13 @@
         {
           "year": 2023,
           "medianRent": 1383
+        },
+        {
+          "year": 2024,
+          "medianRent": 1463
         }
       ],
-      "rentGrowthPct": 32.1
+      "rentGrowthPct": 39.7
     },
     {
       "ntaCode": "MN1102",
@@ -2007,9 +2493,13 @@
         {
           "year": 2023,
           "medianRent": 1240
+        },
+        {
+          "year": 2024,
+          "medianRent": 1297
         }
       ],
-      "rentGrowthPct": 39.6
+      "rentGrowthPct": 46.1
     },
     {
       "ntaCode": "MN1201",
@@ -2024,9 +2514,13 @@
         {
           "year": 2023,
           "medianRent": 1573
+        },
+        {
+          "year": 2024,
+          "medianRent": 1587
         }
       ],
-      "rentGrowthPct": 21.2
+      "rentGrowthPct": 22.3
     },
     {
       "ntaCode": "MN1202",
@@ -2040,6 +2534,10 @@
         },
         {
           "year": 2023,
+          "medianRent": 1759
+        },
+        {
+          "year": 2024,
           "medianRent": 1759
         }
       ],
@@ -2058,9 +2556,13 @@
         {
           "year": 2023,
           "medianRent": 1565
+        },
+        {
+          "year": 2024,
+          "medianRent": 1606
         }
       ],
-      "rentGrowthPct": 17.8
+      "rentGrowthPct": 20.8
     },
     {
       "ntaCode": "QN0101",
@@ -2075,9 +2577,13 @@
         {
           "year": 2023,
           "medianRent": 2229
+        },
+        {
+          "year": 2024,
+          "medianRent": 2248
         }
       ],
-      "rentGrowthPct": 22.7
+      "rentGrowthPct": 23.7
     },
     {
       "ntaCode": "QN0102",
@@ -2092,6 +2598,10 @@
         {
           "year": 2023,
           "medianRent": 1938
+        },
+        {
+          "year": 2024,
+          "medianRent": 1937
         }
       ],
       "rentGrowthPct": 29
@@ -2109,9 +2619,13 @@
         {
           "year": 2023,
           "medianRent": 2203
+        },
+        {
+          "year": 2024,
+          "medianRent": 2226
         }
       ],
-      "rentGrowthPct": 21
+      "rentGrowthPct": 22.2
     },
     {
       "ntaCode": "QN0104",
@@ -2126,9 +2640,13 @@
         {
           "year": 2023,
           "medianRent": 1866
+        },
+        {
+          "year": 2024,
+          "medianRent": 1921
         }
       ],
-      "rentGrowthPct": 20.5
+      "rentGrowthPct": 24.1
     },
     {
       "ntaCode": "QN0105",
@@ -2143,9 +2661,30 @@
         {
           "year": 2023,
           "medianRent": 1656
+        },
+        {
+          "year": 2024,
+          "medianRent": 1775
         }
       ],
-      "rentGrowthPct": 102.4
+      "rentGrowthPct": 117
+    },
+    {
+      "ntaCode": "QN0201",
+      "name": "Long Island City-Hunters Point",
+      "slug": "long-island-city-hunters-point",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2023,
+          "medianRent": 3261
+        },
+        {
+          "year": 2024,
+          "medianRent": 3304
+        }
+      ],
+      "rentGrowthPct": null
     },
     {
       "ntaCode": "QN0202",
@@ -2160,9 +2699,13 @@
         {
           "year": 2023,
           "medianRent": 1891
+        },
+        {
+          "year": 2024,
+          "medianRent": 1927
         }
       ],
-      "rentGrowthPct": 15.4
+      "rentGrowthPct": 17.6
     },
     {
       "ntaCode": "QN0203",
@@ -2177,9 +2720,13 @@
         {
           "year": 2023,
           "medianRent": 1831
+        },
+        {
+          "year": 2024,
+          "medianRent": 1849
         }
       ],
-      "rentGrowthPct": 19.1
+      "rentGrowthPct": 20.3
     },
     {
       "ntaCode": "QN0301",
@@ -2194,9 +2741,13 @@
         {
           "year": 2023,
           "medianRent": 1846
+        },
+        {
+          "year": 2024,
+          "medianRent": 1861
         }
       ],
-      "rentGrowthPct": 20.5
+      "rentGrowthPct": 21.5
     },
     {
       "ntaCode": "QN0302",
@@ -2211,9 +2762,13 @@
         {
           "year": 2023,
           "medianRent": 2008
+        },
+        {
+          "year": 2024,
+          "medianRent": 1979
         }
       ],
-      "rentGrowthPct": 24.9
+      "rentGrowthPct": 23.1
     },
     {
       "ntaCode": "QN0303",
@@ -2228,9 +2783,13 @@
         {
           "year": 2023,
           "medianRent": 1972
+        },
+        {
+          "year": 2024,
+          "medianRent": 1938
         }
       ],
-      "rentGrowthPct": 19.2
+      "rentGrowthPct": 17.2
     },
     {
       "ntaCode": "QN0401",
@@ -2245,9 +2804,13 @@
         {
           "year": 2023,
           "medianRent": 1933
+        },
+        {
+          "year": 2024,
+          "medianRent": 1945
         }
       ],
-      "rentGrowthPct": 21.2
+      "rentGrowthPct": 21.9
     },
     {
       "ntaCode": "QN0402",
@@ -2262,9 +2825,13 @@
         {
           "year": 2023,
           "medianRent": 1881
+        },
+        {
+          "year": 2024,
+          "medianRent": 1981
         }
       ],
-      "rentGrowthPct": 25.4
+      "rentGrowthPct": 32.1
     },
     {
       "ntaCode": "QN0501",
@@ -2279,9 +2846,13 @@
         {
           "year": 2023,
           "medianRent": 1973
+        },
+        {
+          "year": 2024,
+          "medianRent": 2012
         }
       ],
-      "rentGrowthPct": 21
+      "rentGrowthPct": 23.4
     },
     {
       "ntaCode": "QN0502",
@@ -2296,9 +2867,13 @@
         {
           "year": 2023,
           "medianRent": 1991
+        },
+        {
+          "year": 2024,
+          "medianRent": 2029
         }
       ],
-      "rentGrowthPct": 26.6
+      "rentGrowthPct": 29
     },
     {
       "ntaCode": "QN0503",
@@ -2313,9 +2888,13 @@
         {
           "year": 2023,
           "medianRent": 1932
+        },
+        {
+          "year": 2024,
+          "medianRent": 1950
         }
       ],
-      "rentGrowthPct": 23.8
+      "rentGrowthPct": 25
     },
     {
       "ntaCode": "QN0504",
@@ -2330,9 +2909,13 @@
         {
           "year": 2023,
           "medianRent": 1978
+        },
+        {
+          "year": 2024,
+          "medianRent": 2014
         }
       ],
-      "rentGrowthPct": 24.2
+      "rentGrowthPct": 26.5
     },
     {
       "ntaCode": "QN0601",
@@ -2347,9 +2930,13 @@
         {
           "year": 2023,
           "medianRent": 1999
+        },
+        {
+          "year": 2024,
+          "medianRent": 2047
         }
       ],
-      "rentGrowthPct": 22.6
+      "rentGrowthPct": 25.5
     },
     {
       "ntaCode": "QN0602",
@@ -2364,9 +2951,13 @@
         {
           "year": 2023,
           "medianRent": 2072
+        },
+        {
+          "year": 2024,
+          "medianRent": 2124
         }
       ],
-      "rentGrowthPct": 18.9
+      "rentGrowthPct": 21.9
     },
     {
       "ntaCode": "QN0701",
@@ -2381,9 +2972,13 @@
         {
           "year": 2023,
           "medianRent": 2155
+        },
+        {
+          "year": 2024,
+          "medianRent": 2234
         }
       ],
-      "rentGrowthPct": 26.5
+      "rentGrowthPct": 31.1
     },
     {
       "ntaCode": "QN0702",
@@ -2398,9 +2993,13 @@
         {
           "year": 2023,
           "medianRent": 2237
+        },
+        {
+          "year": 2024,
+          "medianRent": 2285
         }
       ],
-      "rentGrowthPct": 26.8
+      "rentGrowthPct": 29.5
     },
     {
       "ntaCode": "QN0703",
@@ -2415,9 +3014,13 @@
         {
           "year": 2023,
           "medianRent": 2449
+        },
+        {
+          "year": 2024,
+          "medianRent": 2548
         }
       ],
-      "rentGrowthPct": 20.2
+      "rentGrowthPct": 25.1
     },
     {
       "ntaCode": "QN0704",
@@ -2432,9 +3035,13 @@
         {
           "year": 2023,
           "medianRent": 1819
+        },
+        {
+          "year": 2024,
+          "medianRent": 1857
         }
       ],
-      "rentGrowthPct": 11.5
+      "rentGrowthPct": 13.9
     },
     {
       "ntaCode": "QN0705",
@@ -2449,9 +3056,13 @@
         {
           "year": 2023,
           "medianRent": 1582
+        },
+        {
+          "year": 2024,
+          "medianRent": 1687
         }
       ],
-      "rentGrowthPct": 14.8
+      "rentGrowthPct": 22.4
     },
     {
       "ntaCode": "QN0706",
@@ -2466,9 +3077,13 @@
         {
           "year": 2023,
           "medianRent": 1995
+        },
+        {
+          "year": 2024,
+          "medianRent": 2107
         }
       ],
-      "rentGrowthPct": 32.9
+      "rentGrowthPct": 40.4
     },
     {
       "ntaCode": "QN0707",
@@ -2483,9 +3098,13 @@
         {
           "year": 2023,
           "medianRent": 1619
+        },
+        {
+          "year": 2024,
+          "medianRent": 1694
         }
       ],
-      "rentGrowthPct": 11.3
+      "rentGrowthPct": 16.5
     },
     {
       "ntaCode": "QN0801",
@@ -2500,9 +3119,13 @@
         {
           "year": 2023,
           "medianRent": 1917
+        },
+        {
+          "year": 2024,
+          "medianRent": 1988
         }
       ],
-      "rentGrowthPct": 24.2
+      "rentGrowthPct": 28.8
     },
     {
       "ntaCode": "QN0802",
@@ -2517,9 +3140,13 @@
         {
           "year": 2023,
           "medianRent": 1311
+        },
+        {
+          "year": 2024,
+          "medianRent": 1401
         }
       ],
-      "rentGrowthPct": 31.8
+      "rentGrowthPct": 40.8
     },
     {
       "ntaCode": "QN0803",
@@ -2534,9 +3161,13 @@
         {
           "year": 2023,
           "medianRent": 2175
+        },
+        {
+          "year": 2024,
+          "medianRent": 2177
         }
       ],
-      "rentGrowthPct": 25.4
+      "rentGrowthPct": 25.5
     },
     {
       "ntaCode": "QN0804",
@@ -2551,9 +3182,13 @@
         {
           "year": 2023,
           "medianRent": 1860
+        },
+        {
+          "year": 2024,
+          "medianRent": 1908
         }
       ],
-      "rentGrowthPct": 5.2
+      "rentGrowthPct": 7.9
     },
     {
       "ntaCode": "QN0805",
@@ -2568,9 +3203,13 @@
         {
           "year": 2023,
           "medianRent": 1926
+        },
+        {
+          "year": 2024,
+          "medianRent": 1901
         }
       ],
-      "rentGrowthPct": 19.6
+      "rentGrowthPct": 18.1
     },
     {
       "ntaCode": "QN0901",
@@ -2585,9 +3224,13 @@
         {
           "year": 2023,
           "medianRent": 1914
+        },
+        {
+          "year": 2024,
+          "medianRent": 1987
         }
       ],
-      "rentGrowthPct": 25.4
+      "rentGrowthPct": 30.2
     },
     {
       "ntaCode": "QN0902",
@@ -2602,9 +3245,13 @@
         {
           "year": 2023,
           "medianRent": 1795
+        },
+        {
+          "year": 2024,
+          "medianRent": 1798
         }
       ],
-      "rentGrowthPct": 18
+      "rentGrowthPct": 18.2
     },
     {
       "ntaCode": "QN0903",
@@ -2619,9 +3266,13 @@
         {
           "year": 2023,
           "medianRent": 1970
+        },
+        {
+          "year": 2024,
+          "medianRent": 2079
         }
       ],
-      "rentGrowthPct": 21.8
+      "rentGrowthPct": 28.5
     },
     {
       "ntaCode": "QN0904",
@@ -2636,9 +3287,13 @@
         {
           "year": 2023,
           "medianRent": 1972
+        },
+        {
+          "year": 2024,
+          "medianRent": 2016
         }
       ],
-      "rentGrowthPct": 27
+      "rentGrowthPct": 29.8
     },
     {
       "ntaCode": "QN0905",
@@ -2653,9 +3308,13 @@
         {
           "year": 2023,
           "medianRent": 1921
+        },
+        {
+          "year": 2024,
+          "medianRent": 1982
         }
       ],
-      "rentGrowthPct": 15.7
+      "rentGrowthPct": 19.4
     },
     {
       "ntaCode": "QN1001",
@@ -2670,9 +3329,13 @@
         {
           "year": 2023,
           "medianRent": 1981
+        },
+        {
+          "year": 2024,
+          "medianRent": 2015
         }
       ],
-      "rentGrowthPct": 21.2
+      "rentGrowthPct": 23.2
     },
     {
       "ntaCode": "QN1002",
@@ -2687,9 +3350,13 @@
         {
           "year": 2023,
           "medianRent": 1885
+        },
+        {
+          "year": 2024,
+          "medianRent": 1906
         }
       ],
-      "rentGrowthPct": 16.7
+      "rentGrowthPct": 18
     },
     {
       "ntaCode": "QN1003",
@@ -2704,9 +3371,13 @@
         {
           "year": 2023,
           "medianRent": 1914
+        },
+        {
+          "year": 2024,
+          "medianRent": 2060
         }
       ],
-      "rentGrowthPct": 19.6
+      "rentGrowthPct": 28.7
     },
     {
       "ntaCode": "QN1101",
@@ -2721,9 +3392,13 @@
         {
           "year": 2023,
           "medianRent": 2164
+        },
+        {
+          "year": 2024,
+          "medianRent": 2210
         }
       ],
-      "rentGrowthPct": 22.3
+      "rentGrowthPct": 24.9
     },
     {
       "ntaCode": "QN1102",
@@ -2738,9 +3413,13 @@
         {
           "year": 2023,
           "medianRent": 2555
+        },
+        {
+          "year": 2024,
+          "medianRent": 2579
         }
       ],
-      "rentGrowthPct": 32.5
+      "rentGrowthPct": 33.8
     },
     {
       "ntaCode": "QN1103",
@@ -2755,9 +3434,13 @@
         {
           "year": 2023,
           "medianRent": 2485
+        },
+        {
+          "year": 2024,
+          "medianRent": 2668
         }
       ],
-      "rentGrowthPct": 20.3
+      "rentGrowthPct": 29.1
     },
     {
       "ntaCode": "QN1104",
@@ -2772,9 +3455,13 @@
         {
           "year": 2023,
           "medianRent": 2115
+        },
+        {
+          "year": 2024,
+          "medianRent": 2177
         }
       ],
-      "rentGrowthPct": 19.8
+      "rentGrowthPct": 23.3
     },
     {
       "ntaCode": "QN1201",
@@ -2789,9 +3476,13 @@
         {
           "year": 2023,
           "medianRent": 1750
+        },
+        {
+          "year": 2024,
+          "medianRent": 1807
         }
       ],
-      "rentGrowthPct": 19
+      "rentGrowthPct": 22.9
     },
     {
       "ntaCode": "QN1202",
@@ -2806,9 +3497,13 @@
         {
           "year": 2023,
           "medianRent": 1502
+        },
+        {
+          "year": 2024,
+          "medianRent": 1517
         }
       ],
-      "rentGrowthPct": 12.8
+      "rentGrowthPct": 13.9
     },
     {
       "ntaCode": "QN1203",
@@ -2823,9 +3518,13 @@
         {
           "year": 2023,
           "medianRent": 1844
+        },
+        {
+          "year": 2024,
+          "medianRent": 1904
         }
       ],
-      "rentGrowthPct": 32.6
+      "rentGrowthPct": 36.9
     },
     {
       "ntaCode": "QN1204",
@@ -2840,9 +3539,13 @@
         {
           "year": 2023,
           "medianRent": 1391
+        },
+        {
+          "year": 2024,
+          "medianRent": 1433
         }
       ],
-      "rentGrowthPct": -13.4
+      "rentGrowthPct": -10.8
     },
     {
       "ntaCode": "QN1205",
@@ -2857,9 +3560,13 @@
         {
           "year": 2023,
           "medianRent": 1745
+        },
+        {
+          "year": 2024,
+          "medianRent": 1766
         }
       ],
-      "rentGrowthPct": 18.5
+      "rentGrowthPct": 20
     },
     {
       "ntaCode": "QN1206",
@@ -2874,9 +3581,13 @@
         {
           "year": 2023,
           "medianRent": 1674
+        },
+        {
+          "year": 2024,
+          "medianRent": 1739
         }
       ],
-      "rentGrowthPct": 18.6
+      "rentGrowthPct": 23.2
     },
     {
       "ntaCode": "QN1301",
@@ -2891,9 +3602,13 @@
         {
           "year": 2023,
           "medianRent": 2149
+        },
+        {
+          "year": 2024,
+          "medianRent": 2070
         }
       ],
-      "rentGrowthPct": 24
+      "rentGrowthPct": 19.4
     },
     {
       "ntaCode": "QN1302",
@@ -2908,9 +3623,13 @@
         {
           "year": 2023,
           "medianRent": 2069
+        },
+        {
+          "year": 2024,
+          "medianRent": 2016
         }
       ],
-      "rentGrowthPct": 20.4
+      "rentGrowthPct": 17.3
     },
     {
       "ntaCode": "QN1303",
@@ -2925,9 +3644,13 @@
         {
           "year": 2023,
           "medianRent": 1672
+        },
+        {
+          "year": 2024,
+          "medianRent": 1848
         }
       ],
-      "rentGrowthPct": 13.1
+      "rentGrowthPct": 25
     },
     {
       "ntaCode": "QN1304",
@@ -2942,9 +3665,13 @@
         {
           "year": 2023,
           "medianRent": 1720
+        },
+        {
+          "year": 2024,
+          "medianRent": 1711
         }
       ],
-      "rentGrowthPct": 5.6
+      "rentGrowthPct": 5
     },
     {
       "ntaCode": "QN1305",
@@ -2959,9 +3686,13 @@
         {
           "year": 2023,
           "medianRent": 1852
+        },
+        {
+          "year": 2024,
+          "medianRent": 1886
         }
       ],
-      "rentGrowthPct": 14.3
+      "rentGrowthPct": 16.3
     },
     {
       "ntaCode": "QN1306",
@@ -2976,9 +3707,13 @@
         {
           "year": 2023,
           "medianRent": 2178
+        },
+        {
+          "year": 2024,
+          "medianRent": 2190
         }
       ],
-      "rentGrowthPct": 23.4
+      "rentGrowthPct": 24.1
     },
     {
       "ntaCode": "QN1307",
@@ -2993,9 +3728,13 @@
         {
           "year": 2023,
           "medianRent": 2367
+        },
+        {
+          "year": 2024,
+          "medianRent": 2463
         }
       ],
-      "rentGrowthPct": 36.4
+      "rentGrowthPct": 42
     },
     {
       "ntaCode": "QN1401",
@@ -3010,9 +3749,13 @@
         {
           "year": 2023,
           "medianRent": 1484
+        },
+        {
+          "year": 2024,
+          "medianRent": 1472
         }
       ],
-      "rentGrowthPct": 12.6
+      "rentGrowthPct": 11.7
     },
     {
       "ntaCode": "QN1402",
@@ -3027,9 +3770,13 @@
         {
           "year": 2023,
           "medianRent": 1268
+        },
+        {
+          "year": 2024,
+          "medianRent": 1287
         }
       ],
-      "rentGrowthPct": 12.4
+      "rentGrowthPct": 14.1
     },
     {
       "ntaCode": "QN1403",
@@ -3044,9 +3791,13 @@
         {
           "year": 2023,
           "medianRent": 1794
+        },
+        {
+          "year": 2024,
+          "medianRent": 1782
         }
       ],
-      "rentGrowthPct": 22.8
+      "rentGrowthPct": 22
     },
     {
       "ntaCode": "SI0101",
@@ -3061,9 +3812,13 @@
         {
           "year": 2023,
           "medianRent": 1460
+        },
+        {
+          "year": 2024,
+          "medianRent": 1366
         }
       ],
-      "rentGrowthPct": 33
+      "rentGrowthPct": 24.4
     },
     {
       "ntaCode": "SI0102",
@@ -3078,9 +3833,13 @@
         {
           "year": 2023,
           "medianRent": 1360
+        },
+        {
+          "year": 2024,
+          "medianRent": 1369
         }
       ],
-      "rentGrowthPct": 23
+      "rentGrowthPct": 23.8
     },
     {
       "ntaCode": "SI0103",
@@ -3095,9 +3854,13 @@
         {
           "year": 2023,
           "medianRent": 1276
+        },
+        {
+          "year": 2024,
+          "medianRent": 1304
         }
       ],
-      "rentGrowthPct": -1.2
+      "rentGrowthPct": 0.9
     },
     {
       "ntaCode": "SI0104",
@@ -3112,9 +3875,13 @@
         {
           "year": 2023,
           "medianRent": 1611
+        },
+        {
+          "year": 2024,
+          "medianRent": 1686
         }
       ],
-      "rentGrowthPct": 26.8
+      "rentGrowthPct": 32.7
     },
     {
       "ntaCode": "SI0105",
@@ -3129,9 +3896,13 @@
         {
           "year": 2023,
           "medianRent": 1930
+        },
+        {
+          "year": 2024,
+          "medianRent": 2022
         }
       ],
-      "rentGrowthPct": 35.5
+      "rentGrowthPct": 42
     },
     {
       "ntaCode": "SI0106",
@@ -3146,9 +3917,13 @@
         {
           "year": 2023,
           "medianRent": 1783
+        },
+        {
+          "year": 2024,
+          "medianRent": 1850
         }
       ],
-      "rentGrowthPct": 22
+      "rentGrowthPct": 26.6
     },
     {
       "ntaCode": "SI0107",
@@ -3163,9 +3938,13 @@
         {
           "year": 2023,
           "medianRent": 1372
+        },
+        {
+          "year": 2024,
+          "medianRent": 1408
         }
       ],
-      "rentGrowthPct": 15.3
+      "rentGrowthPct": 18.3
     },
     {
       "ntaCode": "SI0201",
@@ -3180,9 +3959,13 @@
         {
           "year": 2023,
           "medianRent": 1492
+        },
+        {
+          "year": 2024,
+          "medianRent": 1459
         }
       ],
-      "rentGrowthPct": 45.4
+      "rentGrowthPct": 42.2
     },
     {
       "ntaCode": "SI0202",
@@ -3197,9 +3980,13 @@
         {
           "year": 2023,
           "medianRent": 1970
+        },
+        {
+          "year": 2024,
+          "medianRent": 2096
         }
       ],
-      "rentGrowthPct": 25.4
+      "rentGrowthPct": 33.4
     },
     {
       "ntaCode": "SI0203",
@@ -3214,9 +4001,13 @@
         {
           "year": 2023,
           "medianRent": 1304
+        },
+        {
+          "year": 2024,
+          "medianRent": 1369
         }
       ],
-      "rentGrowthPct": 33.2
+      "rentGrowthPct": 39.8
     },
     {
       "ntaCode": "SI0204",
@@ -3231,9 +4022,13 @@
         {
           "year": 2023,
           "medianRent": 2032
+        },
+        {
+          "year": 2024,
+          "medianRent": 2010
         }
       ],
-      "rentGrowthPct": 22.9
+      "rentGrowthPct": 21.6
     },
     {
       "ntaCode": "SI0301",
@@ -3248,9 +4043,13 @@
         {
           "year": 2023,
           "medianRent": 1762
+        },
+        {
+          "year": 2024,
+          "medianRent": 1850
         }
       ],
-      "rentGrowthPct": 26.5
+      "rentGrowthPct": 32.8
     },
     {
       "ntaCode": "SI0302",
@@ -3265,9 +4064,13 @@
         {
           "year": 2023,
           "medianRent": 1876
+        },
+        {
+          "year": 2024,
+          "medianRent": 2049
         }
       ],
-      "rentGrowthPct": 20.3
+      "rentGrowthPct": 31.4
     },
     {
       "ntaCode": "SI0303",
@@ -3282,9 +4085,13 @@
         {
           "year": 2023,
           "medianRent": 1725
+        },
+        {
+          "year": 2024,
+          "medianRent": 1774
         }
       ],
-      "rentGrowthPct": 44.2
+      "rentGrowthPct": 48.3
     },
     {
       "ntaCode": "SI0304",
@@ -3299,9 +4106,13 @@
         {
           "year": 2023,
           "medianRent": 2245
+        },
+        {
+          "year": 2024,
+          "medianRent": 2249
         }
       ],
-      "rentGrowthPct": 68.9
+      "rentGrowthPct": 69.2
     },
     {
       "ntaCode": "SI0305",
@@ -3316,9 +4127,13 @@
         {
           "year": 2023,
           "medianRent": 1672
+        },
+        {
+          "year": 2024,
+          "medianRent": 1838
         }
       ],
-      "rentGrowthPct": 28.9
+      "rentGrowthPct": 41.7
     }
   ]
 }

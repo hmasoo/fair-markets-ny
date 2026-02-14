@@ -2,7 +2,7 @@
  * Aggregate Census ACS tract-level income data to NTA level.
  *
  * Reads:
- *   data/raw/acs-income-tracts-2023.json (from download-acs-income.ts)
+ *   data/raw/acs-income-tracts-2024.json (from download-acs-income.ts)
  *   data/crosswalks/nta-to-census-tract.json
  *
  * Output:
@@ -58,7 +58,7 @@ interface NTAIncome {
 
 function main() {
   // Load tract income data
-  const tractPath = join(ROOT, "data/raw/acs-income-tracts-2023.json");
+  const tractPath = join(ROOT, "data/raw/acs-income-tracts-2024.json");
   let tracts: TractRecord[];
   try {
     tracts = JSON.parse(readFileSync(tractPath, "utf-8"));

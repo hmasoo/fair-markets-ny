@@ -5,7 +5,7 @@
  *   data/raw/pluto-residential.json (from download-pluto.ts)
  *   data/crosswalks/nta-to-census-tract.json
  *   data/geography/nyc-ntas-2020.json
- *   data/raw/acs-income-tracts-2023.json (optional — from download-acs-income.ts)
+ *   data/raw/acs-income-tracts-2024.json (optional — from download-acs-income.ts)
  *
  * Output:
  *   data/concentration/housing-neighborhoods.json (committed)
@@ -228,7 +228,7 @@ function main() {
   const ntaRefs: NTARef[] = JSON.parse(readFileSync(ntaRefPath, "utf-8"));
 
   // Optionally load ACS income data
-  const acsPath = join(ROOT, "data/raw/acs-income-tracts-2023.json");
+  const acsPath = join(ROOT, "data/raw/acs-income-tracts-2024.json");
   let acsTracts: TractRecord[] | null = null;
   if (existsSync(acsPath)) {
     acsTracts = JSON.parse(readFileSync(acsPath, "utf-8"));
@@ -466,7 +466,7 @@ function main() {
     geography: "NYC Neighborhoods",
     ntaVersion: "2020",
     source: "NYC Dept. of City Planning — MapPLUTO 24v4; ACRIS ownership records",
-    incomeSource: "U.S. Census Bureau, ACS 2023 5-Year Estimates (Tables B19013, B25064, B25070)",
+    incomeSource: "U.S. Census Bureau, ACS 2024 5-Year Estimates (Tables B19013, B25064, B25070)",
     neighborhoods,
   };
 
