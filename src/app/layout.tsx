@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 const description =
-  "Public data on market competition and ownership structure across New York State — housing, broadband, healthcare, and more.";
+  "What do New Yorkers pay for housing, transit, broadband, and healthcare? Public data joined across government sources that are normally siloed.";
 
 export const metadata: Metadata = {
   title: {
