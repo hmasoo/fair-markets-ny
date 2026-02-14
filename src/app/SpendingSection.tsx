@@ -405,8 +405,8 @@ export function SpendingSection({ data }: SpendingSectionProps) {
             </span>
           </div>
           <p className="text-sm text-gray-600 mt-1">
-            go to markets where Fair Markets NY tracks concentration — housing,
-            transportation, groceries, healthcare, and broadband. That&#39;s $
+            go to the sectors this site covers — housing, transportation,
+            groceries, healthcare, and broadband. That&#39;s $
             {trackedTotal.toLocaleString()} per year, or {trackedPctOfSpending}%
             of total household spending.
           </p>

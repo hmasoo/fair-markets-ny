@@ -70,18 +70,31 @@ export default function BroadbandPage() {
         </div>
       </div>
 
-      {/* What shapes the broadband market */}
+      {/* What shapes the broadband market — two distinct problems */}
       <div className="card mb-8">
         <h2 className="text-xl font-bold text-fm-patina mb-2">
-          Why so few choices?
+          Two different problems
         </h2>
-        <p className="text-sm text-gray-700">
-          Building broadband networks requires digging up streets and stringing
-          cables — expensive infrastructure that discourages new competitors
-          from entering a market an incumbent already serves. The result: most
-          New Yorkers choose between one or two wired ISPs, and the top 4
-          providers control 88% of the statewide market.
-        </p>
+        <div className="text-sm text-gray-700 space-y-3">
+          <p>
+            <strong>Rural: no infrastructure.</strong> In counties like St.
+            Lawrence and Hamilton, thousands of census blocks have zero wired
+            broadband at 100 Mbps. The economics of running cable to
+            low-density areas don{"\u2019"}t work without subsidy. New York{"\u2019"}s
+            $1B ConnectALL program and the federal BEAD program are funding
+            buildout — but the gap remains large.
+          </p>
+          <p>
+            <strong>Urban: few competitors.</strong> Most NYC and suburban
+            households have one or two wired ISPs. Building broadband networks
+            requires digging up streets and stringing cables — expensive
+            infrastructure that discourages new entrants where an incumbent
+            already serves. The top 4 providers control 88% of the statewide
+            market. Whether that translates to higher prices is the key question
+            this page can{"\u2019"}t yet answer (we don{"\u2019"}t have pricing
+            data by county).
+          </p>
+        </div>
       </div>
 
       {/* Map with statewide/NYC toggle */}

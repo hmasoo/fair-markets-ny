@@ -22,18 +22,6 @@ const actions = [
     outcomeVariant: "green" as const,
   },
   {
-    id: "tapestry",
-    problem: "An $8.5B merger would have eliminated a competitor in handbags",
-    sector: "Retail",
-    description:
-      "Tapestry (Coach) sought to acquire Capri (Michael Kors, Versace, Jimmy Choo). If it went through, one company would control the most popular brands in the accessible luxury handbag market — reducing the competitive pressure that keeps prices and quality in check.",
-    response: "AG sued to block the merger",
-    agency: "NY Attorney General",
-    date: "2024-04-22",
-    outcome: "Merger blocked",
-    outcomeVariant: "green" as const,
-  },
-  {
     id: "pe-nursing",
     problem: "Private equity firms bought nursing homes, then cut staffing",
     sector: "Healthcare",
@@ -73,7 +61,6 @@ const actions = [
 
 const sectorColors: Record<string, "blue" | "green" | "yellow" | "gray"> = {
   Housing: "blue",
-  Retail: "gray",
   Healthcare: "yellow",
 };
 
@@ -133,18 +120,32 @@ export default function EnforcementPage() {
         </div>
       </div>
 
-      {/* How to read this */}
+      {/* How to read this + caveats — lead with limitations */}
       <div className="card mb-8">
         <h2 className="text-xl font-bold text-fm-patina mb-2">
           How to read this page
         </h2>
-        <p className="text-sm text-gray-700">
-          Each entry starts with the consumer problem — what people
-          experienced — followed by the regulatory or legislative response.
-          Not every market problem gets fixed, and not every fix works. We
-          track both the interventions and the outcomes so you can judge for
-          yourself.
-        </p>
+        <div className="text-sm text-gray-700 space-y-3">
+          <p>
+            Each entry starts with the consumer problem — what people
+            experienced — followed by the regulatory or legislative response.
+            Not every market problem gets fixed, and not every fix works. We
+            track both the interventions and the outcomes so you can judge for
+            yourself.
+          </p>
+          <p>
+            <strong>What this tracker doesn{"\u2019"}t capture:</strong>{" "}
+            Regulatory action is one response to market problems, but it{"\u2019"}s
+            not the only one — and it{"\u2019"}s not always the most effective.
+            Some consumer harms reflect supply constraints (not enough housing,
+            not enough broadband infrastructure) that enforcement alone
+            can{"\u2019"}t fix. Others involve tradeoffs: extending hospital merger
+            review periods adds scrutiny but also delays access to potential
+            efficiencies. This tracker covers publicly announced actions from
+            New York State agencies — not federal enforcement (FTC, DOJ),
+            private litigation, or informal regulatory guidance.
+          </p>
+        </div>
       </div>
 
       {/* Actions list — problem first */}
@@ -187,27 +188,21 @@ export default function EnforcementPage() {
         ))}
       </div>
 
-      {/* Caveats */}
+      {/* Cross-references to other pages */}
       <div className="card mt-8">
         <h2 className="text-lg font-bold text-fm-patina mb-2">
-          What this tracker doesn{"'"}t capture
+          Related data on this site
         </h2>
         <div className="text-sm text-gray-700 space-y-2">
           <p>
-            Regulatory action is one response to market problems, but it{"'"}s
-            not the only one — and it{"'"}s not always the most effective.
-            Some consumer harms reflect supply constraints (not enough
-            housing, not enough broadband infrastructure) that enforcement
-            alone can{"'"}t fix. Others involve tradeoffs: extending
-            hospital merger review periods adds scrutiny but also delays
-            access to potential efficiencies.
-          </p>
-          <p>
-            This tracker covers publicly announced actions from New York
-            State agencies. It doesn{"'"}t include federal enforcement (FTC,
-            DOJ), private litigation, or informal regulatory guidance. We{"'"}ll
-            expand coverage as we build automated scraping of AG press
-            releases and DOH filings.
+            The problems tracked here connect to data elsewhere on the
+            platform. The{" "}
+            <a href="/housing" className="text-fm-teal hover:underline font-medium">housing page</a>{" "}
+            shows ownership concentration in the neighborhoods where
+            algorithmic rent-setting tools were used. The{" "}
+            <a href="/healthcare" className="text-fm-teal hover:underline font-medium">healthcare page</a>{" "}
+            maps hospital system dominance across the regions where CON
+            reviews and PE acquisitions are most relevant.
           </p>
         </div>
       </div>

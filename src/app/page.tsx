@@ -26,7 +26,7 @@ const sectors = [
     subtitle: "Who runs the hospitals in your region?",
     href: "/healthcare",
     description:
-      "In parts of upstate New York, a single hospital system accounts for over half of all beds. When one system dominates, patients have fewer choices for care. See the data by region.",
+      "In parts of upstate New York, a single hospital system accounts for over half of all beds. We joined facility data, bed counts, and system ownership records across 10 health planning regions so you can see who runs the hospitals near you.",
     stat: "57%",
     statLabel: "of beds held by one system (North Country)",
   },
@@ -36,7 +36,7 @@ const sectors = [
     href: "/enforcement",
     description:
       "Algorithmic rent-setting, hospital mergers that reduce patient choices, pharmacy middlemen with no oversight. We track the consumer problems and how New York regulators responded.",
-    stat: "5",
+    stat: "4",
     statLabel: "consumer problems tracked",
   },
 ];
@@ -51,10 +51,11 @@ export default function Home() {
             What New Yorkers pay for the basics — and why
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-white/80 max-w-2xl leading-relaxed">
-            Housing, internet, healthcare. Fair Markets NY uses public
-            government records to show what people actually spend, how many
-            choices they have, and who controls the market. The data is open —
-            explore it yourself.
+            Housing, internet, healthcare, transportation. We join public
+            government datasets — ownership records, Census surveys, FCC
+            filings, facility reports — so you can see what people spend, how
+            many choices they have, and what drives the differences. The data is
+            open — explore it yourself.
           </p>
         </div>
       </section>
@@ -142,8 +143,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-center">
           <p className="text-sm text-amber-800">
             <strong>Beta:</strong> This project is under active development.
-            Concentration calculations may contain errors or use preliminary
-            data. If you spot an issue, please{" "}
+            Data calculations may contain errors or use preliminary
+            sources. If you spot an issue, please{" "}
             <a
               href="https://github.com/masuga-fair-markets/fair-markets-ny/issues"
               className="underline hover:text-amber-900"

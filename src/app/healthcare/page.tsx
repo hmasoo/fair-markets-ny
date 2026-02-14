@@ -101,8 +101,50 @@ export default function HealthcarePage() {
             health planning regions
           </div>
           <div className="text-xs text-fm-sage">
-            From competitive to near-monopoly
+            NYS DOH planning areas
           </div>
+        </div>
+      </div>
+
+      {/* What this data shows — and what it doesn't */}
+      <div className="card mb-8">
+        <h2 className="text-xl font-bold text-fm-patina mb-2">
+          What this data shows — and what it doesn{"\u2019"}t
+        </h2>
+        <div className="text-sm text-gray-700 space-y-3">
+          <p>
+            Bed share measures <strong>ownership structure</strong>: which
+            systems control the most hospital beds in a region. It does not
+            directly measure what patients pay or the quality of care they
+            receive. Patients don{"\u2019"}t choose hospitals by bed count — they
+            choose by location, insurance network, specialty, and reputation.
+          </p>
+          <p>
+            That said, the academic evidence on hospital consolidation is
+            substantial. Studies by{" "}
+            <a
+              href="https://www.aeaweb.org/articles?id=10.1257/aer.p20191020"
+              className="text-fm-teal hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Gaynor (2019)
+            </a>
+            ,{" "}
+            <a
+              href="https://www.journals.uchicago.edu/doi/10.1086/704088"
+              className="text-fm-teal hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Cooper et al. (2019)
+            </a>
+            , and Craig et al. consistently find that hospital mergers lead to
+            higher prices for commercially insured patients — typically 5–20%
+            increases. Whether that pattern holds in specific New York regions
+            requires price data we don{"\u2019"}t yet have. NYS SPARCS discharge
+            data and CMS transparency files could fill this gap.
+          </p>
         </div>
       </div>
 

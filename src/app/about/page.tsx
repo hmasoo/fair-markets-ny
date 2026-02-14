@@ -40,11 +40,12 @@ export default function AboutPage() {
           </h2>
           <div className="text-sm text-gray-700 space-y-3">
             <p>
-              Fair Markets NY takes public government records — property
+              Fair Markets NY joins public government records — property
               ownership filings, FCC broadband data, hospital facility
-              reports, Census income surveys — and organizes them so you can
+              reports, Census income surveys, MTA fare schedules — so you can
               see what people pay for the basics, how many choices they have,
-              and who controls the market.
+              and what drives the differences across neighborhoods and
+              regions.
             </p>
             <p>
               We don{"'"}t editorialize about what the numbers mean. We show
@@ -271,7 +272,7 @@ export default function AboutPage() {
               },
               {
                 name: "U.S. Census Bureau ACS 5-Year Estimates",
-                what: "Tract-level median income and rent burden, aggregated to neighborhoods",
+                what: "Tract-level median income, rent burden, and commute mode, aggregated to neighborhoods",
                 legal: "Federal public domain",
               },
               {
