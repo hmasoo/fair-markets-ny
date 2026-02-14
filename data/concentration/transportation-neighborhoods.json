@@ -1,0 +1,3480 @@
+{
+  "sector": "Transportation",
+  "geography": "NYC Neighborhoods",
+  "source": "U.S. Census Bureau, ACS 2023 5-Year Estimates (Tables B08301, B08013, B25044)",
+  "costModel": {
+    "description": "Estimated monthly commute cost = transit% × $132 (monthly MetroCard) + drove% × $780 (AAA monthly vehicle cost)",
+    "metroCardMonthly": 132,
+    "vehicleMonthlyCost": 780,
+    "sources": {
+      "metroCard": "MTA fare schedule, effective August 2023",
+      "vehicleCost": "AAA Your Driving Costs 2024, Northeast region"
+    }
+  },
+  "neighborhoods": [
+    {
+      "name": "Tottenville-Charleston",
+      "slug": "tottenville-charleston",
+      "borough": "Staten Island",
+      "ntaCodes": [
+        "SI0305"
+      ],
+      "workers": 8029,
+      "transitPct": 13.8,
+      "drovePct": 71.1,
+      "carpoolPct": 4.1,
+      "walkBikePct": 3,
+      "wfhPct": 7.7,
+      "zeroCarPct": 6.1,
+      "avgCommuteMins": 40,
+      "medianIncome": 137514,
+      "estMonthlyCost": 573
+    },
+    {
+      "name": "Fort Wadsworth",
+      "slug": "fort-wadsworth",
+      "borough": "Staten Island",
+      "ntaCodes": [
+        "SI9561"
+      ],
+      "workers": 223,
+      "transitPct": 2.2,
+      "drovePct": 70.4,
+      "carpoolPct": 3.6,
+      "walkBikePct": 16.6,
+      "wfhPct": 1.8,
+      "zeroCarPct": 5.2,
+      "avgCommuteMins": 13,
+      "medianIncome": null,
+      "estMonthlyCost": 552
+    },
+    {
+      "name": "Arden Heights-Rossville",
+      "slug": "arden-heights-rossville",
+      "borough": "Staten Island",
+      "ntaCodes": [
+        "SI0303"
+      ],
+      "workers": 14287,
+      "transitPct": 14.8,
+      "drovePct": 66,
+      "carpoolPct": 11.1,
+      "walkBikePct": 0.4,
+      "wfhPct": 6.9,
+      "zeroCarPct": 6,
+      "avgCommuteMins": 42,
+      "medianIncome": 109850,
+      "estMonthlyCost": 534
+    },
+    {
+      "name": "Glen Oaks-Floral Park-New Hyde Park",
+      "slug": "glen-oaks-floral-park-new-hyde-park",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN1301"
+      ],
+      "workers": 10220,
+      "transitPct": 16.5,
+      "drovePct": 65.3,
+      "carpoolPct": 4.8,
+      "walkBikePct": 2.8,
+      "wfhPct": 9.5,
+      "zeroCarPct": 11.7,
+      "avgCommuteMins": 39,
+      "medianIncome": 107236,
+      "estMonthlyCost": 531
+    },
+    {
+      "name": "Howard Beach-Lindenwood",
+      "slug": "howard-beach-lindenwood",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN1003"
+      ],
+      "workers": 12266,
+      "transitPct": 21.6,
+      "drovePct": 58.9,
+      "carpoolPct": 6.3,
+      "walkBikePct": 3.1,
+      "wfhPct": 8.4,
+      "zeroCarPct": 11.5,
+      "avgCommuteMins": 43,
+      "medianIncome": 103428,
+      "estMonthlyCost": 488
+    },
+    {
+      "name": "Breezy Point-Belle Harbor-Rockaway Park-Broad Channel",
+      "slug": "breezy-point-belle-harbor-rockaway-park-broad-channel",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN1403"
+      ],
+      "workers": 10595,
+      "transitPct": 21.8,
+      "drovePct": 58.7,
+      "carpoolPct": 5.2,
+      "walkBikePct": 5.2,
+      "wfhPct": 7.9,
+      "zeroCarPct": 17.2,
+      "avgCommuteMins": 42,
+      "medianIncome": 117846,
+      "estMonthlyCost": 487
+    },
+    {
+      "name": "Whitestone-Beechhurst",
+      "slug": "whitestone-beechhurst",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0702"
+      ],
+      "workers": 12330,
+      "transitPct": 18.2,
+      "drovePct": 58.9,
+      "carpoolPct": 10.2,
+      "walkBikePct": 1.5,
+      "wfhPct": 10.9,
+      "zeroCarPct": 8.2,
+      "avgCommuteMins": 37,
+      "medianIncome": 98211,
+      "estMonthlyCost": 483
+    },
+    {
+      "name": "Annadale-Huguenot-Prince's Bay-Woodrow",
+      "slug": "annadale-huguenot-prince-s-bay-woodrow",
+      "borough": "Staten Island",
+      "ntaCodes": [
+        "SI0304"
+      ],
+      "workers": 19608,
+      "transitPct": 17.6,
+      "drovePct": 58.8,
+      "carpoolPct": 6.8,
+      "walkBikePct": 2.5,
+      "wfhPct": 12.6,
+      "zeroCarPct": 7.3,
+      "avgCommuteMins": 46,
+      "medianIncome": null,
+      "estMonthlyCost": 482
+    },
+    {
+      "name": "Great Kills-Eltingville",
+      "slug": "great-kills-eltingville",
+      "borough": "Staten Island",
+      "ntaCodes": [
+        "SI0302"
+      ],
+      "workers": 27147,
+      "transitPct": 21.6,
+      "drovePct": 57.7,
+      "carpoolPct": 7.2,
+      "walkBikePct": 1.4,
+      "wfhPct": 11.3,
+      "zeroCarPct": 7.3,
+      "avgCommuteMins": 47,
+      "medianIncome": 120196,
+      "estMonthlyCost": 479
+    },
+    {
+      "name": "Cambria Heights",
+      "slug": "cambria-heights",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN1304"
+      ],
+      "workers": 9549,
+      "transitPct": 27.1,
+      "drovePct": 56.6,
+      "carpoolPct": 8.4,
+      "walkBikePct": 1.2,
+      "wfhPct": 6.1,
+      "zeroCarPct": 13,
+      "avgCommuteMins": 46,
+      "medianIncome": 114260,
+      "estMonthlyCost": 477
+    },
+    {
+      "name": "New Springville-Willowbrook-Bulls Head-Travis",
+      "slug": "new-springville-willowbrook-bulls-head-travis",
+      "borough": "Staten Island",
+      "ntaCodes": [
+        "SI0204"
+      ],
+      "workers": 19531,
+      "transitPct": 20.2,
+      "drovePct": 57,
+      "carpoolPct": 10.4,
+      "walkBikePct": 2.5,
+      "wfhPct": 8.8,
+      "zeroCarPct": 9.5,
+      "avgCommuteMins": 42,
+      "medianIncome": 98673,
+      "estMonthlyCost": 471
+    },
+    {
+      "name": "Todt Hill-Emerson Hill-Lighthouse Hill-Manor Heights",
+      "slug": "todt-hill-emerson-hill-lighthouse-hill-manor-heights",
+      "borough": "Staten Island",
+      "ntaCodes": [
+        "SI0203"
+      ],
+      "workers": 13671,
+      "transitPct": 15.7,
+      "drovePct": 56.8,
+      "carpoolPct": 10.5,
+      "walkBikePct": 2.1,
+      "wfhPct": 12.8,
+      "zeroCarPct": 13.3,
+      "avgCommuteMins": 41,
+      "medianIncome": 110672,
+      "estMonthlyCost": 464
+    },
+    {
+      "name": "Bellerose",
+      "slug": "bellerose",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN1302"
+      ],
+      "workers": 12491,
+      "transitPct": 20.4,
+      "drovePct": 53.5,
+      "carpoolPct": 14.3,
+      "walkBikePct": 0.4,
+      "wfhPct": 9.4,
+      "zeroCarPct": 13.8,
+      "avgCommuteMins": 41,
+      "medianIncome": 105381,
+      "estMonthlyCost": 444
+    },
+    {
+      "name": "Westerleigh-Castleton Corners",
+      "slug": "westerleigh-castleton-corners",
+      "borough": "Staten Island",
+      "ntaCodes": [
+        "SI0105"
+      ],
+      "workers": 14558,
+      "transitPct": 18.5,
+      "drovePct": 53.8,
+      "carpoolPct": 12.6,
+      "walkBikePct": 1.2,
+      "wfhPct": 12.7,
+      "zeroCarPct": 10.4,
+      "avgCommuteMins": 39,
+      "medianIncome": 121838,
+      "estMonthlyCost": 444
+    },
+    {
+      "name": "Oakwood-Richmondtown",
+      "slug": "oakwood-richmondtown",
+      "borough": "Staten Island",
+      "ntaCodes": [
+        "SI0301"
+      ],
+      "workers": 9586,
+      "transitPct": 29.6,
+      "drovePct": 50.8,
+      "carpoolPct": 4.9,
+      "walkBikePct": 2.1,
+      "wfhPct": 11.6,
+      "zeroCarPct": 13.8,
+      "avgCommuteMins": 45,
+      "medianIncome": 111488,
+      "estMonthlyCost": 435
+    },
+    {
+      "name": "Throgs Neck-Schuylerville",
+      "slug": "throgs-neck-schuylerville",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX1002"
+      ],
+      "workers": 21486,
+      "transitPct": 27.4,
+      "drovePct": 51,
+      "carpoolPct": 7.1,
+      "walkBikePct": 3.7,
+      "wfhPct": 8.8,
+      "zeroCarPct": 25.4,
+      "avgCommuteMins": 41,
+      "medianIncome": 83573,
+      "estMonthlyCost": 434
+    },
+    {
+      "name": "Springfield Gardens (South)-Brookville",
+      "slug": "springfield-gardens-south-brookville",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN1306"
+      ],
+      "workers": 11513,
+      "transitPct": 31.8,
+      "drovePct": 50.2,
+      "carpoolPct": 4.1,
+      "walkBikePct": 2,
+      "wfhPct": 9.2,
+      "zeroCarPct": 17.3,
+      "avgCommuteMins": 47,
+      "medianIncome": 110886,
+      "estMonthlyCost": 434
+    },
+    {
+      "name": "College Point",
+      "slug": "college-point",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0701"
+      ],
+      "workers": 13436,
+      "transitPct": 29.2,
+      "drovePct": 50.4,
+      "carpoolPct": 8.6,
+      "walkBikePct": 4,
+      "wfhPct": 6.6,
+      "zeroCarPct": 19.3,
+      "avgCommuteMins": 44,
+      "medianIncome": 93766,
+      "estMonthlyCost": 432
+    },
+    {
+      "name": "Mariner's Harbor-Arlington-Graniteville",
+      "slug": "mariner-s-harbor-arlington-graniteville",
+      "borough": "Staten Island",
+      "ntaCodes": [
+        "SI0107"
+      ],
+      "workers": 14591,
+      "transitPct": 32.1,
+      "drovePct": 50,
+      "carpoolPct": 8.5,
+      "walkBikePct": 1.5,
+      "wfhPct": 6.4,
+      "zeroCarPct": 25,
+      "avgCommuteMins": 46,
+      "medianIncome": null,
+      "estMonthlyCost": 432
+    },
+    {
+      "name": "Laurelton",
+      "slug": "laurelton",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN1305"
+      ],
+      "workers": 13107,
+      "transitPct": 28.6,
+      "drovePct": 50.3,
+      "carpoolPct": 6,
+      "walkBikePct": 2.2,
+      "wfhPct": 10.8,
+      "zeroCarPct": 14.8,
+      "avgCommuteMins": 49,
+      "medianIncome": 111425,
+      "estMonthlyCost": 430
+    },
+    {
+      "name": "Rosedale",
+      "slug": "rosedale",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN1307"
+      ],
+      "workers": 13039,
+      "transitPct": 30.7,
+      "drovePct": 49.9,
+      "carpoolPct": 4.6,
+      "walkBikePct": 1.7,
+      "wfhPct": 10.9,
+      "zeroCarPct": 15.3,
+      "avgCommuteMins": 50,
+      "medianIncome": 111831,
+      "estMonthlyCost": 430
+    },
+    {
+      "name": "New Dorp-Midland Beach",
+      "slug": "new-dorp-midland-beach",
+      "borough": "Staten Island",
+      "ntaCodes": [
+        "SI0202"
+      ],
+      "workers": 12290,
+      "transitPct": 25.3,
+      "drovePct": 50.9,
+      "carpoolPct": 10,
+      "walkBikePct": 2.4,
+      "wfhPct": 9.5,
+      "zeroCarPct": 13.4,
+      "avgCommuteMins": 44,
+      "medianIncome": 94664,
+      "estMonthlyCost": 430
+    },
+    {
+      "name": "Bay Terrace-Clearview",
+      "slug": "bay-terrace-clearview",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0703"
+      ],
+      "workers": 9427,
+      "transitPct": 18.6,
+      "drovePct": 51.9,
+      "carpoolPct": 10.2,
+      "walkBikePct": 1.2,
+      "wfhPct": 16.7,
+      "zeroCarPct": 15.1,
+      "avgCommuteMins": 40,
+      "medianIncome": 108440,
+      "estMonthlyCost": 429
+    },
+    {
+      "name": "Oakland Gardens-Hollis Hills",
+      "slug": "oakland-gardens-hollis-hills",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN1104"
+      ],
+      "workers": 12183,
+      "transitPct": 22.5,
+      "drovePct": 50.3,
+      "carpoolPct": 12.2,
+      "walkBikePct": 2.6,
+      "wfhPct": 11.4,
+      "zeroCarPct": 13.9,
+      "avgCommuteMins": 44,
+      "medianIncome": 103698,
+      "estMonthlyCost": 422
+    },
+    {
+      "name": "Baisley Park",
+      "slug": "baisley-park",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN1203"
+      ],
+      "workers": 19475,
+      "transitPct": 35.9,
+      "drovePct": 47.7,
+      "carpoolPct": 6.1,
+      "walkBikePct": 1.9,
+      "wfhPct": 5.8,
+      "zeroCarPct": 24.9,
+      "avgCommuteMins": 47,
+      "medianIncome": 81269,
+      "estMonthlyCost": 419
+    },
+    {
+      "name": "St. Albans",
+      "slug": "st-albans",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN1205"
+      ],
+      "workers": 25765,
+      "transitPct": 36.5,
+      "drovePct": 46.8,
+      "carpoolPct": 3.8,
+      "walkBikePct": 1.5,
+      "wfhPct": 9.7,
+      "zeroCarPct": 19.5,
+      "avgCommuteMins": 47,
+      "medianIncome": 102304,
+      "estMonthlyCost": 413
+    },
+    {
+      "name": "Port Richmond",
+      "slug": "port-richmond",
+      "borough": "Staten Island",
+      "ntaCodes": [
+        "SI0106"
+      ],
+      "workers": 8624,
+      "transitPct": 25.6,
+      "drovePct": 48.5,
+      "carpoolPct": 15.1,
+      "walkBikePct": 2.4,
+      "wfhPct": 5.7,
+      "zeroCarPct": 21.7,
+      "avgCommuteMins": 40,
+      "medianIncome": 79467,
+      "estMonthlyCost": 412
+    },
+    {
+      "name": "Pelham Gardens",
+      "slug": "pelham-gardens",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX1103"
+      ],
+      "workers": 12118,
+      "transitPct": 34.9,
+      "drovePct": 46.4,
+      "carpoolPct": 6.4,
+      "walkBikePct": 4.1,
+      "wfhPct": 7,
+      "zeroCarPct": 26.9,
+      "avgCommuteMins": 41,
+      "medianIncome": 89236,
+      "estMonthlyCost": 408
+    },
+    {
+      "name": "Douglaston-Little Neck",
+      "slug": "douglaston-little-neck",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN1103"
+      ],
+      "workers": 12062,
+      "transitPct": 16.1,
+      "drovePct": 49.6,
+      "carpoolPct": 13.1,
+      "walkBikePct": 1.8,
+      "wfhPct": 18.5,
+      "zeroCarPct": 10.2,
+      "avgCommuteMins": 39,
+      "medianIncome": 114648,
+      "estMonthlyCost": 408
+    },
+    {
+      "name": "West New Brighton-Silver Lake-Grymes Hill",
+      "slug": "west-new-brighton-silver-lake-grymes-hill",
+      "borough": "Staten Island",
+      "ntaCodes": [
+        "SI0104"
+      ],
+      "workers": 16064,
+      "transitPct": 24.3,
+      "drovePct": 48,
+      "carpoolPct": 8.4,
+      "walkBikePct": 6.2,
+      "wfhPct": 10.7,
+      "zeroCarPct": 22.5,
+      "avgCommuteMins": 41,
+      "medianIncome": 107487,
+      "estMonthlyCost": 406
+    },
+    {
+      "name": "Queens Village",
+      "slug": "queens-village",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN1303"
+      ],
+      "workers": 26380,
+      "transitPct": 30.8,
+      "drovePct": 46.2,
+      "carpoolPct": 7.1,
+      "walkBikePct": 2.6,
+      "wfhPct": 11.4,
+      "zeroCarPct": 19.8,
+      "avgCommuteMins": 44,
+      "medianIncome": 97495,
+      "estMonthlyCost": 401
+    },
+    {
+      "name": "Bayside",
+      "slug": "bayside",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN1102"
+      ],
+      "workers": 16659,
+      "transitPct": 22.9,
+      "drovePct": 47.2,
+      "carpoolPct": 10.5,
+      "walkBikePct": 4.3,
+      "wfhPct": 14.6,
+      "zeroCarPct": 10.7,
+      "avgCommuteMins": 41,
+      "medianIncome": 111270,
+      "estMonthlyCost": 398
+    },
+    {
+      "name": "Springfield Gardens (North)-Rochdale Village",
+      "slug": "springfield-gardens-north-rochdale-village",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN1204"
+      ],
+      "workers": 14851,
+      "transitPct": 41.2,
+      "drovePct": 43.4,
+      "carpoolPct": 6.4,
+      "walkBikePct": 1.9,
+      "wfhPct": 4.9,
+      "zeroCarPct": 29.2,
+      "avgCommuteMins": 48,
+      "medianIncome": 78603,
+      "estMonthlyCost": 393
+    },
+    {
+      "name": "Soundview-Clason Point",
+      "slug": "soundview-clason-point",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX0902"
+      ],
+      "workers": 13861,
+      "transitPct": 39.5,
+      "drovePct": 43.4,
+      "carpoolPct": 4,
+      "walkBikePct": 6.3,
+      "wfhPct": 4.3,
+      "zeroCarPct": 46.5,
+      "avgCommuteMins": 43,
+      "medianIncome": 55886,
+      "estMonthlyCost": 391
+    },
+    {
+      "name": "South Ozone Park",
+      "slug": "south-ozone-park",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN1001"
+      ],
+      "workers": 37566,
+      "transitPct": 36.7,
+      "drovePct": 43,
+      "carpoolPct": 7.5,
+      "walkBikePct": 3.8,
+      "wfhPct": 7.4,
+      "zeroCarPct": 21.9,
+      "avgCommuteMins": 46,
+      "medianIncome": 100685,
+      "estMonthlyCost": 384
+    },
+    {
+      "name": "Auburndale",
+      "slug": "auburndale",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN1101"
+      ],
+      "workers": 16378,
+      "transitPct": 27.1,
+      "drovePct": 44.7,
+      "carpoolPct": 10.7,
+      "walkBikePct": 4.1,
+      "wfhPct": 11.8,
+      "zeroCarPct": 12.5,
+      "avgCommuteMins": 42,
+      "medianIncome": 92391,
+      "estMonthlyCost": 384
+    },
+    {
+      "name": "Rosebank-Shore Acres-Park Hill",
+      "slug": "rosebank-shore-acres-park-hill",
+      "borough": "Staten Island",
+      "ntaCodes": [
+        "SI0103"
+      ],
+      "workers": 10225,
+      "transitPct": 38.2,
+      "drovePct": 42.7,
+      "carpoolPct": 8.4,
+      "walkBikePct": 3.6,
+      "wfhPct": 3.8,
+      "zeroCarPct": 25.4,
+      "avgCommuteMins": 46,
+      "medianIncome": 73690,
+      "estMonthlyCost": 383
+    },
+    {
+      "name": "Middle Village",
+      "slug": "middle-village",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0504"
+      ],
+      "workers": 16633,
+      "transitPct": 35.2,
+      "drovePct": 42.1,
+      "carpoolPct": 6.7,
+      "walkBikePct": 3.8,
+      "wfhPct": 10.4,
+      "zeroCarPct": 24.2,
+      "avgCommuteMins": 45,
+      "medianIncome": 94387,
+      "estMonthlyCost": 375
+    },
+    {
+      "name": "Grasmere-Arrochar-South Beach-Dongan Hills",
+      "slug": "grasmere-arrochar-south-beach-dongan-hills",
+      "borough": "Staten Island",
+      "ntaCodes": [
+        "SI0201"
+      ],
+      "workers": 17256,
+      "transitPct": 31.9,
+      "drovePct": 42.3,
+      "carpoolPct": 11.4,
+      "walkBikePct": 5.2,
+      "wfhPct": 8.7,
+      "zeroCarPct": 18.3,
+      "avgCommuteMins": 44,
+      "medianIncome": 80841,
+      "estMonthlyCost": 372
+    },
+    {
+      "name": "Hollis",
+      "slug": "hollis",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN1206"
+      ],
+      "workers": 10679,
+      "transitPct": 42.5,
+      "drovePct": 40.3,
+      "carpoolPct": 6.4,
+      "walkBikePct": 3.3,
+      "wfhPct": 5.1,
+      "zeroCarPct": 26.4,
+      "avgCommuteMins": 47,
+      "medianIncome": 84643,
+      "estMonthlyCost": 370
+    },
+    {
+      "name": "Far Rockaway-Bayswater",
+      "slug": "far-rockaway-bayswater",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN1401"
+      ],
+      "workers": 23502,
+      "transitPct": 30.1,
+      "drovePct": 42.1,
+      "carpoolPct": 7.1,
+      "walkBikePct": 10.3,
+      "wfhPct": 7.6,
+      "zeroCarPct": 41.1,
+      "avgCommuteMins": 44,
+      "medianIncome": 61655,
+      "estMonthlyCost": 368
+    },
+    {
+      "name": "Rockaway Beach-Arverne-Edgemere",
+      "slug": "rockaway-beach-arverne-edgemere",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN1402"
+      ],
+      "workers": 15489,
+      "transitPct": 41.2,
+      "drovePct": 40,
+      "carpoolPct": 3.9,
+      "walkBikePct": 5.3,
+      "wfhPct": 8.7,
+      "zeroCarPct": 43.7,
+      "avgCommuteMins": 53,
+      "medianIncome": 61720,
+      "estMonthlyCost": 366
+    },
+    {
+      "name": "Pelham Bay-Country Club-City Island",
+      "slug": "pelham-bay-country-club-city-island",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX1003"
+      ],
+      "workers": 12451,
+      "transitPct": 33.8,
+      "drovePct": 41,
+      "carpoolPct": 8.2,
+      "walkBikePct": 4.8,
+      "wfhPct": 9.5,
+      "zeroCarPct": 30.3,
+      "avgCommuteMins": 43,
+      "medianIncome": 80904,
+      "estMonthlyCost": 364
+    },
+    {
+      "name": "Marine Park-Mill Basin-Bergen Beach",
+      "slug": "marine-park-mill-basin-bergen-beach",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1802"
+      ],
+      "workers": 19619,
+      "transitPct": 28.5,
+      "drovePct": 41.3,
+      "carpoolPct": 12.6,
+      "walkBikePct": 4.1,
+      "wfhPct": 12.3,
+      "zeroCarPct": 17.6,
+      "avgCommuteMins": 45,
+      "medianIncome": 110184,
+      "estMonthlyCost": 360
+    },
+    {
+      "name": "Kew Gardens Hills",
+      "slug": "kew-gardens-hills",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0801"
+      ],
+      "workers": 16136,
+      "transitPct": 33,
+      "drovePct": 40.4,
+      "carpoolPct": 8.2,
+      "walkBikePct": 5.1,
+      "wfhPct": 11.6,
+      "zeroCarPct": 26.4,
+      "avgCommuteMins": 43,
+      "medianIncome": 85786,
+      "estMonthlyCost": 359
+    },
+    {
+      "name": "Wakefield-Woodlawn",
+      "slug": "wakefield-woodlawn",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX1203"
+      ],
+      "workers": 21554,
+      "transitPct": 43.1,
+      "drovePct": 38.3,
+      "carpoolPct": 5.8,
+      "walkBikePct": 2.9,
+      "wfhPct": 6.8,
+      "zeroCarPct": 37.7,
+      "avgCommuteMins": 43,
+      "medianIncome": 83863,
+      "estMonthlyCost": 356
+    },
+    {
+      "name": "South Jamaica",
+      "slug": "south-jamaica",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN1202"
+      ],
+      "workers": 17909,
+      "transitPct": 45.6,
+      "drovePct": 37.9,
+      "carpoolPct": 5.9,
+      "walkBikePct": 1.6,
+      "wfhPct": 6.8,
+      "zeroCarPct": 30.4,
+      "avgCommuteMins": 46,
+      "medianIncome": 76470,
+      "estMonthlyCost": 356
+    },
+    {
+      "name": "Jamaica Estates-Holliswood",
+      "slug": "jamaica-estates-holliswood",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0804"
+      ],
+      "workers": 11420,
+      "transitPct": 37.2,
+      "drovePct": 38.4,
+      "carpoolPct": 5.8,
+      "walkBikePct": 5.4,
+      "wfhPct": 11.7,
+      "zeroCarPct": 26.7,
+      "avgCommuteMins": 42,
+      "medianIncome": 88780,
+      "estMonthlyCost": 349
+    },
+    {
+      "name": "Maspeth",
+      "slug": "maspeth",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0501"
+      ],
+      "workers": 19436,
+      "transitPct": 36.7,
+      "drovePct": 38.4,
+      "carpoolPct": 10,
+      "walkBikePct": 5.4,
+      "wfhPct": 6.7,
+      "zeroCarPct": 25.3,
+      "avgCommuteMins": 41,
+      "medianIncome": 85500,
+      "estMonthlyCost": 348
+    },
+    {
+      "name": "Glendale",
+      "slug": "glendale",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0503"
+      ],
+      "workers": 17332,
+      "transitPct": 36.5,
+      "drovePct": 38.3,
+      "carpoolPct": 6,
+      "walkBikePct": 7.2,
+      "wfhPct": 10.4,
+      "zeroCarPct": 25.9,
+      "avgCommuteMins": 42,
+      "medianIncome": 95812,
+      "estMonthlyCost": 347
+    },
+    {
+      "name": "Pomonok-Electchester-Hillcrest",
+      "slug": "pomonok-electchester-hillcrest",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0802"
+      ],
+      "workers": 14387,
+      "transitPct": 34,
+      "drovePct": 38.5,
+      "carpoolPct": 8.7,
+      "walkBikePct": 6.6,
+      "wfhPct": 8.6,
+      "zeroCarPct": 30.7,
+      "avgCommuteMins": 44,
+      "medianIncome": 77555,
+      "estMonthlyCost": 345
+    },
+    {
+      "name": "Fresh Meadows-Utopia",
+      "slug": "fresh-meadows-utopia",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0803"
+      ],
+      "workers": 9846,
+      "transitPct": 20.5,
+      "drovePct": 40.7,
+      "carpoolPct": 11.5,
+      "walkBikePct": 4.8,
+      "wfhPct": 19.5,
+      "zeroCarPct": 14.2,
+      "avgCommuteMins": 40,
+      "medianIncome": 97303,
+      "estMonthlyCost": 345
+    },
+    {
+      "name": "Queensboro Hill",
+      "slug": "queensboro-hill",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0706"
+      ],
+      "workers": 8446,
+      "transitPct": 31.8,
+      "drovePct": 38.5,
+      "carpoolPct": 11.4,
+      "walkBikePct": 7.3,
+      "wfhPct": 9.9,
+      "zeroCarPct": 20.8,
+      "avgCommuteMins": 41,
+      "medianIncome": 73025,
+      "estMonthlyCost": 342
+    },
+    {
+      "name": "Eastchester-Edenwald-Baychester",
+      "slug": "eastchester-edenwald-baychester",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX1202"
+      ],
+      "workers": 21882,
+      "transitPct": 39.5,
+      "drovePct": 36.8,
+      "carpoolPct": 8.6,
+      "walkBikePct": 5.6,
+      "wfhPct": 6.1,
+      "zeroCarPct": 40.9,
+      "avgCommuteMins": 44,
+      "medianIncome": 70143,
+      "estMonthlyCost": 339
+    },
+    {
+      "name": "Canarsie",
+      "slug": "canarsie",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1803"
+      ],
+      "workers": 36318,
+      "transitPct": 48.3,
+      "drovePct": 35,
+      "carpoolPct": 5,
+      "walkBikePct": 2.6,
+      "wfhPct": 7.2,
+      "zeroCarPct": 34.8,
+      "avgCommuteMins": 51,
+      "medianIncome": 83564,
+      "estMonthlyCost": 337
+    },
+    {
+      "name": "Richmond Hill",
+      "slug": "richmond-hill",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0902"
+      ],
+      "workers": 15872,
+      "transitPct": 44.6,
+      "drovePct": 35.7,
+      "carpoolPct": 5.2,
+      "walkBikePct": 5,
+      "wfhPct": 8.5,
+      "zeroCarPct": 33.4,
+      "avgCommuteMins": 46,
+      "medianIncome": 86877,
+      "estMonthlyCost": 337
+    },
+    {
+      "name": "Flatlands",
+      "slug": "flatlands",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1801"
+      ],
+      "workers": 29372,
+      "transitPct": 46.1,
+      "drovePct": 35.2,
+      "carpoolPct": 5.1,
+      "walkBikePct": 4.6,
+      "wfhPct": 7.6,
+      "zeroCarPct": 35.1,
+      "avgCommuteMins": 47,
+      "medianIncome": 84894,
+      "estMonthlyCost": 335
+    },
+    {
+      "name": "Ozone Park",
+      "slug": "ozone-park",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN1002"
+      ],
+      "workers": 9997,
+      "transitPct": 43.5,
+      "drovePct": 35.1,
+      "carpoolPct": 6.5,
+      "walkBikePct": 4.8,
+      "wfhPct": 9.5,
+      "zeroCarPct": 26.3,
+      "avgCommuteMins": 45,
+      "medianIncome": 85568,
+      "estMonthlyCost": 331
+    },
+    {
+      "name": "Tompkinsville-Stapleton-Clifton-Fox Hills",
+      "slug": "tompkinsville-stapleton-clifton-fox-hills",
+      "borough": "Staten Island",
+      "ntaCodes": [
+        "SI0102"
+      ],
+      "workers": 7301,
+      "transitPct": 41.3,
+      "drovePct": 35.4,
+      "carpoolPct": 9.4,
+      "walkBikePct": 6.3,
+      "wfhPct": 6.3,
+      "zeroCarPct": 40.3,
+      "avgCommuteMins": 39,
+      "medianIncome": 54151,
+      "estMonthlyCost": 331
+    },
+    {
+      "name": "Murray Hill-Broadway Flushing",
+      "slug": "murray-hill-broadway-flushing",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0704"
+      ],
+      "workers": 24234,
+      "transitPct": 30.1,
+      "drovePct": 37.2,
+      "carpoolPct": 8.7,
+      "walkBikePct": 12.7,
+      "wfhPct": 10.4,
+      "zeroCarPct": 28,
+      "avgCommuteMins": 40,
+      "medianIncome": 72910,
+      "estMonthlyCost": 330
+    },
+    {
+      "name": "East Elmhurst",
+      "slug": "east-elmhurst",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0302"
+      ],
+      "workers": 12066,
+      "transitPct": 48.3,
+      "drovePct": 33.7,
+      "carpoolPct": 3.8,
+      "walkBikePct": 5.2,
+      "wfhPct": 7.8,
+      "zeroCarPct": 27,
+      "avgCommuteMins": 44,
+      "medianIncome": 79969,
+      "estMonthlyCost": 327
+    },
+    {
+      "name": "St. George-New Brighton",
+      "slug": "st-george-new-brighton",
+      "borough": "Staten Island",
+      "ntaCodes": [
+        "SI0101"
+      ],
+      "workers": 8357,
+      "transitPct": 39.2,
+      "drovePct": 34.7,
+      "carpoolPct": 7.5,
+      "walkBikePct": 5.2,
+      "wfhPct": 10.8,
+      "zeroCarPct": 34.3,
+      "avgCommuteMins": 49,
+      "medianIncome": 70492,
+      "estMonthlyCost": 322
+    },
+    {
+      "name": "Morris Park",
+      "slug": "morris-park",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX1102"
+      ],
+      "workers": 10612,
+      "transitPct": 34.5,
+      "drovePct": 35,
+      "carpoolPct": 7.3,
+      "walkBikePct": 12.2,
+      "wfhPct": 8.8,
+      "zeroCarPct": 33.4,
+      "avgCommuteMins": 39,
+      "medianIncome": 80603,
+      "estMonthlyCost": 319
+    },
+    {
+      "name": "South Richmond Hill",
+      "slug": "south-richmond-hill",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0903"
+      ],
+      "workers": 11086,
+      "transitPct": 42.6,
+      "drovePct": 33.2,
+      "carpoolPct": 7.4,
+      "walkBikePct": 9.5,
+      "wfhPct": 5.4,
+      "zeroCarPct": 26.7,
+      "avgCommuteMins": 46,
+      "medianIncome": 85751,
+      "estMonthlyCost": 315
+    },
+    {
+      "name": "Ozone Park (North)",
+      "slug": "ozone-park-north",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0904"
+      ],
+      "workers": 12243,
+      "transitPct": 41.1,
+      "drovePct": 32.7,
+      "carpoolPct": 6.8,
+      "walkBikePct": 6.7,
+      "wfhPct": 10.9,
+      "zeroCarPct": 26.7,
+      "avgCommuteMins": 46,
+      "medianIncome": 87239,
+      "estMonthlyCost": 309
+    },
+    {
+      "name": "Sheepshead Bay-Manhattan Beach-Gerritsen Beach",
+      "slug": "sheepshead-bay-manhattan-beach-gerritsen-beach",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1503"
+      ],
+      "workers": 27711,
+      "transitPct": 38.2,
+      "drovePct": 33,
+      "carpoolPct": 4.9,
+      "walkBikePct": 7.8,
+      "wfhPct": 14.2,
+      "zeroCarPct": 38.7,
+      "avgCommuteMins": 45,
+      "medianIncome": 77439,
+      "estMonthlyCost": 308
+    },
+    {
+      "name": "Williamsbridge-Olinville",
+      "slug": "williamsbridge-olinville",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX1201"
+      ],
+      "workers": 23529,
+      "transitPct": 50.2,
+      "drovePct": 30.9,
+      "carpoolPct": 5.6,
+      "walkBikePct": 3.9,
+      "wfhPct": 7.2,
+      "zeroCarPct": 48.9,
+      "avgCommuteMins": 44,
+      "medianIncome": 58710,
+      "estMonthlyCost": 307
+    },
+    {
+      "name": "Castle Hill-Unionport",
+      "slug": "castle-hill-unionport",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX0903"
+      ],
+      "workers": 14120,
+      "transitPct": 45.9,
+      "drovePct": 31.5,
+      "carpoolPct": 5,
+      "walkBikePct": 8.5,
+      "wfhPct": 7.8,
+      "zeroCarPct": 46.8,
+      "avgCommuteMins": 44,
+      "medianIncome": 53612,
+      "estMonthlyCost": 306
+    },
+    {
+      "name": "Jamaica Hills-Briarwood",
+      "slug": "jamaica-hills-briarwood",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0805"
+      ],
+      "workers": 17175,
+      "transitPct": 42.1,
+      "drovePct": 31.8,
+      "carpoolPct": 3.5,
+      "walkBikePct": 7.9,
+      "wfhPct": 14.1,
+      "zeroCarPct": 37.3,
+      "avgCommuteMins": 43,
+      "medianIncome": 88481,
+      "estMonthlyCost": 304
+    },
+    {
+      "name": "East Flushing",
+      "slug": "east-flushing",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0705"
+      ],
+      "workers": 12866,
+      "transitPct": 33.6,
+      "drovePct": 31.9,
+      "carpoolPct": 11.8,
+      "walkBikePct": 9.4,
+      "wfhPct": 11.4,
+      "zeroCarPct": 36.9,
+      "avgCommuteMins": 44,
+      "medianIncome": 59393,
+      "estMonthlyCost": 293
+    },
+    {
+      "name": "Bath Beach",
+      "slug": "bath-beach",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1102"
+      ],
+      "workers": 13003,
+      "transitPct": 44,
+      "drovePct": 29.5,
+      "carpoolPct": 5.4,
+      "walkBikePct": 5.9,
+      "wfhPct": 13.6,
+      "zeroCarPct": 36.6,
+      "avgCommuteMins": 47,
+      "medianIncome": 78287,
+      "estMonthlyCost": 288
+    },
+    {
+      "name": "Cypress Hills",
+      "slug": "cypress-hills",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK0501"
+      ],
+      "workers": 17835,
+      "transitPct": 50.8,
+      "drovePct": 27.9,
+      "carpoolPct": 3.4,
+      "walkBikePct": 5.3,
+      "wfhPct": 10.6,
+      "zeroCarPct": 54,
+      "avgCommuteMins": 45,
+      "medianIncome": 68133,
+      "estMonthlyCost": 285
+    },
+    {
+      "name": "East New York-New Lots",
+      "slug": "east-new-york-new-lots",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK0503"
+      ],
+      "workers": 20366,
+      "transitPct": 54,
+      "drovePct": 27.2,
+      "carpoolPct": 3,
+      "walkBikePct": 2.9,
+      "wfhPct": 9.4,
+      "zeroCarPct": 60.7,
+      "avgCommuteMins": 48,
+      "medianIncome": 58540,
+      "estMonthlyCost": 283
+    },
+    {
+      "name": "East New York-City Line",
+      "slug": "east-new-york-city-line",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK0505"
+      ],
+      "workers": 18689,
+      "transitPct": 54.9,
+      "drovePct": 26.9,
+      "carpoolPct": 3.5,
+      "walkBikePct": 6,
+      "wfhPct": 5.7,
+      "zeroCarPct": 59.9,
+      "avgCommuteMins": 45,
+      "medianIncome": 53082,
+      "estMonthlyCost": 282
+    },
+    {
+      "name": "Riverdale-Spuyten Duyvil",
+      "slug": "riverdale-spuyten-duyvil",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX0803"
+      ],
+      "workers": 19636,
+      "transitPct": 32.5,
+      "drovePct": 29.9,
+      "carpoolPct": 6.1,
+      "walkBikePct": 7.8,
+      "wfhPct": 21,
+      "zeroCarPct": 29.7,
+      "avgCommuteMins": 44,
+      "medianIncome": 112299,
+      "estMonthlyCost": 276
+    },
+    {
+      "name": "Gravesend (South)",
+      "slug": "gravesend-south",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1301"
+      ],
+      "workers": 10336,
+      "transitPct": 44.3,
+      "drovePct": 27.7,
+      "carpoolPct": 4.6,
+      "walkBikePct": 10.3,
+      "wfhPct": 9.8,
+      "zeroCarPct": 44.3,
+      "avgCommuteMins": 45,
+      "medianIncome": 63482,
+      "estMonthlyCost": 275
+    },
+    {
+      "name": "Co-op City",
+      "slug": "co-op-city",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX1004"
+      ],
+      "workers": 15792,
+      "transitPct": 49.5,
+      "drovePct": 26.4,
+      "carpoolPct": 1,
+      "walkBikePct": 7.7,
+      "wfhPct": 14.5,
+      "zeroCarPct": 44.5,
+      "avgCommuteMins": 51,
+      "medianIncome": 64555,
+      "estMonthlyCost": 271
+    },
+    {
+      "name": "Woodhaven",
+      "slug": "woodhaven",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0905"
+      ],
+      "workers": 18968,
+      "transitPct": 54.8,
+      "drovePct": 25.5,
+      "carpoolPct": 7.2,
+      "walkBikePct": 4.5,
+      "wfhPct": 7.3,
+      "zeroCarPct": 30.5,
+      "avgCommuteMins": 48,
+      "medianIncome": 90827,
+      "estMonthlyCost": 271
+    },
+    {
+      "name": "East Flatbush-Farragut",
+      "slug": "east-flatbush-farragut",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1702"
+      ],
+      "workers": 15051,
+      "transitPct": 58.9,
+      "drovePct": 24.6,
+      "carpoolPct": 3.8,
+      "walkBikePct": 3.7,
+      "wfhPct": 7.1,
+      "zeroCarPct": 44.7,
+      "avgCommuteMins": 47,
+      "medianIncome": 76531,
+      "estMonthlyCost": 270
+    },
+    {
+      "name": "East New York (North)",
+      "slug": "east-new-york-north",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK0502"
+      ],
+      "workers": 16285,
+      "transitPct": 53.4,
+      "drovePct": 25.4,
+      "carpoolPct": 4,
+      "walkBikePct": 5.3,
+      "wfhPct": 9.7,
+      "zeroCarPct": 55.7,
+      "avgCommuteMins": 44,
+      "medianIncome": 58799,
+      "estMonthlyCost": 269
+    },
+    {
+      "name": "Pelham Parkway-Van Nest",
+      "slug": "pelham-parkway-van-nest",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX1101"
+      ],
+      "workers": 13390,
+      "transitPct": 51.1,
+      "drovePct": 25.9,
+      "carpoolPct": 3.6,
+      "walkBikePct": 8,
+      "wfhPct": 8.9,
+      "zeroCarPct": 51.4,
+      "avgCommuteMins": 43,
+      "medianIncome": 70044,
+      "estMonthlyCost": 269
+    },
+    {
+      "name": "East Flatbush-Rugby",
+      "slug": "east-flatbush-rugby",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1703"
+      ],
+      "workers": 17823,
+      "transitPct": 54.8,
+      "drovePct": 25,
+      "carpoolPct": 3.3,
+      "walkBikePct": 6.1,
+      "wfhPct": 8.2,
+      "zeroCarPct": 48.3,
+      "avgCommuteMins": 47,
+      "medianIncome": 69843,
+      "estMonthlyCost": 267
+    },
+    {
+      "name": "Spring Creek-Starrett City",
+      "slug": "spring-creek-starrett-city",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK0504"
+      ],
+      "workers": 5679,
+      "transitPct": 49.9,
+      "drovePct": 25.4,
+      "carpoolPct": 1.8,
+      "walkBikePct": 6.9,
+      "wfhPct": 12.5,
+      "zeroCarPct": 70.9,
+      "avgCommuteMins": 50,
+      "medianIncome": 36304,
+      "estMonthlyCost": 264
+    },
+    {
+      "name": "Gravesend (East)-Homecrest",
+      "slug": "gravesend-east-homecrest",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1501"
+      ],
+      "workers": 20616,
+      "transitPct": 38.1,
+      "drovePct": 26.7,
+      "carpoolPct": 7.9,
+      "walkBikePct": 12.5,
+      "wfhPct": 13.1,
+      "zeroCarPct": 38.3,
+      "avgCommuteMins": 44,
+      "medianIncome": 73379,
+      "estMonthlyCost": 259
+    },
+    {
+      "name": "Kew Gardens",
+      "slug": "kew-gardens",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0901"
+      ],
+      "workers": 12472,
+      "transitPct": 43.9,
+      "drovePct": 25.8,
+      "carpoolPct": 4.6,
+      "walkBikePct": 6.6,
+      "wfhPct": 14.4,
+      "zeroCarPct": 42.7,
+      "avgCommuteMins": 41,
+      "medianIncome": 91956,
+      "estMonthlyCost": 259
+    },
+    {
+      "name": "Mapleton-Midwood (West)",
+      "slug": "mapleton-midwood-west",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1204"
+      ],
+      "workers": 13976,
+      "transitPct": 35.5,
+      "drovePct": 27,
+      "carpoolPct": 6.7,
+      "walkBikePct": 17.8,
+      "wfhPct": 11.2,
+      "zeroCarPct": 38.1,
+      "avgCommuteMins": 38,
+      "medianIncome": 74977,
+      "estMonthlyCost": 257
+    },
+    {
+      "name": "Madison",
+      "slug": "madison",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1502"
+      ],
+      "workers": 17003,
+      "transitPct": 41.6,
+      "drovePct": 25.8,
+      "carpoolPct": 6.5,
+      "walkBikePct": 9.7,
+      "wfhPct": 13.8,
+      "zeroCarPct": 40.2,
+      "avgCommuteMins": 42,
+      "medianIncome": 76918,
+      "estMonthlyCost": 256
+    },
+    {
+      "name": "Allerton",
+      "slug": "allerton",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX1104"
+      ],
+      "workers": 13004,
+      "transitPct": 60,
+      "drovePct": 22.5,
+      "carpoolPct": 4.7,
+      "walkBikePct": 6.8,
+      "wfhPct": 4.9,
+      "zeroCarPct": 61,
+      "avgCommuteMins": 45,
+      "medianIncome": 44499,
+      "estMonthlyCost": 255
+    },
+    {
+      "name": "Morrisania",
+      "slug": "morrisania",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX0301"
+      ],
+      "workers": 11940,
+      "transitPct": 49,
+      "drovePct": 24.3,
+      "carpoolPct": 1.8,
+      "walkBikePct": 13.1,
+      "wfhPct": 7.3,
+      "zeroCarPct": 76.8,
+      "avgCommuteMins": 42,
+      "medianIncome": 32852,
+      "estMonthlyCost": 254
+    },
+    {
+      "name": "Tremont",
+      "slug": "tremont",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX0602"
+      ],
+      "workers": 11580,
+      "transitPct": 57.2,
+      "drovePct": 22.5,
+      "carpoolPct": 3.6,
+      "walkBikePct": 6.3,
+      "wfhPct": 7.2,
+      "zeroCarPct": 70.5,
+      "avgCommuteMins": 44,
+      "medianIncome": 37352,
+      "estMonthlyCost": 251
+    },
+    {
+      "name": "East Flatbush-Remsen Village",
+      "slug": "east-flatbush-remsen-village",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1704"
+      ],
+      "workers": 15280,
+      "transitPct": 65,
+      "drovePct": 21,
+      "carpoolPct": 5.6,
+      "walkBikePct": 3.3,
+      "wfhPct": 2.3,
+      "zeroCarPct": 62.6,
+      "avgCommuteMins": 49,
+      "medianIncome": 58515,
+      "estMonthlyCost": 250
+    },
+    {
+      "name": "Soundview-Bruckner-Bronx River",
+      "slug": "soundview-bruckner-bronx-river",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX0901"
+      ],
+      "workers": 24721,
+      "transitPct": 60.1,
+      "drovePct": 21.8,
+      "carpoolPct": 3.6,
+      "walkBikePct": 6.4,
+      "wfhPct": 7,
+      "zeroCarPct": 62.6,
+      "avgCommuteMins": 46,
+      "medianIncome": 45333,
+      "estMonthlyCost": 249
+    },
+    {
+      "name": "Westchester Square",
+      "slug": "westchester-square",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX1001"
+      ],
+      "workers": 6501,
+      "transitPct": 57,
+      "drovePct": 22.2,
+      "carpoolPct": 2.8,
+      "walkBikePct": 11.3,
+      "wfhPct": 3.9,
+      "zeroCarPct": 52.8,
+      "avgCommuteMins": 45,
+      "medianIncome": 53874,
+      "estMonthlyCost": 248
+    },
+    {
+      "name": "Coney Island-Sea Gate",
+      "slug": "coney-island-sea-gate",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1302"
+      ],
+      "workers": 16091,
+      "transitPct": 45.4,
+      "drovePct": 24,
+      "carpoolPct": 4.6,
+      "walkBikePct": 10.7,
+      "wfhPct": 13.4,
+      "zeroCarPct": 57.6,
+      "avgCommuteMins": 47,
+      "medianIncome": 44193,
+      "estMonthlyCost": 247
+    },
+    {
+      "name": "Midwood",
+      "slug": "midwood",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1403"
+      ],
+      "workers": 20728,
+      "transitPct": 38.4,
+      "drovePct": 25,
+      "carpoolPct": 9.7,
+      "walkBikePct": 10.8,
+      "wfhPct": 13.5,
+      "zeroCarPct": 44,
+      "avgCommuteMins": 41,
+      "medianIncome": 70963,
+      "estMonthlyCost": 246
+    },
+    {
+      "name": "Forest Hills",
+      "slug": "forest-hills",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0602"
+      ],
+      "workers": 46528,
+      "transitPct": 46,
+      "drovePct": 23.8,
+      "carpoolPct": 3.3,
+      "walkBikePct": 6.3,
+      "wfhPct": 18.9,
+      "zeroCarPct": 43.4,
+      "avgCommuteMins": 45,
+      "medianIncome": 104316,
+      "estMonthlyCost": 246
+    },
+    {
+      "name": "Jamaica",
+      "slug": "jamaica",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN1201"
+      ],
+      "workers": 25194,
+      "transitPct": 56.8,
+      "drovePct": 21.9,
+      "carpoolPct": 3.8,
+      "walkBikePct": 7.5,
+      "wfhPct": 7.4,
+      "zeroCarPct": 54.5,
+      "avgCommuteMins": 47,
+      "medianIncome": 61851,
+      "estMonthlyCost": 246
+    },
+    {
+      "name": "Ocean Hill",
+      "slug": "ocean-hill",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1601"
+      ],
+      "workers": 17390,
+      "transitPct": 60.1,
+      "drovePct": 21.1,
+      "carpoolPct": 2,
+      "walkBikePct": 6.3,
+      "wfhPct": 8.8,
+      "zeroCarPct": 63.3,
+      "avgCommuteMins": 40,
+      "medianIncome": 59412,
+      "estMonthlyCost": 244
+    },
+    {
+      "name": "Claremont Village-Claremont (East)",
+      "slug": "claremont-village-claremont-east",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX0302"
+      ],
+      "workers": 6968,
+      "transitPct": 55.3,
+      "drovePct": 21.7,
+      "carpoolPct": 1.8,
+      "walkBikePct": 13.7,
+      "wfhPct": 3.3,
+      "zeroCarPct": 76.1,
+      "avgCommuteMins": 42,
+      "medianIncome": 29293,
+      "estMonthlyCost": 242
+    },
+    {
+      "name": "Crotona Park East",
+      "slug": "crotona-park-east",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX0303"
+      ],
+      "workers": 10796,
+      "transitPct": 58.8,
+      "drovePct": 21,
+      "carpoolPct": 5.9,
+      "walkBikePct": 7.6,
+      "wfhPct": 5.9,
+      "zeroCarPct": 68,
+      "avgCommuteMins": 44,
+      "medianIncome": 40184,
+      "estMonthlyCost": 241
+    },
+    {
+      "name": "Gravesend (West)",
+      "slug": "gravesend-west",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1103"
+      ],
+      "workers": 23551,
+      "transitPct": 46.9,
+      "drovePct": 22.7,
+      "carpoolPct": 6.4,
+      "walkBikePct": 9.5,
+      "wfhPct": 13.6,
+      "zeroCarPct": 41.2,
+      "avgCommuteMins": 45,
+      "medianIncome": 74684,
+      "estMonthlyCost": 239
+    },
+    {
+      "name": "Bay Ridge",
+      "slug": "bay-ridge",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1001"
+      ],
+      "workers": 39878,
+      "transitPct": 43.5,
+      "drovePct": 23.1,
+      "carpoolPct": 3.7,
+      "walkBikePct": 7.7,
+      "wfhPct": 20.2,
+      "zeroCarPct": 46.3,
+      "avgCommuteMins": 44,
+      "medianIncome": 94438,
+      "estMonthlyCost": 238
+    },
+    {
+      "name": "Fort Hamilton",
+      "slug": "fort-hamilton",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1061"
+      ],
+      "workers": 443,
+      "transitPct": 8.1,
+      "drovePct": 29.1,
+      "carpoolPct": 2.9,
+      "walkBikePct": 11.5,
+      "wfhPct": 48.3,
+      "zeroCarPct": 0,
+      "avgCommuteMins": 30,
+      "medianIncome": null,
+      "estMonthlyCost": 238
+    },
+    {
+      "name": "Rego Park",
+      "slug": "rego-park",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0601"
+      ],
+      "workers": 14115,
+      "transitPct": 46.3,
+      "drovePct": 22.5,
+      "carpoolPct": 3.8,
+      "walkBikePct": 6.2,
+      "wfhPct": 18,
+      "zeroCarPct": 47.5,
+      "avgCommuteMins": 44,
+      "medianIncome": 83091,
+      "estMonthlyCost": 237
+    },
+    {
+      "name": "Kingsbridge-Marble Hill",
+      "slug": "kingsbridge-marble-hill",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX0802"
+      ],
+      "workers": 9312,
+      "transitPct": 59.3,
+      "drovePct": 20.1,
+      "carpoolPct": 2,
+      "walkBikePct": 8.6,
+      "wfhPct": 7.9,
+      "zeroCarPct": 61.7,
+      "avgCommuteMins": 43,
+      "medianIncome": 51650,
+      "estMonthlyCost": 235
+    },
+    {
+      "name": "West Farms",
+      "slug": "west-farms",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX0601"
+      ],
+      "workers": 5778,
+      "transitPct": 60.9,
+      "drovePct": 19.6,
+      "carpoolPct": 4.5,
+      "walkBikePct": 6.2,
+      "wfhPct": 7.7,
+      "zeroCarPct": 77.2,
+      "avgCommuteMins": 48,
+      "medianIncome": 28711,
+      "estMonthlyCost": 233
+    },
+    {
+      "name": "Bensonhurst",
+      "slug": "bensonhurst",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1101"
+      ],
+      "workers": 41699,
+      "transitPct": 48.3,
+      "drovePct": 21.3,
+      "carpoolPct": 5.9,
+      "walkBikePct": 11.8,
+      "wfhPct": 11.3,
+      "zeroCarPct": 45.2,
+      "avgCommuteMins": 44,
+      "medianIncome": 68505,
+      "estMonthlyCost": 230
+    },
+    {
+      "name": "Dyker Heights",
+      "slug": "dyker-heights",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1002"
+      ],
+      "workers": 16987,
+      "transitPct": 38,
+      "drovePct": 22.9,
+      "carpoolPct": 6.6,
+      "walkBikePct": 13.9,
+      "wfhPct": 17.1,
+      "zeroCarPct": 35,
+      "avgCommuteMins": 41,
+      "medianIncome": 78127,
+      "estMonthlyCost": 229
+    },
+    {
+      "name": "Longwood",
+      "slug": "longwood",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX0202"
+      ],
+      "workers": 14352,
+      "transitPct": 56.9,
+      "drovePct": 19.6,
+      "carpoolPct": 4,
+      "walkBikePct": 11.2,
+      "wfhPct": 6.9,
+      "zeroCarPct": 67.7,
+      "avgCommuteMins": 41,
+      "medianIncome": 38031,
+      "estMonthlyCost": 228
+    },
+    {
+      "name": "Woodside",
+      "slug": "woodside",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0203"
+      ],
+      "workers": 24798,
+      "transitPct": 54.1,
+      "drovePct": 19.5,
+      "carpoolPct": 6.5,
+      "walkBikePct": 9.2,
+      "wfhPct": 8.9,
+      "zeroCarPct": 46.8,
+      "avgCommuteMins": 35,
+      "medianIncome": 77123,
+      "estMonthlyCost": 224
+    },
+    {
+      "name": "Parkchester",
+      "slug": "parkchester",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX0904"
+      ],
+      "workers": 12694,
+      "transitPct": 60.7,
+      "drovePct": 18.2,
+      "carpoolPct": 2.7,
+      "walkBikePct": 7.5,
+      "wfhPct": 8.4,
+      "zeroCarPct": 69.8,
+      "avgCommuteMins": 49,
+      "medianIncome": 59871,
+      "estMonthlyCost": 222
+    },
+    {
+      "name": "University Heights (South)-Morris Heights",
+      "slug": "university-heights-south-morris-heights",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX0501"
+      ],
+      "workers": 20768,
+      "transitPct": 59,
+      "drovePct": 18.1,
+      "carpoolPct": 4.5,
+      "walkBikePct": 7.4,
+      "wfhPct": 7.7,
+      "zeroCarPct": 72.3,
+      "avgCommuteMins": 43,
+      "medianIncome": 36663,
+      "estMonthlyCost": 219
+    },
+    {
+      "name": "Ridgewood",
+      "slug": "ridgewood",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0502"
+      ],
+      "workers": 36482,
+      "transitPct": 55.4,
+      "drovePct": 18.7,
+      "carpoolPct": 2.9,
+      "walkBikePct": 7.5,
+      "wfhPct": 14.2,
+      "zeroCarPct": 52.7,
+      "avgCommuteMins": 44,
+      "medianIncome": 84720,
+      "estMonthlyCost": 219
+    },
+    {
+      "name": "Flatbush (West)-Ditmas Park-Parkville",
+      "slug": "flatbush-west-ditmas-park-parkville",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1402"
+      ],
+      "workers": 19557,
+      "transitPct": 48.4,
+      "drovePct": 19.8,
+      "carpoolPct": 3.1,
+      "walkBikePct": 8.5,
+      "wfhPct": 17.4,
+      "zeroCarPct": 54.1,
+      "avgCommuteMins": 42,
+      "medianIncome": 93132,
+      "estMonthlyCost": 218
+    },
+    {
+      "name": "Brighton Beach",
+      "slug": "brighton-beach",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1303"
+      ],
+      "workers": 12550,
+      "transitPct": 40.9,
+      "drovePct": 20.8,
+      "carpoolPct": 2.8,
+      "walkBikePct": 21,
+      "wfhPct": 12.4,
+      "zeroCarPct": 64.8,
+      "avgCommuteMins": 40,
+      "medianIncome": 46783,
+      "estMonthlyCost": 216
+    },
+    {
+      "name": "Jackson Heights",
+      "slug": "jackson-heights",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0301"
+      ],
+      "workers": 45446,
+      "transitPct": 51.6,
+      "drovePct": 18.9,
+      "carpoolPct": 4.9,
+      "walkBikePct": 9,
+      "wfhPct": 12.4,
+      "zeroCarPct": 49.8,
+      "avgCommuteMins": 41,
+      "medianIncome": 77454,
+      "estMonthlyCost": 216
+    },
+    {
+      "name": "Elmhurst",
+      "slug": "elmhurst",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0401"
+      ],
+      "workers": 50958,
+      "transitPct": 61.3,
+      "drovePct": 16.8,
+      "carpoolPct": 5,
+      "walkBikePct": 7.9,
+      "wfhPct": 7.5,
+      "zeroCarPct": 57.9,
+      "avgCommuteMins": 42,
+      "medianIncome": 71552,
+      "estMonthlyCost": 212
+    },
+    {
+      "name": "Kingsbridge Heights-Van Cortlandt Village",
+      "slug": "kingsbridge-heights-van-cortlandt-village",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX0801"
+      ],
+      "workers": 14155,
+      "transitPct": 62,
+      "drovePct": 16.5,
+      "carpoolPct": 2.8,
+      "walkBikePct": 7.7,
+      "wfhPct": 8,
+      "zeroCarPct": 63.9,
+      "avgCommuteMins": 48,
+      "medianIncome": 60398,
+      "estMonthlyCost": 211
+    },
+    {
+      "name": "Norwood",
+      "slug": "norwood",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX0703"
+      ],
+      "workers": 17210,
+      "transitPct": 58.5,
+      "drovePct": 16.4,
+      "carpoolPct": 2.9,
+      "walkBikePct": 11.3,
+      "wfhPct": 8,
+      "zeroCarPct": 69.2,
+      "avgCommuteMins": 45,
+      "medianIncome": 49509,
+      "estMonthlyCost": 205
+    },
+    {
+      "name": "Hunts Point",
+      "slug": "hunts-point",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX0201"
+      ],
+      "workers": 5721,
+      "transitPct": 59.7,
+      "drovePct": 15.9,
+      "carpoolPct": 5.6,
+      "walkBikePct": 9.9,
+      "wfhPct": 6.3,
+      "zeroCarPct": 73.7,
+      "avgCommuteMins": 43,
+      "medianIncome": 41089,
+      "estMonthlyCost": 203
+    },
+    {
+      "name": "Flatbush",
+      "slug": "flatbush",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1401"
+      ],
+      "workers": 34905,
+      "transitPct": 62.7,
+      "drovePct": 15.3,
+      "carpoolPct": 2.3,
+      "walkBikePct": 6.3,
+      "wfhPct": 12,
+      "zeroCarPct": 65,
+      "avgCommuteMins": 47,
+      "medianIncome": 80090,
+      "estMonthlyCost": 202
+    },
+    {
+      "name": "North Corona",
+      "slug": "north-corona",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0303"
+      ],
+      "workers": 20822,
+      "transitPct": 65.7,
+      "drovePct": 14.7,
+      "carpoolPct": 3.8,
+      "walkBikePct": 11.2,
+      "wfhPct": 3,
+      "zeroCarPct": 55,
+      "avgCommuteMins": 44,
+      "medianIncome": 81030,
+      "estMonthlyCost": 201
+    },
+    {
+      "name": "Corona",
+      "slug": "corona",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0402"
+      ],
+      "workers": 29506,
+      "transitPct": 63.4,
+      "drovePct": 14.9,
+      "carpoolPct": 6.3,
+      "walkBikePct": 9.2,
+      "wfhPct": 4.2,
+      "zeroCarPct": 59.4,
+      "avgCommuteMins": 45,
+      "medianIncome": 65565,
+      "estMonthlyCost": 200
+    },
+    {
+      "name": "University Heights (North)-Fordham",
+      "slug": "university-heights-north-fordham",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX0701"
+      ],
+      "workers": 17006,
+      "transitPct": 68,
+      "drovePct": 13.9,
+      "carpoolPct": 2.2,
+      "walkBikePct": 9.3,
+      "wfhPct": 5,
+      "zeroCarPct": 71.6,
+      "avgCommuteMins": 47,
+      "medianIncome": 45365,
+      "estMonthlyCost": 198
+    },
+    {
+      "name": "Borough Park",
+      "slug": "borough-park",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1202"
+      ],
+      "workers": 25308,
+      "transitPct": 24.5,
+      "drovePct": 21.1,
+      "carpoolPct": 6.2,
+      "walkBikePct": 37,
+      "wfhPct": 9.5,
+      "zeroCarPct": 52.8,
+      "avgCommuteMins": 31,
+      "medianIncome": 55994,
+      "estMonthlyCost": 197
+    },
+    {
+      "name": "Kensington",
+      "slug": "kensington",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1203"
+      ],
+      "workers": 18805,
+      "transitPct": 44.1,
+      "drovePct": 17.5,
+      "carpoolPct": 4.2,
+      "walkBikePct": 7.7,
+      "wfhPct": 23.9,
+      "zeroCarPct": 54.7,
+      "avgCommuteMins": 42,
+      "medianIncome": 94467,
+      "estMonthlyCost": 195
+    },
+    {
+      "name": "East Flatbush-Erasmus",
+      "slug": "east-flatbush-erasmus",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1701"
+      ],
+      "workers": 23029,
+      "transitPct": 62.6,
+      "drovePct": 14.1,
+      "carpoolPct": 2.9,
+      "walkBikePct": 6.8,
+      "wfhPct": 11.6,
+      "zeroCarPct": 63.5,
+      "avgCommuteMins": 46,
+      "medianIncome": 77626,
+      "estMonthlyCost": 193
+    },
+    {
+      "name": "Mount Eden-Claremont (West)",
+      "slug": "mount-eden-claremont-west",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX0403"
+      ],
+      "workers": 19024,
+      "transitPct": 64.5,
+      "drovePct": 13.7,
+      "carpoolPct": 2.2,
+      "walkBikePct": 10.5,
+      "wfhPct": 5,
+      "zeroCarPct": 78.5,
+      "avgCommuteMins": 44,
+      "medianIncome": 43044,
+      "estMonthlyCost": 192
+    },
+    {
+      "name": "Bedford-Stuyvesant (East)",
+      "slug": "bedford-stuyvesant-east",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK0302"
+      ],
+      "workers": 44013,
+      "transitPct": 54.1,
+      "drovePct": 15.2,
+      "carpoolPct": 3.2,
+      "walkBikePct": 7.8,
+      "wfhPct": 18,
+      "zeroCarPct": 60.2,
+      "avgCommuteMins": 42,
+      "medianIncome": 76166,
+      "estMonthlyCost": 190
+    },
+    {
+      "name": "Bedford Park",
+      "slug": "bedford-park",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX0702"
+      ],
+      "workers": 21421,
+      "transitPct": 62,
+      "drovePct": 13.8,
+      "carpoolPct": 1.6,
+      "walkBikePct": 8.6,
+      "wfhPct": 11.7,
+      "zeroCarPct": 69.8,
+      "avgCommuteMins": 46,
+      "medianIncome": 47856,
+      "estMonthlyCost": 189
+    },
+    {
+      "name": "Brownsville",
+      "slug": "brownsville",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1602"
+      ],
+      "workers": 19573,
+      "transitPct": 70,
+      "drovePct": 12.3,
+      "carpoolPct": 3.3,
+      "walkBikePct": 4.6,
+      "wfhPct": 5.5,
+      "zeroCarPct": 71.7,
+      "avgCommuteMins": 50,
+      "medianIncome": 35423,
+      "estMonthlyCost": 188
+    },
+    {
+      "name": "Concourse-Concourse Village",
+      "slug": "concourse-concourse-village",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX0401"
+      ],
+      "workers": 26730,
+      "transitPct": 63.5,
+      "drovePct": 13.4,
+      "carpoolPct": 2.6,
+      "walkBikePct": 10.5,
+      "wfhPct": 5.3,
+      "zeroCarPct": 76.6,
+      "avgCommuteMins": 41,
+      "medianIncome": 47207,
+      "estMonthlyCost": 188
+    },
+    {
+      "name": "Astoria",
+      "slug": "astoria",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0101",
+        "QN0102",
+        "QN0103",
+        "QN0104",
+        "QN0105"
+      ],
+      "workers": 96080,
+      "transitPct": 54.2,
+      "drovePct": 14.5,
+      "carpoolPct": 2.8,
+      "walkBikePct": 7.4,
+      "wfhPct": 19.1,
+      "zeroCarPct": 58.1,
+      "avgCommuteMins": 39,
+      "medianIncome": null,
+      "estMonthlyCost": 185
+    },
+    {
+      "name": "Crown Heights (South)",
+      "slug": "crown-heights-south",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK0901"
+      ],
+      "workers": 23673,
+      "transitPct": 54.5,
+      "drovePct": 14.5,
+      "carpoolPct": 3.1,
+      "walkBikePct": 11.6,
+      "wfhPct": 13.8,
+      "zeroCarPct": 64.3,
+      "avgCommuteMins": 42,
+      "medianIncome": 73022,
+      "estMonthlyCost": 185
+    },
+    {
+      "name": "Highbridge",
+      "slug": "highbridge",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX0402"
+      ],
+      "workers": 12336,
+      "transitPct": 68.9,
+      "drovePct": 12,
+      "carpoolPct": 4.2,
+      "walkBikePct": 3.8,
+      "wfhPct": 8.8,
+      "zeroCarPct": 78.3,
+      "avgCommuteMins": 45,
+      "medianIncome": 41203,
+      "estMonthlyCost": 185
+    },
+    {
+      "name": "Flushing-Willets Point",
+      "slug": "flushing-willets-point",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0707"
+      ],
+      "workers": 26684,
+      "transitPct": 41.2,
+      "drovePct": 16.2,
+      "carpoolPct": 10.9,
+      "walkBikePct": 21,
+      "wfhPct": 8.3,
+      "zeroCarPct": 61.2,
+      "avgCommuteMins": 40,
+      "medianIncome": 50792,
+      "estMonthlyCost": 181
+    },
+    {
+      "name": "Sunset Park (West)",
+      "slug": "sunset-park-west",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK0702"
+      ],
+      "workers": 24368,
+      "transitPct": 50.3,
+      "drovePct": 14.2,
+      "carpoolPct": 3.4,
+      "walkBikePct": 15.6,
+      "wfhPct": 14.5,
+      "zeroCarPct": 60,
+      "avgCommuteMins": 39,
+      "medianIncome": 89945,
+      "estMonthlyCost": 177
+    },
+    {
+      "name": "Prospect Lefferts Gardens-Wingate",
+      "slug": "prospect-lefferts-gardens-wingate",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK0902"
+      ],
+      "workers": 22353,
+      "transitPct": 55.2,
+      "drovePct": 13.1,
+      "carpoolPct": 2.5,
+      "walkBikePct": 8.1,
+      "wfhPct": 18.9,
+      "zeroCarPct": 64.7,
+      "avgCommuteMins": 43,
+      "medianIncome": 76800,
+      "estMonthlyCost": 175
+    },
+    {
+      "name": "Sunnyside",
+      "slug": "sunnyside",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0202"
+      ],
+      "workers": 25774,
+      "transitPct": 56.5,
+      "drovePct": 12.8,
+      "carpoolPct": 2.8,
+      "walkBikePct": 10.3,
+      "wfhPct": 15.5,
+      "zeroCarPct": 60,
+      "avgCommuteMins": 38,
+      "medianIncome": 83634,
+      "estMonthlyCost": 174
+    },
+    {
+      "name": "Bushwick",
+      "slug": "bushwick",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK0401",
+        "BK0402"
+      ],
+      "workers": 62173,
+      "transitPct": 56.9,
+      "drovePct": 12.5,
+      "carpoolPct": 2.8,
+      "walkBikePct": 8.3,
+      "wfhPct": 18,
+      "zeroCarPct": 64,
+      "avgCommuteMins": 41,
+      "medianIncome": null,
+      "estMonthlyCost": 173
+    },
+    {
+      "name": "Crown Heights (North)",
+      "slug": "crown-heights-north",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK0802"
+      ],
+      "workers": 43650,
+      "transitPct": 54.2,
+      "drovePct": 13,
+      "carpoolPct": 2.5,
+      "walkBikePct": 6.6,
+      "wfhPct": 21.5,
+      "zeroCarPct": 70.2,
+      "avgCommuteMins": 43,
+      "medianIncome": 80688,
+      "estMonthlyCost": 173
+    },
+    {
+      "name": "Mount Hope",
+      "slug": "mount-hope",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX0502"
+      ],
+      "workers": 17778,
+      "transitPct": 72.7,
+      "drovePct": 9.6,
+      "carpoolPct": 1.7,
+      "walkBikePct": 6.6,
+      "wfhPct": 6.8,
+      "zeroCarPct": 75.6,
+      "avgCommuteMins": 45,
+      "medianIncome": 43967,
+      "estMonthlyCost": 171
+    },
+    {
+      "name": "Belmont",
+      "slug": "belmont",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX0603"
+      ],
+      "workers": 13002,
+      "transitPct": 53.1,
+      "drovePct": 12.7,
+      "carpoolPct": 3.8,
+      "walkBikePct": 19.6,
+      "wfhPct": 7.4,
+      "zeroCarPct": 73.5,
+      "avgCommuteMins": 43,
+      "medianIncome": 33296,
+      "estMonthlyCost": 169
+    },
+    {
+      "name": "Inwood",
+      "slug": "inwood",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN1203"
+      ],
+      "workers": 19542,
+      "transitPct": 59.2,
+      "drovePct": 11.5,
+      "carpoolPct": 3.7,
+      "walkBikePct": 7.5,
+      "wfhPct": 15.4,
+      "zeroCarPct": 69.5,
+      "avgCommuteMins": 47,
+      "medianIncome": 70212,
+      "estMonthlyCost": 168
+    },
+    {
+      "name": "South Bronx (Mott Haven/Melrose)",
+      "slug": "south-bronx",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX0101",
+        "BX0102"
+      ],
+      "workers": 32562,
+      "transitPct": 61.6,
+      "drovePct": 10.8,
+      "carpoolPct": 1.2,
+      "walkBikePct": 12.7,
+      "wfhPct": 8.9,
+      "zeroCarPct": 76.1,
+      "avgCommuteMins": 40,
+      "medianIncome": null,
+      "estMonthlyCost": 166
+    },
+    {
+      "name": "Long Island City-Hunters Point",
+      "slug": "long-island-city-hunters-point",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0201"
+      ],
+      "workers": 18755,
+      "transitPct": 53.9,
+      "drovePct": 11.5,
+      "carpoolPct": 0.9,
+      "walkBikePct": 4.6,
+      "wfhPct": 27.3,
+      "zeroCarPct": 57.4,
+      "avgCommuteMins": 31,
+      "medianIncome": 158925,
+      "estMonthlyCost": 161
+    },
+    {
+      "name": "Sunset Park (Central)",
+      "slug": "sunset-park-central",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK0703"
+      ],
+      "workers": 19387,
+      "transitPct": 49.2,
+      "drovePct": 12,
+      "carpoolPct": 9.2,
+      "walkBikePct": 18.2,
+      "wfhPct": 8.6,
+      "zeroCarPct": 68,
+      "avgCommuteMins": 47,
+      "medianIncome": 60889,
+      "estMonthlyCost": 159
+    },
+    {
+      "name": "Bedford-Stuyvesant (West)",
+      "slug": "bedford-stuyvesant-west",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK0301"
+      ],
+      "workers": 42508,
+      "transitPct": 49.8,
+      "drovePct": 11.6,
+      "carpoolPct": 1.7,
+      "walkBikePct": 13.9,
+      "wfhPct": 21.2,
+      "zeroCarPct": 67.4,
+      "avgCommuteMins": 40,
+      "medianIncome": 82951,
+      "estMonthlyCost": 156
+    },
+    {
+      "name": "Fordham Heights",
+      "slug": "fordham-heights",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX0503"
+      ],
+      "workers": 12282,
+      "transitPct": 67.6,
+      "drovePct": 8.3,
+      "carpoolPct": 5,
+      "walkBikePct": 11.1,
+      "wfhPct": 6.1,
+      "zeroCarPct": 81,
+      "avgCommuteMins": 42,
+      "medianIncome": 40110,
+      "estMonthlyCost": 154
+    },
+    {
+      "name": "Sunset Park (East)-Borough Park (West)",
+      "slug": "sunset-park-east-borough-park-west",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1201"
+      ],
+      "workers": 11839,
+      "transitPct": 37.7,
+      "drovePct": 13.2,
+      "carpoolPct": 11.5,
+      "walkBikePct": 22.7,
+      "wfhPct": 11.1,
+      "zeroCarPct": 59.3,
+      "avgCommuteMins": 42,
+      "medianIncome": 62183,
+      "estMonthlyCost": 153
+    },
+    {
+      "name": "Harlem (North)",
+      "slug": "harlem-north",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN1002"
+      ],
+      "workers": 37420,
+      "transitPct": 63.8,
+      "drovePct": 7.7,
+      "carpoolPct": 1.5,
+      "walkBikePct": 9.8,
+      "wfhPct": 15.5,
+      "zeroCarPct": 79,
+      "avgCommuteMins": 39,
+      "medianIncome": 53445,
+      "estMonthlyCost": 144
+    },
+    {
+      "name": "Clinton Hill",
+      "slug": "clinton-hill",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK0204"
+      ],
+      "workers": 16016,
+      "transitPct": 46,
+      "drovePct": 10.6,
+      "carpoolPct": 1.4,
+      "walkBikePct": 12,
+      "wfhPct": 27.2,
+      "zeroCarPct": 59.8,
+      "avgCommuteMins": 38,
+      "medianIncome": 129066,
+      "estMonthlyCost": 143
+    },
+    {
+      "name": "Harlem (South)",
+      "slug": "harlem-south",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN1001"
+      ],
+      "workers": 25337,
+      "transitPct": 53.9,
+      "drovePct": 8.9,
+      "carpoolPct": 1.5,
+      "walkBikePct": 11.2,
+      "wfhPct": 21.9,
+      "zeroCarPct": 71.5,
+      "avgCommuteMins": 35,
+      "medianIncome": 73738,
+      "estMonthlyCost": 141
+    },
+    {
+      "name": "East Harlem",
+      "slug": "east-harlem",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN1101",
+        "MN1102"
+      ],
+      "workers": 49529,
+      "transitPct": 60.6,
+      "drovePct": 7.4,
+      "carpoolPct": 1.4,
+      "walkBikePct": 14.1,
+      "wfhPct": 14.2,
+      "zeroCarPct": 84.5,
+      "avgCommuteMins": 35,
+      "medianIncome": null,
+      "estMonthlyCost": 138
+    },
+    {
+      "name": "Windsor Terrace-South Slope",
+      "slug": "windsor-terrace-south-slope",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK0701"
+      ],
+      "workers": 13760,
+      "transitPct": 47.4,
+      "drovePct": 9.3,
+      "carpoolPct": 2.9,
+      "walkBikePct": 9.8,
+      "wfhPct": 29.2,
+      "zeroCarPct": 40.6,
+      "avgCommuteMins": 42,
+      "medianIncome": 143371,
+      "estMonthlyCost": 135
+    },
+    {
+      "name": "Greenpoint",
+      "slug": "greenpoint",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK0101"
+      ],
+      "workers": 24916,
+      "transitPct": 44.6,
+      "drovePct": 9.4,
+      "carpoolPct": 1.7,
+      "walkBikePct": 14.1,
+      "wfhPct": 27.8,
+      "zeroCarPct": 59.9,
+      "avgCommuteMins": 37,
+      "medianIncome": 129144,
+      "estMonthlyCost": 132
+    },
+    {
+      "name": "East Williamsburg",
+      "slug": "east-williamsburg",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK0104"
+      ],
+      "workers": 27705,
+      "transitPct": 53.7,
+      "drovePct": 7.4,
+      "carpoolPct": 1.4,
+      "walkBikePct": 11.7,
+      "wfhPct": 23.9,
+      "zeroCarPct": 70.6,
+      "avgCommuteMins": 37,
+      "medianIncome": 94067,
+      "estMonthlyCost": 129
+    },
+    {
+      "name": "Hamilton Heights-Sugar Hill",
+      "slug": "hamilton-heights-sugar-hill",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN0903"
+      ],
+      "workers": 27272,
+      "transitPct": 62.7,
+      "drovePct": 5.9,
+      "carpoolPct": 0.9,
+      "walkBikePct": 7.7,
+      "wfhPct": 21.9,
+      "zeroCarPct": 77,
+      "avgCommuteMins": 39,
+      "medianIncome": 67547,
+      "estMonthlyCost": 129
+    },
+    {
+      "name": "Washington Heights",
+      "slug": "washington-heights",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN1201",
+        "MN1202"
+      ],
+      "workers": 71631,
+      "transitPct": 58.7,
+      "drovePct": 6.3,
+      "carpoolPct": 3.1,
+      "walkBikePct": 13.8,
+      "wfhPct": 15.4,
+      "zeroCarPct": 77.6,
+      "avgCommuteMins": 40,
+      "medianIncome": null,
+      "estMonthlyCost": 127
+    },
+    {
+      "name": "Fort Greene",
+      "slug": "fort-greene",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK0203"
+      ],
+      "workers": 17291,
+      "transitPct": 46.3,
+      "drovePct": 7.7,
+      "carpoolPct": 1.6,
+      "walkBikePct": 12.6,
+      "wfhPct": 29.8,
+      "zeroCarPct": 72,
+      "avgCommuteMins": 36,
+      "medianIncome": 118855,
+      "estMonthlyCost": 121
+    },
+    {
+      "name": "Randall's Island",
+      "slug": "randall-s-island",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN1191"
+      ],
+      "workers": 382,
+      "transitPct": 77.7,
+      "drovePct": 2.4,
+      "carpoolPct": 2.4,
+      "walkBikePct": 7.1,
+      "wfhPct": 10.5,
+      "zeroCarPct": 0,
+      "avgCommuteMins": 45,
+      "medianIncome": null,
+      "estMonthlyCost": 121
+    },
+    {
+      "name": "South Williamsburg",
+      "slug": "south-williamsburg",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK0103"
+      ],
+      "workers": 12976,
+      "transitPct": 26.1,
+      "drovePct": 10.9,
+      "carpoolPct": 5.6,
+      "walkBikePct": 44.5,
+      "wfhPct": 10.1,
+      "zeroCarPct": 62.7,
+      "avgCommuteMins": 27,
+      "medianIncome": 42133,
+      "estMonthlyCost": 119
+    },
+    {
+      "name": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+      "slug": "carroll-gardens-cobble-hill-gowanus-red-hook",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK0601"
+      ],
+      "workers": 32755,
+      "transitPct": 43.4,
+      "drovePct": 7.9,
+      "carpoolPct": 2,
+      "walkBikePct": 15.7,
+      "wfhPct": 28.7,
+      "zeroCarPct": 56.6,
+      "avgCommuteMins": 36,
+      "medianIncome": 142376,
+      "estMonthlyCost": 119
+    },
+    {
+      "name": "Lower East Side",
+      "slug": "lower-east-side",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN0302"
+      ],
+      "workers": 21185,
+      "transitPct": 47.7,
+      "drovePct": 7.2,
+      "carpoolPct": 1.7,
+      "walkBikePct": 24.1,
+      "wfhPct": 16.9,
+      "zeroCarPct": 78.7,
+      "avgCommuteMins": 32,
+      "medianIncome": 65276,
+      "estMonthlyCost": 119
+    },
+    {
+      "name": "Upper West Side (Central)",
+      "slug": "upper-west-side-central",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN0702"
+      ],
+      "workers": 53510,
+      "transitPct": 47.2,
+      "drovePct": 6.9,
+      "carpoolPct": 1,
+      "walkBikePct": 11,
+      "wfhPct": 30,
+      "zeroCarPct": 71.9,
+      "avgCommuteMins": 31,
+      "medianIncome": 160616,
+      "estMonthlyCost": 116
+    },
+    {
+      "name": "Williamsburg",
+      "slug": "williamsburg",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK0102"
+      ],
+      "workers": 40713,
+      "transitPct": 49,
+      "drovePct": 6.3,
+      "carpoolPct": 2.3,
+      "walkBikePct": 12.9,
+      "wfhPct": 27.8,
+      "zeroCarPct": 68.5,
+      "avgCommuteMins": 33,
+      "medianIncome": 147452,
+      "estMonthlyCost": 114
+    },
+    {
+      "name": "Prospect Heights",
+      "slug": "prospect-heights",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK0801"
+      ],
+      "workers": 14631,
+      "transitPct": 47.9,
+      "drovePct": 5.7,
+      "carpoolPct": 0.5,
+      "walkBikePct": 11.2,
+      "wfhPct": 34.1,
+      "zeroCarPct": 65.5,
+      "avgCommuteMins": 36,
+      "medianIncome": 154865,
+      "estMonthlyCost": 108
+    },
+    {
+      "name": "Upper East Side-Yorkville",
+      "slug": "upper-east-side-yorkville",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN0803"
+      ],
+      "workers": 45807,
+      "transitPct": 46.9,
+      "drovePct": 5.9,
+      "carpoolPct": 1.2,
+      "walkBikePct": 17,
+      "wfhPct": 25.3,
+      "zeroCarPct": 73.2,
+      "avgCommuteMins": 32,
+      "medianIncome": 150269,
+      "estMonthlyCost": 108
+    },
+    {
+      "name": "Manhattanville-West Harlem",
+      "slug": "manhattanville-west-harlem",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN0902"
+      ],
+      "workers": 9135,
+      "transitPct": 53.3,
+      "drovePct": 4.8,
+      "carpoolPct": 1.6,
+      "walkBikePct": 14.2,
+      "wfhPct": 24,
+      "zeroCarPct": 80.4,
+      "avgCommuteMins": 32,
+      "medianIncome": 42710,
+      "estMonthlyCost": 108
+    },
+    {
+      "name": "Park Slope",
+      "slug": "park-slope",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK0602"
+      ],
+      "workers": 35315,
+      "transitPct": 45.8,
+      "drovePct": 5.9,
+      "carpoolPct": 1.4,
+      "walkBikePct": 9,
+      "wfhPct": 36.5,
+      "zeroCarPct": 55.4,
+      "avgCommuteMins": 39,
+      "medianIncome": 191502,
+      "estMonthlyCost": 106
+    },
+    {
+      "name": "Upper East Side-Carnegie Hill",
+      "slug": "upper-east-side-carnegie-hill",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN0802"
+      ],
+      "workers": 26838,
+      "transitPct": 34.2,
+      "drovePct": 7.6,
+      "carpoolPct": 2.8,
+      "walkBikePct": 20.6,
+      "wfhPct": 28.3,
+      "zeroCarPct": 61.5,
+      "avgCommuteMins": 27,
+      "medianIncome": 202486,
+      "estMonthlyCost": 104
+    },
+    {
+      "name": "Downtown Brooklyn-DUMBO-Boerum Hill",
+      "slug": "downtown-brooklyn-dumbo-boerum-hill",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK0202"
+      ],
+      "workers": 23920,
+      "transitPct": 51.2,
+      "drovePct": 4.5,
+      "carpoolPct": 0.6,
+      "walkBikePct": 10.6,
+      "wfhPct": 29.6,
+      "zeroCarPct": 73.9,
+      "avgCommuteMins": 32,
+      "medianIncome": 159679,
+      "estMonthlyCost": 103
+    },
+    {
+      "name": "Chinatown-Two Bridges",
+      "slug": "chinatown-two-bridges",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN0301"
+      ],
+      "workers": 14778,
+      "transitPct": 42.3,
+      "drovePct": 5.9,
+      "carpoolPct": 2.2,
+      "walkBikePct": 33.5,
+      "wfhPct": 13.4,
+      "zeroCarPct": 85.5,
+      "avgCommuteMins": 30,
+      "medianIncome": 37912,
+      "estMonthlyCost": 102
+    },
+    {
+      "name": "Tribeca-Civic Center",
+      "slug": "tribeca-civic-center",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN0102"
+      ],
+      "workers": 13125,
+      "transitPct": 39.6,
+      "drovePct": 5.8,
+      "carpoolPct": 1.4,
+      "walkBikePct": 22.3,
+      "wfhPct": 26.3,
+      "zeroCarPct": 66.4,
+      "avgCommuteMins": 25,
+      "medianIncome": 226968,
+      "estMonthlyCost": 98
+    },
+    {
+      "name": "Upper West Side-Manhattan Valley",
+      "slug": "upper-west-side-manhattan-valley",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN0703"
+      ],
+      "workers": 26170,
+      "transitPct": 51.9,
+      "drovePct": 3.7,
+      "carpoolPct": 2.2,
+      "walkBikePct": 14.6,
+      "wfhPct": 26.2,
+      "zeroCarPct": 77.5,
+      "avgCommuteMins": 34,
+      "medianIncome": 105994,
+      "estMonthlyCost": 97
+    },
+    {
+      "name": "Upper East Side-Lenox Hill-Roosevelt Island",
+      "slug": "upper-east-side-lenox-hill-roosevelt-island",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN0801"
+      ],
+      "workers": 45726,
+      "transitPct": 40.5,
+      "drovePct": 5.6,
+      "carpoolPct": 0.8,
+      "walkBikePct": 25.4,
+      "wfhPct": 23.4,
+      "zeroCarPct": 74.7,
+      "avgCommuteMins": 30,
+      "medianIncome": 141711,
+      "estMonthlyCost": 97
+    },
+    {
+      "name": "Brooklyn Heights",
+      "slug": "brooklyn-heights",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK0201"
+      ],
+      "workers": 14432,
+      "transitPct": 43.9,
+      "drovePct": 4.7,
+      "carpoolPct": 0.6,
+      "walkBikePct": 13.9,
+      "wfhPct": 35.2,
+      "zeroCarPct": 63.2,
+      "avgCommuteMins": 30,
+      "medianIncome": 183736,
+      "estMonthlyCost": 95
+    },
+    {
+      "name": "Financial District-Battery Park City",
+      "slug": "financial-district-battery-park-city",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN0101"
+      ],
+      "workers": 33558,
+      "transitPct": 43.4,
+      "drovePct": 4.2,
+      "carpoolPct": 1.2,
+      "walkBikePct": 25.3,
+      "wfhPct": 22.1,
+      "zeroCarPct": 81.6,
+      "avgCommuteMins": 27,
+      "medianIncome": 199456,
+      "estMonthlyCost": 90
+    },
+    {
+      "name": "Chelsea-Hudson Yards",
+      "slug": "chelsea-hudson-yards",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN0401"
+      ],
+      "workers": 38887,
+      "transitPct": 38.9,
+      "drovePct": 4.9,
+      "carpoolPct": 0.7,
+      "walkBikePct": 26.5,
+      "wfhPct": 25.5,
+      "zeroCarPct": 82.1,
+      "avgCommuteMins": 26,
+      "medianIncome": 130677,
+      "estMonthlyCost": 90
+    },
+    {
+      "name": "East Village",
+      "slug": "east-village",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN0303"
+      ],
+      "workers": 37237,
+      "transitPct": 44.8,
+      "drovePct": 3.8,
+      "carpoolPct": 0.5,
+      "walkBikePct": 26.9,
+      "wfhPct": 21.7,
+      "zeroCarPct": 84.5,
+      "avgCommuteMins": 28,
+      "medianIncome": 91871,
+      "estMonthlyCost": 89
+    },
+    {
+      "name": "SoHo-Little Italy-Hudson Square",
+      "slug": "soho-little-italy-hudson-square",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN0201"
+      ],
+      "workers": 13969,
+      "transitPct": 41.1,
+      "drovePct": 4.1,
+      "carpoolPct": 2.7,
+      "walkBikePct": 21,
+      "wfhPct": 27.7,
+      "zeroCarPct": 78.8,
+      "avgCommuteMins": 25,
+      "medianIncome": 142191,
+      "estMonthlyCost": 86
+    },
+    {
+      "name": "Upper West Side-Lincoln Square",
+      "slug": "upper-west-side-lincoln-square",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN0701"
+      ],
+      "workers": 37323,
+      "transitPct": 40,
+      "drovePct": 4.2,
+      "carpoolPct": 1.6,
+      "walkBikePct": 20.6,
+      "wfhPct": 28.4,
+      "zeroCarPct": 72.3,
+      "avgCommuteMins": 28,
+      "medianIncome": 175000,
+      "estMonthlyCost": 86
+    },
+    {
+      "name": "Greenwich Village",
+      "slug": "greenwich-village",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN0202"
+      ],
+      "workers": 18528,
+      "transitPct": 31,
+      "drovePct": 5.6,
+      "carpoolPct": 1,
+      "walkBikePct": 30.1,
+      "wfhPct": 28.4,
+      "zeroCarPct": 72.7,
+      "avgCommuteMins": 23,
+      "medianIncome": 183406,
+      "estMonthlyCost": 85
+    },
+    {
+      "name": "Stuyvesant Town-Peter Cooper Village",
+      "slug": "stuyvesant-town-peter-cooper-village",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN0601"
+      ],
+      "workers": 12288,
+      "transitPct": 38.1,
+      "drovePct": 4.4,
+      "carpoolPct": 0,
+      "walkBikePct": 21,
+      "wfhPct": 32.1,
+      "zeroCarPct": 70.8,
+      "avgCommuteMins": 29,
+      "medianIncome": 162894,
+      "estMonthlyCost": 85
+    },
+    {
+      "name": "Midtown South-Flatiron-Union Square",
+      "slug": "midtown-south-flatiron-union-square",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN0501"
+      ],
+      "workers": 19069,
+      "transitPct": 38.7,
+      "drovePct": 4.1,
+      "carpoolPct": 1,
+      "walkBikePct": 30.2,
+      "wfhPct": 22.7,
+      "zeroCarPct": 84.5,
+      "avgCommuteMins": 25,
+      "medianIncome": 188423,
+      "estMonthlyCost": 83
+    },
+    {
+      "name": "Hell's Kitchen",
+      "slug": "hell-s-kitchen",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN0402"
+      ],
+      "workers": 35660,
+      "transitPct": 39.4,
+      "drovePct": 3.4,
+      "carpoolPct": 0.7,
+      "walkBikePct": 30.6,
+      "wfhPct": 21.5,
+      "zeroCarPct": 86.4,
+      "avgCommuteMins": 30,
+      "medianIncome": null,
+      "estMonthlyCost": 79
+    },
+    {
+      "name": "West Village",
+      "slug": "west-village",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN0203"
+      ],
+      "workers": 21119,
+      "transitPct": 39,
+      "drovePct": 3.4,
+      "carpoolPct": 0.5,
+      "walkBikePct": 23.6,
+      "wfhPct": 28.4,
+      "zeroCarPct": 81.5,
+      "avgCommuteMins": 26,
+      "medianIncome": 164340,
+      "estMonthlyCost": 78
+    },
+    {
+      "name": "Murray Hill-Kips Bay",
+      "slug": "murray-hill-kips-bay",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN0603"
+      ],
+      "workers": 36014,
+      "transitPct": 27.2,
+      "drovePct": 5.3,
+      "carpoolPct": 0.7,
+      "walkBikePct": 36.2,
+      "wfhPct": 27.5,
+      "zeroCarPct": 82.6,
+      "avgCommuteMins": 26,
+      "medianIncome": 140247,
+      "estMonthlyCost": 77
+    },
+    {
+      "name": "Morningside Heights",
+      "slug": "morningside-heights",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN0901"
+      ],
+      "workers": 17868,
+      "transitPct": 35.4,
+      "drovePct": 3.9,
+      "carpoolPct": 0.2,
+      "walkBikePct": 36.5,
+      "wfhPct": 22.5,
+      "zeroCarPct": 76.3,
+      "avgCommuteMins": 26,
+      "medianIncome": 93322,
+      "estMonthlyCost": 77
+    },
+    {
+      "name": "East Midtown-Turtle Bay",
+      "slug": "east-midtown-turtle-bay",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN0604"
+      ],
+      "workers": 24831,
+      "transitPct": 26.1,
+      "drovePct": 5.2,
+      "carpoolPct": 2.3,
+      "walkBikePct": 33.5,
+      "wfhPct": 29.5,
+      "zeroCarPct": 77.7,
+      "avgCommuteMins": 27,
+      "medianIncome": 170704,
+      "estMonthlyCost": 75
+    },
+    {
+      "name": "Midtown-Times Square",
+      "slug": "midtown-times-square",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN0502"
+      ],
+      "workers": 13214,
+      "transitPct": 31.7,
+      "drovePct": 4.1,
+      "carpoolPct": 0.3,
+      "walkBikePct": 37.7,
+      "wfhPct": 22.9,
+      "zeroCarPct": 86.3,
+      "avgCommuteMins": 24,
+      "medianIncome": 152729,
+      "estMonthlyCost": 74
+    },
+    {
+      "name": "Gramercy",
+      "slug": "gramercy",
+      "borough": "Manhattan",
+      "ntaCodes": [
+        "MN0602"
+      ],
+      "workers": 15853,
+      "transitPct": 32.1,
+      "drovePct": 2.5,
+      "carpoolPct": 0.9,
+      "walkBikePct": 28.7,
+      "wfhPct": 31.7,
+      "zeroCarPct": 77.9,
+      "avgCommuteMins": 24,
+      "medianIncome": 151775,
+      "estMonthlyCost": 62
+    }
+  ]
+}
