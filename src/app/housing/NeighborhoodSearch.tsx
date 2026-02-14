@@ -11,8 +11,10 @@ interface Neighborhood {
 
 export function NeighborhoodSearch({
   neighborhoods,
+  variant = "light",
 }: {
   neighborhoods: Neighborhood[];
+  variant?: "light" | "dark";
 }) {
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
@@ -80,10 +82,16 @@ export function NeighborhoodSearch({
         aria-expanded={showDropdown}
         aria-autocomplete="list"
         role="combobox"
-        className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-fm-patina bg-white placeholder:text-fm-sage/60 focus:outline-none focus:ring-2 focus:ring-fm-teal/30 focus:border-fm-teal"
+        className={`w-full rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 ${
+          variant === "dark"
+            ? "border border-white/20 bg-white/10 text-white placeholder:text-white/50 focus:ring-white/30 focus:border-white/40"
+            : "border border-gray-200 bg-white text-fm-patina placeholder:text-fm-sage/60 focus:ring-fm-teal/30 focus:border-fm-teal"
+        }`}
       />
       <svg
-        className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-fm-sage/50 pointer-events-none"
+        className={`absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 pointer-events-none ${
+          variant === "dark" ? "text-white/50" : "text-fm-sage/50"
+        }`}
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"

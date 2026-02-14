@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { SpendingSection } from "./SpendingSection";
+import { NeighborhoodSearch } from "./housing/NeighborhoodSearch";
 import spendingData from "../../data/concentration/household-spending.json";
+import neighborhoodDataRaw from "../../data/concentration/housing-neighborhoods.json";
+
+const neighborhoods = (neighborhoodDataRaw as { neighborhoods: { name: string; slug: string; borough: string }[] }).neighborhoods;
 
 const sectors = [
   {
@@ -66,6 +70,12 @@ export default function Home() {
             many choices they have, and what drives the differences. The data is
             open — explore it yourself.
           </p>
+          <div className="mt-8">
+            <NeighborhoodSearch
+              neighborhoods={neighborhoods}
+              variant="dark"
+            />
+          </div>
         </div>
       </section>
 
