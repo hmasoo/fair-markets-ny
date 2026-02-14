@@ -8,6 +8,8 @@ interface Neighborhood {
   cr4: number;
   nychaUnits: number;
   nychaShare: number;
+  universityUnits: number;
+  universityShare: number;
   medianIncome: number | null;
   rentBurdenPct: number | null;
 }
@@ -21,6 +23,8 @@ export interface BoroughSummary {
   cr4: number;
   nychaUnits: number;
   nychaShare: number;
+  universityUnits: number;
+  universityShare: number;
   medianIncome: number | null;
   rentBurdenPct: number | null;
 }
@@ -45,6 +49,7 @@ export function aggregateByBorough(neighborhoods: Neighborhood[]): BoroughSummar
     const fips = boroughToFips(borough) ?? "";
     const totalUnits = hoods.reduce((s, n) => s + n.totalUnits, 0);
     const nychaUnits = hoods.reduce((s, n) => s + n.nychaUnits, 0);
+    const universityUnits = hoods.reduce((s, n) => s + n.universityUnits, 0);
 
     // Unit-weighted average HHI and CR4
     const weightedHHI = totalUnits > 0
@@ -73,6 +78,8 @@ export function aggregateByBorough(neighborhoods: Neighborhood[]): BoroughSummar
       cr4: Math.round(weightedCR4 * 10) / 10,
       nychaUnits,
       nychaShare: totalUnits > 0 ? Math.round((nychaUnits / totalUnits) * 1000) / 10 : 0,
+      universityUnits,
+      universityShare: totalUnits > 0 ? Math.round((universityUnits / totalUnits) * 1000) / 10 : 0,
       medianIncome,
       rentBurdenPct,
     });

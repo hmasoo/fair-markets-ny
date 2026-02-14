@@ -32,6 +32,9 @@ interface Neighborhood {
   topLandlords: { name: string; units: number; share: number }[];
   nychaUnits: number;
   nychaShare: number;
+  universityUnits: number;
+  universityShare: number;
+  topUniversity: string | null;
   hpdViolationsPerUnit: number;
   medianRent: number;
   medianIncome: number | null;

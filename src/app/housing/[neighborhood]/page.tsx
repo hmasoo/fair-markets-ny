@@ -23,6 +23,9 @@ interface Neighborhood {
   topLandlords: { name: string; units: number; share: number }[];
   nychaUnits: number;
   nychaShare: number;
+  universityUnits: number;
+  universityShare: number;
+  topUniversity: string | null;
   hpdViolationsPerUnit: number;
   medianRent: number;
   medianIncome: number | null;
@@ -161,6 +164,21 @@ export default async function NeighborhoodPage({ params }: Props) {
             <div className="text-xs text-fm-sage mt-1">
               NYCHA Units — {neighborhood.nychaShare}% of housing stock
             </div>
+          </div>
+        )}
+        {neighborhood.universityUnits > 0 && (
+          <div className="card text-center border-fm-copper/30 bg-fm-copper/5">
+            <div className="text-2xl font-bold text-fm-copper">
+              {neighborhood.universityUnits.toLocaleString()}
+            </div>
+            <div className="text-xs text-fm-sage mt-1">
+              University-Owned Units — {neighborhood.universityShare}% of housing stock
+            </div>
+            {neighborhood.topUniversity && (
+              <div className="text-xs text-fm-copper mt-1">
+                {neighborhood.topUniversity}
+              </div>
+            )}
           </div>
         )}
       </div>

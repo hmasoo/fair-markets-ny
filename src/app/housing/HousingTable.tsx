@@ -14,6 +14,9 @@ interface Neighborhood {
   cr4: number;
   nychaUnits: number;
   nychaShare: number;
+  universityUnits: number;
+  universityShare: number;
+  topUniversity: string | null;
   hpdViolationsPerUnit: number;
   medianRent: number;
   medianIncome: number | null;
@@ -42,6 +45,9 @@ export function HousingTable({ neighborhoods }: { neighborhoods: Neighborhood[] 
               </th>
               <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
                 NYCHA %
+              </th>
+              <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
+                University %
               </th>
               <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
                 Units
@@ -93,6 +99,21 @@ export function HousingTable({ neighborhoods }: { neighborhoods: Neighborhood[] 
                         />
                       </div>
                       <span className="text-fm-patina font-medium">{n.nychaShare}%</span>
+                    </div>
+                  ) : (
+                    <span className="text-gray-300">&mdash;</span>
+                  )}
+                </td>
+                <td className="px-4 py-3 text-sm text-right">
+                  {n.universityShare > 0 ? (
+                    <div className="flex items-center justify-end gap-2">
+                      <div className="w-16 h-2 bg-gray-100 rounded-full overflow-hidden">
+                        <div
+                          className="h-full bg-fm-copper rounded-full"
+                          style={{ width: `${Math.min(n.universityShare, 100)}%` }}
+                        />
+                      </div>
+                      <span className="text-fm-copper font-medium">{n.universityShare}%</span>
                     </div>
                   ) : (
                     <span className="text-gray-300">&mdash;</span>

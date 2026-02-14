@@ -82,6 +82,9 @@ interface NeighborhoodEntry {
   topLandlords: TopLandlord[];
   nychaUnits: number;
   nychaShare: number;
+  universityUnits: number;
+  universityShare: number;
+  topUniversity: string | null;
   hpdViolationsPerUnit: number;
   medianRent: number;
   medianIncome: number | null;
@@ -134,6 +137,35 @@ function resolveNYCHA(name: string): string {
   return upper;
 }
 
+// University entity resolution: consolidate university owner-name variants
+const UNIVERSITY_MAP: [string, RegExp[]][] = [
+  ["COLUMBIA UNIVERSITY", [/^COLUMBIA\s+UNIV/, /^THE\s+TRUSTEES\s+OF\s+COLUMBIA/]],
+  ["NEW YORK UNIVERSITY", [/^NEW\s+YORK\s+UNIV/, /^NYU\b/]],
+  ["CUNY", [/^CUNY\b/, /^CITY\s+UNIV/]],
+  ["SUNY", [/^SUNY\b/, /^STATE\s+UNIV.*NEW\s+YORK/]],
+  ["FORDHAM UNIVERSITY", [/^FORDHAM\s+UNIV/]],
+  ["ST JOHNS UNIVERSITY", [/^ST\.?\s+JOHN'?S?\s+UNIV/]],
+  ["LONG ISLAND UNIVERSITY", [/^LONG\s+ISLAND\s+UNIV/, /^LIU\b/]],
+  ["COOPER UNION", [/^COOPER\s+UNION/]],
+  ["THE NEW SCHOOL", [/^THE\s+NEW\s+SCHOOL/, /^NEW\s+SCHOOL\s+UNIV/]],
+  ["PRATT INSTITUTE", [/^PRATT\s+INST/]],
+  ["PACE UNIVERSITY", [/^PACE\s+UNIV/]],
+  ["YESHIVA UNIVERSITY", [/^YESHIVA\s+UNIV/]],
+  ["NEW YORK INSTITUTE OF TECHNOLOGY", [/^NEW\s+YORK\s+INST.*TECH/, /^NYIT\b/]],
+];
+
+const UNIVERSITY_CANONICALS = new Set(UNIVERSITY_MAP.map(([name]) => name));
+
+function resolveUniversity(name: string): string | null {
+  const upper = name.trim().toUpperCase();
+  for (const [canonical, patterns] of UNIVERSITY_MAP) {
+    for (const pat of patterns) {
+      if (pat.test(upper)) return canonical;
+    }
+  }
+  return null;
+}
+
 function isPlaceholderOwner(raw: string): boolean {
   return PLACEHOLDER_OWNERS.has(raw.trim().toUpperCase());
 }
@@ -141,6 +173,10 @@ function isPlaceholderOwner(raw: string): boolean {
 function normalizeOwnerName(raw: string): string {
   // Resolve NYCHA variants before general normalization
   let name = resolveNYCHA(raw);
+
+  // Resolve university variants before general normalization
+  const uni = resolveUniversity(name);
+  if (uni) return uni;
 
   // Remove suffixes
   name = name.replace(SUFFIX_PATTERN, "");
@@ -331,6 +367,24 @@ function main() {
       ? Math.round((nychaUnits / totalUnits) * 1000) / 10
       : 0;
 
+    // University presence in this NTA
+    let universityUnits = 0;
+    let topUniversity: string | null = null;
+    let topUniversityUnits = 0;
+    for (const canonical of UNIVERSITY_CANONICALS) {
+      const units = ownerMap.get(canonical) || 0;
+      if (units > 0) {
+        universityUnits += units;
+        if (units > topUniversityUnits) {
+          topUniversityUnits = units;
+          topUniversity = titleCase(canonical);
+        }
+      }
+    }
+    const universityShare = totalUnits > 0
+      ? Math.round((universityUnits / totalUnits) * 1000) / 10
+      : 0;
+
     // Income data (from ACS if available)
     let medianIncome: number | null = null;
     let rentBurdenPct: number | null = null;
@@ -379,6 +433,9 @@ function main() {
       topLandlords,
       nychaUnits,
       nychaShare,
+      universityUnits,
+      universityShare,
+      topUniversity,
       hpdViolationsPerUnit: 0,
       medianRent: 0,
       medianIncome,
@@ -437,6 +494,16 @@ function main() {
   console.log("Top 5 NYCHA NTAs by share:");
   for (const n of topNycha) {
     console.log(`  ${n.name} (${n.borough}): ${n.nychaUnits.toLocaleString()} units, ${n.nychaShare}%`);
+  }
+
+  // University summary
+  const uniNeighborhoods = neighborhoods.filter((n) => n.universityUnits > 0);
+  const totalUniUnits = uniNeighborhoods.reduce((sum, n) => sum + n.universityUnits, 0);
+  const topUni = [...uniNeighborhoods].sort((a, b) => b.universityShare - a.universityShare).slice(0, 5);
+  console.log(`\nUniversities: ${totalUniUnits.toLocaleString()} units across ${uniNeighborhoods.length} NTAs`);
+  console.log("Top 5 university NTAs by share:");
+  for (const n of topUni) {
+    console.log(`  ${n.name} (${n.borough}): ${n.universityUnits.toLocaleString()} units, ${n.universityShare}% — ${n.topUniversity}`);
   }
 
   console.log("\nDone.");
