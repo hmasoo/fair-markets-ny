@@ -29,7 +29,7 @@ export function BroadbandCharts({
 }) {
   return (
     <ConcentrationSection
-      sectorName="Broadband Internet Access"
+      sectorName="Statewide ISP market share"
       geography="New York State"
       timeSeriesData={timeSeriesData}
       marketShareData={marketShareData}
@@ -37,7 +37,7 @@ export function BroadbandCharts({
       hhi={hhi}
       cr4={cr4}
       source="FCC Broadband Data Collection (BDC), ISP 10-K filings"
-      notes="HHI has remained above 3,000 for a decade, firmly in 'highly concentrated' territory. T-Mobile's fixed wireless service has provided marginal competition since 2021."
+      notes="Four ISPs have controlled nearly 90% of the market for over a decade. T-Mobile's fixed wireless service has provided marginal competition since 2021, but most households still choose between one or two wired options."
     />
   );
 }

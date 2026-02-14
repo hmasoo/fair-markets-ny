@@ -23,7 +23,7 @@ interface BroadbandMapSectionProps {
 }
 
 export function BroadbandMapSection({ counties }: BroadbandMapSectionProps) {
-  const [view, setView] = useState<ViewMode>("statewide");
+  const [view, setView] = useState<ViewMode>("nyc");
 
   return (
     <div>

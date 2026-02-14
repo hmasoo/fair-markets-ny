@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
-import { Badge } from "@/components/ui/Badge";
-import { getHHITextClass } from "@/lib/colorScales";
 import dynamic from "next/dynamic";
 
 const CountyCharts = dynamic(
@@ -28,9 +26,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const c = countyData.counties.find((c) => c.slug === slug);
   if (!c) return { title: "Not Found" };
   return {
-    title: `${c.name} — Broadband Competition`,
-    description: `ISP competition data for ${c.name}: ${c.providersAt100Mbps} providers at 100+ Mbps, HHI ${c.hhi}.`,
+    title: `${c.name} — Broadband Availability`,
+    description: `Internet choices in ${c.name}: ${c.providersAt100Mbps} providers at 100+ Mbps, ${c.zeroPctBlocks}% of blocks with no broadband option.`,
   };
+}
+
+function getHHILabel(hhi: number): string {
+  if (hhi > 5000) return "Near-Monopoly";
+  if (hhi > 2500) return "Highly Concentrated";
+  return "Moderate";
 }
 
 export default async function CountyPage({ params }: Props) {
@@ -38,6 +42,10 @@ export default async function CountyPage({ params }: Props) {
   const county = countyData.counties.find((c) => c.slug === slug);
 
   if (!county) notFound();
+
+  // Determine the dominant provider
+  const topProvider = county.topProviders[0];
+  const noChoicePct = county.zeroPctBlocks + county.onePctBlocks;
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -51,55 +59,60 @@ export default async function CountyPage({ params }: Props) {
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-fm-patina">{county.name}</h1>
         <p className="mt-1 text-fm-sage">
-          FIPS: {county.fips} &middot;{" "}
           {county.totalHouseholds.toLocaleString()} households
         </p>
       </div>
 
-      {/* Stats */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+      {/* Stats — lead with coverage gaps and choices */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
+        <div className="card text-center">
+          <div className={`text-2xl font-bold ${county.zeroPctBlocks >= 10 ? "text-red-600" : "text-fm-patina"}`}>
+            {county.zeroPctBlocks}%
+          </div>
+          <div className="text-xs text-fm-sage mt-1">
+            of blocks with no broadband
+          </div>
+        </div>
+        <div className="card text-center">
+          <div className="text-2xl font-bold text-fm-copper">
+            {noChoicePct}%
+          </div>
+          <div className="text-xs text-fm-sage mt-1">
+            with zero or one provider
+          </div>
+        </div>
         <div className="card text-center">
           <div className="text-2xl font-bold text-fm-patina">
             {county.providersAt100Mbps}
           </div>
           <div className="text-xs text-fm-sage mt-1">
-            Providers at 100+ Mbps
+            providers at 100+ Mbps
           </div>
         </div>
         <div className="card text-center">
-          <div className={`text-2xl font-bold ${getHHITextClass(county.hhi)}`}>
-            {county.hhi.toLocaleString()}
+          <div className="text-2xl font-bold text-fm-copper">
+            {topProvider.share}%
           </div>
-          <div className="text-xs text-fm-sage mt-1">HHI</div>
-          <Badge
-            variant={
-              county.hhi > 5000
-                ? "red"
-                : county.hhi > 2500
-                ? "yellow"
-                : "green"
-            }
-          >
-            {county.hhi > 5000
-              ? "Near-Monopoly"
-              : county.hhi > 2500
-              ? "Highly Concentrated"
-              : "Moderate"}
-          </Badge>
-        </div>
-        <div className="card text-center">
-          <div className="text-2xl font-bold text-fm-patina">
-            {county.zeroPctBlocks}%
+          <div className="text-xs text-fm-sage mt-1">
+            market share ({topProvider.name})
           </div>
-          <div className="text-xs text-fm-sage mt-1">Zero-Provider Blocks</div>
-        </div>
-        <div className="card text-center">
-          <div className="text-2xl font-bold text-fm-patina">
-            {county.onePctBlocks}%
-          </div>
-          <div className="text-xs text-fm-sage mt-1">One-Provider Blocks</div>
         </div>
       </div>
+
+      {/* Collapsible technical details */}
+      <details className="mb-8 text-sm">
+        <summary className="text-fm-sage cursor-pointer hover:text-fm-patina font-medium">
+          Technical metrics (for researchers)
+        </summary>
+        <div className="mt-2 pl-4 border-l-2 border-gray-200 space-y-1 text-fm-sage">
+          <p>
+            HHI: <strong className="text-fm-patina">{county.hhi.toLocaleString()}</strong> — {getHHILabel(county.hhi)}
+          </p>
+          <p>
+            One-provider blocks: <strong className="text-fm-patina">{county.onePctBlocks}%</strong>
+          </p>
+        </div>
+      </details>
 
       {/* Provider chart */}
       <CountyCharts

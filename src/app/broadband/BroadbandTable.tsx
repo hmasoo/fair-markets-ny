@@ -19,7 +19,8 @@ const DEFAULT_ROWS = 20;
 
 export function BroadbandTable({ counties }: { counties: County[] }) {
   const [showAll, setShowAll] = useState(false);
-  const sorted = [...counties].sort((a, b) => b.hhi - a.hhi);
+  // Sort by zero-provider blocks descending (worst-served first)
+  const sorted = [...counties].sort((a, b) => b.zeroPctBlocks - a.zeroPctBlocks);
   const visible = showAll ? sorted : sorted.slice(0, DEFAULT_ROWS);
   const hasMore = sorted.length > DEFAULT_ROWS;
 
@@ -33,19 +34,19 @@ export function BroadbandTable({ counties }: { counties: County[] }) {
                 County
               </th>
               <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                Households
+                Zero-Provider Blocks
+              </th>
+              <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
+                One-Provider Blocks
               </th>
               <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
                 100+ Mbps Providers
               </th>
               <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
+                Households
+              </th>
+              <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
                 HHI
-              </th>
-              <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                Zero-Provider Blocks
-              </th>
-              <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                One-Provider Blocks
               </th>
             </tr>
           </thead>
@@ -64,10 +65,26 @@ export function BroadbandTable({ counties }: { counties: County[] }) {
                   </Link>
                 </td>
                 <td className="px-4 py-3 text-sm text-right">
-                  {c.totalHouseholds.toLocaleString()}
+                  <span
+                    className={
+                      c.zeroPctBlocks >= 20
+                        ? "text-red-600 font-medium"
+                        : c.zeroPctBlocks >= 10
+                        ? "text-amber-600"
+                        : ""
+                    }
+                  >
+                    {c.zeroPctBlocks}%
+                  </span>
+                </td>
+                <td className="px-4 py-3 text-sm text-right">
+                  {c.onePctBlocks}%
                 </td>
                 <td className="px-4 py-3 text-sm text-right font-medium">
                   {c.providersAt100Mbps}
+                </td>
+                <td className="px-4 py-3 text-sm text-right">
+                  {c.totalHouseholds.toLocaleString()}
                 </td>
                 <td className="px-4 py-3 text-sm text-right">
                   <Badge
@@ -81,12 +98,6 @@ export function BroadbandTable({ counties }: { counties: County[] }) {
                   >
                     {c.hhi.toLocaleString()}
                   </Badge>
-                </td>
-                <td className="px-4 py-3 text-sm text-right">
-                  {c.zeroPctBlocks}%
-                </td>
-                <td className="px-4 py-3 text-sm text-right">
-                  {c.onePctBlocks}%
                 </td>
               </tr>
             ))}
