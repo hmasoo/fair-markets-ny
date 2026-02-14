@@ -2,7 +2,7 @@
   "source": "MTA Board Resolutions (fare increases)",
   "sourceUrl": "https://new.mta.info/fares",
   "inflationBasis": "BLS CPI-U All Items, annual average, adjusted to 2024 dollars",
-  "notes": "Base fare is the single-ride subway/bus fare. Monthly pass is the 30-day unlimited MetroCard (OMNY equivalent from 2024).",
+  "notes": "Base fare is the single-ride subway/bus fare. Monthly pass is the 30-day unlimited MetroCard through 2023; from 2026, the MetroCard was retired and replaced by OMNY's weekly fare cap ($35/week, rides free after 12th). The 2026 monthly figure is estimated as a regular commuter equivalent (10 rides/week × base fare × 4.33 weeks).",
   "fares": [
     {
       "year": 2003,
@@ -77,12 +77,13 @@
       "monthlyPassReal2024": 136.09
     },
     {
-      "year": 2025,
-      "effectiveDate": "2025-08-01",
-      "baseFare": 2.90,
-      "monthlyPass": 132.00,
-      "baseFareReal2024": 2.88,
-      "monthlyPassReal2024": 131.08
+      "year": 2026,
+      "effectiveDate": "2026-01-04",
+      "baseFare": 3.00,
+      "monthlyPass": 130.00,
+      "baseFareReal2024": 2.86,
+      "monthlyPassReal2024": 124.00,
+      "notes": "30-day unlimited MetroCard retired. Monthly equivalent estimated as 10 rides/week × $3.00 × 4.33 weeks ≈ $130. OMNY weekly fare cap is $35 (rides free after 12th)."
     }
   ]
 }

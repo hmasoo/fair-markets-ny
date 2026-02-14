@@ -18,6 +18,7 @@ interface FareEntry {
   monthlyPass: number;
   baseFareReal2024: number;
   monthlyPassReal2024: number;
+  notes?: string;
 }
 
 export function FareHistoryChart({ fares }: { fares: FareEntry[] }) {

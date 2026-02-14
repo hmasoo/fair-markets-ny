@@ -64,7 +64,7 @@ interface NeighborhoodMapping {
 }
 
 // Cost model constants
-const METROCARD_MONTHLY = 132;
+const METROCARD_MONTHLY = 130; // Regular commuter: 10 rides/week × $3.00 × 4.33 weeks (OMNY replaced MetroCard Jan 2026)
 const VEHICLE_MONTHLY = 780; // AAA Your Driving Costs 2024, Northeast
 const MIN_WORKERS = 200; // Skip parks, cemeteries, and other very small NTAs
 
@@ -312,7 +312,7 @@ function main() {
       "U.S. Census Bureau, ACS 2023 5-Year Estimates (Tables B08301, B08013, B25044)",
     costModel: {
       description:
-        "Estimated monthly commute cost = transit% \u00d7 $132 (monthly MetroCard) + drove% \u00d7 $780 (AAA monthly vehicle cost)",
+        "Estimated monthly commute cost = transit% \u00d7 $130 (regular commuter OMNY equivalent: 10 rides/week \u00d7 $3.00 \u00d7 4.33 weeks) + drove% \u00d7 $780 (AAA monthly vehicle cost)",
       metroCardMonthly: METROCARD_MONTHLY,
       vehicleMonthlyCost: VEHICLE_MONTHLY,
       sources: {

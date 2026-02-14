@@ -24,8 +24,8 @@ export default function TransportationPage() {
   const { fares } = fareData;
 
   // Stats for hero section
-  const highestZeroCar = [...neighborhoods].sort(
-    (a, b) => b.zeroCarPct - a.zeroCarPct,
+  const highestCost = [...neighborhoods].sort(
+    (a, b) => b.estMonthlyCost - a.estMonthlyCost,
   )[0];
   const totalWorkers = neighborhoods.reduce((s, n) => s + n.workers, 0);
   const weightedTransit =
@@ -54,24 +54,24 @@ export default function TransportationPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <div className="card text-center">
           <div className="text-3xl font-bold text-fm-copper">
-            ${currentFare.monthlyPass}
+            ${currentFare.baseFare.toFixed(2)}
           </div>
           <div className="text-sm text-fm-sage mt-1">
-            monthly MetroCard
+            per ride (OMNY / MetroCard)
           </div>
           <div className="text-xs text-fm-sage">
-            ${currentFare.baseFare.toFixed(2)} per ride
+            $35/week fare cap
           </div>
         </div>
         <div className="card text-center">
           <div className="text-3xl font-bold text-fm-copper">
-            {highestZeroCar.zeroCarPct}%
+            ${highestCost.estMonthlyCost}
           </div>
           <div className="text-sm text-fm-sage mt-1">
-            households with no car
+            highest est. monthly commute
           </div>
           <div className="text-xs text-fm-sage">
-            {highestZeroCar.name}
+            {highestCost.name}
           </div>
         </div>
         <div className="card text-center">
@@ -173,7 +173,7 @@ export default function TransportationPage() {
         </h2>
         <p className="text-sm text-fm-sage mb-4">
           Click any column header to sort. Estimated monthly cost combines
-          transit usage (at ${costModel.metroCardMonthly}/mo MetroCard) and
+          transit usage (at ${costModel.metroCardMonthly}/mo via OMNY) and
           driving (at ${costModel.vehicleMonthlyCost}/mo per AAA).
         </p>
         <TransportationTable neighborhoods={neighborhoods} />
@@ -183,7 +183,8 @@ export default function TransportationPage() {
           </summary>
           <p className="mt-2 leading-relaxed">
             {costModel.description}. This is a rough estimate: it assumes transit
-            commuters buy a monthly pass (${costModel.metroCardMonthly}) and
+            commuters pay about ${costModel.metroCardMonthly}/month (regular commuter
+            equivalent via OMNY) and
             drivers bear the average monthly vehicle cost for the Northeast region
             (${costModel.vehicleMonthlyCost}, from{" "}
             {costModel.sources.vehicleCost}). The blended cost for each

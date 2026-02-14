@@ -3,8 +3,8 @@
   "geography": "NYC Neighborhoods",
   "source": "U.S. Census Bureau, ACS 2023 5-Year Estimates (Tables B08301, B08013, B25044)",
   "costModel": {
-    "description": "Estimated monthly commute cost = transit% × $132 (monthly MetroCard) + drove% × $780 (AAA monthly vehicle cost)",
-    "metroCardMonthly": 132,
+    "description": "Estimated monthly commute cost = transit% × $130 (regular commuter OMNY equivalent: 10 rides/week × $3.00 × 4.33 weeks) + drove% × $780 (AAA monthly vehicle cost)",
+    "metroCardMonthly": 130,
     "vehicleMonthlyCost": 780,
     "sources": {
       "metroCard": "MTA fare schedule, effective August 2023",
@@ -100,7 +100,7 @@
       "zeroCarPct": 11.5,
       "avgCommuteMins": 43,
       "medianIncome": 103428,
-      "estMonthlyCost": 488
+      "estMonthlyCost": 487
     },
     {
       "name": "Breezy Point-Belle Harbor-Rockaway Park-Broad Channel",
@@ -118,7 +118,7 @@
       "zeroCarPct": 17.2,
       "avgCommuteMins": 42,
       "medianIncome": 117846,
-      "estMonthlyCost": 487
+      "estMonthlyCost": 486
     },
     {
       "name": "Whitestone-Beechhurst",
@@ -172,7 +172,7 @@
       "zeroCarPct": 7.3,
       "avgCommuteMins": 47,
       "medianIncome": 120196,
-      "estMonthlyCost": 479
+      "estMonthlyCost": 478
     },
     {
       "name": "Cambria Heights",
@@ -226,7 +226,7 @@
       "zeroCarPct": 13.3,
       "avgCommuteMins": 41,
       "medianIncome": 110672,
-      "estMonthlyCost": 464
+      "estMonthlyCost": 463
     },
     {
       "name": "Bellerose",
@@ -298,7 +298,7 @@
       "zeroCarPct": 25.4,
       "avgCommuteMins": 41,
       "medianIncome": 83573,
-      "estMonthlyCost": 434
+      "estMonthlyCost": 433
     },
     {
       "name": "Springfield Gardens (South)-Brookville",
@@ -316,25 +316,7 @@
       "zeroCarPct": 17.3,
       "avgCommuteMins": 47,
       "medianIncome": 110886,
-      "estMonthlyCost": 434
-    },
-    {
-      "name": "College Point",
-      "slug": "college-point",
-      "borough": "Queens",
-      "ntaCodes": [
-        "QN0701"
-      ],
-      "workers": 13436,
-      "transitPct": 29.2,
-      "drovePct": 50.4,
-      "carpoolPct": 8.6,
-      "walkBikePct": 4,
-      "wfhPct": 6.6,
-      "zeroCarPct": 19.3,
-      "avgCommuteMins": 44,
-      "medianIncome": 93766,
-      "estMonthlyCost": 432
+      "estMonthlyCost": 433
     },
     {
       "name": "Mariner's Harbor-Arlington-Graniteville",
@@ -355,6 +337,24 @@
       "estMonthlyCost": 432
     },
     {
+      "name": "College Point",
+      "slug": "college-point",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN0701"
+      ],
+      "workers": 13436,
+      "transitPct": 29.2,
+      "drovePct": 50.4,
+      "carpoolPct": 8.6,
+      "walkBikePct": 4,
+      "wfhPct": 6.6,
+      "zeroCarPct": 19.3,
+      "avgCommuteMins": 44,
+      "medianIncome": 93766,
+      "estMonthlyCost": 431
+    },
+    {
       "name": "Laurelton",
       "slug": "laurelton",
       "borough": "Queens",
@@ -370,24 +370,6 @@
       "zeroCarPct": 14.8,
       "avgCommuteMins": 49,
       "medianIncome": 111425,
-      "estMonthlyCost": 430
-    },
-    {
-      "name": "Rosedale",
-      "slug": "rosedale",
-      "borough": "Queens",
-      "ntaCodes": [
-        "QN1307"
-      ],
-      "workers": 13039,
-      "transitPct": 30.7,
-      "drovePct": 49.9,
-      "carpoolPct": 4.6,
-      "walkBikePct": 1.7,
-      "wfhPct": 10.9,
-      "zeroCarPct": 15.3,
-      "avgCommuteMins": 50,
-      "medianIncome": 111831,
       "estMonthlyCost": 430
     },
     {
@@ -424,6 +406,24 @@
       "zeroCarPct": 15.1,
       "avgCommuteMins": 40,
       "medianIncome": 108440,
+      "estMonthlyCost": 429
+    },
+    {
+      "name": "Rosedale",
+      "slug": "rosedale",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN1307"
+      ],
+      "workers": 13039,
+      "transitPct": 30.7,
+      "drovePct": 49.9,
+      "carpoolPct": 4.6,
+      "walkBikePct": 1.7,
+      "wfhPct": 10.9,
+      "zeroCarPct": 15.3,
+      "avgCommuteMins": 50,
+      "medianIncome": 111831,
       "estMonthlyCost": 429
     },
     {
@@ -478,7 +478,7 @@
       "zeroCarPct": 19.5,
       "avgCommuteMins": 47,
       "medianIncome": 102304,
-      "estMonthlyCost": 413
+      "estMonthlyCost": 412
     },
     {
       "name": "Port Richmond",
@@ -499,24 +499,6 @@
       "estMonthlyCost": 412
     },
     {
-      "name": "Pelham Gardens",
-      "slug": "pelham-gardens",
-      "borough": "Bronx",
-      "ntaCodes": [
-        "BX1103"
-      ],
-      "workers": 12118,
-      "transitPct": 34.9,
-      "drovePct": 46.4,
-      "carpoolPct": 6.4,
-      "walkBikePct": 4.1,
-      "wfhPct": 7,
-      "zeroCarPct": 26.9,
-      "avgCommuteMins": 41,
-      "medianIncome": 89236,
-      "estMonthlyCost": 408
-    },
-    {
       "name": "Douglaston-Little Neck",
       "slug": "douglaston-little-neck",
       "borough": "Queens",
@@ -533,6 +515,24 @@
       "avgCommuteMins": 39,
       "medianIncome": 114648,
       "estMonthlyCost": 408
+    },
+    {
+      "name": "Pelham Gardens",
+      "slug": "pelham-gardens",
+      "borough": "Bronx",
+      "ntaCodes": [
+        "BX1103"
+      ],
+      "workers": 12118,
+      "transitPct": 34.9,
+      "drovePct": 46.4,
+      "carpoolPct": 6.4,
+      "walkBikePct": 4.1,
+      "wfhPct": 7,
+      "zeroCarPct": 26.9,
+      "avgCommuteMins": 41,
+      "medianIncome": 89236,
+      "estMonthlyCost": 407
     },
     {
       "name": "West New Brighton-Silver Lake-Grymes Hill",
@@ -568,7 +568,7 @@
       "zeroCarPct": 19.8,
       "avgCommuteMins": 44,
       "medianIncome": 97495,
-      "estMonthlyCost": 401
+      "estMonthlyCost": 400
     },
     {
       "name": "Bayside",
@@ -604,7 +604,7 @@
       "zeroCarPct": 29.2,
       "avgCommuteMins": 48,
       "medianIncome": 78603,
-      "estMonthlyCost": 393
+      "estMonthlyCost": 392
     },
     {
       "name": "Soundview-Clason Point",
@@ -622,25 +622,7 @@
       "zeroCarPct": 46.5,
       "avgCommuteMins": 43,
       "medianIncome": 55886,
-      "estMonthlyCost": 391
-    },
-    {
-      "name": "South Ozone Park",
-      "slug": "south-ozone-park",
-      "borough": "Queens",
-      "ntaCodes": [
-        "QN1001"
-      ],
-      "workers": 37566,
-      "transitPct": 36.7,
-      "drovePct": 43,
-      "carpoolPct": 7.5,
-      "walkBikePct": 3.8,
-      "wfhPct": 7.4,
-      "zeroCarPct": 21.9,
-      "avgCommuteMins": 46,
-      "medianIncome": 100685,
-      "estMonthlyCost": 384
+      "estMonthlyCost": 390
     },
     {
       "name": "Auburndale",
@@ -659,6 +641,24 @@
       "avgCommuteMins": 42,
       "medianIncome": 92391,
       "estMonthlyCost": 384
+    },
+    {
+      "name": "South Ozone Park",
+      "slug": "south-ozone-park",
+      "borough": "Queens",
+      "ntaCodes": [
+        "QN1001"
+      ],
+      "workers": 37566,
+      "transitPct": 36.7,
+      "drovePct": 43,
+      "carpoolPct": 7.5,
+      "walkBikePct": 3.8,
+      "wfhPct": 7.4,
+      "zeroCarPct": 21.9,
+      "avgCommuteMins": 46,
+      "medianIncome": 100685,
+      "estMonthlyCost": 383
     },
     {
       "name": "Rosebank-Shore Acres-Park Hill",
@@ -694,7 +694,7 @@
       "zeroCarPct": 24.2,
       "avgCommuteMins": 45,
       "medianIncome": 94387,
-      "estMonthlyCost": 375
+      "estMonthlyCost": 374
     },
     {
       "name": "Grasmere-Arrochar-South Beach-Dongan Hills",
@@ -712,7 +712,7 @@
       "zeroCarPct": 18.3,
       "avgCommuteMins": 44,
       "medianIncome": 80841,
-      "estMonthlyCost": 372
+      "estMonthlyCost": 371
     },
     {
       "name": "Hollis",
@@ -802,7 +802,7 @@
       "zeroCarPct": 17.6,
       "avgCommuteMins": 45,
       "medianIncome": 110184,
-      "estMonthlyCost": 360
+      "estMonthlyCost": 359
     },
     {
       "name": "Kew Gardens Hills",
@@ -820,7 +820,7 @@
       "zeroCarPct": 26.4,
       "avgCommuteMins": 43,
       "medianIncome": 85786,
-      "estMonthlyCost": 359
+      "estMonthlyCost": 358
     },
     {
       "name": "Wakefield-Woodlawn",
@@ -838,7 +838,7 @@
       "zeroCarPct": 37.7,
       "avgCommuteMins": 43,
       "medianIncome": 83863,
-      "estMonthlyCost": 356
+      "estMonthlyCost": 355
     },
     {
       "name": "South Jamaica",
@@ -856,7 +856,7 @@
       "zeroCarPct": 30.4,
       "avgCommuteMins": 46,
       "medianIncome": 76470,
-      "estMonthlyCost": 356
+      "estMonthlyCost": 355
     },
     {
       "name": "Jamaica Estates-Holliswood",
@@ -874,7 +874,7 @@
       "zeroCarPct": 26.7,
       "avgCommuteMins": 42,
       "medianIncome": 88780,
-      "estMonthlyCost": 349
+      "estMonthlyCost": 348
     },
     {
       "name": "Maspeth",
@@ -892,7 +892,7 @@
       "zeroCarPct": 25.3,
       "avgCommuteMins": 41,
       "medianIncome": 85500,
-      "estMonthlyCost": 348
+      "estMonthlyCost": 347
     },
     {
       "name": "Glendale",
@@ -910,7 +910,7 @@
       "zeroCarPct": 25.9,
       "avgCommuteMins": 42,
       "medianIncome": 95812,
-      "estMonthlyCost": 347
+      "estMonthlyCost": 346
     },
     {
       "name": "Pomonok-Electchester-Hillcrest",
@@ -946,7 +946,7 @@
       "zeroCarPct": 14.2,
       "avgCommuteMins": 40,
       "medianIncome": 97303,
-      "estMonthlyCost": 345
+      "estMonthlyCost": 344
     },
     {
       "name": "Queensboro Hill",
@@ -982,7 +982,7 @@
       "zeroCarPct": 40.9,
       "avgCommuteMins": 44,
       "medianIncome": 70143,
-      "estMonthlyCost": 339
+      "estMonthlyCost": 338
     },
     {
       "name": "Canarsie",
@@ -1000,7 +1000,7 @@
       "zeroCarPct": 34.8,
       "avgCommuteMins": 51,
       "medianIncome": 83564,
-      "estMonthlyCost": 337
+      "estMonthlyCost": 336
     },
     {
       "name": "Richmond Hill",
@@ -1018,7 +1018,7 @@
       "zeroCarPct": 33.4,
       "avgCommuteMins": 46,
       "medianIncome": 86877,
-      "estMonthlyCost": 337
+      "estMonthlyCost": 336
     },
     {
       "name": "Flatlands",
@@ -1036,7 +1036,7 @@
       "zeroCarPct": 35.1,
       "avgCommuteMins": 47,
       "medianIncome": 84894,
-      "estMonthlyCost": 335
+      "estMonthlyCost": 334
     },
     {
       "name": "Ozone Park",
@@ -1054,7 +1054,7 @@
       "zeroCarPct": 26.3,
       "avgCommuteMins": 45,
       "medianIncome": 85568,
-      "estMonthlyCost": 331
+      "estMonthlyCost": 330
     },
     {
       "name": "Tompkinsville-Stapleton-Clifton-Fox Hills",
@@ -1072,7 +1072,7 @@
       "zeroCarPct": 40.3,
       "avgCommuteMins": 39,
       "medianIncome": 54151,
-      "estMonthlyCost": 331
+      "estMonthlyCost": 330
     },
     {
       "name": "Murray Hill-Broadway Flushing",
@@ -1090,7 +1090,7 @@
       "zeroCarPct": 28,
       "avgCommuteMins": 40,
       "medianIncome": 72910,
-      "estMonthlyCost": 330
+      "estMonthlyCost": 329
     },
     {
       "name": "East Elmhurst",
@@ -1108,7 +1108,7 @@
       "zeroCarPct": 27,
       "avgCommuteMins": 44,
       "medianIncome": 79969,
-      "estMonthlyCost": 327
+      "estMonthlyCost": 326
     },
     {
       "name": "St. George-New Brighton",
@@ -1144,7 +1144,7 @@
       "zeroCarPct": 33.4,
       "avgCommuteMins": 39,
       "medianIncome": 80603,
-      "estMonthlyCost": 319
+      "estMonthlyCost": 318
     },
     {
       "name": "South Richmond Hill",
@@ -1162,7 +1162,7 @@
       "zeroCarPct": 26.7,
       "avgCommuteMins": 46,
       "medianIncome": 85751,
-      "estMonthlyCost": 315
+      "estMonthlyCost": 314
     },
     {
       "name": "Ozone Park (North)",
@@ -1180,7 +1180,7 @@
       "zeroCarPct": 26.7,
       "avgCommuteMins": 46,
       "medianIncome": 87239,
-      "estMonthlyCost": 309
+      "estMonthlyCost": 308
     },
     {
       "name": "Sheepshead Bay-Manhattan Beach-Gerritsen Beach",
@@ -1198,7 +1198,7 @@
       "zeroCarPct": 38.7,
       "avgCommuteMins": 45,
       "medianIncome": 77439,
-      "estMonthlyCost": 308
+      "estMonthlyCost": 307
     },
     {
       "name": "Williamsbridge-Olinville",
@@ -1216,7 +1216,7 @@
       "zeroCarPct": 48.9,
       "avgCommuteMins": 44,
       "medianIncome": 58710,
-      "estMonthlyCost": 307
+      "estMonthlyCost": 306
     },
     {
       "name": "Castle Hill-Unionport",
@@ -1234,7 +1234,7 @@
       "zeroCarPct": 46.8,
       "avgCommuteMins": 44,
       "medianIncome": 53612,
-      "estMonthlyCost": 306
+      "estMonthlyCost": 305
     },
     {
       "name": "Jamaica Hills-Briarwood",
@@ -1252,7 +1252,7 @@
       "zeroCarPct": 37.3,
       "avgCommuteMins": 43,
       "medianIncome": 88481,
-      "estMonthlyCost": 304
+      "estMonthlyCost": 303
     },
     {
       "name": "East Flushing",
@@ -1288,7 +1288,7 @@
       "zeroCarPct": 36.6,
       "avgCommuteMins": 47,
       "medianIncome": 78287,
-      "estMonthlyCost": 288
+      "estMonthlyCost": 287
     },
     {
       "name": "Cypress Hills",
@@ -1306,7 +1306,7 @@
       "zeroCarPct": 54,
       "avgCommuteMins": 45,
       "medianIncome": 68133,
-      "estMonthlyCost": 285
+      "estMonthlyCost": 284
     },
     {
       "name": "East New York-New Lots",
@@ -1324,7 +1324,7 @@
       "zeroCarPct": 60.7,
       "avgCommuteMins": 48,
       "medianIncome": 58540,
-      "estMonthlyCost": 283
+      "estMonthlyCost": 282
     },
     {
       "name": "East New York-City Line",
@@ -1342,7 +1342,7 @@
       "zeroCarPct": 59.9,
       "avgCommuteMins": 45,
       "medianIncome": 53082,
-      "estMonthlyCost": 282
+      "estMonthlyCost": 281
     },
     {
       "name": "Riverdale-Spuyten Duyvil",
@@ -1360,7 +1360,7 @@
       "zeroCarPct": 29.7,
       "avgCommuteMins": 44,
       "medianIncome": 112299,
-      "estMonthlyCost": 276
+      "estMonthlyCost": 275
     },
     {
       "name": "Gravesend (South)",
@@ -1378,7 +1378,7 @@
       "zeroCarPct": 44.3,
       "avgCommuteMins": 45,
       "medianIncome": 63482,
-      "estMonthlyCost": 275
+      "estMonthlyCost": 274
     },
     {
       "name": "Co-op City",
@@ -1396,7 +1396,7 @@
       "zeroCarPct": 44.5,
       "avgCommuteMins": 51,
       "medianIncome": 64555,
-      "estMonthlyCost": 271
+      "estMonthlyCost": 270
     },
     {
       "name": "Woodhaven",
@@ -1414,24 +1414,6 @@
       "zeroCarPct": 30.5,
       "avgCommuteMins": 48,
       "medianIncome": 90827,
-      "estMonthlyCost": 271
-    },
-    {
-      "name": "East Flatbush-Farragut",
-      "slug": "east-flatbush-farragut",
-      "borough": "Brooklyn",
-      "ntaCodes": [
-        "BK1702"
-      ],
-      "workers": 15051,
-      "transitPct": 58.9,
-      "drovePct": 24.6,
-      "carpoolPct": 3.8,
-      "walkBikePct": 3.7,
-      "wfhPct": 7.1,
-      "zeroCarPct": 44.7,
-      "avgCommuteMins": 47,
-      "medianIncome": 76531,
       "estMonthlyCost": 270
     },
     {
@@ -1450,7 +1432,25 @@
       "zeroCarPct": 55.7,
       "avgCommuteMins": 44,
       "medianIncome": 58799,
-      "estMonthlyCost": 269
+      "estMonthlyCost": 268
+    },
+    {
+      "name": "East Flatbush-Farragut",
+      "slug": "east-flatbush-farragut",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1702"
+      ],
+      "workers": 15051,
+      "transitPct": 58.9,
+      "drovePct": 24.6,
+      "carpoolPct": 3.8,
+      "walkBikePct": 3.7,
+      "wfhPct": 7.1,
+      "zeroCarPct": 44.7,
+      "avgCommuteMins": 47,
+      "medianIncome": 76531,
+      "estMonthlyCost": 268
     },
     {
       "name": "Pelham Parkway-Van Nest",
@@ -1468,7 +1468,7 @@
       "zeroCarPct": 51.4,
       "avgCommuteMins": 43,
       "medianIncome": 70044,
-      "estMonthlyCost": 269
+      "estMonthlyCost": 268
     },
     {
       "name": "East Flatbush-Rugby",
@@ -1486,7 +1486,7 @@
       "zeroCarPct": 48.3,
       "avgCommuteMins": 47,
       "medianIncome": 69843,
-      "estMonthlyCost": 267
+      "estMonthlyCost": 266
     },
     {
       "name": "Spring Creek-Starrett City",
@@ -1504,7 +1504,7 @@
       "zeroCarPct": 70.9,
       "avgCommuteMins": 50,
       "medianIncome": 36304,
-      "estMonthlyCost": 264
+      "estMonthlyCost": 263
     },
     {
       "name": "Gravesend (East)-Homecrest",
@@ -1522,7 +1522,7 @@
       "zeroCarPct": 38.3,
       "avgCommuteMins": 44,
       "medianIncome": 73379,
-      "estMonthlyCost": 259
+      "estMonthlyCost": 258
     },
     {
       "name": "Kew Gardens",
@@ -1540,7 +1540,7 @@
       "zeroCarPct": 42.7,
       "avgCommuteMins": 41,
       "medianIncome": 91956,
-      "estMonthlyCost": 259
+      "estMonthlyCost": 258
     },
     {
       "name": "Mapleton-Midwood (West)",
@@ -1576,7 +1576,7 @@
       "zeroCarPct": 40.2,
       "avgCommuteMins": 42,
       "medianIncome": 76918,
-      "estMonthlyCost": 256
+      "estMonthlyCost": 255
     },
     {
       "name": "Allerton",
@@ -1594,7 +1594,7 @@
       "zeroCarPct": 61,
       "avgCommuteMins": 45,
       "medianIncome": 44499,
-      "estMonthlyCost": 255
+      "estMonthlyCost": 254
     },
     {
       "name": "Morrisania",
@@ -1612,7 +1612,7 @@
       "zeroCarPct": 76.8,
       "avgCommuteMins": 42,
       "medianIncome": 32852,
-      "estMonthlyCost": 254
+      "estMonthlyCost": 253
     },
     {
       "name": "Tremont",
@@ -1630,7 +1630,7 @@
       "zeroCarPct": 70.5,
       "avgCommuteMins": 44,
       "medianIncome": 37352,
-      "estMonthlyCost": 251
+      "estMonthlyCost": 250
     },
     {
       "name": "East Flatbush-Remsen Village",
@@ -1648,7 +1648,7 @@
       "zeroCarPct": 62.6,
       "avgCommuteMins": 49,
       "medianIncome": 58515,
-      "estMonthlyCost": 250
+      "estMonthlyCost": 248
     },
     {
       "name": "Soundview-Bruckner-Bronx River",
@@ -1666,7 +1666,7 @@
       "zeroCarPct": 62.6,
       "avgCommuteMins": 46,
       "medianIncome": 45333,
-      "estMonthlyCost": 249
+      "estMonthlyCost": 248
     },
     {
       "name": "Westchester Square",
@@ -1684,7 +1684,7 @@
       "zeroCarPct": 52.8,
       "avgCommuteMins": 45,
       "medianIncome": 53874,
-      "estMonthlyCost": 248
+      "estMonthlyCost": 247
     },
     {
       "name": "Coney Island-Sea Gate",
@@ -1702,7 +1702,7 @@
       "zeroCarPct": 57.6,
       "avgCommuteMins": 47,
       "medianIncome": 44193,
-      "estMonthlyCost": 247
+      "estMonthlyCost": 246
     },
     {
       "name": "Midwood",
@@ -1720,7 +1720,7 @@
       "zeroCarPct": 44,
       "avgCommuteMins": 41,
       "medianIncome": 70963,
-      "estMonthlyCost": 246
+      "estMonthlyCost": 245
     },
     {
       "name": "Forest Hills",
@@ -1738,7 +1738,7 @@
       "zeroCarPct": 43.4,
       "avgCommuteMins": 45,
       "medianIncome": 104316,
-      "estMonthlyCost": 246
+      "estMonthlyCost": 245
     },
     {
       "name": "Jamaica",
@@ -1756,7 +1756,7 @@
       "zeroCarPct": 54.5,
       "avgCommuteMins": 47,
       "medianIncome": 61851,
-      "estMonthlyCost": 246
+      "estMonthlyCost": 245
     },
     {
       "name": "Ocean Hill",
@@ -1774,7 +1774,7 @@
       "zeroCarPct": 63.3,
       "avgCommuteMins": 40,
       "medianIncome": 59412,
-      "estMonthlyCost": 244
+      "estMonthlyCost": 243
     },
     {
       "name": "Claremont Village-Claremont (East)",
@@ -1792,7 +1792,7 @@
       "zeroCarPct": 76.1,
       "avgCommuteMins": 42,
       "medianIncome": 29293,
-      "estMonthlyCost": 242
+      "estMonthlyCost": 241
     },
     {
       "name": "Crotona Park East",
@@ -1810,43 +1810,7 @@
       "zeroCarPct": 68,
       "avgCommuteMins": 44,
       "medianIncome": 40184,
-      "estMonthlyCost": 241
-    },
-    {
-      "name": "Gravesend (West)",
-      "slug": "gravesend-west",
-      "borough": "Brooklyn",
-      "ntaCodes": [
-        "BK1103"
-      ],
-      "workers": 23551,
-      "transitPct": 46.9,
-      "drovePct": 22.7,
-      "carpoolPct": 6.4,
-      "walkBikePct": 9.5,
-      "wfhPct": 13.6,
-      "zeroCarPct": 41.2,
-      "avgCommuteMins": 45,
-      "medianIncome": 74684,
-      "estMonthlyCost": 239
-    },
-    {
-      "name": "Bay Ridge",
-      "slug": "bay-ridge",
-      "borough": "Brooklyn",
-      "ntaCodes": [
-        "BK1001"
-      ],
-      "workers": 39878,
-      "transitPct": 43.5,
-      "drovePct": 23.1,
-      "carpoolPct": 3.7,
-      "walkBikePct": 7.7,
-      "wfhPct": 20.2,
-      "zeroCarPct": 46.3,
-      "avgCommuteMins": 44,
-      "medianIncome": 94438,
-      "estMonthlyCost": 238
+      "estMonthlyCost": 240
     },
     {
       "name": "Fort Hamilton",
@@ -1867,6 +1831,42 @@
       "estMonthlyCost": 238
     },
     {
+      "name": "Gravesend (West)",
+      "slug": "gravesend-west",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1103"
+      ],
+      "workers": 23551,
+      "transitPct": 46.9,
+      "drovePct": 22.7,
+      "carpoolPct": 6.4,
+      "walkBikePct": 9.5,
+      "wfhPct": 13.6,
+      "zeroCarPct": 41.2,
+      "avgCommuteMins": 45,
+      "medianIncome": 74684,
+      "estMonthlyCost": 238
+    },
+    {
+      "name": "Bay Ridge",
+      "slug": "bay-ridge",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK1001"
+      ],
+      "workers": 39878,
+      "transitPct": 43.5,
+      "drovePct": 23.1,
+      "carpoolPct": 3.7,
+      "walkBikePct": 7.7,
+      "wfhPct": 20.2,
+      "zeroCarPct": 46.3,
+      "avgCommuteMins": 44,
+      "medianIncome": 94438,
+      "estMonthlyCost": 237
+    },
+    {
       "name": "Rego Park",
       "slug": "rego-park",
       "borough": "Queens",
@@ -1882,7 +1882,7 @@
       "zeroCarPct": 47.5,
       "avgCommuteMins": 44,
       "medianIncome": 83091,
-      "estMonthlyCost": 237
+      "estMonthlyCost": 236
     },
     {
       "name": "Kingsbridge-Marble Hill",
@@ -1900,7 +1900,7 @@
       "zeroCarPct": 61.7,
       "avgCommuteMins": 43,
       "medianIncome": 51650,
-      "estMonthlyCost": 235
+      "estMonthlyCost": 234
     },
     {
       "name": "West Farms",
@@ -1918,7 +1918,7 @@
       "zeroCarPct": 77.2,
       "avgCommuteMins": 48,
       "medianIncome": 28711,
-      "estMonthlyCost": 233
+      "estMonthlyCost": 232
     },
     {
       "name": "Bensonhurst",
@@ -1936,7 +1936,7 @@
       "zeroCarPct": 45.2,
       "avgCommuteMins": 44,
       "medianIncome": 68505,
-      "estMonthlyCost": 230
+      "estMonthlyCost": 229
     },
     {
       "name": "Dyker Heights",
@@ -1954,7 +1954,7 @@
       "zeroCarPct": 35,
       "avgCommuteMins": 41,
       "medianIncome": 78127,
-      "estMonthlyCost": 229
+      "estMonthlyCost": 228
     },
     {
       "name": "Longwood",
@@ -1972,7 +1972,7 @@
       "zeroCarPct": 67.7,
       "avgCommuteMins": 41,
       "medianIncome": 38031,
-      "estMonthlyCost": 228
+      "estMonthlyCost": 227
     },
     {
       "name": "Woodside",
@@ -1990,7 +1990,7 @@
       "zeroCarPct": 46.8,
       "avgCommuteMins": 35,
       "medianIncome": 77123,
-      "estMonthlyCost": 224
+      "estMonthlyCost": 222
     },
     {
       "name": "Parkchester",
@@ -2008,7 +2008,7 @@
       "zeroCarPct": 69.8,
       "avgCommuteMins": 49,
       "medianIncome": 59871,
-      "estMonthlyCost": 222
+      "estMonthlyCost": 221
     },
     {
       "name": "University Heights (South)-Morris Heights",
@@ -2026,7 +2026,7 @@
       "zeroCarPct": 72.3,
       "avgCommuteMins": 43,
       "medianIncome": 36663,
-      "estMonthlyCost": 219
+      "estMonthlyCost": 218
     },
     {
       "name": "Ridgewood",
@@ -2044,7 +2044,7 @@
       "zeroCarPct": 52.7,
       "avgCommuteMins": 44,
       "medianIncome": 84720,
-      "estMonthlyCost": 219
+      "estMonthlyCost": 218
     },
     {
       "name": "Flatbush (West)-Ditmas Park-Parkville",
@@ -2062,7 +2062,7 @@
       "zeroCarPct": 54.1,
       "avgCommuteMins": 42,
       "medianIncome": 93132,
-      "estMonthlyCost": 218
+      "estMonthlyCost": 217
     },
     {
       "name": "Brighton Beach",
@@ -2080,7 +2080,7 @@
       "zeroCarPct": 64.8,
       "avgCommuteMins": 40,
       "medianIncome": 46783,
-      "estMonthlyCost": 216
+      "estMonthlyCost": 215
     },
     {
       "name": "Jackson Heights",
@@ -2098,7 +2098,7 @@
       "zeroCarPct": 49.8,
       "avgCommuteMins": 41,
       "medianIncome": 77454,
-      "estMonthlyCost": 216
+      "estMonthlyCost": 215
     },
     {
       "name": "Elmhurst",
@@ -2116,7 +2116,7 @@
       "zeroCarPct": 57.9,
       "avgCommuteMins": 42,
       "medianIncome": 71552,
-      "estMonthlyCost": 212
+      "estMonthlyCost": 211
     },
     {
       "name": "Kingsbridge Heights-Van Cortlandt Village",
@@ -2134,7 +2134,7 @@
       "zeroCarPct": 63.9,
       "avgCommuteMins": 48,
       "medianIncome": 60398,
-      "estMonthlyCost": 211
+      "estMonthlyCost": 209
     },
     {
       "name": "Norwood",
@@ -2152,7 +2152,7 @@
       "zeroCarPct": 69.2,
       "avgCommuteMins": 45,
       "medianIncome": 49509,
-      "estMonthlyCost": 205
+      "estMonthlyCost": 204
     },
     {
       "name": "Hunts Point",
@@ -2170,7 +2170,7 @@
       "zeroCarPct": 73.7,
       "avgCommuteMins": 43,
       "medianIncome": 41089,
-      "estMonthlyCost": 203
+      "estMonthlyCost": 202
     },
     {
       "name": "Flatbush",
@@ -2188,7 +2188,7 @@
       "zeroCarPct": 65,
       "avgCommuteMins": 47,
       "medianIncome": 80090,
-      "estMonthlyCost": 202
+      "estMonthlyCost": 201
     },
     {
       "name": "North Corona",
@@ -2206,7 +2206,7 @@
       "zeroCarPct": 55,
       "avgCommuteMins": 44,
       "medianIncome": 81030,
-      "estMonthlyCost": 201
+      "estMonthlyCost": 200
     },
     {
       "name": "Corona",
@@ -2224,7 +2224,7 @@
       "zeroCarPct": 59.4,
       "avgCommuteMins": 45,
       "medianIncome": 65565,
-      "estMonthlyCost": 200
+      "estMonthlyCost": 199
     },
     {
       "name": "University Heights (North)-Fordham",
@@ -2242,7 +2242,7 @@
       "zeroCarPct": 71.6,
       "avgCommuteMins": 47,
       "medianIncome": 45365,
-      "estMonthlyCost": 198
+      "estMonthlyCost": 197
     },
     {
       "name": "Borough Park",
@@ -2260,7 +2260,7 @@
       "zeroCarPct": 52.8,
       "avgCommuteMins": 31,
       "medianIncome": 55994,
-      "estMonthlyCost": 197
+      "estMonthlyCost": 196
     },
     {
       "name": "Kensington",
@@ -2278,7 +2278,7 @@
       "zeroCarPct": 54.7,
       "avgCommuteMins": 42,
       "medianIncome": 94467,
-      "estMonthlyCost": 195
+      "estMonthlyCost": 194
     },
     {
       "name": "East Flatbush-Erasmus",
@@ -2296,7 +2296,7 @@
       "zeroCarPct": 63.5,
       "avgCommuteMins": 46,
       "medianIncome": 77626,
-      "estMonthlyCost": 193
+      "estMonthlyCost": 191
     },
     {
       "name": "Mount Eden-Claremont (West)",
@@ -2314,7 +2314,7 @@
       "zeroCarPct": 78.5,
       "avgCommuteMins": 44,
       "medianIncome": 43044,
-      "estMonthlyCost": 192
+      "estMonthlyCost": 191
     },
     {
       "name": "Bedford-Stuyvesant (East)",
@@ -2332,7 +2332,7 @@
       "zeroCarPct": 60.2,
       "avgCommuteMins": 42,
       "medianIncome": 76166,
-      "estMonthlyCost": 190
+      "estMonthlyCost": 189
     },
     {
       "name": "Bedford Park",
@@ -2350,7 +2350,7 @@
       "zeroCarPct": 69.8,
       "avgCommuteMins": 46,
       "medianIncome": 47856,
-      "estMonthlyCost": 189
+      "estMonthlyCost": 188
     },
     {
       "name": "Brownsville",
@@ -2368,7 +2368,7 @@
       "zeroCarPct": 71.7,
       "avgCommuteMins": 50,
       "medianIncome": 35423,
-      "estMonthlyCost": 188
+      "estMonthlyCost": 187
     },
     {
       "name": "Concourse-Concourse Village",
@@ -2386,7 +2386,7 @@
       "zeroCarPct": 76.6,
       "avgCommuteMins": 41,
       "medianIncome": 47207,
-      "estMonthlyCost": 188
+      "estMonthlyCost": 187
     },
     {
       "name": "Astoria",
@@ -2408,7 +2408,7 @@
       "zeroCarPct": 58.1,
       "avgCommuteMins": 39,
       "medianIncome": null,
-      "estMonthlyCost": 185
+      "estMonthlyCost": 184
     },
     {
       "name": "Crown Heights (South)",
@@ -2426,7 +2426,7 @@
       "zeroCarPct": 64.3,
       "avgCommuteMins": 42,
       "medianIncome": 73022,
-      "estMonthlyCost": 185
+      "estMonthlyCost": 184
     },
     {
       "name": "Highbridge",
@@ -2444,7 +2444,7 @@
       "zeroCarPct": 78.3,
       "avgCommuteMins": 45,
       "medianIncome": 41203,
-      "estMonthlyCost": 185
+      "estMonthlyCost": 183
     },
     {
       "name": "Flushing-Willets Point",
@@ -2462,7 +2462,7 @@
       "zeroCarPct": 61.2,
       "avgCommuteMins": 40,
       "medianIncome": 50792,
-      "estMonthlyCost": 181
+      "estMonthlyCost": 180
     },
     {
       "name": "Sunset Park (West)",
@@ -2480,7 +2480,7 @@
       "zeroCarPct": 60,
       "avgCommuteMins": 39,
       "medianIncome": 89945,
-      "estMonthlyCost": 177
+      "estMonthlyCost": 176
     },
     {
       "name": "Prospect Lefferts Gardens-Wingate",
@@ -2498,7 +2498,7 @@
       "zeroCarPct": 64.7,
       "avgCommuteMins": 43,
       "medianIncome": 76800,
-      "estMonthlyCost": 175
+      "estMonthlyCost": 174
     },
     {
       "name": "Sunnyside",
@@ -2516,25 +2516,6 @@
       "zeroCarPct": 60,
       "avgCommuteMins": 38,
       "medianIncome": 83634,
-      "estMonthlyCost": 174
-    },
-    {
-      "name": "Bushwick",
-      "slug": "bushwick",
-      "borough": "Brooklyn",
-      "ntaCodes": [
-        "BK0401",
-        "BK0402"
-      ],
-      "workers": 62173,
-      "transitPct": 56.9,
-      "drovePct": 12.5,
-      "carpoolPct": 2.8,
-      "walkBikePct": 8.3,
-      "wfhPct": 18,
-      "zeroCarPct": 64,
-      "avgCommuteMins": 41,
-      "medianIncome": null,
       "estMonthlyCost": 173
     },
     {
@@ -2553,7 +2534,26 @@
       "zeroCarPct": 70.2,
       "avgCommuteMins": 43,
       "medianIncome": 80688,
-      "estMonthlyCost": 173
+      "estMonthlyCost": 172
+    },
+    {
+      "name": "Bushwick",
+      "slug": "bushwick",
+      "borough": "Brooklyn",
+      "ntaCodes": [
+        "BK0401",
+        "BK0402"
+      ],
+      "workers": 62173,
+      "transitPct": 56.9,
+      "drovePct": 12.5,
+      "carpoolPct": 2.8,
+      "walkBikePct": 8.3,
+      "wfhPct": 18,
+      "zeroCarPct": 64,
+      "avgCommuteMins": 41,
+      "medianIncome": null,
+      "estMonthlyCost": 171
     },
     {
       "name": "Mount Hope",
@@ -2571,7 +2571,7 @@
       "zeroCarPct": 75.6,
       "avgCommuteMins": 45,
       "medianIncome": 43967,
-      "estMonthlyCost": 171
+      "estMonthlyCost": 169
     },
     {
       "name": "Belmont",
@@ -2589,7 +2589,7 @@
       "zeroCarPct": 73.5,
       "avgCommuteMins": 43,
       "medianIncome": 33296,
-      "estMonthlyCost": 169
+      "estMonthlyCost": 168
     },
     {
       "name": "Inwood",
@@ -2607,7 +2607,7 @@
       "zeroCarPct": 69.5,
       "avgCommuteMins": 47,
       "medianIncome": 70212,
-      "estMonthlyCost": 168
+      "estMonthlyCost": 167
     },
     {
       "name": "South Bronx (Mott Haven/Melrose)",
@@ -2626,7 +2626,7 @@
       "zeroCarPct": 76.1,
       "avgCommuteMins": 40,
       "medianIncome": null,
-      "estMonthlyCost": 166
+      "estMonthlyCost": 164
     },
     {
       "name": "Long Island City-Hunters Point",
@@ -2644,7 +2644,7 @@
       "zeroCarPct": 57.4,
       "avgCommuteMins": 31,
       "medianIncome": 158925,
-      "estMonthlyCost": 161
+      "estMonthlyCost": 160
     },
     {
       "name": "Sunset Park (Central)",
@@ -2662,7 +2662,7 @@
       "zeroCarPct": 68,
       "avgCommuteMins": 47,
       "medianIncome": 60889,
-      "estMonthlyCost": 159
+      "estMonthlyCost": 158
     },
     {
       "name": "Bedford-Stuyvesant (West)",
@@ -2680,7 +2680,7 @@
       "zeroCarPct": 67.4,
       "avgCommuteMins": 40,
       "medianIncome": 82951,
-      "estMonthlyCost": 156
+      "estMonthlyCost": 155
     },
     {
       "name": "Fordham Heights",
@@ -2698,7 +2698,7 @@
       "zeroCarPct": 81,
       "avgCommuteMins": 42,
       "medianIncome": 40110,
-      "estMonthlyCost": 154
+      "estMonthlyCost": 153
     },
     {
       "name": "Sunset Park (East)-Borough Park (West)",
@@ -2716,7 +2716,7 @@
       "zeroCarPct": 59.3,
       "avgCommuteMins": 42,
       "medianIncome": 62183,
-      "estMonthlyCost": 153
+      "estMonthlyCost": 152
     },
     {
       "name": "Harlem (North)",
@@ -2734,7 +2734,7 @@
       "zeroCarPct": 79,
       "avgCommuteMins": 39,
       "medianIncome": 53445,
-      "estMonthlyCost": 144
+      "estMonthlyCost": 143
     },
     {
       "name": "Clinton Hill",
@@ -2752,7 +2752,7 @@
       "zeroCarPct": 59.8,
       "avgCommuteMins": 38,
       "medianIncome": 129066,
-      "estMonthlyCost": 143
+      "estMonthlyCost": 142
     },
     {
       "name": "Harlem (South)",
@@ -2770,7 +2770,7 @@
       "zeroCarPct": 71.5,
       "avgCommuteMins": 35,
       "medianIncome": 73738,
-      "estMonthlyCost": 141
+      "estMonthlyCost": 139
     },
     {
       "name": "East Harlem",
@@ -2789,7 +2789,7 @@
       "zeroCarPct": 84.5,
       "avgCommuteMins": 35,
       "medianIncome": null,
-      "estMonthlyCost": 138
+      "estMonthlyCost": 137
     },
     {
       "name": "Windsor Terrace-South Slope",
@@ -2807,7 +2807,7 @@
       "zeroCarPct": 40.6,
       "avgCommuteMins": 42,
       "medianIncome": 143371,
-      "estMonthlyCost": 135
+      "estMonthlyCost": 134
     },
     {
       "name": "Greenpoint",
@@ -2825,7 +2825,7 @@
       "zeroCarPct": 59.9,
       "avgCommuteMins": 37,
       "medianIncome": 129144,
-      "estMonthlyCost": 132
+      "estMonthlyCost": 131
     },
     {
       "name": "East Williamsburg",
@@ -2843,7 +2843,7 @@
       "zeroCarPct": 70.6,
       "avgCommuteMins": 37,
       "medianIncome": 94067,
-      "estMonthlyCost": 129
+      "estMonthlyCost": 128
     },
     {
       "name": "Hamilton Heights-Sugar Hill",
@@ -2861,7 +2861,7 @@
       "zeroCarPct": 77,
       "avgCommuteMins": 39,
       "medianIncome": 67547,
-      "estMonthlyCost": 129
+      "estMonthlyCost": 128
     },
     {
       "name": "Washington Heights",
@@ -2880,7 +2880,7 @@
       "zeroCarPct": 77.6,
       "avgCommuteMins": 40,
       "medianIncome": null,
-      "estMonthlyCost": 127
+      "estMonthlyCost": 125
     },
     {
       "name": "Fort Greene",
@@ -2898,7 +2898,7 @@
       "zeroCarPct": 72,
       "avgCommuteMins": 36,
       "medianIncome": 118855,
-      "estMonthlyCost": 121
+      "estMonthlyCost": 120
     },
     {
       "name": "Randall's Island",
@@ -2916,7 +2916,7 @@
       "zeroCarPct": 0,
       "avgCommuteMins": 45,
       "medianIncome": null,
-      "estMonthlyCost": 121
+      "estMonthlyCost": 120
     },
     {
       "name": "South Williamsburg",
@@ -2952,7 +2952,7 @@
       "zeroCarPct": 56.6,
       "avgCommuteMins": 36,
       "medianIncome": 142376,
-      "estMonthlyCost": 119
+      "estMonthlyCost": 118
     },
     {
       "name": "Lower East Side",
@@ -2970,7 +2970,7 @@
       "zeroCarPct": 78.7,
       "avgCommuteMins": 32,
       "medianIncome": 65276,
-      "estMonthlyCost": 119
+      "estMonthlyCost": 118
     },
     {
       "name": "Upper West Side (Central)",
@@ -2988,7 +2988,7 @@
       "zeroCarPct": 71.9,
       "avgCommuteMins": 31,
       "medianIncome": 160616,
-      "estMonthlyCost": 116
+      "estMonthlyCost": 115
     },
     {
       "name": "Williamsburg",
@@ -3006,7 +3006,7 @@
       "zeroCarPct": 68.5,
       "avgCommuteMins": 33,
       "medianIncome": 147452,
-      "estMonthlyCost": 114
+      "estMonthlyCost": 113
     },
     {
       "name": "Prospect Heights",
@@ -3024,7 +3024,7 @@
       "zeroCarPct": 65.5,
       "avgCommuteMins": 36,
       "medianIncome": 154865,
-      "estMonthlyCost": 108
+      "estMonthlyCost": 107
     },
     {
       "name": "Upper East Side-Yorkville",
@@ -3042,7 +3042,7 @@
       "zeroCarPct": 73.2,
       "avgCommuteMins": 32,
       "medianIncome": 150269,
-      "estMonthlyCost": 108
+      "estMonthlyCost": 107
     },
     {
       "name": "Manhattanville-West Harlem",
@@ -3060,7 +3060,7 @@
       "zeroCarPct": 80.4,
       "avgCommuteMins": 32,
       "medianIncome": 42710,
-      "estMonthlyCost": 108
+      "estMonthlyCost": 107
     },
     {
       "name": "Park Slope",
@@ -3114,7 +3114,7 @@
       "zeroCarPct": 73.9,
       "avgCommuteMins": 32,
       "medianIncome": 159679,
-      "estMonthlyCost": 103
+      "estMonthlyCost": 102
     },
     {
       "name": "Chinatown-Two Bridges",
@@ -3132,7 +3132,7 @@
       "zeroCarPct": 85.5,
       "avgCommuteMins": 30,
       "medianIncome": 37912,
-      "estMonthlyCost": 102
+      "estMonthlyCost": 101
     },
     {
       "name": "Tribeca-Civic Center",
@@ -3150,7 +3150,7 @@
       "zeroCarPct": 66.4,
       "avgCommuteMins": 25,
       "medianIncome": 226968,
-      "estMonthlyCost": 98
+      "estMonthlyCost": 97
     },
     {
       "name": "Upper West Side-Manhattan Valley",
@@ -3168,7 +3168,7 @@
       "zeroCarPct": 77.5,
       "avgCommuteMins": 34,
       "medianIncome": 105994,
-      "estMonthlyCost": 97
+      "estMonthlyCost": 96
     },
     {
       "name": "Upper East Side-Lenox Hill-Roosevelt Island",
@@ -3186,7 +3186,7 @@
       "zeroCarPct": 74.7,
       "avgCommuteMins": 30,
       "medianIncome": 141711,
-      "estMonthlyCost": 97
+      "estMonthlyCost": 96
     },
     {
       "name": "Brooklyn Heights",
@@ -3204,7 +3204,7 @@
       "zeroCarPct": 63.2,
       "avgCommuteMins": 30,
       "medianIncome": 183736,
-      "estMonthlyCost": 95
+      "estMonthlyCost": 94
     },
     {
       "name": "Financial District-Battery Park City",
@@ -3222,7 +3222,7 @@
       "zeroCarPct": 81.6,
       "avgCommuteMins": 27,
       "medianIncome": 199456,
-      "estMonthlyCost": 90
+      "estMonthlyCost": 89
     },
     {
       "name": "Chelsea-Hudson Yards",
@@ -3240,7 +3240,7 @@
       "zeroCarPct": 82.1,
       "avgCommuteMins": 26,
       "medianIncome": 130677,
-      "estMonthlyCost": 90
+      "estMonthlyCost": 89
     },
     {
       "name": "East Village",
@@ -3258,7 +3258,7 @@
       "zeroCarPct": 84.5,
       "avgCommuteMins": 28,
       "medianIncome": 91871,
-      "estMonthlyCost": 89
+      "estMonthlyCost": 88
     },
     {
       "name": "SoHo-Little Italy-Hudson Square",
@@ -3276,7 +3276,7 @@
       "zeroCarPct": 78.8,
       "avgCommuteMins": 25,
       "medianIncome": 142191,
-      "estMonthlyCost": 86
+      "estMonthlyCost": 85
     },
     {
       "name": "Upper West Side-Lincoln Square",
@@ -3294,7 +3294,7 @@
       "zeroCarPct": 72.3,
       "avgCommuteMins": 28,
       "medianIncome": 175000,
-      "estMonthlyCost": 86
+      "estMonthlyCost": 85
     },
     {
       "name": "Greenwich Village",
@@ -3312,7 +3312,7 @@
       "zeroCarPct": 72.7,
       "avgCommuteMins": 23,
       "medianIncome": 183406,
-      "estMonthlyCost": 85
+      "estMonthlyCost": 84
     },
     {
       "name": "Stuyvesant Town-Peter Cooper Village",
@@ -3330,7 +3330,7 @@
       "zeroCarPct": 70.8,
       "avgCommuteMins": 29,
       "medianIncome": 162894,
-      "estMonthlyCost": 85
+      "estMonthlyCost": 84
     },
     {
       "name": "Midtown South-Flatiron-Union Square",
@@ -3348,7 +3348,7 @@
       "zeroCarPct": 84.5,
       "avgCommuteMins": 25,
       "medianIncome": 188423,
-      "estMonthlyCost": 83
+      "estMonthlyCost": 82
     },
     {
       "name": "Hell's Kitchen",
@@ -3366,7 +3366,7 @@
       "zeroCarPct": 86.4,
       "avgCommuteMins": 30,
       "medianIncome": null,
-      "estMonthlyCost": 79
+      "estMonthlyCost": 78
     },
     {
       "name": "West Village",
@@ -3384,7 +3384,7 @@
       "zeroCarPct": 81.5,
       "avgCommuteMins": 26,
       "medianIncome": 164340,
-      "estMonthlyCost": 78
+      "estMonthlyCost": 77
     },
     {
       "name": "Murray Hill-Kips Bay",
@@ -3420,7 +3420,7 @@
       "zeroCarPct": 76.3,
       "avgCommuteMins": 26,
       "medianIncome": 93322,
-      "estMonthlyCost": 77
+      "estMonthlyCost": 76
     },
     {
       "name": "East Midtown-Turtle Bay",
@@ -3438,7 +3438,7 @@
       "zeroCarPct": 77.7,
       "avgCommuteMins": 27,
       "medianIncome": 170704,
-      "estMonthlyCost": 75
+      "estMonthlyCost": 74
     },
     {
       "name": "Midtown-Times Square",
@@ -3456,7 +3456,7 @@
       "zeroCarPct": 86.3,
       "avgCommuteMins": 24,
       "medianIncome": 152729,
-      "estMonthlyCost": 74
+      "estMonthlyCost": 73
     },
     {
       "name": "Gramercy",
@@ -3474,7 +3474,7 @@
       "zeroCarPct": 77.9,
       "avgCommuteMins": 24,
       "medianIncome": 151775,
-      "estMonthlyCost": 62
+      "estMonthlyCost": 61
     }
   ]
 }
