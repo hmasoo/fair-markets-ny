@@ -6,6 +6,9 @@ import dynamic from "next/dynamic";
 const NeighborhoodCharts = dynamic(
   () => import("./neighborhood-charts").then((m) => m.NeighborhoodCharts),
 );
+const NeighborhoodLocatorMap = dynamic(
+  () => import("./NeighborhoodLocatorMap").then((m) => m.NeighborhoodLocatorMap),
+);
 
 import neighborhoodDataRaw from "../../../../data/concentration/housing-neighborhoods.json";
 import rentHistoryRaw from "../../../../data/concentration/rent-history-neighborhoods.json";
@@ -106,9 +109,15 @@ export default async function NeighborhoodPage({ params }: Props) {
         ]}
       />
 
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-fm-patina">{neighborhood.name}</h1>
-        <p className="mt-1 text-fm-sage">{neighborhood.borough}</p>
+      <div className="mb-8 flex flex-col sm:flex-row sm:items-start gap-6">
+        <div className="flex-1">
+          <h1 className="text-3xl font-bold text-fm-patina">{neighborhood.name}</h1>
+          <p className="mt-1 text-fm-sage">{neighborhood.borough}</p>
+        </div>
+        <NeighborhoodLocatorMap
+          ntaCodes={neighborhood.ntaCodes}
+          name={neighborhood.name}
+        />
       </div>
 
       {/* Stats — lead with income/rent/burden */}
