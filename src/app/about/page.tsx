@@ -342,6 +342,84 @@ export default function AboutPage() {
 
         <section className="card">
           <h2 className="text-xl font-bold text-fm-patina mb-4">
+            Accessibility & Open Methods
+          </h2>
+          <div className="space-y-4 text-sm text-gray-700">
+            <p>
+              Public data should be accessible to the public. We build this
+              site with{" "}
+              <a
+                href="https://www.section508.gov/"
+                className="text-fm-teal hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Section 508
+              </a>{" "}
+              and WCAG 2.0 Level AA standards as our target — the same
+              accessibility baseline the federal government requires for its
+              own websites.
+            </p>
+            <div>
+              <h3 className="font-semibold text-fm-patina mb-2">
+                What that means in practice
+              </h3>
+              <ul className="space-y-1 ml-4 list-disc">
+                <li>
+                  Charts and maps include text descriptions so screen reader
+                  users can access the same data
+                </li>
+                <li>
+                  All interactive elements (tables, toggles, tooltips) are
+                  keyboard-navigable
+                </li>
+                <li>
+                  Color is never the sole way we communicate meaning —
+                  labels, patterns, and text reinforce visual encoding
+                </li>
+                <li>
+                  Text meets contrast ratio standards against all backgrounds
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold text-fm-patina mb-2">
+                Open source, open data
+              </h3>
+              <p>
+                The{" "}
+                <a
+                  href="https://github.com/masuga-fair-markets/fair-markets-ny"
+                  className="text-fm-teal hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  full source code
+                </a>{" "}
+                for this site is public. Every data point cites its government
+                source. Our scraping scripts, aggregation logic, and
+                concentration calculations are all auditable — anyone can
+                verify our numbers or build on our work.
+              </p>
+            </div>
+            <p>
+              Accessibility is a work in progress. If you encounter a barrier
+              using this site, please{" "}
+              <a
+                href="https://github.com/masuga-fair-markets/fair-markets-ny/issues"
+                className="text-fm-teal hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                open an issue
+              </a>{" "}
+              and we{"'"}ll address it.
+            </p>
+          </div>
+        </section>
+
+        <section className="card">
+          <h2 className="text-xl font-bold text-fm-patina mb-4">
             Project Background
           </h2>
           <div className="text-sm text-gray-700 space-y-3">
