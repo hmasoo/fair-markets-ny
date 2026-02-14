@@ -25,7 +25,7 @@ export function HousingBoroughMap({ boroughs }: HousingBoroughMapProps) {
       data={hhiByFips}
       colorScale={housingHHIScale}
       legendTitle="HHI Scale"
-      tooltipContent={(fips, label, _value) => {
+      tooltipContent={(fips, label) => {
         const d = detailsByFips[fips];
         if (!d) {
           return (

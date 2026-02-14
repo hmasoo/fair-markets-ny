@@ -27,9 +27,6 @@ export default function TransportationPage() {
   const highestZeroCar = [...neighborhoods].sort(
     (a, b) => b.zeroCarPct - a.zeroCarPct,
   )[0];
-  const highestCost = [...neighborhoods].sort(
-    (a, b) => b.estMonthlyCost - a.estMonthlyCost,
-  )[0];
   const totalWorkers = neighborhoods.reduce((s, n) => s + n.workers, 0);
   const weightedTransit =
     neighborhoods.reduce((s, n) => s + n.transitPct * n.workers, 0) / totalWorkers;

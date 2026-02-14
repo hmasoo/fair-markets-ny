@@ -66,7 +66,7 @@ export function HealthcareCountyMap({ regions }: HealthcareCountyMapProps) {
         const d = detailsByFips[fips];
         if (d) router.push(`/healthcare/${d.region.slug}`);
       }}
-      tooltipContent={(fips, label, _value) => {
+      tooltipContent={(fips, label) => {
         const d = detailsByFips[fips];
         if (!d) {
           return (

@@ -69,9 +69,6 @@ export default function EnforcementPage() {
   const resolved = actions.filter(
     (a) => a.outcomeVariant === "green",
   ).length;
-  const ongoing = actions.filter(
-    (a) => a.outcomeVariant === "yellow",
-  ).length;
   const sectors = [...new Set(actions.map((a) => a.sector))];
 
   return (

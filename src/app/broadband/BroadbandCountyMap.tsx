@@ -48,7 +48,7 @@ export function BroadbandCountyMap({ counties }: BroadbandCountyMapProps) {
       data={hhiByFips}
       colorScale={broadbandHHIScale}
       legendTitle="HHI Scale"
-      tooltipContent={(key, label, _value) => {
+      tooltipContent={(key, label) => {
         const d = detailsByFips[key];
         if (!d) {
           return (

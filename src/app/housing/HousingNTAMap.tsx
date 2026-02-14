@@ -44,7 +44,7 @@ export function HousingNTAMap({ data, details }: HousingNTAMapProps) {
         const d = details[key];
         if (d) router.push(`/housing/${d.slug}`);
       }}
-      tooltipContent={(key, label, _value) => {
+      tooltipContent={(key, label) => {
         const d = details[key];
         if (!d) {
           return (

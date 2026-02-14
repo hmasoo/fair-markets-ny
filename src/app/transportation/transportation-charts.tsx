@@ -7,7 +7,6 @@ import {
   linearScale,
   bandScale,
   niceLinearTicks,
-  roundedRightRect,
 } from "@/lib/chart-utils";
 
 // ---------- Fare History Chart ----------
