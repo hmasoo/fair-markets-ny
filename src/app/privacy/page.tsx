@@ -72,11 +72,11 @@ export default function PrivacyPage() {
               display data about individual people.
             </p>
             <p>
-              For a full list of sources and legal basis, see our{" "}
+              For a full list of sources and legal basis, see{" "}
               <a href="/about" className="text-fm-teal hover:underline">
-                About & Methodology
-              </a>{" "}
-              page.
+                how to read this data
+              </a>
+              .
             </p>
           </div>
         </section>

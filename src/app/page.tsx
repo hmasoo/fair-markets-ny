@@ -32,12 +32,12 @@ const sectors = [
   },
   {
     title: "Regulatory Actions",
-    subtitle: "State enforcement & policy tracker",
+    subtitle: "When markets don't work, who steps in?",
     href: "/enforcement",
     description:
-      "A public record of competition-related enforcement actions, regulatory decisions, and legislation across New York State agencies.",
-    stat: "Coming Soon",
-    statLabel: "AG press releases & court filings",
+      "Algorithmic rent-setting, hospital mergers that reduce patient choices, pharmacy middlemen with no oversight. We track the consumer problems and how New York regulators responded.",
+    stat: "5",
+    statLabel: "consumer problems tracked",
   },
 ];
 
@@ -166,7 +166,7 @@ export default function Home() {
               href="/about"
               className="text-fm-teal font-medium hover:underline"
             >
-              Learn about our methodology and data sources
+              Learn how to read this data
             </Link>
             .
           </p>

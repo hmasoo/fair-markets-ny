@@ -3,116 +3,164 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Badge } from "@/components/ui/Badge";
 
 export const metadata: Metadata = {
-  title: "State Regulatory & Enforcement Actions",
+  title: "When Markets Don't Work — What New York Did About It",
   description:
-    "Competition-related enforcement actions, regulatory decisions, and legislation across New York State agencies, sourced from official press releases and filings.",
+    "Real consumer problems and how New York regulators responded — from algorithmic rent-setting to hospital mergers to nursing home quality.",
 };
 
-const sampleActions = [
+const actions = [
   {
-    id: "1",
-    title: "AG James Sues to Block Tapestry-Capri Merger",
-    date: "2024-04-22",
-    type: "Merger Challenge",
-    agency: "NY Attorney General",
-    outcome: "Merger blocked",
-    summary:
-      "NY AG filed suit to block the $8.5B merger of Tapestry (Coach) and Capri (Michael Kors, Versace, Jimmy Choo), arguing it would reduce competition in the accessible luxury handbag market.",
-  },
-  {
-    id: "2",
-    title: "RealPage Algorithmic Rent-Setting Ban Signed",
-    date: "2024-12-20",
-    type: "Legislation",
+    id: "realpage",
+    problem: "Landlords were using the same software to set rents",
+    sector: "Housing",
+    description:
+      "RealPage's revenue management tool let large landlords feed their pricing data into a shared algorithm that recommended rent increases — effectively coordinating prices without a phone call. Tenants in buildings using the software paid more than comparable units nearby.",
+    response: "First-in-nation ban on algorithmic rent-setting",
     agency: "NYS Legislature / Governor",
+    date: "2024-12-20",
     outcome: "Signed into law",
-    summary:
-      "Governor Hochul signed the nation's first ban on algorithmic rent-setting software, targeting RealPage's revenue management tool used by major landlords to coordinate rent increases.",
+    outcomeVariant: "green" as const,
   },
   {
-    id: "3",
-    title: "AG James Investigates PE Nursing Home Acquisitions",
-    date: "2024-06-15",
-    type: "Investigation",
+    id: "tapestry",
+    problem: "An $8.5B merger would have eliminated a competitor in handbags",
+    sector: "Retail",
+    description:
+      "Tapestry (Coach) sought to acquire Capri (Michael Kors, Versace, Jimmy Choo). If it went through, one company would control the most popular brands in the accessible luxury handbag market — reducing the competitive pressure that keeps prices and quality in check.",
+    response: "AG sued to block the merger",
     agency: "NY Attorney General",
-    outcome: "Ongoing",
-    summary:
-      "Investigation into private equity acquisitions of nursing homes across NYS, focusing on quality-of-care impacts following ownership changes.",
+    date: "2024-04-22",
+    outcome: "Merger blocked",
+    outcomeVariant: "green" as const,
   },
   {
-    id: "4",
-    title: "PBM Watchdog Bureau Established at DFS",
-    date: "2024-09-01",
-    type: "Regulatory Action",
+    id: "pe-nursing",
+    problem: "Private equity firms bought nursing homes, then cut staffing",
+    sector: "Healthcare",
+    description:
+      "When PE firms acquire nursing homes, research shows they often reduce staffing to boost returns. Residents and families noticed declining care quality — more falls, slower response times, fewer activities — but had no visibility into who actually owned the facility.",
+    response: "AG investigation into PE nursing home acquisitions",
+    agency: "NY Attorney General",
+    date: "2024-06-15",
+    outcome: "Investigation ongoing",
+    outcomeVariant: "yellow" as const,
+  },
+  {
+    id: "pbm",
+    problem: "Pharmacy middlemen control drug pricing with no oversight",
+    sector: "Healthcare",
+    description:
+      "Pharmacy Benefit Managers (PBMs) negotiate drug prices between insurers and pharmacies — but they're vertically integrated with the insurers, creating conflicts of interest. Patients see the result at the counter: opaque pricing, restricted pharmacy choices, and surprise costs.",
+    response: "Nation's first PBM watchdog bureau created",
     agency: "NYS DFS",
+    date: "2024-09-01",
     outcome: "Bureau operational",
-    summary:
-      "Governor Hochul established the nation's first Pharmacy Benefit Manager watchdog bureau within the Department of Financial Services to monitor PBM practices and vertical integration.",
+    outcomeVariant: "green" as const,
   },
   {
-    id: "5",
-    title: "Hospital CON Review Period Extended to 60 Days",
-    date: "2024-03-10",
-    type: "Regulatory Action",
+    id: "con-review",
+    problem: "Hospital mergers were approved too quickly to assess patient impact",
+    sector: "Healthcare",
+    description:
+      "When hospital systems merge, patients in the affected area may lose access to competing providers. The previous 30-day review period didn't allow enough time to evaluate how a merger would affect patient choice, pricing, or service availability.",
+    response: "CON review period extended to 60 days with post-merger reporting",
     agency: "NYS DOH",
+    date: "2024-03-10",
     outcome: "Implemented",
-    summary:
-      "Extended the Certificate of Need review period for hospital mergers from 30 to 60 days, with new requirements for ongoing post-merger impact reporting.",
+    outcomeVariant: "green" as const,
   },
 ];
 
+const sectorColors: Record<string, "blue" | "green" | "yellow" | "gray"> = {
+  Housing: "blue",
+  Retail: "gray",
+  Healthcare: "yellow",
+};
+
 export default function EnforcementPage() {
+  const resolved = actions.filter(
+    (a) => a.outcomeVariant === "green",
+  ).length;
+  const ongoing = actions.filter(
+    (a) => a.outcomeVariant === "yellow",
+  ).length;
+  const sectors = [...new Set(actions.map((a) => a.sector))];
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb items={[{ label: "Regulatory Tracker" }]} />
 
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-fm-patina">Regulatory & Enforcement Tracker</h1>
+        <h1 className="text-3xl font-bold text-fm-patina">
+          When markets don{"'"}t work — what New York did about it
+        </h1>
         <p className="mt-2 text-fm-sage max-w-2xl">
-          Competition-related enforcement actions, regulatory decisions, and
-          legislation across New York State, sourced from official press
-          releases and filings.
+          Algorithmic rent-setting. Hospital mergers that reduce patient
+          choices. Pharmacy middlemen with no oversight. These are real
+          problems New Yorkers face — and in some cases, regulators have
+          stepped in. Here{"'"}s what happened.
         </p>
       </div>
 
-      {/* Stats */}
+      {/* Stats — consumer-facing */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
         <div className="card text-center">
-          <div className="text-3xl font-bold text-fm-patina">
-            {sampleActions.length}
+          <div className="text-3xl font-bold text-fm-copper">
+            {actions.length}
           </div>
-          <div className="text-sm text-fm-sage mt-1">Actions Tracked</div>
+          <div className="text-sm text-fm-sage mt-1">
+            consumer problems tracked
+          </div>
         </div>
         <div className="card text-center">
-          <div className="text-3xl font-bold text-fm-patina">3</div>
-          <div className="text-sm text-fm-sage mt-1">Agencies</div>
+          <div className="text-3xl font-bold text-fm-copper">
+            {resolved}
+          </div>
+          <div className="text-sm text-fm-sage mt-1">
+            resulted in action
+          </div>
         </div>
         <div className="card text-center">
-          <div className="text-3xl font-bold text-fm-patina">4</div>
-          <div className="text-sm text-fm-sage mt-1">Action Types</div>
+          <div className="text-3xl font-bold text-fm-patina">
+            {sectors.length}
+          </div>
+          <div className="text-sm text-fm-sage mt-1">
+            sectors affected
+          </div>
+          <div className="text-xs text-fm-sage">
+            {sectors.join(", ")}
+          </div>
         </div>
       </div>
 
-      {/* Actions list */}
-      <div className="space-y-4">
-        {sampleActions.map((action) => (
+      {/* How to read this */}
+      <div className="card mb-8">
+        <h2 className="text-xl font-bold text-fm-patina mb-2">
+          How to read this page
+        </h2>
+        <p className="text-sm text-gray-700">
+          Each entry starts with the consumer problem — what people
+          experienced — followed by the regulatory or legislative response.
+          Not every market problem gets fixed, and not every fix works. We
+          track both the interventions and the outcomes so you can judge for
+          yourself.
+        </p>
+      </div>
+
+      {/* Actions list — problem first */}
+      <div className="space-y-6">
+        {actions.map((action) => (
           <div key={action.id} className="card">
             <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-3">
               <div>
-                <h3 className="font-bold text-fm-patina">{action.title}</h3>
-                <div className="flex flex-wrap items-center gap-2 mt-1">
-                  <Badge variant="blue">{action.type}</Badge>
-                  <Badge variant="gray">{action.agency}</Badge>
-                  <Badge
-                    variant={
-                      action.outcome === "Ongoing"
-                        ? "yellow"
-                        : action.outcome.includes("blocked") ||
-                          action.outcome.includes("law")
-                        ? "green"
-                        : "default"
-                    }
-                  >
+                <h3 className="font-bold text-fm-patina text-lg">
+                  {action.problem}
+                </h3>
+                <div className="flex flex-wrap items-center gap-2 mt-2">
+                  <Badge variant={sectorColors[action.sector] ?? "gray"}>
+                    {action.sector}
+                  </Badge>
+                  <Badge variant={action.outcomeVariant}>
                     {action.outcome}
                   </Badge>
                 </div>
@@ -125,19 +173,43 @@ export default function EnforcementPage() {
                 })}
               </time>
             </div>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              {action.summary}
+            <p className="text-sm text-gray-600 leading-relaxed mb-3">
+              {action.description}
             </p>
+            <div className="border-t border-gray-100 pt-3">
+              <p className="text-sm">
+                <span className="font-medium text-fm-patina">Response:</span>{" "}
+                <span className="text-gray-700">{action.response}</span>
+                <span className="text-fm-sage"> — {action.agency}</span>
+              </p>
+            </div>
           </div>
         ))}
       </div>
 
-      <div className="card mt-8 text-center py-8">
-        <p className="text-sm text-fm-sage">
-          This tracker will be expanded with automated scraping of NY AG press
-          releases, NYS DOH CON filings, and DFS regulatory actions. Data is
-          currently manually curated from public sources.
-        </p>
+      {/* Caveats */}
+      <div className="card mt-8">
+        <h2 className="text-lg font-bold text-fm-patina mb-2">
+          What this tracker doesn{"'"}t capture
+        </h2>
+        <div className="text-sm text-gray-700 space-y-2">
+          <p>
+            Regulatory action is one response to market problems, but it{"'"}s
+            not the only one — and it{"'"}s not always the most effective.
+            Some consumer harms reflect supply constraints (not enough
+            housing, not enough broadband infrastructure) that enforcement
+            alone can{"'"}t fix. Others involve tradeoffs: extending
+            hospital merger review periods adds scrutiny but also delays
+            access to potential efficiencies.
+          </p>
+          <p>
+            This tracker covers publicly announced actions from New York
+            State agencies. It doesn{"'"}t include federal enforcement (FTC,
+            DOJ), private litigation, or informal regulatory guidance. We{"'"}ll
+            expand coverage as we build automated scraping of AG press
+            releases and DOH filings.
+          </p>
+        </div>
       </div>
     </div>
   );
