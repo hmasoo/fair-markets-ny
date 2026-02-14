@@ -39,8 +39,11 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t border-white/10 text-sm text-center">
-          All data sourced from federal, state, and city government public records.
+        <div className="mt-8 pt-8 border-t border-white/10 text-sm text-center space-y-1">
+          <div>All data sourced from federal, state, and city government public records.</div>
+          <div className="text-xs text-white/40 font-mono">
+            Published {process.env.NEXT_PUBLIC_BUILD_DATE} · {process.env.NEXT_PUBLIC_GIT_SHA}
+          </div>
         </div>
       </div>
     </footer>
