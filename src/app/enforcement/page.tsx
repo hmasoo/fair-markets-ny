@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Badge } from "@/components/ui/Badge";
 
@@ -197,10 +198,10 @@ export default function EnforcementPage() {
           <p>
             The problems tracked here connect to data elsewhere on the
             platform. The{" "}
-            <a href="/housing" className="text-fm-teal hover:underline font-medium">housing page</a>{" "}
+            <Link href="/housing" className="text-fm-teal hover:underline font-medium">housing page</Link>{" "}
             shows ownership concentration in the neighborhoods where
             algorithmic rent-setting tools were used. The{" "}
-            <a href="/healthcare" className="text-fm-teal hover:underline font-medium">healthcare page</a>{" "}
+            <Link href="/healthcare" className="text-fm-teal hover:underline font-medium">healthcare page</Link>{" "}
             maps hospital system dominance across the regions where CON
             reviews and PE acquisitions are most relevant.
           </p>
