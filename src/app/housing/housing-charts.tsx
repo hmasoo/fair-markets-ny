@@ -71,11 +71,11 @@ export function NeighborhoodConcentrationChart({
   return (
     <div className="card">
       <h2 className="text-xl font-bold text-fm-patina mb-2">
-        Landlord Concentration by Neighborhood
+        Where is ownership most concentrated?
       </h2>
       <p className="text-sm text-fm-sage mb-4">
-        HHI measures ownership concentration. Higher values mean fewer landlords
-        control more units.
+        Each bar shows how concentrated rental ownership is in one neighborhood.
+        Longer bars mean fewer landlords control more of the apartments.
       </p>
       <ChartContainer height={chartHeight} margin={margin}>
         {({ svgWidth, svgHeight, width, height, margin: m }) => {
@@ -340,11 +340,11 @@ export function NeighborhoodExplorerChart({
   return (
     <div className="card">
       <h2 className="text-xl font-bold text-fm-patina mb-2">
-        Neighborhood Explorer
+        Explore the data
       </h2>
       <p className="text-sm text-fm-sage mb-4">
-        Compare any two metrics across neighborhoods. Bubble size shows total
-        rental units; color shows borough.
+        Pick any two measures to compare across neighborhoods. Each bubble is
+        one neighborhood — bigger means more rental units.
       </p>
 
       {/* Axis selectors */}
@@ -558,10 +558,10 @@ export function CitywideCharts({
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
         <div>
           <h2 className="text-xl font-bold text-fm-patina">
-            Citywide Trend
+            Is it getting worse?
           </h2>
           <p className="text-sm text-fm-sage">
-            All NYC — low overall, but growing
+            Citywide, more apartments are ending up in fewer hands each year
           </p>
         </div>
         <div className="flex gap-1 bg-gray-100 rounded-lg p-1">
@@ -602,8 +602,8 @@ export function CitywideCharts({
       <div className="mt-4 pt-4 border-t border-gray-100 text-xs text-fm-sage">
         <p>
           Source: NYC Rent Guidelines Board Annual Reports; ACRIS/PLUTO analysis.
-          Citywide HHI is low because the market is fragmented across ~30,000
-          landlords. Neighborhood-level concentration above tells the real story.
+          At the citywide level, the market looks fragmented across ~30,000
+          landlords — the neighborhood-level data above tells the real story.
         </p>
       </div>
     </div>

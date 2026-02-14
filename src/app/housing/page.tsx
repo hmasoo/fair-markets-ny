@@ -14,7 +14,7 @@ const CitywideCharts = dynamic(
 import { HousingMapSection } from "./HousingMapSection";
 import { HousingTable } from "./HousingTable";
 import { HHITooltip } from "@/components/ui/HHITooltip";
-import { getHHITextClass, getCR4TextClass } from "@/lib/colorScales";
+import { getCR4TextClass } from "@/lib/colorScales";
 import { aggregateByBorough } from "@/lib/aggregations/housing-boroughs";
 
 import timeSeriesData from "../../../data/concentration/housing-nyc.json";
@@ -52,8 +52,6 @@ export const metadata: Metadata = {
 
 export default function HousingPage() {
   const { neighborhoods } = neighborhoodData;
-  const sorted = [...neighborhoods].sort((a, b) => b.hhi - a.hhi);
-  const highestHHI = sorted[0];
   const highestCR4 = [...neighborhoods].sort((a, b) => b.cr4 - a.cr4)[0];
   const highestViolations = [...neighborhoods]
     .filter((n) => n.hpdViolationsPerUnit > 0)
@@ -64,6 +62,7 @@ export default function HousingPage() {
   const highestNycha = [...neighborhoods]
     .filter((n) => n.nychaShare > 0)
     .sort((a, b) => b.nychaShare - a.nychaShare)[0];
+  const highlyConcentrated = neighborhoods.filter((n) => n.hhi > 2500).length;
 
   // Build NTA-keyed data for the choropleth map
   // Each NTA code in a neighborhood gets that neighborhood's HHI
@@ -92,38 +91,57 @@ export default function HousingPage() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-fm-patina">Rental Ownership in NYC</h1>
         <p className="mt-2 text-fm-sage max-w-2xl">
-          Citywide, NYC{"'"}s rental market appears fragmented (<HHITooltip>HHI</HHITooltip> 228
-          across ~30,000 landlords). At the neighborhood level, ownership is
-          often significantly more concentrated. Factors including zoning
-          restrictions, permitting timelines, and acquisition patterns all
-          play a role. Explore the data below to see how ownership and supply
-          conditions vary across neighborhoods.
+          In Stuyvesant Town, a single owner controls every rental unit. In
+          Parkchester, 4 landlords hold nearly 9 out of 10. Citywide, about
+          30,000 landlords share the market — but zoom into individual
+          neighborhoods and the picture changes. We measure this using{" "}
+          <HHITooltip>HHI</HHITooltip>, a standard index of market
+          concentration.
         </p>
       </div>
 
-      {/* Geographic stats — the real story */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
-        <div className="card text-center">
-          <div className={`text-3xl font-bold ${getHHITextClass(highestHHI.hhi)}`}>
-            {highestHHI.hhi.toLocaleString()}
-          </div>
-          <div className="text-sm text-fm-sage mt-1">
-            Highest Neighborhood <HHITooltip>HHI</HHITooltip>
-          </div>
-          <div className="text-xs text-fm-sage">{highestHHI.name}</div>
-        </div>
+      {/* Key stats */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <div className="card text-center">
           <div className={`text-3xl font-bold ${getCR4TextClass(highestCR4.cr4)}`}>
             {highestCR4.cr4}%
           </div>
           <div className="text-sm text-fm-sage mt-1">
-            Highest CR4 (Top 4 Landlords)
+            of apartments controlled by 4 landlords
           </div>
           <div className="text-xs text-fm-sage">{highestCR4.name}</div>
-          <div className={`text-xs mt-1 font-medium ${getHHITextClass(highestCR4.hhi)}`}>
-            ~1 in every {Math.round(100 / highestCR4.cr4)} units
-          </div>
         </div>
+        <div className="card text-center">
+          <div className="text-3xl font-bold text-fm-copper">
+            {highlyConcentrated}
+          </div>
+          <div className="text-sm text-fm-sage mt-1">
+            highly concentrated neighborhoods
+          </div>
+          <div className="text-xs text-fm-sage">HHI above 2,500 (DOJ threshold)</div>
+        </div>
+        <div className="card text-center">
+          <div className="text-3xl font-bold text-fm-patina">
+            {neighborhoods.length}
+          </div>
+          <div className="text-sm text-fm-sage mt-1">
+            neighborhoods tracked
+          </div>
+          <div className="text-xs text-fm-sage">Across 5 boroughs</div>
+        </div>
+        {highestNycha && (
+          <div className="card text-center">
+            <div className="text-3xl font-bold text-fm-patina">
+              {highestNycha.nychaShare}%
+            </div>
+            <div className="text-sm text-fm-sage mt-1">
+              NYCHA Footprint
+            </div>
+            <div className="text-xs text-fm-sage">
+              {highestNycha.name} — {highestNycha.nychaUnits.toLocaleString()} units
+            </div>
+          </div>
+        )}
         {highestViolations && (
           <div className="card text-center">
             <div className="text-3xl font-bold text-fm-copper">
@@ -141,23 +159,10 @@ export default function HousingPage() {
               ${lowestIncome.medianIncome!.toLocaleString()}
             </div>
             <div className="text-sm text-fm-sage mt-1">
-              Lowest MHI
+              Lowest Median Household Income
             </div>
             <div className="text-xs text-fm-sage">
               {lowestIncome.name} ({lowestIncome.rentBurdenPct}% rent-burdened)
-            </div>
-          </div>
-        )}
-        {highestNycha && (
-          <div className="card text-center">
-            <div className="text-3xl font-bold text-fm-patina">
-              {highestNycha.nychaShare}%
-            </div>
-            <div className="text-sm text-fm-sage mt-1">
-              NYCHA Footprint
-            </div>
-            <div className="text-xs text-fm-sage">
-              {highestNycha.name} — {highestNycha.nychaUnits.toLocaleString()} units
             </div>
           </div>
         )}
@@ -166,11 +171,11 @@ export default function HousingPage() {
       {/* Concentration map with NTA/Borough toggle */}
       <div className="card">
         <h2 className="text-xl font-bold text-fm-patina mb-2">
-          Housing Concentration Map
+          Who owns the buildings in your neighborhood?
         </h2>
         <p className="text-sm text-fm-sage mb-4">
-          Ownership concentration (<HHITooltip>HHI</HHITooltip>) across NYC.
-          Toggle between neighborhood-level (NTA) and borough-level views.
+          Darker colors mean fewer landlords control more apartments.
+          Toggle between neighborhood and borough views.
         </p>
         <HousingMapSection
           ntaHHI={ntaHHI}
@@ -192,7 +197,7 @@ export default function HousingPage() {
       {/* Neighborhood detail table */}
       <div className="card mt-8">
         <h2 className="text-xl font-bold text-fm-patina mb-4">
-          All Neighborhoods
+          All neighborhoods
         </h2>
         <HousingTable neighborhoods={neighborhoods} />
         <p className="mt-4 text-xs text-fm-sage">
@@ -216,16 +221,16 @@ export default function HousingPage() {
       {/* Supply-side synthesis */}
       <div className="card mt-8">
         <h2 className="text-xl font-bold text-fm-patina mb-3">
-          Ownership Concentration and Housing Supply
+          What{"'"}s driving this?
         </h2>
         <p className="text-sm text-gray-700">
           Researchers point to several contributing factors: zoning and
           permitting limits on new construction, acquisition strategies by
           larger owners, and regulatory conditions that affect landlord
           economics. The relative contribution of each is an active area of
-          policy research. The neighborhoods with the highest HHI tend to
-          also be the ones where new construction is hardest to permit —
-          though the causal relationship is debated.
+          policy research. The most concentrated neighborhoods tend to be
+          the ones where new construction is hardest to permit — though the
+          causal relationship is debated.
         </p>
         <p className="mt-3 text-xs text-fm-sage">
           Further reading:{" "}

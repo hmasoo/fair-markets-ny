@@ -52,6 +52,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Nav />
+        <div className="bg-amber-50 border-b border-amber-200 text-amber-800 text-xs text-center py-1.5 px-4">
+          This site is in beta. Data may be incomplete or preliminary. We{"'"}re actively adding sources — see{" "}
+          <a href="/about" className="underline hover:text-amber-900">About</a> for methodology.
+        </div>
         <main className="pt-14 md:pt-0 min-h-screen">
           {children}
         </main>
