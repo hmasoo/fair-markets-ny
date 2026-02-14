@@ -7,6 +7,7 @@
     "table": "3004",
     "period": "2023–2024 two-year average",
     "totalExpenditure": 82267,
+    "meanIncomeBefore": 117000,
     "categories": [
       { "name": "Housing", "amount": 25432, "tracked": true, "href": "/housing" },
       { "name": "Groceries", "amount": 5813, "tracked": true, "href": "/grocery" },
@@ -26,6 +27,7 @@
     "table": "2500",
     "period": "2024",
     "totalExpenditure": 77280,
+    "meanIncomeBefore": 104207,
     "categories": [
       { "name": "Housing", "amount": 24298, "tracked": true },
       { "name": "Groceries", "amount": 5564, "tracked": true },
