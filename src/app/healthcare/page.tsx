@@ -43,15 +43,26 @@ export default function HealthcarePage() {
 
   // Compute charge variation for the default procedure (vaginal delivery, DRG 560)
   const defaultProc = pricingData.procedures[0];
-  const allCharges: number[] = [];
+  const downstateSlugs = new Set(["nyc-metro", "long-island", "hudson-valley"]);
+  const downstateCharges: number[] = [];
+  const upstateCharges: number[] = [];
   for (const r of defaultProc.byRegion) {
     for (const h of r.hospitals) {
-      allCharges.push(h.meanCharge);
+      if (downstateSlugs.has(r.regionSlug)) {
+        downstateCharges.push(h.meanCharge);
+      } else {
+        upstateCharges.push(h.meanCharge);
+      }
     }
   }
-  const minCharge = Math.min(...allCharges);
-  const maxCharge = Math.max(...allCharges);
-  const chargeVariation = (maxCharge / minCharge).toFixed(1);
+  const allCharges = [...downstateCharges, ...upstateCharges];
+  const chargeVariation = (Math.max(...allCharges) / Math.min(...allCharges)).toFixed(1);
+  const downstateMean = Math.round(
+    downstateCharges.reduce((a, b) => a + b, 0) / downstateCharges.length
+  );
+  const upstateMean = Math.round(
+    upstateCharges.reduce((a, b) => a + b, 0) / upstateCharges.length
+  );
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -90,7 +101,7 @@ export default function HealthcarePage() {
             hospital-to-hospital charge variation
           </div>
           <div className="text-xs text-fm-sage">
-            same procedure, same severity
+            driven primarily by geography, not concentration
           </div>
         </div>
         <div className="card text-center">
@@ -106,13 +117,13 @@ export default function HealthcarePage() {
         </div>
         <div className="card text-center">
           <div className="text-3xl font-bold text-fm-patina">
-            {singleDominantRegions.length} of 10
+            ${downstateMean.toLocaleString()} vs ${upstateMean.toLocaleString()}
           </div>
           <div className="text-sm text-fm-sage mt-1">
-            regions with a dominant system
+            downstate vs upstate mean charge
           </div>
           <div className="text-xs text-fm-sage">
-            one system holds 40%+ of beds
+            geography explains most of the variation
           </div>
         </div>
       </div>
@@ -148,11 +159,14 @@ export default function HealthcarePage() {
               2. Geography and access
             </h3>
             <p className="text-sm text-gray-700 mt-1">
-              Rural regions have fewer hospitals, meaning patients often have
-              limited alternatives. This is infrastructure reality, not always
-              market failure. Urban regions like NYC Metro have more choices but
-              higher operating costs — land, labor, and regulatory overhead all
-              push prices up.
+              This page{"\u2019"}s own data shows it: for a vaginal delivery at
+              the same severity, downstate hospitals (NYC, Long Island, Hudson
+              Valley) charge ${downstateMean.toLocaleString()} on average vs $
+              {upstateMean.toLocaleString()} upstate — a{" "}
+              {(downstateMean / upstateMean).toFixed(1)}&times; gap. Higher
+              operating costs (land, labor, cost of living) drive most of this
+              difference, not market concentration. NYC Metro has the lowest
+              HHI of any region but the highest charges.
             </p>
           </div>
           <div>
@@ -191,8 +205,20 @@ export default function HealthcarePage() {
               >
                 Cooper et al. (2019)
               </a>
-              , and Craig et al. document this pattern across U.S. markets. NYS
-              statewide HHI rose 63% since 2015 (680 to 1,105).
+              , and Craig et al. document this pattern across U.S. markets.
+              The{" "}
+              <a
+                href="https://www.rand.org/pubs/research_reports/RRA1144-2-v2.html"
+                className="text-fm-teal hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                RAND Hospital Price Transparency Study (2024)
+              </a>{" "}
+              found that New York commercial prices exceed 300% of Medicare
+              rates, and that most price variation is explained by hospital
+              market power — not payer mix or cost of care. NYS statewide HHI
+              rose 63% since 2015 (680 to 1,105).
             </p>
           </div>
           <div>
@@ -200,11 +226,15 @@ export default function HealthcarePage() {
               5. What we don{"\u2019"}t yet have
             </h3>
             <p className="text-sm text-gray-700 mt-1">
-              This page shows list prices and estimated resource costs, not
-              insurer-negotiated rates or out-of-pocket costs. Without those, plus
-              quality metrics (readmissions, outcomes), we can document pricing
-              variation and ownership structure but can{"\u2019"}t definitively
-              connect them.
+              This page currently shows list prices (SPARCS) and estimated
+              resource costs, not insurer-negotiated rates or out-of-pocket
+              costs. <strong>Coming soon:</strong> facility-level
+              relative-to-Medicare pricing from the RAND Hospital Price
+              Transparency Study, which measures what commercial insurers
+              actually pay — controlling for geographic cost differences that
+              dominate the SPARCS charge data above. That will let us connect
+              ownership structure to actual pricing outcomes, rather than list
+              prices that few patients pay.
             </p>
           </div>
         </div>
@@ -216,9 +246,14 @@ export default function HealthcarePage() {
           Who runs the hospitals?
         </h2>
         <p className="text-sm text-fm-sage mb-4">
-          Ownership structure is one lens on hospital markets. When paired with
-          the pricing data above, concentration patterns help explain — but don
-          {"\u2019"}t automatically predict — what patients pay.
+          In {singleDominantRegions.length} of 10 health planning regions, a
+          single system controls 40% or more of hospital beds. Ownership
+          structure is one lens on hospital markets — when paired with the
+          pricing data above, concentration patterns help explain variation, but
+          don{"\u2019"}t automatically predict what patients pay. The most
+          competitive region (NYC Metro) has the highest charges; the most
+          concentrated regions charge the least, largely because they{"\u2019"}re
+          upstate.
         </p>
         <HealthcareMapSection regions={regions} />
       </div>

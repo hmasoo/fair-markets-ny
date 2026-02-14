@@ -81,13 +81,19 @@ function formatDollarsFull(n: number): string {
 
 const PROCEDURE_ORDER = ["560", "540", "326", "324", "194", "139"];
 
-const PROCEDURE_SHORT_NAMES: Record<string, string> = {
-  "560": "Vaginal Delivery",
-  "540": "C-Section",
-  "326": "Knee Replacement",
-  "324": "Hip Replacement",
-  "194": "Heart Failure",
-  "139": "Pneumonia",
+const PROCEDURE_INFO: Record<string, { label: string; tag: string }> = {
+  "560": { label: "Vaginal Delivery", tag: "shoppable" },
+  "540": { label: "C-Section", tag: "shoppable" },
+  "326": { label: "Knee Replacement", tag: "elective" },
+  "324": { label: "Hip Replacement", tag: "elective" },
+  "194": { label: "Heart Failure", tag: "emergency" },
+  "139": { label: "Pneumonia", tag: "emergency" },
+};
+
+const TAG_STYLES: Record<string, string> = {
+  shoppable: "bg-emerald-100 text-emerald-700",
+  elective: "bg-emerald-100 text-emerald-700",
+  emergency: "bg-amber-100 text-amber-700",
 };
 
 // --- Hospital Pricing Bar Chart ---
@@ -328,23 +334,44 @@ export function PricingSection({
       </div>
 
       {/* Procedure tabs */}
-      <div className="flex flex-wrap gap-1.5 mb-6">
+      <div className="flex flex-wrap gap-1.5 mb-2">
         {PROCEDURE_ORDER.filter((code) =>
           procedures.some((p) => p.drgCode === code),
-        ).map((code) => (
-          <button
-            key={code}
-            onClick={() => setSelectedDrg(code)}
-            className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
-              selectedDrg === code
-                ? "bg-fm-patina text-white"
-                : "bg-gray-100 text-fm-sage hover:bg-gray-200 hover:text-fm-patina"
-            }`}
-          >
-            {PROCEDURE_SHORT_NAMES[code] ?? code}
-          </button>
-        ))}
+        ).map((code) => {
+          const info = PROCEDURE_INFO[code];
+          return (
+            <button
+              key={code}
+              onClick={() => setSelectedDrg(code)}
+              className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors inline-flex items-center gap-1.5 ${
+                selectedDrg === code
+                  ? "bg-fm-patina text-white"
+                  : "bg-gray-100 text-fm-sage hover:bg-gray-200 hover:text-fm-patina"
+              }`}
+            >
+              {info?.label ?? code}
+              {info && (
+                <span
+                  className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium ${
+                    selectedDrg === code
+                      ? "bg-white/20 text-white"
+                      : TAG_STYLES[info.tag] ?? ""
+                  }`}
+                >
+                  {info.tag}
+                </span>
+              )}
+            </button>
+          );
+        })}
       </div>
+      <p className="text-xs text-fm-sage mb-6">
+        Six high-volume DRGs chosen for comparability: deliveries and joint
+        replacements are shoppable (patients can choose where to go), while
+        heart failure and pneumonia are emergencies (patients go to the nearest
+        hospital). Price variation means something different when you can
+        {"\u2019"}t shop.
+      </p>
 
       {/* Bar chart */}
       <div key={selectedDrg}>
@@ -453,19 +480,33 @@ export function RegionPricingTable({
 
       {/* Procedure tabs */}
       <div className="flex flex-wrap gap-1.5 mb-4">
-        {availableDrgs.map((code) => (
-          <button
-            key={code}
-            onClick={() => setSelectedDrg(code)}
-            className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
-              selectedDrg === code
-                ? "bg-fm-patina text-white"
-                : "bg-gray-100 text-fm-sage hover:bg-gray-200 hover:text-fm-patina"
-            }`}
-          >
-            {PROCEDURE_SHORT_NAMES[code] ?? code}
-          </button>
-        ))}
+        {availableDrgs.map((code) => {
+          const info = PROCEDURE_INFO[code];
+          return (
+            <button
+              key={code}
+              onClick={() => setSelectedDrg(code)}
+              className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors inline-flex items-center gap-1.5 ${
+                selectedDrg === code
+                  ? "bg-fm-patina text-white"
+                  : "bg-gray-100 text-fm-sage hover:bg-gray-200 hover:text-fm-patina"
+              }`}
+            >
+              {info?.label ?? code}
+              {info && (
+                <span
+                  className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium ${
+                    selectedDrg === code
+                      ? "bg-white/20 text-white"
+                      : TAG_STYLES[info.tag] ?? ""
+                  }`}
+                >
+                  {info.tag}
+                </span>
+              )}
+            </button>
+          );
+        })}
       </div>
 
       {/* Summary stats */}
