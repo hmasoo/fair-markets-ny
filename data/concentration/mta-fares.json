@@ -1,0 +1,88 @@
+{
+  "source": "MTA Board Resolutions (fare increases)",
+  "sourceUrl": "https://new.mta.info/fares",
+  "inflationBasis": "BLS CPI-U All Items, annual average, adjusted to 2024 dollars",
+  "notes": "Base fare is the single-ride subway/bus fare. Monthly pass is the 30-day unlimited MetroCard (OMNY equivalent from 2024).",
+  "fares": [
+    {
+      "year": 2003,
+      "effectiveDate": "2003-05-04",
+      "baseFare": 2.00,
+      "monthlyPass": 70.00,
+      "baseFareReal2024": 3.42,
+      "monthlyPassReal2024": 119.70
+    },
+    {
+      "year": 2005,
+      "effectiveDate": "2005-02-27",
+      "baseFare": 2.00,
+      "monthlyPass": 76.00,
+      "baseFareReal2024": 3.22,
+      "monthlyPassReal2024": 122.21
+    },
+    {
+      "year": 2008,
+      "effectiveDate": "2008-03-02",
+      "baseFare": 2.00,
+      "monthlyPass": 81.00,
+      "baseFareReal2024": 2.92,
+      "monthlyPassReal2024": 118.18
+    },
+    {
+      "year": 2009,
+      "effectiveDate": "2009-06-28",
+      "baseFare": 2.25,
+      "monthlyPass": 89.00,
+      "baseFareReal2024": 3.30,
+      "monthlyPassReal2024": 130.39
+    },
+    {
+      "year": 2010,
+      "effectiveDate": "2010-12-30",
+      "baseFare": 2.25,
+      "monthlyPass": 104.00,
+      "baseFareReal2024": 3.24,
+      "monthlyPassReal2024": 149.86
+    },
+    {
+      "year": 2013,
+      "effectiveDate": "2013-03-03",
+      "baseFare": 2.50,
+      "monthlyPass": 112.00,
+      "baseFareReal2024": 3.37,
+      "monthlyPassReal2024": 151.09
+    },
+    {
+      "year": 2015,
+      "effectiveDate": "2015-03-22",
+      "baseFare": 2.75,
+      "monthlyPass": 116.50,
+      "baseFareReal2024": 3.65,
+      "monthlyPassReal2024": 154.48
+    },
+    {
+      "year": 2019,
+      "effectiveDate": "2019-04-21",
+      "baseFare": 2.75,
+      "monthlyPass": 127.00,
+      "baseFareReal2024": 3.38,
+      "monthlyPassReal2024": 156.08
+    },
+    {
+      "year": 2023,
+      "effectiveDate": "2023-08-20",
+      "baseFare": 2.90,
+      "monthlyPass": 132.00,
+      "baseFareReal2024": 2.99,
+      "monthlyPassReal2024": 136.09
+    },
+    {
+      "year": 2025,
+      "effectiveDate": "2025-08-01",
+      "baseFare": 2.90,
+      "monthlyPass": 132.00,
+      "baseFareReal2024": 2.88,
+      "monthlyPassReal2024": 131.08
+    }
+  ]
+}

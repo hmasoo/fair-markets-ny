@@ -8,6 +8,7 @@ const links = [
   { href: "/housing", label: "Housing" },
   { href: "/broadband", label: "Broadband" },
   { href: "/healthcare", label: "Healthcare" },
+  { href: "/transportation", label: "Transport" },
   { href: "/enforcement", label: "Regulation" },
   { href: "/about", label: "About" },
 ];

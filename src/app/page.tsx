@@ -31,6 +31,15 @@ const sectors = [
     statLabel: "of beds held by one system (North Country)",
   },
   {
+    title: "Getting to Work",
+    subtitle: "What commuting costs across NYC",
+    href: "/transportation",
+    description:
+      "A monthly MetroCard costs $132, but what you actually spend depends on where you live. In car-dependent neighborhoods, estimated commute costs top $500/month. We combined Census commute data with MTA fares and vehicle costs to map transportation spending by neighborhood.",
+    stat: "$9,425",
+    statLabel: "avg annual transport spending (NY metro)",
+  },
+  {
     title: "Regulatory Actions",
     subtitle: "When markets don't work, who steps in?",
     href: "/enforcement",
