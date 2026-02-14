@@ -16,6 +16,8 @@
     "data:download-income": "tsx scripts/scrapers/download-acs-income.ts",
     "data:aggregate-income": "tsx scripts/scrapers/aggregate-nta-income.ts",
     "data:fetch-mesh": "tsx scripts/scrapers/fetch-nycmesh-nodes.ts",
+    "data:download-hpd": "tsx scripts/scrapers/download-hpd-violations.ts",
+    "data:aggregate-hpd": "tsx scripts/scrapers/aggregate-hpd-violations.ts",
     "start": "next start",
     "lint": "eslint"
   },

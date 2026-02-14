@@ -40,7 +40,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.15,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -80,7 +80,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.33,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -120,7 +120,7 @@
       ],
       "nychaUnits": 525,
       "nychaShare": 4.2,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.12,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -160,7 +160,7 @@
       ],
       "nychaUnits": 3265,
       "nychaShare": 12.4,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.22,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -200,7 +200,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.07,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -240,7 +240,7 @@
       ],
       "nychaUnits": 1932,
       "nychaShare": 7,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.07,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -280,7 +280,7 @@
       ],
       "nychaUnits": 1953,
       "nychaShare": 9.9,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.12,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -320,7 +320,7 @@
       ],
       "nychaUnits": 10,
       "nychaShare": 0.1,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.27,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -360,7 +360,7 @@
       ],
       "nychaUnits": 3332,
       "nychaShare": 9,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.58,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -400,7 +400,7 @@
       ],
       "nychaUnits": 6031,
       "nychaShare": 15.4,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.61,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -440,7 +440,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.65,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -480,7 +480,7 @@
       ],
       "nychaUnits": 353,
       "nychaShare": 1.5,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.63,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -520,7 +520,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.49,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -560,7 +560,7 @@
       ],
       "nychaUnits": 997,
       "nychaShare": 6.5,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.81,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -600,7 +600,7 @@
       ],
       "nychaUnits": 66,
       "nychaShare": 0.4,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.09,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -640,7 +640,7 @@
       ],
       "nychaUnits": 293,
       "nychaShare": 2.1,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.09,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -680,7 +680,7 @@
       ],
       "nychaUnits": 3363,
       "nychaShare": 24.3,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.6,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -720,7 +720,7 @@
       ],
       "nychaUnits": 4781,
       "nychaShare": 13.3,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.17,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -760,7 +760,7 @@
       ],
       "nychaUnits": 3,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.21,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -800,7 +800,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.21,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -840,7 +840,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.54,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -880,7 +880,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.54,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -920,7 +920,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.49,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -960,7 +960,7 @@
       ],
       "nychaUnits": 2581,
       "nychaShare": 6.8,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.07,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -1000,7 +1000,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.28,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -1040,7 +1040,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.21,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -1080,7 +1080,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.41,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -1120,7 +1120,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.29,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -1160,7 +1160,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.38,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -1200,7 +1200,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.25,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -1240,7 +1240,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.32,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -1280,7 +1280,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.57,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -1320,7 +1320,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.39,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -1360,7 +1360,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.64,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -1400,7 +1400,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.38,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -1440,7 +1440,7 @@
       ],
       "nychaUnits": 1765,
       "nychaShare": 15.1,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.17,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -1480,7 +1480,7 @@
       ],
       "nychaUnits": 4375,
       "nychaShare": 17.8,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.27,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -1520,7 +1520,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.44,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -1560,7 +1560,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 2.04,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -1600,7 +1600,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.98,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -1640,7 +1640,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.64,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -1680,7 +1680,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.36,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -1720,7 +1720,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.39,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -1760,7 +1760,7 @@
       ],
       "nychaUnits": 2204,
       "nychaShare": 7.9,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.2,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -1800,7 +1800,7 @@
       ],
       "nychaUnits": 1184,
       "nychaShare": 7.3,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.05,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -1840,7 +1840,7 @@
       ],
       "nychaUnits": 7409,
       "nychaShare": 30.1,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.6,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -1880,7 +1880,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.39,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -1920,7 +1920,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.78,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -1960,7 +1960,7 @@
       ],
       "nychaUnits": 2,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.08,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -2000,7 +2000,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.49,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -2040,7 +2040,7 @@
       ],
       "nychaUnits": 1188,
       "nychaShare": 5.5,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.33,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -2080,7 +2080,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.06,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -2120,7 +2120,7 @@
       ],
       "nychaUnits": 3230,
       "nychaShare": 11.9,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.24,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -2160,7 +2160,7 @@
       ],
       "nychaUnits": 7400,
       "nychaShare": 27.5,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.91,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -2200,7 +2200,7 @@
       ],
       "nychaUnits": 4715,
       "nychaShare": 26.6,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.22,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -2240,7 +2240,7 @@
       ],
       "nychaUnits": 131,
       "nychaShare": 2.1,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.88,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -2280,7 +2280,7 @@
       ],
       "nychaUnits": 407,
       "nychaShare": 2.6,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.7,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -2320,7 +2320,7 @@
       ],
       "nychaUnits": 1969,
       "nychaShare": 12.6,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.6,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -2360,7 +2360,7 @@
       ],
       "nychaUnits": 4256,
       "nychaShare": 49.2,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.11,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -2400,7 +2400,7 @@
       ],
       "nychaUnits": 483,
       "nychaShare": 3.7,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.31,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -2440,7 +2440,7 @@
       ],
       "nychaUnits": 900,
       "nychaShare": 3.3,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.94,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -2480,7 +2480,7 @@
       ],
       "nychaUnits": 700,
       "nychaShare": 5.3,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 2.21,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -2520,7 +2520,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 2.02,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -2560,7 +2560,7 @@
       ],
       "nychaUnits": 6073,
       "nychaShare": 23.3,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.44,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -2600,7 +2600,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 2.18,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -2640,7 +2640,7 @@
       ],
       "nychaUnits": 314,
       "nychaShare": 2.8,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 2.96,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -2680,7 +2680,7 @@
       ],
       "nychaUnits": 220,
       "nychaShare": 2.5,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 2.13,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -2720,7 +2720,7 @@
       ],
       "nychaUnits": 741,
       "nychaShare": 5.2,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 2.22,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -2760,7 +2760,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 2.69,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -2800,7 +2800,7 @@
       ],
       "nychaUnits": 233,
       "nychaShare": 1.5,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.99,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -2840,7 +2840,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.57,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -2880,7 +2880,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.6,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -2920,7 +2920,7 @@
       ],
       "nychaUnits": 344,
       "nychaShare": 2.5,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.49,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -2960,7 +2960,7 @@
       ],
       "nychaUnits": 1696,
       "nychaShare": 18,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -3000,7 +3000,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.22,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -3040,7 +3040,7 @@
       ],
       "nychaUnits": 3374,
       "nychaShare": 13.3,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.27,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -3080,7 +3080,7 @@
       ],
       "nychaUnits": 3081,
       "nychaShare": 23.4,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.29,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -3120,7 +3120,7 @@
       ],
       "nychaUnits": 2036,
       "nychaShare": 14.6,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.78,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -3160,7 +3160,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.51,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -3200,7 +3200,7 @@
       ],
       "nychaUnits": 132,
       "nychaShare": 2.4,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.56,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -3240,7 +3240,7 @@
       ],
       "nychaUnits": 1894,
       "nychaShare": 11.1,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.2,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -3280,7 +3280,7 @@
       ],
       "nychaUnits": 179,
       "nychaShare": 1.4,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.44,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -3320,7 +3320,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.07,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -3360,7 +3360,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.28,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -3400,7 +3400,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.31,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -3440,7 +3440,7 @@
       ],
       "nychaUnits": 877,
       "nychaShare": 9.7,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.17,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -3480,7 +3480,7 @@
       ],
       "nychaUnits": 11512,
       "nychaShare": 48.4,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.93,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -3520,7 +3520,7 @@
       ],
       "nychaUnits": 733,
       "nychaShare": 3.3,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.36,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -3560,7 +3560,7 @@
       ],
       "nychaUnits": 1775,
       "nychaShare": 10.7,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.53,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -3600,7 +3600,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.04,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -3640,7 +3640,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.02,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -3680,7 +3680,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.05,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -3720,7 +3720,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.23,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -3760,7 +3760,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.07,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -3800,7 +3800,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.11,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -3840,7 +3840,7 @@
       ],
       "nychaUnits": 4261,
       "nychaShare": 24,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.2,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -3880,7 +3880,7 @@
       ],
       "nychaUnits": 5511,
       "nychaShare": 21.4,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.18,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -3920,7 +3920,7 @@
       ],
       "nychaUnits": 5409,
       "nychaShare": 13.5,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.3,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -3960,7 +3960,7 @@
       ],
       "nychaUnits": 1382,
       "nychaShare": 3,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.1,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -4000,7 +4000,7 @@
       ],
       "nychaUnits": 377,
       "nychaShare": 0.9,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.23,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -4040,7 +4040,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.09,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -4080,7 +4080,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.06,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -4110,7 +4110,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.02,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -4150,7 +4150,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.1,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -4190,7 +4190,7 @@
       ],
       "nychaUnits": 492,
       "nychaShare": 1.2,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.07,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -4230,7 +4230,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.06,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -4270,7 +4270,7 @@
       ],
       "nychaUnits": 1259,
       "nychaShare": 2.8,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.05,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -4310,7 +4310,7 @@
       ],
       "nychaUnits": 1006,
       "nychaShare": 1.8,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.17,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -4350,7 +4350,7 @@
       ],
       "nychaUnits": 2465,
       "nychaShare": 9.1,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.39,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -4390,7 +4390,7 @@
       ],
       "nychaUnits": 150,
       "nychaShare": 0.2,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.08,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -4430,7 +4430,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.07,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -4470,7 +4470,7 @@
       ],
       "nychaUnits": 1173,
       "nychaShare": 2.3,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.11,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -4510,7 +4510,7 @@
       ],
       "nychaUnits": 1941,
       "nychaShare": 11.6,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.26,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -4550,7 +4550,7 @@
       ],
       "nychaUnits": 1272,
       "nychaShare": 15.5,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.65,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -4590,7 +4590,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.5,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -4630,7 +4630,7 @@
       ],
       "nychaUnits": 915,
       "nychaShare": 4,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.03,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -4670,7 +4670,7 @@
       ],
       "nychaUnits": 6093,
       "nychaShare": 15.6,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.23,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -4710,7 +4710,7 @@
       ],
       "nychaUnits": 6912,
       "nychaShare": 24.3,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.35,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -4750,7 +4750,7 @@
       ],
       "nychaUnits": 9102,
       "nychaShare": 29.2,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.7,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -4790,7 +4790,7 @@
       ],
       "nychaUnits": 56,
       "nychaShare": 0.2,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.64,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -4830,7 +4830,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.17,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -4870,7 +4870,7 @@
       ],
       "nychaUnits": 1167,
       "nychaShare": 6.5,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.13,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -4910,7 +4910,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.21,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -4950,7 +4950,7 @@
       ],
       "nychaUnits": 1104,
       "nychaShare": 10,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.22,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -4990,7 +4990,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.3,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -5030,7 +5030,7 @@
       ],
       "nychaUnits": 1357,
       "nychaShare": 7.7,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.26,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -5070,7 +5070,7 @@
       ],
       "nychaUnits": 5123,
       "nychaShare": 28.8,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.14,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -5110,7 +5110,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.02,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -5150,7 +5150,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.5,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -5190,7 +5190,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.22,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -5230,7 +5230,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.55,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -5270,7 +5270,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.25,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -5310,7 +5310,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.32,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -5350,7 +5350,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.38,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -5390,7 +5390,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.37,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -5430,7 +5430,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.11,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -5470,7 +5470,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.4,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -5510,7 +5510,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.15,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -5550,7 +5550,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.1,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -5590,7 +5590,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.22,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -5630,7 +5630,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.21,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -5670,7 +5670,7 @@
       ],
       "nychaUnits": 13,
       "nychaShare": 0.1,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.14,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -5710,7 +5710,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.04,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -5750,7 +5750,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.02,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -5790,7 +5790,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.28,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -5830,7 +5830,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.18,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -5870,7 +5870,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.08,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -5910,7 +5910,7 @@
       ],
       "nychaUnits": 917,
       "nychaShare": 3,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.34,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -5950,7 +5950,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.46,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -5990,7 +5990,7 @@
       ],
       "nychaUnits": 2080,
       "nychaShare": 16.5,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.11,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -6030,7 +6030,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.09,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -6070,7 +6070,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.28,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -6110,7 +6110,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.31,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -6150,7 +6150,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.36,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -6190,7 +6190,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.39,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -6230,7 +6230,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.25,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -6270,7 +6270,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.22,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -6310,7 +6310,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.23,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -6350,7 +6350,7 @@
       ],
       "nychaUnits": 9,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.19,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -6390,7 +6390,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.17,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -6430,7 +6430,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.08,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -6470,7 +6470,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.07,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -6510,7 +6510,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.06,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -6550,7 +6550,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.03,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -6590,7 +6590,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.06,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -6630,7 +6630,7 @@
       ],
       "nychaUnits": 523,
       "nychaShare": 2.2,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.48,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -6670,7 +6670,7 @@
       ],
       "nychaUnits": 1184,
       "nychaShare": 9.6,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.39,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -6710,7 +6710,7 @@
       ],
       "nychaUnits": 851,
       "nychaShare": 6.5,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.22,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -6750,7 +6750,7 @@
       ],
       "nychaUnits": 5,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.16,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -6790,7 +6790,7 @@
       ],
       "nychaUnits": 45,
       "nychaShare": 0.3,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.24,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -6830,7 +6830,7 @@
       ],
       "nychaUnits": 3,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.35,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -6870,7 +6870,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.02,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -6910,7 +6910,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.05,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -6950,7 +6950,7 @@
       ],
       "nychaUnits": 15,
       "nychaShare": 0.1,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.21,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -6990,7 +6990,7 @@
       ],
       "nychaUnits": 6,
       "nychaShare": 0.1,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.08,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -7030,7 +7030,7 @@
       ],
       "nychaUnits": 4,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.09,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -7070,7 +7070,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.17,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -7110,7 +7110,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.15,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -7150,7 +7150,7 @@
       ],
       "nychaUnits": 610,
       "nychaShare": 2.8,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.55,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -7190,7 +7190,7 @@
       ],
       "nychaUnits": 2018,
       "nychaShare": 12.7,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.44,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -7230,7 +7230,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.11,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -7270,7 +7270,7 @@
       ],
       "nychaUnits": 882,
       "nychaShare": 10.6,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.7,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -7310,7 +7310,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.51,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -7350,7 +7350,7 @@
       ],
       "nychaUnits": 277,
       "nychaShare": 3,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 1.05,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -7390,7 +7390,7 @@
       ],
       "nychaUnits": 634,
       "nychaShare": 4.6,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.2,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -7430,7 +7430,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.04,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -7470,7 +7470,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.47,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -7510,7 +7510,7 @@
       ],
       "nychaUnits": 607,
       "nychaShare": 5.7,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.39,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -7550,7 +7550,7 @@
       ],
       "nychaUnits": 928,
       "nychaShare": 7.1,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.11,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -7590,7 +7590,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.05,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -7630,7 +7630,7 @@
       ],
       "nychaUnits": 485,
       "nychaShare": 4.5,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.04,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -7670,7 +7670,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.05,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -7710,7 +7710,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.13,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -7750,7 +7750,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.04,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -7790,7 +7790,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.02,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -7830,7 +7830,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.03,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
@@ -7870,7 +7870,7 @@
       ],
       "nychaUnits": 0,
       "nychaShare": 0,
-      "hpdViolationsPerUnit": 0,
+      "hpdViolationsPerUnit": 0.01,
       "medianRent": 0,
       "medianIncome": null,
       "rentBurdenPct": null
