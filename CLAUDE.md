@@ -2,6 +2,113 @@
 
 Read PROJECT.md first — it contains the full project vision, thematic research areas, data sources, tech stack, legal framework, and prior art.
 
+## What This Project Is
+
+A public data platform that joins siloed government datasets (federal, state, city) across shared geographic keys to make policy-relevant information accessible and explorable. The core value is **data integration** — linking parcel ownership records to violation data to Census income tables to regulatory filings — so that users don't have to do that joining themselves.
+
+The platform currently covers housing, broadband, healthcare, and regulatory enforcement across New York State. It is designed so that the marginal cost of adding new policy verticals decreases over time, because new datasets plug into existing geographic scaffolding (census blocks, neighborhoods, counties, health planning regions).
+
+## Who This Is For
+
+People who need to make policy arguments and don't have a data team: community board members preparing rezoning testimony, local reporters covering hospital mergers, policy staffers drafting broadband subsidy proposals, advocates building evidence-based cases. The platform gives them a structured middle layer — connected enough to be useful, open enough to support their own conclusions.
+
+## Naming & Identity
+
+The current name "Fair Markets NY" presupposes a thesis about market fairness. The project is evolving toward a **neutral data platform** identity. Preferred direction: a name that signals public data infrastructure, not advocacy. Leading candidates include **Crosswalk NY** (describes the technical value of linking datasets, familiar to policy audience) or **Empire Data** (broader appeal, NY-specific). Avoid names containing "fair," "watch," "monitor," or "accountability" — these signal advocacy and limit trust with users who need a neutral tool.
+
+## Core Design Principles
+
+### 1. Lead with costs and outcomes, not market structure
+
+Every page should follow this logic:
+1. **What do you pay?** — the cost the audience feels
+2. **What drives that cost?** — supply constraints, regulation, geography, income, and market structure where demonstrable
+3. **What has been tried?** — policy interventions with honest assessment
+4. **What could help?** — more supply, more competition, better regulation (distinguished clearly)
+
+Concentration metrics (HHI, CR4) are **evidence**, not headlines. They appear when they earn their place — when connected to a price or quality outcome.
+
+### 2. Don't conflate market structure with market failure
+
+High concentration is not inherently harmful. The site's own data proves this: Stuyvesant Town (HHI 6,553) is entirely rent-stabilized with good outcomes; Co-op City (HHI 4,713) is resident-governed; Parkchester's top "landlord" is a condo association. Structure is an input to analysis, not a conclusion.
+
+When presenting structure data, always pair it with outcome data (prices, quality, access) or explicitly note the absence of that evidence. Never let the framing imply a causal link that hasn't been demonstrated.
+
+### 3. Distinguish between different types of problems
+
+Not all consumer pain has the same cause or the same solution:
+- **Infrastructure gaps** (rural broadband) → subsidized buildout, not antitrust
+- **Market power** (urban ISP duopolies) → competition policy
+- **Low incomes** (rent burden in West Farms) → income support, not ownership deconcentration
+- **Supply constraints** (zoning-restricted housing) → regulatory reform
+
+The platform should help users see which type of problem they're looking at. Mixing these up produces bad policy recommendations.
+
+### 4. Make the data integration visible
+
+Users should understand they're looking at multiple joined datasets, not a single source. Frame this as a feature: "This view combines parcel ownership, violation records, Census income data, and rent stabilization status — four public datasets that are normally siloed." The joining is the product.
+
+### 5. Maintain editorial neutrality
+
+A thesis-driven advocacy site picks fights. A platform earns trust by showing data even when it cuts against expected narratives. The existing disclaimers (Stuy Town, Co-op City, the enforcement page's "What this tracker doesn't capture") exemplify the right instinct. Protect and extend this approach.
+
+## Page-Specific Guidance
+
+### Homepage
+- Frame as: "What do New Yorkers pay for the basics — and why?"
+- The "41 cents of every dollar" stat should describe spending on necessities, not imply those sectors all have competition problems
+- Drop the word "concentration" from the landing page; let each vertical make its own case
+
+### Housing (`/housing`)
+- Lead with rent burden and income by neighborhood — that's what people feel
+- Explain drivers in order of explanatory power: income levels → supply/zoning constraints → stabilization regime → ownership structure
+- The ownership map is interesting context, not the diagnosis
+- **Critical data gap:** median rent column is empty for every row in the neighborhood table. This is the single most important missing number for a cost-focused framing
+- Kill HHI as a consumer-facing metric; use plain language ("5 companies own X% of rentals")
+
+### Broadband (`/broadband`)
+- The strongest concentration case on the site — an 88% CR4 is legitimately high
+- Split explicitly into two problems with two solutions: rural infrastructure gaps (subsidized buildout) vs. urban duopolies (competition policy)
+- **Critical data gap:** broadband prices by county/provider. If monopoly counties pay more, that's the killer fact. Without prices, the page documents provider counts but doesn't demonstrate consumer harm
+
+### Healthcare (`/healthcare`)
+- Bed share is the weakest metric on the site. Patients don't choose hospitals by bed count
+- Need at least one of: insurer-negotiated rates by region, out-of-pocket cost comparisons, or quality metrics (readmissions, outcomes) correlated with consolidation
+- The academic literature (Gaynor, Cooper, Craig) supports the link between hospital consolidation and higher prices — cite it directly rather than implying it through HHI tables
+- NYS SPARCS has charge data that could strengthen this page substantially
+
+### Enforcement (`/enforcement`)
+- The best-written page on the site. The "What this tracker doesn't capture" section is excellent
+- Drop the Coach/Capri handbag merger — it's unrelated to essential NY markets and reads as filler
+- Cross-reference other pages: "This hospital merger affected the Finger Lakes region — here's what concentration looked like before and after." This is where the shared data layer pays off visibly
+- Consider leading with the limitations framing — it signals intellectual seriousness
+
+## Expansion Strategy
+
+Choose new verticals by what plugs into existing geographic and demographic scaffolding, not by ideological affinity. High-value candidates:
+- **Grocery access** — USDA food desert data, SNAP retailer locations (shares Census geography)
+- **Energy costs** — utility service territories mapped to counties
+- **School performance** — shares neighborhood boundaries
+- **Childcare** — licensing data, cost data, shares Census geography
+
+The question is never "what other markets have competition problems" — it's "what other policy-relevant datasets can we join to what we already have."
+
+## Anti-Patterns to Avoid
+
+- Using HHI or CR4 as headlines for a general audience
+- Presenting a scatterplot that shows no correlation without saying so
+- Framing consolidation trends as inherently alarming without outcome evidence
+- Implying causation between concentration and rent burden when income is the dominant factor
+- Including enforcement examples outside the platform's scope to pad numbers
+- Letting "competitive," "moderate," and "highly concentrated" HHI labels do argumentative work that the underlying data doesn't support
+
+## Technical Notes (Architecture)
+
+- Geographic keys: census blocks, NTAs (neighborhoods), counties, health planning regions
+- Primary data sources: NYC MapPLUTO, ACRIS, HPD (housing); FCC BDC (broadband); NYS DOH SPARCS, AHA (healthcare); BLS CEX (spending); Census ACS (income/demographics)
+- All data from public government records — this is a feature, not a limitation
+- The methodology/about page is as important as any vertical page; treat it like API documentation
+
 ## Project Bootstrap
 
 ### 1. Scaffold the app
