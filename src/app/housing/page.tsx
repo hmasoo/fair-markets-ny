@@ -91,12 +91,14 @@ export default function HousingPage() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-fm-patina">Rental Ownership in NYC</h1>
         <p className="mt-2 text-fm-sage max-w-2xl">
-          In Stuyvesant Town, a single owner controls every rental unit. In
-          Parkchester, 4 landlords hold nearly 9 out of 10. Citywide, about
-          30,000 landlords share the market — but zoom into individual
-          neighborhoods and the picture changes. We measure this using{" "}
-          <HHITooltip>HHI</HHITooltip>, a standard index of market
-          concentration.
+          Ownership concentration varies widely across NYC. In some
+          neighborhoods, a handful of landlords control most apartments. In
+          others — like Stuyvesant Town or Co-op City — a single entity
+          dominates, but tenants are protected by rent stabilization or co-op
+          governance. Citywide, about 30,000 landlords share the market. We
+          measure structure using <HHITooltip>HHI</HHITooltip>, a standard
+          index — but structure alone doesn{"'"}t tell you whether tenants are
+          well-served.
         </p>
       </div>
 
@@ -166,6 +168,20 @@ export default function HousingPage() {
             </div>
           </div>
         )}
+      </div>
+
+      {/* Context note on outliers */}
+      <div className="bg-sky-50 border border-sky-200 rounded-lg p-4 mb-8 text-sm text-sky-900">
+        <strong>A note on reading this data:</strong> High concentration
+        doesn{"'"}t always mean bad outcomes. Stuyvesant Town (HHI 6,553) is
+        entirely rent-stabilized with binding affordability commitments.
+        Co-op City (HHI 4,713) is resident-governed. Parkchester{"'"}s top
+        {'"'}landlord{'"'} is a condominium association. Concentration
+        metrics measure ownership structure — not tenant protections, housing
+        quality, or affordability.{" "}
+        <a href="/about#understanding-concentration" className="text-fm-teal hover:underline">
+          Learn more
+        </a>
       </div>
 
       {/* Concentration map with NTA/Borough toggle */}

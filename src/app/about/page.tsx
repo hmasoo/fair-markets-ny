@@ -184,7 +184,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="card">
+        <section id="understanding-concentration" className="card">
           <h2 className="text-xl font-bold text-fm-patina mb-4">
             Understanding Market Concentration
           </h2>
@@ -235,6 +235,18 @@ export default function AboutPage() {
               affordability than targeting individual landlords. Readers and
               policymakers can draw their own conclusions. Concentration data
               and supply-side analysis are complements, not competitors.
+            </p>
+            <p>
+              <strong>Planned developments and co-ops:</strong> Some of NYC{"'"}s
+              most concentrated neighborhoods are planned developments
+              (Stuyvesant Town, Starrett City), cooperatives (Co-op City), or
+              condominium complexes (Parkchester) where high HHI reflects the
+              development{"'"}s structure rather than market failure. In these
+              cases, tenant protections — rent stabilization, co-op
+              governance, affordability covenants — may be stronger than in
+              fragmented markets. Our data does not yet include stabilization
+              status or tenure type; adding these dimensions is a priority for
+              future versions.
             </p>
           </div>
         </section>
