@@ -15,6 +15,7 @@
     "geo:build": "tsx scripts/geo/build-boundaries.ts",
     "data:download-income": "tsx scripts/scrapers/download-acs-income.ts",
     "data:aggregate-income": "tsx scripts/scrapers/aggregate-nta-income.ts",
+    "data:fetch-mesh": "tsx scripts/scrapers/fetch-nycmesh-nodes.ts",
     "start": "next start",
     "lint": "eslint"
   },

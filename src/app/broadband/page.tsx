@@ -7,10 +7,12 @@ const BroadbandCharts = dynamic(
 );
 import { BroadbandMapSection } from "./BroadbandMapSection";
 import { BroadbandTable } from "./BroadbandTable";
+import { CommunityBroadbandSection } from "./CommunityBroadbandSection";
 
 import timeSeriesData from "../../../data/concentration/broadband-nys.json";
 import marketShareData from "../../../data/concentration/broadband-nys-market-shares.json";
 import countyData from "../../../data/concentration/broadband-counties.json";
+import nycMeshData from "../../../data/concentration/nycmesh-nodes.json";
 
 export const metadata: Metadata = {
   title: "Broadband Competition in New York State",
@@ -82,6 +84,9 @@ export default function BroadbandPage() {
         cr4={marketShareData.cr4}
       />
       </div>
+
+      {/* Community broadband */}
+      <CommunityBroadbandSection data={nycMeshData} />
 
       {/* County table */}
       <div className="card mt-8">

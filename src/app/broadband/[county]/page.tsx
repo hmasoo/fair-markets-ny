@@ -10,6 +10,8 @@ const CountyCharts = dynamic(
 );
 
 import countyData from "../../../../data/concentration/broadband-counties.json";
+import nycMeshData from "../../../../data/concentration/nycmesh-nodes.json";
+import { CommunityBroadbandNote } from "./CommunityBroadbandNote";
 
 interface Props {
   params: Promise<{ county: string }>;
@@ -157,6 +159,19 @@ export default async function CountyPage({ params }: Props) {
           Source: FCC Broadband Data Collection (BDC), December 2024 filing.
         </p>
       </div>
+
+      {/* NYC Mesh note for NYC boroughs only */}
+      {(() => {
+        const meshBorough = nycMeshData.boroughs.find(
+          (b) => b.slug === county.slug,
+        );
+        return meshBorough ? (
+          <CommunityBroadbandNote
+            boroughName={county.name}
+            data={meshBorough}
+          />
+        ) : null;
+      })()}
     </div>
   );
 }

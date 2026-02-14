@@ -1,0 +1,45 @@
+{
+  "source": "NYC Mesh MeshDB — Public Map Data API",
+  "sourceUrl": "https://db.nycmesh.net/api/v1/mapdata/nodes/",
+  "lastUpdated": "2026-02-14",
+  "notes": "Borough assignment via coordinate bounding boxes. Only nodes with status 'Installed'.",
+  "citywide": {
+    "activeNodes": 2086,
+    "supernodes": 3,
+    "hubs": 43
+  },
+  "boroughs": [
+    {
+      "borough": "Manhattan",
+      "slug": "new-york",
+      "fips": "36061",
+      "activeNodes": 1077,
+      "supernodes": 2,
+      "hubs": 26
+    },
+    {
+      "borough": "Brooklyn",
+      "slug": "kings",
+      "fips": "36047",
+      "activeNodes": 1002,
+      "supernodes": 1,
+      "hubs": 16
+    },
+    {
+      "borough": "Bronx",
+      "slug": "bronx",
+      "fips": "36005",
+      "activeNodes": 3,
+      "supernodes": 0,
+      "hubs": 0
+    },
+    {
+      "borough": "Queens",
+      "slug": "queens",
+      "fips": "36081",
+      "activeNodes": 1,
+      "supernodes": 0,
+      "hubs": 0
+    }
+  ]
+}
