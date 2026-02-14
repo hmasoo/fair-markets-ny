@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import dynamic from "next/dynamic";
 
-const NeighborhoodConcentrationChart = dynamic(
-  () => import("./housing-charts").then((m) => m.NeighborhoodConcentrationChart),
+const NeighborhoodRentBurdenChart = dynamic(
+  () => import("./housing-charts").then((m) => m.NeighborhoodRentBurdenChart),
 );
 const NeighborhoodExplorerChart = dynamic(
   () => import("./housing-charts").then((m) => m.NeighborhoodExplorerChart),
@@ -13,7 +13,6 @@ const CitywideCharts = dynamic(
 );
 import { HousingMapSection } from "./HousingMapSection";
 import { HousingTable } from "./HousingTable";
-import { getCR4TextClass } from "@/lib/colorScales";
 import { aggregateByBorough } from "@/lib/aggregations/housing-boroughs";
 
 import timeSeriesData from "../../../data/concentration/housing-nyc.json";
@@ -94,28 +93,16 @@ export default function HousingPage() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-fm-patina">Who owns the apartments in your neighborhood?</h1>
         <p className="mt-2 text-fm-sage max-w-2xl">
-          In some NYC neighborhoods, a handful of landlords control most
-          apartments. In others, ownership is spread across thousands.
-          We combined city ownership records, HPD housing violations, and
-          Census income data to show what{"'"}s happening in all 197
-          neighborhoods — who owns the buildings, how well they{"'"}re
-          maintained, and whether people can afford to live there.
+          Most New Yorkers spend more of their income on rent than the
+          federal government considers affordable. We combined city ownership
+          records, HPD housing violations, and Census income data to show
+          what{"'"}s happening in all 197 neighborhoods — what people pay,
+          how buildings are maintained, and who owns them.
         </p>
       </div>
 
-      {/* Key stats */}
+      {/* Key stats — lead with affordability */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-        {highestViolations && (
-          <div className="card text-center">
-            <div className="text-3xl font-bold text-fm-copper">
-              {highestViolations.hpdViolationsPerUnit}
-            </div>
-            <div className="text-sm text-fm-sage mt-1">
-              hazardous violations per apartment
-            </div>
-            <div className="text-xs text-fm-sage">{highestViolations.name}</div>
-          </div>
-        )}
         {highestRentBurden && (
           <div className="card text-center">
             <div className="text-3xl font-bold text-fm-copper">
@@ -127,15 +114,6 @@ export default function HousingPage() {
             <div className="text-xs text-fm-sage">{highestRentBurden.name}</div>
           </div>
         )}
-        <div className="card text-center">
-          <div className={`text-3xl font-bold ${getCR4TextClass(highestCR4.cr4)}`}>
-            {highestCR4.cr4}%
-          </div>
-          <div className="text-sm text-fm-sage mt-1">
-            of apartments controlled by 4 landlords
-          </div>
-          <div className="text-xs text-fm-sage">{highestCR4.name}</div>
-        </div>
         {lowestIncome && (
           <div className="card text-center">
             <div className="text-3xl font-bold text-fm-patina">
@@ -149,11 +127,66 @@ export default function HousingPage() {
             </div>
           </div>
         )}
+        {highestViolations && (
+          <div className="card text-center">
+            <div className="text-3xl font-bold text-fm-copper">
+              {highestViolations.hpdViolationsPerUnit}
+            </div>
+            <div className="text-sm text-fm-sage mt-1">
+              hazardous violations per apartment
+            </div>
+            <div className="text-xs text-fm-sage">{highestViolations.name}</div>
+          </div>
+        )}
+        <div className="card text-center">
+          <div className="text-3xl font-bold text-fm-copper">
+            {highestCR4.cr4}%
+          </div>
+          <div className="text-sm text-fm-sage mt-1">
+            of rentals owned by just 4 landlords
+          </div>
+          <div className="text-xs text-fm-sage">{highestCR4.name}</div>
+        </div>
       </div>
 
-      {/* Context note on outliers */}
-      <div className="bg-sky-50 border border-sky-200 rounded-lg p-4 mb-8 text-sm text-sky-900">
-        <strong>A note on reading this data:</strong> High concentration
+      {/* Affordability framing — promoted to first content section */}
+      {highestRentBurden && (
+        <div className="card mb-8">
+          <h2 className="text-xl font-bold text-fm-patina mb-2">
+            What do renters actually pay?
+          </h2>
+          <p className="text-sm text-gray-700">
+            Across NYC, many neighborhoods have a majority of renters spending
+            more than 30% of their income on housing — the federal threshold
+            for being {'"'}rent-burdened.{'"'} In {highestRentBurden.name},{" "}
+            <strong>{highestRentBurden.rentBurdenPct}%</strong> of households
+            cross that line. Affordability is shaped by incomes, housing supply,
+            zoning, rent regulation, and building maintenance — ownership
+            concentration is one piece of a larger picture.
+          </p>
+        </div>
+      )}
+
+      {/* Concentration map with NTA/Borough toggle */}
+      <div className="card">
+        <h2 className="text-xl font-bold text-fm-patina mb-2">
+          How concentrated is ownership?
+        </h2>
+        <p className="text-sm text-fm-sage mb-4">
+          Darker colors mean fewer landlords control more apartments.
+          Concentration is one factor among many — it measures ownership
+          structure, not rents or housing quality directly.
+        </p>
+        <HousingMapSection
+          ntaHHI={ntaHHI}
+          ntaDetails={ntaDetails}
+          boroughSummaries={boroughSummaries}
+        />
+      </div>
+
+      {/* Context note on outliers — after map */}
+      <div className="bg-sky-50 border border-sky-200 rounded-lg p-4 mt-8 mb-8 text-sm text-sky-900">
+        <strong>Context matters:</strong> High concentration
         doesn{"'"}t always mean bad outcomes. Stuyvesant Town (HHI 6,553) is
         entirely rent-stabilized with binding affordability commitments.
         Co-op City (HHI 4,713) is resident-governed. Parkchester{"'"}s top
@@ -165,43 +198,9 @@ export default function HousingPage() {
         </a>
       </div>
 
-      {/* Concentration map with NTA/Borough toggle */}
-      <div className="card">
-        <h2 className="text-xl font-bold text-fm-patina mb-2">
-          Who owns the buildings in your neighborhood?
-        </h2>
-        <p className="text-sm text-fm-sage mb-4">
-          Darker colors mean fewer landlords control more apartments.
-          Toggle between neighborhood and borough views.
-        </p>
-        <HousingMapSection
-          ntaHHI={ntaHHI}
-          ntaDetails={ntaDetails}
-          boroughSummaries={boroughSummaries}
-        />
-      </div>
-
-      {/* Affordability framing */}
-      {highestRentBurden && (
-        <div className="card mt-8">
-          <h2 className="text-xl font-bold text-fm-patina mb-2">
-            Can people afford it?
-          </h2>
-          <p className="text-sm text-gray-700">
-            Across NYC, many neighborhoods have a majority of renters spending
-            more than 30% of their income on housing — the federal threshold
-            for being {'"'}rent-burdened.{'"'} In {highestRentBurden.name},{" "}
-            <strong>{highestRentBurden.rentBurdenPct}%</strong> of households
-            cross that line. Concentration doesn{"'"}t cause high rents on its
-            own, but when fewer landlords control more apartments, tenants have
-            fewer options — and less leverage — when rents climb.
-          </p>
-        </div>
-      )}
-
-      {/* Primary chart: neighborhood HHI comparison */}
+      {/* Primary chart: neighborhood rent burden comparison */}
       <div className="mt-8">
-        <NeighborhoodConcentrationChart neighborhoods={neighborhoods} />
+        <NeighborhoodRentBurdenChart neighborhoods={neighborhoods} />
       </div>
 
       {/* Neighborhood Explorer: toggleable scatter chart */}
@@ -212,7 +211,7 @@ export default function HousingPage() {
       {/* Neighborhood detail table */}
       <div className="card mt-8">
         <h2 className="text-xl font-bold text-fm-patina mb-4">
-          All neighborhoods
+          All 197 neighborhoods
         </h2>
         <HousingTable neighborhoods={neighborhoods} />
         <p className="mt-4 text-xs text-fm-sage">
@@ -233,19 +232,20 @@ export default function HousingPage() {
         />
       </div>
 
-      {/* Supply-side synthesis */}
+      {/* Supply-side synthesis — expanded */}
       <div className="card mt-8">
         <h2 className="text-xl font-bold text-fm-patina mb-3">
-          What{"'"}s driving this?
+          What shapes the market?
         </h2>
         <p className="text-sm text-gray-700">
-          Researchers point to several contributing factors: zoning and
-          permitting limits on new construction, acquisition strategies by
-          larger owners, and regulatory conditions that affect landlord
-          economics. The relative contribution of each is an active area of
-          policy research. The most concentrated neighborhoods tend to be
-          the ones where new construction is hardest to permit — though the
-          causal relationship is debated.
+          Housing costs in New York are shaped by demand (population growth,
+          high-wage job concentration, immigration), supply constraints (zoning
+          and permitting limits on new construction, community opposition to
+          development), regulation (rent stabilization, property tax policy),
+          and ownership structure (acquisition strategies by larger landlords,
+          deferred maintenance economics). The relative contribution of each is
+          an active area of policy research — and varies neighborhood by
+          neighborhood.
         </p>
         <p className="mt-3 text-xs text-fm-sage">
           Further reading:{" "}

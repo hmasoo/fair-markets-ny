@@ -29,7 +29,12 @@ const DEFAULT_ROWS = 20;
 
 export function HousingTable({ neighborhoods }: { neighborhoods: Neighborhood[] }) {
   const [showAll, setShowAll] = useState(false);
-  const sorted = [...neighborhoods].sort((a, b) => b.hhi - a.hhi);
+  // Sort by rent burden descending; nulls to bottom
+  const sorted = [...neighborhoods].sort((a, b) => {
+    const aBurden = a.rentBurdenPct ?? -1;
+    const bBurden = b.rentBurdenPct ?? -1;
+    return bBurden - aBurden;
+  });
   const visible = showAll ? sorted : sorted.slice(0, DEFAULT_ROWS);
   const hasMore = sorted.length > DEFAULT_ROWS;
 
@@ -46,25 +51,10 @@ export function HousingTable({ neighborhoods }: { neighborhoods: Neighborhood[] 
                 Borough
               </th>
               <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                NYCHA %
+                Median Income
               </th>
               <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                University %
-              </th>
-              <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                Stabilized %
-              </th>
-              <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                Units
-              </th>
-              <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                <HHITooltip>HHI</HHITooltip>
-              </th>
-              <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                CR4 (Top 4)
-              </th>
-              <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                MHI
+                Median Rent
               </th>
               <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
                 Rent Burden
@@ -73,7 +63,22 @@ export function HousingTable({ neighborhoods }: { neighborhoods: Neighborhood[] 
                 Violations/Unit
               </th>
               <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                Median Rent
+                Units
+              </th>
+              <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
+                Stabilized %
+              </th>
+              <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
+                NYCHA %
+              </th>
+              <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
+                University %
+              </th>
+              <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
+                Top 4 Share
+              </th>
+              <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
+                <HHITooltip>HHI</HHITooltip>
               </th>
             </tr>
           </thead>
@@ -93,6 +98,52 @@ export function HousingTable({ neighborhoods }: { neighborhoods: Neighborhood[] 
                 </td>
                 <td className="px-4 py-3 text-sm text-fm-sage">
                   {n.borough}
+                </td>
+                <td className="px-4 py-3 text-sm text-right">
+                  {n.medianIncome
+                    ? `$${n.medianIncome.toLocaleString()}`
+                    : "\u2014"}
+                </td>
+                <td className="px-4 py-3 text-sm text-right">
+                  {n.medianRent > 0 ? `$${n.medianRent.toLocaleString()}` : "\u2014"}
+                </td>
+                <td className="px-4 py-3 text-sm text-right">
+                  {n.rentBurdenPct ? (
+                    <span
+                      className={
+                        n.rentBurdenPct >= 50
+                          ? "text-red-600 font-medium"
+                          : n.rentBurdenPct >= 40
+                          ? "text-amber-600"
+                          : ""
+                      }
+                    >
+                      {n.rentBurdenPct}%
+                    </span>
+                  ) : (
+                    "\u2014"
+                  )}
+                </td>
+                <td className="px-4 py-3 text-sm text-right">
+                  {n.hpdViolationsPerUnit > 0 ? n.hpdViolationsPerUnit : "\u2014"}
+                </td>
+                <td className="px-4 py-3 text-sm text-right">
+                  {n.totalUnits.toLocaleString()}
+                </td>
+                <td className="px-4 py-3 text-sm text-right">
+                  {n.stabilizedShare > 0 ? (
+                    <div className="flex items-center justify-end gap-2">
+                      <div className="w-16 h-2 bg-gray-100 rounded-full overflow-hidden">
+                        <div
+                          className="h-full bg-fm-teal rounded-full"
+                          style={{ width: `${Math.min(n.stabilizedShare, 100)}%` }}
+                        />
+                      </div>
+                      <span className="text-fm-teal font-medium">{n.stabilizedShare}%</span>
+                    </div>
+                  ) : (
+                    <span className="text-gray-300">&mdash;</span>
+                  )}
                 </td>
                 <td className="px-4 py-3 text-sm text-right">
                   {n.nychaShare > 0 ? (
@@ -124,23 +175,8 @@ export function HousingTable({ neighborhoods }: { neighborhoods: Neighborhood[] 
                     <span className="text-gray-300">&mdash;</span>
                   )}
                 </td>
-                <td className="px-4 py-3 text-sm text-right">
-                  {n.stabilizedShare > 0 ? (
-                    <div className="flex items-center justify-end gap-2">
-                      <div className="w-16 h-2 bg-gray-100 rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-fm-teal rounded-full"
-                          style={{ width: `${Math.min(n.stabilizedShare, 100)}%` }}
-                        />
-                      </div>
-                      <span className="text-fm-teal font-medium">{n.stabilizedShare}%</span>
-                    </div>
-                  ) : (
-                    <span className="text-gray-300">&mdash;</span>
-                  )}
-                </td>
-                <td className="px-4 py-3 text-sm text-right">
-                  {n.totalUnits.toLocaleString()}
+                <td className="px-4 py-3 text-sm text-right font-medium">
+                  {n.cr4}%
                 </td>
                 <td className="px-4 py-3 text-sm text-right">
                   <Badge
@@ -154,40 +190,6 @@ export function HousingTable({ neighborhoods }: { neighborhoods: Neighborhood[] 
                   >
                     {n.hhi.toLocaleString()}
                   </Badge>
-                </td>
-                <td className="px-4 py-3 text-sm text-right font-medium">
-                  {n.cr4}%
-                  <div className="text-xs font-normal text-fm-sage">
-                    ~1 in {Math.round(100 / n.cr4)} units
-                  </div>
-                </td>
-                <td className="px-4 py-3 text-sm text-right">
-                  {n.medianIncome
-                    ? `$${n.medianIncome.toLocaleString()}`
-                    : "\u2014"}
-                </td>
-                <td className="px-4 py-3 text-sm text-right">
-                  {n.rentBurdenPct ? (
-                    <span
-                      className={
-                        n.rentBurdenPct >= 50
-                          ? "text-red-600 font-medium"
-                          : n.rentBurdenPct >= 40
-                          ? "text-amber-600"
-                          : ""
-                      }
-                    >
-                      {n.rentBurdenPct}%
-                    </span>
-                  ) : (
-                    "\u2014"
-                  )}
-                </td>
-                <td className="px-4 py-3 text-sm text-right">
-                  {n.hpdViolationsPerUnit > 0 ? n.hpdViolationsPerUnit : "\u2014"}
-                </td>
-                <td className="px-4 py-3 text-sm text-right">
-                  {n.medianRent > 0 ? `$${n.medianRent.toLocaleString()}` : "\u2014"}
                 </td>
               </tr>
             ))}

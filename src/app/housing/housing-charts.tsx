@@ -5,7 +5,6 @@ import { ConcentrationTimeSeries } from "@/components/charts/ConcentrationTimeSe
 import { MarketShareChart } from "@/components/charts/MarketShareChart";
 import { ChartContainer } from "@/components/charts/ChartContainer";
 import { ChartTooltip } from "@/components/charts/ChartTooltip";
-import { getHHIColor } from "@/lib/colorScales";
 import {
   linearScale,
   bandScale,
@@ -25,6 +24,7 @@ interface Neighborhood {
   medianIncome?: number | null;
   rentBurdenPct?: number | null;
   nychaShare: number;
+  stabilizedShare: number;
 }
 
 interface YearData {
@@ -50,32 +50,39 @@ const BOROUGH_COLORS: Record<string, string> = {
 
 const BAR_CHART_LIMIT = 25;
 
-export function NeighborhoodConcentrationChart({
+function getRentBurdenColor(pct: number): string {
+  if (pct >= 50) return "#D55E00";
+  if (pct >= 40) return "#E69F00";
+  return "#009E73";
+}
+
+export function NeighborhoodRentBurdenChart({
   neighborhoods,
 }: {
   neighborhoods: Neighborhood[];
 }) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [showAll, setShowAll] = useState(false);
-  const sorted = [...neighborhoods].sort((a, b) => b.hhi - a.hhi);
+  const sorted = [...neighborhoods]
+    .filter((n) => n.rentBurdenPct && n.rentBurdenPct > 0)
+    .sort((a, b) => b.rentBurdenPct! - a.rentBurdenPct!);
   const visible = showAll ? sorted : sorted.slice(0, BAR_CHART_LIMIT);
   const hasMore = sorted.length > BAR_CHART_LIMIT;
   const chartHeight = visible.length * 56 + 40;
   const margin = { top: 10, right: 30, bottom: 30, left: 200 };
 
   // X domain from data
-  const maxHHI = Math.max(...sorted.map((n) => n.hhi));
-  const xTicks = niceLinearTicks(0, maxHHI * 1.1, 6);
+  const maxPct = Math.max(...sorted.map((n) => n.rentBurdenPct!));
+  const xTicks = niceLinearTicks(0, Math.min(maxPct * 1.1, 100), 6);
   const xDomain: [number, number] = [0, xTicks[xTicks.length - 1]];
 
   return (
     <div className="card">
       <h2 className="text-xl font-bold text-fm-patina mb-2">
-        Where is ownership most concentrated?
+        Where is rent most burdensome?
       </h2>
       <p className="text-sm text-fm-sage mb-4">
-        Each bar shows how concentrated rental ownership is in one neighborhood.
-        Longer bars mean fewer landlords control more of the apartments.
+        Share of households spending 30% or more of their income on rent.
       </p>
       <ChartContainer height={chartHeight} margin={margin}>
         {({ svgWidth, svgHeight, width, height, margin: m }) => {
@@ -103,25 +110,25 @@ export function NeighborhoodConcentrationChart({
                     />
                   ))}
 
-                  {/* Reference line at 1500 */}
-                  {xDomain[1] >= 1500 && (
+                  {/* Reference line at 50% — severely burdened */}
+                  {xDomain[1] >= 50 && (
                     <>
                       <line
-                        x1={xScale(1500)}
+                        x1={xScale(50)}
                         y1={0}
-                        x2={xScale(1500)}
+                        x2={xScale(50)}
                         y2={height}
                         stroke="#D55E00"
                         strokeDasharray="5 5"
                       />
                       <text
-                        x={xScale(1500)}
+                        x={xScale(50)}
                         y={-4}
                         textAnchor="middle"
                         fontSize={10}
                         fill="#D55E00"
                       >
-                        Moderate
+                        Severely Burdened
                       </text>
                     </>
                   )}
@@ -133,11 +140,11 @@ export function NeighborhoodConcentrationChart({
                       d={roundedRightRect(
                         0,
                         yScale(i),
-                        xScale(n.hhi),
+                        xScale(n.rentBurdenPct!),
                         bandwidth,
                         4,
                       )}
-                      fill={getHHIColor(n.hhi)}
+                      fill={getRentBurdenColor(n.rentBurdenPct!)}
                       onMouseEnter={() => setHoveredIndex(i)}
                       onMouseLeave={() => setHoveredIndex(null)}
                       style={{ cursor: "pointer" }}
@@ -161,7 +168,7 @@ export function NeighborhoodConcentrationChart({
                       fontSize={12}
                       fill="#64748b"
                     >
-                      {tick.toLocaleString()}
+                      {tick}%
                     </text>
                   ))}
                   {/* Y-axis labels */}
@@ -186,27 +193,22 @@ export function NeighborhoodConcentrationChart({
                 const d = visible[hoveredIndex];
                 return (
                   <ChartTooltip
-                    x={m.left + xScale(d.hhi)}
+                    x={m.left + xScale(d.rentBurdenPct!)}
                     y={m.top + yScale(hoveredIndex) + bandwidth / 2}
                   >
                     <div className="font-bold text-fm-patina">{d.name}</div>
                     <div className="text-fm-sage text-xs mb-2">{d.borough}</div>
                     <div className="space-y-1">
-                      <div>HHI: <strong>{d.hhi.toLocaleString()}</strong></div>
-                      <div>CR4: <strong>{d.cr4}%</strong> (top 4 landlords)</div>
-                      <div>Units: <strong>{d.totalUnits.toLocaleString()}</strong></div>
-                      {d.hpdViolationsPerUnit > 0 && (
-                        <div>HPD violations/unit: <strong>{d.hpdViolationsPerUnit}</strong></div>
+                      <div>Rent-burdened: <strong>{d.rentBurdenPct}%</strong></div>
+                      {d.medianIncome && (
+                        <div>Median income: <strong>${d.medianIncome.toLocaleString()}</strong></div>
                       )}
                       {d.medianRent > 0 && (
                         <div>Median rent: <strong>${d.medianRent.toLocaleString()}</strong></div>
                       )}
-                      {d.medianIncome && (
-                        <div>MHI: <strong>${d.medianIncome.toLocaleString()}</strong></div>
-                      )}
-                      {d.rentBurdenPct && (
-                        <div>Rent-burdened: <strong>{d.rentBurdenPct}%</strong></div>
-                      )}
+                      <div className="text-fm-sage text-xs pt-1 border-t border-gray-100">
+                        Top 4 landlords: <strong>{d.cr4}%</strong> of rentals
+                      </div>
                     </div>
                   </ChartTooltip>
                 );
@@ -217,9 +219,9 @@ export function NeighborhoodConcentrationChart({
       </ChartContainer>
       <div className="flex flex-wrap items-center gap-4 mt-3 text-xs text-fm-sage">
         {[
-          { color: "#009E73", label: "Competitive (\u22641,500)" },
-          { color: "#E69F00", label: "Moderate (1,500\u20132,500)" },
-          { color: "#D55E00", label: "Highly Concentrated (>2,500)" },
+          { color: "#D55E00", label: "\u226550% Severely Burdened" },
+          { color: "#E69F00", label: "40\u201350% Heavily Burdened" },
+          { color: "#009E73", label: "<40%" },
         ].map((item) => (
           <span key={item.label} className="flex items-center gap-1.5">
             <span
@@ -244,7 +246,7 @@ export function NeighborhoodConcentrationChart({
   );
 }
 
-type MetricKey = "hhi" | "cr4" | "medianIncome" | "rentBurdenPct" | "nychaShare" | "totalUnits" | "hpdViolationsPerUnit" | "medianRent";
+type MetricKey = "medianIncome" | "rentBurdenPct" | "medianRent" | "hpdViolationsPerUnit" | "totalUnits" | "stabilizedShare" | "nychaShare" | "cr4" | "hhi";
 
 interface MetricConfig {
   key: MetricKey;
@@ -255,14 +257,15 @@ interface MetricConfig {
 }
 
 const METRICS: MetricConfig[] = [
-  { key: "hhi", label: "Ownership Concentration (HHI)", format: (v) => v.toLocaleString(), domainMin: "zero" },
-  { key: "cr4", label: "Top-4 Landlord Share (CR4 %)", format: (v) => `${v}%`, domainMin: "zero" },
   { key: "medianIncome", label: "Median Household Income", format: (v) => `$${(v / 1000).toFixed(0)}k`, domainMin: "data", nullable: true },
   { key: "rentBurdenPct", label: "Rent-Burdened Households (%)", format: (v) => `${v}%`, domainMin: "zero", nullable: true },
-  { key: "nychaShare", label: "NYCHA Footprint (%)", format: (v) => `${v}%`, domainMin: "zero" },
-  { key: "totalUnits", label: "Total Housing Units", format: (v) => v.toLocaleString(), domainMin: "zero" },
-  { key: "hpdViolationsPerUnit", label: "HPD Violations / Unit", format: (v) => v.toFixed(2), domainMin: "zero" },
   { key: "medianRent", label: "Median Rent", format: (v) => `$${v.toLocaleString()}`, domainMin: "zero" },
+  { key: "hpdViolationsPerUnit", label: "HPD Violations / Unit", format: (v) => v.toFixed(2), domainMin: "zero" },
+  { key: "totalUnits", label: "Total Housing Units", format: (v) => v.toLocaleString(), domainMin: "zero" },
+  { key: "stabilizedShare", label: "Rent-Stabilized Share (%)", format: (v) => `${v}%`, domainMin: "zero" },
+  { key: "nychaShare", label: "NYCHA Footprint (%)", format: (v) => `${v}%`, domainMin: "zero" },
+  { key: "cr4", label: "Top-4 Landlord Share (CR4 %)", format: (v) => `${v}%`, domainMin: "zero" },
+  { key: "hhi", label: "Ownership Concentration (HHI)", format: (v) => v.toLocaleString(), domainMin: "zero" },
 ];
 
 function getMetricValue(n: Neighborhood, key: MetricKey): number | null {
@@ -279,8 +282,8 @@ export function NeighborhoodExplorerChart({
 }: {
   neighborhoods: Neighborhood[];
 }) {
-  const [xMetric, setXMetric] = useState<MetricKey>("hhi");
-  const [yMetric, setYMetric] = useState<MetricKey>("hpdViolationsPerUnit");
+  const [xMetric, setXMetric] = useState<MetricKey>("medianIncome");
+  const [yMetric, setYMetric] = useState<MetricKey>("rentBurdenPct");
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const margin = { top: 10, right: 20, bottom: 45, left: 75 };
@@ -340,12 +343,11 @@ export function NeighborhoodExplorerChart({
   return (
     <div className="card">
       <h2 className="text-xl font-bold text-fm-patina mb-2">
-        Does concentration affect housing quality?
+        Explore the data
       </h2>
       <p className="text-sm text-fm-sage mb-4">
-        The default view plots ownership concentration against HPD violations.
-        Pick any two measures to compare — each bubble is one neighborhood,
-        sized by its number of rental units.
+        Each bubble is a neighborhood, sized by rental units. The default view
+        shows income vs. rent burden. Switch axes to explore other patterns.
       </p>
 
       {/* Axis selectors */}
@@ -559,10 +561,10 @@ export function CitywideCharts({
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
         <div>
           <h2 className="text-xl font-bold text-fm-patina">
-            Is it getting worse?
+            Citywide ownership trend
           </h2>
           <p className="text-sm text-fm-sage">
-            Citywide, more apartments are ending up in fewer hands each year
+            How ownership concentration has changed across the five boroughs
           </p>
         </div>
         <div className="flex gap-1 bg-gray-100 rounded-lg p-1">
@@ -574,7 +576,7 @@ export function CitywideCharts({
                 : "text-fm-sage hover:text-fm-patina"
             }`}
           >
-            HHI Over Time
+            Concentration Trend
           </button>
           <button
             onClick={() => setTab("topLandlords")}

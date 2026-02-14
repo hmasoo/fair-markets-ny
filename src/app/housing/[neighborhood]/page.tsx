@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
-import { Badge } from "@/components/ui/Badge";
-import { getHHITextClass } from "@/lib/colorScales";
 import dynamic from "next/dynamic";
 
 const NeighborhoodCharts = dynamic(
@@ -59,8 +57,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!n) return { title: "Not Found" };
   return {
     title: `${n.name} — Rental Ownership Data`,
-    description: `Top landlords, ownership concentration (HHI: ${n.hhi}), and HPD violations data for ${n.name}, ${n.borough}.`,
+    description: `Rent, income, landlords, and housing violations data for ${n.name}, ${n.borough}. Top 4 landlords own ${n.cr4}% of rentals.`,
   };
+}
+
+function getHHILabel(hhi: number): string {
+  if (hhi > 2500) return "Highly Concentrated";
+  if (hhi > 1500) return "Moderately Concentrated";
+  return "Competitive";
 }
 
 export default async function NeighborhoodPage({ params }: Props) {
@@ -70,6 +74,8 @@ export default async function NeighborhoodPage({ params }: Props) {
   );
 
   if (!neighborhood) notFound();
+
+  const topLandlordName = neighborhood.topLandlords[0]?.name;
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -85,52 +91,8 @@ export default async function NeighborhoodPage({ params }: Props) {
         <p className="mt-1 text-fm-sage">{neighborhood.borough}</p>
       </div>
 
-      {/* Stats */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
-        <div className="card text-center">
-          <div className="text-2xl font-bold text-fm-patina">
-            {neighborhood.totalUnits.toLocaleString()}
-          </div>
-          <div className="text-xs text-fm-sage mt-1">Rental Units</div>
-        </div>
-        <div className="card text-center">
-          <div className={`text-2xl font-bold ${getHHITextClass(neighborhood.hhi)}`}>
-            {neighborhood.hhi.toLocaleString()}
-          </div>
-          <div className="text-xs text-fm-sage mt-1">HHI (Concentration)</div>
-          <Badge
-            variant={
-              neighborhood.hhi > 2500
-                ? "red"
-                : neighborhood.hhi > 1500
-                ? "yellow"
-                : "green"
-            }
-          >
-            {neighborhood.hhi > 2500
-              ? "Highly Concentrated"
-              : neighborhood.hhi > 1500
-              ? "Moderately Concentrated"
-              : "Competitive"}
-          </Badge>
-        </div>
-        <div className="card text-center">
-          <div className="text-2xl font-bold text-fm-patina">
-            {neighborhood.cr4}%
-          </div>
-          <div className="text-xs text-fm-sage mt-1">CR4 (Top 4 Landlords)</div>
-          <div className={`text-xs mt-1 font-medium ${getHHITextClass(neighborhood.hhi)}`}>
-            ~1 in every {Math.round(100 / neighborhood.cr4)} units
-          </div>
-        </div>
-        <div className="card text-center">
-          <div className="text-2xl font-bold text-fm-patina">
-            {neighborhood.hpdViolationsPerUnit > 0
-              ? neighborhood.hpdViolationsPerUnit
-              : "—"}
-          </div>
-          <div className="text-xs text-fm-sage mt-1">HPD Violations/Unit</div>
-        </div>
+      {/* Stats — lead with income/rent/burden */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-4">
         {neighborhood.medianIncome && (
           <div className="card text-center">
             <div className="text-2xl font-bold text-fm-copper">
@@ -139,6 +101,14 @@ export default async function NeighborhoodPage({ params }: Props) {
             <div className="text-xs text-fm-sage mt-1">
               Median Household Income
             </div>
+          </div>
+        )}
+        {neighborhood.medianRent > 0 && (
+          <div className="card text-center">
+            <div className="text-2xl font-bold text-fm-patina">
+              ${neighborhood.medianRent.toLocaleString()}
+            </div>
+            <div className="text-xs text-fm-sage mt-1">Median Rent</div>
           </div>
         )}
         {neighborhood.rentBurdenPct && (
@@ -158,6 +128,33 @@ export default async function NeighborhoodPage({ params }: Props) {
             </div>
           </div>
         )}
+        <div className="card text-center">
+          <div className="text-2xl font-bold text-fm-patina">
+            {neighborhood.hpdViolationsPerUnit > 0
+              ? neighborhood.hpdViolationsPerUnit
+              : "\u2014"}
+          </div>
+          <div className="text-xs text-fm-sage mt-1">HPD Violations/Unit</div>
+        </div>
+        <div className="card text-center">
+          <div className="text-2xl font-bold text-fm-patina">
+            {neighborhood.totalUnits.toLocaleString()}
+          </div>
+          <div className="text-xs text-fm-sage mt-1">Rental Units</div>
+        </div>
+        <div className="card text-center">
+          <div className="text-2xl font-bold text-fm-copper">
+            {neighborhood.cr4}%
+          </div>
+          <div className="text-xs text-fm-sage mt-1">
+            owned by the top 4 landlords
+          </div>
+          {topLandlordName && (
+            <div className="text-xs text-fm-sage mt-1">
+              Largest: {topLandlordName}
+            </div>
+          )}
+        </div>
         {neighborhood.nychaUnits > 0 && (
           <div className="card text-center border-fm-patina/30 bg-fm-patina/5">
             <div className="text-2xl font-bold text-fm-patina">
@@ -194,6 +191,21 @@ export default async function NeighborhoodPage({ params }: Props) {
           </div>
         )}
       </div>
+
+      {/* Collapsible technical details */}
+      <details className="mb-8 text-sm">
+        <summary className="text-fm-sage cursor-pointer hover:text-fm-patina font-medium">
+          Technical metrics (for researchers)
+        </summary>
+        <div className="mt-2 pl-4 border-l-2 border-gray-200 space-y-1 text-fm-sage">
+          <p>
+            HHI: <strong className="text-fm-patina">{neighborhood.hhi.toLocaleString()}</strong> — {getHHILabel(neighborhood.hhi)}
+          </p>
+          <p>
+            CR4: <strong className="text-fm-patina">{neighborhood.cr4}%</strong> — the top 4 landlords{"'"} combined share
+          </p>
+        </div>
+      </details>
 
       {/* Market share chart */}
       <NeighborhoodCharts
@@ -247,33 +259,7 @@ export default async function NeighborhoodPage({ params }: Props) {
             </tbody>
           </table>
         </div>
-        <div className="mt-4 text-sm text-fm-sage space-y-1">
-          {neighborhood.medianRent > 0 && (
-            <p>
-              Median rent in {neighborhood.name}: $
-              {neighborhood.medianRent.toLocaleString()}/month
-            </p>
-          )}
-          {neighborhood.medianIncome && neighborhood.medianRent > 0 && (
-            <p>
-              Median household income: $
-              {neighborhood.medianIncome.toLocaleString()}/year — rent-to-income
-              ratio:{" "}
-              {(
-                ((neighborhood.medianRent * 12) / neighborhood.medianIncome) *
-                100
-              ).toFixed(0)}
-              %
-            </p>
-          )}
-          {neighborhood.medianIncome && neighborhood.medianRent === 0 && (
-            <p>
-              Median household income: $
-              {neighborhood.medianIncome.toLocaleString()}/year
-            </p>
-          )}
-        </div>
-        <p className="mt-2 text-xs text-fm-sage">
+        <p className="mt-4 text-xs text-fm-sage">
           Source: NYC Dept. of City Planning MapPLUTO 24v4; ACRIS ownership
           records; HPD violations data via NYC Open Data. Income data from U.S.
           Census Bureau ACS 2023 5-Year Estimates.
