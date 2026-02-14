@@ -24,9 +24,9 @@ import regionData from "../../../data/concentration/healthcare-regions.json";
 import pricingData from "../../../data/concentration/healthcare-pricing.json";
 
 export const metadata: Metadata = {
-  title: "Who Runs the Hospitals in Your Region?",
+  title: "What Does Hospital Care Cost in New York?",
   description:
-    "Hospital system dominance across New York State — which systems control the most beds, and how many choices patients have, by region.",
+    "Hospital charges, costs, and ownership across 10 health planning regions — joined from NYS SPARCS discharge data, AHA hospital surveys, and health system disclosures.",
 };
 
 export default function HealthcarePage() {
@@ -36,146 +36,194 @@ export default function HealthcarePage() {
   const sortedByDominance = [...regions].sort(
     (a, b) => (b.topSystems[0]?.share ?? 0) - (a.topSystems[0]?.share ?? 0),
   );
-  const mostDominant = sortedByDominance[0];
-  const mostDominantSystem = mostDominant.topSystems[0];
 
   const singleDominantRegions = regions.filter(
     (r) => r.topSystems[0] && r.topSystems[0].share >= 40,
   );
-  const totalBeds = regions.reduce((sum, r) => sum + r.totalBeds, 0);
-  const totalFacilities = regions.reduce((sum, r) => sum + r.totalFacilities, 0);
+
+  // Compute charge variation for the default procedure (vaginal delivery, DRG 560)
+  const defaultProc = pricingData.procedures[0];
+  const allCharges: number[] = [];
+  for (const r of defaultProc.byRegion) {
+    for (const h of r.hospitals) {
+      allCharges.push(h.meanCharge);
+    }
+  }
+  const minCharge = Math.min(...allCharges);
+  const maxCharge = Math.max(...allCharges);
+  const chargeVariation = (maxCharge / minCharge).toFixed(1);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb items={[{ label: "Healthcare" }]} />
 
+      {/* ── Hero — cost-first framing ── */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-fm-patina">
-          Who runs the hospitals in your region?
+          What does hospital care cost in New York?
         </h1>
         <p className="mt-2 text-fm-sage max-w-2xl">
-          New York has {totalFacilities} hospital facilities with{" "}
-          {totalBeds.toLocaleString()} beds across 10 health planning regions.
-          In parts of upstate New York, a single health system accounts for
-          40–60% of all hospital beds — limiting where patients can go for
-          care.
+          Hospital charges, costs, and ownership across 10 health planning
+          regions — joined from NYS SPARCS discharge data, AHA hospital surveys,
+          and health system disclosures.
         </p>
       </div>
 
-      {/* Stats grid — lead with patient experience */}
+      {/* ── Stats grid — cost-focused ── */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <div className="card text-center">
           <div className="text-3xl font-bold text-fm-copper">
-            {mostDominantSystem.share}%
+            ${defaultProc.statewideMeanCharge.toLocaleString()}
           </div>
           <div className="text-sm text-fm-sage mt-1">
-            of beds held by one system
+            statewide mean hospital charge
           </div>
           <div className="text-xs text-fm-sage">
-            {mostDominantSystem.name} ({mostDominant.name})
+            vaginal delivery, severity level 2
           </div>
         </div>
         <div className="card text-center">
           <div className="text-3xl font-bold text-fm-copper">
-            {singleDominantRegions.length}
+            {chargeVariation}&times;
+          </div>
+          <div className="text-sm text-fm-sage mt-1">
+            hospital-to-hospital charge variation
+          </div>
+          <div className="text-xs text-fm-sage">
+            same procedure, same severity
+          </div>
+        </div>
+        <div className="card text-center">
+          <div className="text-3xl font-bold text-fm-patina">
+            ${defaultProc.statewideMeanCost.toLocaleString()}
+          </div>
+          <div className="text-sm text-fm-sage mt-1">
+            statewide mean cost (resource use)
+          </div>
+          <div className="text-xs text-fm-sage">
+            the charge-to-cost gap is the story
+          </div>
+        </div>
+        <div className="card text-center">
+          <div className="text-3xl font-bold text-fm-patina">
+            {singleDominantRegions.length} of 10
           </div>
           <div className="text-sm text-fm-sage mt-1">
             regions with a dominant system
           </div>
           <div className="text-xs text-fm-sage">
-            One system holds 40%+ of beds
-          </div>
-        </div>
-        <div className="card text-center">
-          <div className="text-3xl font-bold text-fm-patina">
-            {totalFacilities}
-          </div>
-          <div className="text-sm text-fm-sage mt-1">
-            hospital facilities statewide
-          </div>
-          <div className="text-xs text-fm-sage">
-            {totalBeds.toLocaleString()} licensed beds
-          </div>
-        </div>
-        <div className="card text-center">
-          <div className="text-3xl font-bold text-fm-patina">
-            10
-          </div>
-          <div className="text-sm text-fm-sage mt-1">
-            health planning regions
-          </div>
-          <div className="text-xs text-fm-sage">
-            NYS DOH planning areas
+            one system holds 40%+ of beds
           </div>
         </div>
       </div>
 
-      {/* What this data shows — and what it doesn't */}
-      <div className="card mb-8">
-        <h2 className="text-xl font-bold text-fm-patina mb-2">
-          What this data shows — and what it doesn{"\u2019"}t
+      {/* ── Section 1: Hospital pricing (promoted — first visual) ── */}
+      <PricingSection procedures={pricingData.procedures} />
+
+      {/* ── Section 2: What drives hospital costs? ── */}
+      <div className="card mt-8">
+        <h2 className="text-xl font-bold text-fm-patina mb-3">
+          What drives hospital costs?
         </h2>
-        <div className="text-sm text-gray-700 space-y-3">
-          <p>
-            Bed share measures <strong>ownership structure</strong>: which
-            systems control the most hospital beds in a region. It does not
-            directly measure what patients pay or the quality of care they
-            receive. Patients don{"\u2019"}t choose hospitals by bed count — they
-            choose by location, insurance network, specialty, and reputation.
-          </p>
-          <p>
-            The academic evidence on hospital consolidation is substantial.
-            Studies by{" "}
-            <a
-              href="https://www.aeaweb.org/articles?id=10.1257/aer.p20191020"
-              className="text-fm-teal hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Gaynor (2019)
-            </a>
-            ,{" "}
-            <a
-              href="https://www.journals.uchicago.edu/doi/10.1086/704088"
-              className="text-fm-teal hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Cooper et al. (2019)
-            </a>
-            , and Craig et al. consistently find that hospital mergers lead to
-            higher prices for commercially insured patients — typically 5–20%
-            increases. Below, we pair ownership structure with NYS SPARCS
-            hospital charge and cost data to show how pricing varies across
-            hospitals and regions.
-          </p>
-          <p>
-            <strong>Charges vs. costs vs. what you pay:</strong> Hospital
-            charges (chargemaster rates) are list prices — they rarely reflect
-            what insurers actually pay. Mean cost data, from Institutional Cost
-            Reports, measures resource use and is more comparable. But wide
-            charge variation within a region for the same procedure at the same
-            severity level signals differences in pricing power.
-          </p>
+        <p className="text-sm text-gray-700 mb-4">
+          Hospital pricing in New York is shaped by several overlapping forces.
+          Understanding which ones dominate in a given region matters for choosing
+          the right policy response.
+        </p>
+        <div className="space-y-4">
+          <div>
+            <h3 className="text-sm font-semibold text-fm-patina">
+              1. Insurance and payment structure
+            </h3>
+            <p className="text-sm text-gray-700 mt-1">
+              Most patients don{"\u2019"}t pay list prices. Commercially insured
+              patients pay negotiated rates; uninsured patients may face full
+              charges; Medicare and Medicaid rates are government-set. The gap
+              between charges and costs reflects bargaining dynamics between
+              hospitals and insurers — not the price most patients actually pay.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold text-fm-patina">
+              2. Geography and access
+            </h3>
+            <p className="text-sm text-gray-700 mt-1">
+              Rural regions have fewer hospitals, meaning patients often have
+              limited alternatives. This is infrastructure reality, not always
+              market failure. Urban regions like NYC Metro have more choices but
+              higher operating costs — land, labor, and regulatory overhead all
+              push prices up.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold text-fm-patina">
+              3. Regulation (Certificate of Need)
+            </h3>
+            <p className="text-sm text-gray-700 mt-1">
+              New York{"\u2019"}s CON process requires state approval to open,
+              expand, or close hospitals. This protects existing facilities from
+              competition but also prevents oversupply in areas where demand
+              doesn{"\u2019"}t justify additional capacity.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold text-fm-patina">
+              4. Market structure (consolidation)
+            </h3>
+            <p className="text-sm text-gray-700 mt-1">
+              Academic evidence consistently finds hospital mergers lead to higher
+              prices for commercially insured patients — typically 5{"\u2013"}20%
+              increases.{" "}
+              <a
+                href="https://www.aeaweb.org/articles?id=10.1257/aer.p20191020"
+                className="text-fm-teal hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Gaynor (2019)
+              </a>
+              ,{" "}
+              <a
+                href="https://www.journals.uchicago.edu/doi/10.1086/704088"
+                className="text-fm-teal hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Cooper et al. (2019)
+              </a>
+              , and Craig et al. document this pattern across U.S. markets. NYS
+              statewide HHI rose 63% since 2015 (680 to 1,105).
+            </p>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold text-fm-patina">
+              5. What we don{"\u2019"}t yet have
+            </h3>
+            <p className="text-sm text-gray-700 mt-1">
+              This page shows list prices and estimated resource costs, not
+              insurer-negotiated rates or out-of-pocket costs. Without those, plus
+              quality metrics (readmissions, outcomes), we can document pricing
+              variation and ownership structure but can{"\u2019"}t definitively
+              connect them.
+            </p>
+          </div>
         </div>
       </div>
 
-      {/* County map colored by region HHI */}
-      <div className="card mb-8">
+      {/* ── Section 3: Who runs the hospitals? (demoted) ── */}
+      <div className="card mt-8">
         <h2 className="text-xl font-bold text-fm-patina mb-2">
-          Hospital competition by region
+          Who runs the hospitals?
         </h2>
         <p className="text-sm text-fm-sage mb-4">
-          Counties colored by how concentrated their health planning region is.
-          Click any county to explore its region.
+          Ownership structure is one lens on hospital markets. When paired with
+          the pricing data above, concentration patterns help explain — but don
+          {"\u2019"}t automatically predict — what patients pay.
         </p>
         <HealthcareMapSection regions={regions} />
       </div>
 
-      {/* Hospital pricing section */}
-      <PricingSection procedures={pricingData.procedures} />
-
-      {/* Regional bar chart — now shows dominant system share */}
+      {/* Regional bar chart */}
       <RegionalConcentrationChart regions={regions} />
 
       {/* Region detail table */}
@@ -274,16 +322,78 @@ export default function HealthcarePage() {
         </p>
       </div>
 
-      {/* Statewide trend charts */}
-      <div className="mt-8">
-        <StatewideCharts
-          timeSeriesData={timeSeriesData.years}
-          marketShareData={marketShareData.marketShares.filter(
-            (s) => s.company !== "All other systems"
-          )}
-          marketShareYear={marketShareData.year}
-        />
+      {/* ── Section 4: What has been tried? What could help? ── */}
+      <div className="card mt-8">
+        <h2 className="text-xl font-bold text-fm-patina mb-3">
+          What has been tried? What could help?
+        </h2>
+        <p className="text-sm text-gray-700 mb-4">
+          Hospital costs are shaped by regulation, market structure, and payment
+          systems simultaneously. Three broad approaches, each with real
+          tradeoffs:
+        </p>
+        <div className="space-y-4">
+          <div>
+            <h3 className="text-sm font-semibold text-fm-patina">
+              Price transparency
+            </h3>
+            <p className="text-sm text-gray-700 mt-1">
+              Federal rules (2021, strengthened 2024) require hospitals to
+              publish negotiated rates. Compliance is uneven — CMS reports that
+              as of 2024, only about 70% of hospitals fully comply. NYS SPARCS
+              data (used on this page) is a partial substitute: it captures
+              charges and estimated costs but not insurer-negotiated rates.
+              Transparency enables comparison where data is available.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold text-fm-patina">
+              Merger review
+            </h3>
+            <p className="text-sm text-gray-700 mt-1">
+              The NY Attorney General and FTC review hospital mergers for
+              competitive effects. The challenge: many mergers are framed as
+              {"\u201C"}saving a failing hospital{"\u201D"} where the realistic
+              alternative is closure, not competition. This makes prospective
+              review difficult — blocking a merger may mean losing a facility
+              entirely.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold text-fm-patina">
+              Rate regulation and public options
+            </h3>
+            <p className="text-sm text-gray-700 mt-1">
+              New York does not regulate commercial hospital rates (unlike
+              Maryland{"\u2019"}s all-payer model, which sets uniform rates
+              regardless of insurer). NYC Health + Hospitals provides a public
+              option in the metro area. Medicare and Medicaid rates are
+              administered and don{"\u2019"}t respond to local concentration.
+            </p>
+          </div>
+        </div>
+        <p className="mt-4 text-sm text-gray-700">
+          These aren{"\u2019"}t mutually exclusive. A region with a dominant
+          system, limited alternatives, and high charges may benefit from all
+          three — but diagnosing which factors matter most is the first step.
+        </p>
       </div>
+
+      {/* ── Statewide trends (collapsed) ── */}
+      <details className="mt-8">
+        <summary className="cursor-pointer text-sm font-medium text-fm-teal hover:underline">
+          Show statewide consolidation trends over time
+        </summary>
+        <div className="mt-4">
+          <StatewideCharts
+            timeSeriesData={timeSeriesData.years}
+            marketShareData={marketShareData.marketShares.filter(
+              (s) => s.company !== "All other systems"
+            )}
+            marketShareYear={marketShareData.year}
+          />
+        </div>
+      </details>
     </div>
   );
 }

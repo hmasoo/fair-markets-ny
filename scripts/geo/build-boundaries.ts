@@ -85,7 +85,7 @@ function buildCounties() {
     };
   }
 
-  const topo = topojson.topology({ counties: raw });
+  const topo = topojson.topology({ counties: raw }, 1e5);
   writeFileSync(join(OUT_DIR, "nys-counties.topojson"), JSON.stringify(topo));
   logResult("nys-counties.topojson", raw.features.length, topo);
 }

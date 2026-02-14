@@ -109,8 +109,8 @@ export function ChoroplethMap({
                 <path
                   d={pathGenerator(feature) ?? ""}
                   fill={fill}
-                  stroke={isHovered && hasData ? "#1B3B36" : hasData ? "#fff" : "#d1d5db"}
-                  strokeWidth={isHovered && hasData ? 2.5 : hasData ? 1.5 : 0.5}
+                  stroke={isHovered && hasData ? "#1B3B36" : hasData ? "#F6F9F8" : "#d1d5db"}
+                  strokeWidth={isHovered && hasData ? 2 : 0.5}
                   opacity={hoveredKey && !isHovered && hasData ? 0.6 : 1}
                   onMouseEnter={() => handleMouseEnter(key)}
                   onMouseLeave={handleMouseLeave}
