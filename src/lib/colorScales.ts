@@ -109,3 +109,24 @@ export function getHHITextClass(hhi: number): string {
   if (hhi > 1500) return "text-amber-600";
   return "text-emerald-600";
 }
+
+/**
+ * Map CR4 percentage to a Tailwind text color class.
+ * >80% approaches monopoly, >60% oligopolistic, <=60% competitive.
+ */
+export function getCR4TextClass(cr4: number): string {
+  if (cr4 > 80) return "text-red-600";
+  if (cr4 > 60) return "text-amber-600";
+  return "text-emerald-600";
+}
+
+/**
+ * Map market share percentage to an Okabe-Ito-safe warm color.
+ * Larger shares get warmer/darker colors to signal dominance.
+ */
+export function getShareColor(share: number): string {
+  if (share >= 20) return "#D55E00"; // vermillion — dominant
+  if (share >= 10) return "#E69F00"; // orange — major
+  if (share >= 5) return "#0072B2";  // dark blue — moderate
+  return "#56B4E9";                  // light blue — small
+}

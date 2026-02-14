@@ -17,7 +17,7 @@ const CitywideCharts = dynamic(
 import { HousingMapSection } from "./HousingMapSection";
 import { HousingTable } from "./HousingTable";
 import { HHITooltip } from "@/components/ui/HHITooltip";
-import { getHHITextClass } from "@/lib/colorScales";
+import { getHHITextClass, getCR4TextClass } from "@/lib/colorScales";
 import { aggregateByBorough } from "@/lib/aggregations/housing-boroughs";
 
 import timeSeriesData from "../../../data/concentration/housing-nyc.json";
@@ -116,7 +116,7 @@ export default function HousingPage() {
           <div className="text-xs text-fm-sage">{highestHHI.name}</div>
         </div>
         <div className="card text-center">
-          <div className="text-3xl font-bold text-fm-copper">
+          <div className={`text-3xl font-bold ${getCR4TextClass(highestCR4.cr4)}`}>
             {highestCR4.cr4}%
           </div>
           <div className="text-sm text-fm-sage mt-1">

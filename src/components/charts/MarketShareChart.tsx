@@ -9,6 +9,7 @@ import {
   niceLinearTicks,
   roundedRightRect,
 } from "@/lib/chart-utils";
+import { getShareColor } from "@/lib/colorScales";
 
 interface MarketShareEntry {
   company: string;
@@ -22,18 +23,6 @@ interface MarketShareChartProps {
   year?: number;
   initialLimit?: number;
 }
-
-// Okabe-Ito colorblind-safe categorical palette
-const COLORS = [
-  "#E69F00",
-  "#56B4E9",
-  "#009E73",
-  "#0072B2",
-  "#D55E00",
-  "#CC79A7",
-  "#F0E442",
-  "#000000",
-];
 
 export function MarketShareChart({
   data,
@@ -96,7 +85,7 @@ export function MarketShareChart({
                         bandwidth,
                         4,
                       )}
-                      fill={COLORS[i % COLORS.length]}
+                      fill={getShareColor(d.share)}
                       onMouseEnter={() => setHoveredIndex(i)}
                       onMouseLeave={() => setHoveredIndex(null)}
                       style={{ cursor: "pointer" }}
@@ -160,6 +149,22 @@ export function MarketShareChart({
           );
         }}
       </ChartContainer>
+      <div className="flex flex-wrap items-center gap-4 mt-3 text-xs text-fm-sage">
+        {[
+          { color: "#D55E00", label: "\u226520% Dominant" },
+          { color: "#E69F00", label: "10\u201320% Major" },
+          { color: "#0072B2", label: "5\u201310% Moderate" },
+          { color: "#56B4E9", label: "<5% Small" },
+        ].map((item) => (
+          <span key={item.label} className="flex items-center gap-1.5">
+            <span
+              className="w-3 h-3 rounded-sm inline-block"
+              style={{ backgroundColor: item.color }}
+            />
+            {item.label}
+          </span>
+        ))}
+      </div>
       {hasMore && (
         <button
           onClick={() => setShowAll(!showAll)}

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "DATABASE_URL=\"${DATABASE_URL:-postgresql://p:p@localhost:5432/p}\" DIRECT_URL=\"${DIRECT_URL:-postgresql://p:p@localhost:5432/p}\" prisma generate && next build",
+    "build": "DATABASE_URL=\"${DATABASE_URL:-postgresql://p:p@localhost:5432/p}\" DIRECT_URL=\"${DIRECT_URL:-postgresql://p:p@localhost:5432/p}\" prisma generate && next build --turbopack",
     "postinstall": "DATABASE_URL=\"${DATABASE_URL:-postgresql://p:p@localhost:5432/p}\" DIRECT_URL=\"${DIRECT_URL:-postgresql://p:p@localhost:5432/p}\" prisma generate",
     "seed:housing": "tsx scripts/seed/housing.ts",
     "seed:broadband": "tsx scripts/seed/broadband.ts",
