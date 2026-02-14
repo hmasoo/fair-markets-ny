@@ -4,35 +4,35 @@ import spendingData from "../../data/concentration/household-spending.json";
 
 const sectors = [
   {
-    title: "Rental Ownership",
-    subtitle: "Housing & Ownership Patterns",
+    title: "Rental Housing",
+    subtitle: "What renters pay, who owns the buildings",
     href: "/housing",
     description:
-      "In the South Bronx, the top 4 landlords hold about 1 in 4 rental units — while zoning limits new construction. How concentrated is rental ownership in your neighborhood, and what shapes it?",
-    stat: "8.1%",
-    statLabel: "of NYC rental units owned by top 4 landlords",
+      "In some neighborhoods, a majority of renters spend more than half their income on housing. We combined city ownership records, Census income data, and HPD violations to show affordability, maintenance, and ownership across all 197 NYC neighborhoods.",
+    stat: "53%",
+    statLabel: "of income goes to rent in the most burdened neighborhood",
   },
   {
     title: "Internet Access",
-    subtitle: "Broadband Competition by County",
+    subtitle: "Broadband choices by county",
     href: "/broadband",
     description:
       "42% of census blocks in St. Lawrence County have zero broadband providers at 100 Mbps. How many choices does your county have?",
-    stat: "3,250",
-    statLabel: "Statewide concentration score",
+    stat: "0",
+    statLabel: "broadband options in thousands of NY census blocks",
   },
   {
     title: "Hospital Systems",
-    subtitle: "Healthcare Market Structure",
+    subtitle: "Who runs the hospitals in your region?",
     href: "/healthcare",
     description:
-      "How many hospital systems operate in your region? In parts of upstate New York, a single system accounts for over half of all beds. See the data by region.",
-    stat: "3,450",
-    statLabel: "Highest regional HHI (North Country)",
+      "In parts of upstate New York, a single hospital system accounts for over half of all beds. When one system dominates, patients have fewer choices for care. See the data by region.",
+    stat: "57%",
+    statLabel: "of beds held by one system (North Country)",
   },
   {
     title: "Regulatory Actions",
-    subtitle: "State Enforcement & Policy Tracker",
+    subtitle: "State enforcement & policy tracker",
     href: "/enforcement",
     description:
       "A public record of competition-related enforcement actions, regulatory decisions, and legislation across New York State agencies.",
@@ -48,14 +48,13 @@ export default function Home() {
       <section className="bg-fm-patina text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
           <h1 className="text-3xl sm:text-5xl font-bold tracking-tight max-w-3xl">
-            How competitive are New York{"'"}s essential markets?
+            What New Yorkers pay for the basics — and why
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-white/80 max-w-2xl leading-relaxed">
-            From rental housing to broadband to healthcare, Fair Markets NY
-            uses public government records to measure ownership, competition,
-            and the conditions that shape your choices. Where are markets
-            working? Where could more supply or more competition make a
-            difference? The data is open — explore it yourself.
+            Housing, internet, healthcare. Fair Markets NY uses public
+            government records to show what people actually spend, how many
+            choices they have, and who controls the market. The data is open —
+            explore it yourself.
           </p>
         </div>
       </section>
@@ -69,12 +68,13 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-lg font-bold text-fm-patina mb-2">
-                Who owns the rentals on your block?
+                What does rent cost in your neighborhood?
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Ownership patterns vary widely by neighborhood. We map how
-                concentrated rental ownership is, alongside the zoning and
-                supply conditions that shape each market.
+                Income, rent burden, housing violations, and ownership patterns
+                vary widely across the city. We map affordability and
+                maintenance alongside the supply conditions that shape each
+                market.
               </p>
             </div>
             <div>
