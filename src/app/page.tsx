@@ -9,19 +9,19 @@ const neighborhoods = (neighborhoodDataRaw as { neighborhoods: { name: string; s
 const sectors = [
   {
     title: "Rental Housing",
-    subtitle: "What renters pay, who owns the buildings",
+    subtitle: "What renters pay across 197 neighborhoods",
     href: "/housing",
     description:
-      "In some neighborhoods, a majority of renters spend more than half their income on housing. We combined city ownership records, Census income data, and HPD violations to show affordability, maintenance, and ownership across all 197 NYC neighborhoods.",
+      "In some neighborhoods, a majority of renters spend more than half their income on housing. We joined Census income surveys, city property records, HPD violations, and rent data to show what people pay, what drives those costs, and how conditions vary across the city.",
     stat: "53%",
     statLabel: "of income goes to rent in the most burdened neighborhood",
   },
   {
     title: "Internet Access",
-    subtitle: "Broadband choices by county",
+    subtitle: "How many providers serve your area?",
     href: "/broadband",
     description:
-      "42% of census blocks in St. Lawrence County have zero broadband providers at 100 Mbps. How many choices does your county have?",
+      "42% of census blocks in St. Lawrence County have zero broadband providers at 100 Mbps. We mapped FCC filing data across all 62 New York counties to show where residents have choices — and where they don't.",
     stat: "0",
     statLabel: "broadband options in thousands of NY census blocks",
   },
@@ -30,9 +30,9 @@ const sectors = [
     subtitle: "Who runs the hospitals in your region?",
     href: "/healthcare",
     description:
-      "In parts of upstate New York, a single hospital system accounts for over half of all beds. We joined facility data, bed counts, and system ownership records across 10 health planning regions so you can see who runs the hospitals near you.",
+      "In parts of upstate New York, a single hospital system operates over half of all beds. We joined facility data, bed counts, and system affiliations across 10 health planning regions so you can see the landscape of care near you.",
     stat: "57%",
-    statLabel: "of beds held by one system (North Country)",
+    statLabel: "of beds run by one system (North Country)",
   },
   {
     title: "Getting to Work",
@@ -45,10 +45,10 @@ const sectors = [
   },
   {
     title: "Regulatory Actions",
-    subtitle: "When markets don't work, who steps in?",
+    subtitle: "Consumer problems and how regulators responded",
     href: "/enforcement",
     description:
-      "Algorithmic rent-setting, hospital mergers that reduce patient choices, pharmacy middlemen with no oversight. We track the consumer problems and how New York regulators responded.",
+      "Algorithmic rent-setting, hospital mergers that reduce patient choices, pharmacy middlemen with no oversight. We track the consumer problems that prompted regulatory action in New York.",
     stat: "4",
     statLabel: "consumer problems tracked",
   },
@@ -91,10 +91,10 @@ export default function Home() {
                 What does rent cost in your neighborhood?
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Income, rent burden, housing violations, and ownership patterns
-                vary widely across the city. We map affordability and
-                maintenance alongside the supply conditions that shape each
-                market.
+                Income, rent burden, and housing conditions vary widely across
+                the city. We join four public datasets to show what renters pay,
+                what drives those costs, and how conditions differ from one
+                neighborhood to the next.
               </p>
             </div>
             <div>
@@ -112,9 +112,10 @@ export default function Home() {
                 Open data, open methodology
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Every number comes from public government records — ownership
-                filings, FCC data, health facility reports. We document our
-                sources so you can verify the data yourself.
+                Every number comes from public government records — Census
+                surveys, FCC filings, city property records, health facility
+                reports. We document our sources so you can verify the data
+                yourself.
               </p>
             </div>
           </div>

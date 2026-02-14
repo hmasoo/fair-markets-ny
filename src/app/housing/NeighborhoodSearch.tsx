@@ -32,10 +32,6 @@ export function NeighborhoodSearch({
 
   const showDropdown = open && filtered.length > 0;
 
-  useEffect(() => {
-    setActiveIndex(0);
-  }, [query]);
-
   // Scroll active item into view
   useEffect(() => {
     if (showDropdown && listRef.current) {
@@ -73,7 +69,7 @@ export function NeighborhoodSearch({
         ref={inputRef}
         type="text"
         value={query}
-        onChange={(e) => { setQuery(e.target.value); setOpen(true); }}
+        onChange={(e) => { setQuery(e.target.value); setActiveIndex(0); setOpen(true); }}
         onFocus={() => setOpen(true)}
         onBlur={() => setTimeout(() => setOpen(false), 150)}
         onKeyDown={handleKeyDown}

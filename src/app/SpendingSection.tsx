@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { ChartContainer } from "@/components/charts/ChartContainer";
 import { ChartTooltip } from "@/components/charts/ChartTooltip";
@@ -10,6 +11,7 @@ interface SpendingCategory {
   amount: number;
   tracked: boolean;
   href?: string;
+  coming?: boolean;
 }
 
 interface GeographyData {
@@ -74,6 +76,7 @@ interface SpendingSectionProps {
 export function SpendingSection({ data }: SpendingSectionProps) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [activeGeo, setActiveGeo] = useState<GeoKey>("nyMetro");
+  const router = useRouter();
 
   const geoKeys: GeoKey[] = ["nyMetro", ...(data.nyState ? ["nyState" as GeoKey] : []), "national"];
   const geo = data[activeGeo] as GeographyData | null | undefined;
@@ -101,8 +104,10 @@ export function SpendingSection({ data }: SpendingSectionProps) {
   });
 
   const trackedTotal = tracked.reduce((sum, c) => sum + c.amount, 0);
+  const liveTotal = tracked.filter((c) => !c.coming).reduce((sum, c) => sum + c.amount, 0);
   const trackedPctOfSpending = Math.round((trackedTotal / totalExpenditure) * 100);
   const trackedPctOfIncome = Math.round((trackedTotal / meanIncomeBefore) * 100);
+  const livePctOfIncome = Math.round((liveTotal / meanIncomeBefore) * 100);
   const spendingPctOfIncome = totalExpenditure / meanIncomeBefore;
 
   const SPENDING_BAR_HEIGHT = 48;
@@ -110,6 +115,12 @@ export function SpendingSection({ data }: SpendingSectionProps) {
   const BAR_GAP = 12;
   const LABEL_HEIGHT = 18;
   const TOTAL_HEIGHT = LABEL_HEIGHT + SPENDING_BAR_HEIGHT + BAR_GAP + LABEL_HEIGHT + INCOME_BAR_HEIGHT;
+
+  function handleSegmentClick(seg: SpendingCategory) {
+    if (seg.href) {
+      router.push(seg.href);
+    }
+  }
 
   return (
     <section className="bg-white border-b border-gray-200">
@@ -120,8 +131,8 @@ export function SpendingSection({ data }: SpendingSectionProps) {
         <p className="text-sm text-gray-600 leading-relaxed max-w-3xl mb-5">
           The average household in the {geo.geography} earns $
           {meanIncomeBefore.toLocaleString()} and spends $
-          {totalExpenditure.toLocaleString()} per year. The highlighted sectors
-          are markets where Fair Markets NY tracks ownership and competition data.
+          {totalExpenditure.toLocaleString()} per year. The highlighted
+          categories are everyday necessities — click any to see the data.
         </p>
 
         {/* Geography toggle */}
@@ -168,9 +179,26 @@ export function SpendingSection({ data }: SpendingSectionProps) {
             const incomeLabelY = spendingBarY + SPENDING_BAR_HEIGHT + BAR_GAP;
             const incomeBarY = incomeLabelY + LABEL_HEIGHT;
 
+            // Unique pattern ID per geo to avoid SVG conflicts
+            const patternId = `coming-stripe-${activeGeo}`;
+
             return (
               <>
                 <svg width={svgWidth} height={svgHeight}>
+                  {/* Stripe pattern for "coming soon" segments */}
+                  <defs>
+                    <pattern
+                      id={patternId}
+                      width="6"
+                      height="6"
+                      patternUnits="userSpaceOnUse"
+                      patternTransform="rotate(45)"
+                    >
+                      <rect width="6" height="6" fill="currentColor" />
+                      <line x1="0" y1="0" x2="0" y2="6" stroke="white" strokeWidth="2" strokeOpacity="0.35" />
+                    </pattern>
+                  </defs>
+
                   {/* Spending label */}
                   <text
                     x={0}
@@ -221,12 +249,14 @@ export function SpendingSection({ data }: SpendingSectionProps) {
                         y={spendingBarY}
                         width={Math.max(seg.w, 0)}
                         height={SPENDING_BAR_HEIGHT}
-                        fill={seg.color}
+                        fill={seg.coming ? `url(#${patternId})` : seg.color}
+                        color={seg.color}
                         stroke="white"
                         strokeWidth={1}
                         onMouseEnter={() => setHoveredIndex(i)}
                         onMouseLeave={() => setHoveredIndex(null)}
-                        style={{ cursor: "pointer" }}
+                        onClick={() => handleSegmentClick(seg)}
+                        style={{ cursor: seg.href ? "pointer" : "default" }}
                       />
                     ))}
                     {/* Inline labels for wide segments */}
@@ -344,9 +374,14 @@ export function SpendingSection({ data }: SpendingSectionProps) {
                     <div className="text-xs text-gray-500">
                       {((segments[hoveredIndex].amount / meanIncomeBefore) * 100).toFixed(1)}% of income
                     </div>
-                    {segments[hoveredIndex].tracked && (
+                    {segments[hoveredIndex].href && (
                       <div className="text-xs text-fm-teal mt-1">
-                        Tracked by Fair Markets NY
+                        Click to see the data &rarr;
+                      </div>
+                    )}
+                    {segments[hoveredIndex].coming && (
+                      <div className="text-xs text-fm-sage mt-1 italic">
+                        Coming soon
                       </div>
                     )}
                   </ChartTooltip>
@@ -359,7 +394,7 @@ export function SpendingSection({ data }: SpendingSectionProps) {
         {/* Legend */}
         <div className="flex flex-wrap gap-x-4 gap-y-1.5 mt-4 text-xs text-fm-sage">
           {colored
-            .filter((c) => c.tracked)
+            .filter((c) => c.tracked && !c.coming)
             .map((cat) => (
               <span key={cat.name} className="flex items-center gap-1.5">
                 <span
@@ -376,6 +411,19 @@ export function SpendingSection({ data }: SpendingSectionProps) {
                 ) : (
                   cat.name
                 )}
+              </span>
+            ))}
+          {colored
+            .filter((c) => c.coming)
+            .map((cat) => (
+              <span key={cat.name} className="flex items-center gap-1.5">
+                <span
+                  className="w-3 h-3 rounded-sm inline-block shrink-0 border border-current"
+                  style={{
+                    background: `repeating-linear-gradient(45deg, ${cat.color}, ${cat.color} 2px, transparent 2px, transparent 4px)`,
+                  }}
+                />
+                {cat.name} <span className="italic">(coming soon)</span>
               </span>
             ))}
           <span className="flex items-center gap-1.5">
@@ -405,10 +453,10 @@ export function SpendingSection({ data }: SpendingSectionProps) {
             </span>
           </div>
           <p className="text-sm text-gray-600 mt-1">
-            go to the sectors this site covers — housing, transportation,
-            groceries, healthcare, and broadband. That&#39;s $
-            {trackedTotal.toLocaleString()} per year, or {trackedPctOfSpending}%
-            of total household spending.
+            goes to five everyday necessities — housing, transportation,
+            groceries, healthcare, and broadband. This site covers four of those
+            today ({livePctOfIncome}&#162; of every dollar), with grocery access
+            data on the roadmap.
           </p>
         </div>
 

@@ -10,7 +10,7 @@
     "meanIncomeBefore": 117000,
     "categories": [
       { "name": "Housing", "amount": 25432, "tracked": true, "href": "/housing" },
-      { "name": "Groceries", "amount": 5813, "tracked": true, "href": "/grocery" },
+      { "name": "Groceries", "amount": 5813, "tracked": true, "coming": true },
       { "name": "Dining Out", "amount": 4673, "tracked": false },
       { "name": "Healthcare", "amount": 5765, "tracked": true, "href": "/healthcare" },
       { "name": "Transportation", "amount": 9425, "tracked": true, "href": "/transportation" },
@@ -30,7 +30,7 @@
     "meanIncomeBefore": 104207,
     "categories": [
       { "name": "Housing", "amount": 24298, "tracked": true },
-      { "name": "Groceries", "amount": 5564, "tracked": true },
+      { "name": "Groceries", "amount": 5564, "tracked": true, "coming": true },
       { "name": "Dining Out", "amount": 4613, "tracked": false },
       { "name": "Healthcare", "amount": 6156, "tracked": true },
       { "name": "Transportation", "amount": 12440, "tracked": true },
