@@ -11,7 +11,6 @@ const RegionPricingTable = dynamic(
 );
 const RegionLocatorMap = dynamic(
   () => import("./RegionLocatorMap").then((m) => m.RegionLocatorMap),
-  { ssr: false },
 );
 
 import regionData from "../../../../data/concentration/healthcare-regions.json";
