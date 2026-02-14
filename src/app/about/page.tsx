@@ -20,14 +20,13 @@ export default function AboutPage() {
         <p className="text-sm text-amber-800">
           <strong>Beta Project:</strong> Fair Markets NY is under active
           development. Numbers may contain errors, use preliminary data, or
-          reflect incomplete source coverage. If you spot an issue, please{" "}
+          reflect incomplete source coverage. If you spot an issue, please
+          email{" "}
           <a
-            href="https://github.com/masuga-fair-markets/fair-markets-ny/issues"
+            href="mailto:hello@masoo.co"
             className="underline hover:text-amber-900"
-            target="_blank"
-            rel="noopener noreferrer"
           >
-            open an issue on GitHub
+            hello@masoo.co
           </a>
           .
         </p>
@@ -251,59 +250,73 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="card">
+        <section id="data-sources" className="card">
           <h2 className="text-xl font-bold text-fm-patina mb-4">
             Where the data comes from
           </h2>
           <div className="text-sm text-gray-700 space-y-3 mb-4">
             <p>
-              Every number on this site comes from a public government
-              source. We don{"'"}t use private databases, paywalled
-              aggregators, or proprietary estimates. Here{"'"}s what we pull
-              from and how:
+              Most data on this site comes from public government records —
+              federal agencies, New York State, and New York City. A few
+              sources are published research or nonprofit data. We don{"'"}t
+              use private databases, paywalled aggregators, or proprietary
+              estimates. Every source is cited inline on the page where its
+              data appears.
             </p>
           </div>
+
+          <h3 className="text-sm font-semibold text-fm-patina mb-3 mt-6">
+            Government public records
+          </h3>
           <div className="space-y-3 text-sm text-gray-700">
             {[
               {
-                name: "NYC Open Data (ACRIS, PLUTO, HPD)",
+                name: "NYC Open Data (MapPLUTO, ACRIS, HPD)",
                 what: "Property ownership records, land use, housing violations",
-                legal: "Unrestricted public data (Local Law 11 of 2012)",
+                legal: "Unrestricted public data (NYC Local Law 11 of 2012)",
+                used: "Housing",
               },
               {
                 name: "U.S. Census Bureau ACS 5-Year Estimates",
-                what: "Tract-level median income, rent burden, and commute mode, aggregated to neighborhoods",
-                legal: "Federal public domain",
-              },
-              {
-                name: "NYS DHCR Rent Stabilization Counts",
-                what: "Building-level counts of rent-stabilized units, aggregated by neighborhood",
-                legal: "NYS public records",
+                what: "Tract-level median income, rent, rent burden, and commute mode — aggregated to neighborhoods and counties",
+                legal: "Federal public domain (17 USC \u00A7 105)",
+                used: "Housing, Transportation",
               },
               {
                 name: "FCC Broadband Data Collection",
                 what: "ISP availability at census block level — who serves where, at what speed",
                 legal: "Federal public domain",
+                used: "Broadband",
               },
               {
-                name: "NYC Local Law 18 Filings",
-                what: "Beneficial ownership disclosures that let us trace LLCs to real owners",
-                legal: "NYC public records",
-              },
-              {
-                name: "NYS DOH Facility Data",
-                what: "Hospital and health facility information, Certificate of Need filings",
+                name: "NYS DOH SPARCS Hospital Inpatient Cost Transparency",
+                what: "Hospital charges and estimated costs by procedure, severity, and facility",
                 legal: "NYS Open Data permissive license",
+                used: "Healthcare",
               },
               {
-                name: "NY Attorney General Press Releases",
-                what: "Enforcement actions and settlement announcements",
-                legal: "NYS government publications",
+                name: "NYS DOH Facility Data & CON Filings",
+                what: "Hospital facility information and Certificate of Need applications",
+                legal: "NYS Open Data permissive license",
+                used: "Healthcare",
               },
               {
-                name: "CMS Hospital Price Transparency",
-                what: "Machine-readable hospital pricing data required by federal regulation",
+                name: "BLS Consumer Expenditure Survey",
+                what: "Average household spending by category for the NY metro area",
                 legal: "Federal public domain",
+                used: "Homepage",
+              },
+              {
+                name: "BLS CPI-U (Consumer Price Index)",
+                what: "Inflation adjustment for historical fare data",
+                legal: "Federal public domain",
+                used: "Transportation",
+              },
+              {
+                name: "MTA Board Resolutions",
+                what: "Historical subway and bus fare changes (2003\u20132026)",
+                legal: "NYS public records",
+                used: "Transportation",
               },
             ].map((source) => (
               <div
@@ -312,7 +325,52 @@ export default function AboutPage() {
               >
                 <h3 className="font-semibold text-fm-patina">{source.name}</h3>
                 <p className="mt-1">{source.what}</p>
-                <p className="mt-1 text-xs text-fm-sage">{source.legal}</p>
+                <p className="mt-1 text-xs text-fm-sage">
+                  {source.legal} · Used in: {source.used}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <h3 className="text-sm font-semibold text-fm-patina mb-3 mt-6">
+            Published research and nonprofit data
+          </h3>
+          <div className="space-y-3 text-sm text-gray-700">
+            {[
+              {
+                name: "AHA Annual Survey (aggregate statistics)",
+                what: "Hospital bed counts and system affiliations used to calculate regional concentration",
+                legal: "Published aggregate data; raw survey data is proprietary",
+                used: "Healthcare",
+              },
+              {
+                name: "Health system annual reports and disclosures",
+                what: "System-level bed counts and facility lists used to verify AHA aggregates",
+                legal: "Publicly published by each health system",
+                used: "Healthcare",
+              },
+              {
+                name: "NYC Mesh MeshDB",
+                what: "Community broadband network node counts by borough",
+                legal: "Published via public API by NYC Mesh (nonprofit)",
+                used: "Broadband",
+              },
+              {
+                name: "AAA Your Driving Costs",
+                what: "Average vehicle ownership costs by region for commute cost estimates",
+                legal: "Published annually by AAA",
+                used: "Transportation",
+              },
+            ].map((source) => (
+              <div
+                key={source.name}
+                className="border-l-2 border-fm-sage/40 pl-4"
+              >
+                <h3 className="font-semibold text-fm-patina">{source.name}</h3>
+                <p className="mt-1">{source.what}</p>
+                <p className="mt-1 text-xs text-fm-sage">
+                  {source.legal} · Used in: {source.used}
+                </p>
               </div>
             ))}
           </div>
@@ -324,47 +382,50 @@ export default function AboutPage() {
           </h2>
           <div className="space-y-3 text-sm text-gray-700">
             <p>
-              Everything on this site is derived from public government
-              records. The legal basis is straightforward:
+              The primary data on this site comes from public government
+              records. Supplementary data comes from published research and
+              nonprofit sources.
             </p>
             <ul className="space-y-2 ml-4 list-disc">
               <li>
-                <strong>Federal data</strong> (Census, FCC, CMS) is public
+                <strong>Federal data</strong> (Census, FCC, BLS) is public
                 domain under 17 USC &sect; 105.
               </li>
               <li>
-                <strong>New York State data</strong> is published under a
-                permissive license with no attribution or share-alike
-                requirements.
+                <strong>New York State data</strong> (DOH SPARCS, CON
+                filings) is published under a permissive license with no
+                attribution or share-alike requirements.
               </li>
               <li>
-                <strong>New York City data</strong> is covered by Local Law
-                11 of 2012, which requires all public datasets be published
-                on the Open Data portal. The city states: {'"'}There are no
-                restrictions on the use of open data.{'"'}
+                <strong>New York City data</strong> (MapPLUTO, ACRIS, HPD)
+                is covered by Local Law 11 of 2012, which requires all
+                public datasets be published on the Open Data portal. The
+                city states: {'"'}There are no restrictions on the use of
+                open data.{'"'}
+              </li>
+              <li>
+                <strong>Published research and nonprofit data</strong> (AHA
+                aggregate statistics, AAA cost studies, NYC Mesh node
+                counts) is used under fair use for factual reporting and
+                public interest analysis. We cite aggregate statistics, not
+                proprietary raw data.
               </li>
             </ul>
           </div>
         </section>
 
-        <section className="card">
+        <section id="methodology" className="card">
           <h2 className="text-xl font-bold text-fm-patina mb-4">
-            Open source, open methods
+            Methodology and accessibility
           </h2>
           <div className="space-y-4 text-sm text-gray-700">
             <p>
-              The{" "}
-              <a
-                href="https://github.com/masuga-fair-markets/fair-markets-ny"
-                className="text-fm-teal hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                full source code
-              </a>{" "}
-              for this site is public. Our scraping scripts, aggregation
-              logic, and calculations are all auditable — anyone can verify
-              our numbers or build on our work.
+              Every calculation on this site — from HHI computation to
+              Census tract-to-neighborhood aggregation — follows documented
+              methods described inline on each page. Where we make
+              methodological choices (e.g., weighting by household count,
+              filtering to severity level 2), we state them explicitly so
+              you can assess whether the approach fits your use case.
             </p>
             <p>
               We build this site to{" "}
@@ -382,16 +443,13 @@ export default function AboutPage() {
               communicate meaning.
             </p>
             <p>
-              If you encounter an accessibility barrier, please{" "}
+              Questions, corrections, or data requests:{" "}
               <a
-                href="https://github.com/masuga-fair-markets/fair-markets-ny/issues"
+                href="mailto:hello@masoo.co"
                 className="text-fm-teal hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
               >
-                open an issue
+                hello@masoo.co
               </a>
-              .
             </p>
           </div>
         </section>

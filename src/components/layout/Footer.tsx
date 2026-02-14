@@ -27,21 +27,12 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li><Link href="/about" className="hover:text-white transition-colors">How to Read the Data</Link></li>
               <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link></li>
-              <li>
-                <a
-                  href="https://github.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white transition-colors"
-                >
-                  Source Code
-                </a>
-              </li>
+              <li><Link href="/about#methodology" className="hover:text-white transition-colors">Methodology</Link></li>
             </ul>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-white/10 text-sm text-center space-y-1">
-          <div>All data sourced from federal, state, and city government public records.</div>
+          <div>Built from public government records and published research. <Link href="/about#data-sources" className="underline hover:text-white">See all sources.</Link></div>
           <div className="text-xs text-white/40 font-mono">
             Published {process.env.NEXT_PUBLIC_BUILD_DATE} · {process.env.NEXT_PUBLIC_GIT_SHA}
           </div>
