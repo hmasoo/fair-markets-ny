@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { SpendingSection } from "./SpendingSection";
+import spendingData from "../../data/concentration/household-spending.json";
 
 const sectors = [
   {
@@ -55,22 +57,11 @@ export default function Home() {
             working? Where could more supply or more competition make a
             difference? The data is open — explore it yourself.
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/housing"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-fm-copper text-white font-semibold hover:bg-amber-700 transition-colors"
-            >
-              Explore Housing
-            </Link>
-            <Link
-              href="/broadband"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-white/30 text-white font-semibold hover:bg-white/10 transition-colors"
-            >
-              See Broadband Data
-            </Link>
-          </div>
         </div>
       </section>
+
+      {/* Household spending */}
+      <SpendingSection data={spendingData} />
 
       {/* How it affects you */}
       <section className="bg-white border-b border-gray-200">

@@ -1,0 +1,43 @@
+{
+  "source": "Bureau of Labor Statistics, Consumer Expenditure Survey",
+  "sourceUrl": "https://www.bls.gov/cex/tables.htm",
+  "pressRelease": "https://www.bls.gov/regions/northeast/news-release/consumerexpenditures_newyork.htm",
+  "nyMetro": {
+    "geography": "New York-Newark-Jersey City, NY-NJ-PA MSA",
+    "table": "3004",
+    "period": "2023–2024 two-year average",
+    "totalExpenditure": 82267,
+    "categories": [
+      { "name": "Housing", "amount": 25432, "tracked": true, "href": "/housing" },
+      { "name": "Groceries", "amount": 5813, "tracked": true, "href": "/grocery" },
+      { "name": "Dining Out", "amount": 4673, "tracked": false },
+      { "name": "Healthcare", "amount": 5765, "tracked": true, "href": "/healthcare" },
+      { "name": "Transportation", "amount": 9425, "tracked": true, "href": "/transportation" },
+      { "name": "Insurance & Pensions", "amount": 8892, "tracked": false },
+      { "name": "Entertainment", "amount": 3231, "tracked": false },
+      { "name": "Apparel", "amount": 2068, "tracked": false },
+      { "name": "Broadband & Telecom", "amount": 1762, "tracked": true, "href": "/broadband" },
+      { "name": "Education", "amount": 2134, "tracked": false },
+      { "name": "All Other", "amount": 13072, "tracked": false }
+    ]
+  },
+  "national": {
+    "geography": "United States",
+    "table": "2500",
+    "period": "2024",
+    "totalExpenditure": 77280,
+    "categories": [
+      { "name": "Housing", "amount": 24298, "tracked": true },
+      { "name": "Groceries", "amount": 5564, "tracked": true },
+      { "name": "Dining Out", "amount": 4613, "tracked": false },
+      { "name": "Healthcare", "amount": 6156, "tracked": true },
+      { "name": "Transportation", "amount": 12440, "tracked": true },
+      { "name": "Insurance & Pensions", "amount": 8338, "tracked": false },
+      { "name": "Entertainment", "amount": 3458, "tracked": false },
+      { "name": "Apparel", "amount": 1906, "tracked": false },
+      { "name": "Broadband & Telecom", "amount": 1652, "tracked": true },
+      { "name": "Education", "amount": 1386, "tracked": false },
+      { "name": "All Other", "amount": 7469, "tracked": false }
+    ]
+  }
+}
