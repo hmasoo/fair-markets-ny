@@ -189,6 +189,39 @@ Per PROJECT.md, start with modules 1 and 3.
 - Set `DATABASE_URL` in Vercel environment variables
 - The `prisma generate` step must handle missing `DATABASE_URL` gracefully during build (see CAMP's approach: the build script runs `prisma generate` which only needs the schema, not a live DB connection)
 
+## Shared Architecture: @masoo/shared
+
+Fair Markets NY is one of two data platforms built by Masoo (the other is CAMP, for Canadian competition policy). Both will eventually live in an npm workspaces monorepo (`~/Projects/masoo/`) with a shared package `@masoo/shared` that extracts the common domain model.
+
+The full architecture plan is at `/Users/masuga/Projects/policy-map/policy-map-architecture-plan.md`. The business context is at `/Users/masuga/Projects/policy-map/Masoo Market Positioning Summary.md`.
+
+### Domain model (the "policy map")
+
+The shared ontology has four layers, defined in YAML and enforced via Zod schemas:
+
+- **Sectors** — NAICS-coded policy areas (housing, broadband, healthcare, insurance, etc.)
+- **Entities** — companies, landlords, health systems, ISPs, PE firms, universities, LLCs
+- **Geographies** — hierarchical: country > state > county > city, and state > borough > NTA > census tract
+- **Concentration metrics** — HHI, CR4, market share, plus domain-specific metrics (violations/unit, rent burden %, stabilized share, eviction filings/unit)
+
+### What this means for FM-NY development
+
+When adding new data dimensions, entity types, or metrics to Fair Markets NY, consider whether they belong in the shared model:
+
+- **New entity types** (e.g., universities as property owners) should use canonical naming and be documented so they can later be added to `@masoo/shared/types/entity.ts`
+- **New metrics** (e.g., HPD violations/unit, eviction filings/unit) should follow the concentration.yaml pattern: id, canonical name, range, unit, thresholds
+- **New sectors** should reference NAICS codes and match the sector YAML hierarchy
+- **Geography types** should fit the existing hierarchy (NTA, borough, county, etc.)
+
+GitHub issues tagged `domain model` advance this shared ontology. Issues tagged `new metric` or `new entity type` introduce data shapes that will need representation in the YAML definitions and Zod schemas when `@masoo/shared` is built.
+
+### Design constraints from the architecture plan
+
+- No shared Prisma schema — each project keeps its own `schema.prisma`; shared types are the semantic layer
+- Chart components will become theme-agnostic wrappers accepting a `ChartTheme` prop (FM-NY's Okabe-Ito palette, CAMP's red/navy palette)
+- FM-NY will upgrade to Next.js 16 before the monorepo move
+- Project-specific code (choropleth maps, housing-charts.tsx, PostGIS queries) stays in FM-NY
+
 ## Commit Conventions
 
 - Do not include `Co-Authored-By: Claude` in commit messages
