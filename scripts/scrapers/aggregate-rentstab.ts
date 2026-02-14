@@ -1,21 +1,21 @@
 /**
- * Aggregate HPD violations to per-NTA violations-per-unit metrics.
+ * Aggregate rent-stabilized unit counts to per-NTA metrics.
  *
  * Reads:
- *   data/raw/hpd-violations.json (from download-hpd-violations.ts)
+ *   data/raw/rentstab-2023.json (from download-rentstab.ts)
  *   data/raw/pluto-residential.json (for BBL → bct2020 mapping)
  *   data/crosswalks/nta-to-census-tract.json (for geoid → NTA)
  *   data/concentration/housing-neighborhoods.json (to update)
  *
  * Pipeline:
  *   1. Build BBL → bct2020 lookup from PLUTO
- *   2. Map bct2020 → geoid → NTA (same pattern as aggregate-pluto-ownership.ts)
- *   3. Count Class B+C violations per NTA
- *   4. Compute hpdViolationsPerUnit = classBC / totalUnits for each neighborhood
+ *   2. Map bct2020 → geoid → NTA (same pattern as aggregate-hpd-violations.ts)
+ *   3. Sum stabilized units per NTA
+ *   4. Compute stabilizedShare = stabilizedUnits / totalUnits for each neighborhood
  *   5. Write updated housing-neighborhoods.json
  *
  * Usage:
- *   npx tsx scripts/scrapers/aggregate-hpd-violations.ts
+ *   npx tsx scripts/scrapers/aggregate-rentstab.ts
  */
 
 import { readFileSync, writeFileSync } from "fs";
@@ -25,12 +25,9 @@ const ROOT = join(__dirname, "../..");
 
 // --- Types ---
 
-interface HpdViolationRecord {
-  boroid: string;
-  block: string;
-  lot: string;
-  class: string;
-  inspectiondate: string;
+interface RentStabRecord {
+  bbl: string;
+  stabilizedUnits: number;
 }
 
 interface PlutoRecord {
@@ -68,6 +65,9 @@ interface NeighborhoodEntry {
   topLandlords: TopLandlord[];
   nychaUnits: number;
   nychaShare: number;
+  universityUnits: number;
+  universityShare: number;
+  topUniversity: string | null;
   hpdViolationsPerUnit: number;
   stabilizedUnits: number;
   stabilizedShare: number;
@@ -85,7 +85,7 @@ interface HousingData {
   neighborhoods: NeighborhoodEntry[];
 }
 
-// Borough code → county FIPS (same as aggregate-pluto-ownership.ts)
+// Borough code → county FIPS (same as aggregate-hpd-violations.ts)
 const BORO_TO_COUNTY_FIPS: Record<string, string> = {
   "1": "061", // Manhattan → New York County
   "2": "005", // Bronx
@@ -93,14 +93,6 @@ const BORO_TO_COUNTY_FIPS: Record<string, string> = {
   "4": "081", // Queens
   "5": "085", // Staten Island → Richmond County
 };
-
-/**
- * Build a 10-digit BBL string from HPD fields.
- * boroid (1 digit) + block (zero-padded to 5) + lot (zero-padded to 4)
- */
-function buildBbl(boroid: string, block: string, lot: string): string {
-  return boroid + block.padStart(5, "0") + lot.padStart(4, "0");
-}
 
 /**
  * Normalize PLUTO's decimal BBL (e.g. "1000050010.00000000") to 10-digit string.
@@ -111,15 +103,15 @@ function normalizePlutoBbl(bbl: string): string {
 }
 
 function main() {
-  // Load HPD violations
-  const hpdPath = join(ROOT, "data/raw/hpd-violations.json");
-  let hpdRecords: HpdViolationRecord[];
+  // Load rent-stabilized data
+  const rentstabPath = join(ROOT, "data/raw/rentstab-2023.json");
+  let rentstabRecords: RentStabRecord[];
   try {
-    hpdRecords = JSON.parse(readFileSync(hpdPath, "utf-8"));
+    rentstabRecords = JSON.parse(readFileSync(rentstabPath, "utf-8"));
   } catch {
-    console.error(`Error: Could not read ${hpdPath}`);
-    console.error("Run download-hpd-violations.ts first:");
-    console.error("  npx tsx scripts/scrapers/download-hpd-violations.ts");
+    console.error(`Error: Could not read ${rentstabPath}`);
+    console.error("Run download-rentstab.ts first:");
+    console.error("  npx tsx scripts/scrapers/download-rentstab.ts");
     process.exit(1);
   }
 
@@ -137,13 +129,19 @@ function main() {
 
   // Load crosswalk (geoid → NTA)
   const crosswalkPath = join(ROOT, "data/crosswalks/nta-to-census-tract.json");
-  const crosswalk: CrosswalkEntry[] = JSON.parse(readFileSync(crosswalkPath, "utf-8"));
+  const crosswalk: CrosswalkEntry[] = JSON.parse(
+    readFileSync(crosswalkPath, "utf-8")
+  );
 
   // Load existing housing-neighborhoods.json
   const housingPath = join(ROOT, "data/concentration/housing-neighborhoods.json");
-  const housingData: HousingData = JSON.parse(readFileSync(housingPath, "utf-8"));
+  const housingData: HousingData = JSON.parse(
+    readFileSync(housingPath, "utf-8")
+  );
 
-  console.log(`Loaded ${hpdRecords.length.toLocaleString()} HPD violations`);
+  console.log(
+    `Loaded ${rentstabRecords.length.toLocaleString()} rent-stabilized buildings`
+  );
   console.log(`Loaded ${plutoRecords.length.toLocaleString()} PLUTO parcels`);
   console.log(`Loaded ${crosswalk.length} crosswalk entries`);
   console.log(`Loaded ${housingData.neighborhoods.length} neighborhoods\n`);
@@ -155,7 +153,9 @@ function main() {
     const bbl = normalizePlutoBbl(record.bbl);
     bblToBct.set(bbl, record.bct2020);
   }
-  console.log(`BBL → bct2020 lookup: ${bblToBct.size.toLocaleString()} entries`);
+  console.log(
+    `BBL → bct2020 lookup: ${bblToBct.size.toLocaleString()} entries`
+  );
 
   // Step 2: Build geoid → NTA lookup from crosswalk
   const geoidToNta = new Map<string, string>();
@@ -163,29 +163,22 @@ function main() {
     geoidToNta.set(entry.geoid, entry.ntaCode);
   }
 
-  // Step 3: Count Class B+C violations per NTA
-  const ntaViolations = new Map<string, number>();
+  // Step 3: Map each rentstab BBL → bct2020 → geoid → NTA, sum per NTA
+  const ntaStabilized = new Map<string, number>();
   let matched = 0;
   let unmatchedBbl = 0;
   let unmatchedNta = 0;
-  let skippedClassA = 0;
+  let totalUnitsMatched = 0;
 
-  for (const record of hpdRecords) {
-    // Only count Class B (hazardous) and Class C (immediately hazardous)
-    const cls = (record.class || "").toUpperCase();
-    if (cls !== "B" && cls !== "C") {
-      skippedClassA++;
-      continue;
-    }
-
-    const bbl = buildBbl(record.boroid, record.block, record.lot);
+  for (const record of rentstabRecords) {
+    const bbl = record.bbl.padStart(10, "0");
     const bct = bblToBct.get(bbl);
     if (!bct) {
       unmatchedBbl++;
       continue;
     }
 
-    // bct2020 → geoid → NTA (same logic as aggregate-pluto-ownership.ts)
+    // bct2020 → geoid → NTA
     if (bct.length < 7) {
       unmatchedNta++;
       continue;
@@ -206,17 +199,27 @@ function main() {
       continue;
     }
 
-    ntaViolations.set(ntaCode, (ntaViolations.get(ntaCode) || 0) + 1);
+    ntaStabilized.set(
+      ntaCode,
+      (ntaStabilized.get(ntaCode) || 0) + record.stabilizedUnits
+    );
     matched++;
+    totalUnitsMatched += record.stabilizedUnits;
   }
 
-  console.log(`\nClass B+C violations: ${(matched + unmatchedBbl + unmatchedNta).toLocaleString()}`);
+  console.log(`\nRent-stabilized buildings:`);
   console.log(`  Matched to NTA: ${matched.toLocaleString()}`);
-  console.log(`  Unmatched BBL (not in PLUTO): ${unmatchedBbl.toLocaleString()}`);
-  console.log(`  Unmatched NTA (no crosswalk): ${unmatchedNta.toLocaleString()}`);
-  console.log(`  Skipped Class A: ${skippedClassA.toLocaleString()}`);
+  console.log(
+    `  Unmatched BBL (not in PLUTO): ${unmatchedBbl.toLocaleString()}`
+  );
+  console.log(
+    `  Unmatched NTA (no crosswalk): ${unmatchedNta.toLocaleString()}`
+  );
+  console.log(
+    `  Total stabilized units matched: ${totalUnitsMatched.toLocaleString()}`
+  );
 
-  // Step 4: Update each neighborhood's hpdViolationsPerUnit
+  // Step 4: Update each neighborhood's stabilized fields
   // Build NTA code → neighborhood index for fast lookup
   const ntaToNeighborhood = new Map<string, number>();
   for (let i = 0; i < housingData.neighborhoods.length; i++) {
@@ -227,68 +230,73 @@ function main() {
   }
 
   let updated = 0;
-  for (const [ntaCode, violations] of ntaViolations) {
-    const idx = ntaToNeighborhood.get(ntaCode);
-    if (idx === undefined) continue;
-
-    const neighborhood = housingData.neighborhoods[idx];
-    if (neighborhood.totalUnits > 0) {
-      neighborhood.hpdViolationsPerUnit =
-        Math.round((violations / neighborhood.totalUnits) * 100) / 100;
-      updated++;
+  for (const n of housingData.neighborhoods) {
+    // Sum stabilized units across all NTA codes for this neighborhood
+    let stabUnits = 0;
+    for (const code of n.ntaCodes) {
+      stabUnits += ntaStabilized.get(code) || 0;
     }
+
+    n.stabilizedUnits = stabUnits;
+    n.stabilizedShare =
+      n.totalUnits > 0
+        ? Math.round((stabUnits / n.totalUnits) * 1000) / 10
+        : 0;
+
+    if (stabUnits > 0) updated++;
   }
 
   // Write updated file
   writeFileSync(housingPath, JSON.stringify(housingData, null, 2));
 
-  console.log(`\nUpdated ${updated} neighborhoods in housing-neighborhoods.json`);
+  console.log(
+    `\nUpdated ${updated} neighborhoods in housing-neighborhoods.json`
+  );
 
-  // Top 10 by violations/unit
+  // Top 10 by stabilized share
   const ranked = [...housingData.neighborhoods]
-    .filter((n) => n.hpdViolationsPerUnit > 0)
-    .sort((a, b) => b.hpdViolationsPerUnit - a.hpdViolationsPerUnit);
+    .filter((n) => n.stabilizedShare > 0)
+    .sort((a, b) => b.stabilizedShare - a.stabilizedShare);
 
-  console.log(`\nTop 10 neighborhoods by HPD violations/unit (Class B+C):`);
+  console.log(`\nTop 10 neighborhoods by rent-stabilized share:`);
   for (const n of ranked.slice(0, 10)) {
-    const ntaCode = n.ntaCodes[0];
-    const count = ntaViolations.get(ntaCode) || 0;
     console.log(
-      `  ${n.name} (${n.borough}): ${n.hpdViolationsPerUnit} violations/unit (${count.toLocaleString()} violations, ${n.totalUnits.toLocaleString()} units)`
+      `  ${n.name} (${n.borough}): ${n.stabilizedShare}% (${n.stabilizedUnits.toLocaleString()} units of ${n.totalUnits.toLocaleString()})`
     );
   }
 
   // Borough breakdown
-  const boroStats = new Map<string, { violations: number; units: number }>();
+  const boroStats = new Map<
+    string,
+    { stabilized: number; total: number }
+  >();
   for (const n of housingData.neighborhoods) {
     if (!boroStats.has(n.borough)) {
-      boroStats.set(n.borough, { violations: 0, units: 0 });
+      boroStats.set(n.borough, { stabilized: 0, total: 0 });
     }
     const stats = boroStats.get(n.borough)!;
-    for (const code of n.ntaCodes) {
-      stats.violations += ntaViolations.get(code) || 0;
-    }
-    stats.units += n.totalUnits;
+    stats.stabilized += n.stabilizedUnits;
+    stats.total += n.totalUnits;
   }
 
   console.log("\nBorough breakdown:");
   for (const [boro, stats] of [...boroStats].sort()) {
-    const rate =
-      stats.units > 0
-        ? (Math.round((stats.violations / stats.units) * 100) / 100).toFixed(2)
-        : "0.00";
+    const share =
+      stats.total > 0
+        ? (Math.round((stats.stabilized / stats.total) * 1000) / 10).toFixed(1)
+        : "0.0";
     console.log(
-      `  ${boro}: ${stats.violations.toLocaleString()} violations, ${stats.units.toLocaleString()} units, ${rate} violations/unit`
+      `  ${boro}: ${stats.stabilized.toLocaleString()} stabilized of ${stats.total.toLocaleString()} total (${share}%)`
     );
   }
 
   // Summary
   const withData = housingData.neighborhoods.filter(
-    (n) => n.hpdViolationsPerUnit > 0
+    (n) => n.stabilizedUnits > 0
   ).length;
   const withoutData = housingData.neighborhoods.length - withData;
   console.log(
-    `\nNeighborhoods with violation data: ${withData}, without: ${withoutData}`
+    `\nNeighborhoods with stabilized data: ${withData}, without: ${withoutData}`
   );
 
   console.log("\nDone.");

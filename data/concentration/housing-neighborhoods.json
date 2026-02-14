@@ -46,7 +46,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 129144,
-      "rentBurdenPct": 35.6
+      "rentBurdenPct": 35.6,
+      "stabilizedUnits": 6231,
+      "stabilizedShare": 23.5
     },
     {
       "name": "Williamsburg",
@@ -89,7 +91,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 147452,
-      "rentBurdenPct": 36.2
+      "rentBurdenPct": 36.2,
+      "stabilizedUnits": 12419,
+      "stabilizedShare": 37.7
     },
     {
       "name": "South Williamsburg",
@@ -132,7 +136,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 42133,
-      "rentBurdenPct": 60.3
+      "rentBurdenPct": 60.3,
+      "stabilizedUnits": 1251,
+      "stabilizedShare": 10
     },
     {
       "name": "East Williamsburg",
@@ -175,7 +181,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 94067,
-      "rentBurdenPct": 45.9
+      "rentBurdenPct": 45.9,
+      "stabilizedUnits": 3915,
+      "stabilizedShare": 14.9
     },
     {
       "name": "Brooklyn Heights",
@@ -218,7 +226,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 183736,
-      "rentBurdenPct": 30.4
+      "rentBurdenPct": 30.4,
+      "stabilizedUnits": 1735,
+      "stabilizedShare": 12
     },
     {
       "name": "Downtown Brooklyn-DUMBO-Boerum Hill",
@@ -261,7 +271,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 159679,
-      "rentBurdenPct": 38.2
+      "rentBurdenPct": 38.2,
+      "stabilizedUnits": 8832,
+      "stabilizedShare": 32
     },
     {
       "name": "Fort Greene",
@@ -304,7 +316,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 118855,
-      "rentBurdenPct": 43
+      "rentBurdenPct": 43,
+      "stabilizedUnits": 5044,
+      "stabilizedShare": 25.5
     },
     {
       "name": "Clinton Hill",
@@ -347,7 +361,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 129066,
-      "rentBurdenPct": 39.5
+      "rentBurdenPct": 39.5,
+      "stabilizedUnits": 3043,
+      "stabilizedShare": 20.3
     },
     {
       "name": "Bedford-Stuyvesant (West)",
@@ -390,7 +406,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 82951,
-      "rentBurdenPct": 48.7
+      "rentBurdenPct": 48.7,
+      "stabilizedUnits": 6763,
+      "stabilizedShare": 18.2
     },
     {
       "name": "Bedford-Stuyvesant (East)",
@@ -433,7 +451,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 76166,
-      "rentBurdenPct": 48.3
+      "rentBurdenPct": 48.3,
+      "stabilizedUnits": 6516,
+      "stabilizedShare": 16.6
     },
     {
       "name": "Bushwick (West)",
@@ -476,7 +496,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 90642,
-      "rentBurdenPct": 52.3
+      "rentBurdenPct": 52.3,
+      "stabilizedUnits": 4567,
+      "stabilizedShare": 19.4
     },
     {
       "name": "Bushwick (East)",
@@ -519,7 +541,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 74336,
-      "rentBurdenPct": 54.6
+      "rentBurdenPct": 54.6,
+      "stabilizedUnits": 2314,
+      "stabilizedShare": 9.7
     },
     {
       "name": "Cypress Hills",
@@ -562,7 +586,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 68133,
-      "rentBurdenPct": 50
+      "rentBurdenPct": 50,
+      "stabilizedUnits": 1069,
+      "stabilizedShare": 8.2
     },
     {
       "name": "East New York (North)",
@@ -605,7 +631,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 58799,
-      "rentBurdenPct": 53
+      "rentBurdenPct": 53,
+      "stabilizedUnits": 1761,
+      "stabilizedShare": 11.5
     },
     {
       "name": "East New York-New Lots",
@@ -648,7 +676,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 58540,
-      "rentBurdenPct": 49.2
+      "rentBurdenPct": 49.2,
+      "stabilizedUnits": 2317,
+      "stabilizedShare": 12.5
     },
     {
       "name": "Spring Creek-Starrett City",
@@ -691,7 +721,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 36304,
-      "rentBurdenPct": 51.8
+      "rentBurdenPct": 51.8,
+      "stabilizedUnits": 1384,
+      "stabilizedShare": 9.8
     },
     {
       "name": "East New York-City Line",
@@ -734,7 +766,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 53082,
-      "rentBurdenPct": 51.9
+      "rentBurdenPct": 51.9,
+      "stabilizedUnits": 2212,
+      "stabilizedShare": 16
     },
     {
       "name": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
@@ -777,7 +811,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 142376,
-      "rentBurdenPct": 35.1
+      "rentBurdenPct": 35.1,
+      "stabilizedUnits": 3513,
+      "stabilizedShare": 9.7
     },
     {
       "name": "Park Slope",
@@ -820,7 +856,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 191502,
-      "rentBurdenPct": 31.2
+      "rentBurdenPct": 31.2,
+      "stabilizedUnits": 3682,
+      "stabilizedShare": 12.6
     },
     {
       "name": "Windsor Terrace-South Slope",
@@ -863,7 +901,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 143371,
-      "rentBurdenPct": 42.2
+      "rentBurdenPct": 42.2,
+      "stabilizedUnits": 1530,
+      "stabilizedShare": 12.8
     },
     {
       "name": "Sunset Park (West)",
@@ -906,7 +946,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 89945,
-      "rentBurdenPct": 49
+      "rentBurdenPct": 49,
+      "stabilizedUnits": 2545,
+      "stabilizedShare": 14.6
     },
     {
       "name": "Sunset Park (Central)",
@@ -949,7 +991,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 60889,
-      "rentBurdenPct": 58
+      "rentBurdenPct": 58,
+      "stabilizedUnits": 2341,
+      "stabilizedShare": 16.5
     },
     {
       "name": "Prospect Heights",
@@ -992,7 +1036,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 154865,
-      "rentBurdenPct": 37.9
+      "rentBurdenPct": 37.9,
+      "stabilizedUnits": 3027,
+      "stabilizedShare": 24.7
     },
     {
       "name": "Crown Heights (North)",
@@ -1035,7 +1081,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 80688,
-      "rentBurdenPct": 47
+      "rentBurdenPct": 47,
+      "stabilizedUnits": 12311,
+      "stabilizedShare": 32.5
     },
     {
       "name": "Crown Heights (South)",
@@ -1078,7 +1126,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 73022,
-      "rentBurdenPct": 47
+      "rentBurdenPct": 47,
+      "stabilizedUnits": 10136,
+      "stabilizedShare": 47.7
     },
     {
       "name": "Prospect Lefferts Gardens-Wingate",
@@ -1121,7 +1171,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 76800,
-      "rentBurdenPct": 46.9
+      "rentBurdenPct": 46.9,
+      "stabilizedUnits": 9956,
+      "stabilizedShare": 46.9
     },
     {
       "name": "Bay Ridge",
@@ -1164,7 +1216,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 94438,
-      "rentBurdenPct": 43.2
+      "rentBurdenPct": 43.2,
+      "stabilizedUnits": 9077,
+      "stabilizedShare": 24.2
     },
     {
       "name": "Dyker Heights",
@@ -1207,7 +1261,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 78127,
-      "rentBurdenPct": 54.1
+      "rentBurdenPct": 54.1,
+      "stabilizedUnits": 1260,
+      "stabilizedShare": 8.4
     },
     {
       "name": "Bensonhurst",
@@ -1250,7 +1306,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 68505,
-      "rentBurdenPct": 52.6
+      "rentBurdenPct": 52.6,
+      "stabilizedUnits": 6950,
+      "stabilizedShare": 20
     },
     {
       "name": "Bath Beach",
@@ -1293,7 +1351,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 78287,
-      "rentBurdenPct": 57.6
+      "rentBurdenPct": 57.6,
+      "stabilizedUnits": 2457,
+      "stabilizedShare": 20.5
     },
     {
       "name": "Gravesend (West)",
@@ -1336,7 +1396,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 74684,
-      "rentBurdenPct": 51.5
+      "rentBurdenPct": 51.5,
+      "stabilizedUnits": 3894,
+      "stabilizedShare": 18.7
     },
     {
       "name": "Sunset Park (East)-Borough Park (West)",
@@ -1379,7 +1441,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 62183,
-      "rentBurdenPct": 53.9
+      "rentBurdenPct": 53.9,
+      "stabilizedUnits": 1889,
+      "stabilizedShare": 18.6
     },
     {
       "name": "Borough Park",
@@ -1422,7 +1486,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 55994,
-      "rentBurdenPct": 61
+      "rentBurdenPct": 61,
+      "stabilizedUnits": 3864,
+      "stabilizedShare": 15.2
     },
     {
       "name": "Kensington",
@@ -1465,7 +1531,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 94467,
-      "rentBurdenPct": 49.4
+      "rentBurdenPct": 49.4,
+      "stabilizedUnits": 4461,
+      "stabilizedShare": 30.9
     },
     {
       "name": "Mapleton-Midwood (West)",
@@ -1508,7 +1576,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 74977,
-      "rentBurdenPct": 53.7
+      "rentBurdenPct": 53.7,
+      "stabilizedUnits": 2146,
+      "stabilizedShare": 16.4
     },
     {
       "name": "Gravesend (South)",
@@ -1551,7 +1621,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 63482,
-      "rentBurdenPct": 57.3
+      "rentBurdenPct": 57.3,
+      "stabilizedUnits": 2268,
+      "stabilizedShare": 19.4
     },
     {
       "name": "Coney Island-Sea Gate",
@@ -1594,7 +1666,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 44193,
-      "rentBurdenPct": 57.2
+      "rentBurdenPct": 57.2,
+      "stabilizedUnits": 3660,
+      "stabilizedShare": 14.9
     },
     {
       "name": "Brighton Beach",
@@ -1637,7 +1711,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 46783,
-      "rentBurdenPct": 63.6
+      "rentBurdenPct": 63.6,
+      "stabilizedUnits": 5177,
+      "stabilizedShare": 34.8
     },
     {
       "name": "Flatbush",
@@ -1680,7 +1756,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 80090,
-      "rentBurdenPct": 47
+      "rentBurdenPct": 47,
+      "stabilizedUnits": 17253,
+      "stabilizedShare": 60.3
     },
     {
       "name": "Flatbush (West)-Ditmas Park-Parkville",
@@ -1723,7 +1801,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 93132,
-      "rentBurdenPct": 50.8
+      "rentBurdenPct": 50.8,
+      "stabilizedUnits": 6541,
+      "stabilizedShare": 40.8
     },
     {
       "name": "Midwood",
@@ -1766,7 +1846,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 70963,
-      "rentBurdenPct": 53.6
+      "rentBurdenPct": 53.6,
+      "stabilizedUnits": 7749,
+      "stabilizedShare": 39.3
     },
     {
       "name": "Gravesend (East)-Homecrest",
@@ -1809,7 +1891,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 73379,
-      "rentBurdenPct": 53.9
+      "rentBurdenPct": 53.9,
+      "stabilizedUnits": 3808,
+      "stabilizedShare": 19.6
     },
     {
       "name": "Madison",
@@ -1852,7 +1936,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 76918,
-      "rentBurdenPct": 49
+      "rentBurdenPct": 49,
+      "stabilizedUnits": 4757,
+      "stabilizedShare": 30
     },
     {
       "name": "Sheepshead Bay-Manhattan Beach-Gerritsen Beach",
@@ -1895,7 +1981,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 77439,
-      "rentBurdenPct": 49.2
+      "rentBurdenPct": 49.2,
+      "stabilizedUnits": 3316,
+      "stabilizedShare": 11.9
     },
     {
       "name": "Ocean Hill",
@@ -1938,7 +2026,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 59412,
-      "rentBurdenPct": 47.5
+      "rentBurdenPct": 47.5,
+      "stabilizedUnits": 3996,
+      "stabilizedShare": 24.7
     },
     {
       "name": "Brownsville",
@@ -1981,7 +2071,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 35423,
-      "rentBurdenPct": 57.1
+      "rentBurdenPct": 57.1,
+      "stabilizedUnits": 4306,
+      "stabilizedShare": 17.5
     },
     {
       "name": "East Flatbush-Erasmus",
@@ -2024,7 +2116,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 77626,
-      "rentBurdenPct": 47.9
+      "rentBurdenPct": 47.9,
+      "stabilizedUnits": 9614,
+      "stabilizedShare": 44.6
     },
     {
       "name": "East Flatbush-Farragut",
@@ -2067,7 +2161,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 76531,
-      "rentBurdenPct": 51.4
+      "rentBurdenPct": 51.4,
+      "stabilizedUnits": 4105,
+      "stabilizedShare": 31.8
     },
     {
       "name": "East Flatbush-Rugby",
@@ -2110,7 +2206,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 69843,
-      "rentBurdenPct": 58.4
+      "rentBurdenPct": 58.4,
+      "stabilizedUnits": 2536,
+      "stabilizedShare": 17.6
     },
     {
       "name": "East Flatbush-Remsen Village",
@@ -2153,7 +2251,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 58515,
-      "rentBurdenPct": 58.5
+      "rentBurdenPct": 58.5,
+      "stabilizedUnits": 3462,
+      "stabilizedShare": 24.4
     },
     {
       "name": "Flatlands",
@@ -2196,7 +2296,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 84894,
-      "rentBurdenPct": 47.5
+      "rentBurdenPct": 47.5,
+      "stabilizedUnits": 2283,
+      "stabilizedShare": 10.5
     },
     {
       "name": "Marine Park-Mill Basin-Bergen Beach",
@@ -2239,7 +2341,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 110184,
-      "rentBurdenPct": 53.7
+      "rentBurdenPct": 53.7,
+      "stabilizedUnits": 111,
+      "stabilizedShare": 0.7
     },
     {
       "name": "Canarsie",
@@ -2282,7 +2386,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 83564,
-      "rentBurdenPct": 45.5
+      "rentBurdenPct": 45.5,
+      "stabilizedUnits": 381,
+      "stabilizedShare": 1.4
     },
     {
       "name": "Mott Haven-Port Morris",
@@ -2325,7 +2431,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 31184,
-      "rentBurdenPct": 59.7
+      "rentBurdenPct": 59.7,
+      "stabilizedUnits": 10792,
+      "stabilizedShare": 40
     },
     {
       "name": "Melrose",
@@ -2368,7 +2476,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 33062,
-      "rentBurdenPct": 59.7
+      "rentBurdenPct": 59.7,
+      "stabilizedUnits": 6603,
+      "stabilizedShare": 37.3
     },
     {
       "name": "Hunts Point",
@@ -2411,7 +2521,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 41089,
-      "rentBurdenPct": 61.4
+      "rentBurdenPct": 61.4,
+      "stabilizedUnits": 2719,
+      "stabilizedShare": 42.6
     },
     {
       "name": "Longwood",
@@ -2454,7 +2566,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 38031,
-      "rentBurdenPct": 56.6
+      "rentBurdenPct": 56.6,
+      "stabilizedUnits": 7235,
+      "stabilizedShare": 46.9
     },
     {
       "name": "Morrisania",
@@ -2497,7 +2611,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 32852,
-      "rentBurdenPct": 57.3
+      "rentBurdenPct": 57.3,
+      "stabilizedUnits": 7278,
+      "stabilizedShare": 46.6
     },
     {
       "name": "Claremont Village-Claremont (East)",
@@ -2540,7 +2656,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 29293,
-      "rentBurdenPct": 56.8
+      "rentBurdenPct": 56.8,
+      "stabilizedUnits": 3255,
+      "stabilizedShare": 37.6
     },
     {
       "name": "Crotona Park East",
@@ -2583,7 +2701,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 40184,
-      "rentBurdenPct": 57.3
+      "rentBurdenPct": 57.3,
+      "stabilizedUnits": 6365,
+      "stabilizedShare": 48.7
     },
     {
       "name": "Concourse-Concourse Village",
@@ -2626,7 +2746,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 47207,
-      "rentBurdenPct": 59.6
+      "rentBurdenPct": 59.6,
+      "stabilizedUnits": 15513,
+      "stabilizedShare": 56.3
     },
     {
       "name": "Highbridge",
@@ -2669,7 +2791,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 41203,
-      "rentBurdenPct": 53.7
+      "rentBurdenPct": 53.7,
+      "stabilizedUnits": 8123,
+      "stabilizedShare": 62
     },
     {
       "name": "Mount Eden-Claremont (West)",
@@ -2712,7 +2836,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 43044,
-      "rentBurdenPct": 55.8
+      "rentBurdenPct": 55.8,
+      "stabilizedUnits": 13303,
+      "stabilizedShare": 70.2
     },
     {
       "name": "University Heights (South)-Morris Heights",
@@ -2755,7 +2881,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 36663,
-      "rentBurdenPct": 57.1
+      "rentBurdenPct": 57.1,
+      "stabilizedUnits": 10702,
+      "stabilizedShare": 41.1
     },
     {
       "name": "Mount Hope",
@@ -2798,7 +2926,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 43967,
-      "rentBurdenPct": 58
+      "rentBurdenPct": 58,
+      "stabilizedUnits": 13337,
+      "stabilizedShare": 66.7
     },
     {
       "name": "Fordham Heights",
@@ -2841,7 +2971,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 40110,
-      "rentBurdenPct": 60.3
+      "rentBurdenPct": 60.3,
+      "stabilizedUnits": 8380,
+      "stabilizedShare": 73.7
     },
     {
       "name": "West Farms",
@@ -2884,7 +3016,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 28711,
-      "rentBurdenPct": 60.6
+      "rentBurdenPct": 60.6,
+      "stabilizedUnits": 4550,
+      "stabilizedShare": 52.3
     },
     {
       "name": "Tremont",
@@ -2927,7 +3061,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 37352,
-      "rentBurdenPct": 56.4
+      "rentBurdenPct": 56.4,
+      "stabilizedUnits": 5792,
+      "stabilizedShare": 40.6
     },
     {
       "name": "Belmont",
@@ -2970,7 +3106,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 33296,
-      "rentBurdenPct": 62.6
+      "rentBurdenPct": 62.6,
+      "stabilizedUnits": 7267,
+      "stabilizedShare": 54.2
     },
     {
       "name": "University Heights (North)-Fordham",
@@ -3013,7 +3151,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 45365,
-      "rentBurdenPct": 63.1
+      "rentBurdenPct": 63.1,
+      "stabilizedUnits": 11285,
+      "stabilizedShare": 70.3
     },
     {
       "name": "Bedford Park",
@@ -3056,7 +3196,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 47856,
-      "rentBurdenPct": 60.4
+      "rentBurdenPct": 60.4,
+      "stabilizedUnits": 14904,
+      "stabilizedShare": 63.8
     },
     {
       "name": "Norwood",
@@ -3099,7 +3241,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 49509,
-      "rentBurdenPct": 55.4
+      "rentBurdenPct": 55.4,
+      "stabilizedUnits": 11475,
+      "stabilizedShare": 71.5
     },
     {
       "name": "Kingsbridge Heights-Van Cortlandt Village",
@@ -3142,7 +3286,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 60398,
-      "rentBurdenPct": 52.9
+      "rentBurdenPct": 52.9,
+      "stabilizedUnits": 7286,
+      "stabilizedShare": 52.2
     },
     {
       "name": "Kingsbridge-Marble Hill",
@@ -3185,7 +3331,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 51650,
-      "rentBurdenPct": 57.4
+      "rentBurdenPct": 57.4,
+      "stabilizedUnits": 5005,
+      "stabilizedShare": 53.1
     },
     {
       "name": "Riverdale-Spuyten Duyvil",
@@ -3228,7 +3376,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 112299,
-      "rentBurdenPct": 43.2
+      "rentBurdenPct": 43.2,
+      "stabilizedUnits": 4430,
+      "stabilizedShare": 19.6
     },
     {
       "name": "Soundview-Bruckner-Bronx River",
@@ -3271,7 +3421,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 45333,
-      "rentBurdenPct": 56.8
+      "rentBurdenPct": 56.8,
+      "stabilizedUnits": 9626,
+      "stabilizedShare": 37.9
     },
     {
       "name": "Soundview-Clason Point",
@@ -3314,7 +3466,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 55886,
-      "rentBurdenPct": 53
+      "rentBurdenPct": 53,
+      "stabilizedUnits": 1948,
+      "stabilizedShare": 14.8
     },
     {
       "name": "Castle Hill-Unionport",
@@ -3357,7 +3511,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 53612,
-      "rentBurdenPct": 57.2
+      "rentBurdenPct": 57.2,
+      "stabilizedUnits": 2838,
+      "stabilizedShare": 20.3
     },
     {
       "name": "Parkchester",
@@ -3400,7 +3556,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 59871,
-      "rentBurdenPct": 51.3
+      "rentBurdenPct": 51.3,
+      "stabilizedUnits": 1769,
+      "stabilizedShare": 12.5
     },
     {
       "name": "Westchester Square",
@@ -3443,7 +3601,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 53874,
-      "rentBurdenPct": 64.8
+      "rentBurdenPct": 64.8,
+      "stabilizedUnits": 1949,
+      "stabilizedShare": 36.1
     },
     {
       "name": "Throgs Neck-Schuylerville",
@@ -3486,7 +3646,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 83573,
-      "rentBurdenPct": 48.2
+      "rentBurdenPct": 48.2,
+      "stabilizedUnits": 796,
+      "stabilizedShare": 4.7
     },
     {
       "name": "Pelham Bay-Country Club-City Island",
@@ -3529,7 +3691,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 80904,
-      "rentBurdenPct": 57.9
+      "rentBurdenPct": 57.9,
+      "stabilizedUnits": 2907,
+      "stabilizedShare": 23.4
     },
     {
       "name": "Co-op City",
@@ -3572,7 +3736,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 64555,
-      "rentBurdenPct": 45.6
+      "rentBurdenPct": 45.6,
+      "stabilizedUnits": 101,
+      "stabilizedShare": 0.6
     },
     {
       "name": "Pelham Parkway-Van Nest",
@@ -3615,7 +3781,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 70044,
-      "rentBurdenPct": 54.6
+      "rentBurdenPct": 54.6,
+      "stabilizedUnits": 5500,
+      "stabilizedShare": 47
     },
     {
       "name": "Morris Park",
@@ -3658,7 +3826,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 80603,
-      "rentBurdenPct": 55.8
+      "rentBurdenPct": 55.8,
+      "stabilizedUnits": 1779,
+      "stabilizedShare": 19.4
     },
     {
       "name": "Pelham Gardens",
@@ -3701,7 +3871,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 89236,
-      "rentBurdenPct": 53.4
+      "rentBurdenPct": 53.4,
+      "stabilizedUnits": 137,
+      "stabilizedShare": 1.5
     },
     {
       "name": "Allerton",
@@ -3744,7 +3916,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 44499,
-      "rentBurdenPct": 56.7
+      "rentBurdenPct": 56.7,
+      "stabilizedUnits": 5874,
+      "stabilizedShare": 24.7
     },
     {
       "name": "Williamsbridge-Olinville",
@@ -3787,7 +3961,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 58710,
-      "rentBurdenPct": 58
+      "rentBurdenPct": 58,
+      "stabilizedUnits": 6817,
+      "stabilizedShare": 30.5
     },
     {
       "name": "Eastchester-Edenwald-Baychester",
@@ -3830,7 +4006,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 70143,
-      "rentBurdenPct": 51.7
+      "rentBurdenPct": 51.7,
+      "stabilizedUnits": 1763,
+      "stabilizedShare": 10.6
     },
     {
       "name": "Wakefield-Woodlawn",
@@ -3873,7 +4051,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 83863,
-      "rentBurdenPct": 51.2
+      "rentBurdenPct": 51.2,
+      "stabilizedUnits": 4446,
+      "stabilizedShare": 24.6
     },
     {
       "name": "Financial District-Battery Park City",
@@ -3916,7 +4096,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 199456,
-      "rentBurdenPct": 39.2
+      "rentBurdenPct": 39.2,
+      "stabilizedUnits": 5928,
+      "stabilizedShare": 17.3
     },
     {
       "name": "Tribeca-Civic Center",
@@ -3959,7 +4141,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 226968,
-      "rentBurdenPct": 39.1
+      "rentBurdenPct": 39.1,
+      "stabilizedUnits": 1492,
+      "stabilizedShare": 12.2
     },
     {
       "name": "SoHo-Little Italy-Hudson Square",
@@ -4002,7 +4186,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 142191,
-      "rentBurdenPct": 40.7
+      "rentBurdenPct": 40.7,
+      "stabilizedUnits": 3319,
+      "stabilizedShare": 21.7
     },
     {
       "name": "Greenwich Village",
@@ -4045,7 +4231,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 183406,
-      "rentBurdenPct": 40
+      "rentBurdenPct": 40,
+      "stabilizedUnits": 2734,
+      "stabilizedShare": 12.7
     },
     {
       "name": "West Village",
@@ -4088,7 +4276,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 164340,
-      "rentBurdenPct": 37.3
+      "rentBurdenPct": 37.3,
+      "stabilizedUnits": 3570,
+      "stabilizedShare": 14.5
     },
     {
       "name": "Chinatown-Two Bridges",
@@ -4131,7 +4321,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 37912,
-      "rentBurdenPct": 51
+      "rentBurdenPct": 51,
+      "stabilizedUnits": 5044,
+      "stabilizedShare": 28.4
     },
     {
       "name": "Lower East Side",
@@ -4174,7 +4366,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 65276,
-      "rentBurdenPct": 47.5
+      "rentBurdenPct": 47.5,
+      "stabilizedUnits": 4016,
+      "stabilizedShare": 15.6
     },
     {
       "name": "East Village",
@@ -4217,7 +4411,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 91871,
-      "rentBurdenPct": 43.9
+      "rentBurdenPct": 43.9,
+      "stabilizedUnits": 9028,
+      "stabilizedShare": 22.6
     },
     {
       "name": "Chelsea-Hudson Yards",
@@ -4260,7 +4456,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 130677,
-      "rentBurdenPct": 43.9
+      "rentBurdenPct": 43.9,
+      "stabilizedUnits": 16210,
+      "stabilizedShare": 35.2
     },
     {
       "name": "Hell's Kitchen",
@@ -4303,7 +4501,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 110667,
-      "rentBurdenPct": 42.9
+      "rentBurdenPct": 42.9,
+      "stabilizedUnits": 13019,
+      "stabilizedShare": 32.1
     },
     {
       "name": "Midtown South-Flatiron-Union Square",
@@ -4346,7 +4546,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 188423,
-      "rentBurdenPct": 39.1
+      "rentBurdenPct": 39.1,
+      "stabilizedUnits": 4874,
+      "stabilizedShare": 23.3
     },
     {
       "name": "Midtown-Times Square",
@@ -4389,7 +4591,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 152729,
-      "rentBurdenPct": 36.9
+      "rentBurdenPct": 36.9,
+      "stabilizedUnits": 3561,
+      "stabilizedShare": 16.5
     },
     {
       "name": "Stuyvesant Town-Peter Cooper Village",
@@ -4422,7 +4626,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 162894,
-      "rentBurdenPct": 29.4
+      "rentBurdenPct": 29.4,
+      "stabilizedUnits": 11248,
+      "stabilizedShare": 99.9
     },
     {
       "name": "Gramercy",
@@ -4465,7 +4671,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 151775,
-      "rentBurdenPct": 43.4
+      "rentBurdenPct": 43.4,
+      "stabilizedUnits": 2825,
+      "stabilizedShare": 15
     },
     {
       "name": "Murray Hill-Kips Bay",
@@ -4508,7 +4716,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 140247,
-      "rentBurdenPct": 44.8
+      "rentBurdenPct": 44.8,
+      "stabilizedUnits": 5144,
+      "stabilizedShare": 12.4
     },
     {
       "name": "East Midtown-Turtle Bay",
@@ -4551,7 +4761,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 170704,
-      "rentBurdenPct": 45.1
+      "rentBurdenPct": 45.1,
+      "stabilizedUnits": 3452,
+      "stabilizedShare": 10.2
     },
     {
       "name": "Upper West Side-Lincoln Square",
@@ -4594,7 +4806,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 175000,
-      "rentBurdenPct": 40.4
+      "rentBurdenPct": 40.4,
+      "stabilizedUnits": 5873,
+      "stabilizedShare": 12.9
     },
     {
       "name": "Upper West Side (Central)",
@@ -4637,7 +4851,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 160616,
-      "rentBurdenPct": 41.7
+      "rentBurdenPct": 41.7,
+      "stabilizedUnits": 10254,
+      "stabilizedShare": 17.9
     },
     {
       "name": "Upper West Side-Manhattan Valley",
@@ -4680,7 +4896,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 105994,
-      "rentBurdenPct": 43.2
+      "rentBurdenPct": 43.2,
+      "stabilizedUnits": 6169,
+      "stabilizedShare": 22.9
     },
     {
       "name": "Upper East Side-Lenox Hill-Roosevelt Island",
@@ -4723,7 +4941,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 141711,
-      "rentBurdenPct": 41.3
+      "rentBurdenPct": 41.3,
+      "stabilizedUnits": 8665,
+      "stabilizedShare": 14.3
     },
     {
       "name": "Upper East Side-Carnegie Hill",
@@ -4766,7 +4986,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 202486,
-      "rentBurdenPct": 36.9
+      "rentBurdenPct": 36.9,
+      "stabilizedUnits": 2929,
+      "stabilizedShare": 7.3
     },
     {
       "name": "Upper East Side-Yorkville",
@@ -4809,7 +5031,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 150269,
-      "rentBurdenPct": 38.4
+      "rentBurdenPct": 38.4,
+      "stabilizedUnits": 7065,
+      "stabilizedShare": 13.9
     },
     {
       "name": "Morningside Heights",
@@ -4852,7 +5076,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 93322,
-      "rentBurdenPct": 46.1
+      "rentBurdenPct": 46.1,
+      "stabilizedUnits": 3481,
+      "stabilizedShare": 20.9
     },
     {
       "name": "Manhattanville-West Harlem",
@@ -4895,7 +5121,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 42710,
-      "rentBurdenPct": 51.3
+      "rentBurdenPct": 51.3,
+      "stabilizedUnits": 3510,
+      "stabilizedShare": 42.8
     },
     {
       "name": "Hamilton Heights-Sugar Hill",
@@ -4938,7 +5166,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 67547,
-      "rentBurdenPct": 48.3
+      "rentBurdenPct": 48.3,
+      "stabilizedUnits": 10319,
+      "stabilizedShare": 47.7
     },
     {
       "name": "Harlem (South)",
@@ -4981,7 +5211,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 73738,
-      "rentBurdenPct": 42.5
+      "rentBurdenPct": 42.5,
+      "stabilizedUnits": 8389,
+      "stabilizedShare": 36.8
     },
     {
       "name": "Harlem (North)",
@@ -5024,7 +5256,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 53445,
-      "rentBurdenPct": 51.1
+      "rentBurdenPct": 51.1,
+      "stabilizedUnits": 16291,
+      "stabilizedShare": 41.7
     },
     {
       "name": "East Harlem (South)",
@@ -5067,7 +5301,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 47231,
-      "rentBurdenPct": 50.7
+      "rentBurdenPct": 50.7,
+      "stabilizedUnits": 7679,
+      "stabilizedShare": 27
     },
     {
       "name": "East Harlem (North)",
@@ -5110,7 +5346,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 40498,
-      "rentBurdenPct": 53.9
+      "rentBurdenPct": 53.9,
+      "stabilizedUnits": 10187,
+      "stabilizedShare": 32.7
     },
     {
       "name": "Washington Heights (South)",
@@ -5153,7 +5391,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 59815,
-      "rentBurdenPct": 56.4
+      "rentBurdenPct": 56.4,
+      "stabilizedUnits": 17641,
+      "stabilizedShare": 62.3
     },
     {
       "name": "Washington Heights (North)",
@@ -5196,7 +5436,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 84107,
-      "rentBurdenPct": 47.5
+      "rentBurdenPct": 47.5,
+      "stabilizedUnits": 18783,
+      "stabilizedShare": 62.5
     },
     {
       "name": "Inwood",
@@ -5239,7 +5481,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 70212,
-      "rentBurdenPct": 46.3
+      "rentBurdenPct": 46.3,
+      "stabilizedUnits": 10354,
+      "stabilizedShare": 57.4
     },
     {
       "name": "Astoria (North)-Ditmars-Steinway",
@@ -5282,7 +5526,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 99632,
-      "rentBurdenPct": 41.7
+      "rentBurdenPct": 41.7,
+      "stabilizedUnits": 3879,
+      "stabilizedShare": 17.7
     },
     {
       "name": "Old Astoria-Hallets Point",
@@ -5325,7 +5571,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 93133,
-      "rentBurdenPct": 48.6
+      "rentBurdenPct": 48.6,
+      "stabilizedUnits": 3633,
+      "stabilizedShare": 32.9
     },
     {
       "name": "Astoria (Central)",
@@ -5368,7 +5616,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 104174,
-      "rentBurdenPct": 37.5
+      "rentBurdenPct": 37.5,
+      "stabilizedUnits": 10752,
+      "stabilizedShare": 39.9
     },
     {
       "name": "Astoria (East)-Woodside (North)",
@@ -5411,7 +5661,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 81418,
-      "rentBurdenPct": 47.4
+      "rentBurdenPct": 47.4,
+      "stabilizedUnits": 3373,
+      "stabilizedShare": 19.1
     },
     {
       "name": "Queensbridge-Ravenswood-Dutch Kills",
@@ -5454,7 +5706,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 75076,
-      "rentBurdenPct": 45.4
+      "rentBurdenPct": 45.4,
+      "stabilizedUnits": 4721,
+      "stabilizedShare": 26.5
     },
     {
       "name": "Long Island City-Hunters Point",
@@ -5497,7 +5751,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 158925,
-      "rentBurdenPct": 32.5
+      "rentBurdenPct": 32.5,
+      "stabilizedUnits": 9803,
+      "stabilizedShare": 19.2
     },
     {
       "name": "Sunnyside",
@@ -5540,7 +5796,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 83634,
-      "rentBurdenPct": 48.9
+      "rentBurdenPct": 48.9,
+      "stabilizedUnits": 8767,
+      "stabilizedShare": 39.7
     },
     {
       "name": "Woodside",
@@ -5583,7 +5841,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 77123,
-      "rentBurdenPct": 47
+      "rentBurdenPct": 47,
+      "stabilizedUnits": 3867,
+      "stabilizedShare": 20.8
     },
     {
       "name": "Jackson Heights",
@@ -5626,7 +5886,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 77454,
-      "rentBurdenPct": 52.9
+      "rentBurdenPct": 52.9,
+      "stabilizedUnits": 9866,
+      "stabilizedShare": 28.1
     },
     {
       "name": "East Elmhurst",
@@ -5669,7 +5931,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 79969,
-      "rentBurdenPct": 52.7
+      "rentBurdenPct": 52.7,
+      "stabilizedUnits": 451,
+      "stabilizedShare": 5.2
     },
     {
       "name": "North Corona",
@@ -5712,7 +5976,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 81030,
-      "rentBurdenPct": 53.8
+      "rentBurdenPct": 53.8,
+      "stabilizedUnits": 1507,
+      "stabilizedShare": 15.2
     },
     {
       "name": "Elmhurst",
@@ -5755,7 +6021,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 71552,
-      "rentBurdenPct": 56.7
+      "rentBurdenPct": 56.7,
+      "stabilizedUnits": 10220,
+      "stabilizedShare": 29.6
     },
     {
       "name": "Corona",
@@ -5798,7 +6066,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 65565,
-      "rentBurdenPct": 52.8
+      "rentBurdenPct": 52.8,
+      "stabilizedUnits": 5939,
+      "stabilizedShare": 29
     },
     {
       "name": "Maspeth",
@@ -5841,7 +6111,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 85500,
-      "rentBurdenPct": 53.3
+      "rentBurdenPct": 53.3,
+      "stabilizedUnits": 233,
+      "stabilizedShare": 1.5
     },
     {
       "name": "Ridgewood",
@@ -5884,7 +6156,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 84720,
-      "rentBurdenPct": 45.1
+      "rentBurdenPct": 45.1,
+      "stabilizedUnits": 2441,
+      "stabilizedShare": 9.6
     },
     {
       "name": "Glendale",
@@ -5927,7 +6201,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 95812,
-      "rentBurdenPct": 43.1
+      "rentBurdenPct": 43.1,
+      "stabilizedUnits": 418,
+      "stabilizedShare": 3.2
     },
     {
       "name": "Middle Village",
@@ -5970,7 +6246,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 94387,
-      "rentBurdenPct": 46.7
+      "rentBurdenPct": 46.7,
+      "stabilizedUnits": 1131,
+      "stabilizedShare": 8.3
     },
     {
       "name": "Rego Park",
@@ -6013,7 +6291,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 83091,
-      "rentBurdenPct": 52.7
+      "rentBurdenPct": 52.7,
+      "stabilizedUnits": 3497,
+      "stabilizedShare": 24.7
     },
     {
       "name": "Forest Hills",
@@ -6056,7 +6336,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 104316,
-      "rentBurdenPct": 46.3
+      "rentBurdenPct": 46.3,
+      "stabilizedUnits": 8786,
+      "stabilizedShare": 20.2
     },
     {
       "name": "College Point",
@@ -6099,7 +6381,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 93766,
-      "rentBurdenPct": 56.8
+      "rentBurdenPct": 56.8,
+      "stabilizedUnits": 84,
+      "stabilizedShare": 0.8
     },
     {
       "name": "Whitestone-Beechhurst",
@@ -6142,7 +6426,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 98211,
-      "rentBurdenPct": 51.5
+      "rentBurdenPct": 51.5,
+      "stabilizedUnits": 189,
+      "stabilizedShare": 1.8
     },
     {
       "name": "Bay Terrace-Clearview",
@@ -6185,7 +6471,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 108440,
-      "rentBurdenPct": 37.8
+      "rentBurdenPct": 37.8,
+      "stabilizedUnits": 354,
+      "stabilizedShare": 3.2
     },
     {
       "name": "Murray Hill-Broadway Flushing",
@@ -6228,7 +6516,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 72910,
-      "rentBurdenPct": 55.7
+      "rentBurdenPct": 55.7,
+      "stabilizedUnits": 4052,
+      "stabilizedShare": 19
     },
     {
       "name": "East Flushing",
@@ -6271,7 +6561,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 59393,
-      "rentBurdenPct": 60.3
+      "rentBurdenPct": 60.3,
+      "stabilizedUnits": 1737,
+      "stabilizedShare": 15.6
     },
     {
       "name": "Queensboro Hill",
@@ -6314,7 +6606,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 73025,
-      "rentBurdenPct": 63.2
+      "rentBurdenPct": 63.2,
+      "stabilizedUnits": 64,
+      "stabilizedShare": 0.9
     },
     {
       "name": "Flushing-Willets Point",
@@ -6357,7 +6651,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 50792,
-      "rentBurdenPct": 55.9
+      "rentBurdenPct": 55.9,
+      "stabilizedUnits": 8860,
+      "stabilizedShare": 29.4
     },
     {
       "name": "Kew Gardens Hills",
@@ -6400,7 +6696,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 85786,
-      "rentBurdenPct": 51.8
+      "rentBurdenPct": 51.8,
+      "stabilizedUnits": 2689,
+      "stabilizedShare": 19.9
     },
     {
       "name": "Pomonok-Electchester-Hillcrest",
@@ -6443,7 +6741,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 77555,
-      "rentBurdenPct": 44.6
+      "rentBurdenPct": 44.6,
+      "stabilizedUnits": 831,
+      "stabilizedShare": 6.6
     },
     {
       "name": "Fresh Meadows-Utopia",
@@ -6486,7 +6786,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 97303,
-      "rentBurdenPct": 39.5
+      "rentBurdenPct": 39.5,
+      "stabilizedUnits": 2786,
+      "stabilizedShare": 34.3
     },
     {
       "name": "Jamaica Estates-Holliswood",
@@ -6529,7 +6831,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 88780,
-      "rentBurdenPct": 46.5
+      "rentBurdenPct": 46.5,
+      "stabilizedUnits": 2772,
+      "stabilizedShare": 30.7
     },
     {
       "name": "Jamaica Hills-Briarwood",
@@ -6572,7 +6876,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 88481,
-      "rentBurdenPct": 41.1
+      "rentBurdenPct": 41.1,
+      "stabilizedUnits": 3859,
+      "stabilizedShare": 28.3
     },
     {
       "name": "Kew Gardens",
@@ -6615,7 +6921,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 91956,
-      "rentBurdenPct": 48.7
+      "rentBurdenPct": 48.7,
+      "stabilizedUnits": 3296,
+      "stabilizedShare": 29.7
     },
     {
       "name": "Richmond Hill",
@@ -6658,7 +6966,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 86877,
-      "rentBurdenPct": 49.6
+      "rentBurdenPct": 49.6,
+      "stabilizedUnits": 1277,
+      "stabilizedShare": 12.9
     },
     {
       "name": "South Richmond Hill",
@@ -6701,7 +7011,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 85751,
-      "rentBurdenPct": 61
+      "rentBurdenPct": 61,
+      "stabilizedUnits": 164,
+      "stabilizedShare": 2.5
     },
     {
       "name": "Ozone Park (North)",
@@ -6744,7 +7056,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 87239,
-      "rentBurdenPct": 51.4
+      "rentBurdenPct": 51.4,
+      "stabilizedUnits": 147,
+      "stabilizedShare": 2
     },
     {
       "name": "Woodhaven",
@@ -6787,7 +7101,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 90827,
-      "rentBurdenPct": 47.4
+      "rentBurdenPct": 47.4,
+      "stabilizedUnits": 1049,
+      "stabilizedShare": 8.7
     },
     {
       "name": "South Ozone Park",
@@ -6830,7 +7146,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 100685,
-      "rentBurdenPct": 58.7
+      "rentBurdenPct": 58.7,
+      "stabilizedUnits": 433,
+      "stabilizedShare": 2
     },
     {
       "name": "Ozone Park",
@@ -6873,7 +7191,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 85568,
-      "rentBurdenPct": 51.3
+      "rentBurdenPct": 51.3,
+      "stabilizedUnits": 163,
+      "stabilizedShare": 2.2
     },
     {
       "name": "Howard Beach-Lindenwood",
@@ -6916,7 +7236,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 103428,
-      "rentBurdenPct": 48.4
+      "rentBurdenPct": 48.4,
+      "stabilizedUnits": 48,
+      "stabilizedShare": 0.5
     },
     {
       "name": "Auburndale",
@@ -6959,7 +7281,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 92391,
-      "rentBurdenPct": 42.8
+      "rentBurdenPct": 42.8,
+      "stabilizedUnits": 692,
+      "stabilizedShare": 5.5
     },
     {
       "name": "Bayside",
@@ -7002,7 +7326,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 111270,
-      "rentBurdenPct": 42.6
+      "rentBurdenPct": 42.6,
+      "stabilizedUnits": 762,
+      "stabilizedShare": 5.8
     },
     {
       "name": "Douglaston-Little Neck",
@@ -7045,7 +7371,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 114648,
-      "rentBurdenPct": 48.7
+      "rentBurdenPct": 48.7,
+      "stabilizedUnits": 98,
+      "stabilizedShare": 1
     },
     {
       "name": "Oakland Gardens-Hollis Hills",
@@ -7088,7 +7416,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 103698,
-      "rentBurdenPct": 47.2
+      "rentBurdenPct": 47.2,
+      "stabilizedUnits": 915,
+      "stabilizedShare": 8.9
     },
     {
       "name": "Jamaica",
@@ -7131,7 +7461,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 61851,
-      "rentBurdenPct": 60.6
+      "rentBurdenPct": 60.6,
+      "stabilizedUnits": 10370,
+      "stabilizedShare": 43.6
     },
     {
       "name": "South Jamaica",
@@ -7174,7 +7506,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 76470,
-      "rentBurdenPct": 56.4
+      "rentBurdenPct": 56.4,
+      "stabilizedUnits": 532,
+      "stabilizedShare": 4.3
     },
     {
       "name": "Baisley Park",
@@ -7217,7 +7551,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 81269,
-      "rentBurdenPct": 53
+      "rentBurdenPct": 53,
+      "stabilizedUnits": 80,
+      "stabilizedShare": 0.6
     },
     {
       "name": "Springfield Gardens (North)-Rochdale Village",
@@ -7260,7 +7596,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 78603,
-      "rentBurdenPct": 48.1
+      "rentBurdenPct": 48.1,
+      "stabilizedUnits": 623,
+      "stabilizedShare": 5.1
     },
     {
       "name": "St. Albans",
@@ -7303,7 +7641,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 102304,
-      "rentBurdenPct": 53.3
+      "rentBurdenPct": 53.3,
+      "stabilizedUnits": 473,
+      "stabilizedShare": 3
     },
     {
       "name": "Hollis",
@@ -7346,7 +7686,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 84643,
-      "rentBurdenPct": 49.8
+      "rentBurdenPct": 49.8,
+      "stabilizedUnits": 1225,
+      "stabilizedShare": 16.5
     },
     {
       "name": "Glen Oaks-Floral Park-New Hyde Park",
@@ -7389,7 +7731,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 107236,
-      "rentBurdenPct": 32.7
+      "rentBurdenPct": 32.7,
+      "stabilizedUnits": 412,
+      "stabilizedShare": 4.3
     },
     {
       "name": "Bellerose",
@@ -7432,7 +7776,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 105381,
-      "rentBurdenPct": 47.7
+      "rentBurdenPct": 47.7,
+      "stabilizedUnits": 104,
+      "stabilizedShare": 1.2
     },
     {
       "name": "Queens Village",
@@ -7475,7 +7821,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 97495,
-      "rentBurdenPct": 61.3
+      "rentBurdenPct": 61.3,
+      "stabilizedUnits": 984,
+      "stabilizedShare": 6.4
     },
     {
       "name": "Cambria Heights",
@@ -7518,7 +7866,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 114260,
-      "rentBurdenPct": 58.7
+      "rentBurdenPct": 58.7,
+      "stabilizedUnits": 58,
+      "stabilizedShare": 1
     },
     {
       "name": "Laurelton",
@@ -7561,7 +7911,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 111425,
-      "rentBurdenPct": 39.9
+      "rentBurdenPct": 39.9,
+      "stabilizedUnits": 100,
+      "stabilizedShare": 1.2
     },
     {
       "name": "Springfield Gardens (South)-Brookville",
@@ -7604,7 +7956,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 110886,
-      "rentBurdenPct": 42.8
+      "rentBurdenPct": 42.8,
+      "stabilizedUnits": 33,
+      "stabilizedShare": 0.5
     },
     {
       "name": "Rosedale",
@@ -7647,7 +8001,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 111831,
-      "rentBurdenPct": 60
+      "rentBurdenPct": 60,
+      "stabilizedUnits": 20,
+      "stabilizedShare": 0.3
     },
     {
       "name": "Far Rockaway-Bayswater",
@@ -7690,7 +8046,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 61655,
-      "rentBurdenPct": 57.8
+      "rentBurdenPct": 57.8,
+      "stabilizedUnits": 5746,
+      "stabilizedShare": 26.4
     },
     {
       "name": "Rockaway Beach-Arverne-Edgemere",
@@ -7733,7 +8091,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 61720,
-      "rentBurdenPct": 52.3
+      "rentBurdenPct": 52.3,
+      "stabilizedUnits": 518,
+      "stabilizedShare": 3.3
     },
     {
       "name": "Breezy Point-Belle Harbor-Rockaway Park-Broad Channel",
@@ -7776,7 +8136,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 117846,
-      "rentBurdenPct": 42.1
+      "rentBurdenPct": 42.1,
+      "stabilizedUnits": 1077,
+      "stabilizedShare": 8.9
     },
     {
       "name": "St. George-New Brighton",
@@ -7819,7 +8181,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 70492,
-      "rentBurdenPct": 53.7
+      "rentBurdenPct": 53.7,
+      "stabilizedUnits": 193,
+      "stabilizedShare": 2.3
     },
     {
       "name": "Tompkinsville-Stapleton-Clifton-Fox Hills",
@@ -7862,7 +8226,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 54151,
-      "rentBurdenPct": 57.3
+      "rentBurdenPct": 57.3,
+      "stabilizedUnits": 174,
+      "stabilizedShare": 2.7
     },
     {
       "name": "Rosebank-Shore Acres-Park Hill",
@@ -7905,7 +8271,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 73690,
-      "rentBurdenPct": 45.9
+      "rentBurdenPct": 45.9,
+      "stabilizedUnits": 413,
+      "stabilizedShare": 4.4
     },
     {
       "name": "West New Brighton-Silver Lake-Grymes Hill",
@@ -7948,7 +8316,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 107487,
-      "rentBurdenPct": 46
+      "rentBurdenPct": 46,
+      "stabilizedUnits": 16,
+      "stabilizedShare": 0.1
     },
     {
       "name": "Westerleigh-Castleton Corners",
@@ -7991,7 +8361,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 121838,
-      "rentBurdenPct": 55.5
+      "rentBurdenPct": 55.5,
+      "stabilizedUnits": 48,
+      "stabilizedShare": 0.4
     },
     {
       "name": "Port Richmond",
@@ -8034,7 +8406,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 79467,
-      "rentBurdenPct": 60.6
+      "rentBurdenPct": 60.6,
+      "stabilizedUnits": 95,
+      "stabilizedShare": 1.4
     },
     {
       "name": "Mariner's Harbor-Arlington-Graniteville",
@@ -8077,7 +8451,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 81183,
-      "rentBurdenPct": 49.6
+      "rentBurdenPct": 49.6,
+      "stabilizedUnits": 54,
+      "stabilizedShare": 0.5
     },
     {
       "name": "Grasmere-Arrochar-South Beach-Dongan Hills",
@@ -8120,7 +8496,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 80841,
-      "rentBurdenPct": 52.7
+      "rentBurdenPct": 52.7,
+      "stabilizedUnits": 18,
+      "stabilizedShare": 0.1
     },
     {
       "name": "New Dorp-Midland Beach",
@@ -8163,7 +8541,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 94664,
-      "rentBurdenPct": 51.5
+      "rentBurdenPct": 51.5,
+      "stabilizedUnits": 1,
+      "stabilizedShare": 0
     },
     {
       "name": "Todt Hill-Emerson Hill-Lighthouse Hill-Manor Heights",
@@ -8206,7 +8586,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 110672,
-      "rentBurdenPct": 52.7
+      "rentBurdenPct": 52.7,
+      "stabilizedUnits": 7,
+      "stabilizedShare": 0.1
     },
     {
       "name": "New Springville-Willowbrook-Bulls Head-Travis",
@@ -8249,7 +8631,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 98673,
-      "rentBurdenPct": 43.1
+      "rentBurdenPct": 43.1,
+      "stabilizedUnits": 68,
+      "stabilizedShare": 0.4
     },
     {
       "name": "Oakwood-Richmondtown",
@@ -8292,7 +8676,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 111488,
-      "rentBurdenPct": 58
+      "rentBurdenPct": 58,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0
     },
     {
       "name": "Great Kills-Eltingville",
@@ -8335,7 +8721,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 120196,
-      "rentBurdenPct": 38.3
+      "rentBurdenPct": 38.3,
+      "stabilizedUnits": 36,
+      "stabilizedShare": 0.2
     },
     {
       "name": "Arden Heights-Rossville",
@@ -8378,7 +8766,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 109850,
-      "rentBurdenPct": 48.5
+      "rentBurdenPct": 48.5,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0
     },
     {
       "name": "Annadale-Huguenot-Prince's Bay-Woodrow",
@@ -8421,7 +8811,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 121871,
-      "rentBurdenPct": 59.1
+      "rentBurdenPct": 59.1,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0
     },
     {
       "name": "Tottenville-Charleston",
@@ -8464,7 +8856,9 @@
       "hpdViolationsPerUnit": 0,
       "medianRent": 0,
       "medianIncome": 137514,
-      "rentBurdenPct": 47.8
+      "rentBurdenPct": 47.8,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0
     }
   ]
 }

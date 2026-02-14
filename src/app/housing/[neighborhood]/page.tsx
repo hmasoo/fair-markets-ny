@@ -27,6 +27,8 @@ interface Neighborhood {
   universityShare: number;
   topUniversity: string | null;
   hpdViolationsPerUnit: number;
+  stabilizedUnits: number;
+  stabilizedShare: number;
   medianRent: number;
   medianIncome: number | null;
   rentBurdenPct: number | null;
@@ -179,6 +181,16 @@ export default async function NeighborhoodPage({ params }: Props) {
                 {neighborhood.topUniversity}
               </div>
             )}
+          </div>
+        )}
+        {neighborhood.stabilizedUnits > 0 && (
+          <div className="card text-center border-fm-teal/30 bg-fm-teal/5">
+            <div className="text-2xl font-bold text-fm-teal">
+              {neighborhood.stabilizedUnits.toLocaleString()}
+            </div>
+            <div className="text-xs text-fm-sage mt-1">
+              Rent-Stabilized Units — {neighborhood.stabilizedShare}% of housing stock
+            </div>
           </div>
         )}
       </div>

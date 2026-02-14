@@ -86,6 +86,8 @@ interface NeighborhoodEntry {
   universityShare: number;
   topUniversity: string | null;
   hpdViolationsPerUnit: number;
+  stabilizedUnits: number;
+  stabilizedShare: number;
   medianRent: number;
   medianIncome: number | null;
   rentBurdenPct: number | null;
@@ -437,6 +439,8 @@ function main() {
       universityShare,
       topUniversity,
       hpdViolationsPerUnit: 0,
+      stabilizedUnits: 0,
+      stabilizedShare: 0,
       medianRent: 0,
       medianIncome,
       rentBurdenPct,

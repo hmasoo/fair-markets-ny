@@ -36,6 +36,8 @@ interface Neighborhood {
   universityShare: number;
   topUniversity: string | null;
   hpdViolationsPerUnit: number;
+  stabilizedUnits: number;
+  stabilizedShare: number;
   medianRent: number;
   medianIncome: number | null;
   rentBurdenPct: number | null;
