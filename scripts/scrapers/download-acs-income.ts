@@ -6,6 +6,8 @@
  *   B19013_001E — Median household income (estimate)
  *   B19013_001M — Median household income (margin of error)
  *   B11001_001E — Total households
+ *   B25064_001E — Median gross rent (estimate)
+ *   B25064_001M — Median gross rent (margin of error)
  *   B25070_001E — Total renter-occupied units (gross rent as % of income universe)
  *   B25070_007E — Rent 30.0 to 34.9%
  *   B25070_008E — Rent 35.0 to 39.9%
@@ -47,6 +49,8 @@ const VARIABLES = [
   "B19013_001E", // Median household income
   "B19013_001M", // MHI margin of error
   "B11001_001E", // Total households
+  "B25064_001E", // Median gross rent
+  "B25064_001M", // Median gross rent margin of error
   "B25070_001E", // Renter HHs (gross rent % income universe)
   "B25070_007E", // Rent 30.0–34.9%
   "B25070_008E", // Rent 35.0–39.9%
@@ -68,6 +72,8 @@ interface TractRecord {
   medianIncome: number | null;
   moe: number | null;
   totalHouseholds: number;
+  medianRent: number | null;
+  rentMoe: number | null;
   renterHouseholds: number;
   rentBurdened30to35: number;
   rentBurdened35to40: number;
@@ -114,6 +120,8 @@ async function fetchCounty(countyFips: string, countyName: string): Promise<Trac
       medianIncome: parseNum(get("B19013_001E")),
       moe: parseNum(get("B19013_001M")),
       totalHouseholds: parseNum(get("B11001_001E")) ?? 0,
+      medianRent: parseNum(get("B25064_001E")),
+      rentMoe: parseNum(get("B25064_001M")),
       renterHouseholds: parseNum(get("B25070_001E")) ?? 0,
       rentBurdened30to35: parseNum(get("B25070_007E")) ?? 0,
       rentBurdened35to40: parseNum(get("B25070_008E")) ?? 0,

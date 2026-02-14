@@ -57,6 +57,7 @@ interface TractRecord {
   countyFips: string;
   medianIncome: number | null;
   totalHouseholds: number;
+  medianRent: number | null;
   renterHouseholds: number;
   rentBurdened30to35: number;
   rentBurdened35to40: number;
@@ -387,9 +388,10 @@ function main() {
       ? Math.round((universityUnits / totalUnits) * 1000) / 10
       : 0;
 
-    // Income data (from ACS if available)
+    // Income and rent data (from ACS if available)
     let medianIncome: number | null = null;
     let rentBurdenPct: number | null = null;
+    let medianRent = 0;
 
     if (acsTracts && ntaToGeoids.has(ntaCode)) {
       const geoids = ntaToGeoids.get(ntaCode)!;
@@ -397,6 +399,8 @@ function main() {
       let householdWeightSum = 0;
       let totalRenterHH = 0;
       let totalBurdenedHH = 0;
+      let weightedRentSum = 0;
+      let renterWeightSum = 0;
 
       for (const geoid of geoids) {
         const tract = acsTractMap.get(geoid);
@@ -405,6 +409,10 @@ function main() {
         if (tract.medianIncome !== null && tract.totalHouseholds > 0) {
           weightedIncomeSum += tract.medianIncome * tract.totalHouseholds;
           householdWeightSum += tract.totalHouseholds;
+        }
+        if (tract.medianRent !== null && tract.renterHouseholds > 0) {
+          weightedRentSum += tract.medianRent * tract.renterHouseholds;
+          renterWeightSum += tract.renterHouseholds;
         }
         totalRenterHH += tract.renterHouseholds;
         totalBurdenedHH +=
@@ -416,6 +424,9 @@ function main() {
 
       if (householdWeightSum > 0) {
         medianIncome = Math.round(weightedIncomeSum / householdWeightSum);
+      }
+      if (renterWeightSum > 0) {
+        medianRent = Math.round(weightedRentSum / renterWeightSum);
       }
       if (totalRenterHH > 0) {
         rentBurdenPct =
@@ -441,7 +452,7 @@ function main() {
       hpdViolationsPerUnit: 0,
       stabilizedUnits: 0,
       stabilizedShare: 0,
-      medianRent: 0,
+      medianRent,
       medianIncome,
       rentBurdenPct,
     });
@@ -455,7 +466,7 @@ function main() {
     geography: "NYC Neighborhoods",
     ntaVersion: "2020",
     source: "NYC Dept. of City Planning — MapPLUTO 24v4; ACRIS ownership records",
-    incomeSource: "U.S. Census Bureau, ACS 2023 5-Year Estimates (Tables B19013, B25070)",
+    incomeSource: "U.S. Census Bureau, ACS 2023 5-Year Estimates (Tables B19013, B25064, B25070)",
     neighborhoods,
   };
 

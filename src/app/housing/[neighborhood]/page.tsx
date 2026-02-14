@@ -8,6 +8,7 @@ const NeighborhoodCharts = dynamic(
 );
 
 import neighborhoodDataRaw from "../../../../data/concentration/housing-neighborhoods.json";
+import rentHistoryRaw from "../../../../data/concentration/rent-history-neighborhoods.json";
 
 interface Neighborhood {
   name: string;
@@ -40,6 +41,21 @@ const neighborhoodData = neighborhoodDataRaw as {
   incomeSource: string;
   neighborhoods: Neighborhood[];
 };
+
+interface RentHistoryNeighborhood {
+  slug: string;
+  rentHistory: { year: number; medianRent: number }[];
+  rentGrowthPct: number | null;
+}
+
+const rentHistoryData = rentHistoryRaw as {
+  neighborhoods: RentHistoryNeighborhood[];
+};
+
+const rentHistoryBySlug = new Map<string, RentHistoryNeighborhood>();
+for (const n of rentHistoryData.neighborhoods) {
+  rentHistoryBySlug.set(n.slug, n);
+}
 
 interface Props {
   params: Promise<{ neighborhood: string }>;
@@ -76,6 +92,10 @@ export default async function NeighborhoodPage({ params }: Props) {
   if (!neighborhood) notFound();
 
   const topLandlordName = neighborhood.topLandlords[0]?.name;
+  const rentHistory = rentHistoryBySlug.get(slug);
+  const rentGrowthPct = rentHistory?.rentGrowthPct ?? null;
+  const rent2019 = rentHistory?.rentHistory.find((r) => r.year === 2019)?.medianRent;
+  const rent2023 = rentHistory?.rentHistory.find((r) => r.year === 2023)?.medianRent;
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -109,6 +129,19 @@ export default async function NeighborhoodPage({ params }: Props) {
               ${neighborhood.medianRent.toLocaleString()}
             </div>
             <div className="text-xs text-fm-sage mt-1">Median Rent</div>
+          </div>
+        )}
+        {rentGrowthPct !== null && rent2019 && rent2023 && (
+          <div className="card text-center">
+            <div className={`text-2xl font-bold ${rentGrowthPct > 0 ? "text-fm-copper" : "text-fm-teal"}`}>
+              {rentGrowthPct > 0 ? "+" : ""}{rentGrowthPct}%
+            </div>
+            <div className="text-xs text-fm-sage mt-1">
+              Rent Growth 2019{"\u2013"}2023
+            </div>
+            <div className="text-xs text-fm-sage">
+              ${rent2019.toLocaleString()} {"\u2192"} ${rent2023.toLocaleString()}
+            </div>
           </div>
         )}
         {neighborhood.rentBurdenPct && (
@@ -261,8 +294,8 @@ export default async function NeighborhoodPage({ params }: Props) {
         </div>
         <p className="mt-4 text-xs text-fm-sage">
           Source: NYC Dept. of City Planning MapPLUTO 24v4; ACRIS ownership
-          records; HPD violations data via NYC Open Data. Income data from U.S.
-          Census Bureau ACS 2023 5-Year Estimates.
+          records; HPD violations data via NYC Open Data. Income, median rent,
+          and rent burden from U.S. Census Bureau ACS 5-Year Estimates (2019, 2023).
         </p>
       </div>
     </div>

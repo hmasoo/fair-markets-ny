@@ -1,0 +1,3324 @@
+{
+  "source": "U.S. Census Bureau, ACS 5-Year Estimates, Table B25064",
+  "vintages": [
+    "2019",
+    "2023"
+  ],
+  "neighborhoods": [
+    {
+      "ntaCode": "BK0101",
+      "name": "Greenpoint",
+      "slug": "greenpoint",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 2051
+        },
+        {
+          "year": 2023,
+          "medianRent": 2583
+        }
+      ],
+      "rentGrowthPct": 25.9
+    },
+    {
+      "ntaCode": "BK0102",
+      "name": "Williamsburg",
+      "slug": "williamsburg",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 2332
+        },
+        {
+          "year": 2023,
+          "medianRent": 2865
+        }
+      ],
+      "rentGrowthPct": 22.9
+    },
+    {
+      "ntaCode": "BK0103",
+      "name": "South Williamsburg",
+      "slug": "south-williamsburg",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1040
+        },
+        {
+          "year": 2023,
+          "medianRent": 1474
+        }
+      ],
+      "rentGrowthPct": 41.7
+    },
+    {
+      "ntaCode": "BK0104",
+      "name": "East Williamsburg",
+      "slug": "east-williamsburg",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1650
+        },
+        {
+          "year": 2023,
+          "medianRent": 1991
+        }
+      ],
+      "rentGrowthPct": 20.7
+    },
+    {
+      "ntaCode": "BK0201",
+      "name": "Brooklyn Heights",
+      "slug": "brooklyn-heights",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 2316
+        },
+        {
+          "year": 2023,
+          "medianRent": 2972
+        }
+      ],
+      "rentGrowthPct": 28.3
+    },
+    {
+      "ntaCode": "BK0202",
+      "name": "Downtown Brooklyn-DUMBO-Boerum Hill",
+      "slug": "downtown-brooklyn-dumbo-boerum-hill",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 2294
+        },
+        {
+          "year": 2023,
+          "medianRent": 2996
+        }
+      ],
+      "rentGrowthPct": 30.6
+    },
+    {
+      "ntaCode": "BK0203",
+      "name": "Fort Greene",
+      "slug": "fort-greene",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1559
+        },
+        {
+          "year": 2023,
+          "medianRent": 2292
+        }
+      ],
+      "rentGrowthPct": 47
+    },
+    {
+      "ntaCode": "BK0204",
+      "name": "Clinton Hill",
+      "slug": "clinton-hill",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1919
+        },
+        {
+          "year": 2023,
+          "medianRent": 2680
+        }
+      ],
+      "rentGrowthPct": 39.7
+    },
+    {
+      "ntaCode": "BK0301",
+      "name": "Bedford-Stuyvesant (West)",
+      "slug": "bedford-stuyvesant-west",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1480
+        },
+        {
+          "year": 2023,
+          "medianRent": 2077
+        }
+      ],
+      "rentGrowthPct": 40.3
+    },
+    {
+      "ntaCode": "BK0302",
+      "name": "Bedford-Stuyvesant (East)",
+      "slug": "bedford-stuyvesant-east",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1288
+        },
+        {
+          "year": 2023,
+          "medianRent": 1876
+        }
+      ],
+      "rentGrowthPct": 45.7
+    },
+    {
+      "ntaCode": "BK0401",
+      "name": "Bushwick (West)",
+      "slug": "bushwick-west",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1627
+        },
+        {
+          "year": 2023,
+          "medianRent": 2298
+        }
+      ],
+      "rentGrowthPct": 41.2
+    },
+    {
+      "ntaCode": "BK0402",
+      "name": "Bushwick (East)",
+      "slug": "bushwick-east",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1483
+        },
+        {
+          "year": 2023,
+          "medianRent": 1979
+        }
+      ],
+      "rentGrowthPct": 33.4
+    },
+    {
+      "ntaCode": "BK0501",
+      "name": "Cypress Hills",
+      "slug": "cypress-hills",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1441
+        },
+        {
+          "year": 2023,
+          "medianRent": 1815
+        }
+      ],
+      "rentGrowthPct": 26
+    },
+    {
+      "ntaCode": "BK0502",
+      "name": "East New York (North)",
+      "slug": "east-new-york-north",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1243
+        },
+        {
+          "year": 2023,
+          "medianRent": 1411
+        }
+      ],
+      "rentGrowthPct": 13.5
+    },
+    {
+      "ntaCode": "BK0503",
+      "name": "East New York-New Lots",
+      "slug": "east-new-york-new-lots",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1060
+        },
+        {
+          "year": 2023,
+          "medianRent": 1388
+        }
+      ],
+      "rentGrowthPct": 30.9
+    },
+    {
+      "ntaCode": "BK0504",
+      "name": "Spring Creek-Starrett City",
+      "slug": "spring-creek-starrett-city",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 785
+        },
+        {
+          "year": 2023,
+          "medianRent": 957
+        }
+      ],
+      "rentGrowthPct": 21.9
+    },
+    {
+      "ntaCode": "BK0505",
+      "name": "East New York-City Line",
+      "slug": "east-new-york-city-line",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1023
+        },
+        {
+          "year": 2023,
+          "medianRent": 1274
+        }
+      ],
+      "rentGrowthPct": 24.5
+    },
+    {
+      "ntaCode": "BK0601",
+      "name": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+      "slug": "carroll-gardens-cobble-hill-gowanus-red-hook",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1652
+        },
+        {
+          "year": 2023,
+          "medianRent": 2244
+        }
+      ],
+      "rentGrowthPct": 35.8
+    },
+    {
+      "ntaCode": "BK0602",
+      "name": "Park Slope",
+      "slug": "park-slope",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 2449
+        },
+        {
+          "year": 2023,
+          "medianRent": 2995
+        }
+      ],
+      "rentGrowthPct": 22.3
+    },
+    {
+      "ntaCode": "BK0701",
+      "name": "Windsor Terrace-South Slope",
+      "slug": "windsor-terrace-south-slope",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 2092
+        },
+        {
+          "year": 2023,
+          "medianRent": 2537
+        }
+      ],
+      "rentGrowthPct": 21.3
+    },
+    {
+      "ntaCode": "BK0702",
+      "name": "Sunset Park (West)",
+      "slug": "sunset-park-west",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1597
+        },
+        {
+          "year": 2023,
+          "medianRent": 1911
+        }
+      ],
+      "rentGrowthPct": 19.7
+    },
+    {
+      "ntaCode": "BK0703",
+      "name": "Sunset Park (Central)",
+      "slug": "sunset-park-central",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1408
+        },
+        {
+          "year": 2023,
+          "medianRent": 1785
+        }
+      ],
+      "rentGrowthPct": 26.8
+    },
+    {
+      "ntaCode": "BK0801",
+      "name": "Prospect Heights",
+      "slug": "prospect-heights",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1987
+        },
+        {
+          "year": 2023,
+          "medianRent": 2480
+        }
+      ],
+      "rentGrowthPct": 24.8
+    },
+    {
+      "ntaCode": "BK0802",
+      "name": "Crown Heights (North)",
+      "slug": "crown-heights-north",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1313
+        },
+        {
+          "year": 2023,
+          "medianRent": 1789
+        }
+      ],
+      "rentGrowthPct": 36.3
+    },
+    {
+      "ntaCode": "BK0901",
+      "name": "Crown Heights (South)",
+      "slug": "crown-heights-south",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1420
+        },
+        {
+          "year": 2023,
+          "medianRent": 1644
+        }
+      ],
+      "rentGrowthPct": 15.8
+    },
+    {
+      "ntaCode": "BK0902",
+      "name": "Prospect Lefferts Gardens-Wingate",
+      "slug": "prospect-lefferts-gardens-wingate",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1390
+        },
+        {
+          "year": 2023,
+          "medianRent": 1670
+        }
+      ],
+      "rentGrowthPct": 20.1
+    },
+    {
+      "ntaCode": "BK1001",
+      "name": "Bay Ridge",
+      "slug": "bay-ridge",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1521
+        },
+        {
+          "year": 2023,
+          "medianRent": 1844
+        }
+      ],
+      "rentGrowthPct": 21.2
+    },
+    {
+      "ntaCode": "BK1002",
+      "name": "Dyker Heights",
+      "slug": "dyker-heights",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1430
+        },
+        {
+          "year": 2023,
+          "medianRent": 1764
+        }
+      ],
+      "rentGrowthPct": 23.4
+    },
+    {
+      "ntaCode": "BK1101",
+      "name": "Bensonhurst",
+      "slug": "bensonhurst",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1418
+        },
+        {
+          "year": 2023,
+          "medianRent": 1697
+        }
+      ],
+      "rentGrowthPct": 19.7
+    },
+    {
+      "ntaCode": "BK1102",
+      "name": "Bath Beach",
+      "slug": "bath-beach",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1472
+        },
+        {
+          "year": 2023,
+          "medianRent": 1787
+        }
+      ],
+      "rentGrowthPct": 21.4
+    },
+    {
+      "ntaCode": "BK1103",
+      "name": "Gravesend (West)",
+      "slug": "gravesend-west",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1386
+        },
+        {
+          "year": 2023,
+          "medianRent": 1711
+        }
+      ],
+      "rentGrowthPct": 23.4
+    },
+    {
+      "ntaCode": "BK1201",
+      "name": "Sunset Park (East)-Borough Park (West)",
+      "slug": "sunset-park-east-borough-park-west",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1351
+        },
+        {
+          "year": 2023,
+          "medianRent": 1573
+        }
+      ],
+      "rentGrowthPct": 16.4
+    },
+    {
+      "ntaCode": "BK1202",
+      "name": "Borough Park",
+      "slug": "borough-park",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1476
+        },
+        {
+          "year": 2023,
+          "medianRent": 1732
+        }
+      ],
+      "rentGrowthPct": 17.3
+    },
+    {
+      "ntaCode": "BK1203",
+      "name": "Kensington",
+      "slug": "kensington",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1596
+        },
+        {
+          "year": 2023,
+          "medianRent": 1946
+        }
+      ],
+      "rentGrowthPct": 21.9
+    },
+    {
+      "ntaCode": "BK1204",
+      "name": "Mapleton-Midwood (West)",
+      "slug": "mapleton-midwood-west",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1529
+        },
+        {
+          "year": 2023,
+          "medianRent": 1940
+        }
+      ],
+      "rentGrowthPct": 26.9
+    },
+    {
+      "ntaCode": "BK1301",
+      "name": "Gravesend (South)",
+      "slug": "gravesend-south",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1070
+        },
+        {
+          "year": 2023,
+          "medianRent": 1326
+        }
+      ],
+      "rentGrowthPct": 23.9
+    },
+    {
+      "ntaCode": "BK1302",
+      "name": "Coney Island-Sea Gate",
+      "slug": "coney-island-sea-gate",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 878
+        },
+        {
+          "year": 2023,
+          "medianRent": 1001
+        }
+      ],
+      "rentGrowthPct": 14
+    },
+    {
+      "ntaCode": "BK1303",
+      "name": "Brighton Beach",
+      "slug": "brighton-beach",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1168
+        },
+        {
+          "year": 2023,
+          "medianRent": 1584
+        }
+      ],
+      "rentGrowthPct": 35.6
+    },
+    {
+      "ntaCode": "BK1401",
+      "name": "Flatbush",
+      "slug": "flatbush",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1444
+        },
+        {
+          "year": 2023,
+          "medianRent": 1763
+        }
+      ],
+      "rentGrowthPct": 22.1
+    },
+    {
+      "ntaCode": "BK1402",
+      "name": "Flatbush (West)-Ditmas Park-Parkville",
+      "slug": "flatbush-west-ditmas-park-parkville",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1442
+        },
+        {
+          "year": 2023,
+          "medianRent": 1802
+        }
+      ],
+      "rentGrowthPct": 25
+    },
+    {
+      "ntaCode": "BK1403",
+      "name": "Midwood",
+      "slug": "midwood",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1381
+        },
+        {
+          "year": 2023,
+          "medianRent": 1708
+        }
+      ],
+      "rentGrowthPct": 23.7
+    },
+    {
+      "ntaCode": "BK1501",
+      "name": "Gravesend (East)-Homecrest",
+      "slug": "gravesend-east-homecrest",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1489
+        },
+        {
+          "year": 2023,
+          "medianRent": 1763
+        }
+      ],
+      "rentGrowthPct": 18.4
+    },
+    {
+      "ntaCode": "BK1502",
+      "name": "Madison",
+      "slug": "madison",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1480
+        },
+        {
+          "year": 2023,
+          "medianRent": 1737
+        }
+      ],
+      "rentGrowthPct": 17.4
+    },
+    {
+      "ntaCode": "BK1503",
+      "name": "Sheepshead Bay-Manhattan Beach-Gerritsen Beach",
+      "slug": "sheepshead-bay-manhattan-beach-gerritsen-beach",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1224
+        },
+        {
+          "year": 2023,
+          "medianRent": 1551
+        }
+      ],
+      "rentGrowthPct": 26.7
+    },
+    {
+      "ntaCode": "BK1601",
+      "name": "Ocean Hill",
+      "slug": "ocean-hill",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1212
+        },
+        {
+          "year": 2023,
+          "medianRent": 1411
+        }
+      ],
+      "rentGrowthPct": 16.4
+    },
+    {
+      "ntaCode": "BK1602",
+      "name": "Brownsville",
+      "slug": "brownsville",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 780
+        },
+        {
+          "year": 2023,
+          "medianRent": 1026
+        }
+      ],
+      "rentGrowthPct": 31.5
+    },
+    {
+      "ntaCode": "BK1701",
+      "name": "East Flatbush-Erasmus",
+      "slug": "east-flatbush-erasmus",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1377
+        },
+        {
+          "year": 2023,
+          "medianRent": 1719
+        }
+      ],
+      "rentGrowthPct": 24.8
+    },
+    {
+      "ntaCode": "BK1702",
+      "name": "East Flatbush-Farragut",
+      "slug": "east-flatbush-farragut",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1413
+        },
+        {
+          "year": 2023,
+          "medianRent": 1700
+        }
+      ],
+      "rentGrowthPct": 20.3
+    },
+    {
+      "ntaCode": "BK1703",
+      "name": "East Flatbush-Rugby",
+      "slug": "east-flatbush-rugby",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1357
+        },
+        {
+          "year": 2023,
+          "medianRent": 1645
+        }
+      ],
+      "rentGrowthPct": 21.2
+    },
+    {
+      "ntaCode": "BK1704",
+      "name": "East Flatbush-Remsen Village",
+      "slug": "east-flatbush-remsen-village",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1256
+        },
+        {
+          "year": 2023,
+          "medianRent": 1549
+        }
+      ],
+      "rentGrowthPct": 23.3
+    },
+    {
+      "ntaCode": "BK1801",
+      "name": "Flatlands",
+      "slug": "flatlands",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1374
+        },
+        {
+          "year": 2023,
+          "medianRent": 1607
+        }
+      ],
+      "rentGrowthPct": 17
+    },
+    {
+      "ntaCode": "BK1802",
+      "name": "Marine Park-Mill Basin-Bergen Beach",
+      "slug": "marine-park-mill-basin-bergen-beach",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1611
+        },
+        {
+          "year": 2023,
+          "medianRent": 2069
+        }
+      ],
+      "rentGrowthPct": 28.4
+    },
+    {
+      "ntaCode": "BK1803",
+      "name": "Canarsie",
+      "slug": "canarsie",
+      "borough": "Brooklyn",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1426
+        },
+        {
+          "year": 2023,
+          "medianRent": 1495
+        }
+      ],
+      "rentGrowthPct": 4.8
+    },
+    {
+      "ntaCode": "BX0101",
+      "name": "Mott Haven-Port Morris",
+      "slug": "mott-haven-port-morris",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 791
+        },
+        {
+          "year": 2023,
+          "medianRent": 1066
+        }
+      ],
+      "rentGrowthPct": 34.8
+    },
+    {
+      "ntaCode": "BX0102",
+      "name": "Melrose",
+      "slug": "melrose",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 971
+        },
+        {
+          "year": 2023,
+          "medianRent": 1037
+        }
+      ],
+      "rentGrowthPct": 6.8
+    },
+    {
+      "ntaCode": "BX0201",
+      "name": "Hunts Point",
+      "slug": "hunts-point",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 999
+        },
+        {
+          "year": 2023,
+          "medianRent": 1321
+        }
+      ],
+      "rentGrowthPct": 32.2
+    },
+    {
+      "ntaCode": "BX0202",
+      "name": "Longwood",
+      "slug": "longwood",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1005
+        },
+        {
+          "year": 2023,
+          "medianRent": 1212
+        }
+      ],
+      "rentGrowthPct": 20.6
+    },
+    {
+      "ntaCode": "BX0301",
+      "name": "Morrisania",
+      "slug": "morrisania",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 986
+        },
+        {
+          "year": 2023,
+          "medianRent": 1196
+        }
+      ],
+      "rentGrowthPct": 21.3
+    },
+    {
+      "ntaCode": "BX0302",
+      "name": "Claremont Village-Claremont (East)",
+      "slug": "claremont-village-claremont-east",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 822
+        },
+        {
+          "year": 2023,
+          "medianRent": 997
+        }
+      ],
+      "rentGrowthPct": 21.3
+    },
+    {
+      "ntaCode": "BX0303",
+      "name": "Crotona Park East",
+      "slug": "crotona-park-east",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 938
+        },
+        {
+          "year": 2023,
+          "medianRent": 1274
+        }
+      ],
+      "rentGrowthPct": 35.8
+    },
+    {
+      "ntaCode": "BX0401",
+      "name": "Concourse-Concourse Village",
+      "slug": "concourse-concourse-village",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1144
+        },
+        {
+          "year": 2023,
+          "medianRent": 1388
+        }
+      ],
+      "rentGrowthPct": 21.3
+    },
+    {
+      "ntaCode": "BX0402",
+      "name": "Highbridge",
+      "slug": "highbridge",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1117
+        },
+        {
+          "year": 2023,
+          "medianRent": 1322
+        }
+      ],
+      "rentGrowthPct": 18.4
+    },
+    {
+      "ntaCode": "BX0403",
+      "name": "Mount Eden-Claremont (West)",
+      "slug": "mount-eden-claremont-west",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1205
+        },
+        {
+          "year": 2023,
+          "medianRent": 1409
+        }
+      ],
+      "rentGrowthPct": 16.9
+    },
+    {
+      "ntaCode": "BX0501",
+      "name": "University Heights (South)-Morris Heights",
+      "slug": "university-heights-south-morris-heights",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1103
+        },
+        {
+          "year": 2023,
+          "medianRent": 1304
+        }
+      ],
+      "rentGrowthPct": 18.2
+    },
+    {
+      "ntaCode": "BX0502",
+      "name": "Mount Hope",
+      "slug": "mount-hope",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1247
+        },
+        {
+          "year": 2023,
+          "medianRent": 1478
+        }
+      ],
+      "rentGrowthPct": 18.5
+    },
+    {
+      "ntaCode": "BX0503",
+      "name": "Fordham Heights",
+      "slug": "fordham-heights",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1237
+        },
+        {
+          "year": 2023,
+          "medianRent": 1505
+        }
+      ],
+      "rentGrowthPct": 21.7
+    },
+    {
+      "ntaCode": "BX0601",
+      "name": "West Farms",
+      "slug": "west-farms",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 950
+        },
+        {
+          "year": 2023,
+          "medianRent": 1116
+        }
+      ],
+      "rentGrowthPct": 17.5
+    },
+    {
+      "ntaCode": "BX0602",
+      "name": "Tremont",
+      "slug": "tremont",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1018
+        },
+        {
+          "year": 2023,
+          "medianRent": 1262
+        }
+      ],
+      "rentGrowthPct": 24
+    },
+    {
+      "ntaCode": "BX0603",
+      "name": "Belmont",
+      "slug": "belmont",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1172
+        },
+        {
+          "year": 2023,
+          "medianRent": 1437
+        }
+      ],
+      "rentGrowthPct": 22.6
+    },
+    {
+      "ntaCode": "BX0701",
+      "name": "University Heights (North)-Fordham",
+      "slug": "university-heights-north-fordham",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1249
+        },
+        {
+          "year": 2023,
+          "medianRent": 1568
+        }
+      ],
+      "rentGrowthPct": 25.5
+    },
+    {
+      "ntaCode": "BX0702",
+      "name": "Bedford Park",
+      "slug": "bedford-park",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1304
+        },
+        {
+          "year": 2023,
+          "medianRent": 1605
+        }
+      ],
+      "rentGrowthPct": 23.1
+    },
+    {
+      "ntaCode": "BX0703",
+      "name": "Norwood",
+      "slug": "norwood",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1313
+        },
+        {
+          "year": 2023,
+          "medianRent": 1568
+        }
+      ],
+      "rentGrowthPct": 19.4
+    },
+    {
+      "ntaCode": "BX0801",
+      "name": "Kingsbridge Heights-Van Cortlandt Village",
+      "slug": "kingsbridge-heights-van-cortlandt-village",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1344
+        },
+        {
+          "year": 2023,
+          "medianRent": 1543
+        }
+      ],
+      "rentGrowthPct": 14.8
+    },
+    {
+      "ntaCode": "BX0802",
+      "name": "Kingsbridge-Marble Hill",
+      "slug": "kingsbridge-marble-hill",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1242
+        },
+        {
+          "year": 2023,
+          "medianRent": 1429
+        }
+      ],
+      "rentGrowthPct": 15.1
+    },
+    {
+      "ntaCode": "BX0803",
+      "name": "Riverdale-Spuyten Duyvil",
+      "slug": "riverdale-spuyten-duyvil",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1717
+        },
+        {
+          "year": 2023,
+          "medianRent": 2058
+        }
+      ],
+      "rentGrowthPct": 19.9
+    },
+    {
+      "ntaCode": "BX0901",
+      "name": "Soundview-Bruckner-Bronx River",
+      "slug": "soundview-bruckner-bronx-river",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1124
+        },
+        {
+          "year": 2023,
+          "medianRent": 1373
+        }
+      ],
+      "rentGrowthPct": 22.2
+    },
+    {
+      "ntaCode": "BX0902",
+      "name": "Soundview-Clason Point",
+      "slug": "soundview-clason-point",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1089
+        },
+        {
+          "year": 2023,
+          "medianRent": 1053
+        }
+      ],
+      "rentGrowthPct": -3.3
+    },
+    {
+      "ntaCode": "BX0903",
+      "name": "Castle Hill-Unionport",
+      "slug": "castle-hill-unionport",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1170
+        },
+        {
+          "year": 2023,
+          "medianRent": 1399
+        }
+      ],
+      "rentGrowthPct": 19.6
+    },
+    {
+      "ntaCode": "BX0904",
+      "name": "Parkchester",
+      "slug": "parkchester",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1364
+        },
+        {
+          "year": 2023,
+          "medianRent": 1707
+        }
+      ],
+      "rentGrowthPct": 25.1
+    },
+    {
+      "ntaCode": "BX1001",
+      "name": "Westchester Square",
+      "slug": "westchester-square",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1337
+        },
+        {
+          "year": 2023,
+          "medianRent": 1626
+        }
+      ],
+      "rentGrowthPct": 21.6
+    },
+    {
+      "ntaCode": "BX1002",
+      "name": "Throgs Neck-Schuylerville",
+      "slug": "throgs-neck-schuylerville",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1301
+        },
+        {
+          "year": 2023,
+          "medianRent": 1651
+        }
+      ],
+      "rentGrowthPct": 26.9
+    },
+    {
+      "ntaCode": "BX1003",
+      "name": "Pelham Bay-Country Club-City Island",
+      "slug": "pelham-bay-country-club-city-island",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1464
+        },
+        {
+          "year": 2023,
+          "medianRent": 1821
+        }
+      ],
+      "rentGrowthPct": 24.4
+    },
+    {
+      "ntaCode": "BX1101",
+      "name": "Pelham Parkway-Van Nest",
+      "slug": "pelham-parkway-van-nest",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1402
+        },
+        {
+          "year": 2023,
+          "medianRent": 1778
+        }
+      ],
+      "rentGrowthPct": 26.8
+    },
+    {
+      "ntaCode": "BX1102",
+      "name": "Morris Park",
+      "slug": "morris-park",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1468
+        },
+        {
+          "year": 2023,
+          "medianRent": 1805
+        }
+      ],
+      "rentGrowthPct": 23
+    },
+    {
+      "ntaCode": "BX1103",
+      "name": "Pelham Gardens",
+      "slug": "pelham-gardens",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1356
+        },
+        {
+          "year": 2023,
+          "medianRent": 1562
+        }
+      ],
+      "rentGrowthPct": 15.2
+    },
+    {
+      "ntaCode": "BX1104",
+      "name": "Allerton",
+      "slug": "allerton",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1239
+        },
+        {
+          "year": 2023,
+          "medianRent": 1305
+        }
+      ],
+      "rentGrowthPct": 5.3
+    },
+    {
+      "ntaCode": "BX1201",
+      "name": "Williamsbridge-Olinville",
+      "slug": "williamsbridge-olinville",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1389
+        },
+        {
+          "year": 2023,
+          "medianRent": 1516
+        }
+      ],
+      "rentGrowthPct": 9.1
+    },
+    {
+      "ntaCode": "BX1202",
+      "name": "Eastchester-Edenwald-Baychester",
+      "slug": "eastchester-edenwald-baychester",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1190
+        },
+        {
+          "year": 2023,
+          "medianRent": 1392
+        }
+      ],
+      "rentGrowthPct": 17
+    },
+    {
+      "ntaCode": "BX1203",
+      "name": "Wakefield-Woodlawn",
+      "slug": "wakefield-woodlawn",
+      "borough": "Bronx",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1398
+        },
+        {
+          "year": 2023,
+          "medianRent": 1641
+        }
+      ],
+      "rentGrowthPct": 17.4
+    },
+    {
+      "ntaCode": "MN0101",
+      "name": "Financial District-Battery Park City",
+      "slug": "financial-district-battery-park-city",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 3255
+        },
+        {
+          "year": 2023,
+          "medianRent": 3489
+        }
+      ],
+      "rentGrowthPct": 7.2
+    },
+    {
+      "ntaCode": "MN0102",
+      "name": "Tribeca-Civic Center",
+      "slug": "tribeca-civic-center",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 2786
+        },
+        {
+          "year": 2023,
+          "medianRent": 3171
+        }
+      ],
+      "rentGrowthPct": 13.8
+    },
+    {
+      "ntaCode": "MN0201",
+      "name": "SoHo-Little Italy-Hudson Square",
+      "slug": "soho-little-italy-hudson-square",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1841
+        },
+        {
+          "year": 2023,
+          "medianRent": 2645
+        }
+      ],
+      "rentGrowthPct": 43.7
+    },
+    {
+      "ntaCode": "MN0202",
+      "name": "Greenwich Village",
+      "slug": "greenwich-village",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 2607
+        },
+        {
+          "year": 2023,
+          "medianRent": 2925
+        }
+      ],
+      "rentGrowthPct": 12.2
+    },
+    {
+      "ntaCode": "MN0203",
+      "name": "West Village",
+      "slug": "west-village",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 2332
+        },
+        {
+          "year": 2023,
+          "medianRent": 3065
+        }
+      ],
+      "rentGrowthPct": 31.4
+    },
+    {
+      "ntaCode": "MN0301",
+      "name": "Chinatown-Two Bridges",
+      "slug": "chinatown-two-bridges",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 860
+        },
+        {
+          "year": 2023,
+          "medianRent": 1097
+        }
+      ],
+      "rentGrowthPct": 27.6
+    },
+    {
+      "ntaCode": "MN0302",
+      "name": "Lower East Side",
+      "slug": "lower-east-side",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1050
+        },
+        {
+          "year": 2023,
+          "medianRent": 1313
+        }
+      ],
+      "rentGrowthPct": 25
+    },
+    {
+      "ntaCode": "MN0303",
+      "name": "East Village",
+      "slug": "east-village",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1548
+        },
+        {
+          "year": 2023,
+          "medianRent": 2004
+        }
+      ],
+      "rentGrowthPct": 29.5
+    },
+    {
+      "ntaCode": "MN0401",
+      "name": "Chelsea-Hudson Yards",
+      "slug": "chelsea-hudson-yards",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 2244
+        },
+        {
+          "year": 2023,
+          "medianRent": 2822
+        }
+      ],
+      "rentGrowthPct": 25.8
+    },
+    {
+      "ntaCode": "MN0402",
+      "name": "Hell's Kitchen",
+      "slug": "hells-kitchen",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 2147
+        },
+        {
+          "year": 2023,
+          "medianRent": 2269
+        }
+      ],
+      "rentGrowthPct": 5.7
+    },
+    {
+      "ntaCode": "MN0501",
+      "name": "Midtown South-Flatiron-Union Square",
+      "slug": "midtown-south-flatiron-union-square",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 2550
+        },
+        {
+          "year": 2023,
+          "medianRent": 3083
+        }
+      ],
+      "rentGrowthPct": 20.9
+    },
+    {
+      "ntaCode": "MN0502",
+      "name": "Midtown-Times Square",
+      "slug": "midtown-times-square",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 2819
+        },
+        {
+          "year": 2023,
+          "medianRent": 3007
+        }
+      ],
+      "rentGrowthPct": 6.7
+    },
+    {
+      "ntaCode": "MN0601",
+      "name": "Stuyvesant Town-Peter Cooper Village",
+      "slug": "stuyvesant-town-peter-cooper-village",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 2593
+        },
+        {
+          "year": 2023,
+          "medianRent": 3187
+        }
+      ],
+      "rentGrowthPct": 22.9
+    },
+    {
+      "ntaCode": "MN0602",
+      "name": "Gramercy",
+      "slug": "gramercy",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 2610
+        },
+        {
+          "year": 2023,
+          "medianRent": 2945
+        }
+      ],
+      "rentGrowthPct": 12.8
+    },
+    {
+      "ntaCode": "MN0603",
+      "name": "Murray Hill-Kips Bay",
+      "slug": "murray-hill-kips-bay",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 2351
+        },
+        {
+          "year": 2023,
+          "medianRent": 3106
+        }
+      ],
+      "rentGrowthPct": 32.1
+    },
+    {
+      "ntaCode": "MN0604",
+      "name": "East Midtown-Turtle Bay",
+      "slug": "east-midtown-turtle-bay",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 2636
+        },
+        {
+          "year": 2023,
+          "medianRent": 3059
+        }
+      ],
+      "rentGrowthPct": 16
+    },
+    {
+      "ntaCode": "MN0701",
+      "name": "Upper West Side-Lincoln Square",
+      "slug": "upper-west-side-lincoln-square",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 2528
+        },
+        {
+          "year": 2023,
+          "medianRent": 3009
+        }
+      ],
+      "rentGrowthPct": 19
+    },
+    {
+      "ntaCode": "MN0702",
+      "name": "Upper West Side (Central)",
+      "slug": "upper-west-side-central",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 2040
+        },
+        {
+          "year": 2023,
+          "medianRent": 2625
+        }
+      ],
+      "rentGrowthPct": 28.7
+    },
+    {
+      "ntaCode": "MN0703",
+      "name": "Upper West Side-Manhattan Valley",
+      "slug": "upper-west-side-manhattan-valley",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1556
+        },
+        {
+          "year": 2023,
+          "medianRent": 1943
+        }
+      ],
+      "rentGrowthPct": 24.9
+    },
+    {
+      "ntaCode": "MN0801",
+      "name": "Upper East Side-Lenox Hill-Roosevelt Island",
+      "slug": "upper-east-side-lenox-hill-roosevelt-island",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 2439
+        },
+        {
+          "year": 2023,
+          "medianRent": 2857
+        }
+      ],
+      "rentGrowthPct": 17.1
+    },
+    {
+      "ntaCode": "MN0802",
+      "name": "Upper East Side-Carnegie Hill",
+      "slug": "upper-east-side-carnegie-hill",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 2374
+        },
+        {
+          "year": 2023,
+          "medianRent": 2874
+        }
+      ],
+      "rentGrowthPct": 21.1
+    },
+    {
+      "ntaCode": "MN0803",
+      "name": "Upper East Side-Yorkville",
+      "slug": "upper-east-side-yorkville",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 2232
+        },
+        {
+          "year": 2023,
+          "medianRent": 2633
+        }
+      ],
+      "rentGrowthPct": 18
+    },
+    {
+      "ntaCode": "MN0901",
+      "name": "Morningside Heights",
+      "slug": "morningside-heights",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1660
+        },
+        {
+          "year": 2023,
+          "medianRent": 2072
+        }
+      ],
+      "rentGrowthPct": 24.8
+    },
+    {
+      "ntaCode": "MN0902",
+      "name": "Manhattanville-West Harlem",
+      "slug": "manhattanville-west-harlem",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1113
+        },
+        {
+          "year": 2023,
+          "medianRent": 1402
+        }
+      ],
+      "rentGrowthPct": 26
+    },
+    {
+      "ntaCode": "MN0903",
+      "name": "Hamilton Heights-Sugar Hill",
+      "slug": "hamilton-heights-sugar-hill",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1406
+        },
+        {
+          "year": 2023,
+          "medianRent": 1821
+        }
+      ],
+      "rentGrowthPct": 29.5
+    },
+    {
+      "ntaCode": "MN1001",
+      "name": "Harlem (South)",
+      "slug": "harlem-south",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1297
+        },
+        {
+          "year": 2023,
+          "medianRent": 1676
+        }
+      ],
+      "rentGrowthPct": 29.2
+    },
+    {
+      "ntaCode": "MN1002",
+      "name": "Harlem (North)",
+      "slug": "harlem-north",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1125
+        },
+        {
+          "year": 2023,
+          "medianRent": 1389
+        }
+      ],
+      "rentGrowthPct": 23.5
+    },
+    {
+      "ntaCode": "MN1101",
+      "name": "East Harlem (South)",
+      "slug": "east-harlem-south",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1047
+        },
+        {
+          "year": 2023,
+          "medianRent": 1383
+        }
+      ],
+      "rentGrowthPct": 32.1
+    },
+    {
+      "ntaCode": "MN1102",
+      "name": "East Harlem (North)",
+      "slug": "east-harlem-north",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 888
+        },
+        {
+          "year": 2023,
+          "medianRent": 1240
+        }
+      ],
+      "rentGrowthPct": 39.6
+    },
+    {
+      "ntaCode": "MN1201",
+      "name": "Washington Heights (South)",
+      "slug": "washington-heights-south",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1298
+        },
+        {
+          "year": 2023,
+          "medianRent": 1573
+        }
+      ],
+      "rentGrowthPct": 21.2
+    },
+    {
+      "ntaCode": "MN1202",
+      "name": "Washington Heights (North)",
+      "slug": "washington-heights-north",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1470
+        },
+        {
+          "year": 2023,
+          "medianRent": 1759
+        }
+      ],
+      "rentGrowthPct": 19.7
+    },
+    {
+      "ntaCode": "MN1203",
+      "name": "Inwood",
+      "slug": "inwood",
+      "borough": "Manhattan",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1329
+        },
+        {
+          "year": 2023,
+          "medianRent": 1565
+        }
+      ],
+      "rentGrowthPct": 17.8
+    },
+    {
+      "ntaCode": "QN0101",
+      "name": "Astoria (North)-Ditmars-Steinway",
+      "slug": "astoria-north-ditmars-steinway",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1817
+        },
+        {
+          "year": 2023,
+          "medianRent": 2229
+        }
+      ],
+      "rentGrowthPct": 22.7
+    },
+    {
+      "ntaCode": "QN0102",
+      "name": "Old Astoria-Hallets Point",
+      "slug": "old-astoria-hallets-point",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1502
+        },
+        {
+          "year": 2023,
+          "medianRent": 1938
+        }
+      ],
+      "rentGrowthPct": 29
+    },
+    {
+      "ntaCode": "QN0103",
+      "name": "Astoria (Central)",
+      "slug": "astoria-central",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1821
+        },
+        {
+          "year": 2023,
+          "medianRent": 2203
+        }
+      ],
+      "rentGrowthPct": 21
+    },
+    {
+      "ntaCode": "QN0104",
+      "name": "Astoria (East)-Woodside (North)",
+      "slug": "astoria-east-woodside-north",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1548
+        },
+        {
+          "year": 2023,
+          "medianRent": 1866
+        }
+      ],
+      "rentGrowthPct": 20.5
+    },
+    {
+      "ntaCode": "QN0105",
+      "name": "Queensbridge-Ravenswood-Dutch Kills",
+      "slug": "queensbridge-ravenswood-dutch-kills",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 818
+        },
+        {
+          "year": 2023,
+          "medianRent": 1656
+        }
+      ],
+      "rentGrowthPct": 102.4
+    },
+    {
+      "ntaCode": "QN0202",
+      "name": "Sunnyside",
+      "slug": "sunnyside",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1639
+        },
+        {
+          "year": 2023,
+          "medianRent": 1891
+        }
+      ],
+      "rentGrowthPct": 15.4
+    },
+    {
+      "ntaCode": "QN0203",
+      "name": "Woodside",
+      "slug": "woodside",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1537
+        },
+        {
+          "year": 2023,
+          "medianRent": 1831
+        }
+      ],
+      "rentGrowthPct": 19.1
+    },
+    {
+      "ntaCode": "QN0301",
+      "name": "Jackson Heights",
+      "slug": "jackson-heights",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1532
+        },
+        {
+          "year": 2023,
+          "medianRent": 1846
+        }
+      ],
+      "rentGrowthPct": 20.5
+    },
+    {
+      "ntaCode": "QN0302",
+      "name": "East Elmhurst",
+      "slug": "east-elmhurst",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1608
+        },
+        {
+          "year": 2023,
+          "medianRent": 2008
+        }
+      ],
+      "rentGrowthPct": 24.9
+    },
+    {
+      "ntaCode": "QN0303",
+      "name": "North Corona",
+      "slug": "north-corona",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1654
+        },
+        {
+          "year": 2023,
+          "medianRent": 1972
+        }
+      ],
+      "rentGrowthPct": 19.2
+    },
+    {
+      "ntaCode": "QN0401",
+      "name": "Elmhurst",
+      "slug": "elmhurst",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1595
+        },
+        {
+          "year": 2023,
+          "medianRent": 1933
+        }
+      ],
+      "rentGrowthPct": 21.2
+    },
+    {
+      "ntaCode": "QN0402",
+      "name": "Corona",
+      "slug": "corona",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1500
+        },
+        {
+          "year": 2023,
+          "medianRent": 1881
+        }
+      ],
+      "rentGrowthPct": 25.4
+    },
+    {
+      "ntaCode": "QN0501",
+      "name": "Maspeth",
+      "slug": "maspeth",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1630
+        },
+        {
+          "year": 2023,
+          "medianRent": 1973
+        }
+      ],
+      "rentGrowthPct": 21
+    },
+    {
+      "ntaCode": "QN0502",
+      "name": "Ridgewood",
+      "slug": "ridgewood",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1573
+        },
+        {
+          "year": 2023,
+          "medianRent": 1991
+        }
+      ],
+      "rentGrowthPct": 26.6
+    },
+    {
+      "ntaCode": "QN0503",
+      "name": "Glendale",
+      "slug": "glendale",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1560
+        },
+        {
+          "year": 2023,
+          "medianRent": 1932
+        }
+      ],
+      "rentGrowthPct": 23.8
+    },
+    {
+      "ntaCode": "QN0504",
+      "name": "Middle Village",
+      "slug": "middle-village",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1592
+        },
+        {
+          "year": 2023,
+          "medianRent": 1978
+        }
+      ],
+      "rentGrowthPct": 24.2
+    },
+    {
+      "ntaCode": "QN0601",
+      "name": "Rego Park",
+      "slug": "rego-park",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1631
+        },
+        {
+          "year": 2023,
+          "medianRent": 1999
+        }
+      ],
+      "rentGrowthPct": 22.6
+    },
+    {
+      "ntaCode": "QN0602",
+      "name": "Forest Hills",
+      "slug": "forest-hills",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1742
+        },
+        {
+          "year": 2023,
+          "medianRent": 2072
+        }
+      ],
+      "rentGrowthPct": 18.9
+    },
+    {
+      "ntaCode": "QN0701",
+      "name": "College Point",
+      "slug": "college-point",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1704
+        },
+        {
+          "year": 2023,
+          "medianRent": 2155
+        }
+      ],
+      "rentGrowthPct": 26.5
+    },
+    {
+      "ntaCode": "QN0702",
+      "name": "Whitestone-Beechhurst",
+      "slug": "whitestone-beechhurst",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1764
+        },
+        {
+          "year": 2023,
+          "medianRent": 2237
+        }
+      ],
+      "rentGrowthPct": 26.8
+    },
+    {
+      "ntaCode": "QN0703",
+      "name": "Bay Terrace-Clearview",
+      "slug": "bay-terrace-clearview",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 2037
+        },
+        {
+          "year": 2023,
+          "medianRent": 2449
+        }
+      ],
+      "rentGrowthPct": 20.2
+    },
+    {
+      "ntaCode": "QN0704",
+      "name": "Murray Hill-Broadway Flushing",
+      "slug": "murray-hill-broadway-flushing",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1631
+        },
+        {
+          "year": 2023,
+          "medianRent": 1819
+        }
+      ],
+      "rentGrowthPct": 11.5
+    },
+    {
+      "ntaCode": "QN0705",
+      "name": "East Flushing",
+      "slug": "east-flushing",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1378
+        },
+        {
+          "year": 2023,
+          "medianRent": 1582
+        }
+      ],
+      "rentGrowthPct": 14.8
+    },
+    {
+      "ntaCode": "QN0706",
+      "name": "Queensboro Hill",
+      "slug": "queensboro-hill",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1501
+        },
+        {
+          "year": 2023,
+          "medianRent": 1995
+        }
+      ],
+      "rentGrowthPct": 32.9
+    },
+    {
+      "ntaCode": "QN0707",
+      "name": "Flushing-Willets Point",
+      "slug": "flushing-willets-point",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1454
+        },
+        {
+          "year": 2023,
+          "medianRent": 1619
+        }
+      ],
+      "rentGrowthPct": 11.3
+    },
+    {
+      "ntaCode": "QN0801",
+      "name": "Kew Gardens Hills",
+      "slug": "kew-gardens-hills",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1544
+        },
+        {
+          "year": 2023,
+          "medianRent": 1917
+        }
+      ],
+      "rentGrowthPct": 24.2
+    },
+    {
+      "ntaCode": "QN0802",
+      "name": "Pomonok-Electchester-Hillcrest",
+      "slug": "pomonok-electchester-hillcrest",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 995
+        },
+        {
+          "year": 2023,
+          "medianRent": 1311
+        }
+      ],
+      "rentGrowthPct": 31.8
+    },
+    {
+      "ntaCode": "QN0803",
+      "name": "Fresh Meadows-Utopia",
+      "slug": "fresh-meadows-utopia",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1735
+        },
+        {
+          "year": 2023,
+          "medianRent": 2175
+        }
+      ],
+      "rentGrowthPct": 25.4
+    },
+    {
+      "ntaCode": "QN0804",
+      "name": "Jamaica Estates-Holliswood",
+      "slug": "jamaica-estates-holliswood",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1768
+        },
+        {
+          "year": 2023,
+          "medianRent": 1860
+        }
+      ],
+      "rentGrowthPct": 5.2
+    },
+    {
+      "ntaCode": "QN0805",
+      "name": "Jamaica Hills-Briarwood",
+      "slug": "jamaica-hills-briarwood",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1610
+        },
+        {
+          "year": 2023,
+          "medianRent": 1926
+        }
+      ],
+      "rentGrowthPct": 19.6
+    },
+    {
+      "ntaCode": "QN0901",
+      "name": "Kew Gardens",
+      "slug": "kew-gardens",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1526
+        },
+        {
+          "year": 2023,
+          "medianRent": 1914
+        }
+      ],
+      "rentGrowthPct": 25.4
+    },
+    {
+      "ntaCode": "QN0902",
+      "name": "Richmond Hill",
+      "slug": "richmond-hill",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1521
+        },
+        {
+          "year": 2023,
+          "medianRent": 1795
+        }
+      ],
+      "rentGrowthPct": 18
+    },
+    {
+      "ntaCode": "QN0903",
+      "name": "South Richmond Hill",
+      "slug": "south-richmond-hill",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1618
+        },
+        {
+          "year": 2023,
+          "medianRent": 1970
+        }
+      ],
+      "rentGrowthPct": 21.8
+    },
+    {
+      "ntaCode": "QN0904",
+      "name": "Ozone Park (North)",
+      "slug": "ozone-park-north",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1553
+        },
+        {
+          "year": 2023,
+          "medianRent": 1972
+        }
+      ],
+      "rentGrowthPct": 27
+    },
+    {
+      "ntaCode": "QN0905",
+      "name": "Woodhaven",
+      "slug": "woodhaven",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1660
+        },
+        {
+          "year": 2023,
+          "medianRent": 1921
+        }
+      ],
+      "rentGrowthPct": 15.7
+    },
+    {
+      "ntaCode": "QN1001",
+      "name": "South Ozone Park",
+      "slug": "south-ozone-park",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1635
+        },
+        {
+          "year": 2023,
+          "medianRent": 1981
+        }
+      ],
+      "rentGrowthPct": 21.2
+    },
+    {
+      "ntaCode": "QN1002",
+      "name": "Ozone Park",
+      "slug": "ozone-park",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1615
+        },
+        {
+          "year": 2023,
+          "medianRent": 1885
+        }
+      ],
+      "rentGrowthPct": 16.7
+    },
+    {
+      "ntaCode": "QN1003",
+      "name": "Howard Beach-Lindenwood",
+      "slug": "howard-beach-lindenwood",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1601
+        },
+        {
+          "year": 2023,
+          "medianRent": 1914
+        }
+      ],
+      "rentGrowthPct": 19.6
+    },
+    {
+      "ntaCode": "QN1101",
+      "name": "Auburndale",
+      "slug": "auburndale",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1769
+        },
+        {
+          "year": 2023,
+          "medianRent": 2164
+        }
+      ],
+      "rentGrowthPct": 22.3
+    },
+    {
+      "ntaCode": "QN1102",
+      "name": "Bayside",
+      "slug": "bayside",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1928
+        },
+        {
+          "year": 2023,
+          "medianRent": 2555
+        }
+      ],
+      "rentGrowthPct": 32.5
+    },
+    {
+      "ntaCode": "QN1103",
+      "name": "Douglaston-Little Neck",
+      "slug": "douglaston-little-neck",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 2066
+        },
+        {
+          "year": 2023,
+          "medianRent": 2485
+        }
+      ],
+      "rentGrowthPct": 20.3
+    },
+    {
+      "ntaCode": "QN1104",
+      "name": "Oakland Gardens-Hollis Hills",
+      "slug": "oakland-gardens-hollis-hills",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1765
+        },
+        {
+          "year": 2023,
+          "medianRent": 2115
+        }
+      ],
+      "rentGrowthPct": 19.8
+    },
+    {
+      "ntaCode": "QN1201",
+      "name": "Jamaica",
+      "slug": "jamaica",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1470
+        },
+        {
+          "year": 2023,
+          "medianRent": 1750
+        }
+      ],
+      "rentGrowthPct": 19
+    },
+    {
+      "ntaCode": "QN1202",
+      "name": "South Jamaica",
+      "slug": "south-jamaica",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1332
+        },
+        {
+          "year": 2023,
+          "medianRent": 1502
+        }
+      ],
+      "rentGrowthPct": 12.8
+    },
+    {
+      "ntaCode": "QN1203",
+      "name": "Baisley Park",
+      "slug": "baisley-park",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1391
+        },
+        {
+          "year": 2023,
+          "medianRent": 1844
+        }
+      ],
+      "rentGrowthPct": 32.6
+    },
+    {
+      "ntaCode": "QN1204",
+      "name": "Springfield Gardens (North)-Rochdale Village",
+      "slug": "springfield-gardens-north-rochdale-village",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1607
+        },
+        {
+          "year": 2023,
+          "medianRent": 1391
+        }
+      ],
+      "rentGrowthPct": -13.4
+    },
+    {
+      "ntaCode": "QN1205",
+      "name": "St. Albans",
+      "slug": "st-albans",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1472
+        },
+        {
+          "year": 2023,
+          "medianRent": 1745
+        }
+      ],
+      "rentGrowthPct": 18.5
+    },
+    {
+      "ntaCode": "QN1206",
+      "name": "Hollis",
+      "slug": "hollis",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1411
+        },
+        {
+          "year": 2023,
+          "medianRent": 1674
+        }
+      ],
+      "rentGrowthPct": 18.6
+    },
+    {
+      "ntaCode": "QN1301",
+      "name": "Glen Oaks-Floral Park-New Hyde Park",
+      "slug": "glen-oaks-floral-park-new-hyde-park",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1733
+        },
+        {
+          "year": 2023,
+          "medianRent": 2149
+        }
+      ],
+      "rentGrowthPct": 24
+    },
+    {
+      "ntaCode": "QN1302",
+      "name": "Bellerose",
+      "slug": "bellerose",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1719
+        },
+        {
+          "year": 2023,
+          "medianRent": 2069
+        }
+      ],
+      "rentGrowthPct": 20.4
+    },
+    {
+      "ntaCode": "QN1303",
+      "name": "Queens Village",
+      "slug": "queens-village",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1478
+        },
+        {
+          "year": 2023,
+          "medianRent": 1672
+        }
+      ],
+      "rentGrowthPct": 13.1
+    },
+    {
+      "ntaCode": "QN1304",
+      "name": "Cambria Heights",
+      "slug": "cambria-heights",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1629
+        },
+        {
+          "year": 2023,
+          "medianRent": 1720
+        }
+      ],
+      "rentGrowthPct": 5.6
+    },
+    {
+      "ntaCode": "QN1305",
+      "name": "Laurelton",
+      "slug": "laurelton",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1621
+        },
+        {
+          "year": 2023,
+          "medianRent": 1852
+        }
+      ],
+      "rentGrowthPct": 14.3
+    },
+    {
+      "ntaCode": "QN1306",
+      "name": "Springfield Gardens (South)-Brookville",
+      "slug": "springfield-gardens-south-brookville",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1765
+        },
+        {
+          "year": 2023,
+          "medianRent": 2178
+        }
+      ],
+      "rentGrowthPct": 23.4
+    },
+    {
+      "ntaCode": "QN1307",
+      "name": "Rosedale",
+      "slug": "rosedale",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1735
+        },
+        {
+          "year": 2023,
+          "medianRent": 2367
+        }
+      ],
+      "rentGrowthPct": 36.4
+    },
+    {
+      "ntaCode": "QN1401",
+      "name": "Far Rockaway-Bayswater",
+      "slug": "far-rockaway-bayswater",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1318
+        },
+        {
+          "year": 2023,
+          "medianRent": 1484
+        }
+      ],
+      "rentGrowthPct": 12.6
+    },
+    {
+      "ntaCode": "QN1402",
+      "name": "Rockaway Beach-Arverne-Edgemere",
+      "slug": "rockaway-beach-arverne-edgemere",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1128
+        },
+        {
+          "year": 2023,
+          "medianRent": 1268
+        }
+      ],
+      "rentGrowthPct": 12.4
+    },
+    {
+      "ntaCode": "QN1403",
+      "name": "Breezy Point-Belle Harbor-Rockaway Park-Broad Channel",
+      "slug": "breezy-point-belle-harbor-rockaway-park-broad-channel",
+      "borough": "Queens",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1461
+        },
+        {
+          "year": 2023,
+          "medianRent": 1794
+        }
+      ],
+      "rentGrowthPct": 22.8
+    },
+    {
+      "ntaCode": "SI0101",
+      "name": "St. George-New Brighton",
+      "slug": "st-george-new-brighton",
+      "borough": "Staten Island",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1098
+        },
+        {
+          "year": 2023,
+          "medianRent": 1460
+        }
+      ],
+      "rentGrowthPct": 33
+    },
+    {
+      "ntaCode": "SI0102",
+      "name": "Tompkinsville-Stapleton-Clifton-Fox Hills",
+      "slug": "tompkinsville-stapleton-clifton-fox-hills",
+      "borough": "Staten Island",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1106
+        },
+        {
+          "year": 2023,
+          "medianRent": 1360
+        }
+      ],
+      "rentGrowthPct": 23
+    },
+    {
+      "ntaCode": "SI0103",
+      "name": "Rosebank-Shore Acres-Park Hill",
+      "slug": "rosebank-shore-acres-park-hill",
+      "borough": "Staten Island",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1292
+        },
+        {
+          "year": 2023,
+          "medianRent": 1276
+        }
+      ],
+      "rentGrowthPct": -1.2
+    },
+    {
+      "ntaCode": "SI0104",
+      "name": "West New Brighton-Silver Lake-Grymes Hill",
+      "slug": "west-new-brighton-silver-lake-grymes-hill",
+      "borough": "Staten Island",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1271
+        },
+        {
+          "year": 2023,
+          "medianRent": 1611
+        }
+      ],
+      "rentGrowthPct": 26.8
+    },
+    {
+      "ntaCode": "SI0105",
+      "name": "Westerleigh-Castleton Corners",
+      "slug": "westerleigh-castleton-corners",
+      "borough": "Staten Island",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1424
+        },
+        {
+          "year": 2023,
+          "medianRent": 1930
+        }
+      ],
+      "rentGrowthPct": 35.5
+    },
+    {
+      "ntaCode": "SI0106",
+      "name": "Port Richmond",
+      "slug": "port-richmond",
+      "borough": "Staten Island",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1461
+        },
+        {
+          "year": 2023,
+          "medianRent": 1783
+        }
+      ],
+      "rentGrowthPct": 22
+    },
+    {
+      "ntaCode": "SI0107",
+      "name": "Mariner's Harbor-Arlington-Graniteville",
+      "slug": "mariners-harbor-arlington-graniteville",
+      "borough": "Staten Island",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1190
+        },
+        {
+          "year": 2023,
+          "medianRent": 1372
+        }
+      ],
+      "rentGrowthPct": 15.3
+    },
+    {
+      "ntaCode": "SI0201",
+      "name": "Grasmere-Arrochar-South Beach-Dongan Hills",
+      "slug": "grasmere-arrochar-south-beach-dongan-hills",
+      "borough": "Staten Island",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1026
+        },
+        {
+          "year": 2023,
+          "medianRent": 1492
+        }
+      ],
+      "rentGrowthPct": 45.4
+    },
+    {
+      "ntaCode": "SI0202",
+      "name": "New Dorp-Midland Beach",
+      "slug": "new-dorp-midland-beach",
+      "borough": "Staten Island",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1571
+        },
+        {
+          "year": 2023,
+          "medianRent": 1970
+        }
+      ],
+      "rentGrowthPct": 25.4
+    },
+    {
+      "ntaCode": "SI0203",
+      "name": "Todt Hill-Emerson Hill-Lighthouse Hill-Manor Heights",
+      "slug": "todt-hill-emerson-hill-lighthouse-hill-manor-heights",
+      "borough": "Staten Island",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 979
+        },
+        {
+          "year": 2023,
+          "medianRent": 1304
+        }
+      ],
+      "rentGrowthPct": 33.2
+    },
+    {
+      "ntaCode": "SI0204",
+      "name": "New Springville-Willowbrook-Bulls Head-Travis",
+      "slug": "new-springville-willowbrook-bulls-head-travis",
+      "borough": "Staten Island",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1653
+        },
+        {
+          "year": 2023,
+          "medianRent": 2032
+        }
+      ],
+      "rentGrowthPct": 22.9
+    },
+    {
+      "ntaCode": "SI0301",
+      "name": "Oakwood-Richmondtown",
+      "slug": "oakwood-richmondtown",
+      "borough": "Staten Island",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1393
+        },
+        {
+          "year": 2023,
+          "medianRent": 1762
+        }
+      ],
+      "rentGrowthPct": 26.5
+    },
+    {
+      "ntaCode": "SI0302",
+      "name": "Great Kills-Eltingville",
+      "slug": "great-kills-eltingville",
+      "borough": "Staten Island",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1559
+        },
+        {
+          "year": 2023,
+          "medianRent": 1876
+        }
+      ],
+      "rentGrowthPct": 20.3
+    },
+    {
+      "ntaCode": "SI0303",
+      "name": "Arden Heights-Rossville",
+      "slug": "arden-heights-rossville",
+      "borough": "Staten Island",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1196
+        },
+        {
+          "year": 2023,
+          "medianRent": 1725
+        }
+      ],
+      "rentGrowthPct": 44.2
+    },
+    {
+      "ntaCode": "SI0304",
+      "name": "Annadale-Huguenot-Prince's Bay-Woodrow",
+      "slug": "annadale-huguenot-princes-bay-woodrow",
+      "borough": "Staten Island",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1329
+        },
+        {
+          "year": 2023,
+          "medianRent": 2245
+        }
+      ],
+      "rentGrowthPct": 68.9
+    },
+    {
+      "ntaCode": "SI0305",
+      "name": "Tottenville-Charleston",
+      "slug": "tottenville-charleston",
+      "borough": "Staten Island",
+      "rentHistory": [
+        {
+          "year": 2019,
+          "medianRent": 1297
+        },
+        {
+          "year": 2023,
+          "medianRent": 1672
+        }
+      ],
+      "rentGrowthPct": 28.9
+    }
+  ]
+}

@@ -3,7 +3,7 @@
   "geography": "NYC Neighborhoods",
   "ntaVersion": "2020",
   "source": "NYC Dept. of City Planning — MapPLUTO 24v4; ACRIS ownership records",
-  "incomeSource": "U.S. Census Bureau, ACS 2023 5-Year Estimates (Tables B19013, B25070)",
+  "incomeSource": "U.S. Census Bureau, ACS 2023 5-Year Estimates (Tables B19013, B25064, B25070)",
   "neighborhoods": [
     {
       "name": "Greenpoint",
@@ -44,11 +44,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2583,
       "medianIncome": 129144,
-      "rentBurdenPct": 35.6,
-      "stabilizedUnits": 6231,
-      "stabilizedShare": 23.5
+      "rentBurdenPct": 35.6
     },
     {
       "name": "Williamsburg",
@@ -89,11 +89,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2865,
       "medianIncome": 147452,
-      "rentBurdenPct": 36.2,
-      "stabilizedUnits": 12419,
-      "stabilizedShare": 37.7
+      "rentBurdenPct": 36.2
     },
     {
       "name": "South Williamsburg",
@@ -134,11 +134,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1474,
       "medianIncome": 42133,
-      "rentBurdenPct": 60.3,
-      "stabilizedUnits": 1251,
-      "stabilizedShare": 10
+      "rentBurdenPct": 60.3
     },
     {
       "name": "East Williamsburg",
@@ -179,11 +179,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1991,
       "medianIncome": 94067,
-      "rentBurdenPct": 45.9,
-      "stabilizedUnits": 3915,
-      "stabilizedShare": 14.9
+      "rentBurdenPct": 45.9
     },
     {
       "name": "Brooklyn Heights",
@@ -224,11 +224,11 @@
       "universityShare": 0,
       "topUniversity": "New York University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2972,
       "medianIncome": 183736,
-      "rentBurdenPct": 30.4,
-      "stabilizedUnits": 1735,
-      "stabilizedShare": 12
+      "rentBurdenPct": 30.4
     },
     {
       "name": "Downtown Brooklyn-DUMBO-Boerum Hill",
@@ -269,11 +269,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2996,
       "medianIncome": 159679,
-      "rentBurdenPct": 38.2,
-      "stabilizedUnits": 8832,
-      "stabilizedShare": 32
+      "rentBurdenPct": 38.2
     },
     {
       "name": "Fort Greene",
@@ -314,11 +314,11 @@
       "universityShare": 1.6,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2292,
       "medianIncome": 118855,
-      "rentBurdenPct": 43,
-      "stabilizedUnits": 5044,
-      "stabilizedShare": 25.5
+      "rentBurdenPct": 43
     },
     {
       "name": "Clinton Hill",
@@ -359,11 +359,11 @@
       "universityShare": 2.1,
       "topUniversity": "Pratt Institute",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2680,
       "medianIncome": 129066,
-      "rentBurdenPct": 39.5,
-      "stabilizedUnits": 3043,
-      "stabilizedShare": 20.3
+      "rentBurdenPct": 39.5
     },
     {
       "name": "Bedford-Stuyvesant (West)",
@@ -404,11 +404,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2077,
       "medianIncome": 82951,
-      "rentBurdenPct": 48.7,
-      "stabilizedUnits": 6763,
-      "stabilizedShare": 18.2
+      "rentBurdenPct": 48.7
     },
     {
       "name": "Bedford-Stuyvesant (East)",
@@ -449,11 +449,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1876,
       "medianIncome": 76166,
-      "rentBurdenPct": 48.3,
-      "stabilizedUnits": 6516,
-      "stabilizedShare": 16.6
+      "rentBurdenPct": 48.3
     },
     {
       "name": "Bushwick (West)",
@@ -494,11 +494,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2298,
       "medianIncome": 90642,
-      "rentBurdenPct": 52.3,
-      "stabilizedUnits": 4567,
-      "stabilizedShare": 19.4
+      "rentBurdenPct": 52.3
     },
     {
       "name": "Bushwick (East)",
@@ -539,11 +539,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1979,
       "medianIncome": 74336,
-      "rentBurdenPct": 54.6,
-      "stabilizedUnits": 2314,
-      "stabilizedShare": 9.7
+      "rentBurdenPct": 54.6
     },
     {
       "name": "Cypress Hills",
@@ -584,11 +584,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1815,
       "medianIncome": 68133,
-      "rentBurdenPct": 50,
-      "stabilizedUnits": 1069,
-      "stabilizedShare": 8.2
+      "rentBurdenPct": 50
     },
     {
       "name": "East New York (North)",
@@ -629,11 +629,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1411,
       "medianIncome": 58799,
-      "rentBurdenPct": 53,
-      "stabilizedUnits": 1761,
-      "stabilizedShare": 11.5
+      "rentBurdenPct": 53
     },
     {
       "name": "East New York-New Lots",
@@ -674,11 +674,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1388,
       "medianIncome": 58540,
-      "rentBurdenPct": 49.2,
-      "stabilizedUnits": 2317,
-      "stabilizedShare": 12.5
+      "rentBurdenPct": 49.2
     },
     {
       "name": "Spring Creek-Starrett City",
@@ -719,11 +719,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 957,
       "medianIncome": 36304,
-      "rentBurdenPct": 51.8,
-      "stabilizedUnits": 1384,
-      "stabilizedShare": 9.8
+      "rentBurdenPct": 51.8
     },
     {
       "name": "East New York-City Line",
@@ -764,11 +764,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1274,
       "medianIncome": 53082,
-      "rentBurdenPct": 51.9,
-      "stabilizedUnits": 2212,
-      "stabilizedShare": 16
+      "rentBurdenPct": 51.9
     },
     {
       "name": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
@@ -809,11 +809,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2244,
       "medianIncome": 142376,
-      "rentBurdenPct": 35.1,
-      "stabilizedUnits": 3513,
-      "stabilizedShare": 9.7
+      "rentBurdenPct": 35.1
     },
     {
       "name": "Park Slope",
@@ -854,11 +854,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2995,
       "medianIncome": 191502,
-      "rentBurdenPct": 31.2,
-      "stabilizedUnits": 3682,
-      "stabilizedShare": 12.6
+      "rentBurdenPct": 31.2
     },
     {
       "name": "Windsor Terrace-South Slope",
@@ -899,11 +899,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2537,
       "medianIncome": 143371,
-      "rentBurdenPct": 42.2,
-      "stabilizedUnits": 1530,
-      "stabilizedShare": 12.8
+      "rentBurdenPct": 42.2
     },
     {
       "name": "Sunset Park (West)",
@@ -944,11 +944,11 @@
       "universityShare": 0.2,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1911,
       "medianIncome": 89945,
-      "rentBurdenPct": 49,
-      "stabilizedUnits": 2545,
-      "stabilizedShare": 14.6
+      "rentBurdenPct": 49
     },
     {
       "name": "Sunset Park (Central)",
@@ -989,11 +989,11 @@
       "universityShare": 1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1785,
       "medianIncome": 60889,
-      "rentBurdenPct": 58,
-      "stabilizedUnits": 2341,
-      "stabilizedShare": 16.5
+      "rentBurdenPct": 58
     },
     {
       "name": "Prospect Heights",
@@ -1034,11 +1034,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2480,
       "medianIncome": 154865,
-      "rentBurdenPct": 37.9,
-      "stabilizedUnits": 3027,
-      "stabilizedShare": 24.7
+      "rentBurdenPct": 37.9
     },
     {
       "name": "Crown Heights (North)",
@@ -1079,11 +1079,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1789,
       "medianIncome": 80688,
-      "rentBurdenPct": 47,
-      "stabilizedUnits": 12311,
-      "stabilizedShare": 32.5
+      "rentBurdenPct": 47
     },
     {
       "name": "Crown Heights (South)",
@@ -1124,11 +1124,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1644,
       "medianIncome": 73022,
-      "rentBurdenPct": 47,
-      "stabilizedUnits": 10136,
-      "stabilizedShare": 47.7
+      "rentBurdenPct": 47
     },
     {
       "name": "Prospect Lefferts Gardens-Wingate",
@@ -1169,11 +1169,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1670,
       "medianIncome": 76800,
-      "rentBurdenPct": 46.9,
-      "stabilizedUnits": 9956,
-      "stabilizedShare": 46.9
+      "rentBurdenPct": 46.9
     },
     {
       "name": "Bay Ridge",
@@ -1214,11 +1214,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1844,
       "medianIncome": 94438,
-      "rentBurdenPct": 43.2,
-      "stabilizedUnits": 9077,
-      "stabilizedShare": 24.2
+      "rentBurdenPct": 43.2
     },
     {
       "name": "Dyker Heights",
@@ -1259,11 +1259,11 @@
       "universityShare": 0.9,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1764,
       "medianIncome": 78127,
-      "rentBurdenPct": 54.1,
-      "stabilizedUnits": 1260,
-      "stabilizedShare": 8.4
+      "rentBurdenPct": 54.1
     },
     {
       "name": "Bensonhurst",
@@ -1304,11 +1304,11 @@
       "universityShare": 0.6,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1697,
       "medianIncome": 68505,
-      "rentBurdenPct": 52.6,
-      "stabilizedUnits": 6950,
-      "stabilizedShare": 20
+      "rentBurdenPct": 52.6
     },
     {
       "name": "Bath Beach",
@@ -1349,11 +1349,11 @@
       "universityShare": 0.6,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1787,
       "medianIncome": 78287,
-      "rentBurdenPct": 57.6,
-      "stabilizedUnits": 2457,
-      "stabilizedShare": 20.5
+      "rentBurdenPct": 57.6
     },
     {
       "name": "Gravesend (West)",
@@ -1394,11 +1394,11 @@
       "universityShare": 0.7,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1711,
       "medianIncome": 74684,
-      "rentBurdenPct": 51.5,
-      "stabilizedUnits": 3894,
-      "stabilizedShare": 18.7
+      "rentBurdenPct": 51.5
     },
     {
       "name": "Sunset Park (East)-Borough Park (West)",
@@ -1439,11 +1439,11 @@
       "universityShare": 0.7,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1573,
       "medianIncome": 62183,
-      "rentBurdenPct": 53.9,
-      "stabilizedUnits": 1889,
-      "stabilizedShare": 18.6
+      "rentBurdenPct": 53.9
     },
     {
       "name": "Borough Park",
@@ -1484,11 +1484,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1732,
       "medianIncome": 55994,
-      "rentBurdenPct": 61,
-      "stabilizedUnits": 3864,
-      "stabilizedShare": 15.2
+      "rentBurdenPct": 61
     },
     {
       "name": "Kensington",
@@ -1529,11 +1529,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1946,
       "medianIncome": 94467,
-      "rentBurdenPct": 49.4,
-      "stabilizedUnits": 4461,
-      "stabilizedShare": 30.9
+      "rentBurdenPct": 49.4
     },
     {
       "name": "Mapleton-Midwood (West)",
@@ -1574,11 +1574,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1940,
       "medianIncome": 74977,
-      "rentBurdenPct": 53.7,
-      "stabilizedUnits": 2146,
-      "stabilizedShare": 16.4
+      "rentBurdenPct": 53.7
     },
     {
       "name": "Gravesend (South)",
@@ -1619,11 +1619,11 @@
       "universityShare": 0.3,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1326,
       "medianIncome": 63482,
-      "rentBurdenPct": 57.3,
-      "stabilizedUnits": 2268,
-      "stabilizedShare": 19.4
+      "rentBurdenPct": 57.3
     },
     {
       "name": "Coney Island-Sea Gate",
@@ -1664,11 +1664,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1001,
       "medianIncome": 44193,
-      "rentBurdenPct": 57.2,
-      "stabilizedUnits": 3660,
-      "stabilizedShare": 14.9
+      "rentBurdenPct": 57.2
     },
     {
       "name": "Brighton Beach",
@@ -1709,11 +1709,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1584,
       "medianIncome": 46783,
-      "rentBurdenPct": 63.6,
-      "stabilizedUnits": 5177,
-      "stabilizedShare": 34.8
+      "rentBurdenPct": 63.6
     },
     {
       "name": "Flatbush",
@@ -1754,11 +1754,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1763,
       "medianIncome": 80090,
-      "rentBurdenPct": 47,
-      "stabilizedUnits": 17253,
-      "stabilizedShare": 60.3
+      "rentBurdenPct": 47
     },
     {
       "name": "Flatbush (West)-Ditmas Park-Parkville",
@@ -1799,11 +1799,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1802,
       "medianIncome": 93132,
-      "rentBurdenPct": 50.8,
-      "stabilizedUnits": 6541,
-      "stabilizedShare": 40.8
+      "rentBurdenPct": 50.8
     },
     {
       "name": "Midwood",
@@ -1844,11 +1844,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1708,
       "medianIncome": 70963,
-      "rentBurdenPct": 53.6,
-      "stabilizedUnits": 7749,
-      "stabilizedShare": 39.3
+      "rentBurdenPct": 53.6
     },
     {
       "name": "Gravesend (East)-Homecrest",
@@ -1889,11 +1889,11 @@
       "universityShare": 0.2,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1763,
       "medianIncome": 73379,
-      "rentBurdenPct": 53.9,
-      "stabilizedUnits": 3808,
-      "stabilizedShare": 19.6
+      "rentBurdenPct": 53.9
     },
     {
       "name": "Madison",
@@ -1934,11 +1934,11 @@
       "universityShare": 0.3,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1737,
       "medianIncome": 76918,
-      "rentBurdenPct": 49,
-      "stabilizedUnits": 4757,
-      "stabilizedShare": 30
+      "rentBurdenPct": 49
     },
     {
       "name": "Sheepshead Bay-Manhattan Beach-Gerritsen Beach",
@@ -1979,11 +1979,11 @@
       "universityShare": 0.4,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1551,
       "medianIncome": 77439,
-      "rentBurdenPct": 49.2,
-      "stabilizedUnits": 3316,
-      "stabilizedShare": 11.9
+      "rentBurdenPct": 49.2
     },
     {
       "name": "Ocean Hill",
@@ -2024,11 +2024,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1411,
       "medianIncome": 59412,
-      "rentBurdenPct": 47.5,
-      "stabilizedUnits": 3996,
-      "stabilizedShare": 24.7
+      "rentBurdenPct": 47.5
     },
     {
       "name": "Brownsville",
@@ -2069,11 +2069,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1026,
       "medianIncome": 35423,
-      "rentBurdenPct": 57.1,
-      "stabilizedUnits": 4306,
-      "stabilizedShare": 17.5
+      "rentBurdenPct": 57.1
     },
     {
       "name": "East Flatbush-Erasmus",
@@ -2114,11 +2114,11 @@
       "universityShare": 0.5,
       "topUniversity": "Suny",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1719,
       "medianIncome": 77626,
-      "rentBurdenPct": 47.9,
-      "stabilizedUnits": 9614,
-      "stabilizedShare": 44.6
+      "rentBurdenPct": 47.9
     },
     {
       "name": "East Flatbush-Farragut",
@@ -2159,11 +2159,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1700,
       "medianIncome": 76531,
-      "rentBurdenPct": 51.4,
-      "stabilizedUnits": 4105,
-      "stabilizedShare": 31.8
+      "rentBurdenPct": 51.4
     },
     {
       "name": "East Flatbush-Rugby",
@@ -2204,11 +2204,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1645,
       "medianIncome": 69843,
-      "rentBurdenPct": 58.4,
-      "stabilizedUnits": 2536,
-      "stabilizedShare": 17.6
+      "rentBurdenPct": 58.4
     },
     {
       "name": "East Flatbush-Remsen Village",
@@ -2249,11 +2249,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1549,
       "medianIncome": 58515,
-      "rentBurdenPct": 58.5,
-      "stabilizedUnits": 3462,
-      "stabilizedShare": 24.4
+      "rentBurdenPct": 58.5
     },
     {
       "name": "Flatlands",
@@ -2294,11 +2294,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1607,
       "medianIncome": 84894,
-      "rentBurdenPct": 47.5,
-      "stabilizedUnits": 2283,
-      "stabilizedShare": 10.5
+      "rentBurdenPct": 47.5
     },
     {
       "name": "Marine Park-Mill Basin-Bergen Beach",
@@ -2339,11 +2339,11 @@
       "universityShare": 0.2,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2069,
       "medianIncome": 110184,
-      "rentBurdenPct": 53.7,
-      "stabilizedUnits": 111,
-      "stabilizedShare": 0.7
+      "rentBurdenPct": 53.7
     },
     {
       "name": "Canarsie",
@@ -2384,11 +2384,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1495,
       "medianIncome": 83564,
-      "rentBurdenPct": 45.5,
-      "stabilizedUnits": 381,
-      "stabilizedShare": 1.4
+      "rentBurdenPct": 45.5
     },
     {
       "name": "Mott Haven-Port Morris",
@@ -2429,11 +2429,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1066,
       "medianIncome": 31184,
-      "rentBurdenPct": 59.7,
-      "stabilizedUnits": 10792,
-      "stabilizedShare": 40
+      "rentBurdenPct": 59.7
     },
     {
       "name": "Melrose",
@@ -2474,11 +2474,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1037,
       "medianIncome": 33062,
-      "rentBurdenPct": 59.7,
-      "stabilizedUnits": 6603,
-      "stabilizedShare": 37.3
+      "rentBurdenPct": 59.7
     },
     {
       "name": "Hunts Point",
@@ -2519,11 +2519,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1321,
       "medianIncome": 41089,
-      "rentBurdenPct": 61.4,
-      "stabilizedUnits": 2719,
-      "stabilizedShare": 42.6
+      "rentBurdenPct": 61.4
     },
     {
       "name": "Longwood",
@@ -2564,11 +2564,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1212,
       "medianIncome": 38031,
-      "rentBurdenPct": 56.6,
-      "stabilizedUnits": 7235,
-      "stabilizedShare": 46.9
+      "rentBurdenPct": 56.6
     },
     {
       "name": "Morrisania",
@@ -2609,11 +2609,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1196,
       "medianIncome": 32852,
-      "rentBurdenPct": 57.3,
-      "stabilizedUnits": 7278,
-      "stabilizedShare": 46.6
+      "rentBurdenPct": 57.3
     },
     {
       "name": "Claremont Village-Claremont (East)",
@@ -2654,11 +2654,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 997,
       "medianIncome": 29293,
-      "rentBurdenPct": 56.8,
-      "stabilizedUnits": 3255,
-      "stabilizedShare": 37.6
+      "rentBurdenPct": 56.8
     },
     {
       "name": "Crotona Park East",
@@ -2699,11 +2699,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1274,
       "medianIncome": 40184,
-      "rentBurdenPct": 57.3,
-      "stabilizedUnits": 6365,
-      "stabilizedShare": 48.7
+      "rentBurdenPct": 57.3
     },
     {
       "name": "Concourse-Concourse Village",
@@ -2744,11 +2744,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1388,
       "medianIncome": 47207,
-      "rentBurdenPct": 59.6,
-      "stabilizedUnits": 15513,
-      "stabilizedShare": 56.3
+      "rentBurdenPct": 59.6
     },
     {
       "name": "Highbridge",
@@ -2789,11 +2789,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1322,
       "medianIncome": 41203,
-      "rentBurdenPct": 53.7,
-      "stabilizedUnits": 8123,
-      "stabilizedShare": 62
+      "rentBurdenPct": 53.7
     },
     {
       "name": "Mount Eden-Claremont (West)",
@@ -2834,11 +2834,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1409,
       "medianIncome": 43044,
-      "rentBurdenPct": 55.8,
-      "stabilizedUnits": 13303,
-      "stabilizedShare": 70.2
+      "rentBurdenPct": 55.8
     },
     {
       "name": "University Heights (South)-Morris Heights",
@@ -2879,11 +2879,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1304,
       "medianIncome": 36663,
-      "rentBurdenPct": 57.1,
-      "stabilizedUnits": 10702,
-      "stabilizedShare": 41.1
+      "rentBurdenPct": 57.1
     },
     {
       "name": "Mount Hope",
@@ -2924,11 +2924,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1478,
       "medianIncome": 43967,
-      "rentBurdenPct": 58,
-      "stabilizedUnits": 13337,
-      "stabilizedShare": 66.7
+      "rentBurdenPct": 58
     },
     {
       "name": "Fordham Heights",
@@ -2969,11 +2969,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1505,
       "medianIncome": 40110,
-      "rentBurdenPct": 60.3,
-      "stabilizedUnits": 8380,
-      "stabilizedShare": 73.7
+      "rentBurdenPct": 60.3
     },
     {
       "name": "West Farms",
@@ -3014,11 +3014,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1116,
       "medianIncome": 28711,
-      "rentBurdenPct": 60.6,
-      "stabilizedUnits": 4550,
-      "stabilizedShare": 52.3
+      "rentBurdenPct": 60.6
     },
     {
       "name": "Tremont",
@@ -3059,11 +3059,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1262,
       "medianIncome": 37352,
-      "rentBurdenPct": 56.4,
-      "stabilizedUnits": 5792,
-      "stabilizedShare": 40.6
+      "rentBurdenPct": 56.4
     },
     {
       "name": "Belmont",
@@ -3104,11 +3104,11 @@
       "universityShare": 0.2,
       "topUniversity": "Fordham University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1437,
       "medianIncome": 33296,
-      "rentBurdenPct": 62.6,
-      "stabilizedUnits": 7267,
-      "stabilizedShare": 54.2
+      "rentBurdenPct": 62.6
     },
     {
       "name": "University Heights (North)-Fordham",
@@ -3149,11 +3149,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1568,
       "medianIncome": 45365,
-      "rentBurdenPct": 63.1,
-      "stabilizedUnits": 11285,
-      "stabilizedShare": 70.3
+      "rentBurdenPct": 63.1
     },
     {
       "name": "Bedford Park",
@@ -3194,11 +3194,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1605,
       "medianIncome": 47856,
-      "rentBurdenPct": 60.4,
-      "stabilizedUnits": 14904,
-      "stabilizedShare": 63.8
+      "rentBurdenPct": 60.4
     },
     {
       "name": "Norwood",
@@ -3239,11 +3239,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1568,
       "medianIncome": 49509,
-      "rentBurdenPct": 55.4,
-      "stabilizedUnits": 11475,
-      "stabilizedShare": 71.5
+      "rentBurdenPct": 55.4
     },
     {
       "name": "Kingsbridge Heights-Van Cortlandt Village",
@@ -3284,11 +3284,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1543,
       "medianIncome": 60398,
-      "rentBurdenPct": 52.9,
-      "stabilizedUnits": 7286,
-      "stabilizedShare": 52.2
+      "rentBurdenPct": 52.9
     },
     {
       "name": "Kingsbridge-Marble Hill",
@@ -3329,11 +3329,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1429,
       "medianIncome": 51650,
-      "rentBurdenPct": 57.4,
-      "stabilizedUnits": 5005,
-      "stabilizedShare": 53.1
+      "rentBurdenPct": 57.4
     },
     {
       "name": "Riverdale-Spuyten Duyvil",
@@ -3374,11 +3374,11 @@
       "universityShare": 0.6,
       "topUniversity": "Columbia University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2058,
       "medianIncome": 112299,
-      "rentBurdenPct": 43.2,
-      "stabilizedUnits": 4430,
-      "stabilizedShare": 19.6
+      "rentBurdenPct": 43.2
     },
     {
       "name": "Soundview-Bruckner-Bronx River",
@@ -3419,11 +3419,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1373,
       "medianIncome": 45333,
-      "rentBurdenPct": 56.8,
-      "stabilizedUnits": 9626,
-      "stabilizedShare": 37.9
+      "rentBurdenPct": 56.8
     },
     {
       "name": "Soundview-Clason Point",
@@ -3464,11 +3464,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1053,
       "medianIncome": 55886,
-      "rentBurdenPct": 53,
-      "stabilizedUnits": 1948,
-      "stabilizedShare": 14.8
+      "rentBurdenPct": 53
     },
     {
       "name": "Castle Hill-Unionport",
@@ -3509,11 +3509,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1399,
       "medianIncome": 53612,
-      "rentBurdenPct": 57.2,
-      "stabilizedUnits": 2838,
-      "stabilizedShare": 20.3
+      "rentBurdenPct": 57.2
     },
     {
       "name": "Parkchester",
@@ -3554,11 +3554,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1707,
       "medianIncome": 59871,
-      "rentBurdenPct": 51.3,
-      "stabilizedUnits": 1769,
-      "stabilizedShare": 12.5
+      "rentBurdenPct": 51.3
     },
     {
       "name": "Westchester Square",
@@ -3599,11 +3599,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1626,
       "medianIncome": 53874,
-      "rentBurdenPct": 64.8,
-      "stabilizedUnits": 1949,
-      "stabilizedShare": 36.1
+      "rentBurdenPct": 64.8
     },
     {
       "name": "Throgs Neck-Schuylerville",
@@ -3644,11 +3644,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1651,
       "medianIncome": 83573,
-      "rentBurdenPct": 48.2,
-      "stabilizedUnits": 796,
-      "stabilizedShare": 4.7
+      "rentBurdenPct": 48.2
     },
     {
       "name": "Pelham Bay-Country Club-City Island",
@@ -3689,11 +3689,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1821,
       "medianIncome": 80904,
-      "rentBurdenPct": 57.9,
-      "stabilizedUnits": 2907,
-      "stabilizedShare": 23.4
+      "rentBurdenPct": 57.9
     },
     {
       "name": "Co-op City",
@@ -3734,11 +3734,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1268,
       "medianIncome": 64555,
-      "rentBurdenPct": 45.6,
-      "stabilizedUnits": 101,
-      "stabilizedShare": 0.6
+      "rentBurdenPct": 45.6
     },
     {
       "name": "Pelham Parkway-Van Nest",
@@ -3779,11 +3779,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1778,
       "medianIncome": 70044,
-      "rentBurdenPct": 54.6,
-      "stabilizedUnits": 5500,
-      "stabilizedShare": 47
+      "rentBurdenPct": 54.6
     },
     {
       "name": "Morris Park",
@@ -3824,11 +3824,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1805,
       "medianIncome": 80603,
-      "rentBurdenPct": 55.8,
-      "stabilizedUnits": 1779,
-      "stabilizedShare": 19.4
+      "rentBurdenPct": 55.8
     },
     {
       "name": "Pelham Gardens",
@@ -3869,11 +3869,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1562,
       "medianIncome": 89236,
-      "rentBurdenPct": 53.4,
-      "stabilizedUnits": 137,
-      "stabilizedShare": 1.5
+      "rentBurdenPct": 53.4
     },
     {
       "name": "Allerton",
@@ -3914,11 +3914,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1305,
       "medianIncome": 44499,
-      "rentBurdenPct": 56.7,
-      "stabilizedUnits": 5874,
-      "stabilizedShare": 24.7
+      "rentBurdenPct": 56.7
     },
     {
       "name": "Williamsbridge-Olinville",
@@ -3959,11 +3959,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1516,
       "medianIncome": 58710,
-      "rentBurdenPct": 58,
-      "stabilizedUnits": 6817,
-      "stabilizedShare": 30.5
+      "rentBurdenPct": 58
     },
     {
       "name": "Eastchester-Edenwald-Baychester",
@@ -4004,11 +4004,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1392,
       "medianIncome": 70143,
-      "rentBurdenPct": 51.7,
-      "stabilizedUnits": 1763,
-      "stabilizedShare": 10.6
+      "rentBurdenPct": 51.7
     },
     {
       "name": "Wakefield-Woodlawn",
@@ -4049,11 +4049,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1641,
       "medianIncome": 83863,
-      "rentBurdenPct": 51.2,
-      "stabilizedUnits": 4446,
-      "stabilizedShare": 24.6
+      "rentBurdenPct": 51.2
     },
     {
       "name": "Financial District-Battery Park City",
@@ -4094,11 +4094,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 3489,
       "medianIncome": 199456,
-      "rentBurdenPct": 39.2,
-      "stabilizedUnits": 5928,
-      "stabilizedShare": 17.3
+      "rentBurdenPct": 39.2
     },
     {
       "name": "Tribeca-Civic Center",
@@ -4139,11 +4139,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 3171,
       "medianIncome": 226968,
-      "rentBurdenPct": 39.1,
-      "stabilizedUnits": 1492,
-      "stabilizedShare": 12.2
+      "rentBurdenPct": 39.1
     },
     {
       "name": "SoHo-Little Italy-Hudson Square",
@@ -4184,11 +4184,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2645,
       "medianIncome": 142191,
-      "rentBurdenPct": 40.7,
-      "stabilizedUnits": 3319,
-      "stabilizedShare": 21.7
+      "rentBurdenPct": 40.7
     },
     {
       "name": "Greenwich Village",
@@ -4229,11 +4229,11 @@
       "universityShare": 14.5,
       "topUniversity": "New York University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2925,
       "medianIncome": 183406,
-      "rentBurdenPct": 40,
-      "stabilizedUnits": 2734,
-      "stabilizedShare": 12.7
+      "rentBurdenPct": 40
     },
     {
       "name": "West Village",
@@ -4274,11 +4274,11 @@
       "universityShare": 0,
       "topUniversity": "New York University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 3065,
       "medianIncome": 164340,
-      "rentBurdenPct": 37.3,
-      "stabilizedUnits": 3570,
-      "stabilizedShare": 14.5
+      "rentBurdenPct": 37.3
     },
     {
       "name": "Chinatown-Two Bridges",
@@ -4319,11 +4319,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1097,
       "medianIncome": 37912,
-      "rentBurdenPct": 51,
-      "stabilizedUnits": 5044,
-      "stabilizedShare": 28.4
+      "rentBurdenPct": 51
     },
     {
       "name": "Lower East Side",
@@ -4364,11 +4364,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1313,
       "medianIncome": 65276,
-      "rentBurdenPct": 47.5,
-      "stabilizedUnits": 4016,
-      "stabilizedShare": 15.6
+      "rentBurdenPct": 47.5
     },
     {
       "name": "East Village",
@@ -4409,11 +4409,11 @@
       "universityShare": 0.4,
       "topUniversity": "New York University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2004,
       "medianIncome": 91871,
-      "rentBurdenPct": 43.9,
-      "stabilizedUnits": 9028,
-      "stabilizedShare": 22.6
+      "rentBurdenPct": 43.9
     },
     {
       "name": "Chelsea-Hudson Yards",
@@ -4454,11 +4454,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2822,
       "medianIncome": 130677,
-      "rentBurdenPct": 43.9,
-      "stabilizedUnits": 16210,
-      "stabilizedShare": 35.2
+      "rentBurdenPct": 43.9
     },
     {
       "name": "Hell's Kitchen",
@@ -4499,11 +4499,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2269,
       "medianIncome": 110667,
-      "rentBurdenPct": 42.9,
-      "stabilizedUnits": 13019,
-      "stabilizedShare": 32.1
+      "rentBurdenPct": 42.9
     },
     {
       "name": "Midtown South-Flatiron-Union Square",
@@ -4544,11 +4544,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 3083,
       "medianIncome": 188423,
-      "rentBurdenPct": 39.1,
-      "stabilizedUnits": 4874,
-      "stabilizedShare": 23.3
+      "rentBurdenPct": 39.1
     },
     {
       "name": "Midtown-Times Square",
@@ -4589,11 +4589,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 3007,
       "medianIncome": 152729,
-      "rentBurdenPct": 36.9,
-      "stabilizedUnits": 3561,
-      "stabilizedShare": 16.5
+      "rentBurdenPct": 36.9
     },
     {
       "name": "Stuyvesant Town-Peter Cooper Village",
@@ -4624,11 +4624,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 3187,
       "medianIncome": 162894,
-      "rentBurdenPct": 29.4,
-      "stabilizedUnits": 11248,
-      "stabilizedShare": 99.9
+      "rentBurdenPct": 29.4
     },
     {
       "name": "Gramercy",
@@ -4669,11 +4669,11 @@
       "universityShare": 1.2,
       "topUniversity": "The New School",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2945,
       "medianIncome": 151775,
-      "rentBurdenPct": 43.4,
-      "stabilizedUnits": 2825,
-      "stabilizedShare": 15
+      "rentBurdenPct": 43.4
     },
     {
       "name": "Murray Hill-Kips Bay",
@@ -4714,11 +4714,11 @@
       "universityShare": 0.6,
       "topUniversity": "New York University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 3106,
       "medianIncome": 140247,
-      "rentBurdenPct": 44.8,
-      "stabilizedUnits": 5144,
-      "stabilizedShare": 12.4
+      "rentBurdenPct": 44.8
     },
     {
       "name": "East Midtown-Turtle Bay",
@@ -4759,11 +4759,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 3059,
       "medianIncome": 170704,
-      "rentBurdenPct": 45.1,
-      "stabilizedUnits": 3452,
-      "stabilizedShare": 10.2
+      "rentBurdenPct": 45.1
     },
     {
       "name": "Upper West Side-Lincoln Square",
@@ -4804,11 +4804,11 @@
       "universityShare": 0.5,
       "topUniversity": "Fordham University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 3009,
       "medianIncome": 175000,
-      "rentBurdenPct": 40.4,
-      "stabilizedUnits": 5873,
-      "stabilizedShare": 12.9
+      "rentBurdenPct": 40.4
     },
     {
       "name": "Upper West Side (Central)",
@@ -4849,11 +4849,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2625,
       "medianIncome": 160616,
-      "rentBurdenPct": 41.7,
-      "stabilizedUnits": 10254,
-      "stabilizedShare": 17.9
+      "rentBurdenPct": 41.7
     },
     {
       "name": "Upper West Side-Manhattan Valley",
@@ -4894,11 +4894,11 @@
       "universityShare": 0.1,
       "topUniversity": "Columbia University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1943,
       "medianIncome": 105994,
-      "rentBurdenPct": 43.2,
-      "stabilizedUnits": 6169,
-      "stabilizedShare": 22.9
+      "rentBurdenPct": 43.2
     },
     {
       "name": "Upper East Side-Lenox Hill-Roosevelt Island",
@@ -4939,11 +4939,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2857,
       "medianIncome": 141711,
-      "rentBurdenPct": 41.3,
-      "stabilizedUnits": 8665,
-      "stabilizedShare": 14.3
+      "rentBurdenPct": 41.3
     },
     {
       "name": "Upper East Side-Carnegie Hill",
@@ -4984,11 +4984,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2874,
       "medianIncome": 202486,
-      "rentBurdenPct": 36.9,
-      "stabilizedUnits": 2929,
-      "stabilizedShare": 7.3
+      "rentBurdenPct": 36.9
     },
     {
       "name": "Upper East Side-Yorkville",
@@ -5029,11 +5029,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2633,
       "medianIncome": 150269,
-      "rentBurdenPct": 38.4,
-      "stabilizedUnits": 7065,
-      "stabilizedShare": 13.9
+      "rentBurdenPct": 38.4
     },
     {
       "name": "Morningside Heights",
@@ -5074,11 +5074,11 @@
       "universityShare": 3.4,
       "topUniversity": "Columbia University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2072,
       "medianIncome": 93322,
-      "rentBurdenPct": 46.1,
-      "stabilizedUnits": 3481,
-      "stabilizedShare": 20.9
+      "rentBurdenPct": 46.1
     },
     {
       "name": "Manhattanville-West Harlem",
@@ -5119,11 +5119,11 @@
       "universityShare": 0.1,
       "topUniversity": "Columbia University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1402,
       "medianIncome": 42710,
-      "rentBurdenPct": 51.3,
-      "stabilizedUnits": 3510,
-      "stabilizedShare": 42.8
+      "rentBurdenPct": 51.3
     },
     {
       "name": "Hamilton Heights-Sugar Hill",
@@ -5164,11 +5164,11 @@
       "universityShare": 0.3,
       "topUniversity": "Columbia University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1821,
       "medianIncome": 67547,
-      "rentBurdenPct": 48.3,
-      "stabilizedUnits": 10319,
-      "stabilizedShare": 47.7
+      "rentBurdenPct": 48.3
     },
     {
       "name": "Harlem (South)",
@@ -5209,11 +5209,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1676,
       "medianIncome": 73738,
-      "rentBurdenPct": 42.5,
-      "stabilizedUnits": 8389,
-      "stabilizedShare": 36.8
+      "rentBurdenPct": 42.5
     },
     {
       "name": "Harlem (North)",
@@ -5254,11 +5254,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1389,
       "medianIncome": 53445,
-      "rentBurdenPct": 51.1,
-      "stabilizedUnits": 16291,
-      "stabilizedShare": 41.7
+      "rentBurdenPct": 51.1
     },
     {
       "name": "East Harlem (South)",
@@ -5299,11 +5299,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1383,
       "medianIncome": 47231,
-      "rentBurdenPct": 50.7,
-      "stabilizedUnits": 7679,
-      "stabilizedShare": 27
+      "rentBurdenPct": 50.7
     },
     {
       "name": "East Harlem (North)",
@@ -5344,11 +5344,11 @@
       "universityShare": 0.3,
       "topUniversity": "Cuny",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1240,
       "medianIncome": 40498,
-      "rentBurdenPct": 53.9,
-      "stabilizedUnits": 10187,
-      "stabilizedShare": 32.7
+      "rentBurdenPct": 53.9
     },
     {
       "name": "Washington Heights (South)",
@@ -5389,11 +5389,11 @@
       "universityShare": 1.2,
       "topUniversity": "Columbia University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1573,
       "medianIncome": 59815,
-      "rentBurdenPct": 56.4,
-      "stabilizedUnits": 17641,
-      "stabilizedShare": 62.3
+      "rentBurdenPct": 56.4
     },
     {
       "name": "Washington Heights (North)",
@@ -5434,11 +5434,11 @@
       "universityShare": 0,
       "topUniversity": "Yeshiva University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1759,
       "medianIncome": 84107,
-      "rentBurdenPct": 47.5,
-      "stabilizedUnits": 18783,
-      "stabilizedShare": 62.5
+      "rentBurdenPct": 47.5
     },
     {
       "name": "Inwood",
@@ -5479,11 +5479,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1565,
       "medianIncome": 70212,
-      "rentBurdenPct": 46.3,
-      "stabilizedUnits": 10354,
-      "stabilizedShare": 57.4
+      "rentBurdenPct": 46.3
     },
     {
       "name": "Astoria (North)-Ditmars-Steinway",
@@ -5524,11 +5524,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2229,
       "medianIncome": 99632,
-      "rentBurdenPct": 41.7,
-      "stabilizedUnits": 3879,
-      "stabilizedShare": 17.7
+      "rentBurdenPct": 41.7
     },
     {
       "name": "Old Astoria-Hallets Point",
@@ -5569,11 +5569,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1938,
       "medianIncome": 93133,
-      "rentBurdenPct": 48.6,
-      "stabilizedUnits": 3633,
-      "stabilizedShare": 32.9
+      "rentBurdenPct": 48.6
     },
     {
       "name": "Astoria (Central)",
@@ -5614,11 +5614,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2203,
       "medianIncome": 104174,
-      "rentBurdenPct": 37.5,
-      "stabilizedUnits": 10752,
-      "stabilizedShare": 39.9
+      "rentBurdenPct": 37.5
     },
     {
       "name": "Astoria (East)-Woodside (North)",
@@ -5659,11 +5659,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1866,
       "medianIncome": 81418,
-      "rentBurdenPct": 47.4,
-      "stabilizedUnits": 3373,
-      "stabilizedShare": 19.1
+      "rentBurdenPct": 47.4
     },
     {
       "name": "Queensbridge-Ravenswood-Dutch Kills",
@@ -5704,11 +5704,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1656,
       "medianIncome": 75076,
-      "rentBurdenPct": 45.4,
-      "stabilizedUnits": 4721,
-      "stabilizedShare": 26.5
+      "rentBurdenPct": 45.4
     },
     {
       "name": "Long Island City-Hunters Point",
@@ -5749,11 +5749,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 3261,
       "medianIncome": 158925,
-      "rentBurdenPct": 32.5,
-      "stabilizedUnits": 9803,
-      "stabilizedShare": 19.2
+      "rentBurdenPct": 32.5
     },
     {
       "name": "Sunnyside",
@@ -5794,11 +5794,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1891,
       "medianIncome": 83634,
-      "rentBurdenPct": 48.9,
-      "stabilizedUnits": 8767,
-      "stabilizedShare": 39.7
+      "rentBurdenPct": 48.9
     },
     {
       "name": "Woodside",
@@ -5839,11 +5839,11 @@
       "universityShare": 0.5,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1831,
       "medianIncome": 77123,
-      "rentBurdenPct": 47,
-      "stabilizedUnits": 3867,
-      "stabilizedShare": 20.8
+      "rentBurdenPct": 47
     },
     {
       "name": "Jackson Heights",
@@ -5884,11 +5884,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1846,
       "medianIncome": 77454,
-      "rentBurdenPct": 52.9,
-      "stabilizedUnits": 9866,
-      "stabilizedShare": 28.1
+      "rentBurdenPct": 52.9
     },
     {
       "name": "East Elmhurst",
@@ -5929,11 +5929,11 @@
       "universityShare": 0.3,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2008,
       "medianIncome": 79969,
-      "rentBurdenPct": 52.7,
-      "stabilizedUnits": 451,
-      "stabilizedShare": 5.2
+      "rentBurdenPct": 52.7
     },
     {
       "name": "North Corona",
@@ -5974,11 +5974,11 @@
       "universityShare": 0.9,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1972,
       "medianIncome": 81030,
-      "rentBurdenPct": 53.8,
-      "stabilizedUnits": 1507,
-      "stabilizedShare": 15.2
+      "rentBurdenPct": 53.8
     },
     {
       "name": "Elmhurst",
@@ -6019,11 +6019,11 @@
       "universityShare": 0.6,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1933,
       "medianIncome": 71552,
-      "rentBurdenPct": 56.7,
-      "stabilizedUnits": 10220,
-      "stabilizedShare": 29.6
+      "rentBurdenPct": 56.7
     },
     {
       "name": "Corona",
@@ -6064,11 +6064,11 @@
       "universityShare": 0.6,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1881,
       "medianIncome": 65565,
-      "rentBurdenPct": 52.8,
-      "stabilizedUnits": 5939,
-      "stabilizedShare": 29
+      "rentBurdenPct": 52.8
     },
     {
       "name": "Maspeth",
@@ -6109,11 +6109,11 @@
       "universityShare": 0.5,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1973,
       "medianIncome": 85500,
-      "rentBurdenPct": 53.3,
-      "stabilizedUnits": 233,
-      "stabilizedShare": 1.5
+      "rentBurdenPct": 53.3
     },
     {
       "name": "Ridgewood",
@@ -6154,11 +6154,11 @@
       "universityShare": 0.2,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1991,
       "medianIncome": 84720,
-      "rentBurdenPct": 45.1,
-      "stabilizedUnits": 2441,
-      "stabilizedShare": 9.6
+      "rentBurdenPct": 45.1
     },
     {
       "name": "Glendale",
@@ -6199,11 +6199,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1932,
       "medianIncome": 95812,
-      "rentBurdenPct": 43.1,
-      "stabilizedUnits": 418,
-      "stabilizedShare": 3.2
+      "rentBurdenPct": 43.1
     },
     {
       "name": "Middle Village",
@@ -6244,11 +6244,11 @@
       "universityShare": 0.2,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1978,
       "medianIncome": 94387,
-      "rentBurdenPct": 46.7,
-      "stabilizedUnits": 1131,
-      "stabilizedShare": 8.3
+      "rentBurdenPct": 46.7
     },
     {
       "name": "Rego Park",
@@ -6289,11 +6289,11 @@
       "universityShare": 0.2,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1999,
       "medianIncome": 83091,
-      "rentBurdenPct": 52.7,
-      "stabilizedUnits": 3497,
-      "stabilizedShare": 24.7
+      "rentBurdenPct": 52.7
     },
     {
       "name": "Forest Hills",
@@ -6334,11 +6334,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2072,
       "medianIncome": 104316,
-      "rentBurdenPct": 46.3,
-      "stabilizedUnits": 8786,
-      "stabilizedShare": 20.2
+      "rentBurdenPct": 46.3
     },
     {
       "name": "College Point",
@@ -6379,11 +6379,11 @@
       "universityShare": 1.3,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2155,
       "medianIncome": 93766,
-      "rentBurdenPct": 56.8,
-      "stabilizedUnits": 84,
-      "stabilizedShare": 0.8
+      "rentBurdenPct": 56.8
     },
     {
       "name": "Whitestone-Beechhurst",
@@ -6424,11 +6424,11 @@
       "universityShare": 0.5,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2237,
       "medianIncome": 98211,
-      "rentBurdenPct": 51.5,
-      "stabilizedUnits": 189,
-      "stabilizedShare": 1.8
+      "rentBurdenPct": 51.5
     },
     {
       "name": "Bay Terrace-Clearview",
@@ -6469,11 +6469,11 @@
       "universityShare": 0.3,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2449,
       "medianIncome": 108440,
-      "rentBurdenPct": 37.8,
-      "stabilizedUnits": 354,
-      "stabilizedShare": 3.2
+      "rentBurdenPct": 37.8
     },
     {
       "name": "Murray Hill-Broadway Flushing",
@@ -6514,11 +6514,11 @@
       "universityShare": 0.4,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1819,
       "medianIncome": 72910,
-      "rentBurdenPct": 55.7,
-      "stabilizedUnits": 4052,
-      "stabilizedShare": 19
+      "rentBurdenPct": 55.7
     },
     {
       "name": "East Flushing",
@@ -6559,11 +6559,11 @@
       "universityShare": 0.8,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1582,
       "medianIncome": 59393,
-      "rentBurdenPct": 60.3,
-      "stabilizedUnits": 1737,
-      "stabilizedShare": 15.6
+      "rentBurdenPct": 60.3
     },
     {
       "name": "Queensboro Hill",
@@ -6604,11 +6604,11 @@
       "universityShare": 1.5,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1995,
       "medianIncome": 73025,
-      "rentBurdenPct": 63.2,
-      "stabilizedUnits": 64,
-      "stabilizedShare": 0.9
+      "rentBurdenPct": 63.2
     },
     {
       "name": "Flushing-Willets Point",
@@ -6649,11 +6649,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1619,
       "medianIncome": 50792,
-      "rentBurdenPct": 55.9,
-      "stabilizedUnits": 8860,
-      "stabilizedShare": 29.4
+      "rentBurdenPct": 55.9
     },
     {
       "name": "Kew Gardens Hills",
@@ -6694,11 +6694,11 @@
       "universityShare": 0.5,
       "topUniversity": "ST Johns University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1917,
       "medianIncome": 85786,
-      "rentBurdenPct": 51.8,
-      "stabilizedUnits": 2689,
-      "stabilizedShare": 19.9
+      "rentBurdenPct": 51.8
     },
     {
       "name": "Pomonok-Electchester-Hillcrest",
@@ -6739,11 +6739,11 @@
       "universityShare": 0.3,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1311,
       "medianIncome": 77555,
-      "rentBurdenPct": 44.6,
-      "stabilizedUnits": 831,
-      "stabilizedShare": 6.6
+      "rentBurdenPct": 44.6
     },
     {
       "name": "Fresh Meadows-Utopia",
@@ -6784,11 +6784,11 @@
       "universityShare": 0.4,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2175,
       "medianIncome": 97303,
-      "rentBurdenPct": 39.5,
-      "stabilizedUnits": 2786,
-      "stabilizedShare": 34.3
+      "rentBurdenPct": 39.5
     },
     {
       "name": "Jamaica Estates-Holliswood",
@@ -6829,11 +6829,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1860,
       "medianIncome": 88780,
-      "rentBurdenPct": 46.5,
-      "stabilizedUnits": 2772,
-      "stabilizedShare": 30.7
+      "rentBurdenPct": 46.5
     },
     {
       "name": "Jamaica Hills-Briarwood",
@@ -6874,11 +6874,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1926,
       "medianIncome": 88481,
-      "rentBurdenPct": 41.1,
-      "stabilizedUnits": 3859,
-      "stabilizedShare": 28.3
+      "rentBurdenPct": 41.1
     },
     {
       "name": "Kew Gardens",
@@ -6919,11 +6919,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1914,
       "medianIncome": 91956,
-      "rentBurdenPct": 48.7,
-      "stabilizedUnits": 3296,
-      "stabilizedShare": 29.7
+      "rentBurdenPct": 48.7
     },
     {
       "name": "Richmond Hill",
@@ -6964,11 +6964,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1795,
       "medianIncome": 86877,
-      "rentBurdenPct": 49.6,
-      "stabilizedUnits": 1277,
-      "stabilizedShare": 12.9
+      "rentBurdenPct": 49.6
     },
     {
       "name": "South Richmond Hill",
@@ -7009,11 +7009,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1970,
       "medianIncome": 85751,
-      "rentBurdenPct": 61,
-      "stabilizedUnits": 164,
-      "stabilizedShare": 2.5
+      "rentBurdenPct": 61
     },
     {
       "name": "Ozone Park (North)",
@@ -7054,11 +7054,11 @@
       "universityShare": 0.2,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1972,
       "medianIncome": 87239,
-      "rentBurdenPct": 51.4,
-      "stabilizedUnits": 147,
-      "stabilizedShare": 2
+      "rentBurdenPct": 51.4
     },
     {
       "name": "Woodhaven",
@@ -7099,11 +7099,11 @@
       "universityShare": 0.7,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1921,
       "medianIncome": 90827,
-      "rentBurdenPct": 47.4,
-      "stabilizedUnits": 1049,
-      "stabilizedShare": 8.7
+      "rentBurdenPct": 47.4
     },
     {
       "name": "South Ozone Park",
@@ -7144,11 +7144,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1981,
       "medianIncome": 100685,
-      "rentBurdenPct": 58.7,
-      "stabilizedUnits": 433,
-      "stabilizedShare": 2
+      "rentBurdenPct": 58.7
     },
     {
       "name": "Ozone Park",
@@ -7189,11 +7189,11 @@
       "universityShare": 0.2,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1885,
       "medianIncome": 85568,
-      "rentBurdenPct": 51.3,
-      "stabilizedUnits": 163,
-      "stabilizedShare": 2.2
+      "rentBurdenPct": 51.3
     },
     {
       "name": "Howard Beach-Lindenwood",
@@ -7234,11 +7234,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1914,
       "medianIncome": 103428,
-      "rentBurdenPct": 48.4,
-      "stabilizedUnits": 48,
-      "stabilizedShare": 0.5
+      "rentBurdenPct": 48.4
     },
     {
       "name": "Auburndale",
@@ -7279,11 +7279,11 @@
       "universityShare": 1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2164,
       "medianIncome": 92391,
-      "rentBurdenPct": 42.8,
-      "stabilizedUnits": 692,
-      "stabilizedShare": 5.5
+      "rentBurdenPct": 42.8
     },
     {
       "name": "Bayside",
@@ -7324,11 +7324,11 @@
       "universityShare": 1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2555,
       "medianIncome": 111270,
-      "rentBurdenPct": 42.6,
-      "stabilizedUnits": 762,
-      "stabilizedShare": 5.8
+      "rentBurdenPct": 42.6
     },
     {
       "name": "Douglaston-Little Neck",
@@ -7369,11 +7369,11 @@
       "universityShare": 0.5,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2485,
       "medianIncome": 114648,
-      "rentBurdenPct": 48.7,
-      "stabilizedUnits": 98,
-      "stabilizedShare": 1
+      "rentBurdenPct": 48.7
     },
     {
       "name": "Oakland Gardens-Hollis Hills",
@@ -7414,11 +7414,11 @@
       "universityShare": 0.3,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2115,
       "medianIncome": 103698,
-      "rentBurdenPct": 47.2,
-      "stabilizedUnits": 915,
-      "stabilizedShare": 8.9
+      "rentBurdenPct": 47.2
     },
     {
       "name": "Jamaica",
@@ -7459,11 +7459,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1750,
       "medianIncome": 61851,
-      "rentBurdenPct": 60.6,
-      "stabilizedUnits": 10370,
-      "stabilizedShare": 43.6
+      "rentBurdenPct": 60.6
     },
     {
       "name": "South Jamaica",
@@ -7504,11 +7504,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1502,
       "medianIncome": 76470,
-      "rentBurdenPct": 56.4,
-      "stabilizedUnits": 532,
-      "stabilizedShare": 4.3
+      "rentBurdenPct": 56.4
     },
     {
       "name": "Baisley Park",
@@ -7549,11 +7549,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1844,
       "medianIncome": 81269,
-      "rentBurdenPct": 53,
-      "stabilizedUnits": 80,
-      "stabilizedShare": 0.6
+      "rentBurdenPct": 53
     },
     {
       "name": "Springfield Gardens (North)-Rochdale Village",
@@ -7594,11 +7594,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1391,
       "medianIncome": 78603,
-      "rentBurdenPct": 48.1,
-      "stabilizedUnits": 623,
-      "stabilizedShare": 5.1
+      "rentBurdenPct": 48.1
     },
     {
       "name": "St. Albans",
@@ -7639,11 +7639,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1745,
       "medianIncome": 102304,
-      "rentBurdenPct": 53.3,
-      "stabilizedUnits": 473,
-      "stabilizedShare": 3
+      "rentBurdenPct": 53.3
     },
     {
       "name": "Hollis",
@@ -7684,11 +7684,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1674,
       "medianIncome": 84643,
-      "rentBurdenPct": 49.8,
-      "stabilizedUnits": 1225,
-      "stabilizedShare": 16.5
+      "rentBurdenPct": 49.8
     },
     {
       "name": "Glen Oaks-Floral Park-New Hyde Park",
@@ -7729,11 +7729,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2149,
       "medianIncome": 107236,
-      "rentBurdenPct": 32.7,
-      "stabilizedUnits": 412,
-      "stabilizedShare": 4.3
+      "rentBurdenPct": 32.7
     },
     {
       "name": "Bellerose",
@@ -7774,11 +7774,11 @@
       "universityShare": 0.3,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2069,
       "medianIncome": 105381,
-      "rentBurdenPct": 47.7,
-      "stabilizedUnits": 104,
-      "stabilizedShare": 1.2
+      "rentBurdenPct": 47.7
     },
     {
       "name": "Queens Village",
@@ -7819,11 +7819,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1672,
       "medianIncome": 97495,
-      "rentBurdenPct": 61.3,
-      "stabilizedUnits": 984,
-      "stabilizedShare": 6.4
+      "rentBurdenPct": 61.3
     },
     {
       "name": "Cambria Heights",
@@ -7864,11 +7864,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1720,
       "medianIncome": 114260,
-      "rentBurdenPct": 58.7,
-      "stabilizedUnits": 58,
-      "stabilizedShare": 1
+      "rentBurdenPct": 58.7
     },
     {
       "name": "Laurelton",
@@ -7909,11 +7909,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1852,
       "medianIncome": 111425,
-      "rentBurdenPct": 39.9,
-      "stabilizedUnits": 100,
-      "stabilizedShare": 1.2
+      "rentBurdenPct": 39.9
     },
     {
       "name": "Springfield Gardens (South)-Brookville",
@@ -7954,11 +7954,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2178,
       "medianIncome": 110886,
-      "rentBurdenPct": 42.8,
-      "stabilizedUnits": 33,
-      "stabilizedShare": 0.5
+      "rentBurdenPct": 42.8
     },
     {
       "name": "Rosedale",
@@ -7999,11 +7999,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2367,
       "medianIncome": 111831,
-      "rentBurdenPct": 60,
-      "stabilizedUnits": 20,
-      "stabilizedShare": 0.3
+      "rentBurdenPct": 60
     },
     {
       "name": "Far Rockaway-Bayswater",
@@ -8044,11 +8044,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1484,
       "medianIncome": 61655,
-      "rentBurdenPct": 57.8,
-      "stabilizedUnits": 5746,
-      "stabilizedShare": 26.4
+      "rentBurdenPct": 57.8
     },
     {
       "name": "Rockaway Beach-Arverne-Edgemere",
@@ -8089,11 +8089,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1268,
       "medianIncome": 61720,
-      "rentBurdenPct": 52.3,
-      "stabilizedUnits": 518,
-      "stabilizedShare": 3.3
+      "rentBurdenPct": 52.3
     },
     {
       "name": "Breezy Point-Belle Harbor-Rockaway Park-Broad Channel",
@@ -8134,11 +8134,11 @@
       "universityShare": 0,
       "topUniversity": null,
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1794,
       "medianIncome": 117846,
-      "rentBurdenPct": 42.1,
-      "stabilizedUnits": 1077,
-      "stabilizedShare": 8.9
+      "rentBurdenPct": 42.1
     },
     {
       "name": "St. George-New Brighton",
@@ -8179,11 +8179,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1460,
       "medianIncome": 70492,
-      "rentBurdenPct": 53.7,
-      "stabilizedUnits": 193,
-      "stabilizedShare": 2.3
+      "rentBurdenPct": 53.7
     },
     {
       "name": "Tompkinsville-Stapleton-Clifton-Fox Hills",
@@ -8224,11 +8224,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1360,
       "medianIncome": 54151,
-      "rentBurdenPct": 57.3,
-      "stabilizedUnits": 174,
-      "stabilizedShare": 2.7
+      "rentBurdenPct": 57.3
     },
     {
       "name": "Rosebank-Shore Acres-Park Hill",
@@ -8269,11 +8269,11 @@
       "universityShare": 0.4,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1276,
       "medianIncome": 73690,
-      "rentBurdenPct": 45.9,
-      "stabilizedUnits": 413,
-      "stabilizedShare": 4.4
+      "rentBurdenPct": 45.9
     },
     {
       "name": "West New Brighton-Silver Lake-Grymes Hill",
@@ -8314,11 +8314,11 @@
       "universityShare": 0.1,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1611,
       "medianIncome": 107487,
-      "rentBurdenPct": 46,
-      "stabilizedUnits": 16,
-      "stabilizedShare": 0.1
+      "rentBurdenPct": 46
     },
     {
       "name": "Westerleigh-Castleton Corners",
@@ -8359,11 +8359,11 @@
       "universityShare": 0.2,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1930,
       "medianIncome": 121838,
-      "rentBurdenPct": 55.5,
-      "stabilizedUnits": 48,
-      "stabilizedShare": 0.4
+      "rentBurdenPct": 55.5
     },
     {
       "name": "Port Richmond",
@@ -8404,11 +8404,11 @@
       "universityShare": 0.2,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1783,
       "medianIncome": 79467,
-      "rentBurdenPct": 60.6,
-      "stabilizedUnits": 95,
-      "stabilizedShare": 1.4
+      "rentBurdenPct": 60.6
     },
     {
       "name": "Mariner's Harbor-Arlington-Graniteville",
@@ -8449,11 +8449,11 @@
       "universityShare": 0.2,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1372,
       "medianIncome": 81183,
-      "rentBurdenPct": 49.6,
-      "stabilizedUnits": 54,
-      "stabilizedShare": 0.5
+      "rentBurdenPct": 49.6
     },
     {
       "name": "Grasmere-Arrochar-South Beach-Dongan Hills",
@@ -8494,11 +8494,11 @@
       "universityShare": 0.5,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1492,
       "medianIncome": 80841,
-      "rentBurdenPct": 52.7,
-      "stabilizedUnits": 18,
-      "stabilizedShare": 0.1
+      "rentBurdenPct": 52.7
     },
     {
       "name": "New Dorp-Midland Beach",
@@ -8539,11 +8539,11 @@
       "universityShare": 0.4,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1970,
       "medianIncome": 94664,
-      "rentBurdenPct": 51.5,
-      "stabilizedUnits": 1,
-      "stabilizedShare": 0
+      "rentBurdenPct": 51.5
     },
     {
       "name": "Todt Hill-Emerson Hill-Lighthouse Hill-Manor Heights",
@@ -8584,11 +8584,11 @@
       "universityShare": 0.2,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1304,
       "medianIncome": 110672,
-      "rentBurdenPct": 52.7,
-      "stabilizedUnits": 7,
-      "stabilizedShare": 0.1
+      "rentBurdenPct": 52.7
     },
     {
       "name": "New Springville-Willowbrook-Bulls Head-Travis",
@@ -8629,11 +8629,11 @@
       "universityShare": 0.5,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 2032,
       "medianIncome": 98673,
-      "rentBurdenPct": 43.1,
-      "stabilizedUnits": 68,
-      "stabilizedShare": 0.4
+      "rentBurdenPct": 43.1
     },
     {
       "name": "Oakwood-Richmondtown",
@@ -8674,11 +8674,11 @@
       "universityShare": 0.4,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
-      "medianIncome": 111488,
-      "rentBurdenPct": 58,
       "stabilizedUnits": 0,
-      "stabilizedShare": 0
+      "stabilizedShare": 0,
+      "medianRent": 1762,
+      "medianIncome": 111488,
+      "rentBurdenPct": 58
     },
     {
       "name": "Great Kills-Eltingville",
@@ -8719,11 +8719,11 @@
       "universityShare": 0.4,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
+      "stabilizedUnits": 0,
+      "stabilizedShare": 0,
+      "medianRent": 1876,
       "medianIncome": 120196,
-      "rentBurdenPct": 38.3,
-      "stabilizedUnits": 36,
-      "stabilizedShare": 0.2
+      "rentBurdenPct": 38.3
     },
     {
       "name": "Arden Heights-Rossville",
@@ -8764,11 +8764,11 @@
       "universityShare": 0.4,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
-      "medianIncome": 109850,
-      "rentBurdenPct": 48.5,
       "stabilizedUnits": 0,
-      "stabilizedShare": 0
+      "stabilizedShare": 0,
+      "medianRent": 1725,
+      "medianIncome": 109850,
+      "rentBurdenPct": 48.5
     },
     {
       "name": "Annadale-Huguenot-Prince's Bay-Woodrow",
@@ -8809,11 +8809,11 @@
       "universityShare": 0.2,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
-      "medianIncome": 121871,
-      "rentBurdenPct": 59.1,
       "stabilizedUnits": 0,
-      "stabilizedShare": 0
+      "stabilizedShare": 0,
+      "medianRent": 2245,
+      "medianIncome": 121871,
+      "rentBurdenPct": 59.1
     },
     {
       "name": "Tottenville-Charleston",
@@ -8854,11 +8854,11 @@
       "universityShare": 0,
       "topUniversity": "Long Island University",
       "hpdViolationsPerUnit": 0,
-      "medianRent": 0,
-      "medianIncome": 137514,
-      "rentBurdenPct": 47.8,
       "stabilizedUnits": 0,
-      "stabilizedShare": 0
+      "stabilizedShare": 0,
+      "medianRent": 1672,
+      "medianIncome": 137514,
+      "rentBurdenPct": 47.8
     }
   ]
 }
