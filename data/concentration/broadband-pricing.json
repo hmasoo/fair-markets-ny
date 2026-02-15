@@ -1,7 +1,7 @@
 {
   "source": "ISP published rate cards",
   "accessed": "2026-02-14",
-  "methodology": "Cheapest advertised plan at 100+ Mbps download. Intro/promotional pricing noted separately from regular rates where available. Equipment fees excluded from base price but noted.",
+  "methodology": "Cheapest advertised plan at 100+ Mbps download, with Auto Pay where required. Intro/promotional pricing noted separately from regular rates where available. Equipment fees excluded from base price but noted. Prices verified against provider websites and BroadbandNow.",
   "fccBenchmark": {
     "year": 2025,
     "urbanAvgMonthly": 30.67,
@@ -10,90 +10,93 @@
   "providers": {
     "Spectrum": {
       "cheapest100": 30,
-      "planName": "Internet 300",
-      "speed": 300,
+      "planName": "Internet Advantage",
+      "speed": 100,
       "introRate": true,
       "regularPrice": null,
-      "equipment": "Free modem, $5/mo router",
-      "sourceUrl": "https://www.spectrum.com/internet"
+      "equipment": "Free modem; $10/mo WiFi fee on this tier",
+      "notes": "Intro rate for 12 months; regular price not disclosed. Next tier (500 Mbps) is $50/mo intro.",
+      "sourceUrl": "https://www.spectrum.com/internet/plans"
     },
     "Optimum": {
-      "cheapest100": 40,
-      "planName": "Fiber/Cable 300",
-      "speed": 300,
-      "introRate": true,
-      "regularPrice": null,
-      "equipment": "+$10/mo equipment rental",
+      "cheapest100": 30,
+      "planName": "500 Mbps",
+      "speed": 500,
+      "introRate": false,
+      "regularPrice": 30,
+      "equipment": "1 gateway included",
+      "notes": "5-year price lock with Auto Pay & Paperless Billing. 300 Mbps tier discontinued; cheapest 100+ plan is now 200 Mbps at $25/mo but that's below 100 Mbps threshold for some cable areas. 500 Mbps at $30 is the reliable 100+ option.",
       "sourceUrl": "https://www.optimum.com/internet"
     },
     "Verizon FiOS": {
       "cheapest100": 50,
-      "planName": "300 Mbps",
+      "planName": "Fios 300 Mbps",
       "speed": 300,
       "introRate": false,
       "regularPrice": 50,
       "equipment": "Router included",
+      "notes": "3-year price lock guarantee. Requires Auto Pay. $35/mo with Verizon mobile bundle.",
       "sourceUrl": "https://www.verizon.com/home/fios/"
     },
     "T-Mobile": {
       "cheapest100": 50,
-      "planName": "5G Home Internet",
+      "planName": "Rely (5G Home Internet)",
       "speed": 245,
       "introRate": false,
       "regularPrice": 50,
-      "equipment": "Gateway included",
-      "notes": "Fixed wireless; speeds vary by location (typically 100–245 Mbps)",
+      "equipment": "5G gateway included",
+      "notes": "Fixed wireless; speeds vary by location (typically 100–245 Mbps). 5-year price guarantee. $35/mo with T-Mobile voice line.",
       "sourceUrl": "https://www.t-mobile.com/home-internet"
     },
     "Frontier": {
-      "cheapest100": 30,
+      "cheapest100": 45,
       "planName": "Fiber 500",
       "speed": 500,
-      "introRate": false,
-      "regularPrice": 30,
-      "equipment": "Router included",
-      "notes": "Price guarantee, no data cap",
+      "introRate": true,
+      "regularPrice": null,
+      "equipment": "eero Pro 7 router included",
+      "notes": "Intro rate $44.99/mo for 12 months with Auto Pay & Paperless Bill. Regular price not disclosed. Fiber 200 at $29.99/mo is below 100 Mbps in some configs.",
       "sourceUrl": "https://www.frontier.com/shop/internet"
     },
     "Greenlight Networks": {
-      "cheapest100": 50,
+      "cheapest100": 55,
       "planName": "500 Mbps",
       "speed": 500,
       "introRate": false,
-      "regularPrice": 50,
-      "equipment": "Router included",
-      "notes": "Rochester-area fiber ISP",
-      "sourceUrl": "https://www.greenlightnetworks.com/"
+      "regularPrice": 55,
+      "equipment": "+$5/mo managed WiFi optional",
+      "notes": "Rochester/Buffalo-area fiber ISP. Base price raised from $50 to $55 in early 2026. Consumer Reports #1 rated ISP 2024.",
+      "sourceUrl": "https://www.greenlightnetworks.com/residential/"
     },
     "Starlink": {
       "cheapest100": 120,
-      "planName": "Residential",
+      "planName": "Residential Standard",
       "speed": 200,
       "introRate": false,
       "regularPrice": 120,
-      "equipment": "$599 hardware purchase required",
-      "notes": "Satellite; speeds vary (typically 100–200 Mbps)",
+      "equipment": "$349 hardware purchase + $50 shipping",
+      "notes": "Satellite; speeds vary (typically 100–200 Mbps). $90/mo in high-capacity areas; $50/mo 100 Mbps tier in select areas.",
       "sourceUrl": "https://www.starlink.com/"
     },
     "Windstream": {
-      "cheapest100": 40,
-      "planName": "Kinetic 100",
+      "cheapest100": 25,
+      "planName": "Kinetic 100 Mbps (Fiber)",
       "speed": 100,
-      "introRate": false,
-      "regularPrice": 40,
-      "equipment": "Router included",
-      "notes": "DSL or fiber depending on area",
-      "sourceUrl": "https://www.windstream.com/internet"
+      "introRate": true,
+      "regularPrice": null,
+      "equipment": "+$5.99/mo Kinetic Gateway optional",
+      "notes": "Intro rate $24.99/mo for 12 months with Auto Pay. Regular price not disclosed. Fiber areas only; DSL tier is 50 Mbps at $44.99/mo.",
+      "sourceUrl": "https://www.windstream.com/high-speed-internet"
     },
     "Slic Network": {
-      "cheapest100": 50,
-      "planName": "100 Mbps",
-      "speed": 100,
+      "cheapest100": null,
+      "planName": "Standard (200 Mbps)",
+      "speed": 200,
       "introRate": false,
-      "regularPrice": 50,
-      "equipment": null,
-      "notes": "North Country regional ISP",
-      "sourceUrl": "https://www.slic.com/"
+      "regularPrice": null,
+      "equipment": "+$4.95/mo managed WiFi optional",
+      "notes": "North Country fiber ISP (rebranded as SLICFiber). Pricing not published on website — shown as 'TBD' on Broadband Facts labels. Plans start at 200 Mbps.",
+      "sourceUrl": "https://www.slicfiber.com/pricing.php"
     }
   }
 }

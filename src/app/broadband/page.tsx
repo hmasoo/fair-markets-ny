@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
+import { GeographySearch } from "@/components/ui/GeographySearch";
 import dynamic from "next/dynamic";
 
 const BroadbandCharts = dynamic(
   () => import("./broadband-charts").then((m) => m.BroadbandCharts),
 );
 import { BroadbandMapSection } from "./BroadbandMapSection";
-import { BroadbandTable } from "./BroadbandTable";
 
 import timeSeriesData from "../../../data/concentration/broadband-nys.json";
 import marketShareData from "../../../data/concentration/broadband-nys-market-shares.json";
@@ -33,7 +33,7 @@ export default function BroadbandPage() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-fm-patina">Are you paying too much for internet?</h1>
         <p className="mt-2 text-fm-sage max-w-2xl">
-          A 100 Mbps connection costs $30{"\u2013"}$50/mo from most wired
+          A 100 Mbps connection costs $25{"\u2013"}$50/mo from most wired
           providers — but whether you can actually get that price depends on
           where you live. Many New Yorkers have only one ISP to choose from,
           and millions more have none. Here{"\u2019"}s what people pay across
@@ -41,10 +41,18 @@ export default function BroadbandPage() {
         </p>
       </div>
 
+      <div className="mb-6">
+        <GeographySearch
+          items={counties.map((c) => ({ name: c.name, slug: c.slug }))}
+          basePath="/broadband"
+          placeholder="Search for a county..."
+        />
+      </div>
+
       {/* Key findings — lead with cost, then access gaps */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
         <div className="card text-center">
-          <div className="text-3xl font-bold text-fm-copper">$30{"\u2013"}$50/mo</div>
+          <div className="text-3xl font-bold text-fm-copper">$25{"\u2013"}$50/mo</div>
           <div className="text-sm text-fm-sage mt-1">typical 100+ Mbps plan</div>
           <div className="text-xs text-fm-sage">
             intro rates — regular prices are higher
@@ -77,12 +85,12 @@ export default function BroadbandPage() {
         </h2>
         <div className="text-sm text-gray-700 space-y-2">
           <p>
-            The headline prices from Spectrum ($30/mo), Optimum ($40/mo), and
-            Windstream ($40/mo) are introductory rates — they go up after
-            12{"\u2013"}24 months, and the providers don{"\u2019"}t always make the
-            regular price easy to find. Verizon FiOS ($50/mo) and Frontier ($30/mo)
-            are price-locked with no introductory period. The FCC{"\u2019"}s urban
-            benchmark for broadband is $30.67/mo.
+            The headline prices from Spectrum ($30/mo), Windstream ($25/mo),
+            and Frontier ($45/mo) are introductory rates — they go up after
+            12 months, and the providers don{"\u2019"}t always make the regular
+            price easy to find. Verizon FiOS ($50/mo with Auto Pay) and
+            Optimum ($30/mo) are price-locked — Optimum for 5 years, Verizon
+            for 3. The FCC{"\u2019"}s urban benchmark for broadband is $30.67/mo.
           </p>
           <p className="text-fm-sage">
             Equipment fees add to the real cost: most providers charge
@@ -111,8 +119,8 @@ export default function BroadbandPage() {
             <strong>If you{"\u2019"}re urban: you{"\u2019"}re probably locked in.</strong>{" "}
             Most NYC and suburban households have one or two wired ISPs.
             Major providers charge uniform prices across their service areas,
-            so the issue isn{"\u2019"}t price gouging — Spectrum is $30/mo everywhere
-            it operates. The problem is that if you{"\u2019"}re unhappy with your
+            so the issue isn{"\u2019"}t price gouging — Spectrum charges the same
+            rate everywhere it operates. The problem is that if you{"\u2019"}re unhappy with your
             speed, reliability, or service, you likely can{"\u2019"}t switch to
             anyone else. Building broadband networks means digging up streets,
             which keeps new competitors out.
@@ -147,23 +155,6 @@ export default function BroadbandPage() {
           />
         </div>
       </details>
-
-      {/* County table */}
-      <div className="card mt-8">
-        <h2 className="text-xl font-bold text-fm-patina mb-4">
-          All 62 counties
-        </h2>
-        <p className="text-sm text-fm-sage mb-4">
-          Prices, speeds, and availability vary widely. In most urban
-          counties the cheapest 100 Mbps plan is $30{"\u2013"}$40/mo — but
-          rural counties may have no wired option at that speed at all.
-        </p>
-        <BroadbandTable counties={counties} />
-        <p className="mt-4 text-xs text-fm-sage">
-          Source: FCC Broadband Data Collection (BDC), December 2024 filing.
-          Providers counted at 100+ Mbps download threshold.
-        </p>
-      </div>
     </div>
   );
 }

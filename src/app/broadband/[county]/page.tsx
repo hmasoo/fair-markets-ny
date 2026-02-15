@@ -6,6 +6,9 @@ import dynamic from "next/dynamic";
 const CountyCharts = dynamic(
   () => import("./county-charts").then((m) => m.CountyCharts),
 );
+const CountyLocatorMap = dynamic(
+  () => import("./CountyLocatorMap").then((m) => m.CountyLocatorMap),
+);
 
 import countyData from "../../../../data/concentration/broadband-counties.json";
 import pricingData from "../../../../data/concentration/broadband-pricing.json";
@@ -58,7 +61,7 @@ export default async function CountyPage({ params }: Props) {
       introRate: pricingData.providers[p.name as ProviderName].introRate,
       speed: pricingData.providers[p.name as ProviderName].speed,
     }))
-    .sort((a, b) => a.price - b.price);
+    .sort((a, b) => (a.price ?? Infinity) - (b.price ?? Infinity));
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -69,11 +72,14 @@ export default async function CountyPage({ params }: Props) {
         ]}
       />
 
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-fm-patina">{county.name}</h1>
-        <p className="mt-1 text-fm-sage">
-          {county.totalHouseholds.toLocaleString()} households
-        </p>
+      <div className="mb-8 flex flex-col sm:flex-row sm:items-start gap-6">
+        <div className="flex-1">
+          <h1 className="text-3xl font-bold text-fm-patina">{county.name}</h1>
+          <p className="mt-1 text-fm-sage">
+            {county.totalHouseholds.toLocaleString()} households
+          </p>
+        </div>
+        <CountyLocatorMap fips={county.fips} name={county.name} />
       </div>
 
       {/* Stats — lead with cost, then access gaps */}

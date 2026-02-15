@@ -1,10 +1,6 @@
 import Link from "next/link";
 import { SpendingSection } from "./SpendingSection";
-import { NeighborhoodSearch } from "./housing/NeighborhoodSearch";
 import spendingData from "../../data/concentration/household-spending.json";
-import neighborhoodDataRaw from "../../data/concentration/housing-neighborhoods.json";
-
-const neighborhoods = (neighborhoodDataRaw as { neighborhoods: { name: string; slug: string; borough: string }[] }).neighborhoods;
 
 const sectors = [
   {
@@ -21,8 +17,8 @@ const sectors = [
     subtitle: "Are you paying too much for internet?",
     href: "/broadband",
     description:
-      "A 100 Mbps plan costs $30\u2013$50/mo from most wired providers \u2014 but many New Yorkers can\u2019t get that deal because no provider serves their area. We joined FCC filings and published ISP rates across all 62 counties to show what people pay and where they have no alternative.",
-    stat: "$30\u2013$50",
+      "A 100 Mbps plan costs $25\u2013$50/mo from most wired providers \u2014 but many New Yorkers can\u2019t get that deal because no provider serves their area. We joined FCC filings and published ISP rates across all 62 counties to show what people pay and where they have no alternative.",
+    stat: "$25\u2013$50",
     statLabel: "typical monthly cost for 100+ Mbps (intro rate)",
   },
   {
@@ -70,12 +66,6 @@ export default function Home() {
             spend and what drives the differences. The data is open — explore
             it yourself.
           </p>
-          <div className="mt-8">
-            <NeighborhoodSearch
-              neighborhoods={neighborhoods}
-              variant="dark"
-            />
-          </div>
         </div>
       </section>
 
@@ -102,7 +92,7 @@ export default function Home() {
                 Are you overpaying for internet?
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Most wired broadband plans start at $30{"\u2013"}$50/mo — but
+                Most wired broadband plans start at $25{"\u2013"}$50/mo — but
                 if your only option is one ISP, you can{"\u2019"}t shop around.
                 We show prices and availability county by county.
               </p>

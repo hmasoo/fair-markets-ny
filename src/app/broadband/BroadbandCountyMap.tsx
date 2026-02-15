@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
+import { useRouter } from "next/navigation";
 import { ChoroplethMap } from "@/components/maps/ChoroplethMap";
 import { providerCountScale } from "@/lib/colorScales";
 import {
@@ -26,6 +27,7 @@ interface BroadbandCountyMapProps {
 }
 
 export function BroadbandCountyMap({ counties }: BroadbandCountyMapProps) {
+  const router = useRouter();
   const { providersByFips, detailsByFips } = useMemo(() => {
     const providers: Record<string, number> = {};
     const details: Record<string, CountyEntry> = {};
@@ -48,6 +50,10 @@ export function BroadbandCountyMap({ counties }: BroadbandCountyMapProps) {
       data={providersByFips}
       colorScale={providerCountScale}
       legendTitle="Internet choices"
+      onFeatureClick={(key) => {
+        const d = detailsByFips[key];
+        if (d) router.push(`/broadband/${d.slug}`);
+      }}
       tooltipContent={(key, label) => {
         const d = detailsByFips[key];
         if (!d) {
@@ -72,6 +78,7 @@ export function BroadbandCountyMap({ counties }: BroadbandCountyMapProps) {
                 Households: <strong>{d.totalHouseholds.toLocaleString()}</strong>
               </div>
             </div>
+            <div className="mt-2 text-xs text-fm-teal">Click to explore</div>
           </>
         );
       }}

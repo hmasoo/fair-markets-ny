@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
+import { useRouter } from "next/navigation";
 import { BoroughMap } from "@/components/maps/BoroughMap";
 import { providerCountScale } from "@/lib/colorScales";
 import { boroughCountyCrosswalk } from "@/lib/geography/crosswalks";
@@ -24,6 +25,7 @@ interface BroadbandBoroughMapProps {
 }
 
 export function BroadbandBoroughMap({ counties }: BroadbandBoroughMapProps) {
+  const router = useRouter();
   const nycCounties = useMemo(
     () => counties.filter((c) => NYC_FIPS.has(c.fips)),
     [counties],
@@ -47,6 +49,10 @@ export function BroadbandBoroughMap({ counties }: BroadbandBoroughMapProps) {
       data={providersByFips}
       colorScale={providerCountScale}
       legendTitle="Internet choices"
+      onFeatureClick={(fips) => {
+        const d = detailsByFips[fips];
+        if (d) router.push(`/broadband/${d.slug}`);
+      }}
       tooltipContent={(fips, label) => {
         const d = detailsByFips[fips];
         if (!d) {
@@ -71,6 +77,7 @@ export function BroadbandBoroughMap({ counties }: BroadbandBoroughMapProps) {
                 Households: <strong>{d.totalHouseholds.toLocaleString()}</strong>
               </div>
             </div>
+            <div className="mt-2 text-xs text-fm-teal">Click to explore</div>
           </>
         );
       }}

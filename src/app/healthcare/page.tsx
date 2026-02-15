@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
+import { GeographySearch } from "@/components/ui/GeographySearch";
 import dynamic from "next/dynamic";
 
 const RegionalConcentrationChart = dynamic(
@@ -77,6 +78,14 @@ export default function HealthcarePage() {
           We joined NYS discharge data, hospital surveys, and cost reports
           to show what patients are charged across 10 regions and why.
         </p>
+      </div>
+
+      <div className="mb-6">
+        <GeographySearch
+          items={regions.map((r) => ({ name: r.name, slug: r.slug }))}
+          basePath="/healthcare"
+          placeholder="Search for a region..."
+        />
       </div>
 
       {/* ── Stats grid — cost-focused ── */}
