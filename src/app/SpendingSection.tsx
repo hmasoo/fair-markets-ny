@@ -46,27 +46,11 @@ const GEO_HEADINGS: Record<GeoKey, string> = {
   national: "American",
 };
 
-const TRACKED_COLORS: Record<string, string> = {
-  Housing: "#B07834",
-  Transportation: "#C4883E",
-  Groceries: "#D49A5A",
-  Healthcare: "#2B7A65",
-  "Broadband & Telecom": "#6A8C7E",
-};
+const TRACKED_COLOR = "#B07834";
+const UNTRACKED_COLOR = "#B0BCC7";
 
-const UNTRACKED_GRAYS = [
-  "#94A3B8",
-  "#A3B1C0",
-  "#B0BCC7",
-  "#BDC7CF",
-  "#CAD2D8",
-  "#D7DDE1",
-  "#E2E8F0",
-];
-
-function getColor(cat: SpendingCategory, untrackedIdx: number): string {
-  if (cat.tracked) return TRACKED_COLORS[cat.name] ?? "#B07834";
-  return UNTRACKED_GRAYS[untrackedIdx % UNTRACKED_GRAYS.length];
+function getColor(cat: SpendingCategory): string {
+  return cat.tracked ? TRACKED_COLOR : UNTRACKED_COLOR;
 }
 
 interface SpendingSectionProps {
@@ -96,12 +80,10 @@ export function SpendingSection({ data }: SpendingSectionProps) {
   const ordered = [...tracked, ...untracked];
 
   // Assign colors
-  let untrackedIdx = 0;
-  const colored = ordered.map((cat) => {
-    const color = getColor(cat, cat.tracked ? 0 : untrackedIdx);
-    if (!cat.tracked) untrackedIdx++;
-    return { ...cat, color };
-  });
+  const colored = ordered.map((cat) => ({
+    ...cat,
+    color: getColor(cat),
+  }));
 
   const trackedTotal = tracked.reduce((sum, c) => sum + c.amount, 0);
   const liveTotal = tracked.filter((c) => !c.coming).reduce((sum, c) => sum + c.amount, 0);
@@ -179,26 +161,9 @@ export function SpendingSection({ data }: SpendingSectionProps) {
             const incomeLabelY = spendingBarY + SPENDING_BAR_HEIGHT + BAR_GAP;
             const incomeBarY = incomeLabelY + LABEL_HEIGHT;
 
-            // Unique pattern ID per geo to avoid SVG conflicts
-            const patternId = `coming-stripe-${activeGeo}`;
-
             return (
               <>
                 <svg width={svgWidth} height={svgHeight}>
-                  {/* Stripe pattern for "coming soon" segments */}
-                  <defs>
-                    <pattern
-                      id={patternId}
-                      width="6"
-                      height="6"
-                      patternUnits="userSpaceOnUse"
-                      patternTransform="rotate(45)"
-                    >
-                      <rect width="6" height="6" fill="currentColor" />
-                      <line x1="0" y1="0" x2="0" y2="6" stroke="white" strokeWidth="2" strokeOpacity="0.35" />
-                    </pattern>
-                  </defs>
-
                   {/* Spending label */}
                   <text
                     x={0}
@@ -249,8 +214,7 @@ export function SpendingSection({ data }: SpendingSectionProps) {
                         y={spendingBarY}
                         width={Math.max(seg.w, 0)}
                         height={SPENDING_BAR_HEIGHT}
-                        fill={seg.coming ? `url(#${patternId})` : seg.color}
-                        color={seg.color}
+                        fill={seg.color}
                         stroke="white"
                         strokeWidth={1}
                         onMouseEnter={() => setHoveredIndex(i)}
@@ -393,43 +357,17 @@ export function SpendingSection({ data }: SpendingSectionProps) {
 
         {/* Legend */}
         <div className="flex flex-wrap gap-x-4 gap-y-1.5 mt-4 text-xs text-fm-sage">
-          {colored
-            .filter((c) => c.tracked && !c.coming)
-            .map((cat) => (
-              <span key={cat.name} className="flex items-center gap-1.5">
-                <span
-                  className="w-3 h-3 rounded-sm inline-block shrink-0"
-                  style={{ backgroundColor: cat.color }}
-                />
-                {cat.href ? (
-                  <Link
-                    href={cat.href}
-                    className="text-fm-teal hover:underline"
-                  >
-                    {cat.name}
-                  </Link>
-                ) : (
-                  cat.name
-                )}
-              </span>
-            ))}
-          {colored
-            .filter((c) => c.coming)
-            .map((cat) => (
-              <span key={cat.name} className="flex items-center gap-1.5">
-                <span
-                  className="w-3 h-3 rounded-sm inline-block shrink-0 border border-current"
-                  style={{
-                    background: `repeating-linear-gradient(45deg, ${cat.color}, ${cat.color} 2px, transparent 2px, transparent 4px)`,
-                  }}
-                />
-                {cat.name} <span className="italic">(coming soon)</span>
-              </span>
-            ))}
           <span className="flex items-center gap-1.5">
             <span
               className="w-3 h-3 rounded-sm inline-block shrink-0"
-              style={{ backgroundColor: "#B0BCC7" }}
+              style={{ backgroundColor: TRACKED_COLOR }}
+            />
+            Covered on this site
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span
+              className="w-3 h-3 rounded-sm inline-block shrink-0"
+              style={{ backgroundColor: UNTRACKED_COLOR }}
             />
             Other household spending
           </span>
