@@ -47,10 +47,13 @@ const GEO_HEADINGS: Record<GeoKey, string> = {
 };
 
 const TRACKED_COLOR = "#B07834";
+const COMING_COLOR = "#A3B1C0";
 const UNTRACKED_COLOR = "#B0BCC7";
 
 function getColor(cat: SpendingCategory): string {
-  return cat.tracked ? TRACKED_COLOR : UNTRACKED_COLOR;
+  if (cat.coming) return COMING_COLOR;
+  if (cat.tracked) return TRACKED_COLOR;
+  return UNTRACKED_COLOR;
 }
 
 interface SpendingSectionProps {
