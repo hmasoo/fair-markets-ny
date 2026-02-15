@@ -197,8 +197,33 @@ erDiagram
         int hubs
     }
 
+    BroadbandNeighborhood {
+        string ntaCode PK
+        string slug
+        string name
+        string borough
+        string fips
+        int totalBlocks
+        int providersAt100Mbps
+        int medianProviderCount
+        float zeroPctBlocks
+        float zeroAt100PctBlocks
+        float onePctBlocks
+        int cheapest100Mbps "nullable"
+        string cheapest100Provider "nullable"
+    }
+
+    BroadbandNTAProvider {
+        string name
+        float blockCoveragePct
+        int maxDownload
+    }
+
     BroadbandCounty ||--|{ BroadbandProvider : "topProviders[]"
     BroadbandCounty }|--o| BroadbandPricing : "cheapest100Provider"
+    BroadbandNeighborhood ||--|{ BroadbandNTAProvider : "topProviders[]"
+    BroadbandNeighborhood }|--o| BroadbandPricing : "cheapest100Provider"
+    NTA ||--|| BroadbandNeighborhood : "ntaCode"
     BroadbandPricingMeta ||--|{ BroadbandPricing : "providers{}"
     BroadbandTimeSeries ||--|{ BroadbandTimeSeriesYear : "years[]"
     County ||--|| BroadbandCounty : "fips"
@@ -401,6 +426,7 @@ flowchart TB
         pluto_raw["pluto-residential.json"]
         hpd_raw["hpd-violations.json"]
         sparcs_raw["sparcs-hospital-costs.json<br/><i>24,846 records × 6 DRGs</i>"]
+        fcc_blocks["fcc-bdc-ny-blocks.json<br/><i>NYC census blocks</i>"]
     end
 
     subgraph crosswalks["data/crosswalks/"]
@@ -420,6 +446,8 @@ flowchart TB
         agg_income["aggregate-nta-income.ts"]
         agg_commute["aggregate-nta-commute.ts"]
         agg_sparcs["aggregate-sparcs-pricing.ts"]
+        dl_fcc["download-fcc-bdc.ts"]
+        agg_bbn["aggregate-broadband-nta.ts"]
     end
 
     subgraph output["data/concentration/ (committed)"]
@@ -436,6 +464,7 @@ flowchart TB
         housing_ts["housing-nyc.json + market-shares"]
         broadband_ts["broadband-nys.json + market-shares"]
         health_ts["healthcare-nys.json + market-shares"]
+        broadband_n["broadband-neighborhoods.json<br/><i>~195 neighborhoods</i>"]
     end
 
     subgraph pages["Next.js Pages"]
@@ -478,6 +507,11 @@ flowchart TB
     xw_nta --> agg_commute
     agg_commute --> transport_n
 
+    fcc --> dl_fcc --> fcc_blocks
+    fcc_blocks --> agg_bbn
+    xw_tract --> agg_bbn
+    broadband_p --> agg_bbn
+    agg_bbn --> broadband_n
     fcc --> broadband_c
     isp_rates --> broadband_p
     isp_rates --> broadband_c
@@ -498,6 +532,7 @@ flowchart TB
     rent_hist --> p_hood
 
     broadband_c --> p_broadband
+    broadband_n --> p_broadband
     broadband_ts --> p_broadband
     nycmesh --> p_broadband
     broadband_c --> p_county
@@ -524,10 +559,10 @@ flowchart TB
     classDef page fill:#FCE4EC,stroke:#AD1457
 
     class census,pluto,acris,hpd,fcc,doh,mta,bls,mesh,isp_rates source
-    class acs_income,acs_rent19,acs_rent23,acs_rent24,acs_commute,pluto_raw,hpd_raw,sparcs_raw raw
+    class acs_income,acs_rent19,acs_rent23,acs_rent24,acs_commute,pluto_raw,hpd_raw,sparcs_raw,fcc_blocks raw
     class xw_tract,xw_nta,xw_boro,xw_health,xw_hospital crosswalk
-    class dl_income,dl_rent,dl_sparcs,agg_pluto,agg_rent,agg_income,agg_commute,agg_sparcs script
-    class housing_n,rent_hist,transport_n,broadband_c,broadband_p,health_r,health_pricing,spending,mta_fares,nycmesh,housing_ts,broadband_ts,health_ts output
+    class dl_income,dl_rent,dl_sparcs,agg_pluto,agg_rent,agg_income,agg_commute,agg_sparcs,dl_fcc,agg_bbn script
+    class housing_n,rent_hist,transport_n,broadband_c,broadband_p,broadband_n,health_r,health_pricing,spending,mta_fares,nycmesh,housing_ts,broadband_ts,health_ts output
     class p_home,p_housing,p_hood,p_broadband,p_county,p_health,p_region,p_transport page
 ```
 

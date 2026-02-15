@@ -1,0 +1,8 @@
+{
+  "sector": "Broadband Internet Access",
+  "geography": "NYC Neighborhoods",
+  "ntaVersion": "2020",
+  "source": "FCC Broadband Data Collection (BDC), December 2024",
+  "pricingSource": "ISP published rate cards, February 2026",
+  "neighborhoods": []
+}

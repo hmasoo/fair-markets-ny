@@ -8,10 +8,32 @@ const BroadbandCharts = dynamic(
 import { BroadbandMapSection } from "./BroadbandMapSection";
 import { BroadbandTable } from "./BroadbandTable";
 
+import type { BroadbandNTADetail } from "./BroadbandNTAMap";
+
 import timeSeriesData from "../../../data/concentration/broadband-nys.json";
 import marketShareData from "../../../data/concentration/broadband-nys-market-shares.json";
 import countyData from "../../../data/concentration/broadband-counties.json";
 import nycMeshData from "../../../data/concentration/nycmesh-nodes.json";
+import ntaDataRaw from "../../../data/concentration/broadband-neighborhoods.json";
+
+interface NTANeighborhood {
+  name: string;
+  slug: string;
+  borough: string;
+  fips: string;
+  ntaCode: string;
+  totalBlocks: number;
+  providersAt100Mbps: number;
+  medianProviderCount: number;
+  zeroPctBlocks: number;
+  zeroAt100PctBlocks: number;
+  onePctBlocks: number;
+  topProviders: { name: string; blockCoveragePct: number; maxDownload: number }[];
+  cheapest100Mbps: number | null;
+  cheapest100Provider: string | null;
+}
+
+const ntaData = ntaDataRaw as { neighborhoods: NTANeighborhood[] };
 
 export const metadata: Metadata = {
   title: "Are You Paying Too Much for Internet?",
@@ -21,6 +43,28 @@ export const metadata: Metadata = {
 
 export default function BroadbandPage() {
   const { counties } = countyData;
+  const { neighborhoods } = ntaData;
+
+  // Build NTA-keyed maps for the neighborhood map view
+  const ntaProviders: Record<string, number> = {};
+  const ntaDetails: Record<string, BroadbandNTADetail> = {};
+  for (const n of neighborhoods) {
+    ntaProviders[n.ntaCode] = n.medianProviderCount;
+    ntaDetails[n.ntaCode] = {
+      name: n.name,
+      slug: n.slug,
+      borough: n.borough,
+      fips: n.fips,
+      medianProviderCount: n.medianProviderCount,
+      providersAt100Mbps: n.providersAt100Mbps,
+      zeroPctBlocks: n.zeroPctBlocks,
+      zeroAt100PctBlocks: n.zeroAt100PctBlocks,
+      onePctBlocks: n.onePctBlocks,
+      topProviders: n.topProviders,
+      cheapest100Mbps: n.cheapest100Mbps,
+      cheapest100Provider: n.cheapest100Provider,
+    };
+  }
 
   // Find the worst-served county for hero stats
   const worstZero = [...counties].sort((a, b) => b.zeroPctBlocks - a.zeroPctBlocks)[0];
@@ -127,9 +171,14 @@ export default function BroadbandPage() {
         </h2>
         <p className="text-sm text-fm-sage mb-4">
           Warmer colors mean fewer options for internet service.
-          Toggle between the statewide view and NYC borough detail.
+          Toggle between the statewide view, NYC neighborhoods, and borough detail.
         </p>
-        <BroadbandMapSection counties={counties} nycMeshData={nycMeshData} />
+        <BroadbandMapSection
+          counties={counties}
+          nycMeshData={nycMeshData}
+          ntaProviders={ntaProviders}
+          ntaDetails={ntaDetails}
+        />
       </div>
 
       {/* Market structure charts — for researchers */}
