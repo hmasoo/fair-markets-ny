@@ -116,14 +116,12 @@ export default function PrivacyPage() {
           <h2 className="text-xl font-bold text-fm-patina mb-4">Contact</h2>
           <div className="text-sm text-gray-700 space-y-3">
             <p>
-              If you have questions about this privacy policy, please{" "}
+              If you have questions about this privacy policy, email{" "}
               <a
-                href="https://github.com/masuga-fair-markets/fair-markets-ny/issues"
+                href="mailto:hello@masoo.co"
                 className="text-fm-teal hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
               >
-                open an issue on GitHub
+                hello@masoo.co
               </a>
               .
             </p>
