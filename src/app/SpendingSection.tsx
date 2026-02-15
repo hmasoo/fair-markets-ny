@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { ChartContainer } from "@/components/charts/ChartContainer";
 import { ChartTooltip } from "@/components/charts/ChartTooltip";
 
@@ -54,7 +55,7 @@ interface SpendingSectionProps {
 }
 
 export function SpendingSection({ data }: SpendingSectionProps) {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [activeGeo, setActiveGeo] = useState<GeoKey>("nyMetro");
   const router = useRouter();
 
@@ -63,9 +64,8 @@ export function SpendingSection({ data }: SpendingSectionProps) {
 
   if (!geo) return null;
 
-  const { categories, totalExpenditure, meanIncomeBefore, period } = geo;
+  const { categories, totalExpenditure, period } = geo;
 
-  // Order: tracked first (by amount desc), then untracked (by amount desc)
   const tracked = categories
     .filter((c) => c.tracked)
     .sort((a, b) => b.amount - a.amount);
@@ -82,13 +82,21 @@ export function SpendingSection({ data }: SpendingSectionProps) {
   const trackedTotal = tracked.reduce((sum, c) => sum + c.amount, 0);
   const trackedPct = Math.round((trackedTotal / totalExpenditure) * 100);
 
-  const BAR_HEIGHT = 48;
+  const BAR_HEIGHT = 44;
+
+  const handleSegmentClick = useCallback(
+    (index: number) => {
+      // Toggle: tap again to dismiss
+      setSelectedIndex((prev) => (prev === index ? null : index));
+    },
+    [],
+  );
 
   return (
     <section className="bg-white border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-3">
-          <h2 className="text-2xl font-bold text-fm-patina">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
+        <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 mb-2">
+          <h2 className="text-xl sm:text-2xl font-bold text-fm-patina">
             Where does a {GEO_HEADINGS[activeGeo]} household&#39;s money go?
           </h2>
           <div className="flex gap-1">
@@ -97,7 +105,7 @@ export function SpendingSection({ data }: SpendingSectionProps) {
                 key={key}
                 onClick={() => {
                   setActiveGeo(key);
-                  setHoveredIndex(null);
+                  setSelectedIndex(null);
                 }}
                 className={`px-3 py-1 text-sm font-medium rounded-full transition-colors ${
                   activeGeo === key
@@ -111,13 +119,12 @@ export function SpendingSection({ data }: SpendingSectionProps) {
           </div>
         </div>
 
-        <p className="text-sm text-gray-600 leading-relaxed max-w-3xl mb-6">
+        <p className="text-sm text-gray-600 mb-5">
           ${totalExpenditure.toLocaleString()}/yr average spending.
-          The {trackedPct}% in copper is what this site covers — click
-          any segment.
+          The {trackedPct}% in copper is what this site covers.
         </p>
 
-        {/* Single spending bar */}
+        {/* Stacked bar */}
         <ChartContainer
           key={activeGeo}
           height={BAR_HEIGHT}
@@ -137,13 +144,7 @@ export function SpendingSection({ data }: SpendingSectionProps) {
                 <svg width={svgWidth} height={svgHeight}>
                   <defs>
                     <clipPath id="bar-clip">
-                      <rect
-                        x={0}
-                        y={0}
-                        width={width}
-                        height={BAR_HEIGHT}
-                        rx={6}
-                      />
+                      <rect x={0} y={0} width={width} height={BAR_HEIGHT} rx={6} />
                     </clipPath>
                   </defs>
                   <g clipPath="url(#bar-clip)">
@@ -157,15 +158,16 @@ export function SpendingSection({ data }: SpendingSectionProps) {
                         fill={seg.color}
                         stroke="white"
                         strokeWidth={1}
-                        onMouseEnter={() => setHoveredIndex(i)}
-                        onMouseLeave={() => setHoveredIndex(null)}
-                        onClick={() => seg.href && router.push(seg.href)}
-                        style={{ cursor: seg.href ? "pointer" : "default" }}
+                        opacity={selectedIndex !== null && selectedIndex !== i ? 0.5 : 1}
+                        onMouseEnter={() => setSelectedIndex(i)}
+                        onMouseLeave={() => setSelectedIndex(null)}
+                        onClick={() => handleSegmentClick(i)}
+                        style={{ cursor: "pointer" }}
                       />
                     ))}
                     {segments.map(
                       (seg, i) =>
-                        seg.w > 60 && (
+                        seg.w > 80 && (
                           <text
                             key={`label-${i}`}
                             x={seg.x + seg.w / 2}
@@ -176,6 +178,7 @@ export function SpendingSection({ data }: SpendingSectionProps) {
                             fontWeight={seg.tracked ? 600 : 400}
                             fill="white"
                             pointerEvents="none"
+                            opacity={selectedIndex !== null && selectedIndex !== i ? 0.5 : 1}
                           >
                             {seg.name}{seg.coming ? " (soon)" : ""}
                           </text>
@@ -184,30 +187,22 @@ export function SpendingSection({ data }: SpendingSectionProps) {
                   </g>
                 </svg>
 
-                {hoveredIndex !== null && segments[hoveredIndex] && (
+                {selectedIndex !== null && segments[selectedIndex] && (
                   <ChartTooltip
-                    x={
-                      segments[hoveredIndex].x +
-                      segments[hoveredIndex].w / 2
-                    }
+                    x={segments[selectedIndex].x + segments[selectedIndex].w / 2}
                     y={0}
                   >
                     <div className="font-medium">
-                      {segments[hoveredIndex].name}
+                      {segments[selectedIndex].name}
                     </div>
                     <div>
-                      ${segments[hoveredIndex].amount.toLocaleString()}/yr
+                      ${segments[selectedIndex].amount.toLocaleString()}/yr
                       {" "}
                       <span className="text-fm-sage">
-                        ({((segments[hoveredIndex].amount / totalExpenditure) * 100).toFixed(1)}%)
+                        ({((segments[selectedIndex].amount / totalExpenditure) * 100).toFixed(1)}%)
                       </span>
                     </div>
-                    {segments[hoveredIndex].href && (
-                      <div className="text-xs text-fm-teal mt-1">
-                        Click to see the data &rarr;
-                      </div>
-                    )}
-                    {segments[hoveredIndex].coming && (
+                    {segments[selectedIndex].coming && (
                       <div className="text-xs text-fm-sage mt-1 italic">
                         Coming soon
                       </div>
@@ -218,6 +213,32 @@ export function SpendingSection({ data }: SpendingSectionProps) {
             );
           }}
         </ChartContainer>
+
+        {/* Category list — always visible, serves as legend + nav on mobile */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-4 gap-y-2 mt-4">
+          {tracked.map((cat) => (
+            <div key={cat.name} className="flex items-center gap-2 min-w-0">
+              <span
+                className="w-2.5 h-2.5 rounded-sm shrink-0"
+                style={{ backgroundColor: cat.coming ? COMING_COLOR : TRACKED_COLOR }}
+              />
+              <div className="min-w-0 text-xs leading-tight">
+                {cat.href ? (
+                  <Link href={cat.href} className="text-fm-teal hover:underline font-medium truncate block">
+                    {cat.name}
+                  </Link>
+                ) : (
+                  <span className="text-fm-sage font-medium truncate block">
+                    {cat.name}{cat.coming ? " (soon)" : ""}
+                  </span>
+                )}
+                <span className="text-fm-sage">
+                  ${cat.amount.toLocaleString()}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
 
         <p className="text-xs text-fm-sage mt-4">
           Source:{" "}
