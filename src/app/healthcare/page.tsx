@@ -36,10 +36,6 @@ export default function HealthcarePage() {
     (a, b) => (b.topSystems[0]?.share ?? 0) - (a.topSystems[0]?.share ?? 0),
   );
 
-  const singleDominantRegions = regions.filter(
-    (r) => r.topSystems[0] && r.topSystems[0].share >= 40,
-  );
-
   // Compute charge variation for the default procedure (vaginal delivery, DRG 560)
   const defaultProc = pricingData.procedures[0];
   const downstateSlugs = new Set(["nyc-metro", "long-island", "hudson-valley"]);

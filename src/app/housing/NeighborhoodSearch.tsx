@@ -76,6 +76,7 @@ export function NeighborhoodSearch({
         placeholder="Search for your neighborhood..."
         aria-label="Search neighborhoods"
         aria-expanded={showDropdown}
+        aria-controls="neighborhood-search-listbox"
         aria-autocomplete="list"
         role="combobox"
         className={`w-full rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 ${
@@ -96,6 +97,7 @@ export function NeighborhoodSearch({
       </svg>
       {showDropdown && (
         <ul
+          id="neighborhood-search-listbox"
           ref={listRef}
           role="listbox"
           className="absolute z-20 top-full mt-1 w-full bg-white border border-gray-200 rounded-lg shadow-lg overflow-auto max-h-64"

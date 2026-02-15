@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
-import { useRouter } from "next/navigation";
+import { useState } from "react";
 import Link from "next/link";
 import { ChartContainer } from "@/components/charts/ChartContainer";
 import { ChartTooltip } from "@/components/charts/ChartTooltip";
@@ -57,10 +56,11 @@ interface SpendingSectionProps {
 export function SpendingSection({ data }: SpendingSectionProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [activeGeo, setActiveGeo] = useState<GeoKey>("nyMetro");
-  const router = useRouter();
 
   const geoKeys: GeoKey[] = ["nyMetro", ...(data.nyState ? ["nyState" as GeoKey] : []), "national"];
   const geo = data[activeGeo] as GeographyData | null | undefined;
+
+  const BAR_HEIGHT = 44;
 
   if (!geo) return null;
 
@@ -82,15 +82,9 @@ export function SpendingSection({ data }: SpendingSectionProps) {
   const trackedTotal = tracked.reduce((sum, c) => sum + c.amount, 0);
   const trackedPct = Math.round((trackedTotal / totalExpenditure) * 100);
 
-  const BAR_HEIGHT = 44;
-
-  const handleSegmentClick = useCallback(
-    (index: number) => {
-      // Toggle: tap again to dismiss
-      setSelectedIndex((prev) => (prev === index ? null : index));
-    },
-    [],
-  );
+  function handleSegmentClick(index: number) {
+    setSelectedIndex((prev) => (prev === index ? null : index));
+  }
 
   return (
     <section className="bg-white border-b border-gray-200">

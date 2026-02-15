@@ -89,6 +89,7 @@ export function GeographySearch({
         placeholder={placeholder}
         aria-label={placeholder}
         aria-expanded={showDropdown}
+        aria-controls="geo-search-listbox"
         aria-autocomplete="list"
         role="combobox"
         className="w-full rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-sm text-fm-patina placeholder:text-fm-sage/60 focus:outline-none focus:ring-2 focus:ring-fm-teal/30 focus:border-fm-teal"
@@ -108,6 +109,7 @@ export function GeographySearch({
       </svg>
       {showDropdown && (
         <ul
+          id="geo-search-listbox"
           ref={listRef}
           role="listbox"
           className="absolute z-20 top-full mt-1 w-full bg-white border border-gray-200 rounded-lg shadow-lg overflow-auto max-h-64"
