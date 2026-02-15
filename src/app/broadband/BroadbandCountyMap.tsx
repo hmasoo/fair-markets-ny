@@ -2,7 +2,7 @@
 
 import { useMemo } from "react";
 import { ChoroplethMap } from "@/components/maps/ChoroplethMap";
-import { broadbandHHIScale } from "@/lib/colorScales";
+import { providerCountScale } from "@/lib/colorScales";
 import {
   DEFAULT_JURISDICTION,
   getTopoJsonPath,
@@ -26,14 +26,14 @@ interface BroadbandCountyMapProps {
 }
 
 export function BroadbandCountyMap({ counties }: BroadbandCountyMapProps) {
-  const { hhiByFips, detailsByFips } = useMemo(() => {
-    const hhi: Record<string, number> = {};
+  const { providersByFips, detailsByFips } = useMemo(() => {
+    const providers: Record<string, number> = {};
     const details: Record<string, CountyEntry> = {};
     for (const c of counties) {
-      hhi[c.fips] = c.hhi;
+      providers[c.fips] = c.providersAt100Mbps;
       details[c.fips] = c;
     }
-    return { hhiByFips: hhi, detailsByFips: details };
+    return { providersByFips: providers, detailsByFips: details };
   }, [counties]);
 
   const topoJsonPath = getTopoJsonPath(DEFAULT_JURISDICTION, "COUNTY") ?? "/geo/nys-counties.topojson";
@@ -45,9 +45,9 @@ export function BroadbandCountyMap({ counties }: BroadbandCountyMapProps) {
       objectName={objectName}
       featureKeyProp="GEOID"
       featureLabelProp="NAME"
-      data={hhiByFips}
-      colorScale={broadbandHHIScale}
-      legendTitle="HHI Scale"
+      data={providersByFips}
+      colorScale={providerCountScale}
+      legendTitle="Internet choices"
       tooltipContent={(key, label) => {
         const d = detailsByFips[key];
         if (!d) {
@@ -63,19 +63,13 @@ export function BroadbandCountyMap({ counties }: BroadbandCountyMapProps) {
             <div className="font-bold text-fm-patina">{d.name}</div>
             <div className="mt-2 space-y-1 text-sm">
               <div>
-                HHI: <strong>{d.hhi.toLocaleString()}</strong>
+                Providers at 100+ Mbps: <strong>{d.providersAt100Mbps}</strong>
               </div>
               <div>
-                CR4: <strong>{d.cr4}%</strong>
-              </div>
-              <div>
-                Providers (100+ Mbps): <strong>{d.providersAt100Mbps}</strong>
+                No-broadband blocks: <strong>{d.zeroPctBlocks}%</strong>
               </div>
               <div>
                 Households: <strong>{d.totalHouseholds.toLocaleString()}</strong>
-              </div>
-              <div>
-                Zero-provider blocks: <strong>{d.zeroPctBlocks}%</strong>
               </div>
             </div>
           </>

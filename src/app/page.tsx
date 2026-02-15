@@ -18,21 +18,21 @@ const sectors = [
   },
   {
     title: "Internet Access",
-    subtitle: "How many providers serve your area?",
+    subtitle: "Are you paying too much for internet?",
     href: "/broadband",
     description:
-      "42% of census blocks in St. Lawrence County have zero broadband providers at 100 Mbps. We mapped FCC filing data across all 62 New York counties to show where residents have choices — and where they don't.",
-    stat: "0",
-    statLabel: "broadband options in thousands of NY census blocks",
+      "A 100 Mbps plan costs $30\u2013$50/mo from most wired providers \u2014 but many New Yorkers can\u2019t get that deal because no provider serves their area. We joined FCC filings and published ISP rates across all 62 counties to show what people pay and where they have no alternative.",
+    stat: "$30\u2013$50",
+    statLabel: "typical monthly cost for 100+ Mbps (intro rate)",
   },
   {
-    title: "Hospital Systems",
-    subtitle: "Who runs the hospitals in your region?",
+    title: "Hospital Costs",
+    subtitle: "What does a hospital visit cost in your region?",
     href: "/healthcare",
     description:
-      "In parts of upstate New York, a single hospital system operates over half of all beds. We joined facility data, bed counts, and system affiliations across 10 health planning regions so you can see the landscape of care near you.",
-    stat: "57%",
-    statLabel: "of beds run by one system (North Country)",
+      "Hospital prices vary dramatically by region \u2014 the same procedure can cost twice as much at one facility versus another. We joined facility data, cost reports, and system affiliations across 10 health planning regions to show what patients pay and why.",
+    stat: "2\u00d7",
+    statLabel: "price variation for common procedures across NY",
   },
   {
     title: "Getting to Work",
@@ -45,10 +45,10 @@ const sectors = [
   },
   {
     title: "Regulatory Actions",
-    subtitle: "Consumer problems and how regulators responded",
+    subtitle: "When costs got bad enough that regulators stepped in",
     href: "/enforcement",
     description:
-      "Algorithmic rent-setting, hospital mergers that reduce patient choices, pharmacy middlemen with no oversight. We track the consumer problems that prompted regulatory action in New York.",
+      "Algorithmic rent-setting that raised prices, hospital mergers that left patients with fewer options, pharmacy middlemen adding hidden costs. We track the consumer problems that prompted regulatory action in New York.",
     stat: "4",
     statLabel: "consumer problems tracked",
   },
@@ -66,9 +66,9 @@ export default function Home() {
           <p className="mt-6 text-lg sm:text-xl text-white/80 max-w-2xl leading-relaxed">
             Housing, internet, healthcare, transportation. We join public
             government datasets — ownership records, Census surveys, FCC
-            filings, facility reports — so you can see what people spend, how
-            many choices they have, and what drives the differences. The data is
-            open — explore it yourself.
+            filings, facility reports — so you can see what people actually
+            spend and what drives the differences. The data is open — explore
+            it yourself.
           </p>
           <div className="mt-8">
             <NeighborhoodSearch
@@ -99,12 +99,12 @@ export default function Home() {
             </div>
             <div>
               <h3 className="text-lg font-bold text-fm-patina mb-2">
-                How many internet providers serve your area?
+                Are you overpaying for internet?
               </h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                In many parts of New York, residents have one or two options
-                for wired broadband. We show provider availability county by
-                county, using FCC filing data.
+                Most wired broadband plans start at $30{"\u2013"}$50/mo — but
+                if your only option is one ISP, you can{"\u2019"}t shop around.
+                We show prices and availability county by county.
               </p>
             </div>
             <div>
@@ -125,7 +125,7 @@ export default function Home() {
       {/* Sector cards */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="text-2xl font-bold text-fm-patina mb-8">
-          Research Areas
+          Explore by topic
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {sectors.map((sector) => (

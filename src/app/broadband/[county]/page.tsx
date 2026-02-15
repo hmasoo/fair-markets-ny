@@ -8,8 +8,12 @@ const CountyCharts = dynamic(
 );
 
 import countyData from "../../../../data/concentration/broadband-counties.json";
+import pricingData from "../../../../data/concentration/broadband-pricing.json";
 import nycMeshData from "../../../../data/concentration/nycmesh-nodes.json";
 import { CommunityBroadbandNote } from "./CommunityBroadbandNote";
+
+type PricingProviders = typeof pricingData.providers;
+type ProviderName = keyof PricingProviders;
 
 interface Props {
   params: Promise<{ county: string }>;
@@ -26,8 +30,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const c = countyData.counties.find((c) => c.slug === slug);
   if (!c) return { title: "Not Found" };
   return {
-    title: `${c.name} — Broadband Availability`,
-    description: `Internet choices in ${c.name}: ${c.providersAt100Mbps} providers at 100+ Mbps, ${c.zeroPctBlocks}% of blocks with no broadband option.`,
+    title: `${c.name} — Internet Prices & Availability`,
+    description: `What does internet cost in ${c.name}? ${c.providersAt100Mbps} providers at 100+ Mbps, starting at ${c.cheapest100Mbps != null ? `$${c.cheapest100Mbps}/mo` : "N/A"}. ${c.zeroPctBlocks}% of blocks have no broadband option.`,
   };
 }
 
@@ -43,9 +47,18 @@ export default async function CountyPage({ params }: Props) {
 
   if (!county) notFound();
 
-  // Determine the dominant provider
-  const topProvider = county.topProviders[0];
   const noChoicePct = county.zeroPctBlocks + county.onePctBlocks;
+
+  // Compute pricing context once for reuse
+  const providersWithPricing = county.topProviders
+    .filter((p) => p.maxDownload >= 100 && (p.name as ProviderName) in pricingData.providers)
+    .map((p) => ({
+      ...p,
+      price: pricingData.providers[p.name as ProviderName].cheapest100,
+      introRate: pricingData.providers[p.name as ProviderName].introRate,
+      speed: pricingData.providers[p.name as ProviderName].speed,
+    }))
+    .sort((a, b) => a.price - b.price);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -63,8 +76,24 @@ export default async function CountyPage({ params }: Props) {
         </p>
       </div>
 
-      {/* Stats — lead with coverage gaps and choices */}
+      {/* Stats — lead with cost, then access gaps */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
+        <div className="card text-center">
+          <div className="text-2xl font-bold text-fm-copper">
+            {county.cheapest100Mbps != null ? `$${county.cheapest100Mbps}/mo` : "N/A"}
+          </div>
+          <div className="text-xs text-fm-sage mt-1">
+            cheapest 100+ Mbps plan
+          </div>
+        </div>
+        <div className="card text-center">
+          <div className="text-2xl font-bold text-fm-patina">
+            {county.providersAt100Mbps}
+          </div>
+          <div className="text-xs text-fm-sage mt-1">
+            providers at 100+ Mbps
+          </div>
+        </div>
         <div className="card text-center">
           <div className={`text-2xl font-bold ${county.zeroPctBlocks >= 10 ? "text-red-600" : "text-fm-patina"}`}>
             {county.zeroPctBlocks}%
@@ -81,23 +110,39 @@ export default async function CountyPage({ params }: Props) {
             with zero or one provider
           </div>
         </div>
-        <div className="card text-center">
-          <div className="text-2xl font-bold text-fm-patina">
-            {county.providersAt100Mbps}
-          </div>
-          <div className="text-xs text-fm-sage mt-1">
-            providers at 100+ Mbps
-          </div>
-        </div>
-        <div className="card text-center">
-          <div className="text-2xl font-bold text-fm-copper">
-            {topProvider.share}%
-          </div>
-          <div className="text-xs text-fm-sage mt-1">
-            market share ({topProvider.name})
-          </div>
-        </div>
       </div>
+
+      {/* Pricing context — lead with what you pay */}
+      {providersWithPricing.length > 0 && (() => {
+        const cheapest = providersWithPricing[0];
+        const mostExpensive = providersWithPricing[providersWithPricing.length - 1];
+
+        return (
+          <div className="card mb-4">
+            <h2 className="text-xl font-bold text-fm-patina mb-2">
+              What does internet cost here?
+            </h2>
+            <div className="text-sm text-gray-700 space-y-2">
+              <p>
+                Internet in {county.name} starts at ${cheapest.price}/mo
+                ({cheapest.name}, {cheapest.speed} Mbps
+                {cheapest.introRate ? ", intro rate" : ""}).
+                {providersWithPricing.length > 1 && mostExpensive.price !== cheapest.price && (
+                  <> The most expensive 100+ Mbps option is ${mostExpensive.price}/mo ({mostExpensive.name}).</>
+                )}
+                {" "}The FCC urban benchmark is ${pricingData.fccBenchmark.urbanAvgMonthly}/mo.
+              </p>
+              {providersWithPricing.length === 1 && (
+                <p className="text-fm-sage">
+                  With only one provider offering 100+ Mbps wired broadband,
+                  there{"\u2019"}s no competitive alternative if you{"\u2019"}re
+                  unsatisfied with service or pricing.
+                </p>
+              )}
+            </div>
+          </div>
+        );
+      })()}
 
       {/* Collapsible technical details */}
       <details className="mb-8 text-sm">
@@ -133,10 +178,13 @@ export default async function CountyPage({ params }: Props) {
                   Provider
                 </th>
                 <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                  Market Share
+                  Monthly Price
                 </th>
                 <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
                   Max Download (Mbps)
+                </th>
+                <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
+                  Market Share
                 </th>
               </tr>
             </thead>
@@ -149,8 +197,22 @@ export default async function CountyPage({ params }: Props) {
                   <td className="px-4 py-3 text-sm font-medium text-fm-patina">
                     {provider.name}
                   </td>
-                  <td className="px-4 py-3 text-sm text-right font-medium">
-                    {provider.share}%
+                  <td className="px-4 py-3 text-sm text-right">
+                    {(() => {
+                      const pricing = pricingData.providers[provider.name as ProviderName];
+                      if (provider.maxDownload < 100) {
+                        return <span className="text-fm-sage">N/A</span>;
+                      }
+                      if (!pricing) {
+                        return <span className="text-fm-sage">{"\u2014"}</span>;
+                      }
+                      return (
+                        <span>
+                          <span className="font-medium">${pricing.cheapest100}/mo</span>
+                          {pricing.introRate && <span className="text-fm-sage">*</span>}
+                        </span>
+                      );
+                    })()}
                   </td>
                   <td className="px-4 py-3 text-sm text-right">
                     {provider.maxDownload >= 100 ? (
@@ -163,6 +225,9 @@ export default async function CountyPage({ params }: Props) {
                       </span>
                     )}
                   </td>
+                  <td className="px-4 py-3 text-sm text-right font-medium">
+                    {provider.share}%
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -170,6 +235,8 @@ export default async function CountyPage({ params }: Props) {
         </div>
         <p className="mt-4 text-xs text-fm-sage">
           Source: FCC Broadband Data Collection (BDC), December 2024 filing.
+          Prices from ISP published rate cards, February 2026. * Introductory
+          rate; regular price may be higher.
         </p>
       </div>
 

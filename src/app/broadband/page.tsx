@@ -7,7 +7,6 @@ const BroadbandCharts = dynamic(
 );
 import { BroadbandMapSection } from "./BroadbandMapSection";
 import { BroadbandTable } from "./BroadbandTable";
-import { CommunityBroadbandSection } from "./CommunityBroadbandSection";
 
 import timeSeriesData from "../../../data/concentration/broadband-nys.json";
 import marketShareData from "../../../data/concentration/broadband-nys-market-shares.json";
@@ -15,9 +14,9 @@ import countyData from "../../../data/concentration/broadband-counties.json";
 import nycMeshData from "../../../data/concentration/nycmesh-nodes.json";
 
 export const metadata: Metadata = {
-  title: "How Many Internet Choices Do You Have?",
+  title: "Are You Paying Too Much for Internet?",
   description:
-    "Broadband provider availability across New York State — who has real choices, who's stuck with one option, and who has none. FCC data by county.",
+    "Broadband prices across New York State — what you pay, what speeds you get, and why you may not have alternatives. FCC data and published ISP rates by county.",
 };
 
 export default function BroadbandPage() {
@@ -32,23 +31,31 @@ export default function BroadbandPage() {
       <Breadcrumb items={[{ label: "Broadband" }]} />
 
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-fm-patina">How many internet choices do you have?</h1>
+        <h1 className="text-3xl font-bold text-fm-patina">Are you paying too much for internet?</h1>
         <p className="mt-2 text-fm-sage max-w-2xl">
-          Millions of New Yorkers have one or two options for wired broadband.
-          In rural counties, thousands of households have none. We used FCC
-          filings to count how many providers are available at every census
-          block across the state — and what speeds they actually offer.
+          A 100 Mbps connection costs $30{"\u2013"}$50/mo from most wired
+          providers — but whether you can actually get that price depends on
+          where you live. Many New Yorkers have only one ISP to choose from,
+          and millions more have none. Here{"\u2019"}s what people pay across
+          the state, and why.
         </p>
       </div>
 
-      {/* Key findings — lead with consumer experience */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+      {/* Key findings — lead with cost, then access gaps */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+        <div className="card text-center">
+          <div className="text-3xl font-bold text-fm-copper">$30{"\u2013"}$50/mo</div>
+          <div className="text-sm text-fm-sage mt-1">typical 100+ Mbps plan</div>
+          <div className="text-xs text-fm-sage">
+            intro rates — regular prices are higher
+          </div>
+        </div>
         <div className="card text-center">
           <div className="text-3xl font-bold text-red-600">
             {worstZero.zeroPctBlocks}%
           </div>
           <div className="text-sm text-fm-sage mt-1">
-            of blocks with zero broadband options
+            of blocks with no broadband at all
           </div>
           <div className="text-xs text-fm-sage">{worstZero.name}</div>
         </div>
@@ -57,42 +64,58 @@ export default function BroadbandPage() {
             {worstOne.onePctBlocks}%
           </div>
           <div className="text-sm text-fm-sage mt-1">
-            of blocks with only one provider
+            of blocks with only one option
           </div>
           <div className="text-xs text-fm-sage">{worstOne.name}</div>
         </div>
-        <div className="card text-center">
-          <div className="text-3xl font-bold text-fm-copper">$1B</div>
-          <div className="text-sm text-fm-sage mt-1">ConnectALL investment</div>
-          <div className="text-xs text-fm-sage">
-            NYS public broadband spending
-          </div>
+      </div>
+
+      {/* Intro rate context */}
+      <div className="card mb-8">
+        <h2 className="text-xl font-bold text-fm-patina mb-2">
+          Watch out for introductory pricing
+        </h2>
+        <div className="text-sm text-gray-700 space-y-2">
+          <p>
+            The headline prices from Spectrum ($30/mo), Optimum ($40/mo), and
+            Windstream ($40/mo) are introductory rates — they go up after
+            12{"\u2013"}24 months, and the providers don{"\u2019"}t always make the
+            regular price easy to find. Verizon FiOS ($50/mo) and Frontier ($30/mo)
+            are price-locked with no introductory period. The FCC{"\u2019"}s urban
+            benchmark for broadband is $30.67/mo.
+          </p>
+          <p className="text-fm-sage">
+            Equipment fees add to the real cost: most providers charge
+            $5{"\u2013"}$15/mo for a router or gateway rental, though you can
+            usually bring your own.
+          </p>
         </div>
       </div>
 
       {/* What shapes the broadband market — two distinct problems */}
       <div className="card mb-8">
         <h2 className="text-xl font-bold text-fm-patina mb-2">
-          Two different problems
+          Why can{"\u2019"}t I get a better deal?
         </h2>
         <div className="text-sm text-gray-700 space-y-3">
           <p>
-            <strong>Rural: no infrastructure.</strong> In counties like St.
-            Lawrence and Hamilton, thousands of census blocks have zero wired
-            broadband at 100 Mbps. The economics of running cable to
-            low-density areas don{"\u2019"}t work without subsidy. New York{"\u2019"}s
-            $1B ConnectALL program and the federal BEAD program are funding
-            buildout — but the gap remains large.
+            <strong>If you{"\u2019"}re rural: there may be nothing to buy.</strong>{" "}
+            In counties like St. Lawrence and Hamilton, thousands of census
+            blocks have zero wired broadband at 100 Mbps. Running cable to
+            low-density areas doesn{"\u2019"}t pay for itself. New York{"\u2019"}s $1B
+            ConnectALL program and the federal BEAD program are funding
+            buildout — but the gap remains large. Satellite (Starlink, $120/mo)
+            may be the only option.
           </p>
           <p>
-            <strong>Urban: few competitors.</strong> Most NYC and suburban
-            households have one or two wired ISPs. Building broadband networks
-            requires digging up streets and stringing cables — expensive
-            infrastructure that discourages new entrants where an incumbent
-            already serves. The top 4 providers control 88% of the statewide
-            market. Whether that translates to higher prices is the key question
-            this page can{"\u2019"}t yet answer (we don{"\u2019"}t have pricing
-            data by county).
+            <strong>If you{"\u2019"}re urban: you{"\u2019"}re probably locked in.</strong>{" "}
+            Most NYC and suburban households have one or two wired ISPs.
+            Major providers charge uniform prices across their service areas,
+            so the issue isn{"\u2019"}t price gouging — Spectrum is $30/mo everywhere
+            it operates. The problem is that if you{"\u2019"}re unhappy with your
+            speed, reliability, or service, you likely can{"\u2019"}t switch to
+            anyone else. Building broadband networks means digging up streets,
+            which keeps new competitors out.
           </p>
         </div>
       </div>
@@ -100,28 +123,30 @@ export default function BroadbandPage() {
       {/* Map with statewide/NYC toggle */}
       <div className="card">
         <h2 className="text-xl font-bold text-fm-patina mb-2">
-          Provider availability by county
+          Where can you get broadband?
         </h2>
         <p className="text-sm text-fm-sage mb-4">
-          Darker colors mean fewer provider choices. Toggle between the
-          statewide view and NYC borough detail.
+          Warmer colors mean fewer options for internet service.
+          Toggle between the statewide view and NYC borough detail.
         </p>
-        <BroadbandMapSection counties={counties} />
+        <BroadbandMapSection counties={counties} nycMeshData={nycMeshData} />
       </div>
 
-      {/* Charts */}
-      <div className="mt-8">
-        <BroadbandCharts
-          timeSeriesData={timeSeriesData.years}
-          marketShareData={marketShareData.marketShares}
-          marketShareYear={marketShareData.year}
-          hhi={marketShareData.hhi}
-          cr4={marketShareData.cr4}
-        />
-      </div>
-
-      {/* Community broadband */}
-      <CommunityBroadbandSection data={nycMeshData} />
+      {/* Market structure charts — for researchers */}
+      <details className="mt-8">
+        <summary className="text-fm-sage cursor-pointer hover:text-fm-patina font-medium text-sm">
+          Market structure over time (for researchers)
+        </summary>
+        <div className="mt-4">
+          <BroadbandCharts
+            timeSeriesData={timeSeriesData.years}
+            marketShareData={marketShareData.marketShares}
+            marketShareYear={marketShareData.year}
+            hhi={marketShareData.hhi}
+            cr4={marketShareData.cr4}
+          />
+        </div>
+      </details>
 
       {/* County table */}
       <div className="card mt-8">
@@ -129,9 +154,9 @@ export default function BroadbandPage() {
           All 62 counties
         </h2>
         <p className="text-sm text-fm-sage mb-4">
-          Provider availability varies widely across the state. Some rural
-          counties have 40%+ of census blocks with zero broadband options at
-          100 Mbps — while most NYC boroughs have near-universal coverage.
+          Prices, speeds, and availability vary widely. In most urban
+          counties the cheapest 100 Mbps plan is $30{"\u2013"}$40/mo — but
+          rural counties may have no wired option at that speed at all.
         </p>
         <BroadbandTable counties={counties} />
         <p className="mt-4 text-xs text-fm-sage">

@@ -350,6 +350,12 @@ export default function AboutPage() {
                 used: "Healthcare",
               },
               {
+                name: "ISP Published Rate Cards",
+                what: "Advertised plan prices for major NYS providers (Spectrum, Optimum, Verizon FiOS, T-Mobile, Frontier, Greenlight, Windstream, Starlink)",
+                legal: "Publicly advertised pricing, accessed February 2026",
+                used: "Broadband",
+              },
+              {
                 name: "NYC Mesh MeshDB",
                 what: "Community broadband network node counts by borough",
                 legal: "Published via public API by NYC Mesh (nonprofit)",

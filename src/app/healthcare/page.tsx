@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
-import { Badge } from "@/components/ui/Badge";
-import { HHITooltip } from "@/components/ui/HHITooltip";
 import dynamic from "next/dynamic";
 
 const RegionalConcentrationChart = dynamic(
@@ -26,7 +24,7 @@ import pricingData from "../../../data/concentration/healthcare-pricing.json";
 export const metadata: Metadata = {
   title: "What Does Hospital Care Cost in New York?",
   description:
-    "Hospital charges, costs, and ownership across 10 health planning regions — joined from NYS SPARCS discharge data, AHA hospital surveys, and health system disclosures.",
+    "Hospital charges vary dramatically across New York — the same procedure can cost several times more at one hospital than another. NYS SPARCS discharge data joined with hospital surveys across 10 regions.",
 };
 
 export default function HealthcarePage() {
@@ -74,9 +72,10 @@ export default function HealthcarePage() {
           What does hospital care cost in New York?
         </h1>
         <p className="mt-2 text-fm-sage max-w-2xl">
-          Hospital charges, costs, and ownership across 10 health planning
-          regions — joined from NYS SPARCS discharge data, AHA hospital surveys,
-          and health system disclosures.
+          Hospital charges vary dramatically across New York — the same
+          procedure can cost several times more at one hospital than another.
+          We joined NYS discharge data, hospital surveys, and cost reports
+          to show what patients are charged across 10 regions and why.
         </p>
       </div>
 
@@ -165,8 +164,8 @@ export default function HealthcarePage() {
               {upstateMean.toLocaleString()} upstate — a{" "}
               {(downstateMean / upstateMean).toFixed(1)}&times; gap. Higher
               operating costs (land, labor, cost of living) drive most of this
-              difference, not market concentration. NYC Metro has the lowest
-              HHI of any region but the highest charges.
+              difference, not how many systems compete. NYC Metro has the
+              most hospitals and the most competition but the highest charges.
             </p>
           </div>
           <div>
@@ -217,8 +216,8 @@ export default function HealthcarePage() {
               </a>{" "}
               found that New York commercial prices exceed 300% of Medicare
               rates, and that most price variation is explained by hospital
-              market power — not payer mix or cost of care. NYS statewide HHI
-              rose 63% since 2015 (680 to 1,105).
+              market power — not payer mix or cost of care. Statewide, hospital
+              ownership has consolidated significantly since 2015.
             </p>
           </div>
           <div>
@@ -240,20 +239,17 @@ export default function HealthcarePage() {
         </div>
       </div>
 
-      {/* ── Section 3: Who runs the hospitals? (demoted) ── */}
+      {/* ── Section 3: Regional overview — cost + structure ── */}
       <div className="card mt-8">
         <h2 className="text-xl font-bold text-fm-patina mb-2">
-          Who runs the hospitals?
+          How do charges vary by region?
         </h2>
         <p className="text-sm text-fm-sage mb-4">
-          In {singleDominantRegions.length} of 10 health planning regions, a
-          single system controls 40% or more of hospital beds. Ownership
-          structure is one lens on hospital markets — when paired with the
-          pricing data above, concentration patterns help explain variation, but
-          don{"\u2019"}t automatically predict what patients pay. The most
-          competitive region (NYC Metro) has the highest charges; the most
-          concentrated regions charge the least, largely because they{"\u2019"}re
-          upstate.
+          Hospital charges differ far more by geography than by ownership.
+          NYC Metro — the region with the most hospitals and the most
+          competition — has the highest charges, driven by land, labor, and
+          cost of living. The most consolidated upstate regions charge the
+          least.
         </p>
         <HealthcareMapSection regions={regions} />
       </div>
@@ -261,7 +257,7 @@ export default function HealthcarePage() {
       {/* Regional bar chart */}
       <RegionalConcentrationChart regions={regions} />
 
-      {/* Region detail table */}
+      {/* Region detail table — cost-first */}
       <div className="card mt-8">
         <h2 className="text-xl font-bold text-fm-patina mb-4">
           All 10 regions
@@ -273,87 +269,109 @@ export default function HealthcarePage() {
                 <th className="px-4 py-3 text-left text-xs font-semibold text-fm-sage uppercase tracking-wider">
                   Region
                 </th>
+                <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
+                  Mean Charge
+                </th>
+                <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
+                  Mean Cost
+                </th>
+                <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
+                  Hospitals
+                </th>
                 <th className="px-4 py-3 text-left text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                  Dominant System
+                  Largest System
                 </th>
                 <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
                   Their Share
                 </th>
-                <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                  Beds
-                </th>
-                <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                  Facilities
-                </th>
-                <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                  Top 4 Share
-                </th>
-                <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                  <HHITooltip>HHI</HHITooltip>
-                </th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
-              {sortedByDominance.map((r) => (
-                <tr
-                  key={r.slug}
-                  className="hover:bg-gray-50 transition-colors"
-                >
-                  <td className="px-4 py-3 text-sm">
-                    <Link
-                      href={`/healthcare/${r.slug}`}
-                      className="text-fm-teal hover:underline font-medium"
+              {(() => {
+                // Build region-level charge lookup from default procedure
+                const regionCharges: Record<string, { meanCharge: number; meanCost: number }> = {};
+                for (const rp of defaultProc.byRegion) {
+                  regionCharges[rp.regionSlug] = {
+                    meanCharge: rp.meanCharge,
+                    meanCost: rp.meanCost,
+                  };
+                }
+                // Sort by mean charge descending (most expensive first)
+                const sortedByCost = [...regions].sort((a, b) =>
+                  (regionCharges[b.slug]?.meanCharge ?? 0) - (regionCharges[a.slug]?.meanCharge ?? 0)
+                );
+                return sortedByCost.map((r) => {
+                  const charges = regionCharges[r.slug];
+                  return (
+                    <tr
+                      key={r.slug}
+                      className="hover:bg-gray-50 transition-colors"
                     >
-                      {r.name}
-                    </Link>
-                  </td>
-                  <td className="px-4 py-3 text-sm text-fm-sage">
-                    {r.topSystems[0]?.name}
-                  </td>
-                  <td className="px-4 py-3 text-sm text-right">
-                    <span
-                      className={
-                        (r.topSystems[0]?.share ?? 0) >= 50
-                          ? "text-red-600 font-medium"
-                          : (r.topSystems[0]?.share ?? 0) >= 30
-                          ? "text-amber-600 font-medium"
-                          : "font-medium"
-                      }
-                    >
-                      {r.topSystems[0]?.share}%
-                    </span>
-                  </td>
-                  <td className="px-4 py-3 text-sm text-right">
-                    {r.totalBeds.toLocaleString()}
-                  </td>
-                  <td className="px-4 py-3 text-sm text-right">
-                    {r.totalFacilities}
-                  </td>
-                  <td className="px-4 py-3 text-sm text-right font-medium">
-                    {r.cr4}%
-                  </td>
-                  <td className="px-4 py-3 text-sm text-right">
-                    <Badge
-                      variant={
-                        r.hhi > 2500
-                          ? "red"
-                          : r.hhi > 1500
-                          ? "yellow"
-                          : "green"
-                      }
-                    >
-                      {r.hhi.toLocaleString()}
-                    </Badge>
-                  </td>
-                </tr>
-              ))}
+                      <td className="px-4 py-3 text-sm">
+                        <Link
+                          href={`/healthcare/${r.slug}`}
+                          className="text-fm-teal hover:underline font-medium"
+                        >
+                          {r.name}
+                        </Link>
+                      </td>
+                      <td className="px-4 py-3 text-sm text-right font-medium text-fm-copper">
+                        {charges ? `$${charges.meanCharge.toLocaleString()}` : "\u2014"}
+                      </td>
+                      <td className="px-4 py-3 text-sm text-right">
+                        {charges ? `$${charges.meanCost.toLocaleString()}` : "\u2014"}
+                      </td>
+                      <td className="px-4 py-3 text-sm text-right">
+                        {r.totalFacilities}
+                      </td>
+                      <td className="px-4 py-3 text-sm text-fm-sage">
+                        {r.topSystems[0]?.name}
+                      </td>
+                      <td className="px-4 py-3 text-sm text-right font-medium">
+                        {r.topSystems[0]?.share}%
+                      </td>
+                    </tr>
+                  );
+                });
+              })()}
             </tbody>
           </table>
         </div>
+        <p className="mt-2 text-xs text-fm-sage">
+          Charges shown for vaginal delivery (DRG 560, severity 2) — the most
+          common inpatient procedure. Mean cost reflects estimated resource use.
+          Sorted by charge, highest first.
+        </p>
+        <details className="mt-3 text-xs">
+          <summary className="text-fm-sage cursor-pointer hover:text-fm-patina font-medium">
+            Technical metrics (for researchers)
+          </summary>
+          <div className="mt-2 overflow-x-auto -mx-4 sm:mx-0">
+            <table className="min-w-full divide-y divide-gray-200 text-xs">
+              <thead>
+                <tr>
+                  <th className="px-4 py-2 text-left text-fm-sage font-semibold">Region</th>
+                  <th className="px-4 py-2 text-right text-fm-sage font-semibold">Beds</th>
+                  <th className="px-4 py-2 text-right text-fm-sage font-semibold">CR4</th>
+                  <th className="px-4 py-2 text-right text-fm-sage font-semibold">HHI</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {sortedByDominance.map((r) => (
+                  <tr key={r.slug}>
+                    <td className="px-4 py-2 text-fm-sage">{r.name}</td>
+                    <td className="px-4 py-2 text-right">{r.totalBeds.toLocaleString()}</td>
+                    <td className="px-4 py-2 text-right">{r.cr4}%</td>
+                    <td className="px-4 py-2 text-right">{r.hhi.toLocaleString()}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </details>
         <p className="mt-4 text-xs text-fm-sage">
           Source: NYS DOH SPARCS hospital discharge data; AHA Annual Survey;
-          NYS CON filings; health system disclosures. Bed counts reflect
-          licensed acute-care beds.
+          NYS CON filings; health system disclosures.
         </p>
       </div>
 

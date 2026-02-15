@@ -4,38 +4,42 @@
   "source": "FCC Broadband Data Collection (BDC), December 2024",
   "counties": [
     {
-      "name": "New York County (Manhattan)",
-      "slug": "new-york",
-      "fips": "36061",
-      "totalHouseholds": 847000,
-      "providersAt100Mbps": 4,
-      "hhi": 2800,
-      "cr4": 92.1,
+      "name": "Albany County",
+      "slug": "albany",
+      "fips": "36001",
+      "totalHouseholds": 131000,
+      "providersAt100Mbps": 2,
+      "hhi": 4100,
+      "cr4": 96.5,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
       "topProviders": [
-        { "name": "Spectrum", "share": 35.2, "maxDownload": 1000 },
-        { "name": "Verizon FiOS", "share": 31.5, "maxDownload": 2000 },
-        { "name": "T-Mobile", "share": 14.2, "maxDownload": 245 },
-        { "name": "Starry Internet", "share": 11.2, "maxDownload": 500 }
+        { "name": "Spectrum", "share": 56.8, "maxDownload": 1000 },
+        { "name": "Verizon DSL", "share": 17.2, "maxDownload": 15 },
+        { "name": "T-Mobile", "share": 13.5, "maxDownload": 245 },
+        { "name": "Windstream", "share": 9.0, "maxDownload": 100 }
       ],
-      "zeroPctBlocks": 0.2,
-      "onePctBlocks": 5.8
+      "zeroPctBlocks": 3.5,
+      "onePctBlocks": 16.2
     },
     {
-      "name": "Kings County (Brooklyn)",
-      "slug": "kings",
-      "fips": "36047",
-      "totalHouseholds": 985000,
-      "providersAt100Mbps": 3,
-      "hhi": 3100,
-      "cr4": 94.5,
+      "name": "Allegany County",
+      "slug": "allegany",
+      "fips": "36003",
+      "totalHouseholds": 19000,
+      "providersAt100Mbps": 1,
+      "hhi": 6200,
+      "cr4": 98.8,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
       "topProviders": [
-        { "name": "Optimum", "share": 38.5, "maxDownload": 940 },
-        { "name": "Verizon FiOS", "share": 28.8, "maxDownload": 2000 },
-        { "name": "Spectrum", "share": 15.2, "maxDownload": 1000 },
-        { "name": "T-Mobile", "share": 12.0, "maxDownload": 245 }
+        { "name": "Spectrum", "share": 68.5, "maxDownload": 300 },
+        { "name": "Frontier", "share": 14.2, "maxDownload": 50 },
+        { "name": "T-Mobile", "share": 9.8, "maxDownload": 100 },
+        { "name": "Starlink", "share": 6.3, "maxDownload": 150 }
       ],
-      "zeroPctBlocks": 0.5,
-      "onePctBlocks": 8.2
+      "zeroPctBlocks": 18.5,
+      "onePctBlocks": 42.1
     },
     {
       "name": "Bronx County (Bronx)",
@@ -45,6 +49,8 @@
       "providersAt100Mbps": 3,
       "hhi": 3350,
       "cr4": 95.2,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
       "topProviders": [
         { "name": "Optimum", "share": 42.1, "maxDownload": 940 },
         { "name": "Verizon FiOS", "share": 25.5, "maxDownload": 2000 },
@@ -55,38 +61,213 @@
       "onePctBlocks": 9.5
     },
     {
-      "name": "Queens County (Queens)",
-      "slug": "queens",
-      "fips": "36081",
-      "totalHouseholds": 793000,
-      "providersAt100Mbps": 3,
-      "hhi": 2950,
-      "cr4": 93.8,
+      "name": "Broome County (Binghamton)",
+      "slug": "broome",
+      "fips": "36007",
+      "totalHouseholds": 80000,
+      "providersAt100Mbps": 2,
+      "hhi": 4600,
+      "cr4": 97.1,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
       "topProviders": [
-        { "name": "Spectrum", "share": 33.8, "maxDownload": 1000 },
-        { "name": "Optimum", "share": 28.2, "maxDownload": 940 },
-        { "name": "Verizon FiOS", "share": 22.5, "maxDownload": 2000 },
-        { "name": "T-Mobile", "share": 9.3, "maxDownload": 245 }
+        { "name": "Spectrum", "share": 60.5, "maxDownload": 1000 },
+        { "name": "Verizon DSL", "share": 15.2, "maxDownload": 15 },
+        { "name": "T-Mobile", "share": 12.8, "maxDownload": 245 },
+        { "name": "Frontier", "share": 8.6, "maxDownload": 50 }
       ],
-      "zeroPctBlocks": 0.4,
-      "onePctBlocks": 6.8
+      "zeroPctBlocks": 6.8,
+      "onePctBlocks": 24.5
     },
     {
-      "name": "Richmond County (Staten Island)",
-      "slug": "richmond",
-      "fips": "36085",
-      "totalHouseholds": 176000,
-      "providersAt100Mbps": 3,
-      "hhi": 3500,
-      "cr4": 96.5,
+      "name": "Cattaraugus County",
+      "slug": "cattaraugus",
+      "fips": "36009",
+      "totalHouseholds": 31000,
+      "providersAt100Mbps": 1,
+      "hhi": 5800,
+      "cr4": 98.5,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
       "topProviders": [
-        { "name": "Spectrum", "share": 45.2, "maxDownload": 1000 },
-        { "name": "Verizon FiOS", "share": 30.1, "maxDownload": 2000 },
-        { "name": "T-Mobile", "share": 13.5, "maxDownload": 245 },
-        { "name": "Optimum", "share": 7.7, "maxDownload": 940 }
+        { "name": "Spectrum", "share": 65.2, "maxDownload": 300 },
+        { "name": "Frontier", "share": 16.8, "maxDownload": 50 },
+        { "name": "T-Mobile", "share": 10.2, "maxDownload": 100 },
+        { "name": "Starlink", "share": 6.3, "maxDownload": 150 }
       ],
-      "zeroPctBlocks": 1.2,
-      "onePctBlocks": 10.2
+      "zeroPctBlocks": 14.2,
+      "onePctBlocks": 38.5
+    },
+    {
+      "name": "Cayuga County",
+      "slug": "cayuga",
+      "fips": "36011",
+      "totalHouseholds": 31000,
+      "providersAt100Mbps": 2,
+      "hhi": 5100,
+      "cr4": 97.8,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 62.5, "maxDownload": 1000 },
+        { "name": "Windstream", "share": 14.8, "maxDownload": 100 },
+        { "name": "T-Mobile", "share": 11.2, "maxDownload": 100 },
+        { "name": "Starlink", "share": 9.3, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 9.5,
+      "onePctBlocks": 30.2
+    },
+    {
+      "name": "Chautauqua County",
+      "slug": "chautauqua",
+      "fips": "36013",
+      "totalHouseholds": 53000,
+      "providersAt100Mbps": 2,
+      "hhi": 5200,
+      "cr4": 97.5,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 63.8, "maxDownload": 1000 },
+        { "name": "Windstream", "share": 13.5, "maxDownload": 100 },
+        { "name": "T-Mobile", "share": 12.2, "maxDownload": 100 },
+        { "name": "Starlink", "share": 8.0, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 10.8,
+      "onePctBlocks": 32.5
+    },
+    {
+      "name": "Chemung County (Elmira)",
+      "slug": "chemung",
+      "fips": "36015",
+      "totalHouseholds": 36000,
+      "providersAt100Mbps": 2,
+      "hhi": 4800,
+      "cr4": 97.5,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 61.2, "maxDownload": 1000 },
+        { "name": "Frontier", "share": 15.5, "maxDownload": 50 },
+        { "name": "T-Mobile", "share": 12.5, "maxDownload": 245 },
+        { "name": "Starlink", "share": 8.3, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 7.2,
+      "onePctBlocks": 26.8
+    },
+    {
+      "name": "Chenango County",
+      "slug": "chenango",
+      "fips": "36017",
+      "totalHouseholds": 20000,
+      "providersAt100Mbps": 1,
+      "hhi": 6100,
+      "cr4": 98.5,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 67.5, "maxDownload": 300 },
+        { "name": "Frontier", "share": 14.8, "maxDownload": 25 },
+        { "name": "T-Mobile", "share": 9.5, "maxDownload": 100 },
+        { "name": "Starlink", "share": 6.7, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 15.8,
+      "onePctBlocks": 40.2
+    },
+    {
+      "name": "Clinton County (Plattsburgh)",
+      "slug": "clinton",
+      "fips": "36019",
+      "totalHouseholds": 32000,
+      "providersAt100Mbps": 2,
+      "hhi": 5300,
+      "cr4": 98.0,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 64.2, "maxDownload": 1000 },
+        { "name": "Slic Network", "share": 12.5, "maxDownload": 100 },
+        { "name": "T-Mobile", "share": 11.8, "maxDownload": 100 },
+        { "name": "Starlink", "share": 9.5, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 11.5,
+      "onePctBlocks": 35.2
+    },
+    {
+      "name": "Columbia County",
+      "slug": "columbia",
+      "fips": "36021",
+      "totalHouseholds": 27000,
+      "providersAt100Mbps": 2,
+      "hhi": 5000,
+      "cr4": 97.8,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 58.5, "maxDownload": 1000 },
+        { "name": "Optimum", "share": 18.2, "maxDownload": 940 },
+        { "name": "T-Mobile", "share": 12.8, "maxDownload": 100 },
+        { "name": "Starlink", "share": 8.3, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 8.2,
+      "onePctBlocks": 28.5
+    },
+    {
+      "name": "Cortland County",
+      "slug": "cortland",
+      "fips": "36023",
+      "totalHouseholds": 19000,
+      "providersAt100Mbps": 2,
+      "hhi": 5200,
+      "cr4": 97.8,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 63.5, "maxDownload": 1000 },
+        { "name": "Windstream", "share": 13.2, "maxDownload": 100 },
+        { "name": "T-Mobile", "share": 12.5, "maxDownload": 100 },
+        { "name": "Starlink", "share": 8.6, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 10.2,
+      "onePctBlocks": 32.8
+    },
+    {
+      "name": "Delaware County",
+      "slug": "delaware",
+      "fips": "36025",
+      "totalHouseholds": 20000,
+      "providersAt100Mbps": 1,
+      "hhi": 6500,
+      "cr4": 99.0,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 70.2, "maxDownload": 300 },
+        { "name": "Frontier", "share": 13.5, "maxDownload": 25 },
+        { "name": "T-Mobile", "share": 8.8, "maxDownload": 100 },
+        { "name": "Starlink", "share": 6.5, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 20.5,
+      "onePctBlocks": 45.8
+    },
+    {
+      "name": "Dutchess County (Poughkeepsie)",
+      "slug": "dutchess",
+      "fips": "36027",
+      "totalHouseholds": 113000,
+      "providersAt100Mbps": 3,
+      "hhi": 3600,
+      "cr4": 96.2,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 38.5, "maxDownload": 1000 },
+        { "name": "Optimum", "share": 30.2, "maxDownload": 940 },
+        { "name": "T-Mobile", "share": 15.8, "maxDownload": 245 },
+        { "name": "Verizon DSL", "share": 11.7, "maxDownload": 15 }
+      ],
+      "zeroPctBlocks": 3.8,
+      "onePctBlocks": 14.5
     },
     {
       "name": "Erie County (Buffalo)",
@@ -96,6 +277,8 @@
       "providersAt100Mbps": 2,
       "hhi": 4200,
       "cr4": 96.8,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
       "topProviders": [
         { "name": "Spectrum", "share": 58.5, "maxDownload": 1000 },
         { "name": "Verizon DSL", "share": 18.3, "maxDownload": 15 },
@@ -106,6 +289,348 @@
       "onePctBlocks": 18.5
     },
     {
+      "name": "Essex County",
+      "slug": "essex",
+      "fips": "36031",
+      "totalHouseholds": 17000,
+      "providersAt100Mbps": 1,
+      "hhi": 6800,
+      "cr4": 99.2,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 72.5, "maxDownload": 300 },
+        { "name": "Westelcom", "share": 11.8, "maxDownload": 50 },
+        { "name": "T-Mobile", "share": 8.5, "maxDownload": 100 },
+        { "name": "Starlink", "share": 6.4, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 22.5,
+      "onePctBlocks": 48.2
+    },
+    {
+      "name": "Franklin County",
+      "slug": "franklin",
+      "fips": "36033",
+      "totalHouseholds": 19000,
+      "providersAt100Mbps": 1,
+      "hhi": 6600,
+      "cr4": 99.0,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 70.8, "maxDownload": 300 },
+        { "name": "Slic Network", "share": 12.2, "maxDownload": 100 },
+        { "name": "T-Mobile", "share": 9.5, "maxDownload": 100 },
+        { "name": "Starlink", "share": 6.5, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 18.8,
+      "onePctBlocks": 44.5
+    },
+    {
+      "name": "Fulton County",
+      "slug": "fulton",
+      "fips": "36035",
+      "totalHouseholds": 22000,
+      "providersAt100Mbps": 1,
+      "hhi": 5800,
+      "cr4": 98.5,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 66.2, "maxDownload": 300 },
+        { "name": "Windstream", "share": 14.5, "maxDownload": 50 },
+        { "name": "T-Mobile", "share": 10.8, "maxDownload": 100 },
+        { "name": "Starlink", "share": 7.0, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 12.5,
+      "onePctBlocks": 36.8
+    },
+    {
+      "name": "Genesee County (Batavia)",
+      "slug": "genesee",
+      "fips": "36037",
+      "totalHouseholds": 23000,
+      "providersAt100Mbps": 2,
+      "hhi": 5000,
+      "cr4": 97.8,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 62.5, "maxDownload": 1000 },
+        { "name": "Frontier", "share": 15.2, "maxDownload": 500 },
+        { "name": "T-Mobile", "share": 11.8, "maxDownload": 100 },
+        { "name": "Starlink", "share": 8.3, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 8.5,
+      "onePctBlocks": 28.2
+    },
+    {
+      "name": "Greene County",
+      "slug": "greene",
+      "fips": "36039",
+      "totalHouseholds": 21000,
+      "providersAt100Mbps": 1,
+      "hhi": 5500,
+      "cr4": 98.2,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 64.5, "maxDownload": 300 },
+        { "name": "Windstream", "share": 14.2, "maxDownload": 50 },
+        { "name": "T-Mobile", "share": 11.5, "maxDownload": 100 },
+        { "name": "Starlink", "share": 8.0, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 12.8,
+      "onePctBlocks": 35.5
+    },
+    {
+      "name": "Hamilton County",
+      "slug": "hamilton",
+      "fips": "36041",
+      "totalHouseholds": 3000,
+      "providersAt100Mbps": 1,
+      "hhi": 8200,
+      "cr4": 99.5,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 78.5, "maxDownload": 300 },
+        { "name": "Starlink", "share": 12.2, "maxDownload": 150 },
+        { "name": "T-Mobile", "share": 5.5, "maxDownload": 100 },
+        { "name": "Verizon DSL", "share": 3.3, "maxDownload": 15 }
+      ],
+      "zeroPctBlocks": 42.5,
+      "onePctBlocks": 58.2
+    },
+    {
+      "name": "Herkimer County",
+      "slug": "herkimer",
+      "fips": "36043",
+      "totalHouseholds": 26000,
+      "providersAt100Mbps": 1,
+      "hhi": 5900,
+      "cr4": 98.5,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 66.8, "maxDownload": 300 },
+        { "name": "Windstream", "share": 14.2, "maxDownload": 50 },
+        { "name": "T-Mobile", "share": 10.5, "maxDownload": 100 },
+        { "name": "Starlink", "share": 7.0, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 14.5,
+      "onePctBlocks": 38.8
+    },
+    {
+      "name": "Jefferson County (Watertown)",
+      "slug": "jefferson",
+      "fips": "36045",
+      "totalHouseholds": 47000,
+      "providersAt100Mbps": 2,
+      "hhi": 5400,
+      "cr4": 98.2,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 64.5, "maxDownload": 1000 },
+        { "name": "T-Mobile", "share": 13.2, "maxDownload": 100 },
+        { "name": "Windstream", "share": 11.8, "maxDownload": 100 },
+        { "name": "Starlink", "share": 8.7, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 12.8,
+      "onePctBlocks": 36.5
+    },
+    {
+      "name": "Kings County (Brooklyn)",
+      "slug": "kings",
+      "fips": "36047",
+      "totalHouseholds": 985000,
+      "providersAt100Mbps": 3,
+      "hhi": 3100,
+      "cr4": 94.5,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Optimum", "share": 38.5, "maxDownload": 940 },
+        { "name": "Verizon FiOS", "share": 28.8, "maxDownload": 2000 },
+        { "name": "Spectrum", "share": 15.2, "maxDownload": 1000 },
+        { "name": "T-Mobile", "share": 12.0, "maxDownload": 245 }
+      ],
+      "zeroPctBlocks": 0.5,
+      "onePctBlocks": 8.2
+    },
+    {
+      "name": "Lewis County",
+      "slug": "lewis",
+      "fips": "36049",
+      "totalHouseholds": 11000,
+      "providersAt100Mbps": 1,
+      "hhi": 7200,
+      "cr4": 99.2,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 74.5, "maxDownload": 300 },
+        { "name": "Windstream", "share": 11.2, "maxDownload": 50 },
+        { "name": "Starlink", "share": 8.8, "maxDownload": 150 },
+        { "name": "T-Mobile", "share": 4.7, "maxDownload": 100 }
+      ],
+      "zeroPctBlocks": 25.8,
+      "onePctBlocks": 50.5
+    },
+    {
+      "name": "Livingston County",
+      "slug": "livingston",
+      "fips": "36051",
+      "totalHouseholds": 24000,
+      "providersAt100Mbps": 2,
+      "hhi": 5100,
+      "cr4": 97.8,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 62.2, "maxDownload": 1000 },
+        { "name": "Frontier", "share": 15.5, "maxDownload": 500 },
+        { "name": "T-Mobile", "share": 12.2, "maxDownload": 100 },
+        { "name": "Starlink", "share": 7.9, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 9.8,
+      "onePctBlocks": 30.5
+    },
+    {
+      "name": "Madison County",
+      "slug": "madison",
+      "fips": "36053",
+      "totalHouseholds": 28000,
+      "providersAt100Mbps": 2,
+      "hhi": 5300,
+      "cr4": 98.0,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 64.2, "maxDownload": 1000 },
+        { "name": "Windstream", "share": 13.5, "maxDownload": 100 },
+        { "name": "T-Mobile", "share": 11.8, "maxDownload": 100 },
+        { "name": "Starlink", "share": 8.5, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 10.5,
+      "onePctBlocks": 32.2
+    },
+    {
+      "name": "Monroe County (Rochester)",
+      "slug": "monroe",
+      "fips": "36055",
+      "totalHouseholds": 303000,
+      "providersAt100Mbps": 3,
+      "hhi": 3800,
+      "cr4": 96.5,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 52.5, "maxDownload": 1000 },
+        { "name": "Greenlight Networks", "share": 18.2, "maxDownload": 2000 },
+        { "name": "Frontier", "share": 14.5, "maxDownload": 500 },
+        { "name": "T-Mobile", "share": 11.3, "maxDownload": 245 }
+      ],
+      "zeroPctBlocks": 2.8,
+      "onePctBlocks": 14.2
+    },
+    {
+      "name": "Montgomery County",
+      "slug": "montgomery",
+      "fips": "36057",
+      "totalHouseholds": 20000,
+      "providersAt100Mbps": 1,
+      "hhi": 5900,
+      "cr4": 98.5,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 66.5, "maxDownload": 300 },
+        { "name": "Windstream", "share": 14.8, "maxDownload": 50 },
+        { "name": "T-Mobile", "share": 10.2, "maxDownload": 100 },
+        { "name": "Starlink", "share": 7.0, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 13.2,
+      "onePctBlocks": 37.5
+    },
+    {
+      "name": "Nassau County (Long Island)",
+      "slug": "nassau",
+      "fips": "36059",
+      "totalHouseholds": 449000,
+      "providersAt100Mbps": 3,
+      "hhi": 3200,
+      "cr4": 95.0,
+      "cheapest100Mbps": 40,
+      "cheapest100Provider": "Optimum",
+      "topProviders": [
+        { "name": "Optimum", "share": 48.5, "maxDownload": 940 },
+        { "name": "Verizon FiOS", "share": 28.2, "maxDownload": 2000 },
+        { "name": "T-Mobile", "share": 12.5, "maxDownload": 245 },
+        { "name": "Starlink", "share": 5.8, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 1.2,
+      "onePctBlocks": 9.8
+    },
+    {
+      "name": "New York County (Manhattan)",
+      "slug": "new-york",
+      "fips": "36061",
+      "totalHouseholds": 847000,
+      "providersAt100Mbps": 4,
+      "hhi": 2800,
+      "cr4": 92.1,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 35.2, "maxDownload": 1000 },
+        { "name": "Verizon FiOS", "share": 31.5, "maxDownload": 2000 },
+        { "name": "T-Mobile", "share": 14.2, "maxDownload": 245 },
+        { "name": "Starry Internet", "share": 11.2, "maxDownload": 500 }
+      ],
+      "zeroPctBlocks": 0.2,
+      "onePctBlocks": 5.8
+    },
+    {
+      "name": "Niagara County (Niagara Falls)",
+      "slug": "niagara",
+      "fips": "36063",
+      "totalHouseholds": 89000,
+      "providersAt100Mbps": 2,
+      "hhi": 4500,
+      "cr4": 97.2,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 60.5, "maxDownload": 1000 },
+        { "name": "Verizon DSL", "share": 16.2, "maxDownload": 15 },
+        { "name": "T-Mobile", "share": 12.8, "maxDownload": 245 },
+        { "name": "Starlink", "share": 7.7, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 5.2,
+      "onePctBlocks": 22.5
+    },
+    {
+      "name": "Oneida County (Utica)",
+      "slug": "oneida",
+      "fips": "36065",
+      "totalHouseholds": 96000,
+      "providersAt100Mbps": 2,
+      "hhi": 4800,
+      "cr4": 97.5,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 62.8, "maxDownload": 1000 },
+        { "name": "Windstream", "share": 13.2, "maxDownload": 100 },
+        { "name": "T-Mobile", "share": 12.5, "maxDownload": 245 },
+        { "name": "Verizon DSL", "share": 9.0, "maxDownload": 15 }
+      ],
+      "zeroPctBlocks": 6.5,
+      "onePctBlocks": 25.8
+    },
+    {
       "name": "Onondaga County (Syracuse)",
       "slug": "onondaga",
       "fips": "36067",
@@ -113,6 +638,8 @@
       "providersAt100Mbps": 2,
       "hhi": 4500,
       "cr4": 97.2,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
       "topProviders": [
         { "name": "Spectrum", "share": 62.1, "maxDownload": 1000 },
         { "name": "Verizon DSL", "share": 15.8, "maxDownload": 15 },
@@ -123,6 +650,196 @@
       "onePctBlocks": 24.1
     },
     {
+      "name": "Ontario County",
+      "slug": "ontario",
+      "fips": "36069",
+      "totalHouseholds": 44000,
+      "providersAt100Mbps": 2,
+      "hhi": 4800,
+      "cr4": 97.5,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 60.5, "maxDownload": 1000 },
+        { "name": "Frontier", "share": 16.2, "maxDownload": 500 },
+        { "name": "T-Mobile", "share": 12.8, "maxDownload": 100 },
+        { "name": "Starlink", "share": 8.0, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 7.5,
+      "onePctBlocks": 26.8
+    },
+    {
+      "name": "Orange County (Newburgh)",
+      "slug": "orange",
+      "fips": "36071",
+      "totalHouseholds": 133000,
+      "providersAt100Mbps": 3,
+      "hhi": 3500,
+      "cr4": 96.0,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 35.8, "maxDownload": 1000 },
+        { "name": "Optimum", "share": 32.5, "maxDownload": 940 },
+        { "name": "T-Mobile", "share": 16.2, "maxDownload": 245 },
+        { "name": "Verizon DSL", "share": 11.5, "maxDownload": 15 }
+      ],
+      "zeroPctBlocks": 3.5,
+      "onePctBlocks": 15.2
+    },
+    {
+      "name": "Orleans County",
+      "slug": "orleans",
+      "fips": "36073",
+      "totalHouseholds": 16000,
+      "providersAt100Mbps": 1,
+      "hhi": 5800,
+      "cr4": 98.5,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 66.2, "maxDownload": 300 },
+        { "name": "Frontier", "share": 14.8, "maxDownload": 50 },
+        { "name": "T-Mobile", "share": 10.5, "maxDownload": 100 },
+        { "name": "Starlink", "share": 7.0, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 12.5,
+      "onePctBlocks": 35.8
+    },
+    {
+      "name": "Oswego County",
+      "slug": "oswego",
+      "fips": "36075",
+      "totalHouseholds": 48000,
+      "providersAt100Mbps": 2,
+      "hhi": 5200,
+      "cr4": 97.8,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 63.5, "maxDownload": 1000 },
+        { "name": "Windstream", "share": 13.8, "maxDownload": 100 },
+        { "name": "T-Mobile", "share": 12.2, "maxDownload": 100 },
+        { "name": "Starlink", "share": 8.3, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 9.8,
+      "onePctBlocks": 32.5
+    },
+    {
+      "name": "Otsego County (Cooperstown)",
+      "slug": "otsego",
+      "fips": "36077",
+      "totalHouseholds": 24000,
+      "providersAt100Mbps": 1,
+      "hhi": 5900,
+      "cr4": 98.5,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 66.8, "maxDownload": 300 },
+        { "name": "Frontier", "share": 14.2, "maxDownload": 25 },
+        { "name": "T-Mobile", "share": 10.5, "maxDownload": 100 },
+        { "name": "Starlink", "share": 7.0, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 15.2,
+      "onePctBlocks": 40.5
+    },
+    {
+      "name": "Putnam County",
+      "slug": "putnam",
+      "fips": "36079",
+      "totalHouseholds": 37000,
+      "providersAt100Mbps": 2,
+      "hhi": 3900,
+      "cr4": 96.5,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 35.2, "maxDownload": 1000 },
+        { "name": "Optimum", "share": 32.8, "maxDownload": 940 },
+        { "name": "T-Mobile", "share": 18.5, "maxDownload": 245 },
+        { "name": "Verizon DSL", "share": 10.0, "maxDownload": 15 }
+      ],
+      "zeroPctBlocks": 4.2,
+      "onePctBlocks": 16.8
+    },
+    {
+      "name": "Queens County (Queens)",
+      "slug": "queens",
+      "fips": "36081",
+      "totalHouseholds": 793000,
+      "providersAt100Mbps": 3,
+      "hhi": 2950,
+      "cr4": 93.8,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 33.8, "maxDownload": 1000 },
+        { "name": "Optimum", "share": 28.2, "maxDownload": 940 },
+        { "name": "Verizon FiOS", "share": 22.5, "maxDownload": 2000 },
+        { "name": "T-Mobile", "share": 9.3, "maxDownload": 245 }
+      ],
+      "zeroPctBlocks": 0.4,
+      "onePctBlocks": 6.8
+    },
+    {
+      "name": "Rensselaer County (Troy)",
+      "slug": "rensselaer",
+      "fips": "36083",
+      "totalHouseholds": 63000,
+      "providersAt100Mbps": 2,
+      "hhi": 4300,
+      "cr4": 97.0,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 58.2, "maxDownload": 1000 },
+        { "name": "Verizon DSL", "share": 16.5, "maxDownload": 15 },
+        { "name": "T-Mobile", "share": 13.8, "maxDownload": 245 },
+        { "name": "Windstream", "share": 8.5, "maxDownload": 100 }
+      ],
+      "zeroPctBlocks": 4.8,
+      "onePctBlocks": 18.5
+    },
+    {
+      "name": "Richmond County (Staten Island)",
+      "slug": "richmond",
+      "fips": "36085",
+      "totalHouseholds": 176000,
+      "providersAt100Mbps": 3,
+      "hhi": 3500,
+      "cr4": 96.5,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 45.2, "maxDownload": 1000 },
+        { "name": "Verizon FiOS", "share": 30.1, "maxDownload": 2000 },
+        { "name": "T-Mobile", "share": 13.5, "maxDownload": 245 },
+        { "name": "Optimum", "share": 7.7, "maxDownload": 940 }
+      ],
+      "zeroPctBlocks": 1.2,
+      "onePctBlocks": 10.2
+    },
+    {
+      "name": "Rockland County",
+      "slug": "rockland",
+      "fips": "36087",
+      "totalHouseholds": 104000,
+      "providersAt100Mbps": 3,
+      "hhi": 3400,
+      "cr4": 95.8,
+      "cheapest100Mbps": 40,
+      "cheapest100Provider": "Optimum",
+      "topProviders": [
+        { "name": "Optimum", "share": 45.2, "maxDownload": 940 },
+        { "name": "Verizon FiOS", "share": 26.5, "maxDownload": 2000 },
+        { "name": "T-Mobile", "share": 15.8, "maxDownload": 245 },
+        { "name": "Verizon DSL", "share": 8.3, "maxDownload": 15 }
+      ],
+      "zeroPctBlocks": 2.2,
+      "onePctBlocks": 11.5
+    },
+    {
       "name": "St. Lawrence County",
       "slug": "st-lawrence",
       "fips": "36089",
@@ -130,6 +847,8 @@
       "providersAt100Mbps": 1,
       "hhi": 6800,
       "cr4": 99.1,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
       "topProviders": [
         { "name": "Spectrum", "share": 72.5, "maxDownload": 300 },
         { "name": "Slic Network", "share": 12.8, "maxDownload": 100 },
@@ -140,6 +859,120 @@
       "onePctBlocks": 42.8
     },
     {
+      "name": "Saratoga County",
+      "slug": "saratoga",
+      "fips": "36091",
+      "totalHouseholds": 93000,
+      "providersAt100Mbps": 2,
+      "hhi": 4000,
+      "cr4": 96.8,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 55.8, "maxDownload": 1000 },
+        { "name": "Verizon DSL", "share": 17.5, "maxDownload": 15 },
+        { "name": "T-Mobile", "share": 14.5, "maxDownload": 245 },
+        { "name": "Windstream", "share": 9.0, "maxDownload": 100 }
+      ],
+      "zeroPctBlocks": 4.5,
+      "onePctBlocks": 18.2
+    },
+    {
+      "name": "Schenectady County",
+      "slug": "schenectady",
+      "fips": "36093",
+      "totalHouseholds": 63000,
+      "providersAt100Mbps": 2,
+      "hhi": 4200,
+      "cr4": 97.0,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 57.5, "maxDownload": 1000 },
+        { "name": "Verizon DSL", "share": 17.2, "maxDownload": 15 },
+        { "name": "T-Mobile", "share": 14.2, "maxDownload": 245 },
+        { "name": "Windstream", "share": 8.1, "maxDownload": 100 }
+      ],
+      "zeroPctBlocks": 3.8,
+      "onePctBlocks": 16.5
+    },
+    {
+      "name": "Schoharie County",
+      "slug": "schoharie",
+      "fips": "36095",
+      "totalHouseholds": 13000,
+      "providersAt100Mbps": 1,
+      "hhi": 6200,
+      "cr4": 98.8,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 68.5, "maxDownload": 300 },
+        { "name": "Windstream", "share": 13.5, "maxDownload": 50 },
+        { "name": "T-Mobile", "share": 9.8, "maxDownload": 100 },
+        { "name": "Starlink", "share": 7.0, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 18.2,
+      "onePctBlocks": 42.5
+    },
+    {
+      "name": "Schuyler County",
+      "slug": "schuyler",
+      "fips": "36097",
+      "totalHouseholds": 8000,
+      "providersAt100Mbps": 1,
+      "hhi": 6400,
+      "cr4": 99.0,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 70.2, "maxDownload": 300 },
+        { "name": "Frontier", "share": 13.5, "maxDownload": 25 },
+        { "name": "T-Mobile", "share": 8.8, "maxDownload": 100 },
+        { "name": "Starlink", "share": 6.5, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 16.5,
+      "onePctBlocks": 42.2
+    },
+    {
+      "name": "Seneca County",
+      "slug": "seneca",
+      "fips": "36099",
+      "totalHouseholds": 14000,
+      "providersAt100Mbps": 2,
+      "hhi": 5400,
+      "cr4": 98.2,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 64.5, "maxDownload": 1000 },
+        { "name": "Frontier", "share": 14.8, "maxDownload": 500 },
+        { "name": "T-Mobile", "share": 10.5, "maxDownload": 100 },
+        { "name": "Starlink", "share": 8.4, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 11.2,
+      "onePctBlocks": 34.5
+    },
+    {
+      "name": "Steuben County (Corning)",
+      "slug": "steuben",
+      "fips": "36101",
+      "totalHouseholds": 40000,
+      "providersAt100Mbps": 2,
+      "hhi": 5000,
+      "cr4": 97.8,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 61.5, "maxDownload": 1000 },
+        { "name": "Frontier", "share": 16.2, "maxDownload": 50 },
+        { "name": "T-Mobile", "share": 11.8, "maxDownload": 100 },
+        { "name": "Starlink", "share": 8.3, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 11.5,
+      "onePctBlocks": 35.2
+    },
+    {
       "name": "Suffolk County (Long Island)",
       "slug": "suffolk",
       "fips": "36103",
@@ -147,6 +980,8 @@
       "providersAt100Mbps": 2,
       "hhi": 3800,
       "cr4": 95.5,
+      "cheapest100Mbps": 40,
+      "cheapest100Provider": "Optimum",
       "topProviders": [
         { "name": "Optimum", "share": 52.1, "maxDownload": 940 },
         { "name": "Verizon FiOS", "share": 25.8, "maxDownload": 2000 },
@@ -155,6 +990,196 @@
       ],
       "zeroPctBlocks": 1.8,
       "onePctBlocks": 12.5
+    },
+    {
+      "name": "Sullivan County",
+      "slug": "sullivan",
+      "fips": "36105",
+      "totalHouseholds": 32000,
+      "providersAt100Mbps": 2,
+      "hhi": 4800,
+      "cr4": 97.5,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 42.5, "maxDownload": 1000 },
+        { "name": "Optimum", "share": 28.8, "maxDownload": 940 },
+        { "name": "T-Mobile", "share": 15.2, "maxDownload": 100 },
+        { "name": "Starlink", "share": 11.0, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 10.5,
+      "onePctBlocks": 30.8
+    },
+    {
+      "name": "Tioga County",
+      "slug": "tioga",
+      "fips": "36107",
+      "totalHouseholds": 20000,
+      "providersAt100Mbps": 1,
+      "hhi": 5500,
+      "cr4": 98.2,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 64.5, "maxDownload": 300 },
+        { "name": "Frontier", "share": 15.2, "maxDownload": 50 },
+        { "name": "T-Mobile", "share": 10.8, "maxDownload": 100 },
+        { "name": "Starlink", "share": 7.7, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 11.8,
+      "onePctBlocks": 34.2
+    },
+    {
+      "name": "Tompkins County (Ithaca)",
+      "slug": "tompkins",
+      "fips": "36109",
+      "totalHouseholds": 42000,
+      "providersAt100Mbps": 2,
+      "hhi": 4600,
+      "cr4": 97.2,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 60.2, "maxDownload": 1000 },
+        { "name": "Frontier", "share": 15.8, "maxDownload": 500 },
+        { "name": "T-Mobile", "share": 13.2, "maxDownload": 245 },
+        { "name": "Starlink", "share": 8.0, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 6.5,
+      "onePctBlocks": 22.8
+    },
+    {
+      "name": "Ulster County (Kingston)",
+      "slug": "ulster",
+      "fips": "36111",
+      "totalHouseholds": 73000,
+      "providersAt100Mbps": 2,
+      "hhi": 4400,
+      "cr4": 97.0,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 48.5, "maxDownload": 1000 },
+        { "name": "Optimum", "share": 22.8, "maxDownload": 940 },
+        { "name": "T-Mobile", "share": 15.5, "maxDownload": 245 },
+        { "name": "Starlink", "share": 10.2, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 6.8,
+      "onePctBlocks": 24.5
+    },
+    {
+      "name": "Warren County (Glens Falls)",
+      "slug": "warren",
+      "fips": "36113",
+      "totalHouseholds": 29000,
+      "providersAt100Mbps": 2,
+      "hhi": 5100,
+      "cr4": 97.8,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 62.5, "maxDownload": 1000 },
+        { "name": "Verizon DSL", "share": 14.8, "maxDownload": 15 },
+        { "name": "T-Mobile", "share": 12.5, "maxDownload": 100 },
+        { "name": "Starlink", "share": 8.0, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 10.2,
+      "onePctBlocks": 32.8
+    },
+    {
+      "name": "Washington County",
+      "slug": "washington",
+      "fips": "36115",
+      "totalHouseholds": 25000,
+      "providersAt100Mbps": 1,
+      "hhi": 5800,
+      "cr4": 98.5,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 66.2, "maxDownload": 300 },
+        { "name": "Verizon DSL", "share": 14.5, "maxDownload": 15 },
+        { "name": "T-Mobile", "share": 10.8, "maxDownload": 100 },
+        { "name": "Starlink", "share": 7.0, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 14.5,
+      "onePctBlocks": 38.5
+    },
+    {
+      "name": "Wayne County",
+      "slug": "wayne",
+      "fips": "36117",
+      "totalHouseholds": 36000,
+      "providersAt100Mbps": 2,
+      "hhi": 5000,
+      "cr4": 97.8,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 61.5, "maxDownload": 1000 },
+        { "name": "Frontier", "share": 16.2, "maxDownload": 500 },
+        { "name": "T-Mobile", "share": 12.2, "maxDownload": 100 },
+        { "name": "Starlink", "share": 7.9, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 8.8,
+      "onePctBlocks": 28.5
+    },
+    {
+      "name": "Westchester County",
+      "slug": "westchester",
+      "fips": "36119",
+      "totalHouseholds": 362000,
+      "providersAt100Mbps": 3,
+      "hhi": 3100,
+      "cr4": 95.2,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Optimum", "share": 40.2, "maxDownload": 940 },
+        { "name": "Verizon FiOS", "share": 28.5, "maxDownload": 2000 },
+        { "name": "Spectrum", "share": 15.8, "maxDownload": 1000 },
+        { "name": "T-Mobile", "share": 10.7, "maxDownload": 245 }
+      ],
+      "zeroPctBlocks": 1.5,
+      "onePctBlocks": 9.2
+    },
+    {
+      "name": "Wyoming County",
+      "slug": "wyoming",
+      "fips": "36121",
+      "totalHouseholds": 16000,
+      "providersAt100Mbps": 1,
+      "hhi": 5800,
+      "cr4": 98.5,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 66.5, "maxDownload": 300 },
+        { "name": "Frontier", "share": 14.2, "maxDownload": 50 },
+        { "name": "T-Mobile", "share": 10.8, "maxDownload": 100 },
+        { "name": "Starlink", "share": 7.0, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 13.8,
+      "onePctBlocks": 38.2
+    },
+    {
+      "name": "Yates County",
+      "slug": "yates",
+      "fips": "36123",
+      "totalHouseholds": 10000,
+      "providersAt100Mbps": 1,
+      "hhi": 6300,
+      "cr4": 99.0,
+      "cheapest100Mbps": 30,
+      "cheapest100Provider": "Spectrum",
+      "topProviders": [
+        { "name": "Spectrum", "share": 69.5, "maxDownload": 300 },
+        { "name": "Frontier", "share": 14.2, "maxDownload": 25 },
+        { "name": "T-Mobile", "share": 8.8, "maxDownload": 100 },
+        { "name": "Starlink", "share": 6.5, "maxDownload": 150 }
+      ],
+      "zeroPctBlocks": 16.8,
+      "onePctBlocks": 44.5
     }
   ]
 }

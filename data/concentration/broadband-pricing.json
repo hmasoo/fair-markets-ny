@@ -1,0 +1,99 @@
+{
+  "source": "ISP published rate cards",
+  "accessed": "2026-02-14",
+  "methodology": "Cheapest advertised plan at 100+ Mbps download. Intro/promotional pricing noted separately from regular rates where available. Equipment fees excluded from base price but noted.",
+  "fccBenchmark": {
+    "year": 2025,
+    "urbanAvgMonthly": 30.67,
+    "source": "FCC Urban Rate Survey 2025"
+  },
+  "providers": {
+    "Spectrum": {
+      "cheapest100": 30,
+      "planName": "Internet 300",
+      "speed": 300,
+      "introRate": true,
+      "regularPrice": null,
+      "equipment": "Free modem, $5/mo router",
+      "sourceUrl": "https://www.spectrum.com/internet"
+    },
+    "Optimum": {
+      "cheapest100": 40,
+      "planName": "Fiber/Cable 300",
+      "speed": 300,
+      "introRate": true,
+      "regularPrice": null,
+      "equipment": "+$10/mo equipment rental",
+      "sourceUrl": "https://www.optimum.com/internet"
+    },
+    "Verizon FiOS": {
+      "cheapest100": 50,
+      "planName": "300 Mbps",
+      "speed": 300,
+      "introRate": false,
+      "regularPrice": 50,
+      "equipment": "Router included",
+      "sourceUrl": "https://www.verizon.com/home/fios/"
+    },
+    "T-Mobile": {
+      "cheapest100": 50,
+      "planName": "5G Home Internet",
+      "speed": 245,
+      "introRate": false,
+      "regularPrice": 50,
+      "equipment": "Gateway included",
+      "notes": "Fixed wireless; speeds vary by location (typically 100–245 Mbps)",
+      "sourceUrl": "https://www.t-mobile.com/home-internet"
+    },
+    "Frontier": {
+      "cheapest100": 30,
+      "planName": "Fiber 500",
+      "speed": 500,
+      "introRate": false,
+      "regularPrice": 30,
+      "equipment": "Router included",
+      "notes": "Price guarantee, no data cap",
+      "sourceUrl": "https://www.frontier.com/shop/internet"
+    },
+    "Greenlight Networks": {
+      "cheapest100": 50,
+      "planName": "500 Mbps",
+      "speed": 500,
+      "introRate": false,
+      "regularPrice": 50,
+      "equipment": "Router included",
+      "notes": "Rochester-area fiber ISP",
+      "sourceUrl": "https://www.greenlightnetworks.com/"
+    },
+    "Starlink": {
+      "cheapest100": 120,
+      "planName": "Residential",
+      "speed": 200,
+      "introRate": false,
+      "regularPrice": 120,
+      "equipment": "$599 hardware purchase required",
+      "notes": "Satellite; speeds vary (typically 100–200 Mbps)",
+      "sourceUrl": "https://www.starlink.com/"
+    },
+    "Windstream": {
+      "cheapest100": 40,
+      "planName": "Kinetic 100",
+      "speed": 100,
+      "introRate": false,
+      "regularPrice": 40,
+      "equipment": "Router included",
+      "notes": "DSL or fiber depending on area",
+      "sourceUrl": "https://www.windstream.com/internet"
+    },
+    "Slic Network": {
+      "cheapest100": 50,
+      "planName": "100 Mbps",
+      "speed": 100,
+      "introRate": false,
+      "regularPrice": 50,
+      "equipment": null,
+      "notes": "North Country regional ISP",
+      "sourceUrl": "https://www.slic.com/"
+    }
+  }
+}

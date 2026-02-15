@@ -138,12 +138,32 @@ erDiagram
         float cr4
         float zeroPctBlocks "pct with 0 providers"
         float onePctBlocks "pct with 1 provider"
+        int cheapest100Mbps "nullable, $/mo"
+        string cheapest100Provider "nullable"
     }
 
     BroadbandProvider {
         string name
         float share
         int maxDownload
+    }
+
+    BroadbandPricing {
+        string providerName PK
+        int cheapest100 "$/mo at 100+ Mbps"
+        string planName
+        int speed "Mbps download"
+        boolean introRate
+        int regularPrice "nullable"
+        string equipment
+        string sourceUrl
+    }
+
+    BroadbandPricingMeta {
+        string source "ISP published rate cards"
+        string accessed "2026-02-14"
+        int fccBenchmarkYear
+        float fccUrbanAvgMonthly
     }
 
     BroadbandTimeSeries {
@@ -178,6 +198,8 @@ erDiagram
     }
 
     BroadbandCounty ||--|{ BroadbandProvider : "topProviders[]"
+    BroadbandCounty }|--o| BroadbandPricing : "cheapest100Provider"
+    BroadbandPricingMeta ||--|{ BroadbandPricing : "providers{}"
     BroadbandTimeSeries ||--|{ BroadbandTimeSeriesYear : "years[]"
     County ||--|| BroadbandCounty : "fips"
     NYCMeshNodes ||--|{ NYCMeshBorough : "boroughs[]"
@@ -367,6 +389,7 @@ flowchart TB
         mta["MTA Board Resolutions"]
         bls["BLS Consumer Expenditure Survey"]
         mesh["NYC Mesh API"]
+        isp_rates["ISP Published Rate Cards"]
     end
 
     subgraph raw["data/raw/ (gitignored)"]
@@ -403,7 +426,8 @@ flowchart TB
         housing_n["housing-neighborhoods.json<br/><i>197 neighborhoods</i>"]
         rent_hist["rent-history-neighborhoods.json<br/><i>197 neighborhoods × 3 vintages</i>"]
         transport_n["transportation-neighborhoods.json<br/><i>~190 neighborhoods</i>"]
-        broadband_c["broadband-counties.json<br/><i>62 counties</i>"]
+        broadband_c["broadband-counties.json<br/><i>62 counties + pricing</i>"]
+        broadband_p["broadband-pricing.json<br/><i>9 providers</i>"]
         health_r["healthcare-regions.json<br/><i>10 regions</i>"]
         health_pricing["healthcare-pricing.json<br/><i>6 procedures × 10 regions</i>"]
         spending["household-spending.json<br/><i>2 geographies</i>"]
@@ -455,6 +479,8 @@ flowchart TB
     agg_commute --> transport_n
 
     fcc --> broadband_c
+    isp_rates --> broadband_p
+    isp_rates --> broadband_c
     doh --> dl_sparcs --> sparcs_raw
     sparcs_raw --> agg_sparcs
     xw_hospital --> agg_sparcs
@@ -475,6 +501,7 @@ flowchart TB
     broadband_ts --> p_broadband
     nycmesh --> p_broadband
     broadband_c --> p_county
+    broadband_p --> p_county
 
     health_r --> p_health
     health_pricing --> p_health
@@ -496,11 +523,11 @@ flowchart TB
     classDef output fill:#E0F2F1,stroke:#00695C
     classDef page fill:#FCE4EC,stroke:#AD1457
 
-    class census,pluto,acris,hpd,fcc,doh,mta,bls,mesh source
+    class census,pluto,acris,hpd,fcc,doh,mta,bls,mesh,isp_rates source
     class acs_income,acs_rent19,acs_rent23,acs_rent24,acs_commute,pluto_raw,hpd_raw,sparcs_raw raw
     class xw_tract,xw_nta,xw_boro,xw_health,xw_hospital crosswalk
     class dl_income,dl_rent,dl_sparcs,agg_pluto,agg_rent,agg_income,agg_commute,agg_sparcs script
-    class housing_n,rent_hist,transport_n,broadband_c,health_r,health_pricing,spending,mta_fares,nycmesh,housing_ts,broadband_ts,health_ts output
+    class housing_n,rent_hist,transport_n,broadband_c,broadband_p,health_r,health_pricing,spending,mta_fares,nycmesh,housing_ts,broadband_ts,health_ts output
     class p_home,p_housing,p_hood,p_broadband,p_county,p_health,p_region,p_transport page
 ```
 
@@ -551,6 +578,7 @@ Boundary files join to data through the same FIPS/GEOID keys used in the crosswa
 | Rent history | Census ACS 5-Year (B25064) | REST | 2019, 2023, 2024 |
 | Commute patterns | Census ACS 5-Year (B08301) | REST | 2019–2023 |
 | Broadband availability | FCC BDC | REST | Dec 2024 |
+| Broadband pricing | ISP published rate cards | Manual | Feb 2026 |
 | Healthcare facilities | NYS DOH SPARCS + AHA | Bulk download | 2024 |
 | Hospital pricing | NYS DOH SPARCS Cost Transparency | Socrata API | 2009–2021 |
 | Transit fares | MTA Board Resolutions | Manual | 2003–2026 |

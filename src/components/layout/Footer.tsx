@@ -8,8 +8,9 @@ export function Footer() {
           <div>
             <h3 className="text-white font-bold text-lg mb-3">Fair Markets NY</h3>
             <p className="text-sm leading-relaxed">
-              Public data on market competition and ownership structure across
-              New York State — housing, broadband, healthcare, and more.
+              What New Yorkers pay for the basics — housing, internet,
+              healthcare — and why. Public data, joined across government
+              sources.
             </p>
           </div>
           <div>

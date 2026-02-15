@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Badge } from "@/components/ui/Badge";
 
 interface County {
   name: string;
@@ -13,6 +12,8 @@ interface County {
   hhi: number;
   zeroPctBlocks: number;
   onePctBlocks: number;
+  cheapest100Mbps: number | null;
+  cheapest100Provider: string | null;
 }
 
 const DEFAULT_ROWS = 20;
@@ -43,10 +44,10 @@ export function BroadbandTable({ counties }: { counties: County[] }) {
                 100+ Mbps Providers
               </th>
               <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                Households
+                Cheapest 100 Mbps
               </th>
               <th className="px-4 py-3 text-right text-xs font-semibold text-fm-sage uppercase tracking-wider">
-                HHI
+                Households
               </th>
             </tr>
           </thead>
@@ -84,26 +85,30 @@ export function BroadbandTable({ counties }: { counties: County[] }) {
                   {c.providersAt100Mbps}
                 </td>
                 <td className="px-4 py-3 text-sm text-right">
-                  {c.totalHouseholds.toLocaleString()}
+                  {c.cheapest100Mbps != null ? (
+                    <div>
+                      <span className="font-medium">${c.cheapest100Mbps}/mo</span>
+                      <span className="text-fm-sage">*</span>
+                      {c.cheapest100Provider && (
+                        <div className="text-xs text-fm-sage">{c.cheapest100Provider}</div>
+                      )}
+                    </div>
+                  ) : (
+                    <span className="text-fm-sage">{"\u2014"}</span>
+                  )}
                 </td>
                 <td className="px-4 py-3 text-sm text-right">
-                  <Badge
-                    variant={
-                      c.hhi > 5000
-                        ? "red"
-                        : c.hhi > 2500
-                        ? "yellow"
-                        : "green"
-                    }
-                  >
-                    {c.hhi.toLocaleString()}
-                  </Badge>
+                  {c.totalHouseholds.toLocaleString()}
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
+      <p className="mt-2 text-xs text-fm-sage">
+        * Introductory rate; regular price may be higher. Prices are published
+        plan rates as of February 2026 and exclude equipment fees.
+      </p>
       {hasMore && (
         <button
           onClick={() => setShowAll(!showAll)}
