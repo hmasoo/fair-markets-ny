@@ -154,16 +154,7 @@ export default function Home() {
           <p className="text-sm text-amber-800">
             <strong>Beta:</strong> This project is under active development.
             Data calculations may contain errors or use preliminary
-            sources. If you spot an issue, please{" "}
-            <a
-              href="https://github.com/masuga-fair-markets/fair-markets-ny/issues"
-              className="underline hover:text-amber-900"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              open an issue
-            </a>
-            .
+            sources.
           </p>
         </div>
       </section>
